@@ -5479,42 +5479,43 @@ return {
 			name="Id",
 			refTo="",
 			type="Int",
-			width=80
+			type="String",
+			width=220
 		},
 		[2]={
-			list=true,
-			name="BaseItemType",
-			refTo="SkillGems",
-			type="Key",
-			width=300
+			list=false,
+			name="HASH16",
+			refTo="",
+			type="UInt16",
+			width=150
 		},
 		[3]={
 			list=false,
-			name="Skill",
+			name="",
 			refTo="",
-			type="String",
+			type="Bool",
 			width=150
 		},
 		[4]={
-			list=true,
-			name="BaseItemTypeRuthless",
-			refTo="SkillGems",
-			type="Key",
-			width=300
+			list=false,
+			name="",
+			refTo="",
+			type="Bool",
+			width=150
 		},
 		[5]={
 			list=false,
-			name="SkillRuthless",
+			name="",
 			refTo="",
-			type="String",
+			type="Bool",
 			width=150
 		},
 		[6]={
 			list=false,
-			name="IdRuthless",
-			refTo="indexableskillgems",
-			type="Key",
-			width=80
+			name="",
+			refTo="",
+			type="Bool",
+			width=150
 		}
 	},
 	indexablesupportgems={
@@ -8012,7 +8013,7 @@ return {
 			list=false,
 			name="",
 			refTo="",
-			type="Int",
+			type="Key",
 			width=50
 		},
 		[18]={
@@ -8453,7 +8454,7 @@ return {
 			list=false,
 			name="SinkEffect",
 			refTo="",
-			type="String",
+			type="Int",
 			width=150
 		},
 		[81]={
@@ -8541,7 +8542,7 @@ return {
 			width=50
 		},
 		[93]={
-			list=true,
+			list=false,
 			name="",
 			refTo="",
 			type="Int",
@@ -8552,7 +8553,7 @@ return {
 			name="",
 			refTo="",
 			type="Int",
-			width=50
+			width=130
 		},
 		[95]={
 			list=false,
@@ -8584,24 +8585,143 @@ return {
 		},
 		[99]={
 			list=false,
-			name="",
-			refTo="",
-			type="Bool",
-			width=50
-		},
-		[100]={
-			list=false,
 			name="BossHealthBar",
 			refTo="",
 			type="Bool",
 			width=100
 		},
+		[100]={
+			list=false,
+			name="",
+			refTo="",
+			type="Key",
+			width=50
+		},
 		[101]={
 			list=false,
 			name="",
 			refTo="",
-			type="Bool",
+			type="Int",
 			width=50
+		},
+		[102]={
+			list=false,
+			name="",
+			refTo="",
+			type="Bool",
+			width=150
+		},
+		[103]={
+			list=false,
+			name="",
+			refTo="",
+			type="Int",
+			width=150
+		},
+		[104]={
+			list=false,
+			name="",
+			refTo="",
+			type="Int",
+			width=150
+		},
+		[105]={
+			list=false,
+			name="",
+			refTo="",
+			type="Int",
+			width=150
+		},
+		[106]={
+			list=false,
+			name="",
+			refTo="",
+			type="Int",
+			width=150
+		},
+		[107]={
+			list=false,
+			name="",
+			refTo="",
+			type="Bool",
+			width=150
+		},
+		[108]={
+			list=false,
+			name="",
+			refTo="",
+			type="Int",
+			width=150
+		},
+		[109]={
+			list=false,
+			name="",
+			refTo="",
+			type="Key",
+			width=150
+		},
+		[110]={
+			list=false,
+			name="A",
+			refTo="",
+			type="Int",
+			width=150
+		},
+		[111]={
+			list=false,
+			name="",
+			refTo="",
+			type="Int",
+			width=150
+		},
+		[112]={
+			list=false,
+			name="",
+			refTo="",
+			type="Int",
+			width=150
+		},
+		[113]={
+			list=false,
+			name="",
+			refTo="",
+			type="Bool",
+			width=150
+		},
+		[114]={
+			list=false,
+			name="",
+			refTo="",
+			type="Int",
+			width=150
+		},
+		[115]={
+			list=false,
+			name="",
+			refTo="",
+			type="String",
+			width=380
+		},
+		[116]={
+			list=false,
+			name="",
+			refTo="",
+			type="Key",
+			width=150
+		},
+		[117]={
+			list=false,
+			name="",
+			refTo="",
+			type="Int",
+			width=150
+		},
+		[118]={
+			list=false,
+			name="",
+			refTo="",
+			type="Int",
+			width=150
 		}
 	},
 	monstervarietiesartvariations={
@@ -9728,6 +9848,13 @@ return {
 	passiveskilltreeuiart={
 	},
 	passiveskilltypes={
+		[1]={
+			list=false,
+			name="Id",
+			refTo="",
+			type="String",
+			width=150
+		}
 	},
 	passivetreeexpansionjewels={
 		[1]={
