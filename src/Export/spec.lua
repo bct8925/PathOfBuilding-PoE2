@@ -5478,7 +5478,6 @@ return {
 			list=false,
 			name="Id",
 			refTo="",
-			type="Int",
 			type="String",
 			width=220
 		},
