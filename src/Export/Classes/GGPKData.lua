@@ -262,6 +262,7 @@ function GGPKClass:GetNeededFiles()
 		"Data/KeywordPopups.dat",
 		"Data/SoulCores.dat",
 		"Data/UtilityFlaskBuffs.dat",
+		"Data/GrantedSkillSocketNumbers.dat",
 	}
 	local csdFiles = {
 		"Metadata/StatDescriptions/passive_skill_aura_stat_descriptions.csd",
