@@ -47,11 +47,17 @@ local function writeMods(outName, condFunc)
 				out:write('statOrder = { ', table.concat(orders, ', '), ' }, ')
 				out:write('level = ', mod.Level, ', group = "', mod.Type.Id, '", ')
 				out:write('weightKey = { ')
-				for _, tag in ipairs(mod.SpawnTags) do
-					out:write('"', tag.Id, '", ')
+				local GoldModPrices = dat("GoldModPrices"):GetRow("Id", dat("Mods"):GetRow("Id", mod.Id))
+				if GoldModPrices then
+					for _, tag in ipairs(GoldModPrices.SpawnTags) do
+						out:write('"', tag.Id, '", ')
+					end
+					out:write('}, ')
+					out:write('weightVal = { ', table.concat(GoldModPrices.SpawnWeights, ', '), ' }, ')
+				else
+					out:write('}, ')
+					out:write('weightVal = { ', table.concat(mod.SpawnWeights, ', '), ' }, ')
 				end
-				out:write('}, ')
-				out:write('weightVal = { ', table.concat(mod.SpawnWeights, ', '), ' }, ')
 				if mod.GenerationWeightTags[1] then
 					-- make large clusters only have 1 notable suffix
 					if mod.GenerationType == 2 and mod.Tags[1] and outName == "../Data/ModJewelCluster.lua" and mod.Tags[1].Id == "has_affliction_notable" then

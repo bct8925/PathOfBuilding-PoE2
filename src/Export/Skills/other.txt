@@ -5,3 +5,7 @@
 --
 local skills, mod, flag, skill = ...
 
+#noGem
+#skill MeleeUnarmedPlayer
+#flags attack area melee
+#mods

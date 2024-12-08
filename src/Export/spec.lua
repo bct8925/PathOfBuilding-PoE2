@@ -5091,14 +5091,14 @@ return {
 		},
 		[6]={
 			list=true,
-			name="Tags",
+			name="SpawnTags",
 			refTo="Tags",
 			type="Key",
 			width=300
 		},
 		[7]={
 			list=true,
-			name="SpawnWeight",
+			name="SpawnWeights",
 			refTo="",
 			type="Int",
 			width=270
