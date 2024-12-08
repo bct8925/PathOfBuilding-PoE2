@@ -1941,10 +1941,10 @@ return {
 		},
 		[2]={
 			list=false,
-			name="",
+			name="CharmCount",
 			refTo="",
 			type="Int",
-			width=150
+			width=100
 		}
 	},
 	bestiarycapturablemonsters={
