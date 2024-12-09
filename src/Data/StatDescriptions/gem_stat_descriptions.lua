@@ -11,7 +11,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Supported Skills deal {0}% more [Melee] [Physical] Damage"
+				text="Supported Skills deal {0}% more Melee Physical Damage"
 			},
 			[2]={
 				[1]={
@@ -24,7 +24,7 @@ return {
 						[2]=-1
 					}
 				},
-				text="Supported Skills deal {0}% less [Melee] [Physical] Damage"
+				text="Supported Skills deal {0}% less Melee Physical Damage"
 			}
 		},
 		stats={
@@ -44,7 +44,7 @@ return {
 						[2]=0
 					}
 				},
-				text="Socketed [Curse] Skills apply in an [Aura] around you"
+				text="Socketed Curse Skills apply in an Aura around you"
 			}
 		},
 		stats={
@@ -148,7 +148,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Supported [Attack] Skills deal {0}% more Damage while on Full Life"
+				text="Supported Attack Skills deal {0}% more Damage while on Full Life"
 			},
 			[2]={
 				[1]={
@@ -161,7 +161,7 @@ return {
 						[2]=-1
 					}
 				},
-				text="Supported [Attack] Skills deal {0}% less Damage while on Full Life"
+				text="Supported Attack Skills deal {0}% less Damage while on Full Life"
 			}
 		},
 		stats={
@@ -177,7 +177,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Supported [Attack] Skills deal {0}% more Elemental Damage"
+				text="Supported Attack Skills deal {0}% more Elemental Damage"
 			},
 			[2]={
 				[1]={
@@ -190,7 +190,7 @@ return {
 						[2]=-1
 					}
 				},
-				text="Supported [Attack] Skills deal {0}% less Elemental Damage"
+				text="Supported Attack Skills deal {0}% less Elemental Damage"
 			}
 		},
 		stats={
@@ -206,7 +206,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Supported Skills deal {0}% more Weapon [ElementalDamage|Elemental Damage]"
+				text="Supported Skills deal {0}% more Weapon Elemental Damage"
 			},
 			[2]={
 				[1]={
@@ -219,7 +219,7 @@ return {
 						[2]=-1
 					}
 				},
-				text="Supported Skills deal {0}% less Weapon [ElementalDamage|Elemental Damage]"
+				text="Supported Skills deal {0}% less Weapon Elemental Damage"
 			}
 		},
 		stats={
@@ -322,7 +322,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Supported Skills deal {0}% more [Projectile|Projectile] Damage"
+				text="Supported Skills deal {0}% more Projectile Damage"
 			},
 			[2]={
 				[1]={
@@ -335,7 +335,7 @@ return {
 						[2]=-1
 					}
 				},
-				text="Supported Skills deal {0}% less [Projectile|Projectile] Damage"
+				text="Supported Skills deal {0}% less Projectile Damage"
 			}
 		},
 		stats={
@@ -843,7 +843,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Supported Skills have {0}% increased [Aura] [BuffEffect|Effect]"
+				text="Supported Skills have {0}% increased Aura Effect"
 			},
 			[2]={
 				[1]={
@@ -856,7 +856,7 @@ return {
 						[2]=-1
 					}
 				},
-				text="Supported Skills have {0}% reduced [Aura] [BuffEffect|Effect]"
+				text="Supported Skills have {0}% reduced Aura Effect"
 			}
 		},
 		stats={
@@ -872,7 +872,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Supported Skills have {0}% more [Critical|Critical Hit] Chance"
+				text="Supported Skills have {0}% more Critical Hit Chance"
 			},
 			[2]={
 				[1]={
@@ -885,7 +885,7 @@ return {
 						[2]=-1
 					}
 				},
-				text="Supported Skills have {0}% less [Critical|Critical Hit] Chance"
+				text="Supported Skills have {0}% less Critical Hit Chance"
 			}
 		},
 		stats={
@@ -901,7 +901,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Mana Cost of Supported Skills [StatConversion|Converted] to Life Cost"
+				text="Mana Cost of Supported Skills Converted to Life Cost"
 			}
 		},
 		stats={
@@ -969,7 +969,7 @@ return {
 						[2]=10
 					}
 				},
-				text="[Ignite|Ignites] inflicted by Supported Skills [AilmentSpread|Spread] to other\nenemies that stay within {0} metre for 2 seconds"
+				text="Ignites inflicted by Supported Skills Spread to other\nenemies that stay within {0} metre for 2 seconds"
 			},
 			[2]={
 				[1]={
@@ -982,7 +982,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="[Ignite|Ignites] inflicted by Supported Skills [AilmentSpread|Spread] to other\nenemies that stay within {0} metres for 2 seconds"
+				text="Ignites inflicted by Supported Skills Spread to other\nenemies that stay within {0} metres for 2 seconds"
 			}
 		},
 		stats={
@@ -1014,7 +1014,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Supported Skills' Projectile [Attack] Hits deal up to 30% more Damage to targets at the start of their movement, dealing less Damage to targets as the projectile travels farther"
+				text="Supported Skills' Projectile Attack Hits deal up to 30% more Damage to targets at the start of their movement, dealing less Damage to targets as the projectile travels farther"
 			}
 		},
 		stats={
@@ -1030,7 +1030,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="[DNT] Supported Skills deal 1% increased [Projectile] [Attack] Damage per 2 [Strength]"
+				text="DNT Supported Skills deal 1% increased Projectile Attack Damage per 2 Strength"
 			}
 		},
 		stats={
@@ -1046,7 +1046,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="[DNT] Supported Skills deal 1% increased [Spell] Damage per 2 [Strength]"
+				text="DNT Supported Skills deal 1% increased Spell Damage per 2 Strength"
 			}
 		},
 		stats={
@@ -1189,7 +1189,7 @@ return {
 						[2]=1000
 					}
 				},
-				text="[Totem] duration is {0} second"
+				text="Totem duration is {0} second"
 			},
 			[2]={
 				[1]={
@@ -1202,7 +1202,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="[Totem] duration is {0} seconds"
+				text="Totem duration is {0} seconds"
 			}
 		},
 		stats={
@@ -1218,7 +1218,7 @@ return {
 						[2]=1
 					}
 				},
-				text="[Projectile|Projectiles] from Supported Skills [Pierce|Pierce] {0} additional Target"
+				text="Projectiles from Supported Skills Pierce {0} additional Target"
 			},
 			[2]={
 				limit={
@@ -1227,7 +1227,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="[Projectile|Projectiles] from Supported Skills [Pierce|Pierce] {0} additional Targets"
+				text="Projectiles from Supported Skills Pierce {0} additional Targets"
 			}
 		},
 		stats={
@@ -1319,7 +1319,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Supported Skills have {0:+d} to [Totem] Limit"
+				text="Supported Skills have {0:+d} to Totem Limit"
 			}
 		},
 		stats={
@@ -1459,7 +1459,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Supported Skills have {0}% chance to [Blind] enemies on [HitDamage|Hit]"
+				text="Supported Skills have {0}% chance to Blind enemies on Hit"
 			}
 		},
 		stats={
@@ -1475,7 +1475,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Supported Skills have {0}% increased [Blind|Blinding] duration"
+				text="Supported Skills have {0}% increased Blinding duration"
 			},
 			[2]={
 				[1]={
@@ -1488,7 +1488,7 @@ return {
 						[2]=-1
 					}
 				},
-				text="Supported Skills have {0}% reduced [Blind|Blinding] duration"
+				text="Supported Skills have {0}% reduced Blinding duration"
 			}
 		},
 		stats={
@@ -1504,7 +1504,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Supported Skills have {0}% increased [Critical|Critical Hit] Chance"
+				text="Supported Skills have {0}% increased Critical Hit Chance"
 			},
 			[2]={
 				[1]={
@@ -1517,7 +1517,7 @@ return {
 						[2]=-1
 					}
 				},
-				text="Supported Skills have {0}% reduced [Critical|Critical Hit] Chance"
+				text="Supported Skills have {0}% reduced Critical Hit Chance"
 			}
 		},
 		stats={
@@ -1533,7 +1533,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Supported Skills have {0}% more [Critical|Critical Hit] Chance"
+				text="Supported Skills have {0}% more Critical Hit Chance"
 			},
 			[2]={
 				[1]={
@@ -1546,7 +1546,7 @@ return {
 						[2]=-1
 					}
 				},
-				text="Supported Skills have {0}% less [Critical|Critical Hit] Chance"
+				text="Supported Skills have {0}% less Critical Hit Chance"
 			}
 		},
 		stats={
@@ -1562,7 +1562,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Supported Skills have {0}% increased [CriticalDamageBonus|Critical Damage Bonus]"
+				text="Supported Skills have {0}% increased Critical Damage Bonus"
 			},
 			[2]={
 				[1]={
@@ -1575,7 +1575,7 @@ return {
 						[2]=-1
 					}
 				},
-				text="Supported Skills have {0}% reduced [CriticalDamageBonus|Critical Damage Bonus]"
+				text="Supported Skills have {0}% reduced Critical Damage Bonus"
 			}
 		},
 		stats={
@@ -1591,7 +1591,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Supported Skills [Penetration|Penetrate] {0}% [Resistances|Fire Resistance]"
+				text="Supported Skills Penetrate {0}% Fire Resistance"
 			}
 		},
 		stats={
@@ -1607,7 +1607,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Supported Skills [Penetration|Penetrate] {0}% [Resistances|Cold Resistance]"
+				text="Supported Skills Penetrate {0}% Cold Resistance"
 			}
 		},
 		stats={
@@ -1639,7 +1639,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Supported Skills [Penetration|Penetrate] {0}% [Resistances|Lightning Resistance]"
+				text="Supported Skills Penetrate {0}% Lightning Resistance"
 			}
 		},
 		stats={
@@ -1655,7 +1655,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Supported Skills [Chain] {0:+d} times"
+				text="Supported Skills Chain {0:+d} times"
 			}
 		},
 		stats={
@@ -1675,7 +1675,7 @@ return {
 						[2]=1
 					}
 				},
-				text="Supported Skills [Chain|Chain] {0}% more times"
+				text="Supported Skills Chain {0}% more times"
 			}
 		},
 		stats={
@@ -1707,7 +1707,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="[Projectile|Projectiles] from Supported Skills [Fork]"
+				text="Projectiles from Supported Skills Fork"
 			}
 		},
 		stats={
@@ -1795,7 +1795,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Supported Skills deal {0}% more Damage with [HitDamage|Hits]"
+				text="Supported Skills deal {0}% more Damage with Hits"
 			},
 			[2]={
 				[1]={
@@ -1808,7 +1808,7 @@ return {
 						[2]=-1
 					}
 				},
-				text="Supported Skills deal {0}% less Damage with [HitDamage|Hits]"
+				text="Supported Skills deal {0}% less Damage with Hits"
 			}
 		},
 		stats={
@@ -1978,7 +1978,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="[Projectile|Projectiles] from Supported Skills deal\n{0}% more Damage after [Fork|Forking]"
+				text="Projectiles from Supported Skills deal\n{0}% more Damage after Forking"
 			},
 			[2]={
 				[1]={
@@ -1991,7 +1991,7 @@ return {
 						[2]=-1
 					}
 				},
-				text="[Projectile|Projectiles] from Supported Skills deal\n{0}% less Damage after [Fork|Forking]"
+				text="Projectiles from Supported Skills deal\n{0}% less Damage after Forking"
 			}
 		},
 		stats={
@@ -2007,7 +2007,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="{0}% more [BuffMagnitude|Magnitude] of [Poison] inflicted with Supported Skills"
+				text="{0}% more Magnitude of Poison inflicted with Supported Skills"
 			},
 			[2]={
 				[1]={
@@ -2020,7 +2020,7 @@ return {
 						[2]=-1
 					}
 				},
-				text="{0}% less [BuffMagnitude|Magnitude] of [Poison] inflicted with Supported Skills"
+				text="{0}% less Magnitude of Poison inflicted with Supported Skills"
 			}
 		},
 		stats={
@@ -2094,7 +2094,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Supported Skills deal {0}% more damage with [HitDamage|Hits] and [DamagingAilments|Ailments]"
+				text="Supported Skills deal {0}% more damage with Hits and Ailments"
 			},
 			[2]={
 				[1]={
@@ -2107,7 +2107,7 @@ return {
 						[2]=-1
 					}
 				},
-				text="Supported Skills deal {0}% less damage with [HitDamage|Hits] and [DamagingAilments|Ailments]"
+				text="Supported Skills deal {0}% less damage with Hits and Ailments"
 			}
 		},
 		stats={
@@ -2152,7 +2152,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Supported Skills deal {0}% more non-[Ailments|Ailment] Damage over Time"
+				text="Supported Skills deal {0}% more non-Ailment Damage over Time"
 			},
 			[2]={
 				[1]={
@@ -2165,7 +2165,7 @@ return {
 						[2]=-1
 					}
 				},
-				text="Supported Skills deal {0}% less non-[Ailments|Ailment] Damage over Time"
+				text="Supported Skills deal {0}% less non-Ailment Damage over Time"
 			}
 		},
 		stats={
@@ -2239,7 +2239,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="{0}% more [BuffMagnitude|Magnitude] of [DamagingAilments|Damaging Ailments] inflicted with Supported Skills"
+				text="{0}% more Magnitude of Damaging Ailments inflicted with Supported Skills"
 			},
 			[2]={
 				[1]={
@@ -2252,7 +2252,7 @@ return {
 						[2]=-1
 					}
 				},
-				text="{0}% less [BuffMagnitude|Magnitude] of [DamagingAilments|Damaging Ailments] inflicted with Supported Skills"
+				text="{0}% less Magnitude of Damaging Ailments inflicted with Supported Skills"
 			}
 		},
 		stats={
@@ -2297,7 +2297,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Supported Skills deal {0}% more [Physical] Damage"
+				text="Supported Skills deal {0}% more Physical Damage"
 			},
 			[2]={
 				[1]={
@@ -2310,7 +2310,7 @@ return {
 						[2]=-1
 					}
 				},
-				text="Supported Skills deal {0}% less [Physical] Damage"
+				text="Supported Skills deal {0}% less Physical Damage"
 			}
 		},
 		stats={
@@ -2384,7 +2384,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Supported Skills deal {0}% more [ElementalDamage|Elemental Damage]"
+				text="Supported Skills deal {0}% more Elemental Damage"
 			},
 			[2]={
 				[1]={
@@ -2413,7 +2413,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="{0}% more [BuffMagnitude|Magnitude] of [Ignite] inflicted with Supported Skills"
+				text="{0}% more Magnitude of Ignite inflicted with Supported Skills"
 			},
 			[2]={
 				[1]={
@@ -2426,7 +2426,7 @@ return {
 						[2]=-1
 					}
 				},
-				text="{0}% less [BuffMagnitude|Magnitude] of [Ignite] inflicted with Supported Skills"
+				text="{0}% less Magnitude of Ignite inflicted with Supported Skills"
 			}
 		},
 		stats={
@@ -2471,7 +2471,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Supported Skills deal up to {0}% more [Melee] Damage to Enemies, based on proximity"
+				text="Supported Skills deal up to {0}% more Melee Damage to Enemies, based on proximity"
 			}
 		},
 		stats={
@@ -2516,7 +2516,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="{0} Life gained per Enemy Hit with Supported [Attack|Attacks]"
+				text="{0} Life gained per Enemy Hit with Supported Attacks"
 			},
 			[2]={
 				[1]={
@@ -2529,7 +2529,7 @@ return {
 						[2]=-1
 					}
 				},
-				text="{0} Life lost per Enemy Hit with Supported [Attack|Attacks]"
+				text="{0} Life lost per Enemy Hit with Supported Attacks"
 			}
 		},
 		stats={
@@ -2545,7 +2545,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="{0} Mana gained per Enemy Hit with Supported [Attack|Attacks]"
+				text="{0} Mana gained per Enemy Hit with Supported Attacks"
 			},
 			[2]={
 				[1]={
@@ -2558,7 +2558,7 @@ return {
 						[2]=-1
 					}
 				},
-				text="{0} Mana lost per Enemy Hit with Supported [Attack|Attacks]"
+				text="{0} Mana lost per Enemy Hit with Supported Attacks"
 			}
 		},
 		stats={
@@ -2715,7 +2715,7 @@ return {
 						[2]=1
 					}
 				},
-				text="Supported [Spell|Spells] Echo once"
+				text="Supported Spells Echo once"
 			},
 			[2]={
 				limit={
@@ -2724,7 +2724,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Supported [Spell|Spells] Echo {0} times"
+				text="Supported Spells Echo {0} times"
 			}
 		},
 		stats={
@@ -2769,7 +2769,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Supported Skills have {0}% more [Melee] [Attack] Speed"
+				text="Supported Skills have {0}% more Melee Attack Speed"
 			},
 			[2]={
 				[1]={
@@ -2782,7 +2782,7 @@ return {
 						[2]=-1
 					}
 				},
-				text="Supported Skills have {0}% less [Melee] [Attack] Speed"
+				text="Supported Skills have {0}% less Melee Attack Speed"
 			}
 		},
 		stats={
@@ -2798,7 +2798,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Supported Skills deal {0}% more [Attack] Damage"
+				text="Supported Skills deal {0}% more Attack Damage"
 			},
 			[2]={
 				[1]={
@@ -2811,7 +2811,7 @@ return {
 						[2]=-1
 					}
 				},
-				text="Supported Skills deal {0}% less [Attack] Damage"
+				text="Supported Skills deal {0}% less Attack Damage"
 			}
 		},
 		stats={
@@ -2991,7 +2991,7 @@ return {
 						[2]=99
 					}
 				},
-				text="Supported Skills have a {0}% chance to apply Supported [Curse|Curses] on Hit"
+				text="Supported Skills have a {0}% chance to apply Supported Curses on Hit"
 			},
 			[2]={
 				limit={
@@ -3000,7 +3000,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Supported Skills apply supported [Curse|Curses] on Hit"
+				text="Supported Skills apply supported Curses on Hit"
 			}
 		},
 		stats={
@@ -3016,7 +3016,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="You cannot Cast Supported [Curse] Spells"
+				text="You cannot Cast Supported Curse Spells"
 			}
 		},
 		stats={
@@ -3032,7 +3032,7 @@ return {
 						[2]=99
 					}
 				},
-				text="Supported [Attack|Attacks] have a {0}% chance to Trigger a Supported Spell when you Crit an Enemy"
+				text="Supported Attacks have a {0}% chance to Trigger a Supported Spell when you Crit an Enemy"
 			},
 			[2]={
 				limit={
@@ -3041,7 +3041,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Supported [Attack|Attacks] will Trigger a Supported Spell when you Crit an Enemy"
+				text="Supported Attacks will Trigger a Supported Spell when you Crit an Enemy"
 			}
 		},
 		stats={
@@ -3057,7 +3057,7 @@ return {
 						[2]=99
 					}
 				},
-				text="Supported [Melee] [Attack|Attacks] have a {0}% chance to Trigger a Supported Spell on Kill"
+				text="Supported Melee Attacks have a {0}% chance to Trigger a Supported Spell on Kill"
 			},
 			[2]={
 				limit={
@@ -3066,7 +3066,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Supported [Melee] [Attack|Attacks] will Trigger a Supported Spell on Kill"
+				text="Supported Melee Attacks will Trigger a Supported Spell on Kill"
 			}
 		},
 		stats={
@@ -3082,7 +3082,7 @@ return {
 						[2]=99
 					}
 				},
-				text="Trigger Doom Blast when [Curse|Curses] from Supported Skills expire"
+				text="Trigger Doom Blast when Curses from Supported Skills expire"
 			}
 		},
 		stats={
@@ -3151,7 +3151,7 @@ return {
 						[2]=99
 					}
 				},
-				text="{0}% chance to Trigger Supported Spells when you fire Projectiles from a Non-Triggered Wand [Attack]"
+				text="{0}% chance to Trigger Supported Spells when you fire Projectiles from a Non-Triggered Wand Attack"
 			},
 			[2]={
 				limit={
@@ -3160,7 +3160,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Trigger Supported Spells when you fire Projectiles from a Non-Triggered Wand [Attack]"
+				text="Trigger Supported Spells when you fire Projectiles from a Non-Triggered Wand Attack"
 			}
 		},
 		stats={
@@ -3243,7 +3243,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Deals {0} Base [Chaos|Chaos] Damage per second"
+				text="Deals {0} Base Chaos Damage per second"
 			}
 		},
 		stats={
@@ -3263,7 +3263,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Deals {0} Base [Fire] Damage per second"
+				text="Deals {0} Base Fire Damage per second"
 			}
 		},
 		stats={
@@ -3303,7 +3303,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Secondary Debuff Deals {0} Base [Fire] Damage per second"
+				text="Secondary Debuff Deals {0} Base Fire Damage per second"
 			}
 		},
 		stats={
@@ -3339,7 +3339,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="{0}% increased Effect of Supported [Curse|Curses]"
+				text="{0}% increased Effect of Supported Curses"
 			},
 			[2]={
 				[1]={
@@ -3352,7 +3352,7 @@ return {
 						[2]=-1
 					}
 				},
-				text="{0}% reduced Effect of Supported [Curse|Curses]"
+				text="{0}% reduced Effect of Supported Curses"
 			}
 		},
 		stats={
@@ -3368,7 +3368,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="{0}% more Effect of Supported [Curse|Curses]"
+				text="{0}% more Effect of Supported Curses"
 			},
 			[2]={
 				[1]={
@@ -3381,7 +3381,7 @@ return {
 						[2]=-1
 					}
 				},
-				text="{0}% less Effect of Supported [Curse|Curses]"
+				text="{0}% less Effect of Supported Curses"
 			}
 		},
 		stats={
@@ -3397,7 +3397,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="{0}% more Effect of Supported [Curse|Curses]"
+				text="{0}% more Effect of Supported Curses"
 			},
 			[2]={
 				[1]={
@@ -3410,7 +3410,7 @@ return {
 						[2]=-1
 					}
 				},
-				text="{0}% less Effect of Supported [Curse|Curses]"
+				text="{0}% less Effect of Supported Curses"
 			}
 		},
 		stats={
@@ -3426,7 +3426,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="{0}% more Effect of Supported [Curse|Curses]"
+				text="{0}% more Effect of Supported Curses"
 			},
 			[2]={
 				[1]={
@@ -3439,7 +3439,7 @@ return {
 						[2]=-1
 					}
 				},
-				text="{0}% less Effect of Supported [Curse|Curses]"
+				text="{0}% less Effect of Supported Curses"
 			}
 		},
 		stats={
@@ -3484,7 +3484,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Supported Skills have {0}% more [Attack] Speed"
+				text="Supported Skills have {0}% more Attack Speed"
 			},
 			[2]={
 				[1]={
@@ -3497,7 +3497,7 @@ return {
 						[2]=-1
 					}
 				},
-				text="Supported Skills have {0}% less [Attack] Speed"
+				text="Supported Skills have {0}% less Attack Speed"
 			}
 		},
 		stats={
@@ -3517,7 +3517,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Causes [Bleeding|Bleeding] on [HitDamage|Hit] for {0} seconds"
+				text="Causes Bleeding on Hit for {0} seconds"
 			}
 		},
 		stats={
@@ -3549,7 +3549,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Supported Skills deal {0}% more [Melee] [Physical] Damage against [Bleeding] enemies"
+				text="Supported Skills deal {0}% more Melee Physical Damage against Bleeding enemies"
 			},
 			[2]={
 				[1]={
@@ -3562,7 +3562,7 @@ return {
 						[2]=-1
 					}
 				},
-				text="Supported Skills deal {0}% less [Melee] [Physical] Damage against [Bleeding] enemies"
+				text="Supported Skills deal {0}% less Melee Physical Damage against Bleeding enemies"
 			}
 		},
 		stats={
@@ -3578,7 +3578,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Supported Skills have {0}% more [Projectile|Projectile] Speed"
+				text="Supported Skills have {0}% more Projectile Speed"
 			},
 			[2]={
 				[1]={
@@ -3591,7 +3591,7 @@ return {
 						[2]=-1
 					}
 				},
-				text="Supported Skills have {0}% less [Projectile|Projectile] Speed"
+				text="Supported Skills have {0}% less Projectile Speed"
 			}
 		},
 		stats={
@@ -3749,7 +3749,7 @@ return {
 						[2]=99
 					}
 				},
-				text="Supported Skills have a {0}% chance to grant Elusive on [Critical|Critical Hit]"
+				text="Supported Skills have a {0}% chance to grant Elusive on Critical Hit"
 			},
 			[2]={
 				limit={
@@ -3758,7 +3758,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Supported Skills grant Elusive on [Critical|Critical Hit]"
+				text="Supported Skills grant Elusive on Critical Hit"
 			}
 		},
 		stats={
@@ -3774,7 +3774,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Supported Skills [Poison] Enemies on [HitDamage|Hit]"
+				text="Supported Skills Poison Enemies on Hit"
 			}
 		},
 		stats={
@@ -3790,7 +3790,7 @@ return {
 						[2]=99
 					}
 				},
-				text="Supported Skills have {0}% chance to [Poison|Poison] on [HitDamage|Hit]"
+				text="Supported Skills have {0}% chance to Poison on Hit"
 			},
 			[2]={
 				limit={
@@ -3799,7 +3799,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Supported Skills always [Poison|Poison] on [HitDamage|Hit]"
+				text="Supported Skills always Poison on Hit"
 			}
 		},
 		stats={
@@ -3815,7 +3815,7 @@ return {
 						[2]=99
 					}
 				},
-				text="Supported Skills have {0}% chance to inflict [Withered|Withered] on [HitDamage|Hit]"
+				text="Supported Skills have {0}% chance to inflict Withered on Hit"
 			},
 			[2]={
 				limit={
@@ -3824,7 +3824,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Supported Skills always inflict [Withered|Withered] on [HitDamage|Hit]"
+				text="Supported Skills always inflict Withered on Hit"
 			}
 		},
 		stats={
@@ -3840,7 +3840,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Supported Skills cannot inflict [ElementalAilments|Elemental Ailments]"
+				text="Supported Skills cannot inflict Elemental Ailments"
 			}
 		},
 		stats={
@@ -3876,7 +3876,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Supported Skills have {0:+d}% to [CriticalDamageBonus|Critical Damage Bonus] while Elusive"
+				text="Supported Skills have {0:+d}% to Critical Damage Bonus while Elusive"
 			}
 		},
 		stats={
@@ -3900,7 +3900,7 @@ return {
 						[2]=1000
 					}
 				},
-				text="Gain [ArcaneSurge|Arcane Surge] for {1} second after Spending a total of {0}% of your Maximum Mana on Supported Skills"
+				text="Gain Arcane Surge for {1} second after Spending a total of {0}% of your Maximum Mana on Supported Skills"
 			},
 			[2]={
 				[1]={
@@ -3917,7 +3917,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Gain [ArcaneSurge|Arcane Surge] for {1} seconds after Spending a total of {0}% of your Maximum Mana on Supported Skills"
+				text="Gain Arcane Surge for {1} seconds after Spending a total of {0}% of your Maximum Mana on Supported Skills"
 			}
 		},
 		stats={
@@ -4000,7 +4000,7 @@ return {
 						[2]=1000
 					}
 				},
-				text="[Withered] lasts {0} second"
+				text="Withered lasts {0} second"
 			},
 			[2]={
 				[1]={
@@ -4013,7 +4013,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="[Withered] lasts {0} seconds"
+				text="Withered lasts {0} seconds"
 			}
 		},
 		stats={
@@ -4066,7 +4066,7 @@ return {
 						[2]=1000
 					}
 				},
-				text="[Withered] lasts {0} second"
+				text="Withered lasts {0} second"
 			},
 			[2]={
 				[1]={
@@ -4079,7 +4079,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="[Withered] lasts {0} seconds"
+				text="Withered lasts {0} seconds"
 			}
 		},
 		stats={
@@ -4099,7 +4099,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Every second use of Supported [Attack|Attacks] causes {1}% more [Stun|Stun Buildup]"
+				text="Every second use of Supported Attacks causes {1}% more Stun Buildup"
 			},
 			[2]={
 				limit={
@@ -4112,7 +4112,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Every third use of Supported [Attack|Attacks] causes {1}% more [Stun|Stun Buildup]"
+				text="Every third use of Supported Attacks causes {1}% more Stun Buildup"
 			},
 			[3]={
 				limit={
@@ -4125,7 +4125,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Every fourth use of Supported [Attack|Attacks] causes {1}% more [Stun|Stun Buildup]"
+				text="Every fourth use of Supported Attacks causes {1}% more Stun Buildup"
 			},
 			[4]={
 				limit={
@@ -4138,7 +4138,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Every fifth use of Supported [Attack|Attacks] causes {1}% more [Stun|Stun Buildup]"
+				text="Every fifth use of Supported Attacks causes {1}% more Stun Buildup"
 			},
 			[5]={
 				limit={
@@ -4151,7 +4151,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Every sixth use of Supported [Attack|Attacks] causes {1}% more [Stun|Stun Buildup]"
+				text="Every sixth use of Supported Attacks causes {1}% more Stun Buildup"
 			},
 			[6]={
 				limit={
@@ -4164,7 +4164,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Every seventh use of Supported [Attack|Attacks] causes {1}% more [Stun|Stun Buildup]"
+				text="Every seventh use of Supported Attacks causes {1}% more Stun Buildup"
 			}
 		},
 		stats={
@@ -4206,7 +4206,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="{0}% more [BuffMagnitude|Magnitude] of [Chill] inflicted with Supported Skills"
+				text="{0}% more Magnitude of Chill inflicted with Supported Skills"
 			},
 			[2]={
 				[1]={
@@ -4219,7 +4219,7 @@ return {
 						[2]=-1
 					}
 				},
-				text="{0}% less [BuffMagnitude|Magnitude] of [Chill] inflicted with Supported Skills"
+				text="{0}% less Magnitude of Chill inflicted with Supported Skills"
 			}
 		},
 		stats={
@@ -4235,7 +4235,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Supported Skills have {0}% increased [Chill|Chill] Duration on Enemies"
+				text="Supported Skills have {0}% increased Chill Duration on Enemies"
 			},
 			[2]={
 				[1]={
@@ -4248,7 +4248,7 @@ return {
 						[2]=-1
 					}
 				},
-				text="Supported Skills have {0}% reduced [Chill|Chill] Duration on Enemies"
+				text="Supported Skills have {0}% reduced Chill Duration on Enemies"
 			}
 		},
 		stats={
@@ -4293,7 +4293,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Supported Skills have {0}% increased [Critical|Critical Hit] Chance per\nPower Charge when used by Mines"
+				text="Supported Skills have {0}% increased Critical Hit Chance per\nPower Charge when used by Mines"
 			},
 			[2]={
 				[1]={
@@ -4306,7 +4306,7 @@ return {
 						[2]=-1
 					}
 				},
-				text="Supported Skills have {0}% reduced [Critical|Critical Hit] Chance per\nPower Charge when used by Mines"
+				text="Supported Skills have {0}% reduced Critical Hit Chance per\nPower Charge when used by Mines"
 			}
 		},
 		stats={
@@ -4322,7 +4322,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="[Minion|Minions] from Supported Skills have {0:+d}% to all Elemental [Resistances]"
+				text="Minions from Supported Skills have {0:+d}% to all Elemental Resistances"
 			}
 		},
 		stats={
@@ -4338,7 +4338,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="[Minion|Minions] from Supported Skills have {0:+d}% to all [MaximumResistances|Maximum Elemental Resistances]"
+				text="Minions from Supported Skills have {0:+d}% to all Maximum Elemental Resistances"
 			}
 		},
 		stats={
@@ -4358,7 +4358,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="[Minion|Minions] from Supported Skills take {0}% of their maximum Life as [Fire] Damage per second"
+				text="Minions from Supported Skills take {0}% of their maximum Life as Fire Damage per second"
 			}
 		},
 		stats={
@@ -4407,7 +4407,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="[Minion|Minions] from Supported Skills deal {0}% of their maximum Life as [Fire] Damage per second to nearby Enemies"
+				text="Minions from Supported Skills deal {0}% of their maximum Life as Fire Damage per second to nearby Enemies"
 			}
 		},
 		stats={
@@ -4443,7 +4443,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="[Attack|Attacks] with Supported Skill are [AncestralBoost|Ancestrally Boosted], no more than once every {0} seconds"
+				text="Attacks with Supported Skill are Ancestrally Boosted, no more than once every {0} seconds"
 			}
 		},
 		stats={
@@ -4578,7 +4578,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Supported Skills have {0}% increased [Attack] and Cast Speed while each Resonance is at least 25"
+				text="Supported Skills have {0}% increased Attack and Cast Speed while each Resonance is at least 25"
 			},
 			[2]={
 				[1]={
@@ -4591,7 +4591,7 @@ return {
 						[2]=-1
 					}
 				},
-				text="Supported Skills have {0}% reduced [Attack] and Cast Speed while each Resonance is at least 25"
+				text="Supported Skills have {0}% reduced Attack and Cast Speed while each Resonance is at least 25"
 			}
 		},
 		stats={
@@ -4639,7 +4639,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Supported Skills cannot deal [Critical|Critical Hits]"
+				text="Supported Skills cannot deal Critical Hits"
 			}
 		},
 		stats={
@@ -4655,7 +4655,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Supported Skills can gain [Combo]\nSupported Skills lose all [Combo] on use"
+				text="Supported Skills can gain Combo\nSupported Skills lose all Combo on use"
 			}
 		},
 		stats={
@@ -4671,7 +4671,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Supported Skills cannot [Ignite]"
+				text="Supported Skills cannot Ignite"
 			}
 		},
 		stats={
@@ -4687,7 +4687,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Supported Skills Cannot inflict [Shock|Shock]"
+				text="Supported Skills Cannot inflict Shock"
 			}
 		},
 		stats={
@@ -4777,7 +4777,7 @@ return {
 						[2]=100
 					}
 				},
-				text="Increases and Reductions to Spell Damage also apply to [Attack] Damage from this Skill"
+				text="Increases and Reductions to Spell Damage also apply to Attack Damage from this Skill"
 			},
 			[2]={
 				limit={
@@ -4786,7 +4786,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Increases and Reductions to Spell Damage also apply to [Attack] Damage from this Skill at {0}% of their value"
+				text="Increases and Reductions to Spell Damage also apply to Attack Damage from this Skill at {0}% of their value"
 			}
 		},
 		stats={
@@ -4802,7 +4802,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Supported Skills [Electrocute] [PrimedElectrocution|Primed] enemies on [HitDamage|Hit]"
+				text="Supported Skills Electrocute Primed enemies on Hit"
 			}
 		},
 		stats={
@@ -4818,7 +4818,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Supported Skills Cannot inflict [Freeze], [Shock] or [Ignite]"
+				text="Supported Skills Cannot inflict Freeze, Shock or Ignite"
 			}
 		},
 		stats={
@@ -4834,7 +4834,7 @@ return {
 						[2]=99
 					}
 				},
-				text="Supported Skills have {0}% chance to gain a Power Charge on [Critical|Critical Hit]"
+				text="Supported Skills have {0}% chance to gain a Power Charge on Critical Hit"
 			},
 			[2]={
 				limit={
@@ -4843,7 +4843,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Supported Skills gain a Power Charge on [Critical|Critical Hit]"
+				text="Supported Skills gain a Power Charge on Critical Hit"
 			}
 		},
 		stats={
@@ -4908,7 +4908,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Supported Skills have {0:+d}% to [Critical|Critical Hit] Chance"
+				text="Supported Skills have {0:+d}% to Critical Hit Chance"
 			}
 		},
 		stats={
@@ -4924,7 +4924,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Supported Skills  have {0:+d}% more [Freeze] buildup against [Chill|Chilled Enemies]"
+				text="Supported Skills  have {0:+d}% more Freeze buildup against Chilled Enemies"
 			}
 		},
 		stats={
@@ -4940,7 +4940,7 @@ return {
 						[2]=99
 					}
 				},
-				text="Supported [Strike] Skills have a {0}% chance to build an additional [Combo] on [HitDamage|Hit]"
+				text="Supported Strike Skills have a {0}% chance to build an additional Combo on Hit"
 			},
 			[2]={
 				limit={
@@ -4949,7 +4949,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Supported [Strike] Skills build an additional [Combo] on [HitDamage|Hit]"
+				text="Supported Strike Skills build an additional Combo on Hit"
 			}
 		},
 		stats={
@@ -4969,7 +4969,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Supported Skills have {:+d}% to [Critical|Critical Hit] Chance while Dead"
+				text="Supported Skills have {:+d}% to Critical Hit Chance while Dead"
 			}
 		},
 		stats={
@@ -4989,7 +4989,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Supported Skills have {0:+d}% to [Critical|Critical Hit] Chance while [Elusive|Elusive]"
+				text="Supported Skills have {0:+d}% to Critical Hit Chance while Elusive"
 			}
 		},
 		stats={
@@ -5110,7 +5110,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="{0}% increased Area of Effect with [Melee] Skills while Totem is Active"
+				text="{0}% increased Area of Effect with Melee Skills while Totem is Active"
 			},
 			[2]={
 				[1]={
@@ -5123,7 +5123,7 @@ return {
 						[2]=-1
 					}
 				},
-				text="{0}% increased Area of Effect with [Melee] Skills while Totem is Active"
+				text="{0}% increased Area of Effect with Melee Skills while Totem is Active"
 			}
 		},
 		stats={
@@ -5139,7 +5139,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Ancestrally Boosted [Slam|Slams] have {}% reduced [EnemyStunThreshold|Enemy Stun Threshold]"
+				text="Ancestrally Boosted Slams have {}% reduced Enemy Stun Threshold"
 			},
 			[2]={
 				[1]={
@@ -5152,7 +5152,7 @@ return {
 						[2]=-1
 					}
 				},
-				text="Ancestrally Boosted [Slam|Slams] have {}% increased [EnemyStunThreshold|Enemy Stun Threshold]"
+				text="Ancestrally Boosted Slams have {}% increased Enemy Stun Threshold"
 			}
 		},
 		stats={
@@ -5168,7 +5168,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Supported Skills inflict [Cold] [Exposure] when they [Chill], lowering Total Cold Resistance by {0}%"
+				text="Supported Skills inflict Cold Exposure when they Chill, lowering Total Cold Resistance by {0}%"
 			}
 		},
 		stats={
@@ -5184,7 +5184,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Supported Skills inflict [Cold] [Exposure] when they [Freeze], lowering Total [Cold] [Resistances|Resistance] by {0}%"
+				text="Supported Skills inflict Cold Exposure when they Freeze, lowering Total Cold Resistance by {0}%"
 			}
 		},
 		stats={
@@ -5200,7 +5200,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Overpowered applies -{0}% chance to Block [Attack] and Spell Damage"
+				text="Overpowered applies -{0}% chance to Block Attack and Spell Damage"
 			}
 		},
 		stats={
@@ -5245,7 +5245,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="[Poison|Poison] applied by supported Skills also\n[ArmourBreak|Breaks] [Armour|Armour] equal to {0}% of [Poison|Poison] Damage dealt"
+				text="Poison applied by supported Skills also\nBreaks Armour equal to {0}% of Poison Damage dealt"
 			}
 		},
 		stats={
@@ -5261,7 +5261,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="[ArmourBreak|Break Armour] equal to {0}% of [Physical|Physical Damage] dealt by Supported Skill"
+				text="Break Armour equal to {0}% of Physical Damage dealt by Supported Skill"
 			}
 		},
 		stats={
@@ -5281,7 +5281,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Deals {0}% to {1}% of your [Strength] as [Physical] Damage"
+				text="Deals {0}% to {1}% of your Strength as Physical Damage"
 			}
 		},
 		stats={
@@ -5298,7 +5298,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Supported Skills have {0}% increased [Attack] and Cast Speed"
+				text="Supported Skills have {0}% increased Attack and Cast Speed"
 			},
 			[2]={
 				[1]={
@@ -5311,7 +5311,7 @@ return {
 						[2]=-1
 					}
 				},
-				text="Supported Skills have {0}% reduced [Attack] and Cast Speed"
+				text="Supported Skills have {0}% reduced Attack and Cast Speed"
 			}
 		},
 		stats={
@@ -5327,7 +5327,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Supported Skills have {0}% increased [Attack] and Cast Speed during Onslaught"
+				text="Supported Skills have {0}% increased Attack and Cast Speed during Onslaught"
 			},
 			[2]={
 				[1]={
@@ -5340,7 +5340,7 @@ return {
 						[2]=-1
 					}
 				},
-				text="Supported Skills have {0}% reduced [Attack] and Cast Speed during Onslaught"
+				text="Supported Skills have {0}% reduced Attack and Cast Speed during Onslaught"
 			}
 		},
 		stats={
@@ -5356,7 +5356,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Supported Skills have {0}% increased [Attack] [Critical|Critical Hit] Chance"
+				text="Supported Skills have {0}% increased Attack Critical Hit Chance"
 			},
 			[2]={
 				[1]={
@@ -5369,7 +5369,7 @@ return {
 						[2]=-1
 					}
 				},
-				text="Supported Skills have {0}% reduced [Attack] [Critical|Critical Hit] Chance"
+				text="Supported Skills have {0}% reduced Attack Critical Hit Chance"
 			}
 		},
 		stats={
@@ -5385,7 +5385,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Supported Skills deal {0}% increased [Attack] Damage"
+				text="Supported Skills deal {0}% increased Attack Damage"
 			},
 			[2]={
 				[1]={
@@ -5398,7 +5398,7 @@ return {
 						[2]=-1
 					}
 				},
-				text="Supported Skills deal {0}% reduced [Attack] Damage"
+				text="Supported Skills deal {0}% reduced Attack Damage"
 			}
 		},
 		stats={
@@ -5414,7 +5414,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Supported Skills deal {}% increased [Attack] damage per 1000 Accuracy Rating"
+				text="Supported Skills deal {}% increased Attack damage per 1000 Accuracy Rating"
 			},
 			[2]={
 				[1]={
@@ -5427,7 +5427,7 @@ return {
 						[2]=-1
 					}
 				},
-				text="Supported Skills deal {}% reduced [Attack] damage per 1000 Accuracy Rating"
+				text="Supported Skills deal {}% reduced Attack damage per 1000 Accuracy Rating"
 			}
 		},
 		stats={
@@ -5447,7 +5447,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Supported [Attack|Attacks] deal {0} to {1} added Physical Damage with Weapons per 10 Rage"
+				text="Supported Attacks deal {0} to {1} added Physical Damage with Weapons per 10 Rage"
 			}
 		},
 		stats={
@@ -5468,7 +5468,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Supported [Attack|Attacks] deal {0} to {1} added Physical Damage with Weapons while you have at least 10 Rage"
+				text="Supported Attacks deal {0} to {1} added Physical Damage with Weapons while you have at least 10 Rage"
 			}
 		},
 		stats={
@@ -5489,7 +5489,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Supported [Attack|Attacks] deal {0} to {1} added Physical Damage with Weapons"
+				text="Supported Attacks deal {0} to {1} added Physical Damage with Weapons"
 			}
 		},
 		stats={
@@ -5506,7 +5506,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Supported Skills have {0}% increased [Attack] Speed"
+				text="Supported Skills have {0}% increased Attack Speed"
 			},
 			[2]={
 				[1]={
@@ -5519,7 +5519,7 @@ return {
 						[2]=-1
 					}
 				},
-				text="Supported Skills have {0}% reduced [Attack] Speed"
+				text="Supported Skills have {0}% reduced Attack Speed"
 			}
 		},
 		stats={
@@ -5535,7 +5535,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Supported Skills have {0}% increased [Attack] Speed when on [LowLife|Low Life]"
+				text="Supported Skills have {0}% increased Attack Speed when on Low Life"
 			},
 			[2]={
 				[1]={
@@ -5548,7 +5548,7 @@ return {
 						[2]=-1
 					}
 				},
-				text="Supported Skills have {0}% reduced [Attack] Speed when on [LowLife|Low Life]"
+				text="Supported Skills have {0}% reduced Attack Speed when on Low Life"
 			}
 		},
 		stats={
@@ -5564,7 +5564,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Supported Skills have {0}% increased [Attack] Speed while you have at least 20 Rage"
+				text="Supported Skills have {0}% increased Attack Speed while you have at least 20 Rage"
 			},
 			[2]={
 				[1]={
@@ -5577,7 +5577,7 @@ return {
 						[2]=-1
 					}
 				},
-				text="Supported Skills have {0}% reduced [Attack] Speed while you have at least 20 Rage"
+				text="Supported Skills have {0}% reduced Attack Speed while you have at least 20 Rage"
 			}
 		},
 		stats={
@@ -5593,7 +5593,7 @@ return {
 						[2]=99
 					}
 				},
-				text="Supported [Attack|Attacks] have {0}% chance to Impale Enemies on Hit"
+				text="Supported Attacks have {0}% chance to Impale Enemies on Hit"
 			},
 			[2]={
 				limit={
@@ -5602,7 +5602,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Supported [Attack|Attacks] always Impale Enemies on Hit"
+				text="Supported Attacks always Impale Enemies on Hit"
 			}
 		},
 		stats={
@@ -5672,7 +5672,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Supported Skills have {0}% increased Duration of [Ailments|Ailments] on Enemies"
+				text="Supported Skills have {0}% increased Duration of Ailments on Enemies"
 			},
 			[2]={
 				[1]={
@@ -5685,7 +5685,7 @@ return {
 						[2]=-1
 					}
 				},
-				text="Supported Skills have {0}% reduced Duration of [Ailments|Ailments] on Enemies"
+				text="Supported Skills have {0}% reduced Duration of Ailments on Enemies"
 			}
 		},
 		stats={
@@ -5701,7 +5701,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Supported [Attack|Attacks] have {0}% increased Bleeding Duration"
+				text="Supported Attacks have {0}% increased Bleeding Duration"
 			},
 			[2]={
 				[1]={
@@ -5714,7 +5714,7 @@ return {
 						[2]=-1
 					}
 				},
-				text="Supported [Attack|Attacks] have {0}% reduced Bleeding Duration"
+				text="Supported Attacks have {0}% reduced Bleeding Duration"
 			}
 		},
 		stats={
@@ -5847,7 +5847,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Supported Skills have {}% chance to inflict [Bleeding]"
+				text="Supported Skills have {}% chance to inflict Bleeding"
 			}
 		},
 		stats={
@@ -5863,7 +5863,7 @@ return {
 						[2]=99
 					}
 				},
-				text="[Projectile|Projectiles] from Supported Skills have {0}% chance to [Pierce] an Enemy"
+				text="Projectiles from Supported Skills have {0}% chance to Pierce an Enemy"
 			},
 			[2]={
 				limit={
@@ -5872,7 +5872,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="[Projectile|Projectiles] from Supported Skills [Pierce] an Enemy"
+				text="Projectiles from Supported Skills Pierce an Enemy"
 			}
 		},
 		stats={
@@ -5917,7 +5917,7 @@ return {
 						[2]=1000
 					}
 				},
-				text="Supported Skills lose [Combo] if you\ngenerate no [Combo] for {0} second"
+				text="Supported Skills lose Combo if you\ngenerate no Combo for {0} second"
 			},
 			[2]={
 				[1]={
@@ -5930,7 +5930,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Supported Skills lose [Combo] if you\ngenerate no [Combo] for {0} seconds"
+				text="Supported Skills lose Combo if you\ngenerate no Combo for {0} seconds"
 			}
 		},
 		stats={
@@ -5966,7 +5966,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Supported Skills have {0}% increased [CooldownRecovery|Cooldown Recovery Rate]"
+				text="Supported Skills have {0}% increased Cooldown Recovery Rate"
 			},
 			[2]={
 				[1]={
@@ -5979,7 +5979,7 @@ return {
 						[2]=-1
 					}
 				},
-				text="Supported Skills have {0}% reduced [CooldownRecovery|Cooldown Recovery Rate]"
+				text="Supported Skills have {0}% reduced Cooldown Recovery Rate"
 			}
 		},
 		stats={
@@ -5995,7 +5995,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Supported Skills have {0}% more [CooldownRecovery|Cooldown Recovery Rate]"
+				text="Supported Skills have {0}% more Cooldown Recovery Rate"
 			},
 			[2]={
 				[1]={
@@ -6008,7 +6008,7 @@ return {
 						[2]=-1
 					}
 				},
-				text="Supported Skills have {0}% less [CooldownRecovery|Cooldown Recovery Rate]"
+				text="Supported Skills have {0}% less Cooldown Recovery Rate"
 			}
 		},
 		stats={
@@ -6024,7 +6024,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="[Curse] zones from Supported\nSkills erupt after {0}% increased delay"
+				text="Curse zones from Supported\nSkills erupt after {0}% increased delay"
 			},
 			[2]={
 				[1]={
@@ -6037,7 +6037,7 @@ return {
 						[2]=-1
 					}
 				},
-				text="[Curse] zones from Supported\nSkills erupt after {0}% reduced delay"
+				text="Curse zones from Supported\nSkills erupt after {0}% reduced delay"
 			}
 		},
 		stats={
@@ -6053,7 +6053,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Supported Skills have {0}% increased [Curse] Duration"
+				text="Supported Skills have {0}% increased Curse Duration"
 			},
 			[2]={
 				[1]={
@@ -6066,7 +6066,7 @@ return {
 						[2]=-1
 					}
 				},
-				text="Supported Skills have {0}% reduced [Curse] Duration"
+				text="Supported Skills have {0}% reduced Curse Duration"
 			}
 		},
 		stats={
@@ -6111,7 +6111,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Supported Skills deal no [Chaos] Damage"
+				text="Supported Skills deal no Chaos Damage"
 			}
 		},
 		stats={
@@ -6127,7 +6127,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="[Debuff|Debuffs] inflicted with Supported Skills have {0}% increased [SlowMagnitudeModifier|Slow Magnitude]"
+				text="Debuffs inflicted with Supported Skills have {0}% increased Slow Magnitude"
 			},
 			[2]={
 				[1]={
@@ -6140,7 +6140,7 @@ return {
 						[2]=-1
 					}
 				},
-				text="[Debuff|Debuffs] inflicted with Supported Skills have {0}% reduced [SlowMagnitudeModifier|Slow Magnitude]"
+				text="Debuffs inflicted with Supported Skills have {0}% reduced Slow Magnitude"
 			}
 		},
 		stats={
@@ -6156,7 +6156,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Supported Skills have {0}% chance to [Knockback|Knock Enemies Back] on hit"
+				text="Supported Skills have {0}% chance to Knock Enemies Back on hit"
 			}
 		},
 		stats={
@@ -6197,7 +6197,7 @@ return {
 						[2]=99
 					}
 				},
-				text="Supported Skills have {0}% chance to inflict [Fire] [Exposure] on [HitDamage|Hit]"
+				text="Supported Skills have {0}% chance to inflict Fire Exposure on Hit"
 			},
 			[2]={
 				limit={
@@ -6206,7 +6206,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Supported Skills Inflict [Fire] [Exposure] on [HitDamage|Hit]"
+				text="Supported Skills Inflict Fire Exposure on Hit"
 			}
 		},
 		stats={
@@ -6222,7 +6222,7 @@ return {
 						[2]=99
 					}
 				},
-				text="Supported Skills have {0}% chance to inflict [Lightning] [Exposure] on [HitDamage|Hit]"
+				text="Supported Skills have {0}% chance to inflict Lightning Exposure on Hit"
 			},
 			[2]={
 				limit={
@@ -6231,7 +6231,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Supported Skills Inflict [Lightning] [Exposure] on [HitDamage|Hit]"
+				text="Supported Skills Inflict Lightning Exposure on Hit"
 			}
 		},
 		stats={
@@ -6309,7 +6309,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="[LifeLeech|Leech] {0}% of Physical [Attack] Damage from Supported Skills as Life"
+				text="Leech {0}% of Physical Attack Damage from Supported Skills as Life"
 			}
 		},
 		stats={
@@ -6383,7 +6383,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="[Lightning] Damage from Supported Skills [Contributes] to [Electrocute|Electrocution] Buildup"
+				text="Lightning Damage from Supported Skills Contributes to Electrocution Buildup"
 			}
 		},
 		stats={
@@ -6399,7 +6399,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Supported Skills have +{0} to [Limit]"
+				text="Supported Skills have +{0} to Limit"
 			}
 		},
 		stats={
@@ -6419,7 +6419,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="[ManaLeech|Leech] {0}% of Physical [Attack] Damage from Supported Skills as Mana"
+				text="Leech {0}% of Physical Attack Damage from Supported Skills as Mana"
 			}
 		},
 		stats={
@@ -6567,7 +6567,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Supported Skills have {0}% increased [Poison] Duration"
+				text="Supported Skills have {0}% increased Poison Duration"
 			},
 			[2]={
 				[1]={
@@ -6580,7 +6580,7 @@ return {
 						[2]=-1
 					}
 				},
-				text="Supported Skills have {0}% reduced [Poison] Duration"
+				text="Supported Skills have {0}% reduced Poison Duration"
 			}
 		},
 		stats={
@@ -6596,7 +6596,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Supported Skills have {0}% increased [Projectile|Projectile] Speed"
+				text="Supported Skills have {0}% increased Projectile Speed"
 			},
 			[2]={
 				[1]={
@@ -6609,7 +6609,7 @@ return {
 						[2]=-1
 					}
 				},
-				text="Supported Skills have {0}% reduced [Projectile|Projectile] Speed"
+				text="Supported Skills have {0}% reduced Projectile Speed"
 			}
 		},
 		stats={
@@ -6699,7 +6699,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Supported Spells have {0}% increased [CooldownRecovery|Cooldown Recovery Rate]"
+				text="Supported Spells have {0}% increased Cooldown Recovery Rate"
 			},
 			[2]={
 				[1]={
@@ -6712,7 +6712,7 @@ return {
 						[2]=-1
 					}
 				},
-				text="Supported Spells have {0}% reduced [CooldownRecovery|Cooldown Recovery Rate]"
+				text="Supported Spells have {0}% reduced Cooldown Recovery Rate"
 			}
 		},
 		stats={
@@ -6757,7 +6757,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Supported Skills have {0}% reduced [EnemyStunThreshold|Enemy Stun Threshold]"
+				text="Supported Skills have {0}% reduced Enemy Stun Threshold"
 			},
 			[2]={
 				[1]={
@@ -6770,7 +6770,7 @@ return {
 						[2]=-1
 					}
 				},
-				text="Supported Skills have {0}% increased [EnemyStunThreshold|Enemy Stun Threshold]"
+				text="Supported Skills have {0}% increased Enemy Stun Threshold"
 			}
 		},
 		stats={
@@ -6794,7 +6794,7 @@ return {
 						[2]=0
 					}
 				},
-				text="Supported [Attack|Attacks] cannot cause [Bleeding|Bleeding]"
+				text="Supported Attacks cannot cause Bleeding"
 			},
 			[2]={
 				limit={
@@ -6811,7 +6811,7 @@ return {
 						[2]=0
 					}
 				},
-				text="Supported [Attack|Attacks] cause [Bleeding|Bleeding]"
+				text="Supported Attacks cause Bleeding"
 			},
 			[3]={
 				limit={
@@ -6828,7 +6828,7 @@ return {
 						[2]=0
 					}
 				},
-				text="Supported [Attack|Attacks] cause [Bleeding|Bleeding]"
+				text="Supported Attacks cause Bleeding"
 			},
 			[4]={
 				limit={
@@ -6845,7 +6845,7 @@ return {
 						[2]=0
 					}
 				},
-				text="Supported [Attack|Attacks] have {0}% chance to cause [Bleeding|Bleeding]"
+				text="Supported Attacks have {0}% chance to cause Bleeding"
 			}
 		},
 		stats={
@@ -6892,7 +6892,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Supported [Attack|Attacks] deal Added Physical Damage with Weapons equal\nto {0}% of Maximum Life while on [LowLife|Low Life]"
+				text="Supported Attacks deal Added Physical Damage with Weapons equal\nto {0}% of Maximum Life while on Low Life"
 			}
 		},
 		stats={
@@ -6937,7 +6937,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Supported Skills cannot [ArmourBreak|Break Armour]"
+				text="Supported Skills cannot Break Armour"
 			}
 		},
 		stats={
@@ -7109,7 +7109,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="[DNT] Supported Skills can summon up to {0} more Orbs"
+				text="DNT Supported Skills can summon up to {0} more Orbs"
 			}
 		},
 		stats={
@@ -7125,7 +7125,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Projectiles from Supported Skills have {0}% chance for an additional Projectile when [Fork|Forking]"
+				text="Projectiles from Supported Skills have {0}% chance for an additional Projectile when Forking"
 			}
 		},
 		stats={
@@ -7141,7 +7141,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="[Melee] Hits from Supported Skills Fortify"
+				text="Melee Hits from Supported Skills Fortify"
 			},
 			[2]={
 				limit={
@@ -7150,7 +7150,7 @@ return {
 						[2]=99
 					}
 				},
-				text="[Melee] Hits from Supported Skills have {0}% chance to Fortify"
+				text="Melee Hits from Supported Skills have {0}% chance to Fortify"
 			}
 		},
 		stats={
@@ -7191,7 +7191,7 @@ return {
 						[2]=99
 					}
 				},
-				text="Supported Skills have {0}% chance to\ngrant an additional [Charges|Charge]"
+				text="Supported Skills have {0}% chance to\ngrant an additional Charge"
 			},
 			[2]={
 				limit={
@@ -7200,7 +7200,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Supported Skills grant an additional [Charges|Charge]"
+				text="Supported Skills grant an additional Charge"
 			}
 		},
 		stats={
@@ -7216,7 +7216,7 @@ return {
 						[2]=99
 					}
 				},
-				text="{0}% chance to gain an [Charges|Endurance Charge] when Supported Skills [ArmourBreak|Fully Break] enemy [Armour]"
+				text="{0}% chance to gain an Endurance Charge when Supported Skills Fully Break enemy Armour"
 			},
 			[2]={
 				limit={
@@ -7225,7 +7225,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Gain an [Charges|Endurance Charge] when Supported Skills [ArmourBreak|Fully Break] enemy [Armour]"
+				text="Gain an Endurance Charge when Supported Skills Fully Break enemy Armour"
 			}
 		},
 		stats={
@@ -7266,7 +7266,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Hexes applied by Supported [Curse] Skills have {0}% chance to affect Hexproof Enemies"
+				text="Hexes applied by Supported Curse Skills have {0}% chance to affect Hexproof Enemies"
 			}
 		},
 		stats={
@@ -7323,7 +7323,7 @@ return {
 						[2]=99
 					}
 				},
-				text="[Corpse|Corpses] consumed by Supported Skills have {0}% chance to not be destroyed"
+				text="Corpses consumed by Supported Skills have {0}% chance to not be destroyed"
 			},
 			[2]={
 				limit={
@@ -7332,7 +7332,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="[Corpse|Corpses] consumed by Supported Skills are not destroyed"
+				text="Corpses consumed by Supported Skills are not destroyed"
 			}
 		},
 		stats={
@@ -7389,7 +7389,7 @@ return {
 						[2]=99
 					}
 				},
-				text="Killing Blows from Supported Skills against [Ignite|Ignited]\nenemies have {0}% chance to cause the enemy to explode"
+				text="Killing Blows from Supported Skills against Ignited\nenemies have {0}% chance to cause the enemy to explode"
 			},
 			[2]={
 				limit={
@@ -7398,7 +7398,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Killing Blows from Supported Skills against [Ignite|Ignited]\nenemies cause the enemy to explode"
+				text="Killing Blows from Supported Skills against Ignited\nenemies cause the enemy to explode"
 			}
 		},
 		stats={
@@ -7497,7 +7497,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Supported Skills have {0}% chance to not remove [Charges|Charges] but still count as consuming them"
+				text="Supported Skills have {0}% chance to not remove Charges but still count as consuming them"
 			}
 		},
 		stats={
@@ -7517,7 +7517,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Supported Skills create [ChilledGround|Chilled Ground] for {0} seconds when they [Freeze|Freeze] an Enemy"
+				text="Supported Skills create Chilled Ground for {0} seconds when they Freeze an Enemy"
 			}
 		},
 		stats={
@@ -7533,7 +7533,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="{0}% more [BuffMagnitude|Magnitude] of Cold Ailments inflicted with Supported Skills"
+				text="{0}% more Magnitude of Cold Ailments inflicted with Supported Skills"
 			},
 			[2]={
 				[1]={
@@ -7546,7 +7546,7 @@ return {
 						[2]=-1
 					}
 				},
-				text="{0}% less [BuffMagnitude|Magnitude] of Cold Ailments inflicted with Supported Skills"
+				text="{0}% less Magnitude of Cold Ailments inflicted with Supported Skills"
 			}
 		},
 		stats={
@@ -7620,7 +7620,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Supported Skills [Consume|Consume] Enemy [Freeze|Freeze] to Guarantee a [Critical|Critical Hit]"
+				text="Supported Skills Consume Enemy Freeze to Guarantee a Critical Hit"
 			}
 		},
 		stats={
@@ -7636,7 +7636,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Supported Skills [Consume] [Freeze], [Shock] and [Ignite] on hit to trigger Elemental Discharge"
+				text="Supported Skills Consume Freeze, Shock and Ignite on hit to trigger Elemental Discharge"
 			}
 		},
 		stats={
@@ -7677,7 +7677,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="{0}% increased [BuffMagnitude|Magnitude] of [DamagingAilments|Damaging Ailments] from [Critical|Critical Hits] with Supported Skills"
+				text="{0}% increased Magnitude of Damaging Ailments from Critical Hits with Supported Skills"
 			},
 			[2]={
 				[1]={
@@ -7690,7 +7690,7 @@ return {
 						[2]=-1
 					}
 				},
-				text="{0}% reduced [BuffMagnitude|Magnitude] of [DamagingAilments|Damaging Ailments] from [Critical|Critical Hits] with Supported Skills"
+				text="{0}% reduced Magnitude of Damaging Ailments from Critical Hits with Supported Skills"
 			}
 		},
 		stats={
@@ -7706,7 +7706,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Supported Skills have {0}% increased [Critical|Critical Hit] Chance against Blinded Enemies"
+				text="Supported Skills have {0}% increased Critical Hit Chance against Blinded Enemies"
 			},
 			[2]={
 				[1]={
@@ -7719,7 +7719,7 @@ return {
 						[2]=-1
 					}
 				},
-				text="Supported Skills have {0}% reduced [Critical|Critical Hit] Chance against Blinded Enemies"
+				text="Supported Skills have {0}% reduced Critical Hit Chance against Blinded Enemies"
 			}
 		},
 		stats={
@@ -7735,7 +7735,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Supported Skills have {0}% increased [Critical|Critical Hit] Chance against [Immobilised] Enemies"
+				text="Supported Skills have {0}% increased Critical Hit Chance against Immobilised Enemies"
 			},
 			[2]={
 				[1]={
@@ -7748,7 +7748,7 @@ return {
 						[2]=-1
 					}
 				},
-				text="Supported Skills have {0}% reduced [Critical|Critical Hit] Chance against [Immobilised] Enemies"
+				text="Supported Skills have {0}% reduced Critical Hit Chance against Immobilised Enemies"
 			}
 		},
 		stats={
@@ -7764,7 +7764,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Supported [Crossbow] [Attack|Attacks] have {0}% chance to not consume a bolt"
+				text="Supported Crossbow Attacks have {0}% chance to not consume a bolt"
 			}
 		},
 		stats={
@@ -7780,7 +7780,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Supported Skills reload automatically on\n[HeavyStun|Heavy Stunning] an enemy"
+				text="Supported Skills reload automatically on\nHeavy Stunning an enemy"
 			}
 		},
 		stats={
@@ -7850,7 +7850,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Supported Skills gain [CullingStrike|Culling Strike] against [Frozen] Enemies"
+				text="Supported Skills gain Culling Strike against Frozen Enemies"
 			}
 		},
 		stats={
@@ -7866,7 +7866,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Supported Skills create [Curse|Cursed] Ground\nEnemies on the [Curse|Cursed] Ground from a Supported Skill are [Curse|Cursed] while within it\nMaximum 1 area of [Curse|Cursed] Ground"
+				text="Supported Skills create Cursed Ground\nEnemies on the Cursed Ground from a Supported Skill are Cursed while within it\nMaximum 1 area of Cursed Ground"
 			}
 		},
 		stats={
@@ -8027,7 +8027,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Supported Skills have {0}% increased Damage for each 200 Mana you have Spent [Recently]"
+				text="Supported Skills have {0}% increased Damage for each 200 Mana you have Spent Recently"
 			},
 			[2]={
 				[1]={
@@ -8040,7 +8040,7 @@ return {
 						[2]=-1
 					}
 				},
-				text="Supported Skills have {0}% reduced Damage for each 200 Mana you have Spent [Recently]"
+				text="Supported Skills have {0}% reduced Damage for each 200 Mana you have Spent Recently"
 			}
 		},
 		stats={
@@ -8114,7 +8114,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Supported Skills deal {0}% increased Damage per [Charges|Power Charge]"
+				text="Supported Skills deal {0}% increased Damage per Power Charge"
 			},
 			[2]={
 				[1]={
@@ -8127,7 +8127,7 @@ return {
 						[2]=-1
 					}
 				},
-				text="Supported Skills deal {0}% reduced Damage per [Charges|Power Charge]"
+				text="Supported Skills deal {0}% reduced Damage per Power Charge"
 			}
 		},
 		stats={
@@ -8143,7 +8143,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Supported Skills deal {0}% increased Damage with [HitDamage|Hits] against Enemies that are on Full Life"
+				text="Supported Skills deal {0}% increased Damage with Hits against Enemies that are on Full Life"
 			},
 			[2]={
 				[1]={
@@ -8156,7 +8156,7 @@ return {
 						[2]=-1
 					}
 				},
-				text="Supported Skills deal {0}% reduced Damage with [HitDamage|Hits] against Enemies that are on Full Life"
+				text="Supported Skills deal {0}% reduced Damage with Hits against Enemies that are on Full Life"
 			}
 		},
 		stats={
@@ -8201,7 +8201,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Supported Skills deal {0}% increased Damage with Hits against [Frozen] Enemies"
+				text="Supported Skills deal {0}% increased Damage with Hits against Frozen Enemies"
 			},
 			[2]={
 				[1]={
@@ -8214,7 +8214,7 @@ return {
 						[2]=-1
 					}
 				},
-				text="Supported Skills deal {0}% reduced Damage with Hits against [Frozen] Enemies"
+				text="Supported Skills deal {0}% reduced Damage with Hits against Frozen Enemies"
 			}
 		},
 		stats={
@@ -8230,7 +8230,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Supported Skills deal {0}% increased Damage while on Full [EnergyShield|Energy Shield]"
+				text="Supported Skills deal {0}% increased Damage while on Full Energy Shield"
 			},
 			[2]={
 				[1]={
@@ -8243,7 +8243,7 @@ return {
 						[2]=-1
 					}
 				},
-				text="Supported Skills deal {0}% reduced Damage while on Full [EnergyShield|Energy Shield]"
+				text="Supported Skills deal {0}% reduced Damage while on Full Energy Shield"
 			}
 		},
 		stats={
@@ -8288,7 +8288,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Supported Skills Deal {0}% increased Damage while on [LowLife|Low Life]"
+				text="Supported Skills Deal {0}% increased Damage while on Low Life"
 			},
 			[2]={
 				[1]={
@@ -8301,7 +8301,7 @@ return {
 						[2]=-1
 					}
 				},
-				text="Supported Skills Deal {0}% reduced Damage while on [LowLife|Low Life]"
+				text="Supported Skills Deal {0}% reduced Damage while on Low Life"
 			}
 		},
 		stats={
@@ -8404,7 +8404,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Supported Skills deal {0}% increased Damage with Hits per [Curse] on Enemy"
+				text="Supported Skills deal {0}% increased Damage with Hits per Curse on Enemy"
 			},
 			[2]={
 				[1]={
@@ -8417,7 +8417,7 @@ return {
 						[2]=-1
 					}
 				},
-				text="Supported Skills deal {0}% reduced Damage with Hits per [Curse] on Enemy"
+				text="Supported Skills deal {0}% reduced Damage with Hits per Curse on Enemy"
 			}
 		},
 		stats={
@@ -8433,7 +8433,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Supported Skills deal {0}% increased Damage with [HitDamage|Hits] against Enemies that are on [LowLife|Low Life]"
+				text="Supported Skills deal {0}% increased Damage with Hits against Enemies that are on Low Life"
 			}
 		},
 		stats={
@@ -8449,7 +8449,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="[DamagingAilments|Damaging Ailments] inflicted with Supported Skills deal damage {0}% faster"
+				text="Damaging Ailments inflicted with Supported Skills deal damage {0}% faster"
 			}
 		},
 		stats={
@@ -8481,7 +8481,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Supported Skills deal no [ElementalDamage|Elemental] Damage"
+				text="Supported Skills deal no Elemental Damage"
 			}
 		},
 		stats={
@@ -8562,7 +8562,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Supported Skills have {0}% increased penalty to [Accuracy] Rating at range"
+				text="Supported Skills have {0}% increased penalty to Accuracy Rating at range"
 			},
 			[2]={
 				[1]={
@@ -8575,7 +8575,7 @@ return {
 						[2]=-1
 					}
 				},
-				text="Supported Skills have {0}% reduced penalty to [Accuracy] Rating at range"
+				text="Supported Skills have {0}% reduced penalty to Accuracy Rating at range"
 			},
 			[3]={
 				limit={
@@ -8584,7 +8584,7 @@ return {
 						[2]=-100
 					}
 				},
-				text="Supported Skills have no penalty to [Accuracy] Rating at range"
+				text="Supported Skills have no penalty to Accuracy Rating at range"
 			}
 		},
 		stats={
@@ -8748,7 +8748,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Supported Skills [Overwhelm|Overwhelm] {0}% [Physical|Physical] Damage Reduction"
+				text="Supported Skills Overwhelm {0}% Physical Damage Reduction"
 			}
 		},
 		stats={
@@ -8764,7 +8764,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Supported Skills gain {0}% increased [Energy]"
+				text="Supported Skills gain {0}% increased Energy"
 			},
 			[2]={
 				[1]={
@@ -8777,7 +8777,7 @@ return {
 						[2]=-1
 					}
 				},
-				text="Supported Skills gain {0}% reduced [Energy]"
+				text="Supported Skills gain {0}% reduced Energy"
 			}
 		},
 		stats={
@@ -8793,7 +8793,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="[Minion|Minions] from Supported Skills explode when reduced to [LowLife|Low Life], dealing {0}% of their maximum Life as [Fire] Damage to surrounding Enemies"
+				text="Minions from Supported Skills explode when reduced to Low Life, dealing {0}% of their maximum Life as Fire Damage to surrounding Enemies"
 			}
 		},
 		stats={
@@ -8825,7 +8825,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="[Ignite|Ignites] from Supported Skills deal Damage {0}% faster"
+				text="Ignites from Supported Skills deal Damage {0}% faster"
 			},
 			[2]={
 				[1]={
@@ -8838,7 +8838,7 @@ return {
 						[2]=-1
 					}
 				},
-				text="[Ignite|Ignites] from Supported Skills deal Damage {0}% slower"
+				text="Ignites from Supported Skills deal Damage {0}% slower"
 			}
 		},
 		stats={
@@ -8870,7 +8870,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="[Minion|Minions] from Supported Skills deal {0}% more Damage"
+				text="Minions from Supported Skills deal {0}% more Damage"
 			},
 			[2]={
 				[1]={
@@ -8883,7 +8883,7 @@ return {
 						[2]=-1
 					}
 				},
-				text="[Minion|Minions] from Supported Skills deal {0}% less Damage"
+				text="Minions from Supported Skills deal {0}% less Damage"
 			}
 		},
 		stats={
@@ -8899,7 +8899,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="[Minion|Minions] from Supported Skills take {0}% more Damage"
+				text="Minions from Supported Skills take {0}% more Damage"
 			},
 			[2]={
 				[1]={
@@ -8912,7 +8912,7 @@ return {
 						[2]=-1
 					}
 				},
-				text="[Minion|Minions] from Supported Skills take {0}% less Damage"
+				text="Minions from Supported Skills take {0}% less Damage"
 			}
 		},
 		stats={
@@ -9038,7 +9038,7 @@ return {
 						[2]=1000
 					}
 				},
-				text="[Freeze|Freezes] inflicted by Supported Skills last an additional 1 second"
+				text="Freezes inflicted by Supported Skills last an additional 1 second"
 			},
 			[2]={
 				[1]={
@@ -9051,7 +9051,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="[Freeze|Freezes] inflicted by Supported Skills last an additional {0} seconds"
+				text="Freezes inflicted by Supported Skills last an additional {0} seconds"
 			}
 		},
 		stats={
@@ -9067,7 +9067,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Supported Skills have {0}% increased [Freeze] Duration on Enemies"
+				text="Supported Skills have {0}% increased Freeze Duration on Enemies"
 			},
 			[2]={
 				[1]={
@@ -9080,7 +9080,7 @@ return {
 						[2]=-1
 					}
 				},
-				text="Supported Skills have {0}% reduced [Freeze] Duration on Enemies"
+				text="Supported Skills have {0}% reduced Freeze Duration on Enemies"
 			}
 		},
 		stats={
@@ -9100,7 +9100,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Supported Skills [Chill] Enemies in {0} metre radius when [Freeze|Freezing] an Enemy"
+				text="Supported Skills Chill Enemies in {0} metre radius when Freezing an Enemy"
 			}
 		},
 		stats={
@@ -9161,7 +9161,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Supported Skills create a Vortex on [Shatter|Shattering] an enemy\nVortex deals {0}% of [Overkill|Overkill] Damage per second\nVortex [Chill|Chills] Enemies"
+				text="Supported Skills create a Vortex on Shattering an enemy\nVortex deals {0}% of Overkill Damage per second\nVortex Chills Enemies"
 			}
 		},
 		stats={
@@ -9177,7 +9177,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Supported Skills Fully Break [Armour] when inflicting a [HeavyStun|Heavy Stun]"
+				text="Supported Skills Fully Break Armour when inflicting a Heavy Stun"
 			}
 		},
 		stats={
@@ -9197,7 +9197,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Fully Broken [Armour] lasts {0:+d} seconds"
+				text="Fully Broken Armour lasts {0:+d} seconds"
 			}
 		},
 		stats={
@@ -9217,7 +9217,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Hits from Supported Skills remove {0} seconds from Duration of Fully Broken [Armour] on Enemy"
+				text="Hits from Supported Skills remove {0} seconds from Duration of Fully Broken Armour on Enemy"
 			}
 		},
 		stats={
@@ -9269,7 +9269,7 @@ return {
 						[2]=99
 					}
 				},
-				text="{1}% chance to gain an Endurance Charge when you Stun an Enemy with a [Melee] Hit from Supported Skills"
+				text="{1}% chance to gain an Endurance Charge when you Stun an Enemy with a Melee Hit from Supported Skills"
 			},
 			[2]={
 				limit={
@@ -9282,7 +9282,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Gain an Endurance Charge when you Stun an Enemy with a [Melee] Hit from Supported Skills"
+				text="Gain an Endurance Charge when you Stun an Enemy with a Melee Hit from Supported Skills"
 			},
 			[3]={
 				limit={
@@ -9295,7 +9295,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Gain an Endurance Charge when you Stun an Enemy with a [Melee] Hit from Supported Skills"
+				text="Gain an Endurance Charge when you Stun an Enemy with a Melee Hit from Supported Skills"
 			}
 		},
 		stats={
@@ -9405,7 +9405,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Supported Skills grant {0} [Rage|Rage] on [Melee] [HitDamage|Hit]"
+				text="Supported Skills grant {0} Rage on Melee Hit"
 			}
 		},
 		stats={
@@ -9453,7 +9453,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Supported Skills [Knockback|Knock Enemies Back] on [HitDamage|Hit]"
+				text="Supported Skills Knock Enemies Back on Hit"
 			}
 		},
 		stats={
@@ -9494,7 +9494,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Supported Skills have {0} to {1} added [Cold|Cold] Damage"
+				text="Supported Skills have {0} to {1} added Cold Damage"
 			}
 		},
 		stats={
@@ -9619,7 +9619,7 @@ return {
 						[2]=99
 					}
 				},
-				text="[Grenade|Grenades] fired by Supported Skills have {0}% chance to activate a second time"
+				text="Grenades fired by Supported Skills have {0}% chance to activate a second time"
 			},
 			[2]={
 				limit={
@@ -9628,7 +9628,7 @@ return {
 						[2]=100
 					}
 				},
-				text="[Grenade|Grenades] fired by Supported Skills activate a second time"
+				text="Grenades fired by Supported Skills activate a second time"
 			}
 		},
 		stats={
@@ -9644,7 +9644,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="{0}% increased [BuffEffect|effect] of Buffs from supported [Herald] Skills on you"
+				text="{0}% increased effect of Buffs from supported Herald Skills on you"
 			},
 			[2]={
 				[1]={
@@ -9657,7 +9657,7 @@ return {
 						[2]=-1
 					}
 				},
-				text="{0}% reduced [BuffEffect|effect] of Buffs from supported [Herald] Skills on you"
+				text="{0}% reduced effect of Buffs from supported Herald Skills on you"
 			}
 		},
 		stats={
@@ -9731,7 +9731,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Supported Skills have {0}% increased [Ignite] Duration on Enemies"
+				text="Supported Skills have {0}% increased Ignite Duration on Enemies"
 			},
 			[2]={
 				[1]={
@@ -9744,7 +9744,7 @@ return {
 						[2]=-1
 					}
 				},
-				text="Supported Skills have {0}% reduced [Ignite] Duration on Enemies"
+				text="Supported Skills have {0}% reduced Ignite Duration on Enemies"
 			}
 		},
 		stats={
@@ -9760,7 +9760,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="{0}% more [BuffMagnitude|Magnitude] of [Ignite|Ignite] inflicted on [Frozen|Frozen] targets with Supported Skills"
+				text="{0}% more Magnitude of Ignite inflicted on Frozen targets with Supported Skills"
 			},
 			[2]={
 				[1]={
@@ -9773,7 +9773,7 @@ return {
 						[2]=-1
 					}
 				},
-				text="{0}% less [BuffMagnitude|Magnitude] of [Ignite|Ignite] inflicted on [Frozen|Frozen] targets with Supported Skills"
+				text="{0}% less Magnitude of Ignite inflicted on Frozen targets with Supported Skills"
 			}
 		},
 		stats={
@@ -9789,7 +9789,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Enemies [Ignite|Ignited] by Supported Skills have {0:+d}% to Fire [Resistances|Resistance]"
+				text="Enemies Ignited by Supported Skills have {0:+d}% to Fire Resistance"
 			}
 		},
 		stats={
@@ -9805,7 +9805,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Supported [Attack|Attacks] have {0}% increased Impale Effect"
+				text="Supported Attacks have {0}% increased Impale Effect"
 			},
 			[2]={
 				[1]={
@@ -9818,7 +9818,7 @@ return {
 						[2]=-1
 					}
 				},
-				text="Supported [Attack|Attacks] have {0}% reduced Impale Effect"
+				text="Supported Attacks have {0}% reduced Impale Effect"
 			}
 		},
 		stats={
@@ -9899,7 +9899,7 @@ return {
 						[2]=1000
 					}
 				},
-				text="Supported Skills inflict [Exposure|Cold Exposure] for {0} second on [Critical|Critical Hit] with [Cold|Cold Damage]"
+				text="Supported Skills inflict Cold Exposure for {0} second on Critical Hit with Cold Damage"
 			},
 			[2]={
 				[1]={
@@ -9912,7 +9912,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Supported Skills inflict [Exposure|Cold Exposure] for {0} seconds on [Critical|Critical Hit] with [Cold|Cold Damage]"
+				text="Supported Skills inflict Cold Exposure for {0} seconds on Critical Hit with Cold Damage"
 			}
 		},
 		stats={
@@ -9932,7 +9932,7 @@ return {
 						[2]=1000
 					}
 				},
-				text="Supported Skills inflict [Exposure|Fire Exposure] for {0} second on [Ignite|Igniting] an Enemy"
+				text="Supported Skills inflict Fire Exposure for {0} second on Igniting an Enemy"
 			},
 			[2]={
 				[1]={
@@ -9945,7 +9945,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Supported Skills inflict [Exposure|Fire Exposure] for {0} seconds on [Ignite|Igniting] an Enemy"
+				text="Supported Skills inflict Fire Exposure for {0} seconds on Igniting an Enemy"
 			}
 		},
 		stats={
@@ -9965,7 +9965,7 @@ return {
 						[2]=1000
 					}
 				},
-				text="Supported Skills inflict [Exposure|Lightning Exposure] for {0} second on [Shock|Shocking] an Enemy"
+				text="Supported Skills inflict Lightning Exposure for {0} second on Shocking an Enemy"
 			},
 			[2]={
 				[1]={
@@ -9978,7 +9978,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Supported Skills inflict [Exposure|Lightning Exposure] for {0} seconds on [Shock|Shocking] an Enemy"
+				text="Supported Skills inflict Lightning Exposure for {0} seconds on Shocking an Enemy"
 			}
 		},
 		stats={
@@ -10072,7 +10072,7 @@ return {
 						[2]=1
 					}
 				},
-				text="[Attack|Attacks] with Supported Skills count as Exerted"
+				text="Attacks with Supported Skills count as Exerted"
 			}
 		},
 		stats={
@@ -10088,7 +10088,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Supported Skills have {0}% chance to [Knockback|Knock Enemies Back] with [HitDamage|Hits] at [CloseRange|Close Range]"
+				text="Supported Skills have {0}% chance to Knock Enemies Back with Hits at Close Range"
 			}
 		},
 		stats={
@@ -10104,7 +10104,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Supported Skills have {0}% increased [Knockback] Distance"
+				text="Supported Skills have {0}% increased Knockback Distance"
 			},
 			[2]={
 				[1]={
@@ -10117,7 +10117,7 @@ return {
 						[2]=-1
 					}
 				},
-				text="Supported Skills have {0}% reduced [Knockback] Distance"
+				text="Supported Skills have {0}% reduced Knockback Distance"
 			}
 		},
 		stats={
@@ -10133,7 +10133,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="{0}% increased [BuffMagnitude|Magnitude] of Lightning Ailments inflicted with Supported Skills"
+				text="{0}% increased Magnitude of Lightning Ailments inflicted with Supported Skills"
 			},
 			[2]={
 				[1]={
@@ -10146,7 +10146,7 @@ return {
 						[2]=-1
 					}
 				},
-				text="{0}% reduced [BuffMagnitude|Magnitude] of Lightning Ailments inflicted with Supported Skills"
+				text="{0}% reduced Magnitude of Lightning Ailments inflicted with Supported Skills"
 			}
 		},
 		stats={
@@ -10191,7 +10191,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="{0}% increased [Dexterity] Requirement"
+				text="{0}% increased Dexterity Requirement"
 			},
 			[2]={
 				[1]={
@@ -10204,7 +10204,7 @@ return {
 						[2]=-1
 					}
 				},
-				text="{0}% reduced [Dexterity] Requirement"
+				text="{0}% reduced Dexterity Requirement"
 			}
 		},
 		stats={
@@ -10220,7 +10220,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="{0}% increased [Intelligence] Requirement"
+				text="{0}% increased Intelligence Requirement"
 			},
 			[2]={
 				[1]={
@@ -10233,7 +10233,7 @@ return {
 						[2]=-1
 					}
 				},
-				text="{0}% reduced [Intelligence] Requirement"
+				text="{0}% reduced Intelligence Requirement"
 			}
 		},
 		stats={
@@ -10249,7 +10249,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="{0}% increased [Strength] Requirement"
+				text="{0}% increased Strength Requirement"
 			},
 			[2]={
 				[1]={
@@ -10262,7 +10262,7 @@ return {
 						[2]=-1
 					}
 				},
-				text="{0}% reduced [Strength] Requirement"
+				text="{0}% reduced Strength Requirement"
 			}
 		},
 		stats={
@@ -10307,7 +10307,7 @@ return {
 						[2]=99
 					}
 				},
-				text="Supported [Attack|Attacks] have {0}% chance to [Maim|Maim] on [HitDamage|Hit]"
+				text="Supported Attacks have {0}% chance to Maim on Hit"
 			},
 			[2]={
 				limit={
@@ -10316,7 +10316,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Supported [Attack|Attacks] always [Maim|Maim] on [HitDamage|Hit]"
+				text="Supported Attacks always Maim on Hit"
 			}
 		},
 		stats={
@@ -10370,7 +10370,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Supported Skills gain Added [Cold|Cold] Damage equal to {0}% of Mana Cost, if Mana Cost is not higher than the maximum you could spend"
+				text="Supported Skills gain Added Cold Damage equal to {0}% of Mana Cost, if Mana Cost is not higher than the maximum you could spend"
 			}
 		},
 		stats={
@@ -10402,7 +10402,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="[DNT] Supported Skills can summon up to {0} more Orbs"
+				text="DNT Supported Skills can summon up to {0} more Orbs"
 			}
 		},
 		stats={
@@ -10418,7 +10418,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Supported Skills deal {0}% increased [Melee] Damage"
+				text="Supported Skills deal {0}% increased Melee Damage"
 			},
 			[2]={
 				[1]={
@@ -10431,7 +10431,7 @@ return {
 						[2]=-1
 					}
 				},
-				text="Supported Skills deal {0}% reduced [Melee] Damage"
+				text="Supported Skills deal {0}% reduced Melee Damage"
 			}
 		},
 		stats={
@@ -10447,7 +10447,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Supported Skills deal {0}% increased [Melee] Damage against Bleeding Enemies"
+				text="Supported Skills deal {0}% increased Melee Damage against Bleeding Enemies"
 			},
 			[2]={
 				[1]={
@@ -10460,7 +10460,7 @@ return {
 						[2]=-1
 					}
 				},
-				text="Supported Skills deal {0}% reduced [Melee] Damage against Bleeding Enemies"
+				text="Supported Skills deal {0}% reduced Melee Damage against Bleeding Enemies"
 			}
 		},
 		stats={
@@ -10476,7 +10476,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Supported Skills deal {0}% increased [Melee] Physical Damage"
+				text="Supported Skills deal {0}% increased Melee Physical Damage"
 			},
 			[2]={
 				[1]={
@@ -10489,7 +10489,7 @@ return {
 						[2]=-1
 					}
 				},
-				text="Supported Skills deal {0}% reduced [Melee] Physical Damage"
+				text="Supported Skills deal {0}% reduced Melee Physical Damage"
 			}
 		},
 		stats={
@@ -10505,7 +10505,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Supported Skills have {0:+d} to [Melee] Strike Range"
+				text="Supported Skills have {0:+d} to Melee Strike Range"
 			}
 		},
 		stats={
@@ -10608,7 +10608,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Supported Skills have {0}% increased [Projectile|Projectile] Speed per Frenzy Charge when used by a Mine"
+				text="Supported Skills have {0}% increased Projectile Speed per Frenzy Charge when used by a Mine"
 			},
 			[2]={
 				[1]={
@@ -10621,7 +10621,7 @@ return {
 						[2]=-1
 					}
 				},
-				text="Supported Skills have {0}% reduced [Projectile|Projectile] Speed per Frenzy Charge when used by a Mine"
+				text="Supported Skills have {0}% reduced Projectile Speed per Frenzy Charge when used by a Mine"
 			}
 		},
 		stats={
@@ -10674,7 +10674,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="[Minion|Minions] from Supported Skills have {0}% additional [Physical] Damage Reduction"
+				text="Minions from Supported Skills have {0}% additional Physical Damage Reduction"
 			}
 		},
 		stats={
@@ -10690,7 +10690,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Supported Skills have {0}% increased Minion [Attack] Speed"
+				text="Supported Skills have {0}% increased Minion Attack Speed"
 			},
 			[2]={
 				[1]={
@@ -10703,7 +10703,7 @@ return {
 						[2]=-1
 					}
 				},
-				text="Supported Skills have {0}% reduced Minion [Attack] Speed"
+				text="Supported Skills have {0}% reduced Minion Attack Speed"
 			}
 		},
 		stats={
@@ -10719,7 +10719,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Minions from Supported Skills have {0:+d}% Chance to Block [Attack] Damage"
+				text="Minions from Supported Skills have {0:+d}% Chance to Block Attack Damage"
 			}
 		},
 		stats={
@@ -10793,7 +10793,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="[Minion|Minions] from Supported Skills have {0}% chance to deal Double Damage"
+				text="Minions from Supported Skills have {0}% chance to deal Double Damage"
 			}
 		},
 		stats={
@@ -10809,7 +10809,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="[Minion|Minions] from Supported Skills have {0}% chance to [Taunt] on Hit"
+				text="Minions from Supported Skills have {0}% chance to Taunt on Hit"
 			}
 		},
 		stats={
@@ -10957,7 +10957,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Supported Skills have {0}% increased [Minion] Movement Speed"
+				text="Supported Skills have {0}% increased Minion Movement Speed"
 			},
 			[2]={
 				[1]={
@@ -10970,7 +10970,7 @@ return {
 						[2]=-1
 					}
 				},
-				text="Supported Skills have {0}% reduced [Minion] Movement Speed"
+				text="Supported Skills have {0}% reduced Minion Movement Speed"
 			}
 		},
 		stats={
@@ -10986,7 +10986,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="[Minion|Minions] from Supported Skills have {0}% increased [Projectile|Projectile] Speed"
+				text="Minions from Supported Skills have {0}% increased Projectile Speed"
 			},
 			[2]={
 				[1]={
@@ -10999,7 +10999,7 @@ return {
 						[2]=-1
 					}
 				},
-				text="[Minion|Minions] from Supported Skills have {0}% reduced [Projectile|Projectile] Speed"
+				text="Minions from Supported Skills have {0}% reduced Projectile Speed"
 			}
 		},
 		stats={
@@ -11056,7 +11056,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Mirage Archer fires {0} additional [Projectile|Projectiles] with Supported Skills"
+				text="Mirage Archer fires {0} additional Projectiles with Supported Skills"
 			}
 		},
 		stats={
@@ -11217,7 +11217,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Supported Skills cannot cause [Freeze] buildup"
+				text="Supported Skills cannot cause Freeze buildup"
 			}
 		},
 		stats={
@@ -11233,7 +11233,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Elusive from Supported Skills also grants {0:+d}% to [CriticalDamageBonus|Critical Damage Bonus] for\nSkills Supported by Nightblade"
+				text="Elusive from Supported Skills also grants {0:+d}% to Critical Damage Bonus for\nSkills Supported by Nightblade"
 			}
 		},
 		stats={
@@ -11294,7 +11294,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Supported Skills have {0}% increased [BuffMagnitude|Magnitude] of [NonDamagingAilments|Non-Damaging Ailments] inflicted with Supported Skills"
+				text="Supported Skills have {0}% increased Magnitude of Non-Damaging Ailments inflicted with Supported Skills"
 			},
 			[2]={
 				[1]={
@@ -11307,7 +11307,7 @@ return {
 						[2]=-1
 					}
 				},
-				text="Supported Skills have {0}% reduced [BuffMagnitude|Magnitude] of [NonDamagingAilments|Non-Damaging Ailments] inflicted with Supported Skills"
+				text="Supported Skills have {0}% reduced Magnitude of Non-Damaging Ailments inflicted with Supported Skills"
 			}
 		},
 		stats={
@@ -11323,7 +11323,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Supported Skills [Gain] {0}% of Damage as extra [Chaos] Damage"
+				text="Supported Skills Gain {0}% of Damage as extra Chaos Damage"
 			}
 		},
 		stats={
@@ -11339,7 +11339,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Supported [Attack|Attacks] [Gain] {0}% of Damage as extra [Chaos|Chaos] Damage"
+				text="Supported Attacks Gain {0}% of Damage as extra Chaos Damage"
 			}
 		},
 		stats={
@@ -11355,7 +11355,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Supported [Attack|Attacks] [Gain] {0}% of Damage as extra [Cold|Cold] Damage"
+				text="Supported Attacks Gain {0}% of Damage as extra Cold Damage"
 			}
 		},
 		stats={
@@ -11371,7 +11371,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Supported [Attack|Attacks] [Gain] {0}% of Damage as extra [Fire|Fire] Damage"
+				text="Supported Attacks Gain {0}% of Damage as extra Fire Damage"
 			}
 		},
 		stats={
@@ -11387,7 +11387,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Supported [Attack|Attacks] [Gain] {0}% of Damage as extra [Fire|Fire] Damage against [Ignite|Ignited] enemies"
+				text="Supported Attacks Gain {0}% of Damage as extra Fire Damage against Ignited enemies"
 			}
 		},
 		stats={
@@ -11403,7 +11403,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Supported [Attack|Attacks] [Gain] {0}% of Damage as extra [Lightning|Lightning] Damage"
+				text="Supported Attacks Gain {0}% of Damage as extra Lightning Damage"
 			}
 		},
 		stats={
@@ -11419,7 +11419,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Supported Skills [Conversion|Convert] {0}% of [Cold] Damage to [Fire] Damage"
+				text="Supported Skills Convert {0}% of Cold Damage to Fire Damage"
 			}
 		},
 		stats={
@@ -11451,7 +11451,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Supported Skills [Conversion|Convert] {0}% of [Physical|Physical] Damage to [Chaos|Chaos] Damage"
+				text="Supported Skills Convert {0}% of Physical Damage to Chaos Damage"
 			}
 		},
 		stats={
@@ -11467,7 +11467,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Supported Skills [Conversion|Convert] {0}% of [Physical] Damage to [Cold] Damage"
+				text="Supported Skills Convert {0}% of Physical Damage to Cold Damage"
 			}
 		},
 		stats={
@@ -11483,7 +11483,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Supported Skills [Conversion|Convert] {0}% of [Physical|Physical] Damage to [Fire|Fire] Damage"
+				text="Supported Skills Convert {0}% of Physical Damage to Fire Damage"
 			}
 		},
 		stats={
@@ -11499,7 +11499,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Supported Skills [Conversion|Convert] {0}% of [Physical] Damage to [Lightning] Damage"
+				text="Supported Skills Convert {0}% of Physical Damage to Lightning Damage"
 			}
 		},
 		stats={
@@ -11515,7 +11515,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Supported Skills [Conversion|Convert] {0}% of [Physical] Damage to a random [ElementalDamage|Element]"
+				text="Supported Skills Convert {0}% of Physical Damage to a random Element"
 			}
 		},
 		stats={
@@ -11531,7 +11531,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Supported Skills gain {0}% of [Physical] Damage as Extra [Chaos] Damage"
+				text="Supported Skills gain {0}% of Physical Damage as Extra Chaos Damage"
 			}
 		},
 		stats={
@@ -11547,7 +11547,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Supported Skills gain {0}% of [Physical] Damage as Extra [Fire] Damage"
+				text="Supported Skills gain {0}% of Physical Damage as Extra Fire Damage"
 			}
 		},
 		stats={
@@ -11595,7 +11595,7 @@ return {
 						[2]=1
 					}
 				},
-				text="Supported Skills can apply an additional [Curse]"
+				text="Supported Skills can apply an additional Curse"
 			},
 			[2]={
 				limit={
@@ -11604,7 +11604,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Supported Skills can apply {0} additional [Curse|Curses]"
+				text="Supported Skills can apply {0} additional Curses"
 			}
 		},
 		stats={
@@ -11645,7 +11645,7 @@ return {
 						[2]=1
 					}
 				},
-				text="Targets can be affected by {0:+d} [Poison|Poisons] from Supported Skills at the same time"
+				text="Targets can be affected by {0:+d} Poisons from Supported Skills at the same time"
 			}
 		},
 		stats={
@@ -11665,7 +11665,7 @@ return {
 						[2]=1
 					}
 				},
-				text="Supported Skills fire an additional [Projectile|Projectile]"
+				text="Supported Skills fire an additional Projectile"
 			},
 			[2]={
 				limit={
@@ -11678,7 +11678,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Supported Skills fire {1} additional [Projectile|Projectiles]"
+				text="Supported Skills fire {1} additional Projectiles"
 			}
 		},
 		stats={
@@ -11745,7 +11745,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Supported [Offering] Skills have {0}% increased [Buff] effect"
+				text="Supported Offering Skills have {0}% increased Buff effect"
 			},
 			[2]={
 				[1]={
@@ -11758,7 +11758,7 @@ return {
 						[2]=-1
 					}
 				},
-				text="Supported [Offering] Skills have {0}% reduced [Buff] effect"
+				text="Supported Offering Skills have {0}% reduced Buff effect"
 			}
 		},
 		stats={
@@ -11968,7 +11968,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Supported Skills have a {0}% longer [PerfectTiming|Perfect Timing] window"
+				text="Supported Skills have a {0}% longer Perfect Timing window"
 			},
 			[2]={
 				[1]={
@@ -11981,7 +11981,7 @@ return {
 						[2]=-1
 					}
 				},
-				text="Supported Skills have a {0}% shorter [PerfectTiming|Perfect Timing] window"
+				text="Supported Skills have a {0}% shorter Perfect Timing window"
 			}
 		},
 		stats={
@@ -12055,7 +12055,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="[Projectile|Projectiles] from Supported Skills have {0}% chance to [Chain] an additional time from terrain"
+				text="Projectiles from Supported Skills have {0}% chance to Chain an additional time from terrain"
 			}
 		},
 		stats={
@@ -12183,7 +12183,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="[Projectile|Projectiles] from Supported Skills [Pierce|Pierce] all Targets within {0} units"
+				text="Projectiles from Supported Skills Pierce all Targets within {0} units"
 			}
 		},
 		stats={
@@ -12199,7 +12199,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Ballista Totems from Supported Skills only [Attack] when you fire an [Attack] Projectile"
+				text="Ballista Totems from Supported Skills only Attack when you fire an Attack Projectile"
 			}
 		},
 		stats={
@@ -12235,7 +12235,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Recover {}% of Life [NonStackingEffect|over four seconds] when Supported Skills [CullingStrike|Cull] an Enemy"
+				text="Recover {}% of Life over four seconds when Supported Skills Cull an Enemy"
 			}
 		},
 		stats={
@@ -12251,7 +12251,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Recover {}% of Mana [NonStackingEffect|over four seconds] when Supported Skills [CullingStrike|Cull] an Enemy"
+				text="Recover {}% of Mana over four seconds when Supported Skills Cull an Enemy"
 			}
 		},
 		stats={
@@ -12360,7 +12360,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Supported Skills have {0}% increased [Crossbow|Crossbow] Reload Speed"
+				text="Supported Skills have {0}% increased Crossbow Reload Speed"
 			},
 			[2]={
 				[1]={
@@ -12373,7 +12373,7 @@ return {
 						[2]=-1
 					}
 				},
-				text="Supported Skills have {0}% reduced [Crossbow|Crossbow] Reload Speed"
+				text="Supported Skills have {0}% reduced Crossbow Reload Speed"
 			}
 		},
 		stats={
@@ -12405,7 +12405,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Supported Skills [Consume|Consume] [Freeze|Freeze] from Enemies they [Ignite|Ignite]"
+				text="Supported Skills Consume Freeze from Enemies they Ignite"
 			}
 		},
 		stats={
@@ -12421,7 +12421,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="[FinalStrike|Final Strike] of Supported Skills can\nbe performed twice in succession"
+				text="Final Strike of Supported Skills can\nbe performed twice in succession"
 			}
 		},
 		stats={
@@ -12437,7 +12437,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Supported Skills [Sacrifice] {0}% of Life on use"
+				text="Supported Skills Sacrifice {0}% of Life on use"
 			}
 		},
 		stats={
@@ -12453,7 +12453,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Supported Skills have {0}% increased chance to [Shock]"
+				text="Supported Skills have {0}% increased chance to Shock"
 			},
 			[2]={
 				[1]={
@@ -12466,7 +12466,7 @@ return {
 						[2]=-1
 					}
 				},
-				text="Supported Skills have {0}% reduced chance to [Shock]"
+				text="Supported Skills have {0}% reduced chance to Shock"
 			}
 		},
 		stats={
@@ -12482,7 +12482,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Supported Skills have {0}% increased [Shock] Duration"
+				text="Supported Skills have {0}% increased Shock Duration"
 			},
 			[2]={
 				[1]={
@@ -12495,7 +12495,7 @@ return {
 						[2]=-1
 					}
 				},
-				text="Supported Skills have {0}% reduced [Shock] Duration"
+				text="Supported Skills have {0}% reduced Shock Duration"
 			}
 		},
 		stats={
@@ -12511,7 +12511,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="{0}% increased [BuffMagnitude|Magnitude] of [Shock|Shocks] inflicted with Supported Skills"
+				text="{0}% increased Magnitude of Shocks inflicted with Supported Skills"
 			},
 			[2]={
 				[1]={
@@ -12524,7 +12524,7 @@ return {
 						[2]=-1
 					}
 				},
-				text="{0}% reduced [BuffMagnitude|Magnitude] of [Shock|Shocks] inflicted with Supported Skills"
+				text="{0}% reduced Magnitude of Shocks inflicted with Supported Skills"
 			}
 		},
 		stats={
@@ -12646,7 +12646,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Supported Skills cannot generate [Charges|Frenzy Charges]"
+				text="Supported Skills cannot generate Frenzy Charges"
 			}
 		},
 		stats={
@@ -12662,7 +12662,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Supported Skills cannot generate [Charges|Power Charges]"
+				text="Supported Skills cannot generate Power Charges"
 			}
 		},
 		stats={
@@ -12678,7 +12678,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Supported Skills will consume a [Charges|Frenzy Charge] on use if possible\nSupported Skills have {0}% more [SkillSpeed|Skill Speed] when consuming [Charges|Frenzy Charges]"
+				text="Supported Skills will consume a Frenzy Charge on use if possible\nSupported Skills have {0}% more Skill Speed when consuming Frenzy Charges"
 			},
 			[2]={
 				[1]={
@@ -12691,7 +12691,7 @@ return {
 						[2]=-1
 					}
 				},
-				text="Supported Skills will consume a [Charges|Frenzy Charge] on use if possible\nSupported Skills have {0}% less [SkillSpeed|Skill Speed] when consuming [Charges|Frenzy Charges]"
+				text="Supported Skills will consume a Frenzy Charge on use if possible\nSupported Skills have {0}% less Skill Speed when consuming Frenzy Charges"
 			}
 		},
 		stats={
@@ -12707,7 +12707,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Supported Skills will consume a [Charges|Power Charge] on use if possible\nSupported Skills have {0}% more chance to [Critical|Critically Hit] when consuming [Charges|Power Charges]"
+				text="Supported Skills will consume a Power Charge on use if possible\nSupported Skills have {0}% more chance to Critically Hit when consuming Power Charges"
 			},
 			[2]={
 				[1]={
@@ -12720,7 +12720,7 @@ return {
 						[2]=-1
 					}
 				},
-				text="Supported Skills will consume a [Charges|Power Charge] on use if possible\nSupported Skills have {0}% less chance to [Critical|Critically Hit] when consuming [Charges|Power Charges]"
+				text="Supported Skills will consume a Power Charge on use if possible\nSupported Skills have {0}% less chance to Critically Hit when consuming Power Charges"
 			}
 		},
 		stats={
@@ -12823,7 +12823,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Supported [Grenade] Skills cannot explode before the end of their fuse duration"
+				text="Supported Grenade Skills cannot explode before the end of their fuse duration"
 			}
 		},
 		stats={
@@ -12839,7 +12839,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Supported [Meta] Gems have {0}% increased Maximum [Energy]"
+				text="Supported Meta Gems have {0}% increased Maximum Energy"
 			},
 			[2]={
 				[1]={
@@ -12852,7 +12852,7 @@ return {
 						[2]=-1
 					}
 				},
-				text="Supported [Meta] Gems have {0}% reduced Maximum [Energy]"
+				text="Supported Meta Gems have {0}% reduced Maximum Energy"
 			}
 		},
 		stats={
@@ -12868,7 +12868,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Supported [Offering] Skills target an additional skeletal [Minion]\nSupport Effects are only applied if an additional skeletal [Minion] is targeted"
+				text="Supported Offering Skills target an additional skeletal Minion\nSupport Effects are only applied if an additional skeletal Minion is targeted"
 			}
 		},
 		stats={
@@ -12884,7 +12884,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Supported skills have {0}% chance to cause an [Aftershock]"
+				text="Supported skills have {0}% chance to cause an Aftershock"
 			}
 		},
 		stats={
@@ -12949,7 +12949,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Supported Skills have {0}% increased Spell [Critical|Critical Hit] Chance"
+				text="Supported Skills have {0}% increased Spell Critical Hit Chance"
 			},
 			[2]={
 				[1]={
@@ -12962,7 +12962,7 @@ return {
 						[2]=-1
 					}
 				},
-				text="Supported Skills have {0}% reduced Spell [Critical|Critical Hit] Chance"
+				text="Supported Skills have {0}% reduced Spell Critical Hit Chance"
 			}
 		},
 		stats={
@@ -13023,7 +13023,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Supported Skills have a {0}% chance to fire 8 additional [Projectile|Projectiles] in a circle"
+				text="Supported Skills have a {0}% chance to fire 8 additional Projectiles in a circle"
 			}
 		},
 		stats={
@@ -13088,7 +13088,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="[Shock|Shocks] from Supported Skills do not expire on [Ignite|Ignited] enemies"
+				text="Shocks from Supported Skills do not expire on Ignited enemies"
 			}
 		},
 		stats={
@@ -13120,7 +13120,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Supported Skills have {0}% increased [Totem|Totem] Placement speed"
+				text="Supported Skills have {0}% increased Totem Placement speed"
 			},
 			[2]={
 				[1]={
@@ -13133,7 +13133,7 @@ return {
 						[2]=-1
 					}
 				},
-				text="Supported Skills have {0}% reduced [Totem|Totem] Placement speed"
+				text="Supported Skills have {0}% reduced Totem Placement speed"
 			}
 		},
 		stats={
@@ -13161,7 +13161,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="[Shock|Shocking] [HitDamage|Hits] from supported Skills have a {0}% chance to also [Shock] enemies in a {2} metre radius"
+				text="Shocking Hits from supported Skills have a {0}% chance to also Shock enemies in a {2} metre radius"
 			}
 		},
 		stats={
@@ -13179,7 +13179,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Supported [Offering] Skills deal {0}% more Damage"
+				text="Supported Offering Skills deal {0}% more Damage"
 			},
 			[2]={
 				[1]={
@@ -13192,7 +13192,7 @@ return {
 						[2]=-1
 					}
 				},
-				text="Supported [Offering] Skills deal {0}% less Damage"
+				text="Supported Offering Skills deal {0}% less Damage"
 			}
 		},
 		stats={
@@ -13208,7 +13208,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Supported Skills [Consume|Consume] [Freeze] on enemies to deal {0}% more Damage"
+				text="Supported Skills Consume Freeze on enemies to deal {0}% more Damage"
 			},
 			[2]={
 				[1]={
@@ -13221,7 +13221,7 @@ return {
 						[2]=-1
 					}
 				},
-				text="Supported Skills [Consume|Consume] [Freeze] on enemies to deal {0}% less Damage"
+				text="Supported Skills Consume Freeze on enemies to deal {0}% less Damage"
 			}
 		},
 		stats={
@@ -13262,7 +13262,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Supported Skills have {0}% more [Accuracy|Accuracy Rating]"
+				text="Supported Skills have {0}% more Accuracy Rating"
 			},
 			[2]={
 				[1]={
@@ -13275,7 +13275,7 @@ return {
 						[2]=-1
 					}
 				},
-				text="Supported Skills have {0}% less [Accuracy|Accuracy Rating]"
+				text="Supported Skills have {0}% less Accuracy Rating"
 			}
 		},
 		stats={
@@ -13291,7 +13291,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Supported Skills have {0}% more [Attack] Speed"
+				text="Supported Skills have {0}% more Attack Speed"
 			},
 			[2]={
 				[1]={
@@ -13304,7 +13304,7 @@ return {
 						[2]=-1
 					}
 				},
-				text="Supported Skills have {0}% less [Attack] Speed"
+				text="Supported Skills have {0}% less Attack Speed"
 			}
 		},
 		stats={
@@ -13365,7 +13365,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Supported Skills have {0}% more chance to inflict [Ailments]"
+				text="Supported Skills have {0}% more chance to inflict Ailments"
 			},
 			[2]={
 				[1]={
@@ -13378,7 +13378,7 @@ return {
 						[2]=-1
 					}
 				},
-				text="Supported Skills have {0}% less chance to inflict [Ailments]"
+				text="Supported Skills have {0}% less chance to inflict Ailments"
 			}
 		},
 		stats={
@@ -13394,7 +13394,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Supported Skill has {0}% more [Critical|Critical Hit] Chance against Enemies that are on Full Life"
+				text="Supported Skill has {0}% more Critical Hit Chance against Enemies that are on Full Life"
 			},
 			[2]={
 				[1]={
@@ -13407,7 +13407,7 @@ return {
 						[2]=-1
 					}
 				},
-				text="Supported Skill has {0}% less [Critical|Critical Hit] Chance against Enemies that are on Full Life"
+				text="Supported Skill has {0}% less Critical Hit Chance against Enemies that are on Full Life"
 			}
 		},
 		stats={
@@ -13423,7 +13423,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Supported Skills have {0}% more [Attack] Speed"
+				text="Supported Skills have {0}% more Attack Speed"
 			},
 			[2]={
 				[1]={
@@ -13436,7 +13436,7 @@ return {
 						[2]=-1
 					}
 				},
-				text="Supported Skills have {0}% less [Attack] Speed"
+				text="Supported Skills have {0}% less Attack Speed"
 			}
 		},
 		stats={
@@ -13510,7 +13510,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Supported Skills apply [Daze|Daze] when fully [ArmourBreak|Breaking Armour]"
+				text="Supported Skills apply Daze when fully Breaking Armour"
 			}
 		},
 		stats={
@@ -13526,7 +13526,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Supported Skills [Daze|Daze] Enemies"
+				text="Supported Skills Daze Enemies"
 			}
 		},
 		stats={
@@ -13542,7 +13542,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Supported Skills deal {0}% more Spell Damage while you have [ArcaneSurge|Arcane Surge]"
+				text="Supported Skills deal {0}% more Spell Damage while you have Arcane Surge"
 			},
 			[2]={
 				[1]={
@@ -13555,7 +13555,7 @@ return {
 						[2]=-1
 					}
 				},
-				text="Supported Skills deal {0}% less Spell Damage while you have [ArcaneSurge|Arcane Surge]"
+				text="Supported Skills deal {0}% less Spell Damage while you have Arcane Surge"
 			}
 		},
 		stats={
@@ -13600,7 +13600,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Supported Skills trigger an Explosion when they [ArmourBreak|Fully Break] an enemy's [Armour]"
+				text="Supported Skills trigger an Explosion when they Fully Break an enemy's Armour"
 			}
 		},
 		stats={
@@ -13665,7 +13665,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Supported Skills have {0}% more [Attack] Time per Projectile"
+				text="Supported Skills have {0}% more Attack Time per Projectile"
 			},
 			[2]={
 				[1]={
@@ -13678,7 +13678,7 @@ return {
 						[2]=-1
 					}
 				},
-				text="Supported Skills have {0}% less [Attack] Time per Projectile"
+				text="Supported Skills have {0}% less Attack Time per Projectile"
 			}
 		},
 		stats={
@@ -13727,7 +13727,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Fonts of Blood from Supported Skills grant {0}% Life Regeneration per second to You and Your [Allies]"
+				text="Fonts of Blood from Supported Skills grant {0}% Life Regeneration per second to You and Your Allies"
 			}
 		},
 		stats={
@@ -13763,7 +13763,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Supported [Attack|Attacks] deal {0}% more Damage"
+				text="Supported Attacks deal {0}% more Damage"
 			},
 			[2]={
 				[1]={
@@ -13776,7 +13776,7 @@ return {
 						[2]=-1
 					}
 				},
-				text="Supported [Attack|Attacks] deal {0}% less Damage"
+				text="Supported Attacks deal {0}% less Damage"
 			}
 		},
 		stats={
@@ -13792,7 +13792,7 @@ return {
 						[2]=99
 					}
 				},
-				text="Supported Skills have a {0}% chance to Trigger Shockwave on [Melee] Hit"
+				text="Supported Skills have a {0}% chance to Trigger Shockwave on Melee Hit"
 			},
 			[2]={
 				limit={
@@ -13801,7 +13801,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Supported Skills will Trigger Shockwave on [Melee] Hit"
+				text="Supported Skills will Trigger Shockwave on Melee Hit"
 			}
 		},
 		stats={
@@ -13904,7 +13904,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Create [IgnitedGround|Ignited Ground] dealing [Fire|Fire Damage] equal to {0}% of Your Maximum Mana"
+				text="Create Ignited Ground dealing Fire Damage equal to {0}% of Your Maximum Mana"
 			}
 		},
 		stats={
@@ -13924,7 +13924,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="[Poison|Poison] from Supported Skills also adds {0}% of Damage per Second to Enemy as Plague, up to a maximum of {1}% of Enemy's maximum Life"
+				text="Poison from Supported Skills also adds {0}% of Damage per Second to Enemy as Plague, up to a maximum of {1}% of Enemy's maximum Life"
 			}
 		},
 		stats={
@@ -13957,7 +13957,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Supported Skills deal {0}% more [Attack] Damage"
+				text="Supported Skills deal {0}% more Attack Damage"
 			},
 			[2]={
 				[1]={
@@ -13970,7 +13970,7 @@ return {
 						[2]=-1
 					}
 				},
-				text="Supported Skills deal {0}% less [Attack] Damage"
+				text="Supported Skills deal {0}% less Attack Damage"
 			}
 		},
 		stats={
@@ -14015,7 +14015,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="{0}% more [BuffMagnitude|Magnitude] of [Bleeding] inflicted with Supported [Attack|Attacks]"
+				text="{0}% more Magnitude of Bleeding inflicted with Supported Attacks"
 			},
 			[2]={
 				[1]={
@@ -14028,7 +14028,7 @@ return {
 						[2]=-1
 					}
 				},
-				text="{0}% less [BuffMagnitude|Magnitude] of [Bleeding] inflicted with Supported [Attack|Attacks]"
+				text="{0}% less Magnitude of Bleeding inflicted with Supported Attacks"
 			}
 		},
 		stats={
@@ -14073,7 +14073,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Supported [Attack|Attacks] deal {0}% more non-[Chaos|Chaos] Damage"
+				text="Supported Attacks deal {0}% more non-Chaos Damage"
 			},
 			[2]={
 				[1]={
@@ -14086,7 +14086,7 @@ return {
 						[2]=-1
 					}
 				},
-				text="Supported [Attack|Attacks] deal {0}% less non-[Chaos|Chaos] Damage"
+				text="Supported Attacks deal {0}% less non-Chaos Damage"
 			}
 		},
 		stats={
@@ -14102,7 +14102,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Damage over time [Debuff|Debuffs] inflicted on full-life enemies by Supported Skills deal {0}% more damage"
+				text="Damage over time Debuffs inflicted on full-life enemies by Supported Skills deal {0}% more damage"
 			}
 		},
 		stats={
@@ -14147,7 +14147,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="[Chaos] damage [Contributes] to [Freeze] buildup for [HitDamage|Hits] against targets taking damage over time from Supported Skills"
+				text="Chaos damage Contributes to Freeze buildup for Hits against targets taking damage over time from Supported Skills"
 			}
 		},
 		stats={
@@ -14192,7 +14192,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Supported Skills deal {0}% more [Attack] Damage to \nenemies within 1 metre of you, scaling down to\nno bonus at 3.5 metres or further"
+				text="Supported Skills deal {0}% more Attack Damage to \nenemies within 1 metre of you, scaling down to\nno bonus at 3.5 metres or further"
 			}
 		},
 		stats={
@@ -14237,7 +14237,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Supported [Attack|Attacks] deal {0}% more [Cold|Cold] and [Fire|Fire] Damage"
+				text="Supported Attacks deal {0}% more Cold and Fire Damage"
 			},
 			[2]={
 				[1]={
@@ -14250,7 +14250,7 @@ return {
 						[2]=-1
 					}
 				},
-				text="Supported [Attack|Attacks] deal {0}% less [Cold|Cold] and [Fire|Fire] Damage"
+				text="Supported Attacks deal {0}% less Cold and Fire Damage"
 			}
 		},
 		stats={
@@ -14266,7 +14266,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Supported [Attack|Attacks] deal {0}% more [Cold|Cold] and [Lightning|Lightning] Damage"
+				text="Supported Attacks deal {0}% more Cold and Lightning Damage"
 			},
 			[2]={
 				[1]={
@@ -14279,7 +14279,7 @@ return {
 						[2]=-1
 					}
 				},
-				text="Supported [Attack|Attacks] deal {0}% less [Cold|Cold] and [Lightning|Lightning] Damage"
+				text="Supported Attacks deal {0}% less Cold and Lightning Damage"
 			}
 		},
 		stats={
@@ -14353,7 +14353,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Supported Skills require {0} [Combo|Combo] to use"
+				text="Supported Skills require {0} Combo to use"
 			}
 		},
 		stats={
@@ -14369,7 +14369,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Supported Skills have {0}% more chance to [Shock|Shock]"
+				text="Supported Skills have {0}% more chance to Shock"
 			},
 			[2]={
 				[1]={
@@ -14382,7 +14382,7 @@ return {
 						[2]=-1
 					}
 				},
-				text="Supported Skills have {0}% less chance to [Shock|Shock]"
+				text="Supported Skills have {0}% less chance to Shock"
 			}
 		},
 		stats={
@@ -14427,7 +14427,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Supported [Warcry|Warcries] have {0}% more Area of Effect"
+				text="Supported Warcries have {0}% more Area of Effect"
 			},
 			[2]={
 				[1]={
@@ -14440,7 +14440,7 @@ return {
 						[2]=-1
 					}
 				},
-				text="Supported [Warcry|Warcries] have {0}% less Area of Effect"
+				text="Supported Warcries have {0}% less Area of Effect"
 			}
 		},
 		stats={
@@ -14460,7 +14460,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="[CorruptedBlood|Corrupted Blood] deals {0}% of your [Strength] as\n[Physical] Damage per second"
+				text="Corrupted Blood deals {0}% of your Strength as\nPhysical Damage per second"
 			}
 		},
 		stats={
@@ -14480,7 +14480,7 @@ return {
 						[2]=1000
 					}
 				},
-				text="[CorruptedBlood|Corrupted Blood] duration is {0} second"
+				text="Corrupted Blood duration is {0} second"
 			},
 			[2]={
 				[1]={
@@ -14493,7 +14493,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="[CorruptedBlood|Corrupted Blood] duration is {0} seconds"
+				text="Corrupted Blood duration is {0} seconds"
 			}
 		},
 		stats={
@@ -14509,7 +14509,7 @@ return {
 						[2]=1
 					}
 				},
-				text="Supported [Warcry|Warcries] inflict [CorruptedBlood|Corrupted Blood]"
+				text="Supported Warcries inflict Corrupted Blood"
 			},
 			[2]={
 				limit={
@@ -14518,7 +14518,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Supported [Warcry|Warcries] inflict {0} [CorruptedBlood|Corrupted Blood] Debuffs"
+				text="Supported Warcries inflict {0} Corrupted Blood Debuffs"
 			}
 		},
 		stats={
@@ -14534,7 +14534,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Supported Skills have {0}% more chance to [Critical|Critically Hit]"
+				text="Supported Skills have {0}% more chance to Critically Hit"
 			},
 			[2]={
 				[1]={
@@ -14547,7 +14547,7 @@ return {
 						[2]=-1
 					}
 				},
-				text="Supported Skills have {0}% less chance to [Critical|Critically Hit]"
+				text="Supported Skills have {0}% less chance to Critically Hit"
 			}
 		},
 		stats={
@@ -14563,7 +14563,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Supported Skills have {0}% more [Critical|Critical Hit] chance"
+				text="Supported Skills have {0}% more Critical Hit chance"
 			},
 			[2]={
 				[1]={
@@ -14576,7 +14576,7 @@ return {
 						[2]=-1
 					}
 				},
-				text="Supported Skills have {0}% less [Critical|Critical Hit] chance"
+				text="Supported Skills have {0}% less Critical Hit chance"
 			}
 		},
 		stats={
@@ -14625,7 +14625,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Enemies Stunned by Supported Skills are also [Crushed] for {0} seconds"
+				text="Enemies Stunned by Supported Skills are also Crushed for {0} seconds"
 			}
 		},
 		stats={
@@ -14641,7 +14641,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Supported Skills have [CullingStrike|Culling Strike] against [Rarity|Rare or Unique] Enemies"
+				text="Supported Skills have Culling Strike against Rare or Unique Enemies"
 			}
 		},
 		stats={
@@ -14657,7 +14657,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="{0}% more Effect of Supported [Curse|Curses]"
+				text="{0}% more Effect of Supported Curses"
 			},
 			[2]={
 				[1]={
@@ -14670,7 +14670,7 @@ return {
 						[2]=-1
 					}
 				},
-				text="{0}% less Effect of Supported [Curse|Curses]"
+				text="{0}% less Effect of Supported Curses"
 			}
 		},
 		stats={
@@ -14686,7 +14686,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Supported Skills deal {0}% more Damage per [Combo]"
+				text="Supported Skills deal {0}% more Damage per Combo"
 			},
 			[2]={
 				[1]={
@@ -14699,7 +14699,7 @@ return {
 						[2]=-1
 					}
 				},
-				text="Supported Skills deal {0}% less Damage per [Combo]"
+				text="Supported Skills deal {0}% less Damage per Combo"
 			}
 		},
 		stats={
@@ -14715,7 +14715,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Supported [Crossbow] Skills deal {0}% more Damage for\neach bolt Reloaded by that skill in the past 6 seconds"
+				text="Supported Crossbow Skills deal {0}% more Damage for\neach bolt Reloaded by that skill in the past 6 seconds"
 			},
 			[2]={
 				[1]={
@@ -14728,7 +14728,7 @@ return {
 						[2]=-1
 					}
 				},
-				text="Supported [Crossbow] Skills deal {0}% less Damage for\neach bolt Reloaded by that skill in the past 6 seconds"
+				text="Supported Crossbow Skills deal {0}% less Damage for\neach bolt Reloaded by that skill in the past 6 seconds"
 			}
 		},
 		stats={
@@ -14744,7 +14744,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Supported [Offering] Skills deal {0}% more Damage"
+				text="Supported Offering Skills deal {0}% more Damage"
 			},
 			[2]={
 				[1]={
@@ -14757,7 +14757,7 @@ return {
 						[2]=-1
 					}
 				},
-				text="Supported [Offering] Skills deal {0}% less Damage"
+				text="Supported Offering Skills deal {0}% less Damage"
 			}
 		},
 		stats={
@@ -14777,7 +14777,7 @@ return {
 						[2]=999
 					}
 				},
-				text="[Daze|Daze] lasts for {0} seconds"
+				text="Daze lasts for {0} seconds"
 			},
 			[2]={
 				[1]={
@@ -14790,7 +14790,7 @@ return {
 						[2]=1000
 					}
 				},
-				text="[Daze|Daze] lasts for {0} second"
+				text="Daze lasts for {0} second"
 			},
 			[3]={
 				[1]={
@@ -14803,7 +14803,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="[Daze|Daze] lasts for {0} seconds"
+				text="Daze lasts for {0} seconds"
 			}
 		},
 		stats={
@@ -14823,7 +14823,7 @@ return {
 						[2]=999
 					}
 				},
-				text="[Daze|Daze] lasts for {0} seconds"
+				text="Daze lasts for {0} seconds"
 			},
 			[2]={
 				[1]={
@@ -14836,7 +14836,7 @@ return {
 						[2]=1000
 					}
 				},
-				text="[Daze|Daze] lasts for {0} second"
+				text="Daze lasts for {0} second"
 			},
 			[3]={
 				[1]={
@@ -14849,7 +14849,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="[Daze|Daze] lasts for {0} seconds"
+				text="Daze lasts for {0} seconds"
 			}
 		},
 		stats={
@@ -14865,7 +14865,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Supported Skills deal {0}% more Damage with [HitDamage|Hits]"
+				text="Supported Skills deal {0}% more Damage with Hits"
 			},
 			[2]={
 				[1]={
@@ -14878,7 +14878,7 @@ return {
 						[2]=-1
 					}
 				},
-				text="Supported Skills deal {0}% less Damage with [HitDamage|Hits]"
+				text="Supported Skills deal {0}% less Damage with Hits"
 			}
 		},
 		stats={
@@ -14894,7 +14894,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="{0}% more [BuffMagnitude|Magnitude] of [Poison] inflicted with Supported Skills"
+				text="{0}% more Magnitude of Poison inflicted with Supported Skills"
 			},
 			[2]={
 				[1]={
@@ -14907,7 +14907,7 @@ return {
 						[2]=-1
 					}
 				},
-				text="{0}% less [BuffMagnitude|Magnitude] of [Poison] inflicted with Supported Skills"
+				text="{0}% less Magnitude of Poison inflicted with Supported Skills"
 			}
 		},
 		stats={
@@ -14927,7 +14927,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Supported Skills inflict Decay, dealing {0}% of [Intelligence] as [Chaos] damage per second for 8 seconds"
+				text="Supported Skills inflict Decay, dealing {0}% of Intelligence as Chaos damage per second for 8 seconds"
 			}
 		},
 		stats={
@@ -14943,7 +14943,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="{0}% more [BuffMagnitude|Magnitude] of [Bleeding] inflicted with Supported Skills"
+				text="{0}% more Magnitude of Bleeding inflicted with Supported Skills"
 			},
 			[2]={
 				[1]={
@@ -14956,7 +14956,7 @@ return {
 						[2]=-1
 					}
 				},
-				text="{0}% less [BuffMagnitude|Magnitude] of [Bleeding] inflicted with Supported Skills"
+				text="{0}% less Magnitude of Bleeding inflicted with Supported Skills"
 			}
 		},
 		stats={
@@ -14972,7 +14972,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Supported Skills deal {0}% more Damage with [HitDamage|Hits]"
+				text="Supported Skills deal {0}% more Damage with Hits"
 			},
 			[2]={
 				[1]={
@@ -14985,7 +14985,7 @@ return {
 						[2]=-1
 					}
 				},
-				text="Supported Skills deal {0}% less Damage with [HitDamage|Hits]"
+				text="Supported Skills deal {0}% less Damage with Hits"
 			}
 		},
 		stats={
@@ -15100,7 +15100,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Supported Skills [Consume] a random [Ailments|Ailment] on the target when inflicting damage over time [Debuff|Debuffs], causing the [Debuff] to deal {0}% more damage if an [Ailments|Ailment] was consumed"
+				text="Supported Skills Consume a random Ailment on the target when inflicting damage over time Debuffs, causing the Debuff to deal {0}% more damage if an Ailment was consumed"
 			}
 		},
 		stats={
@@ -15145,7 +15145,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Supported Skills deal {0}% more [ElementalDamage|Elemental Damage] for each\nSkill used [Recently] of a different Elemental type"
+				text="Supported Skills deal {0}% more Elemental Damage for each\nSkill used Recently of a different Elemental type"
 			},
 			[2]={
 				[1]={
@@ -15158,7 +15158,7 @@ return {
 						[2]=-1
 					}
 				},
-				text="Supported Skills deal {0}% less [ElementalDamage|Elemental Damage] for each\nSkill used [Recently] of a different Elemental type"
+				text="Supported Skills deal {0}% less Elemental Damage for each\nSkill used Recently of a different Elemental type"
 			}
 		},
 		stats={
@@ -15174,7 +15174,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Skills [Empowered] by Supported Skills have [CullingStrike|Culling Strike]"
+				text="Skills Empowered by Supported Skills have Culling Strike"
 			}
 		},
 		stats={
@@ -15190,7 +15190,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Skills [Empowered] by Supported Skills deal {0}% more Damage"
+				text="Skills Empowered by Supported Skills deal {0}% more Damage"
 			},
 			[2]={
 				[1]={
@@ -15203,7 +15203,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Skills [Empowered] by Supported Skills deal {0}% less Damage"
+				text="Skills Empowered by Supported Skills deal {0}% less Damage"
 			}
 		},
 		stats={
@@ -15219,7 +15219,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Supported Skills have {0}% more chance to [Ignite|Ignite]"
+				text="Supported Skills have {0}% more chance to Ignite"
 			},
 			[2]={
 				[1]={
@@ -15232,7 +15232,7 @@ return {
 						[2]=-1
 					}
 				},
-				text="Supported Skills have {0}% less chance to [Ignite|Ignite]"
+				text="Supported Skills have {0}% less chance to Ignite"
 			}
 		},
 		stats={
@@ -15248,7 +15248,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Supported Skills deal {0}% more Damage with [HitDamage|Hits] against Enemies that are on [LowLife|Low Life]"
+				text="Supported Skills deal {0}% more Damage with Hits against Enemies that are on Low Life"
 			},
 			[2]={
 				[1]={
@@ -15261,7 +15261,7 @@ return {
 						[2]=-1
 					}
 				},
-				text="Supported Skills deal {0}% less Damage with [HitDamage|Hits] against Enemies that are on [LowLife|Low Life]"
+				text="Supported Skills deal {0}% less Damage with Hits against Enemies that are on Low Life"
 			}
 		},
 		stats={
@@ -15281,7 +15281,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Killing Blows from Supported [Strike|Strike] Skills against [Rarity|Rare] monsters grant one of their [MonsterModifiers|Modifiers] for {0} seconds"
+				text="Killing Blows from Supported Strike Skills against Rare monsters grant one of their Modifiers for {0} seconds"
 			}
 		},
 		stats={
@@ -15313,7 +15313,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="[Exposure] applied by Supported Skills has {0}% increased effect"
+				text="Exposure applied by Supported Skills has {0}% increased effect"
 			},
 			[2]={
 				[1]={
@@ -15326,7 +15326,7 @@ return {
 						[2]=-1
 					}
 				},
-				text="[Exposure] applied by Supported Skills has {0}% reduced effect"
+				text="Exposure applied by Supported Skills has {0}% reduced effect"
 			}
 		},
 		stats={
@@ -15342,7 +15342,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Supported Skills deal {0}% more [Attack|Attack] Damage to \nenemies further than 7 metres from you, scaling down to\nno bonus at 3.5 metres or closer"
+				text="Supported Skills deal {0}% more Attack Damage to \nenemies further than 7 metres from you, scaling down to\nno bonus at 3.5 metres or closer"
 			}
 		},
 		stats={
@@ -15358,7 +15358,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Supported Skills have {0}% more [Attack] Speed"
+				text="Supported Skills have {0}% more Attack Speed"
 			},
 			[2]={
 				[1]={
@@ -15371,7 +15371,7 @@ return {
 						[2]=-1
 					}
 				},
-				text="Supported Skills have {0}% less [Attack] Speed"
+				text="Supported Skills have {0}% less Attack Speed"
 			}
 		},
 		stats={
@@ -15474,7 +15474,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Supported Skills have {0}% more [Projectile|Projectile] Speed"
+				text="Supported Skills have {0}% more Projectile Speed"
 			},
 			[2]={
 				[1]={
@@ -15487,7 +15487,7 @@ return {
 						[2]=-1
 					}
 				},
-				text="Supported Skills have {0}% less [Projectile|Projectile] Speed"
+				text="Supported Skills have {0}% less Projectile Speed"
 			}
 		},
 		stats={
@@ -15503,7 +15503,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Supported [Attack|Attacks] deal {0}% more [Fire|Fire] and [Lightning|Lightning] Damage"
+				text="Supported Attacks deal {0}% more Fire and Lightning Damage"
 			},
 			[2]={
 				[1]={
@@ -15516,7 +15516,7 @@ return {
 						[2]=-1
 					}
 				},
-				text="Supported [Attack|Attacks] deal {0}% less [Fire|Fire] and [Lightning|Lightning] Damage"
+				text="Supported Attacks deal {0}% less Fire and Lightning Damage"
 			}
 		},
 		stats={
@@ -15561,7 +15561,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Supported Skills have {0}% more [Attack] Speed"
+				text="Supported Skills have {0}% more Attack Speed"
 			},
 			[2]={
 				[1]={
@@ -15574,7 +15574,7 @@ return {
 						[2]=-1
 					}
 				},
-				text="Supported Skills have {0}% less [Attack] Speed"
+				text="Supported Skills have {0}% less Attack Speed"
 			}
 		},
 		stats={
@@ -15619,7 +15619,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Supported Skills deal {0}% more [Melee] Damage"
+				text="Supported Skills deal {0}% more Melee Damage"
 			},
 			[2]={
 				[1]={
@@ -15632,7 +15632,7 @@ return {
 						[2]=-1
 					}
 				},
-				text="Supported Skills deal {0}% less [Melee] Damage"
+				text="Supported Skills deal {0}% less Melee Damage"
 			}
 		},
 		stats={
@@ -15648,7 +15648,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Supported Skills [Consume|Consume] Enemy [ArmourBreak|Fully Broken Armour] to deal {0}% more Damage"
+				text="Supported Skills Consume Enemy Fully Broken Armour to deal {0}% more Damage"
 			},
 			[2]={
 				[1]={
@@ -15661,7 +15661,7 @@ return {
 						[2]=-1
 					}
 				},
-				text="Supported Skills [Consume|Consume] Enemy [ArmourBreak|Fully Broken Armour] to deal {0}% less Damage"
+				text="Supported Skills Consume Enemy Fully Broken Armour to deal {0}% less Damage"
 			}
 		},
 		stats={
@@ -15697,7 +15697,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="[IceCrystals|Ice Crystals] created by Supported Skills have {0}% more Life"
+				text="Ice Crystals created by Supported Skills have {0}% more Life"
 			},
 			[2]={
 				[1]={
@@ -15710,7 +15710,7 @@ return {
 						[2]=-1
 					}
 				},
-				text="[IceCrystals|Ice Crystals] created by Supported Skills have {0}% less Life"
+				text="Ice Crystals created by Supported Skills have {0}% less Life"
 			}
 		},
 		stats={
@@ -15755,7 +15755,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Supported [Grenade] Skills deal {0}% more Damage"
+				text="Supported Grenade Skills deal {0}% more Damage"
 			},
 			[2]={
 				[1]={
@@ -15768,7 +15768,7 @@ return {
 						[2]=-1
 					}
 				},
-				text="Supported [Grenade] Skills deal {0}% less Damage"
+				text="Supported Grenade Skills deal {0}% less Damage"
 			}
 		},
 		stats={
@@ -15784,7 +15784,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="{0}% Increased Recovery from Life [Flask|Flasks] while a Supported Skill is active"
+				text="{0}% Increased Recovery from Life Flasks while a Supported Skill is active"
 			},
 			[2]={
 				[1]={
@@ -15797,7 +15797,7 @@ return {
 						[2]=-1
 					}
 				},
-				text="{0}% Reduced Recovery from Life [Flask|Flasks] while a Supported Skill is active"
+				text="{0}% Reduced Recovery from Life Flasks while a Supported Skill is active"
 			}
 		},
 		stats={
@@ -15813,7 +15813,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="[Chaos] damage over time inflicted by Supported Skills also [Hinder|Hinders] enemies"
+				text="Chaos damage over time inflicted by Supported Skills also Hinders enemies"
 			}
 		},
 		stats={
@@ -15833,7 +15833,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Supported Skills create [ConsecratedGround|Consecrated Ground] for {0} seconds on landing"
+				text="Supported Skills create Consecrated Ground for {0} seconds on landing"
 			}
 		},
 		stats={
@@ -15940,7 +15940,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Supported Skills cause {0}% more [Freeze|Freeze] Buildup"
+				text="Supported Skills cause {0}% more Freeze Buildup"
 			},
 			[2]={
 				[1]={
@@ -15953,7 +15953,7 @@ return {
 						[2]=-1
 					}
 				},
-				text="Supported Skills cause {0}% less [Freeze|Freeze] Buildup"
+				text="Supported Skills cause {0}% less Freeze Buildup"
 			}
 		},
 		stats={
@@ -15977,7 +15977,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="[Attack|Attacks] [Gain] {0}% of Damage as [Cold] Damage for {1} seconds on [Freeze|Freezing] an enemy with Supported Skills"
+				text="Attacks Gain {0}% of Damage as Cold Damage for {1} seconds on Freezing an enemy with Supported Skills"
 			}
 		},
 		stats={
@@ -15994,7 +15994,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="[IceCrystals|Ice Crystals] created by Supported Skills have {0}% more Life"
+				text="Ice Crystals created by Supported Skills have {0}% more Life"
 			},
 			[2]={
 				[1]={
@@ -16007,7 +16007,7 @@ return {
 						[2]=-1
 					}
 				},
-				text="[IceCrystals|Ice Crystals] created by Supported Skills have {0}% less Life"
+				text="Ice Crystals created by Supported Skills have {0}% less Life"
 			}
 		},
 		stats={
@@ -16023,7 +16023,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="{0}% more [BuffMagnitude|Magnitude] of [Ignite] inflicted with Supported Skills"
+				text="{0}% more Magnitude of Ignite inflicted with Supported Skills"
 			},
 			[2]={
 				[1]={
@@ -16036,7 +16036,7 @@ return {
 						[2]=-1
 					}
 				},
-				text="{0}% less [BuffMagnitude|Magnitude] of [Ignite] inflicted with Supported Skills"
+				text="{0}% less Magnitude of Ignite inflicted with Supported Skills"
 			}
 		},
 		stats={
@@ -16052,7 +16052,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Supported Skills have {0}% more chance to [Ignite|Ignite]"
+				text="Supported Skills have {0}% more chance to Ignite"
 			},
 			[2]={
 				[1]={
@@ -16065,7 +16065,7 @@ return {
 						[2]=-1
 					}
 				},
-				text="Supported Skills have {0}% less chance to [Ignite|Ignite]"
+				text="Supported Skills have {0}% less chance to Ignite"
 			}
 		},
 		stats={
@@ -16085,7 +16085,7 @@ return {
 						[2]=10
 					}
 				},
-				text="Supported Skills create an [Aftershock] when they [HeavyStun|Heavy Stun] an Enemy, dealing the same damage to enemies within {0} metre"
+				text="Supported Skills create an Aftershock when they Heavy Stun an Enemy, dealing the same damage to enemies within {0} metre"
 			},
 			[2]={
 				[1]={
@@ -16098,7 +16098,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Supported Skills create an [Aftershock] when they [HeavyStun|Heavy Stun] an Enemy, dealing the same damage to enemies within {0} metres"
+				text="Supported Skills create an Aftershock when they Heavy Stun an Enemy, dealing the same damage to enemies within {0} metres"
 			}
 		},
 		stats={
@@ -16143,7 +16143,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Supported Skills [ArmourBreak|Break] {0}% more [Armour|Armour]"
+				text="Supported Skills Break {0}% more Armour"
 			},
 			[2]={
 				[1]={
@@ -16156,7 +16156,7 @@ return {
 						[2]=-1
 					}
 				},
-				text="Supported Skills [ArmourBreak|Break] {0}% less [Armour|Armour]"
+				text="Supported Skills Break {0}% less Armour"
 			}
 		},
 		stats={
@@ -16176,7 +16176,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Supported Skills gain {0}% increased [Critical] Hit Chance each second, up to {1}%. This [Critical] Hit Chance is lost whenever a skill supported by Inevitable Critical Critically Hits"
+				text="Supported Skills gain {0}% increased Critical Hit Chance each second, up to {1}%. This Critical Hit Chance is lost whenever a skill supported by Inevitable Critical Critically Hits"
 			}
 		},
 		stats={
@@ -16201,7 +16201,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="[Attack|Attacks] gain {0}% of Damage as [Lightning] Damage for {1} seconds on killing a [Shock|Shocked] enemy with Supported Skills"
+				text="Attacks gain {0}% of Damage as Lightning Damage for {1} seconds on killing a Shocked enemy with Supported Skills"
 			}
 		},
 		stats={
@@ -16296,7 +16296,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="[JaggedGround|Jagged Ground] lasts {0} seconds"
+				text="Jagged Ground lasts {0} seconds"
 			}
 		},
 		stats={
@@ -16312,7 +16312,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Trigger Wind Wave when [Stun|Stunned] while using Supported Skills"
+				text="Trigger Wind Wave when Stunned while using Supported Skills"
 			}
 		},
 		stats={
@@ -16332,7 +16332,7 @@ return {
 						[2]=1000
 					}
 				},
-				text="[Minion|Minions] from Supported Skills die {0} second after their Life is reduced to 0"
+				text="Minions from Supported Skills die {0} second after their Life is reduced to 0"
 			},
 			[2]={
 				[1]={
@@ -16345,7 +16345,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="[Minion|Minions] from Supported Skills die {0} seconds after their Life is reduced to 0"
+				text="Minions from Supported Skills die {0} seconds after their Life is reduced to 0"
 			}
 		},
 		stats={
@@ -16361,7 +16361,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Supported Skills have {0}% more chance to [Shock]"
+				text="Supported Skills have {0}% more chance to Shock"
 			},
 			[2]={
 				[1]={
@@ -16374,7 +16374,7 @@ return {
 						[2]=-1
 					}
 				},
-				text="Supported Skills have {0}% less chance to [Shock]"
+				text="Supported Skills have {0}% less chance to Shock"
 			}
 		},
 		stats={
@@ -16390,7 +16390,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Enemies killed by [HitDamage|Hits] from Supported Skills grant {0}% more Life [Flask] Charges"
+				text="Enemies killed by Hits from Supported Skills grant {0}% more Life Flask Charges"
 			},
 			[2]={
 				[1]={
@@ -16403,7 +16403,7 @@ return {
 						[2]=-1
 					}
 				},
-				text="Enemies killed by [HitDamage|Hits] from Supported Skills grant {0}% less Life [Flask] Charges"
+				text="Enemies killed by Hits from Supported Skills grant {0}% less Life Flask Charges"
 			}
 		},
 		stats={
@@ -16581,7 +16581,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Supported Skills have {0}% more [Pinned|Pin] Buildup against enemies within 2 metres of you, scaling to no change at 12 metres"
+				text="Supported Skills have {0}% more Pin Buildup against enemies within 2 metres of you, scaling to no change at 12 metres"
 			},
 			[2]={
 				[1]={
@@ -16594,7 +16594,7 @@ return {
 						[2]=-1
 					}
 				},
-				text="Supported Skills have {0}% less [Pinned|Pin] Buildup against enemies within 2 metres of you, scaling to no change at 12 metres"
+				text="Supported Skills have {0}% less Pin Buildup against enemies within 2 metres of you, scaling to no change at 12 metres"
 			}
 		},
 		stats={
@@ -16639,7 +16639,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Consumes {0}% of current Mana to deal that much [Fire] damage"
+				text="Consumes {0}% of current Mana to deal that much Fire damage"
 			}
 		},
 		stats={
@@ -16655,7 +16655,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Enemies killed by [HitDamage|Hits] from Supported Skills grant {0}% more Mana [Flask] Charges"
+				text="Enemies killed by Hits from Supported Skills grant {0}% more Mana Flask Charges"
 			},
 			[2]={
 				[1]={
@@ -16668,7 +16668,7 @@ return {
 						[2]=-1
 					}
 				},
-				text="Enemies killed by [HitDamage|Hits] from Supported Skills grant {0}% less Mana [Flask] Charges"
+				text="Enemies killed by Hits from Supported Skills grant {0}% less Mana Flask Charges"
 			}
 		},
 		stats={
@@ -16684,7 +16684,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Fonts of Mana from Supported Skills grant {0}% increased Mana Regeneration Rate to You and Your [Allies]"
+				text="Fonts of Mana from Supported Skills grant {0}% increased Mana Regeneration Rate to You and Your Allies"
 			},
 			[2]={
 				[1]={
@@ -16697,7 +16697,7 @@ return {
 						[2]=-1
 					}
 				},
-				text="Fonts of Mana from Supported Skills grant {0}% reduced Mana Regeneration Rate to You and Your [Allies]"
+				text="Fonts of Mana from Supported Skills grant {0}% reduced Mana Regeneration Rate to You and Your Allies"
 			}
 		},
 		stats={
@@ -16778,7 +16778,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Supported Skills have {0}% more Maximum [Physical] Damage"
+				text="Supported Skills have {0}% more Maximum Physical Damage"
 			},
 			[2]={
 				[1]={
@@ -16791,7 +16791,7 @@ return {
 						[2]=-1
 					}
 				},
-				text="Supported Skills have {0}% less Maximum [Physical] Damage"
+				text="Supported Skills have {0}% less Maximum Physical Damage"
 			}
 		},
 		stats={
@@ -16807,7 +16807,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="[Minion|Minions] from Supported Skills deal {0}% more Damage"
+				text="Minions from Supported Skills deal {0}% more Damage"
 			},
 			[2]={
 				[1]={
@@ -16820,7 +16820,7 @@ return {
 						[2]=-1
 					}
 				},
-				text="[Minion|Minions] from Supported Skills deal {0}% less Damage"
+				text="Minions from Supported Skills deal {0}% less Damage"
 			}
 		},
 		stats={
@@ -16836,7 +16836,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Supported Skills have {0}% more [Attack] Speed"
+				text="Supported Skills have {0}% more Attack Speed"
 			},
 			[2]={
 				[1]={
@@ -16849,7 +16849,7 @@ return {
 						[2]=-1
 					}
 				},
-				text="Supported Skills have {0}% less [Attack] Speed"
+				text="Supported Skills have {0}% less Attack Speed"
 			}
 		},
 		stats={
@@ -17060,7 +17060,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Minions from Supported Skills have {0}% increased [Critical|Critical Hit] Chance against the Prey"
+				text="Minions from Supported Skills have {0}% increased Critical Hit Chance against the Prey"
 			},
 			[2]={
 				[1]={
@@ -17073,7 +17073,7 @@ return {
 						[2]=-1
 					}
 				},
-				text="Minions from Supported Skills have {0}% reduced [Critical|Critical Hit] Chance against the Prey"
+				text="Minions from Supported Skills have {0}% reduced Critical Hit Chance against the Prey"
 			}
 		},
 		stats={
@@ -17089,7 +17089,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Minions from Supported Skills have {0:+d}% to [CriticalDamageBonus|Critical Damage Bonus] against the Prey"
+				text="Minions from Supported Skills have {0:+d}% to Critical Damage Bonus against the Prey"
 			}
 		},
 		stats={
@@ -17134,7 +17134,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="[Minion|Minions] from Supported Skills have {0}% more maximum Life"
+				text="Minions from Supported Skills have {0}% more maximum Life"
 			},
 			[2]={
 				[1]={
@@ -17147,7 +17147,7 @@ return {
 						[2]=-1
 					}
 				},
-				text="[Minion|Minions] from Supported Skills have {0}% less maximum Life"
+				text="Minions from Supported Skills have {0}% less maximum Life"
 			}
 		},
 		stats={
@@ -17196,7 +17196,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Supported Skills remove {0}% of your maximum Life from a nearby [Minion] on use to deal {1}% more damage"
+				text="Supported Skills remove {0}% of your maximum Life from a nearby Minion on use to deal {1}% more damage"
 			}
 		},
 		stats={
@@ -17266,7 +17266,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="[Minion|Minions] from Supported Skills [Ignite] Enemies within a radius of {1} metres as though dealing Base [Fire] Damage equal to {0}% of [Minion|Minion's] Maximum Life"
+				text="Minions from Supported Skills Ignite Enemies within a radius of {1} metres as though dealing Base Fire Damage equal to {0}% of Minion's Maximum Life"
 			}
 		},
 		stats={
@@ -17283,7 +17283,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Mirage Archer uses Supported Skill with {0}% more [Attack] Speed"
+				text="Mirage Archer uses Supported Skill with {0}% more Attack Speed"
 			},
 			[2]={
 				[1]={
@@ -17296,7 +17296,7 @@ return {
 						[2]=-1
 					}
 				},
-				text="Mirage Archer uses Supported Skill with {0}% less [Attack] Speed"
+				text="Mirage Archer uses Supported Skill with {0}% less Attack Speed"
 			}
 		},
 		stats={
@@ -17532,7 +17532,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Supported Skills have {0}% more [Poison|Poison] Duration"
+				text="Supported Skills have {0}% more Poison Duration"
 			},
 			[2]={
 				[1]={
@@ -17545,7 +17545,7 @@ return {
 						[2]=-1
 					}
 				},
-				text="Supported Skills have {0}% less [Poison|Poison] Duration"
+				text="Supported Skills have {0}% less Poison Duration"
 			}
 		},
 		stats={
@@ -17561,7 +17561,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Supported Skills have {0}% more [Attack] and Cast Speed"
+				text="Supported Skills have {0}% more Attack and Cast Speed"
 			},
 			[2]={
 				[1]={
@@ -17574,7 +17574,7 @@ return {
 						[2]=-1
 					}
 				},
-				text="Supported Skills have {0}% less [Attack] and Cast Speed"
+				text="Supported Skills have {0}% less Attack and Cast Speed"
 			}
 		},
 		stats={
@@ -17623,7 +17623,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="[EnergyShield|Energy Shield] Recharge begins immediately and is not interrupted by Damage for {0} seconds when [Stun|Stunned] while using Supported Skills"
+				text="Energy Shield Recharge begins immediately and is not interrupted by Damage for {0} seconds when Stunned while using Supported Skills"
 			}
 		},
 		stats={
@@ -17639,7 +17639,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Hits with Supported Skills cause {0}% more [Stun] buildup"
+				text="Hits with Supported Skills cause {0}% more Stun buildup"
 			},
 			[2]={
 				limit={
@@ -17648,7 +17648,7 @@ return {
 						[2]=-1
 					}
 				},
-				text="Hits with Supported Skills cause {0}% less [Stun] buildup"
+				text="Hits with Supported Skills cause {0}% less Stun buildup"
 			}
 		},
 		stats={
@@ -17825,7 +17825,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Supported [Attack|Attacks] cause [Daze|Daze] buildup equal to {0}% of [Physical|Physical] Damage dealt"
+				text="Supported Attacks cause Daze buildup equal to {0}% of Physical Damage dealt"
 			}
 		},
 		stats={
@@ -17841,7 +17841,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="[Projectile|Projectiles] from Supported Skills deal {0}% more Damage if they've [Pierce|Pierced] an enemy"
+				text="Projectiles from Supported Skills deal {0}% more Damage if they've Pierced an enemy"
 			},
 			[2]={
 				[1]={
@@ -17854,7 +17854,7 @@ return {
 						[2]=-1
 					}
 				},
-				text="[Projectile|Projectiles] from Supported Skills deal {0}% less Damage if they've [Pierce|Pierced] an enemy"
+				text="Projectiles from Supported Skills deal {0}% less Damage if they've Pierced an enemy"
 			}
 		},
 		stats={
@@ -17870,7 +17870,7 @@ return {
 						[2]=-100
 					}
 				},
-				text="Supported Skills do not cause [Stun] buildup"
+				text="Supported Skills do not cause Stun buildup"
 			},
 			[2]={
 				limit={
@@ -17879,7 +17879,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Supported Skills have {0}% more [Stun] buildup"
+				text="Supported Skills have {0}% more Stun buildup"
 			},
 			[3]={
 				[1]={
@@ -17892,7 +17892,7 @@ return {
 						[2]=-1
 					}
 				},
-				text="Supported Skills have {0}% less [Stun] buildup"
+				text="Supported Skills have {0}% less Stun buildup"
 			}
 		},
 		stats={
@@ -17908,7 +17908,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Physical Damage from Supported Skill is [Pinned|Pinning]"
+				text="Physical Damage from Supported Skill is Pinning"
 			}
 		},
 		stats={
@@ -17924,7 +17924,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Supported Skills have {0}% more [Critical|Critical Hit Chance]"
+				text="Supported Skills have {0}% more Critical Hit Chance"
 			},
 			[2]={
 				[1]={
@@ -17937,7 +17937,7 @@ return {
 						[2]=-1
 					}
 				},
-				text="Supported Skills have {0}% less [Critical|Critical Hit Chance]"
+				text="Supported Skills have {0}% less Critical Hit Chance"
 			}
 		},
 		stats={
@@ -17953,7 +17953,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Supported Skills have {0}% more [CriticalDamageBonus|Critical Damage Bonus]"
+				text="Supported Skills have {0}% more Critical Damage Bonus"
 			},
 			[2]={
 				[1]={
@@ -17966,7 +17966,7 @@ return {
 						[2]=-1
 					}
 				},
-				text="Supported Skills have {0}% less [CriticalDamageBonus|Critical Damage Bonus]"
+				text="Supported Skills have {0}% less Critical Damage Bonus"
 			}
 		},
 		stats={
@@ -17982,7 +17982,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Supported Skills deal {0}% more Damage per [Charges|Power Charge]"
+				text="Supported Skills deal {0}% more Damage per Power Charge"
 			},
 			[2]={
 				[1]={
@@ -17995,7 +17995,7 @@ return {
 						[2]=-1
 					}
 				},
-				text="Supported Skills deal {0}% less Damage per [Charges|Power Charge]"
+				text="Supported Skills deal {0}% less Damage per Power Charge"
 			}
 		},
 		stats={
@@ -18011,7 +18011,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="{0}% Increased [Accuracy] Rating while a Supported Skill is active"
+				text="{0}% Increased Accuracy Rating while a Supported Skill is active"
 			},
 			[2]={
 				[1]={
@@ -18024,7 +18024,7 @@ return {
 						[2]=-1
 					}
 				},
-				text="{0}% Reduced [Accuracy] Rating while a Supported Skill is active"
+				text="{0}% Reduced Accuracy Rating while a Supported Skill is active"
 			}
 		},
 		stats={
@@ -18040,7 +18040,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Supported Skills deal {0}% more Physical Projectile [Attack] Damage"
+				text="Supported Skills deal {0}% more Physical Projectile Attack Damage"
 			},
 			[2]={
 				[1]={
@@ -18053,7 +18053,7 @@ return {
 						[2]=-1
 					}
 				},
-				text="Supported Skills deal {0}% less Physical Projectile [Attack] Damage"
+				text="Supported Skills deal {0}% less Physical Projectile Attack Damage"
 			}
 		},
 		stats={
@@ -18069,7 +18069,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Supported Skills have {0}% more Projectile [Attack] Speed"
+				text="Supported Skills have {0}% more Projectile Attack Speed"
 			},
 			[2]={
 				[1]={
@@ -18082,7 +18082,7 @@ return {
 						[2]=-1
 					}
 				},
-				text="Supported Skills have {0}% less Projectile [Attack] Speed"
+				text="Supported Skills have {0}% less Projectile Attack Speed"
 			}
 		},
 		stats={
@@ -18127,7 +18127,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Supported Skills have {0}% more [Attack] Speed"
+				text="Supported Skills have {0}% more Attack Speed"
 			},
 			[2]={
 				[1]={
@@ -18140,7 +18140,7 @@ return {
 						[2]=-1
 					}
 				},
-				text="Supported Skills have {0}% less [Attack] Speed"
+				text="Supported Skills have {0}% less Attack Speed"
 			}
 		},
 		stats={
@@ -18156,7 +18156,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Supported Skills deal {0}% more [Melee] Area Damage"
+				text="Supported Skills deal {0}% more Melee Area Damage"
 			},
 			[2]={
 				[1]={
@@ -18169,7 +18169,7 @@ return {
 						[2]=-1
 					}
 				},
-				text="Supported Skills deal {0}% less [Melee] Area Damage"
+				text="Supported Skills deal {0}% less Melee Area Damage"
 			}
 		},
 		stats={
@@ -18185,7 +18185,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Supported Skills have {0}% more [Shock|Shock] Duration"
+				text="Supported Skills have {0}% more Shock Duration"
 			},
 			[2]={
 				[1]={
@@ -18198,7 +18198,7 @@ return {
 						[2]=-1
 					}
 				},
-				text="Supported Skills have {0}% less [Shock|Shock] Duration"
+				text="Supported Skills have {0}% less Shock Duration"
 			}
 		},
 		stats={
@@ -18243,7 +18243,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Supported Skills deal {0}% more [Attack|Attack] Damage"
+				text="Supported Skills deal {0}% more Attack Damage"
 			},
 			[2]={
 				[1]={
@@ -18256,7 +18256,7 @@ return {
 						[2]=-1
 					}
 				},
-				text="Supported Skills deal {0}% less [Attack|Attack] Damage"
+				text="Supported Skills deal {0}% less Attack Damage"
 			}
 		},
 		stats={
@@ -18296,7 +18296,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Fonts of Rage from Supported Skills grant {0} [Rage] Regeneration per second to You and Your [Allies]"
+				text="Fonts of Rage from Supported Skills grant {0} Rage Regeneration per second to You and Your Allies"
 			}
 		},
 		stats={
@@ -18316,7 +18316,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Supported Skills grant 1 [Rage|Rage] on [Melee|Melee] [HitDamage|Hit], no more than once every {0} seconds"
+				text="Supported Skills grant 1 Rage on Melee Hit, no more than once every {0} seconds"
 			}
 		},
 		stats={
@@ -18336,7 +18336,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Supported Skills consume {0} [Rage] if possible to\ndeal {1}% more Damage"
+				text="Supported Skills consume {0} Rage if possible to\ndeal {1}% more Damage"
 			},
 			[2]={
 				[1]={
@@ -18353,7 +18353,7 @@ return {
 						[2]=-1
 					}
 				},
-				text="Supported Skills consume {0} [Rage] if possible to\ndeal {1}% less Damage"
+				text="Supported Skills consume {0} Rage if possible to\ndeal {1}% less Damage"
 			}
 		},
 		stats={
@@ -18415,7 +18415,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Recover {0}% of [EnergyShield|Energy Shield] when a Supported Skill deals a Killing Blow to a [Shock|Shocked] Enemy"
+				text="Recover {0}% of Energy Shield when a Supported Skill deals a Killing Blow to a Shocked Enemy"
 			}
 		},
 		stats={
@@ -18431,7 +18431,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Enemies have -{0}% chance to Block [Attack] or Spell Damage from Supported Skills"
+				text="Enemies have -{0}% chance to Block Attack or Spell Damage from Supported Skills"
 			}
 		},
 		stats={
@@ -18447,7 +18447,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Supported Skills have {0}% increased [Critical|Critical Hit] Chance per Inspiration Charge"
+				text="Supported Skills have {0}% increased Critical Hit Chance per Inspiration Charge"
 			},
 			[2]={
 				[1]={
@@ -18460,7 +18460,7 @@ return {
 						[2]=-1
 					}
 				},
-				text="Supported Skills have {0}% reduced [Critical|Critical Hit] Chance per Inspiration Charge"
+				text="Supported Skills have {0}% reduced Critical Hit Chance per Inspiration Charge"
 			}
 		},
 		stats={
@@ -18648,7 +18648,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Supported Skills [Aggravate|Aggravate] [Bleeding|Bleeding] on [HitDamage|Hitting] [HeavyStun|Heavy Stunned] Enemies"
+				text="Supported Skills Aggravate Bleeding on Hitting Heavy Stunned Enemies"
 			}
 		},
 		stats={
@@ -18668,7 +18668,7 @@ return {
 						[2]=10
 					}
 				},
-				text="Your Skills target [Minion|Minions] from Supported Skills within\n{0} metre if possible"
+				text="Your Skills target Minions from Supported Skills within\n{0} metre if possible"
 			},
 			[2]={
 				[1]={
@@ -18681,7 +18681,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Your Skills target [Minion|Minions] from Supported Skills within\n{0} metres if possible"
+				text="Your Skills target Minions from Supported Skills within\n{0} metres if possible"
 			}
 		},
 		stats={
@@ -18810,7 +18810,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Combat Rush grants {0}% more [Attack] Speed to Travel Skills not Supported by Close Combat"
+				text="Combat Rush grants {0}% more Attack Speed to Travel Skills not Supported by Close Combat"
 			},
 			[2]={
 				[1]={
@@ -18823,7 +18823,7 @@ return {
 						[2]=-1
 					}
 				},
-				text="Combat Rush grants {0}% less [Attack] Speed to Travel Skills not Supported by Close Combat"
+				text="Combat Rush grants {0}% less Attack Speed to Travel Skills not Supported by Close Combat"
 			}
 		},
 		stats={
@@ -18868,7 +18868,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Supported Skills deal {0}% more Damage with [Spell] [HitDamage|Hits]"
+				text="Supported Skills deal {0}% more Damage with Spell Hits"
 			},
 			[2]={
 				[1]={
@@ -18881,7 +18881,7 @@ return {
 						[2]=-1
 					}
 				},
-				text="Supported Skills deal {0}% less Damage with [Spell] [HitDamage|Hits]"
+				text="Supported Skills deal {0}% less Damage with Spell Hits"
 			}
 		},
 		stats={
@@ -18926,7 +18926,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Cause a [Nova] dealing [Chaos] Damage equal to {0}% of the Enemy's Maximum [EnergyShield|Energy Shield]"
+				text="Cause a Nova dealing Chaos Damage equal to {0}% of the Enemy's Maximum Energy Shield"
 			}
 		},
 		stats={
@@ -19168,7 +19168,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Echoes from Supported [Spell|Spells] have {0}% more Area of Effect"
+				text="Echoes from Supported Spells have {0}% more Area of Effect"
 			},
 			[2]={
 				[1]={
@@ -19181,7 +19181,7 @@ return {
 						[2]=-1
 					}
 				},
-				text="Echoes from Supported [Spell|Spells] have {0}% less Area of Effect"
+				text="Echoes from Supported Spells have {0}% less Area of Effect"
 			}
 		},
 		stats={
@@ -19657,7 +19657,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Supported Skills deal {0}% more Damage with [HitDamage|Hits]"
+				text="Supported Skills deal {0}% more Damage with Hits"
 			},
 			[2]={
 				[1]={
@@ -19670,7 +19670,7 @@ return {
 						[2]=-1
 					}
 				},
-				text="Supported Skills deal {0}% less Damage with [HitDamage|Hits]"
+				text="Supported Skills deal {0}% less Damage with Hits"
 			}
 		},
 		stats={
@@ -19686,7 +19686,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="{0}% more [BuffMagnitude|Magnitude] of [Ignite] inflicted with Supported Skills"
+				text="{0}% more Magnitude of Ignite inflicted with Supported Skills"
 			},
 			[2]={
 				[1]={
@@ -19699,7 +19699,7 @@ return {
 						[2]=-1
 					}
 				},
-				text="{0}% less [BuffMagnitude|Magnitude] of [Ignite] inflicted with Supported Skills"
+				text="{0}% less Magnitude of Ignite inflicted with Supported Skills"
 			}
 		},
 		stats={
@@ -19715,7 +19715,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="{0}% more Duration of Supported Skills and Damaging [Ailments] they inflict"
+				text="{0}% more Duration of Supported Skills and Damaging Ailments they inflict"
 			},
 			[2]={
 				[1]={
@@ -19728,7 +19728,7 @@ return {
 						[2]=-1
 					}
 				},
-				text="{0}% less Duration of Supported Skills and Damaging [Ailments] they inflict"
+				text="{0}% less Duration of Supported Skills and Damaging Ailments they inflict"
 			}
 		},
 		stats={
@@ -19831,7 +19831,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Supported Skills trigger Mana Flare on [Critical|Critical Hit]"
+				text="Supported Skills trigger Mana Flare on Critical Hit"
 			}
 		},
 		stats={
@@ -19847,7 +19847,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="[DNT] Supported Skills have triple Cooldown Uses"
+				text="DNT Supported Skills have triple Cooldown Uses"
 			}
 		},
 		stats={
@@ -19863,7 +19863,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="{0}% more [BuffMagnitude|Magnitude] of [DamagingAilments|Damaging Ailments] inflicted with Supported Skills"
+				text="{0}% more Magnitude of Damaging Ailments inflicted with Supported Skills"
 			},
 			[2]={
 				[1]={
@@ -19876,7 +19876,7 @@ return {
 						[2]=-1
 					}
 				},
-				text="{0}% less [BuffMagnitude|Magnitude] of [DamagingAilments|Damaging Ailments] inflicted with Supported Skills"
+				text="{0}% less Magnitude of Damaging Ailments inflicted with Supported Skills"
 			}
 		},
 		stats={
@@ -19892,7 +19892,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="{0}% more [StunThreshold|Stun Threshold] while using Supported Skills"
+				text="{0}% more Stun Threshold while using Supported Skills"
 			},
 			[2]={
 				[1]={
@@ -19905,7 +19905,7 @@ return {
 						[2]=-1
 					}
 				},
-				text="{0}% less [StunThreshold|Stun Threshold] while using Supported Skills"
+				text="{0}% less Stun Threshold while using Supported Skills"
 			}
 		},
 		stats={
@@ -19921,7 +19921,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Supported Skills have {0}% more Duration of [Ailments|Ailments] on Enemies"
+				text="Supported Skills have {0}% more Duration of Ailments on Enemies"
 			},
 			[2]={
 				[1]={
@@ -19934,7 +19934,7 @@ return {
 						[2]=-1
 					}
 				},
-				text="Supported Skills have {0}% less Duration of [Ailments|Ailments] on Enemies"
+				text="Supported Skills have {0}% less Duration of Ailments on Enemies"
 			}
 		},
 		stats={
@@ -20028,7 +20028,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Supported Skills deal {0}% more damage with [HitDamage|Hits]"
+				text="Supported Skills deal {0}% more damage with Hits"
 			},
 			[2]={
 				[1]={
@@ -20041,7 +20041,7 @@ return {
 						[2]=-1
 					}
 				},
-				text="Supported Skills deal {0}% less damage with [HitDamage|Hits]"
+				text="Supported Skills deal {0}% less damage with Hits"
 			}
 		},
 		stats={
@@ -20061,7 +20061,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Supported [Warcry|Warcries] consume up to {0} [Rage], causing [Attack|Attacks] [Empowered] by them to deal {1}% more damage"
+				text="Supported Warcries consume up to {0} Rage, causing Attacks Empowered by them to deal {1}% more damage"
 			}
 		},
 		stats={
@@ -20078,7 +20078,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Supported Skills deal {0}% more Damage when released with [PerfectTiming|Perfect Timing]"
+				text="Supported Skills deal {0}% more Damage when released with Perfect Timing"
 			},
 			[2]={
 				[1]={
@@ -20091,7 +20091,7 @@ return {
 						[2]=-1
 					}
 				},
-				text="Supported Skills deal {0}% less Damage when released with [PerfectTiming|Perfect Timing]"
+				text="Supported Skills deal {0}% less Damage when released with Perfect Timing"
 			}
 		},
 		stats={
@@ -20136,7 +20136,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="{0:+d} to Level of Supported [Chaos] Skills"
+				text="{0:+d} to Level of Supported Chaos Skills"
 			}
 		},
 		stats={
@@ -20152,7 +20152,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="{0:+d} to Level of Supported [Curse] Skill Gems"
+				text="{0:+d} to Level of Supported Curse Skill Gems"
 			}
 		},
 		stats={
@@ -20184,7 +20184,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="{0:+d} to Level of Supported [Minion] Skills"
+				text="{0:+d} to Level of Supported Minion Skills"
 			}
 		},
 		stats={
@@ -20200,7 +20200,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="{0:+d} to Level of Supported [Physical] Skills"
+				text="{0:+d} to Level of Supported Physical Skills"
 			}
 		},
 		stats={
@@ -20312,7 +20312,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="[Totem|Totems] summoned by Supported Skills have +{0}% to all [ElementalDamage|Elemental] [Resistances]"
+				text="Totems summoned by Supported Skills have +{0}% to all Elemental Resistances"
 			}
 		},
 		stats={
@@ -20328,7 +20328,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="[Curse|Curses] from Supported Skills spread to enemies within 3 metres when a [Curse|Cursed] enemy dies"
+				text="Curses from Supported Skills spread to enemies within 3 metres when a Cursed enemy dies"
 			}
 		},
 		stats={
@@ -20344,7 +20344,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Supported Skills have {0:+d}% to [CriticalDamageBonus|Critical Damage Bonus] per Power Charge when used by Traps"
+				text="Supported Skills have {0:+d}% to Critical Damage Bonus per Power Charge when used by Traps"
 			}
 		},
 		stats={
@@ -20563,7 +20563,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Trigger Supported Skill when you Hit a Rare or Unique Enemy with an [Attack]"
+				text="Trigger Supported Skill when you Hit a Rare or Unique Enemy with an Attack"
 			}
 		},
 		stats={
@@ -20620,7 +20620,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Skills Triggered by Supported [Meta] Skills\nhave {0}% chance to refund half of their [Energy] cost"
+				text="Skills Triggered by Supported Meta Skills\nhave {0}% chance to refund half of their Energy cost"
 			}
 		},
 		stats={
@@ -20652,7 +20652,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Supported Spells are Triggered by [Attack|Attacks] Exerted by Battlemage's Cry"
+				text="Supported Spells are Triggered by Attacks Exerted by Battlemage's Cry"
 			}
 		},
 		stats={
@@ -20859,7 +20859,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Supported Skills grant {0} [Rage|Rage] per 5 [Power] of counted Enemies in range"
+				text="Supported Skills grant {0} Rage per 5 Power of counted Enemies in range"
 			}
 		},
 		stats={
@@ -20875,7 +20875,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Supported Skills have {0}% increased [Warcry|Warcry] Speed"
+				text="Supported Skills have {0}% increased Warcry Speed"
 			},
 			[2]={
 				[1]={
@@ -20888,7 +20888,7 @@ return {
 						[2]=-1
 					}
 				},
-				text="Supported Skills have {0}% reduced [Warcry|Warcry] Speed"
+				text="Supported Skills have {0}% reduced Warcry Speed"
 			}
 		},
 		stats={
@@ -20949,7 +20949,7 @@ return {
 						[2]=99
 					}
 				},
-				text="Supported Skills have {0}% chance to inflict [Withered] on [HitDamage|Hit] with [Chaos] damage"
+				text="Supported Skills have {0}% chance to inflict Withered on Hit with Chaos damage"
 			},
 			[2]={
 				limit={
@@ -20958,7 +20958,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Supported Skills inflict [Withered] on [HitDamage|Hit] with [Chaos] damage"
+				text="Supported Skills inflict Withered on Hit with Chaos damage"
 			}
 		},
 		stats={

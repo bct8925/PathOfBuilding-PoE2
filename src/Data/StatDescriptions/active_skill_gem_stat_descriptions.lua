@@ -15,7 +15,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="{0} to {1} Base Off Hand [Physical|Physical] Damage"
+				text="{0} to {1} Base Off Hand Physical Damage"
 			}
 		},
 		stats={
@@ -36,7 +36,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="{0} to {1} Added [Fire|Fire] Damage per 15 [Armour|Armour] on [Shield|Shield]"
+				text="{0} to {1} Added Fire Damage per 15 Armour on Shield"
 			}
 		},
 		stats={
@@ -57,7 +57,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="{0} to {1} Added Physical Damage per 15 [Armour|Armour] or [Evasion|Evasion Rating] on [Shield|Shield]"
+				text="{0} to {1} Added Physical Damage per 15 Armour or Evasion Rating on Shield"
 			}
 		},
 		stats={
@@ -78,7 +78,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Base Off Hand [Attack] time is {0} seconds"
+				text="Base Off Hand Attack time is {0} seconds"
 			}
 		},
 		stats={
@@ -199,7 +199,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Deals {0}% more [Attack] Damage"
+				text="Deals {0}% more Attack Damage"
 			},
 			[2]={
 				[1]={
@@ -212,7 +212,7 @@ return {
 						[2]=-1
 					}
 				},
-				text="Deals {0}% less [Attack] Damage"
+				text="Deals {0}% less Attack Damage"
 			}
 		},
 		stats={
@@ -228,7 +228,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="{0}% more [Attack] Speed"
+				text="{0}% more Attack Speed"
 			},
 			[2]={
 				[1]={
@@ -241,7 +241,7 @@ return {
 						[2]=-1
 					}
 				},
-				text="{0}% less [Attack] Speed"
+				text="{0}% less Attack Speed"
 			}
 		},
 		stats={
@@ -261,7 +261,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Deals {0}% more [Attack] Damage"
+				text="Deals {0}% more Attack Damage"
 			},
 			[2]={
 				[1]={
@@ -274,7 +274,7 @@ return {
 						[2]=-1
 					}
 				},
-				text="Deals {0}% less [Attack] Damage"
+				text="Deals {0}% less Attack Damage"
 			}
 		},
 		stats={
@@ -343,7 +343,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="[Minion|Minions] deal {0}% of [Physical] Damage"
+				text="Minions deal {0}% of Physical Damage"
 			}
 		},
 		stats={
@@ -546,7 +546,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="{0}% increased [Aura] [BuffEffect|Effect]"
+				text="{0}% increased Aura Effect"
 			},
 			[2]={
 				[1]={
@@ -559,7 +559,7 @@ return {
 						[2]=-1
 					}
 				},
-				text="{0}% reduced [Aura] [BuffEffect|Effect]"
+				text="{0}% reduced Aura Effect"
 			}
 		},
 		stats={
@@ -800,7 +800,7 @@ return {
 						[2]=1
 					}
 				},
-				text="Limit {0} [Totem]"
+				text="Limit {0} Totem"
 			},
 			[2]={
 				limit={
@@ -809,7 +809,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Limit {0} [Totem|Totems]"
+				text="Limit {0} Totems"
 			}
 		},
 		stats={
@@ -825,7 +825,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Fires {0} Shard [Projectile|Projectiles] in a Spiral when [Projectile|Projectile] ends\nModifiers to number of [Projectile|Projectiles] only apply\nto the final Spiral"
+				text="Fires {0} Shard Projectiles in a Spiral when Projectile ends\nModifiers to number of Projectiles only apply\nto the final Spiral"
 			}
 		},
 		stats={
@@ -919,7 +919,7 @@ return {
 						[2]=1
 					}
 				},
-				text="This [Attack] Repeats {0} additional time"
+				text="This Attack Repeats {0} additional time"
 			},
 			[2]={
 				limit={
@@ -928,7 +928,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="This [Attack] Repeats {0} additional times"
+				text="This Attack Repeats {0} additional times"
 			}
 		},
 		stats={
@@ -1023,7 +1023,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="{0}% more [Attack] Damage with Two Handed Weapons"
+				text="{0}% more Attack Damage with Two Handed Weapons"
 			},
 			[2]={
 				[1]={
@@ -1036,7 +1036,7 @@ return {
 						[2]=-1
 					}
 				},
-				text="{0}% less [Attack] Damage with Two Handed Weapons"
+				text="{0}% less Attack Damage with Two Handed Weapons"
 			}
 		},
 		stats={
@@ -1052,7 +1052,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="{0}% more [Attack] Speed with Two Handed Weapons"
+				text="{0}% more Attack Speed with Two Handed Weapons"
 			},
 			[2]={
 				[1]={
@@ -1065,7 +1065,7 @@ return {
 						[2]=-1
 					}
 				},
-				text="{0}% less [Attack] Speed with Two Handed Weapons"
+				text="{0}% less Attack Speed with Two Handed Weapons"
 			}
 		},
 		stats={
@@ -1081,7 +1081,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="[Conversion|Converts] {0}% of [Cold] Damage to [Fire] Damage"
+				text="Converts {0}% of Cold Damage to Fire Damage"
 			}
 		},
 		stats={
@@ -1097,7 +1097,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="[DNT] Converts {0}% of Fire Damage to Chaos Damage"
+				text="DNT Converts {0}% of Fire Damage to Chaos Damage"
 			}
 		},
 		stats={
@@ -1113,7 +1113,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="[DNT] Converts {0}% of Lightning Damage to Chaos Damage"
+				text="DNT Converts {0}% of Lightning Damage to Chaos Damage"
 			}
 		},
 		stats={
@@ -1129,7 +1129,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="[Conversion|Converts] {0}% of [Physical|Physical] Damage to [Chaos|Chaos] Damage"
+				text="Converts {0}% of Physical Damage to Chaos Damage"
 			}
 		},
 		stats={
@@ -1149,7 +1149,7 @@ return {
 						[2]=0
 					}
 				},
-				text="[Conversion|Converts] {0}% of [Physical|Physical] Damage to [Cold|Cold] Damage"
+				text="Converts {0}% of Physical Damage to Cold Damage"
 			}
 		},
 		stats={
@@ -1166,7 +1166,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="[Conversion|Converts] {0}% of [Physical|Physical] Damage to [Fire|Fire] Damage"
+				text="Converts {0}% of Physical Damage to Fire Damage"
 			}
 		},
 		stats={
@@ -1182,7 +1182,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="[Conversion|Converts] {0}% of [Physical] Damage to [Lightning] Damage"
+				text="Converts {0}% of Physical Damage to Lightning Damage"
 			}
 		},
 		stats={
@@ -1198,7 +1198,7 @@ return {
 						[2]=1
 					}
 				},
-				text="Requires {0} stored [Corpse|Corpse] per Zombie raised"
+				text="Requires {0} stored Corpse per Zombie raised"
 			},
 			[2]={
 				limit={
@@ -1207,7 +1207,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Requires {0} stored [Corpse|Corpses] per Zombie raised"
+				text="Requires {0} stored Corpses per Zombie raised"
 			}
 		},
 		stats={
@@ -1248,7 +1248,7 @@ return {
 						[2]=100
 					}
 				},
-				text="Increases and Reductions to Cast Speed apply to this Skill's [Attack] Speed"
+				text="Increases and Reductions to Cast Speed apply to this Skill's Attack Speed"
 			},
 			[2]={
 				limit={
@@ -1257,7 +1257,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Increases and Reductions to Cast Speed apply to this Skill's [Attack] Speed at {0}% of their value"
+				text="Increases and Reductions to Cast Speed apply to this Skill's Attack Speed at {0}% of their value"
 			}
 		},
 		stats={
@@ -1302,7 +1302,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="{0}% more [Critical|Critical Hit] Chance"
+				text="{0}% more Critical Hit Chance"
 			},
 			[2]={
 				[1]={
@@ -1315,7 +1315,7 @@ return {
 						[2]=-1
 					}
 				},
-				text="{0}% less [Critical|Critical Hit] Chance"
+				text="{0}% less Critical Hit Chance"
 			}
 		},
 		stats={
@@ -1442,7 +1442,7 @@ return {
 						[2]=0
 					}
 				},
-				text="[AddedAttackCastTime|{0:+d} second] to [Total] [Attack] Time"
+				text="{0:+d} second to Total Attack Time"
 			},
 			[2]={
 				[1]={
@@ -1459,7 +1459,7 @@ return {
 						[2]=0
 					}
 				},
-				text="[AddedAttackCastTime|{0:+d} seconds] to [Total] [Attack] Time"
+				text="{0:+d} seconds to Total Attack Time"
 			},
 			[3]={
 				[1]={
@@ -1480,7 +1480,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="[AddedAttackCastTime|{0:+d} second] to [Total] [Attack] Time, plus up to\n{1:+d} seconds based on distance travelled"
+				text="{0:+d} second to Total Attack Time, plus up to\n{1:+d} seconds based on distance travelled"
 			},
 			[4]={
 				[1]={
@@ -1501,7 +1501,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="[AddedAttackCastTime|{0:+d} seconds] to [Total] [Attack] Time, plus up to\n{1:+d} seconds based on distance travelled"
+				text="{0:+d} seconds to Total Attack Time, plus up to\n{1:+d} seconds based on distance travelled"
 			}
 		},
 		stats={
@@ -1522,7 +1522,7 @@ return {
 						[2]=1000
 					}
 				},
-				text="[AddedAttackCastTime|{0:+d} second] to [Total] Cast Time"
+				text="{0:+d} second to Total Cast Time"
 			},
 			[2]={
 				[1]={
@@ -1535,7 +1535,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="[AddedAttackCastTime|{0:+d} seconds] to [Total] Cast Time"
+				text="{0:+d} seconds to Total Cast Time"
 			}
 		},
 		stats={
@@ -1555,7 +1555,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="{0:+d}% to [Critical|Critical Hit] Chance"
+				text="{0:+d}% to Critical Hit Chance"
 			}
 		},
 		stats={
@@ -1591,7 +1591,7 @@ return {
 						[2]=1000
 					}
 				},
-				text="[Totem] base attack time is {0} second"
+				text="Totem base attack time is {0} second"
 			},
 			[2]={
 				[1]={
@@ -1604,7 +1604,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="[Totem] base attack time is {0} seconds"
+				text="Totem base attack time is {0} seconds"
 			}
 		},
 		stats={
@@ -1624,7 +1624,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="{0} to {1} base [Cold] Damage"
+				text="{0} to {1} base Cold Damage"
 			}
 		},
 		stats={
@@ -1645,7 +1645,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="{0} to {1} base [Lightning] Damage"
+				text="{0} to {1} base Lightning Damage"
 			}
 		},
 		stats={
@@ -1666,7 +1666,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="[Totem|Totem] uses its own weapon, dealing\n{0} to {1} base [Physical|Physical] damage"
+				text="Totem uses its own weapon, dealing\n{0} to {1} base Physical damage"
 			}
 		},
 		stats={
@@ -1741,7 +1741,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="[DNT] {0}% more Damage when Chaining"
+				text="DNT {0}% more Damage when Chaining"
 			},
 			[2]={
 				[1]={
@@ -1754,7 +1754,7 @@ return {
 						[2]=-1
 					}
 				},
-				text="[DNT] {0}% less Damage when Chaining"
+				text="DNT {0}% less Damage when Chaining"
 			}
 		},
 		stats={
@@ -1828,7 +1828,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Deals additional [Fire] Damage equal to {0}% of [Minion]'s maximum Life"
+				text="Deals additional Fire Damage equal to {0}% of Minion's maximum Life"
 			}
 		},
 		stats={
@@ -1844,7 +1844,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="{0}% increased [Attack] and Cast Speed"
+				text="{0}% increased Attack and Cast Speed"
 			},
 			[2]={
 				[1]={
@@ -1857,7 +1857,7 @@ return {
 						[2]=-1
 					}
 				},
-				text="{0}% reduced [Attack] and Cast Speed"
+				text="{0}% reduced Attack and Cast Speed"
 			}
 		},
 		stats={
@@ -1873,7 +1873,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="{0}% increased [Attack] and Cast Speed during Onslaught"
+				text="{0}% increased Attack and Cast Speed during Onslaught"
 			},
 			[2]={
 				[1]={
@@ -1886,7 +1886,7 @@ return {
 						[2]=-1
 					}
 				},
-				text="{0}% reduced [Attack] and Cast Speed during Onslaught"
+				text="{0}% reduced Attack and Cast Speed during Onslaught"
 			}
 		},
 		stats={
@@ -1906,7 +1906,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="{0} to {1} Added [Chaos] Damage"
+				text="{0} to {1} Added Chaos Damage"
 			}
 		},
 		stats={
@@ -1927,7 +1927,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="{0} to {1} Added [Cold|Cold] Damage"
+				text="{0} to {1} Added Cold Damage"
 			}
 		},
 		stats={
@@ -1969,7 +1969,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="{0} to {1} Added [Lightning] Damage"
+				text="{0} to {1} Added Lightning Damage"
 			}
 		},
 		stats={
@@ -1990,7 +1990,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="{0} to {1} Added [Attack|Attack] [Physical|Physical] Damage"
+				text="{0} to {1} Added Attack Physical Damage"
 			}
 		},
 		stats={
@@ -2007,7 +2007,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="{0}% increased [Attack] Speed"
+				text="{0}% increased Attack Speed"
 			},
 			[2]={
 				[1]={
@@ -2020,7 +2020,7 @@ return {
 						[2]=-1
 					}
 				},
-				text="{0}% reduced [Attack] Speed"
+				text="{0}% reduced Attack Speed"
 			}
 		},
 		stats={
@@ -2036,7 +2036,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="{0}% increased [Attack] Speed"
+				text="{0}% increased Attack Speed"
 			},
 			[2]={
 				[1]={
@@ -2049,7 +2049,7 @@ return {
 						[2]=-1
 					}
 				},
-				text="{0}% reduced [Attack] Speed"
+				text="{0}% reduced Attack Speed"
 			}
 		},
 		stats={
@@ -2065,7 +2065,7 @@ return {
 						[2]=99
 					}
 				},
-				text="{0}% chance to [Blind|Blind] Enemies"
+				text="{0}% chance to Blind Enemies"
 			},
 			[2]={
 				limit={
@@ -2074,7 +2074,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="[Blind|Blinds] Enemies"
+				text="Blinds Enemies"
 			}
 		},
 		stats={
@@ -2426,7 +2426,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="{0}% increased [CriticalDamageBonus|Critical Damage Bonus]"
+				text="{0}% increased Critical Damage Bonus"
 			},
 			[2]={
 				[1]={
@@ -2439,7 +2439,7 @@ return {
 						[2]=-1
 					}
 				},
-				text="{0}% reduced [CriticalDamageBonus|Critical Damage Bonus]"
+				text="{0}% reduced Critical Damage Bonus"
 			}
 		},
 		stats={
@@ -2455,7 +2455,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="{0}% increased [Curse] Duration"
+				text="{0}% increased Curse Duration"
 			},
 			[2]={
 				[1]={
@@ -2468,7 +2468,7 @@ return {
 						[2]=-1
 					}
 				},
-				text="{0}% reduced [Curse] Duration"
+				text="{0}% reduced Curse Duration"
 			}
 		},
 		stats={
@@ -2517,7 +2517,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="{0}% chance to [Knockback|Knock Enemies Back] on hit"
+				text="{0}% chance to Knock Enemies Back on hit"
 			}
 		},
 		stats={
@@ -2562,7 +2562,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="[Knockback|Knocks Back] Enemies"
+				text="Knocks Back Enemies"
 			}
 		},
 		stats={
@@ -2909,7 +2909,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="{0}% increased [Poison] Duration"
+				text="{0}% increased Poison Duration"
 			},
 			[2]={
 				[1]={
@@ -2922,7 +2922,7 @@ return {
 						[2]=-1
 					}
 				},
-				text="{0}% reduced [Poison] Duration"
+				text="{0}% reduced Poison Duration"
 			}
 		},
 		stats={
@@ -2938,7 +2938,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="{0}% increased [Projectile|Projectile] Speed"
+				text="{0}% increased Projectile Speed"
 			},
 			[2]={
 				[1]={
@@ -2951,7 +2951,7 @@ return {
 						[2]=-1
 					}
 				},
-				text="{0}% reduced [Projectile|Projectile] Speed"
+				text="{0}% reduced Projectile Speed"
 			}
 		},
 		stats={
@@ -2967,7 +2967,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="[Penetration|Penetrates] {0}% [Resistances|Cold Resistance]"
+				text="Penetrates {0}% Cold Resistance"
 			}
 		},
 		stats={
@@ -2983,7 +2983,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="[Penetration|Penetrates] {0}% [Resistances|Fire Resistance]"
+				text="Penetrates {0}% Fire Resistance"
 			}
 		},
 		stats={
@@ -2999,7 +2999,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="[Penetration|Penetrates] {0}% [Resistances|Lightning Resistance]"
+				text="Penetrates {0}% Lightning Resistance"
 			}
 		},
 		stats={
@@ -3291,7 +3291,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Reserves {0} [Spirit] per socketed [Curse]"
+				text="Reserves {0} Spirit per socketed Curse"
 			}
 		},
 		stats={
@@ -3336,7 +3336,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Creates {0} additional Spikes if you've changed Stance [Recently]"
+				text="Creates {0} additional Spikes if you've changed Stance Recently"
 			}
 		},
 		stats={
@@ -3414,7 +3414,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="[Debuff|Debuffed] enemies take {0} to {1} additional\n[Physical] damage from next [Attack]"
+				text="Debuffed enemies take {0} to {1} additional\nPhysical damage from next Attack"
 			}
 		},
 		stats={
@@ -3522,7 +3522,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Projectiles have {0}% chance for an additional Projectile when [Fork|Forking]"
+				text="Projectiles have {0}% chance for an additional Projectile when Forking"
 			}
 		},
 		stats={
@@ -3538,7 +3538,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="[Melee] Hits Fortify"
+				text="Melee Hits Fortify"
 			},
 			[2]={
 				limit={
@@ -3547,7 +3547,7 @@ return {
 						[2]=99
 					}
 				},
-				text="[Melee] Hits have {0}% chance to Fortify"
+				text="Melee Hits have {0}% chance to Fortify"
 			}
 		},
 		stats={
@@ -3658,7 +3658,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="{0}% increased [Chill|Chill] Duration on Enemies"
+				text="{0}% increased Chill Duration on Enemies"
 			},
 			[2]={
 				[1]={
@@ -3671,7 +3671,7 @@ return {
 						[2]=-1
 					}
 				},
-				text="{0}% reduced [Chill|Chill] Duration on Enemies"
+				text="{0}% reduced Chill Duration on Enemies"
 			}
 		},
 		stats={
@@ -3687,7 +3687,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="{0}% increased [BuffMagnitude|Magnitude] of Chills you inflict"
+				text="{0}% increased Magnitude of Chills you inflict"
 			},
 			[2]={
 				[1]={
@@ -3700,7 +3700,7 @@ return {
 						[2]=-1
 					}
 				},
-				text="{0}% reduced [BuffMagnitude|Magnitude] of Chills you inflict"
+				text="{0}% reduced Magnitude of Chills you inflict"
 			}
 		},
 		stats={
@@ -3745,7 +3745,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="{0}% increased [BuffMagnitude|Magnitude] of Cold Ailments you inflict"
+				text="{0}% increased Magnitude of Cold Ailments you inflict"
 			},
 			[2]={
 				[1]={
@@ -3758,7 +3758,7 @@ return {
 						[2]=-1
 					}
 				},
-				text="{0}% reduced [BuffMagnitude|Magnitude] of Cold Ailments you inflict"
+				text="{0}% reduced Magnitude of Cold Ailments you inflict"
 			}
 		},
 		stats={
@@ -3976,7 +3976,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Fires [Projectile|Projectiles] {0}% faster"
+				text="Fires Projectiles {0}% faster"
 			},
 			[2]={
 				[1]={
@@ -3989,7 +3989,7 @@ return {
 						[2]=-1
 					}
 				},
-				text="Fires [Projectile|Projectiles] {0}% slower"
+				text="Fires Projectiles {0}% slower"
 			}
 		},
 		stats={
@@ -4005,7 +4005,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="{0}% increased [BuffMagnitude|Magnitude] of Damaging Ailments you inflict with [Critical|Critical Hits]"
+				text="{0}% increased Magnitude of Damaging Ailments you inflict with Critical Hits"
 			},
 			[2]={
 				[1]={
@@ -4018,7 +4018,7 @@ return {
 						[2]=-1
 					}
 				},
-				text="{0}% reduced [BuffMagnitude|Magnitude] of Damaging Ailments you inflict with [Critical|Critical Hits]"
+				text="{0}% reduced Magnitude of Damaging Ailments you inflict with Critical Hits"
 			}
 		},
 		stats={
@@ -4034,7 +4034,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="{:+d}% to [CriticalDamageBonus|Critical Damage Bonus] per 100 Maximum [EnergyShield|Energy Shield] on Shield"
+				text="{:+d}% to Critical Damage Bonus per 100 Maximum Energy Shield on Shield"
 			}
 		},
 		stats={
@@ -4050,7 +4050,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="{0}% increased [Critical|Critical Hit] Chance"
+				text="{0}% increased Critical Hit Chance"
 			},
 			[2]={
 				[1]={
@@ -4063,7 +4063,7 @@ return {
 						[2]=-1
 					}
 				},
-				text="{0}% reduced [Critical|Critical Hit] Chance"
+				text="{0}% reduced Critical Hit Chance"
 			}
 		},
 		stats={
@@ -4224,7 +4224,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="{0}% increased Damage per [Charges|Power Charge]"
+				text="{0}% increased Damage per Power Charge"
 			},
 			[2]={
 				[1]={
@@ -4237,7 +4237,7 @@ return {
 						[2]=-1
 					}
 				},
-				text="{0}% reduced Damage per [Charges|Power Charge]"
+				text="{0}% reduced Damage per Power Charge"
 			}
 		},
 		stats={
@@ -4253,7 +4253,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="{0}% increased Damage with [HitDamage|Hits] against Enemies that are on Full Life"
+				text="{0}% increased Damage with Hits against Enemies that are on Full Life"
 			},
 			[2]={
 				[1]={
@@ -4266,7 +4266,7 @@ return {
 						[2]=-1
 					}
 				},
-				text="{0}% reduced Damage with [HitDamage|Hits] against Enemies that are on Full Life"
+				text="{0}% reduced Damage with Hits against Enemies that are on Full Life"
 			}
 		},
 		stats={
@@ -4311,7 +4311,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="{0}% increased Damage with Hits against [Frozen] Enemies"
+				text="{0}% increased Damage with Hits against Frozen Enemies"
 			},
 			[2]={
 				[1]={
@@ -4324,7 +4324,7 @@ return {
 						[2]=-1
 					}
 				},
-				text="{0}% reduced Damage with Hits against [Frozen] Enemies"
+				text="{0}% reduced Damage with Hits against Frozen Enemies"
 			}
 		},
 		stats={
@@ -4340,7 +4340,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="{0}% increased Damage while on Full [EnergyShield|Energy Shield]"
+				text="{0}% increased Damage while on Full Energy Shield"
 			},
 			[2]={
 				[1]={
@@ -4353,7 +4353,7 @@ return {
 						[2]=-1
 					}
 				},
-				text="{0}% reduced Damage while on Full [EnergyShield|Energy Shield]"
+				text="{0}% reduced Damage while on Full Energy Shield"
 			}
 		},
 		stats={
@@ -4398,7 +4398,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="{0}% increased Damage when on [LowLife|Low Life]"
+				text="{0}% increased Damage when on Low Life"
 			},
 			[2]={
 				[1]={
@@ -4411,7 +4411,7 @@ return {
 						[2]=-1
 					}
 				},
-				text="{0}% reduced Damage when on [LowLife|Low Life]"
+				text="{0}% reduced Damage when on Low Life"
 			}
 		},
 		stats={
@@ -4427,7 +4427,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="{0}% increased Damage with Hits per [Curse] on Enemy"
+				text="{0}% increased Damage with Hits per Curse on Enemy"
 			},
 			[2]={
 				[1]={
@@ -4440,7 +4440,7 @@ return {
 						[2]=-1
 					}
 				},
-				text="{0}% reduced Damage with Hits per [Curse] on Enemy"
+				text="{0}% reduced Damage with Hits per Curse on Enemy"
 			}
 		},
 		stats={
@@ -4456,7 +4456,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="{0}% increased Damage with [HitDamage|Hits] against Enemies that are on [LowLife|Low Life]"
+				text="{0}% increased Damage with Hits against Enemies that are on Low Life"
 			}
 		},
 		stats={
@@ -4512,7 +4512,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Can store up to 10 [Corpse|Corpses]"
+				text="Can store up to 10 Corpses"
 			}
 		},
 		stats={
@@ -4609,7 +4609,7 @@ return {
 						[2]=0
 					}
 				},
-				text="Buff [Empowered|Empowers] your next [Bow|Bow] [Attack|Attack] to repeat an additional time"
+				text="Buff Empowers your next Bow Attack to repeat an additional time"
 			},
 			[2]={
 				limit={
@@ -4622,7 +4622,7 @@ return {
 						[2]=0
 					}
 				},
-				text="Buff [Empowered|Empowers] your next [Bow|Bow] [Attack|Attack] to repeat {0} times"
+				text="Buff Empowers your next Bow Attack to repeat {0} times"
 			},
 			[3]={
 				limit={
@@ -4635,7 +4635,7 @@ return {
 						[2]=1
 					}
 				},
-				text="Buff [Empowered|Empowers] your next [Bow|Bow] [Attack|Attack] to repeat an additional time, plus an additional time per Frenzy Charge consumed"
+				text="Buff Empowers your next Bow Attack to repeat an additional time, plus an additional time per Frenzy Charge consumed"
 			},
 			[4]={
 				limit={
@@ -4648,7 +4648,7 @@ return {
 						[2]=1
 					}
 				},
-				text="Buff [Empowered|Empowers] your next [Bow|Bow] [Attack|Attack] to repeat {0} times, plus an additional time per Frenzy Charge consumed"
+				text="Buff Empowers your next Bow Attack to repeat {0} times, plus an additional time per Frenzy Charge consumed"
 			},
 			[5]={
 				limit={
@@ -4661,7 +4661,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Buff [Empowered|Empowers] your next [Bow|Bow] [Attack|Attack] to repeat an additional time, plus an additional {0} times per Frenzy Charge consumed"
+				text="Buff Empowers your next Bow Attack to repeat an additional time, plus an additional {0} times per Frenzy Charge consumed"
 			},
 			[6]={
 				limit={
@@ -4674,7 +4674,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Buff [Empowered|Empowers] your next [Bow|Bow] [Attack|Attack] to repeat {0} times, plus an additional {0} times per Frenzy Charge consumed"
+				text="Buff Empowers your next Bow Attack to repeat {0} times, plus an additional {0} times per Frenzy Charge consumed"
 			}
 		},
 		stats={
@@ -4720,7 +4720,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="[Overwhelm|Overwhelm] {0}% [Physical|Physical] Damage Reduction"
+				text="Overwhelm {0}% Physical Damage Reduction"
 			}
 		},
 		stats={
@@ -4777,7 +4777,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="[Ignite|Ignites] you inflict deal Damage {0}% faster"
+				text="Ignites you inflict deal Damage {0}% faster"
 			},
 			[2]={
 				[1]={
@@ -4790,7 +4790,7 @@ return {
 						[2]=-1
 					}
 				},
-				text="[Ignite|Ignites] you inflict deal Damage {0}% slower"
+				text="Ignites you inflict deal Damage {0}% slower"
 			}
 		},
 		stats={
@@ -4946,7 +4946,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="{0}% increased [Freeze] Duration on Enemies"
+				text="{0}% increased Freeze Duration on Enemies"
 			},
 			[2]={
 				[1]={
@@ -4959,7 +4959,7 @@ return {
 						[2]=-1
 					}
 				},
-				text="{0}% reduced [Freeze] Duration on Enemies"
+				text="{0}% reduced Freeze Duration on Enemies"
 			}
 		},
 		stats={
@@ -4975,7 +4975,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="[Chill] can [Slow] by up to {0}%"
+				text="Chill can Slow by up to {0}%"
 			}
 		},
 		stats={
@@ -5016,7 +5016,7 @@ return {
 						[2]=1
 					}
 				},
-				text="Limit {0} [Orb]"
+				text="Limit {0} Orb"
 			},
 			[2]={
 				limit={
@@ -5025,7 +5025,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Limit {0} [Orb|Orbs]"
+				text="Limit {0} Orbs"
 			}
 		},
 		stats={
@@ -5343,7 +5343,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="[IceCrystals|Crystal] has {0} initial stages"
+				text="Crystal has {0} initial stages"
 			}
 		},
 		stats={
@@ -5363,7 +5363,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="[IceCrystals|Crystal] loses a stage every {0} seconds"
+				text="Crystal loses a stage every {0} seconds"
 			}
 		},
 		stats={
@@ -5379,7 +5379,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="{0}% increased [Ignite] Duration on Enemies"
+				text="{0}% increased Ignite Duration on Enemies"
 			},
 			[2]={
 				[1]={
@@ -5392,7 +5392,7 @@ return {
 						[2]=-1
 					}
 				},
-				text="{0}% reduced [Ignite] Duration on Enemies"
+				text="{0}% reduced Ignite Duration on Enemies"
 			}
 		},
 		stats={
@@ -5453,7 +5453,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="{0}% increased [Knockback] Distance"
+				text="{0}% increased Knockback Distance"
 			},
 			[2]={
 				[1]={
@@ -5466,7 +5466,7 @@ return {
 						[2]=-1
 					}
 				},
-				text="{0}% reduced [Knockback] Distance"
+				text="{0}% reduced Knockback Distance"
 			}
 		},
 		stats={
@@ -5482,7 +5482,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="{0}% increased [BuffMagnitude|Magnitude] of Lightning Ailments you inflict"
+				text="{0}% increased Magnitude of Lightning Ailments you inflict"
 			},
 			[2]={
 				[1]={
@@ -5495,7 +5495,7 @@ return {
 						[2]=-1
 					}
 				},
-				text="{0}% reduced [BuffMagnitude|Magnitude] of Lightning Ailments you inflict"
+				text="{0}% reduced Magnitude of Lightning Ailments you inflict"
 			}
 		},
 		stats={
@@ -5650,7 +5650,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="{0} to {1} base [Chaos] Damage"
+				text="{0} to {1} base Chaos Damage"
 			}
 		},
 		stats={
@@ -5671,7 +5671,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="{0} to {1} base [Cold] Damage"
+				text="{0} to {1} base Cold Damage"
 			}
 		},
 		stats={
@@ -5692,7 +5692,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="{0} to {1} base [Fire] Damage"
+				text="{0} to {1} base Fire Damage"
 			}
 		},
 		stats={
@@ -5713,7 +5713,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="{0} to {1} base [Lightning] Damage"
+				text="{0} to {1} base Lightning Damage"
 			}
 		},
 		stats={
@@ -5734,7 +5734,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="{0} to {1} base [Physical] Damage"
+				text="{0} to {1} base Physical Damage"
 			}
 		},
 		stats={
@@ -5809,7 +5809,7 @@ return {
 						[2]=1
 					}
 				},
-				text="[Melee] Strikes target {0} additional nearby Enemy"
+				text="Melee Strikes target {0} additional nearby Enemy"
 			},
 			[2]={
 				limit={
@@ -5818,7 +5818,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="[Melee] Strikes target {0} additional nearby Enemies"
+				text="Melee Strikes target {0} additional nearby Enemies"
 			}
 		},
 		stats={
@@ -5834,7 +5834,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="{0}% increased [Melee] Damage"
+				text="{0}% increased Melee Damage"
 			},
 			[2]={
 				[1]={
@@ -5847,7 +5847,7 @@ return {
 						[2]=-1
 					}
 				},
-				text="{0}% reduced [Melee] Damage"
+				text="{0}% reduced Melee Damage"
 			}
 		},
 		stats={
@@ -5863,7 +5863,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="{0}% increased [Melee] Damage against Bleeding Enemies"
+				text="{0}% increased Melee Damage against Bleeding Enemies"
 			},
 			[2]={
 				[1]={
@@ -5876,7 +5876,7 @@ return {
 						[2]=-1
 					}
 				},
-				text="{0}% reduced [Melee] Damage against Bleeding Enemies"
+				text="{0}% reduced Melee Damage against Bleeding Enemies"
 			}
 		},
 		stats={
@@ -5892,7 +5892,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="{0}% increased [Melee] Physical Damage"
+				text="{0}% increased Melee Physical Damage"
 			},
 			[2]={
 				[1]={
@@ -5905,7 +5905,7 @@ return {
 						[2]=-1
 					}
 				},
-				text="{0}% reduced [Melee] Physical Damage"
+				text="{0}% reduced Melee Physical Damage"
 			}
 		},
 		stats={
@@ -6037,7 +6037,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="[Minion|Minions] have {0}% chance to deal Double Damage"
+				text="Minions have {0}% chance to deal Double Damage"
 			}
 		},
 		stats={
@@ -6053,7 +6053,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="[Minion|Minions] from this Skill have {0:+d}% to all Elemental [Resistances]"
+				text="Minions from this Skill have {0:+d}% to all Elemental Resistances"
 			}
 		},
 		stats={
@@ -6143,7 +6143,7 @@ return {
 						[2]=1
 					}
 				},
-				text="Fires an additional [Projectile|Projectile]"
+				text="Fires an additional Projectile"
 			},
 			[2]={
 				limit={
@@ -6156,7 +6156,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Fires {1} additional [Projectile|Projectiles]"
+				text="Fires {1} additional Projectiles"
 			}
 		},
 		stats={
@@ -6173,7 +6173,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="[Chain|Chains] {0} Times"
+				text="Chains {0} Times"
 			}
 		},
 		stats={
@@ -6289,7 +6289,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Fires {0}% more [Projectile|Projectiles] per Steel Shard consumed"
+				text="Fires {0}% more Projectiles per Steel Shard consumed"
 			},
 			[2]={
 				[1]={
@@ -6302,7 +6302,7 @@ return {
 						[2]=-1
 					}
 				},
-				text="Fires {0}% less [Projectile|Projectiles] per Steel Shard consumed"
+				text="Fires {0}% less Projectiles per Steel Shard consumed"
 			}
 		},
 		stats={
@@ -6347,7 +6347,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="{0} to {1} Added [Physical|Physical] Damage per 15 [Armour|Armour] on [Shield|Shield]"
+				text="{0} to {1} Added Physical Damage per 15 Armour on Shield"
 			}
 		},
 		stats={
@@ -6368,7 +6368,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="{0} to {1} Base Off Hand [Fire|Fire] Damage"
+				text="{0} to {1} Base Off Hand Fire Damage"
 			}
 		},
 		stats={
@@ -6389,7 +6389,7 @@ return {
 						[2]=1000
 					}
 				},
-				text="Fires a bolt every second, and when you use a [Lightning|Lightning] Skill near the [Orb|Orb]"
+				text="Fires a bolt every second, and when you use a Lightning Skill near the Orb"
 			},
 			[2]={
 				[1]={
@@ -6402,7 +6402,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Fires a bolt every {0} seconds, and when you use a [Lightning|Lightning] Skill near the [Orb|Orb]"
+				text="Fires a bolt every {0} seconds, and when you use a Lightning Skill near the Orb"
 			}
 		},
 		stats={
@@ -6422,7 +6422,7 @@ return {
 						[2]=1000
 					}
 				},
-				text="Fires every second while Channelling a [Lightning|Lightning] Skill near the [Orb|Orb]"
+				text="Fires every second while Channelling a Lightning Skill near the Orb"
 			},
 			[2]={
 				[1]={
@@ -6435,7 +6435,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Fires every {0} seconds while Channelling a [Lightning|Lightning] Skill near the [Orb|Orb]"
+				text="Fires every {0} seconds while Channelling a Lightning Skill near the Orb"
 			}
 		},
 		stats={
@@ -6451,7 +6451,7 @@ return {
 						[2]=1
 					}
 				},
-				text="Limit {0} [Orb]"
+				text="Limit {0} Orb"
 			},
 			[2]={
 				limit={
@@ -6460,7 +6460,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Limit {0} [Orb|Orbs]"
+				text="Limit {0} Orbs"
 			}
 		},
 		stats={
@@ -6974,7 +6974,7 @@ return {
 						[2]=1000
 					}
 				},
-				text="{0:+d} second to Total [Attack] Time if not already a Bear"
+				text="{0:+d} second to Total Attack Time if not already a Bear"
 			},
 			[2]={
 				[1]={
@@ -6987,7 +6987,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="{0:+d} seconds to Total [Attack] Time if not already a Bear"
+				text="{0:+d} seconds to Total Attack Time if not already a Bear"
 			}
 		},
 		stats={
@@ -7036,7 +7036,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="{0}% increased [Shock] Duration"
+				text="{0}% increased Shock Duration"
 			},
 			[2]={
 				[1]={
@@ -7049,7 +7049,7 @@ return {
 						[2]=-1
 					}
 				},
-				text="{0}% reduced [Shock] Duration"
+				text="{0}% reduced Shock Duration"
 			}
 		},
 		stats={
@@ -7065,7 +7065,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Deals {0}% of your maximum [EnergyShield|Energy Shield] as base [Chaos|Chaos] Damage"
+				text="Deals {0}% of your maximum Energy Shield as base Chaos Damage"
 			}
 		},
 		stats={
@@ -7081,7 +7081,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Deals {0}% of your maximum Life as base [Chaos|Chaos] Damage"
+				text="Deals {0}% of your maximum Life as base Chaos Damage"
 			}
 		},
 		stats={
@@ -7101,7 +7101,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="[Fire] Area [Spell|Spells] summon a Spirit per {0} metres of radius\n[Projectile|Projectiles] from [Fire] [Spell|Spells] summon a Spirit on hit"
+				text="Fire Area Spells summon a Spirit per {0} metres of radius\nProjectiles from Fire Spells summon a Spirit on hit"
 			}
 		},
 		stats={
@@ -7117,7 +7117,7 @@ return {
 						[2]=1
 					}
 				},
-				text="Maximum {0} Spirit summoned per [Spell] cast"
+				text="Maximum {0} Spirit summoned per Spell cast"
 			},
 			[2]={
 				limit={
@@ -7126,7 +7126,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Maximum {0} Spirits summoned per [Spell] cast"
+				text="Maximum {0} Spirits summoned per Spell cast"
 			}
 		},
 		stats={
@@ -7162,7 +7162,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Take {0}% of maximum Life and {1}% of maximum [EnergyShield|Energy Shield] as [Chaos|Chaos] Damage"
+				text="Take {0}% of maximum Life and {1}% of maximum Energy Shield as Chaos Damage"
 			}
 		},
 		stats={
@@ -7314,7 +7314,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Energy Blades have minimum Lightning Damage equal to {2}% of [EnergyShield|Energy Shield], plus {0}\nEnergy Blades have maximum Lightning Damage equal to {3}% of [EnergyShield|Energy Shield], plus {1}"
+				text="Energy Blades have minimum Lightning Damage equal to {2}% of Energy Shield, plus {0}\nEnergy Blades have maximum Lightning Damage equal to {3}% of Energy Shield, plus {1}"
 			}
 		},
 		stats={
@@ -7394,7 +7394,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="{0}% more Area of Effect per 0.1 metres of\n[Knockback] the triggering Hit would have caused"
+				text="{0}% more Area of Effect per 0.1 metres of\nKnockback the triggering Hit would have caused"
 			},
 			[2]={
 				[1]={
@@ -7407,7 +7407,7 @@ return {
 						[2]=-1
 					}
 				},
-				text="{0}% less Area of Effect per 0.1 metres of\n[Knockback] the triggering Hit would have caused"
+				text="{0}% less Area of Effect per 0.1 metres of\nKnockback the triggering Hit would have caused"
 			}
 		},
 		stats={
@@ -7431,7 +7431,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Deals {1}% more Damage per [ElementalAilments|Elemental Ailment] afflicting\nthe Bell\n{2}% of [Physical] Damage converted to the corresponding damage type of each [ElementalAilments|Elemental Ailment] afflicting the Bell"
+				text="Deals {1}% more Damage per Elemental Ailment afflicting\nthe Bell\n{2}% of Physical Damage converted to the corresponding damage type of each Elemental Ailment afflicting the Bell"
 			}
 		},
 		stats={
@@ -7478,7 +7478,7 @@ return {
 						[2]=1
 					}
 				},
-				text="Fires {0} secondary [Projectile|Projectile]"
+				text="Fires {0} secondary Projectile"
 			},
 			[2]={
 				limit={
@@ -7487,7 +7487,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Fires {0} secondary [Projectile|Projectiles]"
+				text="Fires {0} secondary Projectiles"
 			}
 		},
 		stats={
@@ -7523,7 +7523,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="[Totem|Totems] Regenerate {0}% of Life per second"
+				text="Totems Regenerate {0}% of Life per second"
 			}
 		},
 		stats={
@@ -7777,7 +7777,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="{0}% increased [Warcry|Warcry] Speed"
+				text="{0}% increased Warcry Speed"
 			},
 			[2]={
 				[1]={
@@ -7790,7 +7790,7 @@ return {
 						[2]=-1
 					}
 				},
-				text="{0}% reduced [Warcry|Warcry] Speed"
+				text="{0}% reduced Warcry Speed"
 			}
 		},
 		stats={

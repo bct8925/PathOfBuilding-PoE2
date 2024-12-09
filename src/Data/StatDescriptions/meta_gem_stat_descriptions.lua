@@ -69,7 +69,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="{0}% more Effect of Socketed [Curse|Curses]"
+				text="{0}% more Effect of Socketed Curses"
 			},
 			[2]={
 				[1]={
@@ -82,7 +82,7 @@ return {
 						[2]=-1
 					}
 				},
-				text="{0}% less Effect of Socketed [Curse|Curses]"
+				text="{0}% less Effect of Socketed Curses"
 			}
 		},
 		stats={
@@ -127,7 +127,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Socketed [Attack] Skills have {0}% more [Attack] Speed"
+				text="Socketed Attack Skills have {0}% more Attack Speed"
 			},
 			[2]={
 				[1]={
@@ -140,7 +140,7 @@ return {
 						[2]=-1
 					}
 				},
-				text="Socketed [Attack] Skills have {0}% less [Attack] Speed"
+				text="Socketed Attack Skills have {0}% less Attack Speed"
 			}
 		},
 		stats={
@@ -156,7 +156,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Socketed [Attack] Skills cannot be used with [Melee] Weapons"
+				text="Socketed Attack Skills cannot be used with Melee Weapons"
 			}
 		},
 		stats={
@@ -221,7 +221,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="{0}% increased Effect of Socketed [Curse|Curses]"
+				text="{0}% increased Effect of Socketed Curses"
 			},
 			[2]={
 				[1]={
@@ -234,7 +234,7 @@ return {
 						[2]=-1
 					}
 				},
-				text="{0}% reduced Effect of Socketed [Curse|Curses]"
+				text="{0}% reduced Effect of Socketed Curses"
 			}
 		},
 		stats={
@@ -321,7 +321,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="{0}% increased Effect of Socketed [Mark|Marks]"
+				text="{0}% increased Effect of Socketed Marks"
 			},
 			[2]={
 				[1]={
@@ -334,7 +334,7 @@ return {
 						[2]=-1
 					}
 				},
-				text="{0}% reduced Effect of Socketed [Mark|Marks]"
+				text="{0}% reduced Effect of Socketed Marks"
 			}
 		},
 		stats={
@@ -379,7 +379,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Socketed Skills have {0}% increased [Warcry|Warcry] Buff Effect"
+				text="Socketed Skills have {0}% increased Warcry Buff Effect"
 			},
 			[2]={
 				[1]={
@@ -392,7 +392,7 @@ return {
 						[2]=-1
 					}
 				},
-				text="Socketed Skills have {0}% reduced [Warcry|Warcry] Buff Effect"
+				text="Socketed Skills have {0}% reduced Warcry Buff Effect"
 			}
 		},
 		stats={
@@ -412,7 +412,7 @@ return {
 						[2]=0
 					}
 				},
-				text="Socketed Warcries Exert {0} additional [Attack]"
+				text="Socketed Warcries Exert {0} additional Attack"
 			},
 			[2]={
 				limit={
@@ -425,7 +425,7 @@ return {
 						[2]=0
 					}
 				},
-				text="Socketed Warcries Exert {0} additional [Attack|Attacks]"
+				text="Socketed Warcries Exert {0} additional Attacks"
 			}
 		},
 		stats={
@@ -442,7 +442,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="[Attack|Attacks] Exerted by Socketed Skills deal {0}% increased Damage"
+				text="Attacks Exerted by Socketed Skills deal {0}% increased Damage"
 			}
 		},
 		stats={

@@ -11,7 +11,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="[Curse] Immune"
+				text="Curse Immune"
 			}
 		},
 		stats={
@@ -27,7 +27,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="[Hexproof]"
+				text="Hexproof"
 			}
 		},
 		stats={
@@ -141,7 +141,7 @@ return {
 						[2]=99
 					}
 				},
-				text="Avoids [Freeze|Frozen]"
+				text="Avoids Frozen"
 			},
 			[2]={
 				limit={
@@ -150,7 +150,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Cannot be [Freeze|Frozen]"
+				text="Cannot be Frozen"
 			}
 		},
 		stats={
@@ -166,7 +166,7 @@ return {
 						[2]=99
 					}
 				},
-				text="Avoids [Chill|Chilled]"
+				text="Avoids Chilled"
 			},
 			[2]={
 				limit={
@@ -175,7 +175,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Cannot be [Chill|Chilled]"
+				text="Cannot be Chilled"
 			}
 		},
 		stats={
@@ -191,7 +191,7 @@ return {
 						[2]=99
 					}
 				},
-				text="Avoids [Ignite|Ignited]"
+				text="Avoids Ignited"
 			},
 			[2]={
 				limit={
@@ -200,7 +200,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Cannot be [Ignite|Ignited]"
+				text="Cannot be Ignited"
 			}
 		},
 		stats={
@@ -216,7 +216,7 @@ return {
 						[2]=99
 					}
 				},
-				text="Avoids [Shock|Shocked]"
+				text="Avoids Shocked"
 			},
 			[2]={
 				limit={
@@ -225,7 +225,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Cannot be [Shock|Shocked]"
+				text="Cannot be Shocked"
 			}
 		},
 		stats={
@@ -305,7 +305,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Removes [Flask] Charges"
+				text="Removes Flask Charges"
 			}
 		},
 		stats={
@@ -321,7 +321,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Causes [Bleeding|Bleeding]"
+				text="Causes Bleeding"
 			}
 		},
 		stats={
@@ -385,7 +385,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Enrages on [LowLife|Low Life]"
+				text="Enrages on Low Life"
 			}
 		},
 		stats={
@@ -417,7 +417,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Cannot be Life-[LifeLeech|Leeched]"
+				text="Cannot be Life-Leeched"
 			}
 		},
 		stats={
@@ -529,7 +529,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="[DNT] {0}% more [Slow|Slowing] Potency of [Debuff|Debuffs] against this monster"
+				text="DNT {0}% more Slowing Potency of Debuffs against this monster"
 			},
 			[2]={
 				[1]={
@@ -542,7 +542,7 @@ return {
 						[2]=-1
 					}
 				},
-				text="[DNT] {0}% less [Slow|Slowing] Potency of [Debuff|Debuffs] against this monster"
+				text="DNT {0}% less Slowing Potency of Debuffs against this monster"
 			}
 		},
 		stats={
@@ -558,7 +558,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="[DNT] {0}% more Area of Effect"
+				text="DNT {0}% more Area of Effect"
 			},
 			[2]={
 				[1]={
@@ -571,7 +571,7 @@ return {
 						[2]=-1
 					}
 				},
-				text="[DNT] {0}% less Area of Effect"
+				text="DNT {0}% less Area of Effect"
 			}
 		},
 		stats={

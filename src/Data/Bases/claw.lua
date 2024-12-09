@@ -25,7 +25,7 @@ itemBases["Wolfbone Claw"] = {
 	socketLimit = 3,
 	tags = { onehand = true, ezomyte_basetype = true, default = true, weapon = true, one_hand_weapon = true, claw = true, },
 	influenceTags = { shaper = "claw_shaper", elder = "claw_elder", adjudicator = "claw_adjudicator", basilisk = "claw_basilisk", crusader = "claw_crusader", eyrie = "claw_eyrie", cleansing = "claw_cleansing", tangle = "claw_tangle" },
-	implicit = "Grants 8 Life per Enemy [HitDamage|Hit]",
+	implicit = "Grants 8 Life per Enemy Hit",
 	implicitModTypes = { { "resource", "life", "attack" }, },
 	weapon = { PhysicalMin = 7, PhysicalMax = 23, CritChanceBase = 5, AttackRateBase = 1.6, Range = 11, },
 	req = { level = 12, },

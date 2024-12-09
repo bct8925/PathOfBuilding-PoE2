@@ -32,7 +32,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="{0:+d} to [Strength]"
+				text="{0:+d} to Strength"
 			}
 		},
 		stats={
@@ -48,7 +48,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="{0}% increased [Strength]"
+				text="{0}% increased Strength"
 			},
 			[2]={
 				[1]={
@@ -61,7 +61,7 @@ return {
 						[2]=-1
 					}
 				},
-				text="{0}% reduced [Strength]"
+				text="{0}% reduced Strength"
 			}
 		},
 		stats={
@@ -77,7 +77,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="{0:+d} to [Dexterity]"
+				text="{0:+d} to Dexterity"
 			}
 		},
 		stats={
@@ -93,7 +93,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="{0}% increased [Dexterity]"
+				text="{0}% increased Dexterity"
 			},
 			[2]={
 				[1]={
@@ -106,7 +106,7 @@ return {
 						[2]=-1
 					}
 				},
-				text="{0}% reduced [Dexterity]"
+				text="{0}% reduced Dexterity"
 			}
 		},
 		stats={
@@ -122,7 +122,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="{0:+d} to [Intelligence]"
+				text="{0:+d} to Intelligence"
 			}
 		},
 		stats={
@@ -138,7 +138,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="{0}% increased [Intelligence]"
+				text="{0}% increased Intelligence"
 			},
 			[2]={
 				[1]={
@@ -151,7 +151,7 @@ return {
 						[2]=-1
 					}
 				},
-				text="{0}% reduced [Intelligence]"
+				text="{0}% reduced Intelligence"
 			}
 		},
 		stats={
@@ -207,7 +207,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="{0:+d} to Maximum [Charges|Endurance Charges]"
+				text="{0:+d} to Maximum Endurance Charges"
 			}
 		},
 		stats={
@@ -223,7 +223,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="{0:+d} to Maximum [Charges|Frenzy Charges]"
+				text="{0:+d} to Maximum Frenzy Charges"
 			}
 		},
 		stats={
@@ -239,7 +239,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="{0:+d} to Maximum [Charges|Power Charges]"
+				text="{0:+d} to Maximum Power Charges"
 			}
 		},
 		stats={
@@ -287,7 +287,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="[StatConversion|Converts] all [Evasion|Evasion Rating] to [Armour]"
+				text="Converts all Evasion Rating to Armour"
 			}
 		},
 		stats={
@@ -319,7 +319,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="[StatConversion|Converts] all [EnergyShield|Energy Shield] to Mana"
+				text="Converts all Energy Shield to Mana"
 			}
 		},
 		stats={
@@ -335,7 +335,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Unlimited number of Summoned [Totem|Totems]\nTotems reserve 100 [Spirit] each"
+				text="Unlimited number of Summoned Totems\nTotems reserve 100 Spirit each"
 			}
 		},
 		stats={
@@ -399,7 +399,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Can [Evasion|Evade] all Hits\n70% less [Evasion] Rating"
+				text="Can Evade all Hits\n70% less Evasion Rating"
 			}
 		},
 		stats={
@@ -415,7 +415,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="30% less [CriticalDamageBonus|Critical Damage Bonus] when on Full Life\n30% more Critical Damage Bonus when on [LowLife|Low Life]"
+				text="30% less Critical Damage Bonus when on Full Life\n30% more Critical Damage Bonus when on Low Life"
 			}
 		},
 		stats={
@@ -431,7 +431,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="1% increased [Projectile] [Attack] damage per 2 [Strength]\n[Strength] provides no bonus to Life"
+				text="1% increased Projectile Attack damage per 2 Strength\nStrength provides no bonus to Life"
 			}
 		},
 		stats={
@@ -447,7 +447,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Projectile [Attack] Hits deal up to 30% more Damage to targets at the start of their movement, dealing less Damage to targets as the projectile travels farther"
+				text="Projectile Attack Hits deal up to 30% more Damage to targets at the start of their movement, dealing less Damage to targets as the projectile travels farther"
 			}
 		},
 		stats={
@@ -463,7 +463,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="If you would gain a [Charges|Charge], [Allies] in your [Presence] gain that Charge instead"
+				text="If you would gain a Charge, Allies in your Presence gain that Charge instead"
 			}
 		},
 		stats={
@@ -479,7 +479,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="[Evasion] Rating is Doubled against Projectile Attacks\n25% less [Evasion] Rating against [Melee] [Attack|Attacks]"
+				text="Evasion Rating is Doubled against Projectile Attacks\n25% less Evasion Rating against Melee Attacks"
 			}
 		},
 		stats={
@@ -495,7 +495,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Removes all Mana\nSkill Mana Costs [StatConversion|Converted] to Life Costs"
+				text="Removes all Mana\nSkill Mana Costs Converted to Life Costs"
 			}
 		},
 		stats={
@@ -511,7 +511,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Minions Explode when reduced to [LowLife|Low Life], dealing 33% of their Life as Fire Damage to surrounding Enemies"
+				text="Minions Explode when reduced to Low Life, dealing 33% of their Life as Fire Damage to surrounding Enemies"
 			}
 		},
 		stats={
@@ -527,7 +527,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="[HitDamage|Hits] that deal [Fire] Damage remove [Fire] [Exposure] and inflict [Lightning] [Exposure]\n[HitDamage|Hits] that deal [Cold] Damage remove [Cold] [Exposure] and inflict [Fire] [Exposure]\n[HitDamage|Hits] that deal [Lightning] Damage remove [Lightning] [Exposure] and inflict [Cold] [Exposure]"
+				text="Hits that deal Fire Damage remove Fire Exposure and inflict Lightning Exposure\nHits that deal Cold Damage remove Cold Exposure and inflict Fire Exposure\nHits that deal Lightning Damage remove Lightning Exposure and inflict Cold Exposure"
 			}
 		},
 		stats={
@@ -543,7 +543,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Maximum Life becomes 1, Immune to [Chaos] Damage"
+				text="Maximum Life becomes 1, Immune to Chaos Damage"
 			}
 		},
 		stats={
@@ -559,7 +559,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="[LifeLeech|Life Leech] is Instant\nCannot use Life [Flask|Flasks]"
+				text="Life Leech is Instant\nCannot use Life Flasks"
 			}
 		},
 		stats={
@@ -575,7 +575,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="{0}% increased [Critical|Critical Hit Chance]"
+				text="{0}% increased Critical Hit Chance"
 			},
 			[2]={
 				[1]={
@@ -588,7 +588,7 @@ return {
 						[2]=-1
 					}
 				},
-				text="{0}% reduced [Critical|Critical Hit Chance]"
+				text="{0}% reduced Critical Hit Chance"
 			}
 		},
 		stats={
@@ -604,7 +604,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="{0:+d}% Chance to Block [Attack] Damage while wielding a Staff"
+				text="{0:+d}% Chance to Block Attack Damage while wielding a Staff"
 			}
 		},
 		stats={
@@ -620,7 +620,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="All [DamageTypes|Damage] is taken from Mana before Life\n50% less Mana Recovery Rate"
+				text="All Damage is taken from Mana before Life\n50% less Mana Recovery Rate"
 			}
 		},
 		stats={
@@ -636,7 +636,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Your [HitDamage|Hits] can't be [Evasion|Evaded]\nNever deal [Critical|Critical Hits]"
+				text="Your Hits can't be Evaded\nNever deal Critical Hits"
 			}
 		},
 		stats={
@@ -652,7 +652,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Your [StunThreshold|Stun Threshold] is doubled\nCannot Dodge Roll"
+				text="Your Stun Threshold is doubled\nCannot Dodge Roll"
 			}
 		},
 		stats={
@@ -684,7 +684,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="{0:+d} to [Strength|Strength] and [Dexterity|Dexterity]"
+				text="{0:+d} to Strength and Dexterity"
 			}
 		},
 		stats={
@@ -700,7 +700,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="{0:+d} to [Strength|Strength] and [Intelligence|Intelligence]"
+				text="{0:+d} to Strength and Intelligence"
 			}
 		},
 		stats={
@@ -716,7 +716,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="{0:+d} to [Dexterity|Dexterity] and [Intelligence|Intelligence]"
+				text="{0:+d} to Dexterity and Intelligence"
 			}
 		},
 		stats={
@@ -732,7 +732,7 @@ return {
 						[2]=99
 					}
 				},
-				text="{0}% chance to [Blind] Enemies on [HitDamage|Hit]"
+				text="{0}% chance to Blind Enemies on Hit"
 			},
 			[2]={
 				limit={
@@ -741,7 +741,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="[Blind] Enemies on [HitDamage|Hit]"
+				text="Blind Enemies on Hit"
 			}
 		},
 		stats={
@@ -761,7 +761,7 @@ return {
 						[2]=1
 					}
 				},
-				text="Skills fire an additional [Projectile|Projectile]"
+				text="Skills fire an additional Projectile"
 			},
 			[2]={
 				limit={
@@ -774,7 +774,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Skills fire {1} additional [Projectile|Projectiles]"
+				text="Skills fire {1} additional Projectiles"
 			}
 		},
 		stats={
@@ -897,7 +897,7 @@ return {
 						[2]=-1
 					}
 				},
-				text="Enemies in your [Presence|Presence] are [Slow|Slowed] by {0}%"
+				text="Enemies in your Presence are Slowed by {0}%"
 			}
 		},
 		stats={
@@ -913,7 +913,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="{0}% increased [BuffMagnitude|Magnitude] of [Chill] you inflict"
+				text="{0}% increased Magnitude of Chill you inflict"
 			},
 			[2]={
 				[1]={
@@ -926,7 +926,7 @@ return {
 						[2]=-1
 					}
 				},
-				text="{0}% reduced [BuffMagnitude|Magnitude] of [Chill] you inflict"
+				text="{0}% reduced Magnitude of Chill you inflict"
 			}
 		},
 		stats={
@@ -942,7 +942,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Your [HitDamage|Hits] are [CrushingBlow|Crushing Blows]"
+				text="Your Hits are Crushing Blows"
 			}
 		},
 		stats={
@@ -958,7 +958,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="[DNT] Enemies in Close Range are Taunted"
+				text="DNT Enemies in Close Range are Taunted"
 			}
 		},
 		stats={
@@ -1010,7 +1010,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Dodge Roll cannot Avoid Damage\nTake 30% less [HitDamage|Damage from Hits] while Dodge Rolling"
+				text="Dodge Roll cannot Avoid Damage\nTake 30% less Damage from Hits while Dodge Rolling"
 			}
 		},
 		stats={
@@ -1042,7 +1042,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="25% more Skill Speed while Off Hand is empty and you have\na [One-Handed] [MartialWeapon|Martial Weapon] equipped in your Main Hand"
+				text="25% more Skill Speed while Off Hand is empty and you have\na One-Handed Martial Weapon equipped in your Main Hand"
 			}
 		},
 		stats={
@@ -1058,7 +1058,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="You can wield [Two-Handed] [Axe|Axes], [Mace|Maces] and [Sword|Swords] in one hand\nTriple [Attributes|Attribute] requirements of weapons"
+				text="You can wield Two-Handed Axes, Maces and Swords in one hand\nTriple Attribute requirements of weapons"
 			}
 		},
 		stats={
@@ -1074,7 +1074,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Excess Life Recovery from Regeneration is applied to [EnergyShield|Energy Shield]\n[EnergyShield|Energy Shield] does not Recharge"
+				text="Excess Life Recovery from Regeneration is applied to Energy Shield\nEnergy Shield does not Recharge"
 			}
 		},
 		stats={
@@ -1135,7 +1135,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="{0}% increased [Physical] Damage"
+				text="{0}% increased Physical Damage"
 			},
 			[2]={
 				[1]={
@@ -1148,7 +1148,7 @@ return {
 						[2]=-1
 					}
 				},
-				text="{0}% reduced [Physical] Damage"
+				text="{0}% reduced Physical Damage"
 			}
 		},
 		stats={
@@ -1164,7 +1164,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="{0}% increased [BuffMagnitude|Magnitude] of [Shock|Shock] you inflict"
+				text="{0}% increased Magnitude of Shock you inflict"
 			},
 			[2]={
 				[1]={
@@ -1177,7 +1177,7 @@ return {
 						[2]=-1
 					}
 				},
-				text="{0}% reduced [BuffMagnitude|Magnitude] of [Shock|Shock] you inflict"
+				text="{0}% reduced Magnitude of Shock you inflict"
 			}
 		},
 		stats={
@@ -1193,7 +1193,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Your [EnergyShield|Energy Shield] starts at zero"
+				text="Your Energy Shield starts at zero"
 			}
 		},
 		stats={
@@ -1250,7 +1250,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="[Dexterity|Dexterity]'s inherent bonus is 1% increased [Armour|Armour] per 2 Dexterity instead"
+				text="Dexterity's inherent bonus is 1% increased Armour per 2 Dexterity instead"
 			}
 		},
 		stats={
@@ -1266,7 +1266,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="[Intelligence|Intelligence]'s inherent bonus is 1% increased [Evasion|Evasion Rating] per 2 Intelligence instead"
+				text="Intelligence's inherent bonus is 1% increased Evasion Rating per 2 Intelligence instead"
 			}
 		},
 		stats={
@@ -1282,7 +1282,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="[Strength|Strength]'s inherent bonus is 1% increased [EnergyShield|Energy Shield] per 2 Strength instead"
+				text="Strength's inherent bonus is 1% increased Energy Shield per 2 Strength instead"
 			}
 		},
 		stats={
@@ -1298,7 +1298,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="[Attack] Projectiles always inflict Bleeding and Maim, and Knock Back Enemies\nProjectiles cannot Pierce, Fork or Chain"
+				text="Attack Projectiles always inflict Bleeding and Maim, and Knock Back Enemies\nProjectiles cannot Pierce, Fork or Chain"
 			}
 		},
 		stats={
@@ -1314,7 +1314,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="You are Blind\nBlind does not affect your Light Radius\n25% more [Melee] [Critical|Critical Hit] Chance while Blinded"
+				text="You are Blind\nBlind does not affect your Light Radius\n25% more Melee Critical Hit Chance while Blinded"
 			}
 		},
 		stats={
@@ -1346,7 +1346,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Gain [Charges|Power Charges] instead of [Charges|Frenzy Charges]\nGain [Charges|Frenzy Charges] instead of [Charges|Endurance Charges]\nGain [Charges|Endurance Charges] instead of [Charges|Power Charges]"
+				text="Gain Power Charges instead of Frenzy Charges\nGain Frenzy Charges instead of Endurance Charges\nGain Endurance Charges instead of Power Charges"
 			}
 		},
 		stats={
@@ -1362,7 +1362,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Every second, Consume a nearby Corpse to Recover 5% of Life and Mana\n10% more Damage taken if you haven't Consumed a Corpse [Recently]"
+				text="Every second, Consume a nearby Corpse to Recover 5% of Life and Mana\n10% more Damage taken if you haven't Consumed a Corpse Recently"
 			}
 		},
 		stats={
@@ -1394,7 +1394,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Cannot Recover [EnergyShield|Energy Shield] to above Armour\n3% of Physical Damage prevented from Hits Recently is Regenerated as [EnergyShield|Energy Shield] per second"
+				text="Cannot Recover Energy Shield to above Armour\n3% of Physical Damage prevented from Hits Recently is Regenerated as Energy Shield per second"
 			}
 		},
 		stats={
@@ -1410,7 +1410,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Skills that have dealt a [Critical|Critical Hit] in the past 8 seconds deal 40% more Elemental Damage with Hits\nYour [Critical|Critical Hits] do not deal extra Damage"
+				text="Skills that have dealt a Critical Hit in the past 8 seconds deal 40% more Elemental Damage with Hits\nYour Critical Hits do not deal extra Damage"
 			}
 		},
 		stats={
@@ -1426,7 +1426,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Life Recovery from [Flask|Flasks] also applies to Energy Shield\n30% less Life Recovery from [Flask|Flasks]"
+				text="Life Recovery from Flasks also applies to Energy Shield\n30% less Life Recovery from Flasks"
 			}
 		},
 		stats={
@@ -1442,7 +1442,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Life [LifeRecharge|Recharges] instead of [ESRecharge|Energy Shield]\nLife Recovery from [Flask|Flasks] applies to [EnergyShield|Energy Shield] instead"
+				text="Life Recharges instead of Energy Shield\nLife Recovery from Flasks applies to Energy Shield instead"
 			}
 		},
 		stats={
@@ -1474,7 +1474,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="[Block] Chance is doubled\nYou take 50% of Damage from Blocked [HitDamage|Hits]"
+				text="Block Chance is doubled\nYou take 50% of Damage from Blocked Hits"
 			}
 		},
 		stats={
@@ -1522,7 +1522,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="You can apply an additional [Curse]\nDouble Activation Delay of [Curse|Curses]"
+				text="You can apply an additional Curse\nDouble Activation Delay of Curses"
 			}
 		},
 		stats={
@@ -1554,7 +1554,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="[Dexterity] provides no inherent bonus to [Evasion] Rating\n+1% Chance to Suppress Spell Damage per 15 [Dexterity]"
+				text="Dexterity provides no inherent bonus to Evasion Rating\n+1% Chance to Suppress Spell Damage per 15 Dexterity"
 			}
 		},
 		stats={
@@ -1586,7 +1586,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="80% of Maximum Mana is Converted to twice that much [Armour]"
+				text="80% of Maximum Mana is Converted to twice that much Armour"
 			}
 		},
 		stats={
@@ -1618,7 +1618,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Cannot use [Charm|Charms]\n30% more Recovery from [Flask|Flasks]"
+				text="Cannot use Charms\n30% more Recovery from Flasks"
 			}
 		},
 		stats={
@@ -1634,7 +1634,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="40% more [Attack] Damage if Accuracy Rating is higher than Maximum Life\nNever deal [Critical|Critical Hits]"
+				text="40% more Attack Damage if Accuracy Rating is higher than Maximum Life\nNever deal Critical Hits"
 			}
 		},
 		stats={
@@ -1650,7 +1650,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="[Armour] applies to Fire, Cold and Lightning Damage taken from Hits instead of Physical Damage\n-15% to all maximum Elemental Resistances"
+				text="Armour applies to Fire, Cold and Lightning Damage taken from Hits instead of Physical Damage\n-15% to all maximum Elemental Resistances"
 			}
 		},
 		stats={
@@ -1666,7 +1666,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="3% more [Spell|Spell] Damage per [Charges|Power Charge]\nGain [Charges|Power Charges] instead of [Charges|Frenzy Charges]"
+				text="3% more Spell Damage per Power Charge\nGain Power Charges instead of Frenzy Charges"
 			}
 		},
 		stats={
@@ -1714,7 +1714,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Cannot Ignite, Chill, Freeze or Shock\n[Critical|Critical Hits] inflict Scorch, Brittle and Sapped"
+				text="Cannot Ignite, Chill, Freeze or Shock\nCritical Hits inflict Scorch, Brittle and Sapped"
 			}
 		},
 		stats={
@@ -1730,7 +1730,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Can't use Helmets\nYour [Critical|Critical Hit] Chance is Lucky\nYour Damage with [Critical|Critical Hits] is Lucky\nEnemies' Damage with [Critical|Critical Hits] against you is Lucky"
+				text="Can't use Helmets\nYour Critical Hit Chance is Lucky\nYour Damage with Critical Hits is Lucky\nEnemies' Damage with Critical Hits against you is Lucky"
 			}
 		},
 		stats={
@@ -1746,7 +1746,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="[Intelligence] provides no inherent bonus to Energy Shield\n2% reduced Duration of Elemental Ailments on you per 15 [Intelligence]"
+				text="Intelligence provides no inherent bonus to Energy Shield\n2% reduced Duration of Elemental Ailments on you per 15 Intelligence"
 			}
 		},
 		stats={
@@ -1762,7 +1762,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="[DNT] Ded."
+				text="DNT Ded."
 			}
 		},
 		stats={
@@ -1794,7 +1794,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Ignore [Attributes|Attribute] Requirements\nGain no inherent bonuses from [Attributes]"
+				text="Ignore Attribute Requirements\nGain no inherent bonuses from Attributes"
 			}
 		},
 		stats={
@@ -1826,7 +1826,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="You count as Dual Wielding while you are Unencumbered\n40% more [Attack] Speed with [Melee] Skills while you are Unencumbered\nAdds 14 to 20 [Attack] Physical Damage to [Melee] Skills per 10 [Dexterity] while you are Unencumbered"
+				text="You count as Dual Wielding while you are Unencumbered\n40% more Attack Speed with Melee Skills while you are Unencumbered\nAdds 14 to 20 Attack Physical Damage to Melee Skills per 10 Dexterity while you are Unencumbered"
 			}
 		},
 		stats={
@@ -1842,7 +1842,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="-25% to maximum Chance to Block [Attack] Damage\n-25% to maximum Chance to Block Spell Damage\n+2% Chance to Block Spell Damage for each 1% Overcapped Chance to Block [Attack] Damage"
+				text="-25% to maximum Chance to Block Attack Damage\n-25% to maximum Chance to Block Spell Damage\n+2% Chance to Block Spell Damage for each 1% Overcapped Chance to Block Attack Damage"
 			}
 		},
 		stats={
@@ -1858,7 +1858,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="+10% to all Elemental Resistances and maximum Elemental Resistances while affected by a Non-Vaal Guard Skill\n20% additional Physical Damage Reduction while affected by a Non-Vaal Guard Skill\n20% more Damage taken if a Non-Vaal Guard Buff was lost [Recently]"
+				text="+10% to all Elemental Resistances and maximum Elemental Resistances while affected by a Non-Vaal Guard Skill\n20% additional Physical Damage Reduction while affected by a Non-Vaal Guard Skill\n20% more Damage taken if a Non-Vaal Guard Buff was lost Recently"
 			}
 		},
 		stats={
@@ -1874,7 +1874,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="20% less [Attack] Damage taken if you haven't been Hit by an [Attack] Recently\n10% more chance to Evade [Attack|Attacks] if you have been Hit by an [Attack] Recently\n20% more [Attack] Damage taken if you have been Hit by an [Attack] [Recently]"
+				text="20% less Attack Damage taken if you haven't been Hit by an Attack Recently\n10% more chance to Evade Attacks if you have been Hit by an Attack Recently\n20% more Attack Damage taken if you have been Hit by an Attack Recently"
 			}
 		},
 		stats={
@@ -1890,7 +1890,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="1% increased [Spell] damage per 2 [Strength]\n[Strength] provides no bonus to Life"
+				text="1% increased Spell damage per 2 Strength\nStrength provides no bonus to Life"
 			}
 		},
 		stats={

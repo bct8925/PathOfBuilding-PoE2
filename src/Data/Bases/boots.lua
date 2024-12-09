@@ -7,7 +7,7 @@ itemBases["Golden Caligae"] = {
 	socketLimit = 2,
 	tags = { boots = true, not_for_sale = true, armour = true, demigods = true, default = true, },
 	influenceTags = { shaper = "boots_shaper", elder = "boots_elder", adjudicator = "boots_adjudicator", basilisk = "boots_basilisk", crusader = "boots_crusader", eyrie = "boots_eyrie", cleansing = "boots_cleansing", tangle = "boots_tangle" },
-	implicit = "+(8-16)% to all [ElementalDamage|Elemental] [Resistances]",
+	implicit = "+(8-16)% to all Elemental Resistances",
 	implicitModTypes = { { "elemental", "fire", "cold", "lightning", "resistance" }, },
 	armour = { },
 	req = { level = 12, },

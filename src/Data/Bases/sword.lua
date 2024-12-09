@@ -8,7 +8,7 @@ itemBases["Golden Blade"] = {
 	socketLimit = 3,
 	tags = { demigods = true, onehand = true, not_for_sale = true, weapon = true, sword = true, one_hand_weapon = true, default = true, },
 	influenceTags = { shaper = "sword_shaper", elder = "sword_elder", adjudicator = "sword_adjudicator", basilisk = "sword_basilisk", crusader = "sword_crusader", eyrie = "sword_eyrie", cleansing = "sword_cleansing", tangle = "sword_tangle" },
-	implicit = "+(16-24) to all [Attributes|Attributes]",
+	implicit = "+(16-24) to all Attributes",
 	implicitModTypes = { { "attribute" }, },
 	weapon = { PhysicalMin = 3, PhysicalMax = 28, CritChanceBase = 5, AttackRateBase = 1.1, Range = 11, },
 	req = { },

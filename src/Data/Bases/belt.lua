@@ -6,7 +6,7 @@ itemBases["Golden Obi"] = {
 	type = "Belt",
 	tags = { demigods = true, not_for_sale = true, default = true, belt = true, },
 	influenceTags = { shaper = "belt_shaper", elder = "belt_elder", adjudicator = "belt_adjudicator", basilisk = "belt_basilisk", crusader = "belt_crusader", eyrie = "belt_eyrie", cleansing = "belt_cleansing", tangle = "belt_tangle" },
-	implicit = "(20-30)% increased [ItemRarity|Rarity of Items] found",
+	implicit = "(20-30)% increased Rarity of Items found",
 	implicitModTypes = { {  }, },
 	req = { },
 }
@@ -14,7 +14,7 @@ itemBases["Rawhide Belt"] = {
 	type = "Belt",
 	tags = { belt = true, default = true, },
 	influenceTags = { shaper = "belt_shaper", elder = "belt_elder", adjudicator = "belt_adjudicator", basilisk = "belt_basilisk", crusader = "belt_crusader", eyrie = "belt_eyrie", cleansing = "belt_cleansing", tangle = "belt_tangle" },
-	implicit = "(20-30)% increased Life Recovery from [Flask|Flasks]",
+	implicit = "(20-30)% increased Life Recovery from Flasks",
 	implicitModTypes = { { "flask", "resource", "life" }, },
 	req = { },
 }
@@ -22,7 +22,7 @@ itemBases["Linen Belt"] = {
 	type = "Belt",
 	tags = { belt = true, default = true, },
 	influenceTags = { shaper = "belt_shaper", elder = "belt_elder", adjudicator = "belt_adjudicator", basilisk = "belt_basilisk", crusader = "belt_crusader", eyrie = "belt_eyrie", cleansing = "belt_cleansing", tangle = "belt_tangle" },
-	implicit = "(20-30)% increased Mana Recovery from [Flask|Flasks]",
+	implicit = "(20-30)% increased Mana Recovery from Flasks",
 	implicitModTypes = { { "flask", "resource", "mana" }, },
 	req = { },
 }
@@ -30,7 +30,7 @@ itemBases["Wide Belt"] = {
 	type = "Belt",
 	tags = { belt = true, default = true, },
 	influenceTags = { shaper = "belt_shaper", elder = "belt_elder", adjudicator = "belt_adjudicator", basilisk = "belt_basilisk", crusader = "belt_crusader", eyrie = "belt_eyrie", cleansing = "belt_cleansing", tangle = "belt_tangle" },
-	implicit = "(20-30)% increased [Flask|Flask] Charges gained",
+	implicit = "(20-30)% increased Flask Charges gained",
 	implicitModTypes = { { "flask" }, },
 	req = { level = 14, },
 }
@@ -38,7 +38,7 @@ itemBases["Long Belt"] = {
 	type = "Belt",
 	tags = { belt = true, default = true, },
 	influenceTags = { shaper = "belt_shaper", elder = "belt_elder", adjudicator = "belt_adjudicator", basilisk = "belt_basilisk", crusader = "belt_crusader", eyrie = "belt_eyrie", cleansing = "belt_cleansing", tangle = "belt_tangle" },
-	implicit = "(15-20)% increased [Charm] Effect Duration",
+	implicit = "(15-20)% increased Charm Effect Duration",
 	implicitModTypes = { {  }, },
 	req = { level = 20, },
 }
@@ -46,7 +46,7 @@ itemBases["Plate Belt"] = {
 	type = "Belt",
 	tags = { belt = true, default = true, },
 	influenceTags = { shaper = "belt_shaper", elder = "belt_elder", adjudicator = "belt_adjudicator", basilisk = "belt_basilisk", crusader = "belt_crusader", eyrie = "belt_eyrie", cleansing = "belt_cleansing", tangle = "belt_tangle" },
-	implicit = "+(100-140) to [Armour]",
+	implicit = "+(100-140) to Armour",
 	implicitModTypes = { { "armour", "defences" }, },
 	req = { level = 24, },
 }
@@ -54,7 +54,7 @@ itemBases["Ornate Belt"] = {
 	type = "Belt",
 	tags = { belt = true, default = true, },
 	influenceTags = { shaper = "belt_shaper", elder = "belt_elder", adjudicator = "belt_adjudicator", basilisk = "belt_basilisk", crusader = "belt_crusader", eyrie = "belt_eyrie", cleansing = "belt_cleansing", tangle = "belt_tangle" },
-	implicit = "(10-15)% reduced [Charm] Charges used",
+	implicit = "(10-15)% reduced Charm Charges used",
 	implicitModTypes = { {  }, },
 	req = { level = 31, },
 }
@@ -62,7 +62,7 @@ itemBases["Mail Belt"] = {
 	type = "Belt",
 	tags = { belt = true, default = true, },
 	influenceTags = { shaper = "belt_shaper", elder = "belt_elder", adjudicator = "belt_adjudicator", basilisk = "belt_basilisk", crusader = "belt_crusader", eyrie = "belt_eyrie", cleansing = "belt_cleansing", tangle = "belt_tangle" },
-	implicit = "(10-15)% reduced [Flask|Flask] Charges used",
+	implicit = "(10-15)% reduced Flask Charges used",
 	implicitModTypes = { { "flask" }, },
 	req = { level = 40, },
 }
@@ -70,7 +70,7 @@ itemBases["Double Belt"] = {
 	type = "Belt",
 	tags = { belt = true, default = true, },
 	influenceTags = { shaper = "belt_shaper", elder = "belt_elder", adjudicator = "belt_adjudicator", basilisk = "belt_basilisk", crusader = "belt_crusader", eyrie = "belt_eyrie", cleansing = "belt_cleansing", tangle = "belt_tangle" },
-	implicit = "(20-30)% increased [Charm] Charges gained",
+	implicit = "(20-30)% increased Charm Charges gained",
 	implicitModTypes = { {  }, },
 	req = { level = 44, },
 }
@@ -78,7 +78,7 @@ itemBases["Heavy Belt"] = {
 	type = "Belt",
 	tags = { belt = true, default = true, },
 	influenceTags = { shaper = "belt_shaper", elder = "belt_elder", adjudicator = "belt_adjudicator", basilisk = "belt_basilisk", crusader = "belt_crusader", eyrie = "belt_eyrie", cleansing = "belt_cleansing", tangle = "belt_tangle" },
-	implicit = "(20-30)% increased [StunThreshold|Stun Threshold]",
+	implicit = "(20-30)% increased Stun Threshold",
 	implicitModTypes = { {  }, },
 	req = { level = 50, },
 }
@@ -86,7 +86,7 @@ itemBases["Utility Belt"] = {
 	type = "Belt",
 	tags = { belt = true, default = true, },
 	influenceTags = { shaper = "belt_shaper", elder = "belt_elder", adjudicator = "belt_adjudicator", basilisk = "belt_basilisk", crusader = "belt_crusader", eyrie = "belt_eyrie", cleansing = "belt_cleansing", tangle = "belt_tangle" },
-	implicit = "20% of [Flask|Flask] Recovery applied Instantly",
+	implicit = "20% of Flask Recovery applied Instantly",
 	implicitModTypes = { {  }, },
 	req = { level = 55, },
 }
@@ -94,7 +94,7 @@ itemBases["Fine Belt"] = {
 	type = "Belt",
 	tags = { belt = true, default = true, },
 	influenceTags = { shaper = "belt_shaper", elder = "belt_elder", adjudicator = "belt_adjudicator", basilisk = "belt_basilisk", crusader = "belt_crusader", eyrie = "belt_eyrie", cleansing = "belt_cleansing", tangle = "belt_tangle" },
-	implicit = "[Flask|Flasks] gain 0.17 charges per Second",
+	implicit = "Flasks gain 0.17 charges per Second",
 	implicitModTypes = { {  }, },
 	req = { level = 62, },
 }

@@ -12444,7 +12444,7 @@ return {
 		},
 		[16]={
 			list=false,
-			name="",
+			name="MinLevelReq",
 			refTo="",
 			type="Int",
 			width=150

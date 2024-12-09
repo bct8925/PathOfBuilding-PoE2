@@ -8,7 +8,7 @@ itemBases["Golden Flame"] = {
 	socketLimit = 3,
 	tags = { not_for_sale = true, demigods = true, armour = true, default = true, shield = true, },
 	influenceTags = { shaper = "shield_shaper", elder = "shield_elder", adjudicator = "shield_adjudicator", basilisk = "shield_basilisk", crusader = "shield_crusader", eyrie = "shield_eyrie", cleansing = "shield_cleansing", tangle = "shield_tangle" },
-	implicit = "+(11-19)% to [Resistances|Chaos Resistance]",
+	implicit = "+(11-19)% to Chaos Resistance",
 	implicitModTypes = { { "chaos", "resistance" }, },
 	armour = { BlockChance = 25, },
 	req = { level = 15, },

@@ -180,7 +180,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Nearby Enemies have {0:+d}% to [Cold|Cold] Resistance"
+				text="Nearby Enemies have {0:+d}% to Cold Resistance"
 			}
 		},
 		stats={
@@ -196,7 +196,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Nearby Enemies have {0:+d}% to [Chaos|Chaos] Resistance"
+				text="Nearby Enemies have {0:+d}% to Chaos Resistance"
 			}
 		},
 		stats={
@@ -340,7 +340,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Nearby Enemies have {0}% increased [CriticalDamageBonus|Critical Damage Bonus]"
+				text="Nearby Enemies have {0}% increased Critical Damage Bonus"
 			},
 			[2]={
 				[1]={
@@ -353,7 +353,7 @@ return {
 						[2]=-1
 					}
 				},
-				text="Nearby Enemies have {0}% reduced [CriticalDamageBonus|Critical Damage Bonus]"
+				text="Nearby Enemies have {0}% reduced Critical Damage Bonus"
 			}
 		},
 		stats={
@@ -493,7 +493,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Nearby Enemies have {0}% increased [CooldownRecovery|Cooldown Recovery Rate]"
+				text="Nearby Enemies have {0}% increased Cooldown Recovery Rate"
 			},
 			[2]={
 				[1]={
@@ -506,7 +506,7 @@ return {
 						[2]=-1
 					}
 				},
-				text="Nearby Enemies have {0}% reduced [CooldownRecovery|Cooldown Recovery Rate]"
+				text="Nearby Enemies have {0}% reduced Cooldown Recovery Rate"
 			}
 		},
 		stats={
@@ -538,7 +538,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Nearby Enemies cannot deal [Critical|Critical Hits]"
+				text="Nearby Enemies cannot deal Critical Hits"
 			}
 		},
 		stats={

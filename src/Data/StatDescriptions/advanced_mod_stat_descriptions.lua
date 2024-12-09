@@ -801,7 +801,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="{0}% increased Minion [Attack] and Cast Speed per 10 Devotion"
+				text="{0}% increased Minion Attack and Cast Speed per 10 Devotion"
 			},
 			[2]={
 				[1]={
@@ -814,7 +814,7 @@ return {
 						[2]=-1
 					}
 				},
-				text="{0}% reduced Minion [Attack] and Cast Speed per 10 Devotion"
+				text="{0}% reduced Minion Attack and Cast Speed per 10 Devotion"
 			}
 		},
 		stats={
@@ -859,7 +859,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="{0}% increased [BuffMagnitude|Magnitude] of Non-Damaging Ailments you inflict per 10 Devotion"
+				text="{0}% increased Magnitude of Non-Damaging Ailments you inflict per 10 Devotion"
 			},
 			[2]={
 				[1]={
@@ -872,7 +872,7 @@ return {
 						[2]=-1
 					}
 				},
-				text="{0}% reduced [BuffMagnitude|Magnitude] of Non-Damaging Ailments you inflict per 10 Devotion"
+				text="{0}% reduced Magnitude of Non-Damaging Ailments you inflict per 10 Devotion"
 			}
 		},
 		stats={
@@ -888,7 +888,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="{0}% increased Duration of [Curse|Curses] on you per 10 Devotion"
+				text="{0}% increased Duration of Curses on you per 10 Devotion"
 			},
 			[2]={
 				[1]={
@@ -901,7 +901,7 @@ return {
 						[2]=-1
 					}
 				},
-				text="{0}% reduced Duration of [Curse|Curses] on you per 10 Devotion"
+				text="{0}% reduced Duration of Curses on you per 10 Devotion"
 			}
 		},
 		stats={

@@ -11,7 +11,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Grants Immunity to [Chill|Chill] if used while [Chill|Chilled]"
+				text="Grants Immunity to Chill if used while Chilled"
 			}
 		},
 		stats={
@@ -27,7 +27,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Grants Immunity to [Freeze|Freeze]"
+				text="Grants Immunity to Freeze"
 			}
 		},
 		stats={
@@ -43,7 +43,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Grants Immunity to [Ignite|Ignite]"
+				text="Grants Immunity to Ignite"
 			}
 		},
 		stats={
@@ -59,7 +59,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Grants Immunity to [Shock|Shock]"
+				text="Grants Immunity to Shock"
 			}
 		},
 		stats={
@@ -75,7 +75,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Grants Immunity to [Bleeding|Bleeding]"
+				text="Grants Immunity to Bleeding"
 			}
 		},
 		stats={
@@ -91,7 +91,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Grants Immunity to [Burning|Burning] if used while [Burning|Burning]"
+				text="Grants Immunity to Burning if used while Burning"
 			}
 		},
 		stats={
@@ -107,7 +107,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Grants Immunity to [Poison|Poison]"
+				text="Grants Immunity to Poison"
 			}
 		},
 		stats={

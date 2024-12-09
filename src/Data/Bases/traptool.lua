@@ -40,7 +40,7 @@ itemBases["Incense Trap"] = {
 	socketLimit = 1,
 	tags = { twohand = true, trap = true, default = true, },
 	influenceTags = { shaper = "traptool_shaper", elder = "traptool_elder", adjudicator = "traptool_adjudicator", basilisk = "traptool_basilisk", crusader = "traptool_crusader", eyrie = "traptool_eyrie", cleansing = "traptool_cleansing", tangle = "traptool_tangle" },
-	implicit = "(20-30)% increased Cooldown Recovery Rate for throwing [Trap|Traps]",
+	implicit = "(20-30)% increased Cooldown Recovery Rate for throwing Traps",
 	implicitModTypes = { {  }, },
 	req = { },
 }
