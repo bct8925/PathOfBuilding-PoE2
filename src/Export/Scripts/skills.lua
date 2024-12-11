@@ -211,16 +211,6 @@ local weaponClassMap = {
 }
 
 local skillStatScope = { }
-do
-	local text = convertUTF16to8(getFile("Metadata/StatDescriptions/skillpopup_stat_filters.csd"))
-	for skillName, scope in text:gmatch('([%w_]+) "Metadata/StatDescriptions/specific_skill_stat_descriptions/([%w_]+)%.csd"') do
-		skillStatScope[skillName] = scope
-	end
-	for skillName, copyFromSkill in text:gmatch('copy ([%w_]+) ([%w_]+)') do
-		skillStatScope[skillName] = skillStatScope[copyFromSkill]
-	end
-end
-
 local gems = { }
 local trueGemNames = { }
 
@@ -310,12 +300,17 @@ directiveTable.skill = function(state, args, out)
 	skill.constantStats = { }
 	skill.addSkillTypes = state.addSkillTypes
 	state.addSkillTypes = nil
-	--out:write('\tcolor = ', granted.Attribute, ',\n')
+	if skillGem and not state.noGem then
+		out:write('\tcolor = ', skillGem.GemColour, ',\n')
+	end
 	if granted.GrantedEffectStatSets.BaseEffectiveness ~= 1 then
 		out:write('\tbaseEffectiveness = ', granted.GrantedEffectStatSets.BaseEffectiveness, ',\n')
 	end
 	if granted.GrantedEffectStatSets.IncrementalEffectiveness ~= 0 then
 		out:write('\tincrementalEffectiveness = ', granted.GrantedEffectStatSets.IncrementalEffectiveness, ',\n')
+	end
+	if granted.GrantedEffectStatSets.DamageIncrementalEffectiveness ~= 0 then
+		out:write('\tdamageIncrementalEffectiveness = ', granted.GrantedEffectStatSets.DamageIncrementalEffectiveness, ',\n')
 	end
 	if granted.IsSupport then
 		skill.isSupport = true
@@ -397,6 +392,10 @@ directiveTable.skill = function(state, args, out)
 			end
 			out:write('\t},\n')
 		end
+		local file = getFile("Metadata/StatDescriptions/specific_skill_stat_descriptions/"..granted.ActiveSkill.Id..".csd")
+		if file then
+			skillStatScope[granted.ActiveSkill.Id] = granted.ActiveSkill.Id
+		end
 		out:write('\tstatDescriptionScope = "', skillStatScope[granted.ActiveSkill.Id] or "skill_stat_descriptions", '",\n')
 		if granted.ActiveSkill.SkillTotem <= 21 then
 			out:write('\tskillTotemId = ', granted.ActiveSkill.SkillTotem, ',\n')
@@ -409,15 +408,21 @@ directiveTable.skill = function(state, args, out)
 	local statsPerLevel = dat("GrantedEffectStatSetsPerLevel"):GetRowList("GrantedEffectStatSets", granted.GrantedEffectStatSets)
 	local statMapOrder = {}
 	local perLevel = dat("GrantedEffectsPerLevel"):GetRowList("GrantedEffect", granted)
+	local gemLevelProgression = nil
+	if skillGem and not state.noGem then
+		gemLevelProgression = dat("ItemExperiencePerLevel"):GetRowList("ItemExperienceType", skillGem.GemLevelProgression)
+	end
 	if #perLevel ~= #statsPerLevel and #perLevel > 1 and #statsPerLevel > 1 then
 		ConPrintf("UNKNOWN CASE of Level to Stat rows for '" .. granted.Id .. "'")
 	end
+	local nextGemLevelReqValue = 0
 	for indx = 1, math.max(#perLevel, #statsPerLevel) do
 		local levelRow = perLevel[indx] or perLevel[1]
 		local statRow = statsPerLevel[indx] or statsPerLevel[1]
-		local level = { extra = { }, statInterpolation = { }, cost = { } }
+		local level = { extra = { }, statInterpolation = { }, actorLevel = 1, cost = { } }
 		level.level = #perLevel == 1 and statRow.GemLevel or levelRow.Level
-		--level.extra.levelRequirement = #perLevel == 1 and statRow.PlayerLevelReq or levelRow.PlayerLevelReq
+		level.extra.levelRequirement = math.max(gemLevelProgression and gemLevelProgression[indx] and gemLevelProgression[indx].PlayerLevel or 0, nextGemLevelReqValue)
+		nextGemLevelReqValue = level.extra.levelRequirement
 		for i, cost in ipairs(granted.CostType) do
 			level.cost[cost["Resource"]] = levelRow.CostAmounts[i]
 		end
@@ -474,6 +479,7 @@ directiveTable.skill = function(state, args, out)
 		--	level.extra.baseMultiplier = statRow.BaseMultiplier / 10000 + 1
 		--end
 		level.statInterpolation = statRow.StatInterpolations
+		level.actorLevel = statRow.ActorLevel
 		local resolveInterpolation = false
 		local injectConstantValuesIntoEachLevel = false
 		local statMapOrderIndex = 1
@@ -669,6 +675,9 @@ directiveTable.mods = function(state, args, out)
 				end
 				out:write('}, ')
 			end
+			if level.actorLevel ~= nil then
+				out:write('actorLevel = ', level.actorLevel, ', ')
+			end
 			if next(level.cost) ~= nil then
 				out:write('cost = { ')
 				for k, v in pairs(level.cost) do
@@ -703,9 +712,14 @@ for skillGem in dat("SkillGems"):Rows() do
 			out:write('\t\tgameId = "', skillGem.BaseItemType.Id, '",\n')
 			out:write('\t\tvariantId = "', gemEffect.Id, '",\n')
 			out:write('\t\tgrantedEffectId = "', gemEffect.GrantedEffect.Id, '",\n')
+			if gemEffect.GrantedEffect.AdditionalStatSets then
+				for count, additionalGrantedEffect in ipairs(gemEffect.GrantedEffect.AdditionalStatSets) do
+					out:write('\t\tadditionalStatSet' .. tostring(count) .. ' = "', additionalGrantedEffect.Id, '",\n')
+				end
+			end
 			if gemEffect.AdditionalGrantedEffects then
-				for _, additionalGrantedEffect in ipairs(gemEffect.AdditionalGrantedEffects) do
-					out:write('\t\tadditionalGrantedEffectId = "', additionalGrantedEffect.Id, '",\n')
+				for count, additionalGrantedEffect in ipairs(gemEffect.AdditionalGrantedEffects) do
+					out:write('\t\tadditionalGrantedEffectId' .. tostring(count) .. ' = "', additionalGrantedEffect.Id, '",\n')
 				end
 			end
 			if #gemEffect.SecondarySupportName > 0 then
