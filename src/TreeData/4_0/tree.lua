@@ -1,5 +1,4 @@
 return {
-	pob = 1,
 	classes={
 		[1]={
 			ascendancies={
@@ -12708,7 +12707,7 @@ return {
 			},
 			skill=4,
 			stats={
-				[1]="shock_chance_+%"
+				[1]="15% increased chance to Shock"
 			}
 		},
 		[16]={
@@ -12726,7 +12725,7 @@ return {
 			},
 			skill=16,
 			stats={
-				[1]="life_flask_charges_gained_+%"
+				[1]="20% increased Life Flask Charges gained"
 			}
 		},
 		[30]={
@@ -12745,8 +12744,8 @@ return {
 			},
 			skill=30,
 			stats={
-				[1]="gain_tailwind_stack_on_skill_use",
-				[2]="lose_all_tailwind_when_hit"
+				[1]="Gain Tailwind on Skill use",
+				[2]="Lose all Tailwind when Hit"
 			}
 		},
 		[40]={
@@ -12765,7 +12764,7 @@ return {
 			},
 			skill=40,
 			stats={
-				[1]="ascendancy_pathfinder_flask_charges_gained_+%_final"
+				[1]="50% more Flask Charges gained"
 			}
 		},
 		[52]={
@@ -12782,7 +12781,7 @@ return {
 			},
 			skill=52,
 			stats={
-				[1]="keystone_zealots_oath"
+				[1]="Zealot's Oath"
 			}
 		},
 		[55]={
@@ -12799,7 +12798,7 @@ return {
 			},
 			skill=55,
 			stats={
-				[1]="damaging_ailments_deal_damage_+%_faster"
+				[1]="Damaging Ailments deal damage 12% faster"
 			}
 		},
 		[60]={
@@ -12816,7 +12815,7 @@ return {
 			},
 			skill=60,
 			stats={
-				[1]="global_chance_to_blind_on_hit_%"
+				[1]="5% Global chance to Blind Enemies on hit"
 			}
 		},
 		[74]={
@@ -12857,7 +12856,7 @@ return {
 			},
 			skill=97,
 			stats={
-				[1]="attack_speed_+%"
+				[1]="3% increased Attack Speed"
 			}
 		},
 		[116]={
@@ -12874,9 +12873,9 @@ return {
 			},
 			skill=116,
 			stats={
-				[1]="intelligence_+%",
-				[2]="mana_regeneration_rate_+%",
-				[3]="maximum_energy_shield_+%"
+				[1]="18% increased maximum Energy Shield",
+				[2]="12% increased Mana Regeneration Rate",
+				[3]="6% increased Intelligence"
 			}
 		},
 		[144]={
@@ -12894,8 +12893,8 @@ return {
 			},
 			skill=144,
 			stats={
-				[1]="elemental_damage_+%",
-				[2]="hit_damage_freeze_multiplier_+%"
+				[1]="10% increased Freeze Buildup",
+				[2]="8% increased Elemental Damage"
 			}
 		},
 		[151]={
@@ -12913,7 +12912,7 @@ return {
 			},
 			skill=151,
 			stats={
-				[1]="accuracy_rating_+%_vs_enemies_in_close_range"
+				[1]="16% increased Accuracy Rating at Close Range"
 			}
 		},
 		[178]={
@@ -12929,7 +12928,7 @@ return {
 			},
 			skill=178,
 			stats={
-				[1]="herald_skills_mana_reservation_+%"
+				[1]="6% reduced Reservation of Herald Skills"
 			}
 		},
 		[244]={
@@ -12947,7 +12946,7 @@ return {
 			},
 			skill=244,
 			stats={
-				[1]="attack_damage_+%_vs_rare_or_unique_enemy"
+				[1]="16% increased Attack Damage against Rare or Unique Enemies"
 			}
 		},
 		[256]={
@@ -12964,7 +12963,7 @@ return {
 			},
 			skill=256,
 			stats={
-				[1]="link_skill_buff_effect_+%"
+				[1]="Link Skills have 10% increased Buff Effect"
 			}
 		},
 		[315]={
@@ -12981,7 +12980,7 @@ return {
 			},
 			skill=315,
 			stats={
-				[1]="base_bleed_duration_+%"
+				[1]="10% increased Bleeding Duration"
 			}
 		},
 		[326]={
@@ -12998,7 +12997,7 @@ return {
 			},
 			skill=326,
 			stats={
-				[1]="quarterstaff_critical_strike_chance_+%"
+				[1]="12% increased Critical Hit Chance with Quarterstaves"
 			}
 		},
 		[328]={
@@ -13016,7 +13015,7 @@ return {
 			},
 			skill=328,
 			stats={
-				[1]="bow_accuracy_rating_+%"
+				[1]="10% increased Accuracy Rating with Bows"
 			}
 		},
 		[336]={
@@ -13034,8 +13033,8 @@ return {
 			},
 			skill=336,
 			stats={
-				[1]="base_reduce_enemy_cold_resistance_%",
-				[2]="base_reduce_enemy_lightning_resistance_%"
+				[1]="Damage Penetrates 15% Cold Resistance",
+				[2]="Damage Penetrates 8% Lightning Resistance"
 			}
 		},
 		[354]={
@@ -13052,7 +13051,7 @@ return {
 			},
 			skill=354,
 			stats={
-				[1]="grenade_skill_cooldown_speed_+%"
+				[1]="15% increased Cooldown Recovery Rate for Grenade Skills"
 			}
 		},
 		[372]={
@@ -13069,7 +13068,7 @@ return {
 			},
 			skill=372,
 			stats={
-				[1]="base_armour_%_applies_to_fire_damage"
+				[1]="25% of Armour also applies to Fire Damage taken from Hits"
 			}
 		},
 		[375]={
@@ -13086,7 +13085,7 @@ return {
 			},
 			skill=375,
 			stats={
-				[1]="mace_damage_+%"
+				[1]="15% increased Damage with Maces"
 			}
 		},
 		[440]={
@@ -13103,7 +13102,7 @@ return {
 			},
 			skill=440,
 			stats={
-				[1]="shield_armour_+%"
+				[1]="25% increased Defences from Equipped Shield"
 			}
 		},
 		[506]={
@@ -13120,8 +13119,8 @@ return {
 			},
 			skill=506,
 			stats={
-				[1]="physical_damage_reduction_rating_+%",
-				[2]="maximum_energy_shield_+%"
+				[1]="12% increased Armour",
+				[2]="12% increased maximum Energy Shield"
 			}
 		},
 		[511]={
@@ -13139,8 +13138,8 @@ return {
 			},
 			skill=511,
 			stats={
-				[1]="attack_damage_+%",
-				[2]="spell_damage_+%"
+				[1]="8% increased Spell Damage",
+				[2]="8% increased Attack Damage"
 			}
 		},
 		[517]={
@@ -13158,7 +13157,7 @@ return {
 			},
 			skill=517,
 			stats={
-				[1]="energy_shield_recharge_rate_+%"
+				[1]="15% increased Energy Shield Recharge Rate"
 			}
 		},
 		[526]={
@@ -13175,7 +13174,7 @@ return {
 			},
 			skill=526,
 			stats={
-				[1]="mace_hit_damage_stun_multiplier_+%"
+				[1]="18% increased Stun Buildup with Maces"
 			}
 		},
 		[535]={
@@ -13192,7 +13191,7 @@ return {
 			},
 			skill=535,
 			stats={
-				[1]="base_critical_strike_multiplier_+"
+				[1]="15% increased Critical Damage Bonus"
 			}
 		},
 		[558]={
@@ -13209,7 +13208,7 @@ return {
 			},
 			skill=558,
 			stats={
-				[1]="fire_damage_+%"
+				[1]="12% increased Fire Damage"
 			}
 		},
 		[630]={
@@ -13226,7 +13225,7 @@ return {
 			},
 			skill=630,
 			stats={
-				[1]="base_critical_strike_multiplier_+"
+				[1]="15% increased Critical Damage Bonus"
 			}
 		},
 		[632]={
@@ -13243,7 +13242,7 @@ return {
 			},
 			skill=632,
 			stats={
-				[1]="dagger_attack_speed_+%"
+				[1]="3% increased Attack Speed with Daggers"
 			}
 		},
 		[664]={
@@ -13261,7 +13260,7 @@ return {
 			},
 			skill=664,
 			stats={
-				[1]="breach_flame_effects_doubled"
+				[1]="Effect and Duration of Flames of Chayula on You is Doubled"
 			}
 		},
 		[703]={
@@ -13278,7 +13277,7 @@ return {
 			},
 			skill=703,
 			stats={
-				[1]="stun_threshold_+_from_%_maximum_energy_shield"
+				[1]="Gain 8% of maximum Energy Shield as additional Stun Threshold"
 			}
 		},
 		[722]={
@@ -13298,7 +13297,7 @@ return {
 			},
 			skill=722,
 			stats={
-				[1]="display_passive_attribute_text"
+				[1]="+5 to any Attribute"
 			}
 		},
 		[770]={
@@ -13316,7 +13315,7 @@ return {
 			},
 			skill=770,
 			stats={
-				[1]="maximum_mana_+%"
+				[1]="4% increased maximum Mana"
 			}
 		},
 		[858]={
@@ -13333,7 +13332,7 @@ return {
 			},
 			skill=858,
 			stats={
-				[1]="chaos_damage_+%"
+				[1]="7% increased Chaos Damage"
 			}
 		},
 		[904]={
@@ -13350,7 +13349,7 @@ return {
 			},
 			skill=904,
 			stats={
-				[1]="mana_regeneration_rate_+%"
+				[1]="10% increased Mana Regeneration Rate"
 			}
 		},
 		[917]={
@@ -13367,7 +13366,7 @@ return {
 			},
 			skill=917,
 			stats={
-				[1]="stun_threshold_+%"
+				[1]="12% increased Stun Threshold"
 			}
 		},
 		[934]={
@@ -13385,7 +13384,7 @@ return {
 			},
 			skill=934,
 			stats={
-				[1]="ailment_threshold_+_per_dexterity"
+				[1]="+4 to Ailment Threshold per Dexterity"
 			}
 		},
 		[968]={
@@ -13402,8 +13401,8 @@ return {
 			},
 			skill=968,
 			stats={
-				[1]="fire_damage_+%",
-				[2]="base_skill_area_of_effect_+%"
+				[1]="6% increased Fire Damage",
+				[2]="6% increased Area of Effect"
 			}
 		},
 		[1019]={
@@ -13421,7 +13420,7 @@ return {
 			},
 			skill=1019,
 			stats={
-				[1]="evasion_and_physical_damage_reduction_rating_+%"
+				[1]="12% increased Armour and Evasion Rating"
 			}
 		},
 		[1087]={
@@ -13438,7 +13437,7 @@ return {
 			},
 			skill=1087,
 			stats={
-				[1]="area_of_effect_+%_if_enemy_stunned_with_two_handed_melee_weapon_recently"
+				[1]="30% increased Area of Effect if you've Stunned an Enemy with a Two Handed Melee Weapon Recently"
 			}
 		},
 		[1104]={
@@ -13455,8 +13454,9 @@ return {
 			},
 			skill=1104,
 			stats={
-				[1]="gain_maximum_power_charges_on_power_charge_gained_%_chance",
-				[2]="max_power_charges"
+				[1]="+1 to Maximum Power Charges",
+				[2]="5% chance that if you would gain Power Charges, you instead gain up to",
+				[3]="your maximum number of Power Charges"
 			}
 		},
 		[1106]={
@@ -13472,7 +13472,7 @@ return {
 			},
 			skill=1106,
 			stats={
-				[1]="attack_speed_+%"
+				[1]="3% increased Attack Speed"
 			}
 		},
 		[1130]={
@@ -13489,7 +13489,7 @@ return {
 			},
 			skill=1130,
 			stats={
-				[1]="flail_damage_+%"
+				[1]="10% increased Damage with Flails"
 			}
 		},
 		[1140]={
@@ -13506,7 +13506,7 @@ return {
 			},
 			skill=1140,
 			stats={
-				[1]="display_passive_attribute_text"
+				[1]="+5 to any Attribute"
 			}
 		},
 		[1143]={
@@ -13523,7 +13523,7 @@ return {
 			},
 			skill=1143,
 			stats={
-				[1]="base_spell_critical_strike_multiplier_+"
+				[1]="15% increased Critical Spell Damage Bonus"
 			}
 		},
 		[1151]={
@@ -13540,7 +13540,7 @@ return {
 			},
 			skill=1151,
 			stats={
-				[1]="hit_damage_freeze_multiplier_+%"
+				[1]="15% increased Freeze Buildup"
 			}
 		},
 		[1169]={
@@ -13558,9 +13558,9 @@ return {
 			},
 			skill=1169,
 			stats={
-				[1]="warcry_cooldown_speed_+%",
-				[2]="warcry_speed_+%",
-				[3]="restore_life_and_mana_on_warcry_%"
+				[1]="Recover 2% of Life and Mana when you use a Warcry",
+				[2]="24% increased Warcry Speed",
+				[3]="18% increased Warcry Cooldown Recovery Rate"
 			}
 		},
 		[1170]={
@@ -13578,7 +13578,7 @@ return {
 			},
 			skill=1170,
 			stats={
-				[1]="attack_area_damage_+%"
+				[1]="12% increased Attack Area Damage"
 			}
 		},
 		[1200]={
@@ -13598,7 +13598,7 @@ return {
 			},
 			skill=1200,
 			stats={
-				[1]="display_passive_attribute_text"
+				[1]="+5 to any Attribute"
 			}
 		},
 		[1207]={
@@ -13615,7 +13615,7 @@ return {
 			},
 			skill=1207,
 			stats={
-				[1]="display_passive_attribute_text"
+				[1]="+5 to any Attribute"
 			}
 		},
 		[1214]={
@@ -13632,8 +13632,8 @@ return {
 			},
 			skill=1214,
 			stats={
-				[1]="block_chance_+%",
-				[2]="shield_armour_+%"
+				[1]="4% increased Block chance",
+				[2]="15% increased Defences from Equipped Shield"
 			}
 		},
 		[1218]={
@@ -13650,7 +13650,7 @@ return {
 			},
 			skill=1218,
 			stats={
-				[1]="minion_maximum_life_+%"
+				[1]="Minions have 10% increased maximum Life"
 			}
 		},
 		[1286]={
@@ -13667,7 +13667,7 @@ return {
 			},
 			skill=1286,
 			stats={
-				[1]="thorns_damage_+%"
+				[1]="16% increased Thorns damage"
 			}
 		},
 		[1347]={
@@ -13685,7 +13685,7 @@ return {
 			},
 			skill=1347,
 			stats={
-				[1]="skill_speed_+%"
+				[1]="4% increased Skill Speed"
 			}
 		},
 		[1352]={
@@ -13702,8 +13702,8 @@ return {
 			},
 			skill=1352,
 			stats={
-				[1]="stun_threshold_+%",
-				[2]="maximum_life_+%"
+				[1]="3% increased maximum Life",
+				[2]="30% increased Stun Threshold"
 			}
 		},
 		[1433]={
@@ -13723,7 +13723,7 @@ return {
 			},
 			skill=1433,
 			stats={
-				[1]="display_passive_attribute_text"
+				[1]="+5 to any Attribute"
 			}
 		},
 		[1442]={
@@ -13741,7 +13741,7 @@ return {
 			},
 			skill=1442,
 			stats={
-				[1]="all_attributes_+%"
+				[1]="3% increased Attributes"
 			}
 		},
 		[1447]={
@@ -13758,7 +13758,7 @@ return {
 			},
 			skill=1447,
 			stats={
-				[1]="minion_damage_+%"
+				[1]="Minions deal 10% increased Damage"
 			}
 		},
 		[1459]={
@@ -13775,7 +13775,7 @@ return {
 			},
 			skill=1459,
 			stats={
-				[1]="mana_regeneration_rate_+%_while_stationary"
+				[1]="16% increased Mana Regeneration Rate while stationary"
 			}
 		},
 		[1468]={
@@ -13792,7 +13792,7 @@ return {
 			},
 			skill=1468,
 			stats={
-				[1]="mana_regeneration_rate_+%"
+				[1]="10% increased Mana Regeneration Rate"
 			}
 		},
 		[1546]={
@@ -13809,9 +13809,9 @@ return {
 			},
 			skill=1546,
 			stats={
-				[1]="physical_damage_reduction_rating_+%",
-				[2]="maximum_energy_shield_+%",
-				[3]="base_movement_velocity_+%"
+				[1]="3% increased Movement Speed",
+				[2]="25% increased Armour",
+				[3]="25% increased maximum Energy Shield"
 			}
 		},
 		[1579]={
@@ -13829,7 +13829,7 @@ return {
 			},
 			skill=1579,
 			stats={
-				[1]="base_cooldown_speed_+%"
+				[1]="6% increased Cooldown Recovery Rate"
 			}
 		},
 		[1583]={
@@ -13868,7 +13868,7 @@ return {
 			},
 			skill=1594,
 			stats={
-				[1]="flask_charges_gained_+%"
+				[1]="10% increased Flask Charges gained"
 			}
 		},
 		[1599]={
@@ -13885,8 +13885,8 @@ return {
 			},
 			skill=1599,
 			stats={
-				[1]="physical_damage_+%",
-				[2]="critical_strike_chance_+%"
+				[1]="5% increased Critical Hit Chance",
+				[2]="8% increased Global Physical Damage"
 			}
 		},
 		[1631]={
@@ -13904,7 +13904,7 @@ return {
 			},
 			skill=1631,
 			stats={
-				[1]="charm_duration_+%"
+				[1]="10% increased Charm Effect Duration"
 			}
 		},
 		[1723]={
@@ -13921,7 +13921,7 @@ return {
 			},
 			skill=1723,
 			stats={
-				[1]="base_poison_duration_+%"
+				[1]="10% increased Poison Duration"
 			}
 		},
 		[1755]={
@@ -13938,7 +13938,7 @@ return {
 			},
 			skill=1755,
 			stats={
-				[1]="spell_damage_+%"
+				[1]="8% increased Spell Damage"
 			}
 		},
 		[1773]={
@@ -13955,8 +13955,8 @@ return {
 			},
 			skill=1773,
 			stats={
-				[1]="ailment_effect_+%",
-				[2]="damaging_ailment_duration_+%"
+				[1]="5% increased Magnitude of Ailments you inflict",
+				[2]="5% increased Duration of Damaging Ailments on Enemies"
 			}
 		},
 		[1801]={
@@ -13973,7 +13973,7 @@ return {
 			},
 			skill=1801,
 			stats={
-				[1]="global_chance_to_blind_on_hit_%"
+				[1]="5% Global chance to Blind Enemies on hit"
 			}
 		},
 		[1823]={
@@ -13991,8 +13991,8 @@ return {
 			},
 			skill=1823,
 			stats={
-				[1]="energy_shield_from_helmet_+%",
-				[2]="light_radius_+%"
+				[1]="20% increased Light Radius",
+				[2]="70% increased Energy Shield from Equipped Helmet"
 			}
 		},
 		[1826]={
@@ -14009,7 +14009,7 @@ return {
 			},
 			skill=1826,
 			stats={
-				[1]="display_passive_attribute_text"
+				[1]="+5 to any Attribute"
 			}
 		},
 		[1841]={
@@ -14026,7 +14026,7 @@ return {
 			},
 			skill=1841,
 			stats={
-				[1]="evasion_rating_+%"
+				[1]="15% increased Evasion Rating"
 			}
 		},
 		[1869]={
@@ -14043,7 +14043,7 @@ return {
 			},
 			skill=1869,
 			stats={
-				[1]="hit_damage_freeze_multiplier_+%"
+				[1]="15% increased Freeze Buildup"
 			}
 		},
 		[1913]={
@@ -14061,7 +14061,7 @@ return {
 			},
 			skill=1913,
 			stats={
-				[1]="base_physical_damage_reduction_rating"
+				[1]="+20 to Armour"
 			}
 		},
 		[1953]={
@@ -14078,7 +14078,7 @@ return {
 			},
 			skill=1953,
 			stats={
-				[1]="shock_effect_+%"
+				[1]="15% increased Magnitude of Shock you inflict"
 			}
 		},
 		[1994]={
@@ -14096,7 +14096,7 @@ return {
 			},
 			skill=1994,
 			stats={
-				[1]="warcry_speed_+%"
+				[1]="20% increased Warcry Speed"
 			}
 		},
 		[1995]={
@@ -14112,7 +14112,7 @@ return {
 			},
 			skill=1995,
 			stats={
-				[1]="quiver_mod_effect_+%"
+				[1]="15% increased bonuses gained from Equipped Quiver"
 			}
 		},
 		[2021]={
@@ -14129,8 +14129,8 @@ return {
 			},
 			skill=2021,
 			stats={
-				[1]="flask_mana_to_recover_+%",
-				[2]="attack_and_cast_speed_+%_while_affected_by_a_mana_flask"
+				[1]="30% increased Mana Recovery from Flasks",
+				[2]="8% increased Attack and Cast Speed during Effect of any Mana Flask"
 			}
 		},
 		[2071]={
@@ -14147,7 +14147,7 @@ return {
 			},
 			skill=2071,
 			stats={
-				[1]="mana_regeneration_rate_+%"
+				[1]="10% increased Mana Regeneration Rate"
 			}
 		},
 		[2091]={
@@ -14164,7 +14164,7 @@ return {
 			},
 			skill=2091,
 			stats={
-				[1]="base_chance_to_poison_on_hit_%"
+				[1]="8% chance to Poison on Hit"
 			}
 		},
 		[2113]={
@@ -14183,9 +14183,8 @@ return {
 			},
 			skill=2113,
 			stats={
-				[1]="quarterstaff_critical_strike_multiplier_+",
-				[2]="quarterstaff_accuracy_rating_+%",
-				[3]="base_dexterity"
+				[1]="25% increased Accuracy Rating with Quarterstaves",
+				[2]="25% increased Critical Damage Bonus with Quarterstaves"
 			}
 		},
 		[2119]={
@@ -14203,7 +14202,7 @@ return {
 			},
 			skill=2119,
 			stats={
-				[1]="base_life_leech_amount_+%"
+				[1]="10% increased amount of Life Leeched"
 			}
 		},
 		[2138]={
@@ -14220,8 +14219,8 @@ return {
 			},
 			skill=2138,
 			stats={
-				[1]="chaos_damage_+%",
-				[2]="global_defences_+%"
+				[1]="29% increased Chaos Damage",
+				[2]="10% increased Global Defences"
 			}
 		},
 		[2174]={
@@ -14238,7 +14237,7 @@ return {
 			},
 			skill=2174,
 			stats={
-				[1]="totem_damage_+%"
+				[1]="16% increased Totem Damage"
 			}
 		},
 		[2211]={
@@ -14255,7 +14254,7 @@ return {
 			},
 			skill=2211,
 			stats={
-				[1]="damage_+%_with_herald_skills"
+				[1]="Herald Skills deal 20% increased Damage"
 			}
 		},
 		[2244]={
@@ -14272,7 +14271,7 @@ return {
 			},
 			skill=2244,
 			stats={
-				[1]="gain_arcane_surge_on_crit_%_chance"
+				[1]="5% chance to Gain Arcane Surge when you deal a Critical Hit"
 			}
 		},
 		[2254]={
@@ -14295,8 +14294,7 @@ return {
 			},
 			skill=2254,
 			stats={
-				[1]="maximum_energy_shield_+%",
-				[2]="base_intelligence"
+				[1]="30% increased maximum Energy Shield"
 			}
 		},
 		[2334]={
@@ -14314,7 +14312,6 @@ return {
 			},
 			skill=2334,
 			stats={
-				[1]="base_dexterity"
 			}
 		},
 		[2335]={
@@ -14332,7 +14329,7 @@ return {
 			},
 			skill=2335,
 			stats={
-				[1]="spell_skill_projectile_speed_+%"
+				[1]="20% increased Projectile Speed for Spell Skills"
 			}
 		},
 		[2361]={
@@ -14349,8 +14346,8 @@ return {
 			},
 			skill=2361,
 			stats={
-				[1]="quarterstaff_hit_damage_stun_multiplier_+%",
-				[2]="knockback_distance_+%"
+				[1]="20% increased Knockback Distance",
+				[2]="20% increased Stun Buildup with Quarterstaves"
 			}
 		},
 		[2394]={
@@ -14367,8 +14364,8 @@ return {
 			},
 			skill=2394,
 			stats={
-				[1]="attack_speed_while_dual_wielding_+%",
-				[2]="critical_strike_chance_while_dual_wielding_+%"
+				[1]="6% increased Attack Speed while Dual Wielding",
+				[2]="15% increased Attack Critical Hit Chance while Dual Wielding"
 			}
 		},
 		[2408]={
@@ -14388,7 +14385,7 @@ return {
 			},
 			skill=2408,
 			stats={
-				[1]="display_passive_attribute_text"
+				[1]="+5 to any Attribute"
 			}
 		},
 		[2448]={
@@ -14407,7 +14404,7 @@ return {
 			},
 			skill=2448,
 			stats={
-				[1]="display_passive_attribute_text"
+				[1]="+5 to any Attribute"
 			}
 		},
 		[2455]={
@@ -14424,7 +14421,7 @@ return {
 			},
 			skill=2455,
 			stats={
-				[1]="projectile_damage_+%"
+				[1]="10% increased Projectile Damage"
 			}
 		},
 		[2486]={
@@ -14442,7 +14439,7 @@ return {
 			},
 			skill=2486,
 			stats={
-				[1]="damage_with_hits_is_lucky_vs_enemies_on_low_life"
+				[1]="Damage with Hits is Lucky against Enemies that are on Low Life"
 			}
 		},
 		[2491]={
@@ -14476,7 +14473,7 @@ return {
 			},
 			skill=2500,
 			stats={
-				[1]="base_chance_to_poison_on_hit_%"
+				[1]="8% chance to Poison on Hit"
 			}
 		},
 		[2508]={
@@ -14493,7 +14490,7 @@ return {
 			},
 			skill=2508,
 			stats={
-				[1]="damage_taken_goes_to_life_over_4_seconds_%"
+				[1]="3% of Damage taken Recouped as Life"
 			}
 		},
 		[2511]={
@@ -14510,8 +14507,8 @@ return {
 			},
 			skill=2511,
 			stats={
-				[1]="attack_critical_strike_multiplier_+",
-				[2]="critical_strike_multiplier_+_vs_stunned_enemies"
+				[1]="25% increased Critical Damage Bonus for Attack Damage",
+				[2]="+25% to Critical Damage Bonus against Stunned Enemies"
 			}
 		},
 		[2559]={
@@ -14528,7 +14525,7 @@ return {
 			},
 			skill=2559,
 			stats={
-				[1]="flask_charges_gained_+%"
+				[1]="10% increased Flask Charges gained"
 			}
 		},
 		[2575]={
@@ -14545,8 +14542,8 @@ return {
 			},
 			skill=2575,
 			stats={
-				[1]="summon_totem_cast_speed_+%",
-				[2]="attack_and_cast_speed_+%_on_placing_totem"
+				[1]="30% increased Totem Placement speed",
+				[2]="8% increased Attack and Cast Speed if you've summoned a Totem Recently"
 			}
 		},
 		[2582]={
@@ -14565,7 +14562,7 @@ return {
 			},
 			skill=2582,
 			stats={
-				[1]="display_passive_attribute_text"
+				[1]="+5 to any Attribute"
 			}
 		},
 		[2606]={
@@ -14586,7 +14583,7 @@ return {
 			},
 			skill=2606,
 			stats={
-				[1]="minion_maximum_life_+%"
+				[1]="Minions have 10% increased maximum Life"
 			}
 		},
 		[2645]={
@@ -14604,7 +14601,7 @@ return {
 			},
 			skill=2645,
 			stats={
-				[1]="passive_tree_mace_damage_+%_final_vs_heavy_stunned_enemies"
+				[1]="20% more Damage against Heavy Stunned Enemies with Maces"
 			}
 		},
 		[2656]={
@@ -14623,7 +14620,7 @@ return {
 			},
 			skill=2656,
 			stats={
-				[1]="mark_effect_+%"
+				[1]="10% increased Effect of your Mark Skills"
 			}
 		},
 		[2672]={
@@ -14640,7 +14637,7 @@ return {
 			},
 			skill=2672,
 			stats={
-				[1]="base_spell_critical_strike_multiplier_+"
+				[1]="15% increased Critical Spell Damage Bonus"
 			}
 		},
 		[2847]={
@@ -14659,7 +14656,7 @@ return {
 			},
 			skill=2847,
 			stats={
-				[1]="display_passive_attribute_text"
+				[1]="+5 to any Attribute"
 			}
 		},
 		[2857]={
@@ -14678,8 +14675,8 @@ return {
 			},
 			skill=2857,
 			stats={
-				[1]="can_apply_additional_shock",
-				[2]="stormweaver_shock_duration_+%_final"
+				[1]="Targets can be affected by two of your Shocks at the same time",
+				[2]="50% less Shock Duration"
 			}
 		},
 		[2863]={
@@ -14696,8 +14693,8 @@ return {
 			},
 			skill=2863,
 			stats={
-				[1]="chill_and_freeze_duration_+%",
-				[2]="hit_damage_freeze_multiplier_+%"
+				[1]="15% increased Freeze Buildup",
+				[2]="15% increased Chill and Freeze Duration on Enemies"
 			}
 		},
 		[2888]={
@@ -14714,7 +14711,7 @@ return {
 			},
 			skill=2888,
 			stats={
-				[1]="base_life_leech_amount_+%"
+				[1]="10% increased amount of Life Leeched"
 			}
 		},
 		[2936]={
@@ -14731,7 +14728,7 @@ return {
 			},
 			skill=2936,
 			stats={
-				[1]="attack_critical_strike_multiplier_+"
+				[1]="20% increased Critical Damage Bonus for Attack Damage"
 			}
 		},
 		[2964]={
@@ -14748,7 +14745,7 @@ return {
 			},
 			skill=2964,
 			stats={
-				[1]="thorns_damage_+%"
+				[1]="16% increased Thorns damage"
 			}
 		},
 		[2999]={
@@ -14765,8 +14762,8 @@ return {
 			},
 			skill=2999,
 			stats={
-				[1]="cast_speed_+%_when_on_full_life",
-				[2]="cast_speed_+%_when_on_low_life"
+				[1]="20% increased Cast Speed when on Low Life",
+				[2]="10% reduced Cast Speed when on Full Life"
 			}
 		},
 		[3025]={
@@ -14785,7 +14782,7 @@ return {
 			},
 			skill=3025,
 			stats={
-				[1]="display_passive_attribute_text"
+				[1]="+5 to any Attribute"
 			}
 		},
 		[3027]={
@@ -14802,7 +14799,7 @@ return {
 			},
 			skill=3027,
 			stats={
-				[1]="physical_damage_+%"
+				[1]="10% increased Global Physical Damage"
 			}
 		},
 		[3041]={
@@ -14821,7 +14818,7 @@ return {
 			},
 			skill=3041,
 			stats={
-				[1]="display_passive_attribute_text"
+				[1]="+5 to any Attribute"
 			}
 		},
 		[3051]={
@@ -14837,7 +14834,7 @@ return {
 			},
 			skill=3051,
 			stats={
-				[1]="offering_life_+%"
+				[1]="Offerings have 30% increased Maximum Life"
 			}
 		},
 		[3084]={
@@ -14855,7 +14852,7 @@ return {
 			},
 			skill=3084,
 			stats={
-				[1]="global_item_attribute_requirements_+%"
+				[1]="Equipment and Skill Gems have 4% reduced Attribute Requirements"
 			}
 		},
 		[3109]={
@@ -14872,7 +14869,7 @@ return {
 			},
 			skill=3109,
 			stats={
-				[1]="grenade_skill_area_of_effect_+%"
+				[1]="12% increased Grenade Area of Effect"
 			}
 		},
 		[3128]={
@@ -14891,7 +14888,7 @@ return {
 			},
 			skill=3128,
 			stats={
-				[1]="cast_speed_for_cold_skills_+%"
+				[1]="3% increased Cast Speed with Cold Skills"
 			}
 		},
 		[3131]={
@@ -14908,7 +14905,7 @@ return {
 			},
 			skill=3131,
 			stats={
-				[1]="attack_speed_while_dual_wielding_+%"
+				[1]="3% increased Attack Speed while Dual Wielding"
 			}
 		},
 		[3165]={
@@ -14926,7 +14923,7 @@ return {
 			},
 			skill=3165,
 			stats={
-				[1]="maximum_life_+%"
+				[1]="3% increased maximum Life"
 			}
 		},
 		[3188]={
@@ -14944,7 +14941,7 @@ return {
 			},
 			skill=3188,
 			stats={
-				[1]="attack_speed_+%_if_have_been_hit_recently"
+				[1]="12% increased Attack Speed if you've been Hit Recently"
 			}
 		},
 		[3203]={
@@ -14961,8 +14958,8 @@ return {
 			},
 			skill=3203,
 			stats={
-				[1]="evasion_rating_+%",
-				[2]="maximum_energy_shield_+%"
+				[1]="12% increased Evasion Rating",
+				[2]="12% increased maximum Energy Shield"
 			}
 		},
 		[3209]={
@@ -14980,7 +14977,7 @@ return {
 			},
 			skill=3209,
 			stats={
-				[1]="evasion_rating_+%"
+				[1]="15% increased Evasion Rating"
 			}
 		},
 		[3215]={
@@ -14997,8 +14994,8 @@ return {
 			},
 			skill=3215,
 			stats={
-				[1]="maximum_energy_shield_+%",
-				[2]="maximum_mana_+%"
+				[1]="40% increased maximum Energy Shield",
+				[2]="10% reduced maximum Mana"
 			}
 		},
 		[3218]={
@@ -15016,7 +15013,7 @@ return {
 			},
 			skill=3218,
 			stats={
-				[1]="elemental_damage_+%"
+				[1]="10% increased Elemental Damage"
 			}
 		},
 		[3234]={
@@ -15033,7 +15030,7 @@ return {
 			},
 			skill=3234,
 			stats={
-				[1]="hit_damage_pin_multiplier_+%"
+				[1]="15% increased Pin Buildup"
 			}
 		},
 		[3242]={
@@ -15050,7 +15047,7 @@ return {
 			},
 			skill=3242,
 			stats={
-				[1]="mana_regeneration_rate_+%"
+				[1]="10% increased Mana Regeneration Rate"
 			}
 		},
 		[3245]={
@@ -15067,8 +15064,8 @@ return {
 			},
 			skill=3245,
 			stats={
-				[1]="thorns_damage_+%",
-				[2]="block_chance_+%"
+				[1]="4% increased Block chance",
+				[2]="10% increased Thorns damage"
 			}
 		},
 		[3251]={
@@ -15087,7 +15084,7 @@ return {
 			},
 			skill=3251,
 			stats={
-				[1]="display_passive_attribute_text"
+				[1]="+5 to any Attribute"
 			}
 		},
 		[3332]={
@@ -15103,7 +15100,7 @@ return {
 			},
 			skill=3332,
 			stats={
-				[1]="minion_cold_damage_resistance_%"
+				[1]="Minions have +20% to Cold Resistance"
 			}
 		},
 		[3336]={
@@ -15120,7 +15117,7 @@ return {
 			},
 			skill=3336,
 			stats={
-				[1]="critical_hit_damage_bonus_+%_if_consumed_power_charge_recently"
+				[1]="20% increased Critical Damage Bonus if you've consumed a Power Charge Recently"
 			}
 		},
 		[3414]={
@@ -15137,7 +15134,7 @@ return {
 			},
 			skill=3414,
 			stats={
-				[1]="minion_lightning_damage_resistance_%"
+				[1]="Minions have +20% to Lightning Resistance"
 			}
 		},
 		[3419]={
@@ -15155,7 +15152,7 @@ return {
 			},
 			skill=3419,
 			stats={
-				[1]="dagger_damage_+%"
+				[1]="10% increased Damage with Daggers"
 			}
 		},
 		[3431]={
@@ -15172,7 +15169,7 @@ return {
 			},
 			skill=3431,
 			stats={
-				[1]="skill_speed_+%"
+				[1]="3% increased Skill Speed"
 			}
 		},
 		[3443]={
@@ -15190,7 +15187,7 @@ return {
 			},
 			skill=3443,
 			stats={
-				[1]="minion_damage_+%"
+				[1]="Minions deal 10% increased Damage"
 			}
 		},
 		[3446]={
@@ -15209,7 +15206,7 @@ return {
 			},
 			skill=3446,
 			stats={
-				[1]="display_passive_attribute_text"
+				[1]="+5 to any Attribute"
 			}
 		},
 		[3472]={
@@ -15226,7 +15223,7 @@ return {
 			},
 			skill=3472,
 			stats={
-				[1]="spell_critical_strike_chance_+%"
+				[1]="10% increased Critical Hit Chance for Spells"
 			}
 		},
 		[3492]={
@@ -15243,8 +15240,8 @@ return {
 			},
 			skill=3492,
 			stats={
-				[1]="chaos_damage_+%",
-				[2]="enemies_chaos_resistance_%_while_cursed"
+				[1]="29% increased Chaos Damage",
+				[2]="Enemies you Curse have -3% to Chaos Resistance"
 			}
 		},
 		[3516]={
@@ -15262,7 +15259,7 @@ return {
 			},
 			skill=3516,
 			stats={
-				[1]="melee_damage_+%"
+				[1]="10% increased Melee Damage"
 			}
 		},
 		[3567]={
@@ -15280,8 +15277,8 @@ return {
 			},
 			skill=3567,
 			stats={
-				[1]="maximum_mana_+%",
-				[2]="base_mana_cost_-%"
+				[1]="12% increased maximum Mana",
+				[2]="10% increased Mana Cost of Skills"
 			}
 		},
 		[3601]={
@@ -15298,7 +15295,7 @@ return {
 			},
 			skill=3601,
 			stats={
-				[1]="fire_damage_+%"
+				[1]="12% increased Fire Damage"
 			}
 		},
 		[3605]={
@@ -15332,7 +15329,7 @@ return {
 			},
 			skill=3628,
 			stats={
-				[1]="energy_shield_delay_-%"
+				[1]="15% faster start of Energy Shield Recharge"
 			}
 		},
 		[3630]={
@@ -15350,8 +15347,8 @@ return {
 			},
 			skill=3630,
 			stats={
-				[1]="evasion_rating_+%",
-				[2]="energy_shield_recharge_rate_+%"
+				[1]="10% increased Evasion Rating",
+				[2]="10% increased Energy Shield Recharge Rate"
 			}
 		},
 		[3640]={
@@ -15369,7 +15366,7 @@ return {
 			},
 			skill=3640,
 			stats={
-				[1]="damage_+%_while_unarmed"
+				[1]="14% increased Damage with Unarmed Attacks"
 			}
 		},
 		[3660]={
@@ -15388,7 +15385,7 @@ return {
 			},
 			skill=3660,
 			stats={
-				[1]="attacks_chance_to_blind_on_hit_%"
+				[1]="8% chance to Blind Enemies on Hit with Attacks"
 			}
 		},
 		[3688]={
@@ -15406,8 +15403,8 @@ return {
 			},
 			skill=3688,
 			stats={
-				[1]="damage_+%_if_triggered_skill_recently",
-				[2]="energy_generated_+%"
+				[1]="40% increased Damage if you've Triggered a Skill Recently",
+				[2]="Meta Skills gain 15% increased Energy"
 			}
 		},
 		[3698]={
@@ -15425,7 +15422,7 @@ return {
 			},
 			skill=3698,
 			stats={
-				[1]="jagged_ground_enemy_damage_taken_+%"
+				[1]="Enemies in Jagged Ground you create take 10% increased Damage"
 			}
 		},
 		[3700]={
@@ -15442,8 +15439,8 @@ return {
 			},
 			skill=3700,
 			stats={
-				[1]="hit_damage_stun_multiplier_+%",
-				[2]="hit_damage_freeze_multiplier_+%"
+				[1]="10% increased Stun Buildup",
+				[2]="10% increased Freeze Buildup"
 			}
 		},
 		[3704]={
@@ -15462,10 +15459,9 @@ return {
 			},
 			skill=3704,
 			stats={
-				[1]="drain_focus_%_of_damage_dealt_on_hit",
-				[2]="%_maximum_life_as_focus",
-				[3]="focus_decay_%_per_minute",
-				[4]="focus_decay_delay_ms"
+				[1]="Enemies have Maximum Concentration equal to 40% of their Maximum Life",
+				[2]="Break enemy Concentration on Hit equal to 100% of Damage Dealt",
+				[3]="Enemies regain 10% of Concentration every second if they haven't lost Concentration in the past 5 seconds"
 			}
 		},
 		[3717]={
@@ -15483,7 +15479,7 @@ return {
 			},
 			skill=3717,
 			stats={
-				[1]="crossbow_damage_+%"
+				[1]="12% increased Damage with Crossbows"
 			}
 		},
 		[3762]={
@@ -15501,7 +15497,7 @@ return {
 			},
 			skill=3762,
 			stats={
-				[1]="ancestral_slam_every_other_slam"
+				[1]="Every second Slam Skill you use yourself is Ancestrally Boosted"
 			}
 		},
 		[3775]={
@@ -15518,7 +15514,7 @@ return {
 			},
 			skill=3775,
 			stats={
-				[1]="life_flask_charges_gained_+%"
+				[1]="15% increased Life Flask Charges gained"
 			}
 		},
 		[3781]={
@@ -15536,8 +15532,8 @@ return {
 			},
 			skill=3781,
 			stats={
-				[1]="mana_leech_applies_recovery_to_energy_shield_also",
-				[2]="cannot_recharge_energy_shield"
+				[1]="You cannot Recharge Energy Shield",
+				[2]="Mana Leech effects also Recover Energy Shield"
 			}
 		},
 		[3823]={
@@ -15555,8 +15551,8 @@ return {
 			},
 			skill=3823,
 			stats={
-				[1]="cold_damage_+%",
-				[2]="hit_damage_freeze_multiplier_+%"
+				[1]="18% increased Cold Damage",
+				[2]="30% increased Freeze Buildup"
 			}
 		},
 		[3843]={
@@ -15574,7 +15570,7 @@ return {
 			},
 			skill=3843,
 			stats={
-				[1]="block_chance_+%"
+				[1]="5% increased Block chance"
 			}
 		},
 		[3866]={
@@ -15591,7 +15587,7 @@ return {
 			},
 			skill=3866,
 			stats={
-				[1]="minion_maximum_life_+%"
+				[1]="Minions have 12% increased maximum Life"
 			}
 		},
 		[3894]={
@@ -15609,8 +15605,8 @@ return {
 			},
 			skill=3894,
 			stats={
-				[1]="stun_threshold_+_from_%_maximum_energy_shield",
-				[2]="maximum_life_mana_and_energy_shield_+%"
+				[1]="3% increased maximum Life, Mana and Energy Shield",
+				[2]="Gain 20% of maximum Energy Shield as additional Stun Threshold"
 			}
 		},
 		[3918]={
@@ -15627,7 +15623,7 @@ return {
 			},
 			skill=3918,
 			stats={
-				[1]="mana_regeneration_rate_+%"
+				[1]="10% increased Mana Regeneration Rate"
 			}
 		},
 		[3921]={
@@ -15645,7 +15641,7 @@ return {
 			},
 			skill=3921,
 			stats={
-				[1]="herald_skills_mana_reservation_+%"
+				[1]="15% reduced Reservation of Herald Skills"
 			}
 		},
 		[3936]={
@@ -15663,7 +15659,7 @@ return {
 			},
 			skill=3936,
 			stats={
-				[1]="melee_damage_+%"
+				[1]="10% increased Melee Damage"
 			}
 		},
 		[3985]={
@@ -15680,7 +15676,7 @@ return {
 			},
 			skill=3985,
 			stats={
-				[1]="base_attack_damage_penetrates_elemental_resist_%"
+				[1]="Attack Damage Penetrates 15% of Enemy Elemental Resistances"
 			}
 		},
 		[3987]={
@@ -15698,7 +15694,7 @@ return {
 			},
 			skill=3987,
 			stats={
-				[1]="skill_speed_+%"
+				[1]="4% increased Skill Speed"
 			}
 		},
 		[3988]={
@@ -15716,7 +15712,7 @@ return {
 			},
 			skill=3988,
 			stats={
-				[1]="empowered_attack_damage_+%"
+				[1]="Empowered Attacks deal 16% increased Damage"
 			}
 		},
 		[3995]={
@@ -15733,7 +15729,7 @@ return {
 			},
 			skill=3995,
 			stats={
-				[1]="reload_speed_+%"
+				[1]="15% increased Crossbow Reload Speed"
 			}
 		},
 		[3999]={
@@ -15752,7 +15748,7 @@ return {
 			},
 			skill=3999,
 			stats={
-				[1]="attack_area_damage_+%"
+				[1]="12% increased Attack Area Damage"
 			}
 		},
 		[4015]={
@@ -15770,7 +15766,7 @@ return {
 			},
 			skill=4015,
 			stats={
-				[1]="warcry_cooldown_speed_+%"
+				[1]="10% increased Warcry Cooldown Recovery Rate"
 			}
 		},
 		[4017]={
@@ -15787,7 +15783,7 @@ return {
 			},
 			skill=4017,
 			stats={
-				[1]="energy_shield_recharge_rate_+%"
+				[1]="15% increased Energy Shield Recharge Rate"
 			}
 		},
 		[4031]={
@@ -15804,7 +15800,7 @@ return {
 			},
 			skill=4031,
 			stats={
-				[1]="gain_%_maximum_energy_shield_as_freeze_threshold_+"
+				[1]="Gain 100% of Maximum Energy Shield as additional Freeze Threshold"
 			}
 		},
 		[4046]={
@@ -15821,7 +15817,7 @@ return {
 			},
 			skill=4046,
 			stats={
-				[1]="hit_damage_electrocute_multiplier_+%"
+				[1]="15% increased Electrocute Buildup"
 			}
 		},
 		[4059]={
@@ -15839,7 +15835,7 @@ return {
 			},
 			skill=4059,
 			stats={
-				[1]="display_passive_attribute_text"
+				[1]="+5 to any Attribute"
 			}
 		},
 		[4061]={
@@ -15857,7 +15853,7 @@ return {
 			},
 			skill=4061,
 			stats={
-				[1]="maximum_energy_shield_+%"
+				[1]="15% increased maximum Energy Shield"
 			}
 		},
 		[4083]={
@@ -15875,7 +15871,7 @@ return {
 			},
 			skill=4083,
 			stats={
-				[1]="base_poison_effect_+%"
+				[1]="10% increased Magnitude of Poison you inflict"
 			}
 		},
 		[4084]={
@@ -15892,7 +15888,7 @@ return {
 			},
 			skill=4084,
 			stats={
-				[1]="minion_damage_+%"
+				[1]="Minions deal 10% increased Damage"
 			}
 		},
 		[4113]={
@@ -15909,7 +15905,7 @@ return {
 			},
 			skill=4113,
 			stats={
-				[1]="hit_damage_freeze_multiplier_+%"
+				[1]="15% increased Freeze Buildup"
 			}
 		},
 		[4128]={
@@ -15927,7 +15923,7 @@ return {
 			},
 			skill=4128,
 			stats={
-				[1]="physical_damage_reduction_rating_+%"
+				[1]="15% increased Armour"
 			}
 		},
 		[4140]={
@@ -15945,7 +15941,7 @@ return {
 			},
 			skill=4140,
 			stats={
-				[1]="display_passive_attribute_text"
+				[1]="+5 to any Attribute"
 			}
 		},
 		[4157]={
@@ -15962,7 +15958,7 @@ return {
 			},
 			skill=4157,
 			stats={
-				[1]="critical_strike_chance_+%"
+				[1]="10% increased Critical Hit Chance"
 			}
 		},
 		[4203]={
@@ -15982,7 +15978,7 @@ return {
 			},
 			skill=4203,
 			stats={
-				[1]="display_passive_attribute_text"
+				[1]="+5 to any Attribute"
 			}
 		},
 		[4238]={
@@ -16000,9 +15996,8 @@ return {
 			},
 			skill=4238,
 			stats={
-				[1]="one_handed_melee_attack_speed_+%",
-				[2]="one_handed_melee_accuracy_rating_+%",
-				[3]="base_strength_and_dexterity"
+				[1]="6% increased Attack Speed with One Handed Melee Weapons",
+				[2]="15% increased Accuracy Rating with One Handed Melee Weapons"
 			}
 		},
 		[4271]={
@@ -16022,7 +16017,7 @@ return {
 			},
 			skill=4271,
 			stats={
-				[1]="minion_elemental_resistance_%"
+				[1]="Minions have +8% to all Elemental Resistances"
 			}
 		},
 		[4295]={
@@ -16040,8 +16035,8 @@ return {
 			},
 			skill=4295,
 			stats={
-				[1]="damage_taken_goes_to_mana_%",
-				[2]="life_regeneration_rate_+%"
+				[1]="20% reduced Life Regeneration rate",
+				[2]="20% of Damage taken Recouped as Mana"
 			}
 		},
 		[4313]={
@@ -16058,7 +16053,7 @@ return {
 			},
 			skill=4313,
 			stats={
-				[1]="projectile_damage_+%"
+				[1]="10% increased Projectile Damage"
 			}
 		},
 		[4328]={
@@ -16076,7 +16071,7 @@ return {
 			},
 			skill=4328,
 			stats={
-				[1]="display_passive_attribute_text"
+				[1]="+5 to any Attribute"
 			}
 		},
 		[4346]={
@@ -16094,7 +16089,7 @@ return {
 			},
 			skill=4346,
 			stats={
-				[1]="damage_+%_for_4_seconds_on_crit"
+				[1]="20% increased Damage if you've dealt a Critical Hit Recently"
 			}
 		},
 		[4377]={
@@ -16111,7 +16106,7 @@ return {
 			},
 			skill=4377,
 			stats={
-				[1]="accuracy_rating_while_dual_wielding_+%"
+				[1]="10% increased Accuracy Rating while Dual Wielding"
 			}
 		},
 		[4378]={
@@ -16129,7 +16124,7 @@ return {
 			},
 			skill=4378,
 			stats={
-				[1]="accuracy_rating_+%"
+				[1]="8% increased Accuracy Rating"
 			}
 		},
 		[4407]={
@@ -16145,7 +16140,7 @@ return {
 			},
 			skill=4407,
 			stats={
-				[1]="minion_additional_physical_damage_reduction_%"
+				[1]="Minions have 12% additional Physical Damage Reduction"
 			}
 		},
 		[4423]={
@@ -16162,7 +16157,7 @@ return {
 			},
 			skill=4423,
 			stats={
-				[1]="chance_to_poison_on_critical_strike_with_dagger_%"
+				[1]="Critical Hits with Daggers have a 25% chance to Poison the Enemy"
 			}
 		},
 		[4442]={
@@ -16179,7 +16174,7 @@ return {
 			},
 			skill=4442,
 			stats={
-				[1]="base_maximum_lightning_damage_resistance_%"
+				[1]="+1% to Maximum Lightning Resistance"
 			}
 		},
 		[4447]={
@@ -16198,8 +16193,8 @@ return {
 			},
 			skill=4447,
 			stats={
-				[1]="hit_damage_pin_multiplier_+%",
-				[2]="enemies_are_maimed_for_x_seconds_after_becoming_unpinned"
+				[1]="Enemies are Maimed for 4 seconds after becoming Unpinned",
+				[2]="40% increased Pin Buildup"
 			}
 		},
 		[4456]={
@@ -16219,7 +16214,7 @@ return {
 			},
 			skill=4456,
 			stats={
-				[1]="display_passive_attribute_text"
+				[1]="+5 to any Attribute"
 			}
 		},
 		[4519]={
@@ -16236,7 +16231,7 @@ return {
 			},
 			skill=4519,
 			stats={
-				[1]="damage_+%_for_4_seconds_on_crit"
+				[1]="20% increased Damage if you've dealt a Critical Hit Recently"
 			}
 		},
 		[4527]={
@@ -16256,7 +16251,7 @@ return {
 			},
 			skill=4527,
 			stats={
-				[1]="display_passive_attribute_text"
+				[1]="+5 to any Attribute"
 			}
 		},
 		[4534]={
@@ -16273,7 +16268,7 @@ return {
 			},
 			skill=4534,
 			stats={
-				[1]="base_chance_to_pierce_%"
+				[1]="50% chance to Pierce an Enemy"
 			}
 		},
 		[4536]={
@@ -16290,7 +16285,7 @@ return {
 			},
 			skill=4536,
 			stats={
-				[1]="quarterstaff_attack_speed_+%"
+				[1]="3% increased Attack Speed with Quarterstaves"
 			}
 		},
 		[4547]={
@@ -16307,7 +16302,7 @@ return {
 			},
 			skill=4547,
 			stats={
-				[1]="maximum_fire_damage_resistance_+%_per_40%_uncapped_fire_damage_resistance"
+				[1]="2% to Maximum Fire Resistance for each 40% Uncapped Fire Resistance"
 			}
 		},
 		[4577]={
@@ -16324,7 +16319,7 @@ return {
 			},
 			skill=4577,
 			stats={
-				[1]="attack_area_of_effect_+%"
+				[1]="8% increased Area of Effect for Attacks"
 			}
 		},
 		[4624]={
@@ -16341,7 +16336,7 @@ return {
 			},
 			skill=4624,
 			stats={
-				[1]="gain_x_rage_on_melee_hit"
+				[1]="Gain 1 Rage on Melee Hit"
 			}
 		},
 		[4627]={
@@ -16359,8 +16354,8 @@ return {
 			},
 			skill=4627,
 			stats={
-				[1]="non_skill_cold_damage_%_to_gain_as_fire_vs_frozen_enemies",
-				[2]="hit_damage_freeze_multiplier_+%"
+				[1]="20% increased Freeze Buildup",
+				[2]="Gain 25% of Cold Damage as Extra Fire Damage against Frozen Enemies"
 			}
 		},
 		[4664]={
@@ -16377,7 +16372,7 @@ return {
 			},
 			skill=4664,
 			stats={
-				[1]="trap_throwing_speed_+%"
+				[1]="6% increased Trap Throwing Speed"
 			}
 		},
 		[4665]={
@@ -16394,7 +16389,7 @@ return {
 			},
 			skill=4665,
 			stats={
-				[1]="life_regeneration_rate_per_minute_%"
+				[1]="Regenerate 0.2% of Life per second"
 			}
 		},
 		[4673]={
@@ -16411,8 +16406,7 @@ return {
 			},
 			skill=4673,
 			stats={
-				[1]="hit_damage_stun_multiplier_+%",
-				[2]="base_strength"
+				[1]="30% increased Stun Buildup"
 			}
 		},
 		[4709]={
@@ -16429,7 +16423,7 @@ return {
 			},
 			skill=4709,
 			stats={
-				[1]="accuracy_rating_+%_vs_enemies_in_close_range"
+				[1]="60% increased Accuracy Rating at Close Range"
 			}
 		},
 		[4716]={
@@ -16446,7 +16440,7 @@ return {
 			},
 			skill=4716,
 			stats={
-				[1]="mastery_chance_to_evade_melee_attacks_+%_final"
+				[1]="8% more chance to Evade Melee Attacks"
 			}
 		},
 		[4725]={
@@ -16463,7 +16457,7 @@ return {
 			},
 			skill=4725,
 			stats={
-				[1]="minion_damage_+%"
+				[1]="Minions deal 10% increased Damage"
 			}
 		},
 		[4739]={
@@ -16481,7 +16475,7 @@ return {
 			},
 			skill=4739,
 			stats={
-				[1]="spell_damage_+%"
+				[1]="10% increased Spell Damage"
 			}
 		},
 		[4748]={
@@ -16498,7 +16492,7 @@ return {
 			},
 			skill=4748,
 			stats={
-				[1]="energy_shield_delay_-%"
+				[1]="15% faster start of Energy Shield Recharge"
 			}
 		},
 		[4776]={
@@ -16515,7 +16509,7 @@ return {
 			},
 			skill=4776,
 			stats={
-				[1]="base_reduce_enemy_lightning_resistance_%"
+				[1]="Damage Penetrates 6% Lightning Resistance"
 			}
 		},
 		[4806]={
@@ -16533,7 +16527,7 @@ return {
 			},
 			skill=4806,
 			stats={
-				[1]="base_reduce_enemy_cold_resistance_%"
+				[1]="Damage Penetrates 6% Cold Resistance"
 			}
 		},
 		[4828]={
@@ -16550,7 +16544,7 @@ return {
 			},
 			skill=4828,
 			stats={
-				[1]="mana_regeneration_rate_+%"
+				[1]="10% increased Mana Regeneration Rate"
 			}
 		},
 		[4844]={
@@ -16567,7 +16561,7 @@ return {
 			},
 			skill=4844,
 			stats={
-				[1]="projectile_damage_+%"
+				[1]="10% increased Projectile Damage"
 			}
 		},
 		[4847]={
@@ -16584,7 +16578,7 @@ return {
 			},
 			skill=4847,
 			stats={
-				[1]="base_cast_speed_+%"
+				[1]="3% increased Cast Speed"
 			}
 		},
 		[4850]={
@@ -16601,8 +16595,8 @@ return {
 			},
 			skill=4850,
 			stats={
-				[1]="mana_regeneration_rate_+%",
-				[2]="shock_effect_+%"
+				[1]="6% increased Mana Regeneration Rate",
+				[2]="10% increased Magnitude of Shock you inflict"
 			}
 		},
 		[4882]={
@@ -16620,7 +16614,7 @@ return {
 			},
 			skill=4882,
 			stats={
-				[1]="totem_damage_+%"
+				[1]="16% increased Totem Damage"
 			}
 		},
 		[4925]={
@@ -16637,7 +16631,7 @@ return {
 			},
 			skill=4925,
 			stats={
-				[1]="chaos_damage_+%"
+				[1]="7% increased Chaos Damage"
 			}
 		},
 		[4931]={
@@ -16655,8 +16649,8 @@ return {
 			},
 			skill=4931,
 			stats={
-				[1]="energy_shield_recharge_rate_+%",
-				[2]="energy_shield_delay_-%"
+				[1]="25% increased Energy Shield Recharge Rate",
+				[2]="25% faster start of Energy Shield Recharge"
 			}
 		},
 		[4959]={
@@ -16674,8 +16668,8 @@ return {
 			},
 			skill=4959,
 			stats={
-				[1]="hits_ignore_elemental_resistances_vs_frozen_enemies",
-				[2]="hit_damage_freeze_multiplier_+%"
+				[1]="20% increased Freeze Buildup",
+				[2]="Hits ignore Elemental Resistances of Frozen Enemies"
 			}
 		},
 		[4985]={
@@ -16692,7 +16686,7 @@ return {
 			},
 			skill=4985,
 			stats={
-				[1]="recover_%_life_on_heavy_stunning_rare_or_unique_enemy"
+				[1]="Recover 20% of Life when you Heavy Stun a Rare or Unique Enemy"
 			}
 		},
 		[5009]={
@@ -16709,8 +16703,8 @@ return {
 			},
 			skill=5009,
 			stats={
-				[1]="daze_build_up_+%",
-				[2]="daze_duration_+%"
+				[1]="25% increased Daze Buildup",
+				[2]="25% increased Daze Duration"
 			}
 		},
 		[5049]={
@@ -16728,8 +16722,7 @@ return {
 			},
 			skill=5049,
 			stats={
-				[1]="attack_speed_+%",
-				[2]="base_dexterity"
+				[1]="2% increased Attack Speed"
 			}
 		},
 		[5084]={
@@ -16746,7 +16739,7 @@ return {
 			},
 			skill=5084,
 			stats={
-				[1]="ignite_chance_+%"
+				[1]="15% increased chance to Ignite"
 			}
 		},
 		[5088]={
@@ -16764,7 +16757,7 @@ return {
 			},
 			skill=5088,
 			stats={
-				[1]="attack_and_cast_speed_+%_with_elemental_skills"
+				[1]="3% increased Attack and Cast Speed with Elemental Skills"
 			}
 		},
 		[5108]={
@@ -16780,7 +16773,7 @@ return {
 			},
 			skill=5108,
 			stats={
-				[1]="one_handed_attack_ailment_chance_+%"
+				[1]="12% increased Chance to inflict Ailments with One-Handed Attacks"
 			}
 		},
 		[5163]={
@@ -16797,8 +16790,8 @@ return {
 			},
 			skill=5163,
 			stats={
-				[1]="knockback_distance_+%",
-				[2]="hit_damage_stun_multiplier_+%"
+				[1]="10% increased Stun Buildup",
+				[2]="10% increased Knockback Distance"
 			}
 		},
 		[5186]={
@@ -16815,7 +16808,7 @@ return {
 			},
 			skill=5186,
 			stats={
-				[1]="chaos_damage_+%"
+				[1]="11% increased Chaos Damage"
 			}
 		},
 		[5188]={
@@ -16832,7 +16825,7 @@ return {
 			},
 			skill=5188,
 			stats={
-				[1]="unarmed_attack_speed_+%"
+				[1]="3% increased Unarmed Attack Speed"
 			}
 		},
 		[5227]={
@@ -16849,8 +16842,8 @@ return {
 			},
 			skill=5227,
 			stats={
-				[1]="evasion_+%_if_hit_recently",
-				[2]="evasion_rating_+%_if_have_not_been_hit_recently"
+				[1]="100% increased Evasion Rating if you have been Hit Recently",
+				[2]="30% reduced Evasion Rating if you haven't been Hit Recently"
 			}
 		},
 		[5257]={
@@ -16868,7 +16861,7 @@ return {
 			},
 			skill=5257,
 			stats={
-				[1]="elemental_damage_+%_if_enemy_chilled_recently"
+				[1]="30% increased Elemental Damage if you've Chilled an Enemy Recently"
 			}
 		},
 		[5284]={
@@ -16885,9 +16878,9 @@ return {
 			},
 			skill=5284,
 			stats={
-				[1]="spell_critical_strike_chance_+%",
-				[2]="base_spell_critical_strike_multiplier_+",
-				[3]="critical_hit_damaging_ailment_effect_+%"
+				[1]="15% increased Critical Hit Chance for Spells",
+				[2]="15% increased Critical Spell Damage Bonus",
+				[3]="15% increased Magnitude of Damaging Ailments you inflict with Critical Hits"
 			}
 		},
 		[5295]={
@@ -16904,7 +16897,7 @@ return {
 			},
 			skill=5295,
 			stats={
-				[1]="base_reduce_enemy_lightning_resistance_%"
+				[1]="Damage Penetrates 6% Lightning Resistance"
 			}
 		},
 		[5305]={
@@ -16921,7 +16914,7 @@ return {
 			},
 			skill=5305,
 			stats={
-				[1]="skill_speed_+%"
+				[1]="3% increased Skill Speed"
 			}
 		},
 		[5314]={
@@ -16938,7 +16931,7 @@ return {
 			},
 			skill=5314,
 			stats={
-				[1]="display_passive_attribute_text"
+				[1]="+5 to any Attribute"
 			}
 		},
 		[5398]={
@@ -16955,7 +16948,7 @@ return {
 			},
 			skill=5398,
 			stats={
-				[1]="totem_skill_cast_speed_+%"
+				[1]="Spells Cast by Totems have 4% increased Cast Speed"
 			}
 		},
 		[5501]={
@@ -16973,8 +16966,8 @@ return {
 			},
 			skill=5501,
 			stats={
-				[1]="spell_damage_+%_if_have_crit_recently",
-				[2]="spell_critical_strike_chance_+%"
+				[1]="15% increased Critical Hit Chance for Spells",
+				[2]="15% increased Spell Damage if you've dealt a Critical Hit Recently"
 			}
 		},
 		[5544]={
@@ -16991,7 +16984,7 @@ return {
 			},
 			skill=5544,
 			stats={
-				[1]="base_thorns_critical_strike_multiplier_+"
+				[1]="25% increased Thorns Critical Damage Bonus"
 			}
 		},
 		[5564]={
@@ -17008,7 +17001,7 @@ return {
 			},
 			skill=5564,
 			stats={
-				[1]="hit_damage_electrocute_multiplier_+%"
+				[1]="15% increased Electrocute Buildup"
 			}
 		},
 		[5580]={
@@ -17027,8 +17020,8 @@ return {
 			},
 			skill=5580,
 			stats={
-				[1]="attack_skills_additional_totems_allowed",
-				[2]="chance_to_summon_two_totems_%"
+				[1]="Attack Skills have +1 to maximum number of Summoned Totems",
+				[2]="Skills that would Summon a Totem have 20% chance to Summon two Totems instead"
 			}
 		},
 		[5663]={
@@ -17045,7 +17038,7 @@ return {
 			},
 			skill=5663,
 			stats={
-				[1]="max_endurance_charges"
+				[1]="+2 to Maximum Endurance Charges"
 			}
 		},
 		[5692]={
@@ -17062,7 +17055,7 @@ return {
 			},
 			skill=5692,
 			stats={
-				[1]="chill_effect_+%"
+				[1]="15% increased Magnitude of Chill you inflict"
 			}
 		},
 		[5701]={
@@ -17081,7 +17074,7 @@ return {
 			},
 			skill=5701,
 			stats={
-				[1]="mark_effect_+%"
+				[1]="10% increased Effect of your Mark Skills"
 			}
 		},
 		[5702]={
@@ -17098,7 +17091,7 @@ return {
 			},
 			skill=5702,
 			stats={
-				[1]="display_passive_attribute_text"
+				[1]="+5 to any Attribute"
 			}
 		},
 		[5703]={
@@ -17116,7 +17109,7 @@ return {
 			},
 			skill=5703,
 			stats={
-				[1]="elemental_damage_+%_if_enemy_shocked_recently"
+				[1]="30% increased Elemental Damage if you've Shocked an Enemy Recently"
 			}
 		},
 		[5710]={
@@ -17138,9 +17131,8 @@ return {
 			},
 			skill=5710,
 			stats={
-				[1]="melee_damage_+%",
-				[2]="hit_damage_stun_multiplier_+%",
-				[3]="base_strength"
+				[1]="10% increased Stun Buildup",
+				[2]="16% increased Melee Damage"
 			}
 		},
 		[5728]={
@@ -17158,8 +17150,8 @@ return {
 			},
 			skill=5728,
 			stats={
-				[1]="body_armour_+%",
-				[2]="maximum_energy_shield_from_body_armour_+%"
+				[1]="60% increased Armour from Equipped Body Armour",
+				[2]="60% increased Energy Shield from Equipped Body Armour"
 			}
 		},
 		[5766]={
@@ -17178,7 +17170,7 @@ return {
 			},
 			skill=5766,
 			stats={
-				[1]="spell_damage_+%_while_wielding_melee_weapon"
+				[1]="12% increased Spell Damage while wielding a Melee Weapon"
 			}
 		},
 		[5777]={
@@ -17196,8 +17188,8 @@ return {
 			},
 			skill=5777,
 			stats={
-				[1]="minion_damage_+%",
-				[2]="minion_critical_strike_chance_+%"
+				[1]="Minions deal 15% increased Damage",
+				[2]="Minions have 20% increased Critical Hit Chance"
 			}
 		},
 		[5802]={
@@ -17214,8 +17206,8 @@ return {
 			},
 			skill=5802,
 			stats={
-				[1]="projectile_damage_+%_vs_enemies_within_2m_distance",
-				[2]="critical_hit_damage_bonus_+%_vs_enemies_within_2m_distance"
+				[1]="Projectiles have 40% increased Critical Damage Bonus against Enemies within 2m",
+				[2]="Projectiles deal 25% increased Damage with Hits against Enemies within 2m"
 			}
 		},
 		[5817]={
@@ -17233,7 +17225,7 @@ return {
 			},
 			skill=5817,
 			stats={
-				[1]="damage_taken_+%_final_per_tailwind"
+				[1]="3% less Damage taken per Tailwind"
 			}
 		},
 		[5920]={
@@ -17250,7 +17242,7 @@ return {
 			},
 			skill=5920,
 			stats={
-				[1]="attack_area_of_effect_+%"
+				[1]="8% increased Area of Effect for Attacks"
 			}
 		},
 		[5936]={
@@ -17269,7 +17261,7 @@ return {
 			},
 			skill=5936,
 			stats={
-				[1]="elemental_damage_+%"
+				[1]="10% increased Elemental Damage"
 			}
 		},
 		[5961]={
@@ -17287,7 +17279,7 @@ return {
 			},
 			skill=5961,
 			stats={
-				[1]="lightning_damage_+%"
+				[1]="10% increased Lightning Damage"
 			}
 		},
 		[6006]={
@@ -17304,7 +17296,7 @@ return {
 			},
 			skill=6006,
 			stats={
-				[1]="maximum_energy_shield_+%"
+				[1]="15% increased maximum Energy Shield"
 			}
 		},
 		[6008]={
@@ -17321,7 +17313,7 @@ return {
 			},
 			skill=6008,
 			stats={
-				[1]="spell_damage_+%"
+				[1]="10% increased Spell Damage"
 			}
 		},
 		[6010]={
@@ -17339,7 +17331,7 @@ return {
 			},
 			skill=6010,
 			stats={
-				[1]="accuracy_rating_+%"
+				[1]="12% increased Accuracy Rating"
 			}
 		},
 		[6015]={
@@ -17357,7 +17349,7 @@ return {
 			},
 			skill=6015,
 			stats={
-				[1]="display_passive_attribute_text"
+				[1]="+5 to any Attribute"
 			}
 		},
 		[6030]={
@@ -17375,7 +17367,7 @@ return {
 			},
 			skill=6030,
 			stats={
-				[1]="base_chance_to_poison_on_hit_%"
+				[1]="8% chance to Poison on Hit"
 			}
 		},
 		[6078]={
@@ -17392,7 +17384,7 @@ return {
 			},
 			skill=6078,
 			stats={
-				[1]="base_chance_to_poison_on_hit_%"
+				[1]="8% chance to Poison on Hit"
 			}
 		},
 		[6079]={
@@ -17409,7 +17401,7 @@ return {
 			},
 			skill=6079,
 			stats={
-				[1]="damage_taken_goes_to_life_over_4_seconds_%"
+				[1]="3% of Damage taken Recouped as Life"
 			}
 		},
 		[6127]={
@@ -17427,9 +17419,7 @@ return {
 			},
 			skill=6127,
 			stats={
-				[1]="max_jade_stacks",
-				[2]="buildup_jade_every_x_ms",
-				[3]="additional_physical_damage_reduction_%_per_jade"
+				[1]="Gain a stack of Jade every second"
 			}
 		},
 		[6133]={
@@ -17447,7 +17437,7 @@ return {
 			},
 			skill=6133,
 			stats={
-				[1]="shield_armour_+%"
+				[1]="100% increased Defences from Equipped Shield"
 			}
 		},
 		[6153]={
@@ -17464,7 +17454,7 @@ return {
 			},
 			skill=6153,
 			stats={
-				[1]="life_regeneration_rate_+%"
+				[1]="10% increased Life Regeneration rate"
 			}
 		},
 		[6178]={
@@ -17481,8 +17471,8 @@ return {
 			},
 			skill=6178,
 			stats={
-				[1]="crossbow_critical_strike_multiplier_+",
-				[2]="crossbow_attack_speed_+%"
+				[1]="15% reduced Attack Speed with Crossbows",
+				[2]="80% increased Critical Damage Bonus with Crossbows"
 			}
 		},
 		[6222]={
@@ -17501,7 +17491,7 @@ return {
 			},
 			skill=6222,
 			stats={
-				[1]="attack_damage_+%"
+				[1]="10% increased Attack Damage"
 			}
 		},
 		[6229]={
@@ -17519,7 +17509,7 @@ return {
 			},
 			skill=6229,
 			stats={
-				[1]="one_handed_melee_critical_strike_multiplier_+"
+				[1]="40% increased Critical Damage Bonus with One Handed Melee Weapons"
 			}
 		},
 		[6230]={
@@ -17555,7 +17545,7 @@ return {
 			},
 			skill=6269,
 			stats={
-				[1]="axe_attack_speed_+%"
+				[1]="3% increased Attack Speed with Axes"
 			}
 		},
 		[6274]={
@@ -17573,7 +17563,7 @@ return {
 			},
 			skill=6274,
 			stats={
-				[1]="accuracy_rating_+%"
+				[1]="8% increased Accuracy Rating"
 			}
 		},
 		[6294]={
@@ -17590,7 +17580,7 @@ return {
 			},
 			skill=6294,
 			stats={
-				[1]="base_cast_speed_+%"
+				[1]="3% increased Cast Speed"
 			}
 		},
 		[6304]={
@@ -17607,8 +17597,8 @@ return {
 			},
 			skill=6304,
 			stats={
-				[1]="life_regeneration_rate_per_minute_%_while_stationary",
-				[2]="life_regeneration_rate_per_minute_%_while_affected_by_damaging_ailment"
+				[1]="Regenerate 1% of Life per second while affected by any Damaging Ailment",
+				[2]="Regenerate 1% of Life per second while stationary"
 			}
 		},
 		[6330]={
@@ -17625,8 +17615,8 @@ return {
 			},
 			skill=6330,
 			stats={
-				[1]="accuracy_rating_+%",
-				[2]="attack_damage_+%"
+				[1]="8% increased Attack Damage",
+				[2]="8% increased Accuracy Rating"
 			}
 		},
 		[6355]={
@@ -17643,7 +17633,7 @@ return {
 			},
 			skill=6355,
 			stats={
-				[1]="totem_damage_+%"
+				[1]="16% increased Totem Damage"
 			}
 		},
 		[6416]={
@@ -17660,8 +17650,8 @@ return {
 			},
 			skill=6416,
 			stats={
-				[1]="physical_damage_reduction_rating_+%",
-				[2]="maximum_energy_shield_+%"
+				[1]="12% increased Armour",
+				[2]="12% increased maximum Energy Shield"
 			}
 		},
 		[6490]={
@@ -17678,7 +17668,7 @@ return {
 			},
 			skill=6490,
 			stats={
-				[1]="base_critical_strike_multiplier_+"
+				[1]="10% increased Critical Damage Bonus"
 			}
 		},
 		[6505]={
@@ -17695,7 +17685,7 @@ return {
 			},
 			skill=6505,
 			stats={
-				[1]="base_chance_to_pierce_%"
+				[1]="15% chance to Pierce an Enemy"
 			}
 		},
 		[6514]={
@@ -17712,8 +17702,8 @@ return {
 			},
 			skill=6514,
 			stats={
-				[1]="warcry_damage_+%",
-				[2]="warcry_skill_area_of_effect_+%"
+				[1]="40% increased Damage with Warcries",
+				[2]="Warcry Skills have 25% increased Area of Effect"
 			}
 		},
 		[6516]={
@@ -17730,7 +17720,7 @@ return {
 			},
 			skill=6516,
 			stats={
-				[1]="stun_threshold_+%_when_not_stunned_recently"
+				[1]="20% increased Stun Threshold if you haven't been Stunned Recently"
 			}
 		},
 		[6529]={
@@ -17747,7 +17737,7 @@ return {
 			},
 			skill=6529,
 			stats={
-				[1]="physical_damage_reduction_rating_+%"
+				[1]="15% increased Armour"
 			}
 		},
 		[6544]={
@@ -17765,7 +17755,7 @@ return {
 			},
 			skill=6544,
 			stats={
-				[1]="non_skill_base_physical_damage_%_to_gain_as_fire"
+				[1]="Gain 12% of Physical Damage as Extra Fire Damage"
 			}
 		},
 		[6596]={
@@ -17782,7 +17772,7 @@ return {
 			},
 			skill=6596,
 			stats={
-				[1]="attack_speed_+%_if_rare_or_unique_enemy_nearby"
+				[1]="4% increased Attack Speed while a Rare or Unique Enemy is in your Presence"
 			}
 		},
 		[6626]={
@@ -17799,7 +17789,7 @@ return {
 			},
 			skill=6626,
 			stats={
-				[1]="evasion_and_physical_damage_reduction_rating_+%"
+				[1]="12% increased Armour and Evasion Rating"
 			}
 		},
 		[6655]={
@@ -17817,7 +17807,7 @@ return {
 			},
 			skill=6655,
 			stats={
-				[1]="base_aggravate_bleeding_on_attack_hit_chance_%"
+				[1]="10% chance to Aggravate Bleeding on targets you Hit with Attacks"
 			}
 		},
 		[6660]={
@@ -17834,7 +17824,7 @@ return {
 			},
 			skill=6660,
 			stats={
-				[1]="damage_+%_vs_enemies_affected_by_status_ailments"
+				[1]="12% increased Damage with Hits against Enemies affected by Elemental Ailments"
 			}
 		},
 		[6686]={
@@ -17851,7 +17841,7 @@ return {
 			},
 			skill=6686,
 			stats={
-				[1]="mana_regeneration_rate_+%"
+				[1]="10% increased Mana Regeneration Rate"
 			}
 		},
 		[6689]={
@@ -17869,7 +17859,7 @@ return {
 			},
 			skill=6689,
 			stats={
-				[1]="attack_skills_damage_+%_while_holding_shield"
+				[1]="Attack Skills deal 10% increased Damage while holding a Shield"
 			}
 		},
 		[6715]={
@@ -17886,8 +17876,8 @@ return {
 			},
 			skill=6715,
 			stats={
-				[1]="maximum_energy_shield_+%",
-				[2]="mana_regeneration_rate_+%"
+				[1]="10% increased maximum Energy Shield",
+				[2]="6% increased Mana Regeneration Rate"
 			}
 		},
 		[6744]={
@@ -17904,7 +17894,7 @@ return {
 			},
 			skill=6744,
 			stats={
-				[1]="display_passive_attribute_text"
+				[1]="+5 to any Attribute"
 			}
 		},
 		[6748]={
@@ -17921,7 +17911,7 @@ return {
 			},
 			skill=6748,
 			stats={
-				[1]="base_damage_removed_from_mana_before_life_%"
+				[1]="4% of Damage is taken from Mana before Life"
 			}
 		},
 		[6752]={
@@ -17939,7 +17929,7 @@ return {
 			},
 			skill=6752,
 			stats={
-				[1]="fire_damage_+%"
+				[1]="12% increased Fire Damage"
 			}
 		},
 		[6772]={
@@ -17956,7 +17946,7 @@ return {
 			},
 			skill=6772,
 			stats={
-				[1]="display_passive_attribute_text"
+				[1]="+5 to any Attribute"
 			}
 		},
 		[6789]={
@@ -17973,7 +17963,7 @@ return {
 			},
 			skill=6789,
 			stats={
-				[1]="projectile_damage_+%"
+				[1]="10% increased Projectile Damage"
 			}
 		},
 		[6792]={
@@ -17990,7 +17980,7 @@ return {
 			},
 			skill=6792,
 			stats={
-				[1]="projectile_damage_+%"
+				[1]="10% increased Projectile Damage"
 			}
 		},
 		[6800]={
@@ -18007,7 +17997,7 @@ return {
 			},
 			skill=6800,
 			stats={
-				[1]="chaos_damage_+%"
+				[1]="11% increased Chaos Damage"
 			}
 		},
 		[6839]={
@@ -18024,7 +18014,7 @@ return {
 			},
 			skill=6839,
 			stats={
-				[1]="hit_damage_stun_multiplier_+%"
+				[1]="15% increased Stun Buildup"
 			}
 		},
 		[6842]={
@@ -18042,8 +18032,8 @@ return {
 			},
 			skill=6842,
 			stats={
-				[1]="hit_damage_stun_multiplier_+%",
-				[2]="hit_damage_freeze_multiplier_+%"
+				[1]="10% increased Stun Buildup",
+				[2]="10% increased Freeze Buildup"
 			}
 		},
 		[6872]={
@@ -18060,7 +18050,7 @@ return {
 			},
 			skill=6872,
 			stats={
-				[1]="base_maximum_cold_damage_resistance_%"
+				[1]="+1% to Maximum Cold Resistance"
 			}
 		},
 		[6891]={
@@ -18077,7 +18067,7 @@ return {
 			},
 			skill=6891,
 			stats={
-				[1]="base_critical_strike_multiplier_+"
+				[1]="15% increased Critical Damage Bonus"
 			}
 		},
 		[6898]={
@@ -18098,9 +18088,8 @@ return {
 			},
 			skill=6898,
 			stats={
-				[1]="damage_+%",
-				[2]="critical_strike_chance_+%",
-				[3]="base_strength_and_intelligence"
+				[1]="10% increased Critical Hit Chance",
+				[2]="10% increased Damage"
 			}
 		},
 		[6923]={
@@ -18117,7 +18106,7 @@ return {
 			},
 			skill=6923,
 			stats={
-				[1]="damage_+%_with_two_handed_weapons"
+				[1]="12% increased Damage with Two Handed Weapons"
 			}
 		},
 		[6935]={
@@ -18135,8 +18124,8 @@ return {
 			},
 			skill=6935,
 			stats={
-				[1]="sorcery_ward_+%_strength",
-				[2]="x%_faster_start_of_sorcery_ward_recovery"
+				[1]="50% increased effect of Sorcery Ward",
+				[2]="Sorcery Ward recovers 50% faster"
 			}
 		},
 		[6951]={
@@ -18153,7 +18142,7 @@ return {
 			},
 			skill=6951,
 			stats={
-				[1]="base_poison_effect_+%"
+				[1]="10% increased Magnitude of Poison you inflict"
 			}
 		},
 		[7049]={
@@ -18170,7 +18159,7 @@ return {
 			},
 			skill=7049,
 			stats={
-				[1]="armour_+%_while_surrounded"
+				[1]="30% increased Armour while Surrounded"
 			}
 		},
 		[7062]={
@@ -18189,7 +18178,7 @@ return {
 			},
 			skill=7062,
 			stats={
-				[1]="crossbow_attack_%_chance_to_not_consume_ammo"
+				[1]="15% chance for Crossbow Attacks to not consume a bolt"
 			}
 		},
 		[7120]={
@@ -18228,7 +18217,7 @@ return {
 			},
 			skill=7163,
 			stats={
-				[1]="attack_speed_+%_during_flask_effect"
+				[1]="12% increased Attack Speed during any Flask Effect"
 			}
 		},
 		[7183]={
@@ -18245,7 +18234,7 @@ return {
 			},
 			skill=7183,
 			stats={
-				[1]="flask_life_to_recover_+%"
+				[1]="10% increased Life Recovery from Flasks"
 			}
 		},
 		[7204]={
@@ -18263,7 +18252,7 @@ return {
 			},
 			skill=7204,
 			stats={
-				[1]="hit_damage_stun_multiplier_+%"
+				[1]="15% increased Stun Buildup"
 			}
 		},
 		[7246]={
@@ -18281,7 +18270,7 @@ return {
 			},
 			skill=7246,
 			stats={
-				[1]="maximum_mana_+%"
+				[1]="4% increased maximum Mana"
 			}
 		},
 		[7251]={
@@ -18298,7 +18287,7 @@ return {
 			},
 			skill=7251,
 			stats={
-				[1]="physical_attack_damage_+%"
+				[1]="10% increased Attack Physical Damage"
 			}
 		},
 		[7302]={
@@ -18315,7 +18304,7 @@ return {
 			},
 			skill=7302,
 			stats={
-				[1]="final_repeat_of_spells_area_of_effect_+%"
+				[1]="Final Repeat of Spells has 40% increased Area of Effect"
 			}
 		},
 		[7341]={
@@ -18332,8 +18321,8 @@ return {
 			},
 			skill=7341,
 			stats={
-				[1]="gain_x_rage_when_hit",
-				[2]="stun_threshold_+%_per_rage"
+				[1]="Gain 3 Rage when Hit by an Enemy",
+				[2]="Every Rage also grants 2% increased Stun Threshold"
 			}
 		},
 		[7344]={
@@ -18351,7 +18340,7 @@ return {
 			},
 			skill=7344,
 			stats={
-				[1]="recover_%_maximum_life_on_kill"
+				[1]="Recover 3% of Life on Kill"
 			}
 		},
 		[7378]={
@@ -18368,7 +18357,7 @@ return {
 			},
 			skill=7378,
 			stats={
-				[1]="fire_damage_+%"
+				[1]="12% increased Fire Damage"
 			}
 		},
 		[7390]={
@@ -18385,7 +18374,7 @@ return {
 			},
 			skill=7390,
 			stats={
-				[1]="evasion_and_physical_damage_reduction_rating_+%"
+				[1]="12% increased Armour and Evasion Rating"
 			}
 		},
 		[7392]={
@@ -18402,7 +18391,7 @@ return {
 			},
 			skill=7392,
 			stats={
-				[1]="stun_threshold_+%"
+				[1]="12% increased Stun Threshold"
 			}
 		},
 		[7395]={
@@ -18420,7 +18409,7 @@ return {
 			},
 			skill=7395,
 			stats={
-				[1]="thorns_damage_+%_if_blocked_recently"
+				[1]="75% increased Thorns damage if you've Blocked Recently"
 			}
 		},
 		[7405]={
@@ -18437,8 +18426,8 @@ return {
 			},
 			skill=7405,
 			stats={
-				[1]="mana_regeneration_rate_+%",
-				[2]="shock_effect_+%"
+				[1]="6% increased Mana Regeneration Rate",
+				[2]="10% increased Magnitude of Shock you inflict"
 			}
 		},
 		[7412]={
@@ -18455,7 +18444,7 @@ return {
 			},
 			skill=7412,
 			stats={
-				[1]="life_flask_charges_gained_+%"
+				[1]="15% increased Life Flask Charges gained"
 			}
 		},
 		[7424]={
@@ -18473,7 +18462,7 @@ return {
 			},
 			skill=7424,
 			stats={
-				[1]="maximum_energy_shield_+%"
+				[1]="15% increased maximum Energy Shield"
 			}
 		},
 		[7473]={
@@ -18490,7 +18479,7 @@ return {
 			},
 			skill=7473,
 			stats={
-				[1]="damage_+%_with_herald_skills"
+				[1]="Herald Skills deal 20% increased Damage"
 			}
 		},
 		[7526]={
@@ -18511,7 +18500,7 @@ return {
 			},
 			skill=7526,
 			stats={
-				[1]="display_passive_attribute_text"
+				[1]="+5 to any Attribute"
 			}
 		},
 		[7576]={
@@ -18528,7 +18517,7 @@ return {
 			},
 			skill=7576,
 			stats={
-				[1]="attack_damage_+%"
+				[1]="10% increased Attack Damage"
 			}
 		},
 		[7604]={
@@ -18546,8 +18535,8 @@ return {
 			},
 			skill=7604,
 			stats={
-				[1]="melee_attack_speed_+%",
-				[2]="accuracy_rating"
+				[1]="+30 to Accuracy Rating",
+				[2]="8% increased Melee Attack Speed"
 			}
 		},
 		[7621]={
@@ -18566,8 +18555,8 @@ return {
 			},
 			skill=7621,
 			stats={
-				[1]="chance_%_to_create_shocking_ground_on_shock",
-				[2]="non_skill_base_all_damage_%_to_gain_as_lightning"
+				[1]="Gain 10% of Damage as Extra Lightning Damage",
+				[2]="25% chance on Shocking Enemies to created Shocked Ground"
 			}
 		},
 		[7628]={
@@ -18587,7 +18576,7 @@ return {
 			},
 			skill=7628,
 			stats={
-				[1]="display_passive_attribute_text"
+				[1]="+5 to any Attribute"
 			}
 		},
 		[7651]={
@@ -18604,7 +18593,7 @@ return {
 			},
 			skill=7651,
 			stats={
-				[1]="arrow_base_number_of_targets_to_pierce"
+				[1]="Arrows Pierce an additional Target"
 			}
 		},
 		[7656]={
@@ -18622,7 +18611,7 @@ return {
 			},
 			skill=7656,
 			stats={
-				[1]="maximum_life_+%"
+				[1]="3% increased maximum Life"
 			}
 		},
 		[7668]={
@@ -18639,8 +18628,8 @@ return {
 			},
 			skill=7668,
 			stats={
-				[1]="empowered_attack_damage_+%",
-				[2]="aggravate_bleeding_on_exerted_attack_hit_chance_%"
+				[1]="20% chance to Aggravate Bleeding on targets you Hit with Empowered Attacks",
+				[2]="Empowered Attacks deal 30% increased Damage"
 			}
 		},
 		[7721]={
@@ -18662,9 +18651,8 @@ return {
 			},
 			skill=7721,
 			stats={
-				[1]="physical_damage_reduction_rating_+%",
-				[2]="life_regeneration_rate_per_minute_%",
-				[3]="base_strength"
+				[1]="15% increased Armour",
+				[2]="Regenerate 0.5% of Life per second"
 			}
 		},
 		[7741]={
@@ -18681,7 +18669,7 @@ return {
 			},
 			skill=7741,
 			stats={
-				[1]="display_passive_attribute_text"
+				[1]="+5 to any Attribute"
 			}
 		},
 		[7777]={
@@ -18699,8 +18687,8 @@ return {
 			},
 			skill=7777,
 			stats={
-				[1]="non_damaging_ailment_effect_+%",
-				[2]="base_elemental_status_ailment_duration_+%"
+				[1]="10% increased Duration of Elemental Ailments on Enemies",
+				[2]="30% increased Magnitude of Non-Damaging Ailments you inflict"
 			}
 		},
 		[7788]={
@@ -18717,7 +18705,7 @@ return {
 			},
 			skill=7788,
 			stats={
-				[1]="knockback_distance_+%"
+				[1]="8% increased Knockback Distance"
 			}
 		},
 		[7793]={
@@ -18735,7 +18723,7 @@ return {
 			},
 			skill=7793,
 			stats={
-				[1]="maximum_life_+%"
+				[1]="3% increased maximum Life"
 			}
 		},
 		[7809]={
@@ -18752,7 +18740,7 @@ return {
 			},
 			skill=7809,
 			stats={
-				[1]="witch_passive_maximum_lightning_damage_+%_final"
+				[1]="15% more Maximum Lightning Damage"
 			}
 		},
 		[7878]={
@@ -18769,7 +18757,7 @@ return {
 			},
 			skill=7878,
 			stats={
-				[1]="block_chance_+%"
+				[1]="5% increased Block chance"
 			}
 		},
 		[7888]={
@@ -18786,7 +18774,7 @@ return {
 			},
 			skill=7888,
 			stats={
-				[1]="damage_+%_while_unarmed"
+				[1]="14% increased Damage with Unarmed Attacks"
 			}
 		},
 		[7922]={
@@ -18803,7 +18791,7 @@ return {
 			},
 			skill=7922,
 			stats={
-				[1]="flask_duration_+%"
+				[1]="10% increased Flask Effect Duration"
 			}
 		},
 		[7960]={
@@ -18839,7 +18827,7 @@ return {
 			},
 			skill=7971,
 			stats={
-				[1]="mana_regeneration_rate_+%"
+				[1]="10% increased Mana Regeneration Rate"
 			}
 		},
 		[7972]={
@@ -18857,7 +18845,7 @@ return {
 			},
 			skill=7972,
 			stats={
-				[1]="endurance_charge_duration_+%"
+				[1]="20% increased Endurance Charge Duration"
 			}
 		},
 		[7998]={
@@ -18875,7 +18863,7 @@ return {
 			},
 			skill=7998,
 			stats={
-				[1]="shock_chance_+%"
+				[1]="20% increased chance to Shock"
 			}
 		},
 		[8045]={
@@ -18893,7 +18881,7 @@ return {
 			},
 			skill=8045,
 			stats={
-				[1]="base_mana_leech_amount_+%"
+				[1]="10% increased amount of Mana Leeched"
 			}
 		},
 		[8092]={
@@ -18910,7 +18898,7 @@ return {
 			},
 			skill=8092,
 			stats={
-				[1]="projectile_damage_+%"
+				[1]="10% increased Projectile Damage"
 			}
 		},
 		[8115]={
@@ -18927,7 +18915,7 @@ return {
 			},
 			skill=8115,
 			stats={
-				[1]="physical_damage_+%"
+				[1]="12% increased Global Physical Damage"
 			}
 		},
 		[8143]={
@@ -18946,9 +18934,9 @@ return {
 			},
 			skill=8143,
 			stats={
-				[1]="cannot_gain_spirit_from_equipment",
-				[2]="+1_spirit_per_X_evasion_rating_on_body_armour",
-				[3]="+1_spirit_per_X_energy_shield_on_body_armour"
+				[1]="Gain 1 Spirit for every 6 Energy Shield on equipped Body Armour",
+				[2]="Gain 1 Spirit for every 15 Evasion Rating on equipped Body Armour",
+				[3]="Cannot gain Spirit from Equipment"
 			}
 		},
 		[8157]={
@@ -18964,7 +18952,7 @@ return {
 			},
 			skill=8157,
 			stats={
-				[1]="herald_skills_mana_reservation_+%"
+				[1]="6% reduced Reservation of Herald Skills"
 			}
 		},
 		[8194]={
@@ -18981,7 +18969,7 @@ return {
 			},
 			skill=8194,
 			stats={
-				[1]="stun_threshold_+%_when_not_stunned_recently"
+				[1]="20% increased Stun Threshold if you haven't been Stunned Recently"
 			}
 		},
 		[8246]={
@@ -19000,7 +18988,7 @@ return {
 			},
 			skill=8246,
 			stats={
-				[1]="attack_damage_+%"
+				[1]="10% increased Attack Damage"
 			}
 		},
 		[8249]={
@@ -19018,8 +19006,8 @@ return {
 			},
 			skill=8249,
 			stats={
-				[1]="accuracy_rating_+%",
-				[2]="attack_critical_strike_chance_+%"
+				[1]="8% increased Critical Hit Chance for Attacks",
+				[2]="6% increased Accuracy Rating"
 			}
 		},
 		[8260]={
@@ -19036,7 +19024,7 @@ return {
 			},
 			skill=8260,
 			stats={
-				[1]="armour_break_duration_+%"
+				[1]="20% increased Armour Break Duration"
 			}
 		},
 		[8272]={
@@ -19070,7 +19058,7 @@ return {
 			},
 			skill=8273,
 			stats={
-				[1]="reapply_enemy_shock_on_consuming_enemy_shock_chance_%"
+				[1]="25% chance on Consuming a Shock on an Enemy to reapply it"
 			}
 		},
 		[8349]={
@@ -19087,7 +19075,7 @@ return {
 			},
 			skill=8349,
 			stats={
-				[1]="energy_shield_recharge_rate_+%"
+				[1]="15% increased Energy Shield Recharge Rate"
 			}
 		},
 		[8357]={
@@ -19104,7 +19092,7 @@ return {
 			},
 			skill=8357,
 			stats={
-				[1]="minion_attack_and_cast_speed_+%"
+				[1]="Minions have 3% increased Attack and Cast Speed"
 			}
 		},
 		[8406]={
@@ -19121,7 +19109,7 @@ return {
 			},
 			skill=8406,
 			stats={
-				[1]="display_passive_attribute_text"
+				[1]="+5 to any Attribute"
 			}
 		},
 		[8415]={
@@ -19144,8 +19132,7 @@ return {
 			},
 			skill=8415,
 			stats={
-				[1]="skill_cost_base_life_equal_to_base_mana",
-				[2]="life_remnants_gain_per_globe"
+				[1]="Skills gain a Base Life Cost equal to Base Mana Cost"
 			}
 		},
 		[8440]={
@@ -19162,7 +19149,7 @@ return {
 			},
 			skill=8440,
 			stats={
-				[1]="damage_vs_enemies_on_low_life_+%"
+				[1]="30% increased Damage with Hits against Enemies that are on Low Life"
 			}
 		},
 		[8483]={
@@ -19179,8 +19166,8 @@ return {
 			},
 			skill=8483,
 			stats={
-				[1]="spell_area_of_effect_+%",
-				[2]="spell_area_damage_+%"
+				[1]="35% increased Spell Area Damage",
+				[2]="Spell Skills have 10% reduced Area of Effect"
 			}
 		},
 		[8493]={
@@ -19199,7 +19186,7 @@ return {
 			},
 			skill=8493,
 			stats={
-				[1]="display_passive_attribute_text"
+				[1]="+5 to any Attribute"
 			}
 		},
 		[8509]={
@@ -19216,7 +19203,7 @@ return {
 			},
 			skill=8509,
 			stats={
-				[1]="critical_strike_multiplier_+_if_have_not_dealt_critical_strike_recently"
+				[1]="20% increased Critical Damage Bonus if you haven't dealt a Critical Hit Recently"
 			}
 		},
 		[8510]={
@@ -19233,7 +19220,7 @@ return {
 			},
 			skill=8510,
 			stats={
-				[1]="damaging_ailments_deal_damage_+%_faster"
+				[1]="Damaging Ailments deal damage 5% faster"
 			}
 		},
 		[8531]={
@@ -19251,7 +19238,7 @@ return {
 			},
 			skill=8531,
 			stats={
-				[1]="critical_strike_chance_against_enemies_on_full_life_+%"
+				[1]="100% increased Critical Hit Chance against Enemies on Full Life"
 			}
 		},
 		[8535]={
@@ -19268,7 +19255,7 @@ return {
 			},
 			skill=8535,
 			stats={
-				[1]="flail_damage_+%"
+				[1]="25% increased Damage with Flails"
 			}
 		},
 		[8540]={
@@ -19285,7 +19272,7 @@ return {
 			},
 			skill=8540,
 			stats={
-				[1]="curse_area_of_effect_+%"
+				[1]="20% increased Area of Effect of Curses"
 			}
 		},
 		[8554]={
@@ -19302,8 +19289,8 @@ return {
 			},
 			skill=8554,
 			stats={
-				[1]="fire_damage_+%",
-				[2]="ignite_duration_+%"
+				[1]="25% increased Fire Damage",
+				[2]="15% increased Ignite Duration on Enemies"
 			}
 		},
 		[8560]={
@@ -19320,7 +19307,7 @@ return {
 			},
 			skill=8560,
 			stats={
-				[1]="melee_damage_+%"
+				[1]="10% increased Melee Damage"
 			}
 		},
 		[8569]={
@@ -19341,7 +19328,7 @@ return {
 			},
 			skill=8569,
 			stats={
-				[1]="display_passive_attribute_text"
+				[1]="+5 to any Attribute"
 			}
 		},
 		[8573]={
@@ -19358,7 +19345,7 @@ return {
 			},
 			skill=8573,
 			stats={
-				[1]="bow_damage_+%"
+				[1]="12% increased Damage with Bows"
 			}
 		},
 		[8616]={
@@ -19377,7 +19364,7 @@ return {
 			},
 			skill=8616,
 			stats={
-				[1]="display_passive_attribute_text"
+				[1]="+5 to any Attribute"
 			}
 		},
 		[8631]={
@@ -19396,7 +19383,7 @@ return {
 			},
 			skill=8631,
 			stats={
-				[1]="critical_strike_chance_+%"
+				[1]="10% increased Critical Hit Chance"
 			}
 		},
 		[8644]={
@@ -19413,7 +19400,7 @@ return {
 			},
 			skill=8644,
 			stats={
-				[1]="trap_damage_+%"
+				[1]="10% increased Trap Damage"
 			}
 		},
 		[8660]={
@@ -19430,7 +19417,7 @@ return {
 			},
 			skill=8660,
 			stats={
-				[1]="spell_area_of_effect_+%"
+				[1]="Spell Skills have 20% increased Area of Effect"
 			}
 		},
 		[8697]={
@@ -19448,7 +19435,7 @@ return {
 			},
 			skill=8697,
 			stats={
-				[1]="elemental_damage_with_attack_skills_+%"
+				[1]="12% increased Elemental Damage with Attacks"
 			}
 		},
 		[8789]={
@@ -19466,7 +19453,7 @@ return {
 			},
 			skill=8789,
 			stats={
-				[1]="minion_damage_+%"
+				[1]="Minions deal 10% increased Damage"
 			}
 		},
 		[8791]={
@@ -19484,7 +19471,7 @@ return {
 			},
 			skill=8791,
 			stats={
-				[1]="minion_maximum_life_+%"
+				[1]="Minions have 25% increased maximum Life"
 			}
 		},
 		[8800]={
@@ -19501,7 +19488,7 @@ return {
 			},
 			skill=8800,
 			stats={
-				[1]="melee_damage_+%_at_close_range"
+				[1]="15% increased Melee Damage with Hits at Close Range"
 			}
 		},
 		[8810]={
@@ -19518,8 +19505,8 @@ return {
 			},
 			skill=8810,
 			stats={
-				[1]="base_cooldown_speed_+%",
-				[2]="skill_effect_duration_+%"
+				[1]="15% increased Skill Effect Duration",
+				[2]="12% increased Cooldown Recovery Rate"
 			}
 		},
 		[8821]={
@@ -19537,7 +19524,7 @@ return {
 			},
 			skill=8821,
 			stats={
-				[1]="lightning_damage_+%"
+				[1]="12% increased Lightning Damage"
 			}
 		},
 		[8827]={
@@ -19555,7 +19542,7 @@ return {
 			},
 			skill=8827,
 			stats={
-				[1]="base_life_leech_does_not_stop_at_full_life"
+				[1]="Life Leech effects are not removed when Unreserved Life is Filled"
 			}
 		},
 		[8831]={
@@ -19572,9 +19559,8 @@ return {
 			},
 			skill=8831,
 			stats={
-				[1]="base_critical_strike_multiplier_+",
-				[2]="physical_damage_+%",
-				[3]="base_strength"
+				[1]="20% increased Critical Damage Bonus",
+				[2]="20% increased Global Physical Damage"
 			}
 		},
 		[8852]={
@@ -19591,8 +19577,8 @@ return {
 			},
 			skill=8852,
 			stats={
-				[1]="base_life_leech_amount_+%",
-				[2]="base_life_leech_rate_+%"
+				[1]="15% increased amount of Life Leeched",
+				[2]="Leech Life 5% slower"
 			}
 		},
 		[8854]={
@@ -19610,7 +19596,7 @@ return {
 			},
 			skill=8854,
 			stats={
-				[1]="maximum_life_+%"
+				[1]="3% increased maximum Life"
 			}
 		},
 		[8867]={
@@ -19629,7 +19615,7 @@ return {
 			},
 			skill=8867,
 			stats={
-				[1]="base_should_have_arcane_surge_from_stat"
+				[1]="You have Arcane Surge"
 			}
 		},
 		[8875]={
@@ -19646,7 +19632,7 @@ return {
 			},
 			skill=8875,
 			stats={
-				[1]="hit_damage_electrocute_multiplier_+%"
+				[1]="15% increased Electrocute Buildup"
 			}
 		},
 		[8881]={
@@ -19663,8 +19649,8 @@ return {
 			},
 			skill=8881,
 			stats={
-				[1]="maximum_rage",
-				[2]="rage_loss_delay_ms"
+				[1]="+4 to Maximum Rage",
+				[2]="Inherent Rage Loss starts 1 second later"
 			}
 		},
 		[8904]={
@@ -19681,8 +19667,8 @@ return {
 			},
 			skill=8904,
 			stats={
-				[1]="projectile_damage_+%_vs_enemies_further_than_6m_distance",
-				[2]="critical_strike_chance_+%_vs_enemies_further_than_6m_distance"
+				[1]="Projectiles have 25% increased Critical Hit Chance against Enemies further than 6m",
+				[2]="Projectiles deal 25% increased Damage with Hits against Enemies further than 6m"
 			}
 		},
 		[8908]={
@@ -19700,8 +19686,8 @@ return {
 			},
 			skill=8908,
 			stats={
-				[1]="evasion_rating_+%",
-				[2]="maximum_energy_shield_+%"
+				[1]="12% increased Evasion Rating",
+				[2]="12% increased maximum Energy Shield"
 			}
 		},
 		[8957]={
@@ -19718,8 +19704,8 @@ return {
 			},
 			skill=8957,
 			stats={
-				[1]="minion_skill_area_of_effect_+%",
-				[2]="minions_have_%_chance_to_inflict_wither_on_hit"
+				[1]="Minions have 20% increased Area of Effect",
+				[2]="Minions have 10% chance to inflict Withered on Hit"
 			}
 		},
 		[8975]={
@@ -19736,7 +19722,7 @@ return {
 			},
 			skill=8975,
 			stats={
-				[1]="display_passive_attribute_text"
+				[1]="+5 to any Attribute"
 			}
 		},
 		[8983]={
@@ -19754,7 +19740,7 @@ return {
 			},
 			skill=8983,
 			stats={
-				[1]="minion_damage_+%"
+				[1]="Minions deal 12% increased Damage"
 			}
 		},
 		[9020]={
@@ -19771,9 +19757,9 @@ return {
 			},
 			skill=9020,
 			stats={
-				[1]="damage_+%_to_rare_and_unique_enemies",
-				[2]="accuracy_rating_+%_vs_rare_or_unique_enemy",
-				[3]="ailment_chance_+%_vs_rare_or_unique_enemy"
+				[1]="25% increased Damage with Hits against Rare and Unique Enemies",
+				[2]="20% increased Accuracy Rating against Rare or Unique Enemies",
+				[3]="20% increased chance to inflict Ailments against Rare or Unique Enemies"
 			}
 		},
 		[9037]={
@@ -19790,7 +19776,7 @@ return {
 			},
 			skill=9037,
 			stats={
-				[1]="attack_damage_+%"
+				[1]="10% increased Attack Damage"
 			}
 		},
 		[9046]={
@@ -19807,7 +19793,7 @@ return {
 			},
 			skill=9046,
 			stats={
-				[1]="critical_strike_chance_+%"
+				[1]="10% increased Critical Hit Chance"
 			}
 		},
 		[9050]={
@@ -19826,7 +19812,7 @@ return {
 			},
 			skill=9050,
 			stats={
-				[1]="attack_damage_+%_while_ally_in_presence"
+				[1]="16% increased Attack Damage while you have an Ally in your Presence"
 			}
 		},
 		[9106]={
@@ -19843,7 +19829,7 @@ return {
 			},
 			skill=9106,
 			stats={
-				[1]="gain_x_rage_when_hit"
+				[1]="Gain 2 Rage when Hit by an Enemy"
 			}
 		},
 		[9112]={
@@ -19860,7 +19846,7 @@ return {
 			},
 			skill=9112,
 			stats={
-				[1]="ailment_threshold_+%"
+				[1]="25% increased Elemental Ailment Threshold"
 			}
 		},
 		[9141]={
@@ -19878,7 +19864,7 @@ return {
 			},
 			skill=9141,
 			stats={
-				[1]="elemental_damage_+%"
+				[1]="10% increased Elemental Damage"
 			}
 		},
 		[9151]={
@@ -19895,7 +19881,7 @@ return {
 			},
 			skill=9151,
 			stats={
-				[1]="chance_to_fork_extra_projectile_%"
+				[1]="Projectiles have 25% chance for an additional Projectile when Forking"
 			}
 		},
 		[9163]={
@@ -19912,7 +19898,7 @@ return {
 			},
 			skill=9163,
 			stats={
-				[1]="physical_damage_reduction_rating_+%"
+				[1]="18% increased Armour"
 			}
 		},
 		[9164]={
@@ -19929,7 +19915,7 @@ return {
 			},
 			skill=9164,
 			stats={
-				[1]="damage_+%_with_two_handed_weapons"
+				[1]="12% increased Damage with Two Handed Weapons"
 			}
 		},
 		[9185]={
@@ -19946,7 +19932,7 @@ return {
 			},
 			skill=9185,
 			stats={
-				[1]="critical_strike_chance_+%"
+				[1]="10% increased Critical Hit Chance"
 			}
 		},
 		[9187]={
@@ -19963,8 +19949,8 @@ return {
 			},
 			skill=9187,
 			stats={
-				[1]="damage_+%_per_different_warcry_used_recently",
-				[2]="warcry_speed_+%"
+				[1]="25% increased Warcry Speed",
+				[2]="20% increased Damage for each different Warcry you've used Recently"
 			}
 		},
 		[9217]={
@@ -19983,7 +19969,7 @@ return {
 			},
 			skill=9217,
 			stats={
-				[1]="damage_+%_with_one_handed_weapons"
+				[1]="10% increased Damage with One Handed Weapons"
 			}
 		},
 		[9226]={
@@ -20000,7 +19986,7 @@ return {
 			},
 			skill=9226,
 			stats={
-				[1]="base_damage_removed_from_mana_before_life_%"
+				[1]="10% of Damage is taken from Mana before Life"
 			}
 		},
 		[9227]={
@@ -20018,7 +20004,7 @@ return {
 			},
 			skill=9227,
 			stats={
-				[1]="spear_attack_speed_+%"
+				[1]="8% increased Attack Speed with Spears"
 			}
 		},
 		[9240]={
@@ -20035,7 +20021,7 @@ return {
 			},
 			skill=9240,
 			stats={
-				[1]="spear_attack_speed_+%"
+				[1]="3% increased Attack Speed with Spears"
 			}
 		},
 		[9272]={
@@ -20051,7 +20037,7 @@ return {
 			},
 			skill=9272,
 			stats={
-				[1]="base_debuff_slow_magnitude_+%"
+				[1]="Debuffs you inflict have 5% increased Slow Magnitude"
 			}
 		},
 		[9324]={
@@ -20068,7 +20054,7 @@ return {
 			},
 			skill=9324,
 			stats={
-				[1]="ignite_effect_on_self_+%"
+				[1]="10% reduced effect of Ignite on you"
 			}
 		},
 		[9343]={
@@ -20087,7 +20073,7 @@ return {
 			},
 			skill=9343,
 			stats={
-				[1]="link_skill_duration_+%"
+				[1]="Link Skills have 20% increased Skill Effect Duration"
 			}
 		},
 		[9352]={
@@ -20104,7 +20090,7 @@ return {
 			},
 			skill=9352,
 			stats={
-				[1]="attack_area_of_effect_+%"
+				[1]="8% increased Area of Effect for Attacks"
 			}
 		},
 		[9405]={
@@ -20121,7 +20107,7 @@ return {
 			},
 			skill=9405,
 			stats={
-				[1]="evasion_rating_+%"
+				[1]="15% increased Evasion Rating"
 			}
 		},
 		[9411]={
@@ -20138,7 +20124,7 @@ return {
 			},
 			skill=9411,
 			stats={
-				[1]="life_recovery_+%_from_flasks_while_on_low_life"
+				[1]="25% increased Life Recovery from Flasks used when on Low Life"
 			}
 		},
 		[9417]={
@@ -20156,7 +20142,7 @@ return {
 			},
 			skill=9417,
 			stats={
-				[1]="totem_life_+%"
+				[1]="16% increased Totem Life"
 			}
 		},
 		[9421]={
@@ -20173,8 +20159,7 @@ return {
 			},
 			skill=9421,
 			stats={
-				[1]="base_reduce_enemy_cold_resistance_%",
-				[2]="base_intelligence"
+				[1]="Damage Penetrates 15% Cold Resistance"
 			}
 		},
 		[9444]={
@@ -20192,7 +20177,7 @@ return {
 			},
 			skill=9444,
 			stats={
-				[1]="quarterstaff_skills_that_consume_power_charges_count_as_consuming_x_additional_power_charges"
+				[1]="Quarterstaff Skills that consume Power Charges count as consuming an additional Power Charge"
 			}
 		},
 		[9472]={
@@ -20210,8 +20195,8 @@ return {
 			},
 			skill=9472,
 			stats={
-				[1]="attack_area_of_effect_+%",
-				[2]="base_projectile_speed_+%"
+				[1]="15% increased Projectile Speed",
+				[2]="15% increased Area of Effect for Attacks"
 			}
 		},
 		[9485]={
@@ -20228,7 +20213,7 @@ return {
 			},
 			skill=9485,
 			stats={
-				[1]="display_passive_attribute_text"
+				[1]="+5 to any Attribute"
 			}
 		},
 		[9528]={
@@ -20245,7 +20230,7 @@ return {
 			},
 			skill=9528,
 			stats={
-				[1]="warcry_cooldown_speed_+%"
+				[1]="10% increased Warcry Cooldown Recovery Rate"
 			}
 		},
 		[9568]={
@@ -20262,7 +20247,7 @@ return {
 			},
 			skill=9568,
 			stats={
-				[1]="totem_life_+%"
+				[1]="16% increased Totem Life"
 			}
 		},
 		[9583]={
@@ -20279,8 +20264,8 @@ return {
 			},
 			skill=9583,
 			stats={
-				[1]="base_life_leech_amount_+%",
-				[2]="physical_damage_+%"
+				[1]="10% increased Global Physical Damage",
+				[2]="10% increased amount of Life Leeched"
 			}
 		},
 		[9638]={
@@ -20297,7 +20282,7 @@ return {
 			},
 			skill=9638,
 			stats={
-				[1]="skill_speed_+%"
+				[1]="3% increased Skill Speed"
 			}
 		},
 		[9642]={
@@ -20315,8 +20300,8 @@ return {
 			},
 			skill=9642,
 			stats={
-				[1]="maximum_energy_shield_+%",
-				[2]="stun_threshold_+_from_%_maximum_energy_shield"
+				[1]="28% increased maximum Energy Shield",
+				[2]="Gain 12% of maximum Energy Shield as additional Stun Threshold"
 			}
 		},
 		[9703]={
@@ -20333,7 +20318,7 @@ return {
 			},
 			skill=9703,
 			stats={
-				[1]="base_poison_duration_+%"
+				[1]="10% increased Poison Duration"
 			}
 		},
 		[9710]={
@@ -20367,7 +20352,7 @@ return {
 			},
 			skill=9736,
 			stats={
-				[1]="ailment_threshold_+_from_lowest_of_base_boots_evasion_rating_and_armour"
+				[1]="Gain Ailment Threshold equal to the lowest of Evasion and Armour on your Boots"
 			}
 		},
 		[9737]={
@@ -20386,7 +20371,7 @@ return {
 			},
 			skill=9737,
 			stats={
-				[1]="attack_area_of_effect_+%"
+				[1]="8% increased Area of Effect for Attacks"
 			}
 		},
 		[9750]={
@@ -20403,7 +20388,7 @@ return {
 			},
 			skill=9750,
 			stats={
-				[1]="warcry_cooldown_speed_+%"
+				[1]="10% increased Warcry Cooldown Recovery Rate"
 			}
 		},
 		[9762]={
@@ -20420,7 +20405,7 @@ return {
 			},
 			skill=9762,
 			stats={
-				[1]="sword_damage_+%"
+				[1]="10% increased Damage with Swords"
 			}
 		},
 		[9782]={
@@ -20437,7 +20422,7 @@ return {
 			},
 			skill=9782,
 			stats={
-				[1]="base_critical_strike_multiplier_+"
+				[1]="15% increased Critical Damage Bonus"
 			}
 		},
 		[9796]={
@@ -20454,7 +20439,7 @@ return {
 			},
 			skill=9796,
 			stats={
-				[1]="ignite_chance_+%"
+				[1]="15% increased chance to Ignite"
 			}
 		},
 		[9798]={
@@ -20472,7 +20457,7 @@ return {
 			},
 			skill=9798,
 			stats={
-				[1]="skill_speed_+%"
+				[1]="4% increased Skill Speed"
 			}
 		},
 		[9825]={
@@ -20489,7 +20474,7 @@ return {
 			},
 			skill=9825,
 			stats={
-				[1]="ailment_threshold_+%"
+				[1]="15% increased Elemental Ailment Threshold"
 			}
 		},
 		[9857]={
@@ -20506,7 +20491,7 @@ return {
 			},
 			skill=9857,
 			stats={
-				[1]="base_chance_to_inflict_bleeding_%"
+				[1]="5% chance to inflict Bleeding on Hit"
 			}
 		},
 		[9908]={
@@ -20524,8 +20509,8 @@ return {
 			},
 			skill=9908,
 			stats={
-				[1]="base_skill_cost_life_instead_of_mana_%",
-				[2]="attack_mana_cost_+%"
+				[1]="10% reduced Mana Cost of Attacks",
+				[2]="18% of Skill Mana Costs Converted to Life Costs"
 			}
 		},
 		[9918]={
@@ -20543,7 +20528,7 @@ return {
 			},
 			skill=9918,
 			stats={
-				[1]="attack_area_damage_+%"
+				[1]="12% increased Attack Area Damage"
 			}
 		},
 		[9941]={
@@ -20560,8 +20545,8 @@ return {
 			},
 			skill=9941,
 			stats={
-				[1]="two_handed_melee_accuracy_rating_+%",
-				[2]="one_handed_melee_accuracy_rating_+%"
+				[1]="8% increased Accuracy Rating with One Handed Melee Weapons",
+				[2]="8% increased Accuracy Rating with Two Handed Melee Weapons"
 			}
 		},
 		[9968]={
@@ -20579,8 +20564,8 @@ return {
 			},
 			skill=9968,
 			stats={
-				[1]="ailment_threshold_+%",
-				[2]="base_self_shock_duration_-%"
+				[1]="25% reduced Shock duration on you",
+				[2]="40% increased Elemental Ailment Threshold"
 			}
 		},
 		[9994]={
@@ -20620,8 +20605,8 @@ return {
 			},
 			skill=10029,
 			stats={
-				[1]="spell_area_damage_+%",
-				[2]="area_skill_knockback_chance_%"
+				[1]="Area Skills have 20% chance to Knock Enemies Back on Hit",
+				[2]="20% increased Spell Area Damage"
 			}
 		},
 		[10047]={
@@ -20638,7 +20623,7 @@ return {
 			},
 			skill=10047,
 			stats={
-				[1]="hit_damage_stun_multiplier_+%"
+				[1]="15% increased Stun Buildup"
 			}
 		},
 		[10053]={
@@ -20656,8 +20641,8 @@ return {
 			},
 			skill=10053,
 			stats={
-				[1]="flask_life_and_mana_to_recover_+%",
-				[2]="flasks_%_chance_to_not_consume_charges"
+				[1]="10% chance for Flasks you use to not consume Charges",
+				[2]="20% increased Life and Mana Recovery from Flasks"
 			}
 		},
 		[10055]={
@@ -20674,8 +20659,8 @@ return {
 			},
 			skill=10055,
 			stats={
-				[1]="minion_maximum_life_+%",
-				[2]="minion_chaos_resistance_%"
+				[1]="Minions have 8% increased maximum Life",
+				[2]="Minions have +7% to Chaos Resistance"
 			}
 		},
 		[10072]={
@@ -20693,7 +20678,7 @@ return {
 			},
 			skill=10072,
 			stats={
-				[1]="block_chance_+%"
+				[1]="6% increased Block chance"
 			}
 		},
 		[10079]={
@@ -20710,7 +20695,7 @@ return {
 			},
 			skill=10079,
 			stats={
-				[1]="energy_shield_recharge_rate_+%"
+				[1]="15% increased Energy Shield Recharge Rate"
 			}
 		},
 		[10100]={
@@ -20729,7 +20714,7 @@ return {
 			},
 			skill=10100,
 			stats={
-				[1]="display_passive_attribute_text"
+				[1]="+5 to any Attribute"
 			}
 		},
 		[10131]={
@@ -20750,7 +20735,7 @@ return {
 			},
 			skill=10131,
 			stats={
-				[1]="display_passive_attribute_text"
+				[1]="+5 to any Attribute"
 			}
 		},
 		[10156]={
@@ -20769,7 +20754,7 @@ return {
 			},
 			skill=10156,
 			stats={
-				[1]="display_passive_attribute_text"
+				[1]="+5 to any Attribute"
 			}
 		},
 		[10159]={
@@ -20786,7 +20771,7 @@ return {
 			},
 			skill=10159,
 			stats={
-				[1]="mana_regeneration_rate_+%"
+				[1]="10% increased Mana Regeneration Rate"
 			}
 		},
 		[10208]={
@@ -20803,7 +20788,7 @@ return {
 			},
 			skill=10208,
 			stats={
-				[1]="stun_threshold_+_from_%_maximum_energy_shield"
+				[1]="Gain 8% of maximum Energy Shield as additional Stun Threshold"
 			}
 		},
 		[10242]={
@@ -20820,7 +20805,7 @@ return {
 			},
 			skill=10242,
 			stats={
-				[1]="damage_taken_goes_to_life_over_4_seconds_%"
+				[1]="3% of Damage taken Recouped as Life"
 			}
 		},
 		[10247]={
@@ -20837,7 +20822,7 @@ return {
 			},
 			skill=10247,
 			stats={
-				[1]="display_passive_attribute_text"
+				[1]="+5 to any Attribute"
 			}
 		},
 		[10251]={
@@ -20854,7 +20839,7 @@ return {
 			},
 			skill=10251,
 			stats={
-				[1]="hit_damage_stun_multiplier_+%"
+				[1]="15% increased Stun Buildup"
 			}
 		},
 		[10265]={
@@ -20871,7 +20856,7 @@ return {
 			},
 			skill=10265,
 			stats={
-				[1]="spear_damage_+%"
+				[1]="25% increased Damage with Spears"
 			}
 		},
 		[10271]={
@@ -20888,7 +20873,7 @@ return {
 			},
 			skill=10271,
 			stats={
-				[1]="attack_damage_+%_while_surrounded"
+				[1]="25% increased Attack Damage while Surrounded"
 			}
 		},
 		[10273]={
@@ -20905,7 +20890,7 @@ return {
 			},
 			skill=10273,
 			stats={
-				[1]="additional_all_attributes"
+				[1]="+3 to all Attributes"
 			}
 		},
 		[10277]={
@@ -20922,7 +20907,7 @@ return {
 			},
 			skill=10277,
 			stats={
-				[1]="accuracy_rating_+%"
+				[1]="8% increased Accuracy Rating"
 			}
 		},
 		[10286]={
@@ -20939,8 +20924,8 @@ return {
 			},
 			skill=10286,
 			stats={
-				[1]="armour_break_amount_+%",
-				[2]="physical_damage_reduction_rating_+%"
+				[1]="10% increased Armour",
+				[2]="Break 15% increased Armour"
 			}
 		},
 		[10295]={
@@ -20958,8 +20943,8 @@ return {
 			},
 			skill=10295,
 			stats={
-				[1]="base_cast_speed_+%",
-				[2]="base_mana_cost_-%"
+				[1]="16% increased Cast Speed",
+				[2]="15% increased Mana Cost of Skills"
 			}
 		},
 		[10314]={
@@ -20976,7 +20961,7 @@ return {
 			},
 			skill=10314,
 			stats={
-				[1]="mana_regeneration_rate_+%"
+				[1]="10% increased Mana Regeneration Rate"
 			}
 		},
 		[10320]={
@@ -20993,7 +20978,7 @@ return {
 			},
 			skill=10320,
 			stats={
-				[1]="minion_maximum_life_+%"
+				[1]="Minions have 10% increased maximum Life"
 			}
 		},
 		[10362]={
@@ -21013,7 +20998,7 @@ return {
 			},
 			skill=10362,
 			stats={
-				[1]="physical_damage_reduction_rating_+%"
+				[1]="15% increased Armour"
 			}
 		},
 		[10364]={
@@ -21031,7 +21016,7 @@ return {
 			},
 			skill=10364,
 			stats={
-				[1]="skill_speed_+%"
+				[1]="3% increased Skill Speed"
 			}
 		},
 		[10372]={
@@ -21048,7 +21033,7 @@ return {
 			},
 			skill=10372,
 			stats={
-				[1]="stun_threshold_+%"
+				[1]="12% increased Stun Threshold"
 			}
 		},
 		[10382]={
@@ -21067,7 +21052,7 @@ return {
 			},
 			skill=10382,
 			stats={
-				[1]="display_passive_attribute_text"
+				[1]="+5 to any Attribute"
 			}
 		},
 		[10398]={
@@ -21085,8 +21070,8 @@ return {
 			},
 			skill=10398,
 			stats={
-				[1]="spell_critical_strike_chance_+%",
-				[2]="cast_speed_+%_if_have_crit_recently"
+				[1]="16% increased Critical Hit Chance for Spells",
+				[2]="8% increased Cast Speed if you've dealt a Critical Hit Recently"
 			}
 		},
 		[10423]={
@@ -21104,8 +21089,8 @@ return {
 			},
 			skill=10423,
 			stats={
-				[1]="base_reduce_enemy_fire_resistance_%",
-				[2]="fire_exposure_you_inflict_lowers_fire_resistance_by_extra_%"
+				[1]="Damage Penetrates 15% Fire Resistance",
+				[2]="Fire Exposure you inflict lowers Total Fire Resistance by an extra 5%"
 			}
 		},
 		[10472]={
@@ -21123,7 +21108,7 @@ return {
 			},
 			skill=10472,
 			stats={
-				[1]="flask_mana_to_recover_+%"
+				[1]="10% increased Mana Recovery from Flasks"
 			}
 		},
 		[10474]={
@@ -21141,7 +21126,7 @@ return {
 			},
 			skill=10474,
 			stats={
-				[1]="attack_area_of_effect_+%"
+				[1]="8% increased Area of Effect for Attacks"
 			}
 		},
 		[10508]={
@@ -21158,7 +21143,7 @@ return {
 			},
 			skill=10508,
 			stats={
-				[1]="attack_speed_+%_while_holding_shield"
+				[1]="3% increased Attack Speed while holding a Shield"
 			}
 		},
 		[10534]={
@@ -21175,7 +21160,7 @@ return {
 			},
 			skill=10534,
 			stats={
-				[1]="totem_skill_cast_speed_+%"
+				[1]="Spells Cast by Totems have 4% increased Cast Speed"
 			}
 		},
 		[10552]={
@@ -21193,7 +21178,7 @@ return {
 			},
 			skill=10552,
 			stats={
-				[1]="stun_threshold_+_from_%_maximum_energy_shield"
+				[1]="Gain 8% of maximum Energy Shield as additional Stun Threshold"
 			}
 		},
 		[10571]={
@@ -21210,7 +21195,7 @@ return {
 			},
 			skill=10571,
 			stats={
-				[1]="stun_threshold_+%"
+				[1]="12% increased Stun Threshold"
 			}
 		},
 		[10602]={
@@ -21227,8 +21212,7 @@ return {
 			},
 			skill=10602,
 			stats={
-				[1]="one_handed_attack_speed_+%",
-				[2]="base_dexterity"
+				[1]="8% increased Attack Speed with One Handed Weapons"
 			}
 		},
 		[10648]={
@@ -21245,7 +21229,7 @@ return {
 			},
 			skill=10648,
 			stats={
-				[1]="projectile_damage_+%_vs_enemies_further_than_6m_distance"
+				[1]="Projectiles deal 12% increased Damage with Hits against Enemies further than 6m"
 			}
 		},
 		[10677]={
@@ -21262,7 +21246,7 @@ return {
 			},
 			skill=10677,
 			stats={
-				[1]="stun_threshold_+%_when_not_stunned_recently"
+				[1]="20% increased Stun Threshold if you haven't been Stunned Recently"
 			}
 		},
 		[10681]={
@@ -21280,7 +21264,7 @@ return {
 			},
 			skill=10681,
 			stats={
-				[1]="damage_+%_per_1%_block_chance"
+				[1]="1% increased Damage per 1% Chance to Block"
 			}
 		},
 		[10694]={
@@ -21298,7 +21282,8 @@ return {
 			},
 			skill=10694,
 			stats={
-				[1]="you_and_allies_in_presence_non_skill_base_all_damage_%_to_gain_as_fire_while_on_high_infernal_flame"
+				[1]="While on High Infernal Flame, you and Allies in your",
+				[2]="Presence Gain 20% of Damage as Fire Damage"
 			}
 		},
 		[10731]={
@@ -21316,7 +21301,7 @@ return {
 			},
 			skill=10731,
 			stats={
-				[1]="chronomancer_every_8_seconds_+%_final_cast_speed_for_4_seconds"
+				[1]="Every 12 seconds, gain 50% more Cast Speed for 4 seconds"
 			}
 		},
 		[10742]={
@@ -21334,7 +21319,7 @@ return {
 			},
 			skill=10742,
 			stats={
-				[1]="minion_attack_and_cast_speed_+%"
+				[1]="Minions have 3% increased Attack and Cast Speed"
 			}
 		},
 		[10772]={
@@ -21351,8 +21336,8 @@ return {
 			},
 			skill=10772,
 			stats={
-				[1]="base_life_leech_amount_+%",
-				[2]="base_life_leech_rate_+%"
+				[1]="20% increased amount of Life Leeched",
+				[2]="Leech Life 25% faster"
 			}
 		},
 		[10783]={
@@ -21369,7 +21354,7 @@ return {
 			},
 			skill=10783,
 			stats={
-				[1]="sword_damage_+%"
+				[1]="10% increased Damage with Swords"
 			}
 		},
 		[10830]={
@@ -21386,7 +21371,7 @@ return {
 			},
 			skill=10830,
 			stats={
-				[1]="physical_damage_reduction_rating_+%"
+				[1]="18% increased Armour"
 			}
 		},
 		[10873]={
@@ -21403,7 +21388,7 @@ return {
 			},
 			skill=10873,
 			stats={
-				[1]="attack_damage_+%"
+				[1]="25% increased Attack Damage"
 			}
 		},
 		[10881]={
@@ -21421,7 +21406,7 @@ return {
 			},
 			skill=10881,
 			stats={
-				[1]="energy_shield_from_focus_+%"
+				[1]="40% increased Energy Shield from Equipped Focus"
 			}
 		},
 		[10909]={
@@ -21439,7 +21424,7 @@ return {
 			},
 			skill=10909,
 			stats={
-				[1]="display_passive_attribute_text"
+				[1]="+5 to any Attribute"
 			}
 		},
 		[10927]={
@@ -21455,7 +21440,7 @@ return {
 			},
 			skill=10927,
 			stats={
-				[1]="base_debuff_slow_magnitude_+%"
+				[1]="Debuffs you inflict have 5% increased Slow Magnitude"
 			}
 		},
 		[10944]={
@@ -21472,8 +21457,8 @@ return {
 			},
 			skill=10944,
 			stats={
-				[1]="evasion_rating_+%",
-				[2]="maximum_energy_shield_+%"
+				[1]="12% increased Evasion Rating",
+				[2]="12% increased maximum Energy Shield"
 			}
 		},
 		[10987]={
@@ -21492,7 +21477,7 @@ return {
 			},
 			skill=10987,
 			stats={
-				[1]="chance_for_skills_to_avoid_cooldown_%"
+				[1]="Skills have 33% chance to not consume a Cooldown when used"
 			}
 		},
 		[10998]={
@@ -21510,7 +21495,7 @@ return {
 			},
 			skill=10998,
 			stats={
-				[1]="stun_threshold_+_from_lowest_of_base_helmet_evasion_rating_and_armour"
+				[1]="Gain Stun Threshold equal to the lowest of Evasion and Armour on your Helmet"
 			}
 		},
 		[11030]={
@@ -21527,7 +21512,7 @@ return {
 			},
 			skill=11030,
 			stats={
-				[1]="energy_shield_delay_-%"
+				[1]="15% faster start of Energy Shield Recharge"
 			}
 		},
 		[11037]={
@@ -21545,8 +21530,8 @@ return {
 			},
 			skill=11037,
 			stats={
-				[1]="base_cooldown_speed_+%",
-				[2]="base_skill_area_of_effect_+%"
+				[1]="10% increased Area of Effect",
+				[2]="10% increased Cooldown Recovery Rate"
 			}
 		},
 		[11066]={
@@ -21563,7 +21548,7 @@ return {
 			},
 			skill=11066,
 			stats={
-				[1]="base_cooldown_speed_+%"
+				[1]="5% increased Cooldown Recovery Rate"
 			}
 		},
 		[11094]={
@@ -21580,7 +21565,7 @@ return {
 			},
 			skill=11094,
 			stats={
-				[1]="charm_effect_+%"
+				[1]="Charms applied to you have 10% increased Effect"
 			}
 		},
 		[11153]={
@@ -21598,8 +21583,8 @@ return {
 			},
 			skill=11153,
 			stats={
-				[1]="attack_speed_+%",
-				[2]="accuracy_rating_+%"
+				[1]="2% increased Attack Speed",
+				[2]="5% increased Accuracy Rating"
 			}
 		},
 		[11178]={
@@ -21616,7 +21601,7 @@ return {
 			},
 			skill=11178,
 			stats={
-				[1]="chance_to_gain_onslaught_on_kill_with_axes_%"
+				[1]="50% chance to gain Onslaught on Killing Blow with Axes"
 			}
 		},
 		[11248]={
@@ -21635,7 +21620,7 @@ return {
 			},
 			skill=11248,
 			stats={
-				[1]="display_passive_attribute_text"
+				[1]="+5 to any Attribute"
 			}
 		},
 		[11257]={
@@ -21653,7 +21638,7 @@ return {
 			},
 			skill=11257,
 			stats={
-				[1]="evasion_rating_+%_while_surrounded"
+				[1]="30% increased Evasion Rating while Surrounded"
 			}
 		},
 		[11275]={
@@ -21671,7 +21656,7 @@ return {
 			},
 			skill=11275,
 			stats={
-				[1]="base_reduce_enemy_fire_resistance_%"
+				[1]="Damage Penetrates 6% Fire Resistance"
 			}
 		},
 		[11292]={
@@ -21688,7 +21673,7 @@ return {
 			},
 			skill=11292,
 			stats={
-				[1]="summon_totem_cast_speed_+%"
+				[1]="20% increased Totem Placement speed"
 			}
 		},
 		[11306]={
@@ -21705,7 +21690,7 @@ return {
 			},
 			skill=11306,
 			stats={
-				[1]="gain_x_rage_on_hit_with_axes"
+				[1]="Gain 1 Rage on Melee Axe Hit"
 			}
 		},
 		[11311]={
@@ -21722,8 +21707,8 @@ return {
 			},
 			skill=11311,
 			stats={
-				[1]="base_physical_damage_reduction_rating",
-				[2]="base_evasion_rating"
+				[1]="+10 to Armour",
+				[2]="+8 to Evasion Rating"
 			}
 		},
 		[11315]={
@@ -21740,7 +21725,7 @@ return {
 			},
 			skill=11315,
 			stats={
-				[1]="lightning_damage_+%"
+				[1]="12% increased Lightning Damage"
 			}
 		},
 		[11329]={
@@ -21757,7 +21742,7 @@ return {
 			},
 			skill=11329,
 			stats={
-				[1]="life_regeneration_rate_+%"
+				[1]="10% increased Life Regeneration rate"
 			}
 		},
 		[11337]={
@@ -21775,7 +21760,7 @@ return {
 			},
 			skill=11337,
 			stats={
-				[1]="chill_effect_+%"
+				[1]="15% increased Magnitude of Chill you inflict"
 			}
 		},
 		[11366]={
@@ -21792,8 +21777,8 @@ return {
 			},
 			skill=11366,
 			stats={
-				[1]="non_skill_base_all_damage_%_to_gain_as_fire",
-				[2]="base_fire_damage_resistance_%"
+				[1]="Gain 8% of Damage as Extra Fire Damage",
+				[2]="+20% to Fire Resistance"
 			}
 		},
 		[11376]={
@@ -21810,7 +21795,7 @@ return {
 			},
 			skill=11376,
 			stats={
-				[1]="minion_critical_strike_chance_+%"
+				[1]="Minions have 40% increased Critical Hit Chance"
 			}
 		},
 		[11433]={
@@ -21827,7 +21812,7 @@ return {
 			},
 			skill=11433,
 			stats={
-				[1]="fire_damage_+%"
+				[1]="12% increased Fire Damage"
 			}
 		},
 		[11472]={
@@ -21845,7 +21830,7 @@ return {
 			},
 			skill=11472,
 			stats={
-				[1]="evasion_rating_+%_if_consumed_frenzy_charge_recently"
+				[1]="20% increased Evasion Rating if you've consumed a Frenzy Charge Recently"
 			}
 		},
 		[11504]={
@@ -21862,8 +21847,7 @@ return {
 			},
 			skill=11504,
 			stats={
-				[1]="attack_speed_+%",
-				[2]="base_dexterity"
+				[1]="2% increased Attack Speed"
 			}
 		},
 		[11525]={
@@ -21880,7 +21864,7 @@ return {
 			},
 			skill=11525,
 			stats={
-				[1]="ignite_chance_+%"
+				[1]="15% increased chance to Ignite"
 			}
 		},
 		[11526]={
@@ -21898,7 +21882,7 @@ return {
 			},
 			skill=11526,
 			stats={
-				[1]="arrow_critical_strike_chance_+%_max_as_distance_travelled_increases"
+				[1]="Arrows gain Critical Hit Chance as they travel farther, up to 60% increased Critical Hit Chance"
 			}
 		},
 		[11578]={
@@ -21915,7 +21899,7 @@ return {
 			},
 			skill=11578,
 			stats={
-				[1]="shock_enemies_in_150cm_radius_on_shock_chance_%"
+				[1]="Shocking Hits have a 50% chance to also Shock enemies in a 1.5 metre radius"
 			}
 		},
 		[11598]={
@@ -21933,7 +21917,7 @@ return {
 			},
 			skill=11598,
 			stats={
-				[1]="quarterstaff_attack_speed_+%"
+				[1]="3% increased Attack Speed with Quarterstaves"
 			}
 		},
 		[11604]={
@@ -21953,7 +21937,7 @@ return {
 			},
 			skill=11604,
 			stats={
-				[1]="display_passive_attribute_text"
+				[1]="+5 to any Attribute"
 			}
 		},
 		[11641]={
@@ -21973,7 +21957,7 @@ return {
 			},
 			skill=11641,
 			stats={
-				[1]="all_skill_gem_quality_+"
+				[1]="+10% to Quality of all Skills"
 			}
 		},
 		[11656]={
@@ -21990,7 +21974,7 @@ return {
 			},
 			skill=11656,
 			stats={
-				[1]="gain_x_rage_when_hit"
+				[1]="Gain 2 Rage when Hit by an Enemy"
 			}
 		},
 		[11672]={
@@ -22009,7 +21993,7 @@ return {
 			},
 			skill=11672,
 			stats={
-				[1]="display_passive_attribute_text"
+				[1]="+5 to any Attribute"
 			}
 		},
 		[11736]={
@@ -22026,7 +22010,7 @@ return {
 			},
 			skill=11736,
 			stats={
-				[1]="lightning_damage_+%"
+				[1]="12% increased Lightning Damage"
 			}
 		},
 		[11741]={
@@ -22044,7 +22028,7 @@ return {
 			},
 			skill=11741,
 			stats={
-				[1]="display_passive_attribute_text"
+				[1]="+5 to any Attribute"
 			}
 		},
 		[11764]={
@@ -22061,7 +22045,7 @@ return {
 			},
 			skill=11764,
 			stats={
-				[1]="debuff_time_passed_+%"
+				[1]="Debuffs on you expire 10% faster"
 			}
 		},
 		[11771]={
@@ -22079,7 +22063,7 @@ return {
 			},
 			skill=11771,
 			stats={
-				[1]="skill_speed_+%"
+				[1]="4% increased Skill Speed"
 			}
 		},
 		[11788]={
@@ -22096,8 +22080,8 @@ return {
 			},
 			skill=11788,
 			stats={
-				[1]="spell_area_of_effect_+%",
-				[2]="spell_area_damage_+%"
+				[1]="12% increased Spell Area Damage",
+				[2]="Spell Skills have 5% reduced Area of Effect"
 			}
 		},
 		[11813]={
@@ -22114,7 +22098,7 @@ return {
 			},
 			skill=11813,
 			stats={
-				[1]="evasion_rating_+%"
+				[1]="15% increased Evasion Rating"
 			}
 		},
 		[11825]={
@@ -22135,7 +22119,7 @@ return {
 			},
 			skill=11825,
 			stats={
-				[1]="display_passive_attribute_text"
+				[1]="+5 to any Attribute"
 			}
 		},
 		[11826]={
@@ -22152,9 +22136,9 @@ return {
 			},
 			skill=11826,
 			stats={
-				[1]="projectile_hit_damage_stun_multiplier_+%",
-				[2]="attack_speed_+%",
-				[3]="projectile_damage_+%"
+				[1]="8% reduced Attack Speed",
+				[2]="40% increased Projectile Damage",
+				[3]="40% increased Projectile Stun Buildup"
 			}
 		},
 		[11838]={
@@ -22172,8 +22156,8 @@ return {
 			},
 			skill=11838,
 			stats={
-				[1]="energy_shield_from_focus_+%",
-				[2]="spell_damage_+%_while_es_full"
+				[1]="25% increased Spell Damage while on Full Energy Shield",
+				[2]="75% increased Energy Shield from Equipped Focus"
 			}
 		},
 		[11855]={
@@ -22190,7 +22174,7 @@ return {
 			},
 			skill=11855,
 			stats={
-				[1]="accuracy_rating_+%"
+				[1]="8% increased Accuracy Rating"
 			}
 		},
 		[11916]={
@@ -22207,7 +22191,7 @@ return {
 			},
 			skill=11916,
 			stats={
-				[1]="life_regeneration_rate_per_minute_%"
+				[1]="Regenerate 0.2% of Life per second"
 			}
 		},
 		[11938]={
@@ -22224,7 +22208,7 @@ return {
 			},
 			skill=11938,
 			stats={
-				[1]="mana_regeneration_rate_+%"
+				[1]="10% increased Mana Regeneration Rate"
 			}
 		},
 		[11980]={
@@ -22242,7 +22226,7 @@ return {
 			},
 			skill=11980,
 			stats={
-				[1]="block_chance_+%"
+				[1]="5% increased Block chance"
 			}
 		},
 		[12000]={
@@ -22260,7 +22244,7 @@ return {
 			},
 			skill=12000,
 			stats={
-				[1]="titan_maximum_life_+%_final"
+				[1]="15% more Maximum Life"
 			}
 		},
 		[12033]={
@@ -22278,7 +22262,7 @@ return {
 			},
 			skill=12033,
 			stats={
-				[1]="number_of_additional_projectiles"
+				[1]="Skills fire an additional Projectile"
 			}
 		},
 		[12078]={
@@ -22296,7 +22280,7 @@ return {
 			},
 			skill=12078,
 			stats={
-				[1]="projectile_damage_+%"
+				[1]="10% increased Projectile Damage"
 			}
 		},
 		[12116]={
@@ -22313,8 +22297,8 @@ return {
 			},
 			skill=12116,
 			stats={
-				[1]="block_chance_+%",
-				[2]="base_block_%_damage_taken"
+				[1]="15% increased Block chance",
+				[2]="You take 5% of damage from Blocked Hits"
 			}
 		},
 		[12120]={
@@ -22331,7 +22315,7 @@ return {
 			},
 			skill=12120,
 			stats={
-				[1]="evasion_rating_+%"
+				[1]="15% increased Evasion Rating"
 			}
 		},
 		[12166]={
@@ -22349,7 +22333,7 @@ return {
 			},
 			skill=12166,
 			stats={
-				[1]="cast_speed_for_cold_skills_+%"
+				[1]="3% increased Cast Speed with Cold Skills"
 			}
 		},
 		[12208]={
@@ -22367,7 +22351,7 @@ return {
 			},
 			skill=12208,
 			stats={
-				[1]="flask_life_to_recover_+%"
+				[1]="10% increased Life Recovery from Flasks"
 			}
 		},
 		[12249]={
@@ -22384,8 +22368,8 @@ return {
 			},
 			skill=12249,
 			stats={
-				[1]="evasion_rating_+%",
-				[2]="maximum_energy_shield_+%"
+				[1]="12% increased Evasion Rating",
+				[2]="12% increased maximum Energy Shield"
 			}
 		},
 		[12253]={
@@ -22405,7 +22389,7 @@ return {
 			},
 			skill=12253,
 			stats={
-				[1]="display_passive_attribute_text"
+				[1]="+5 to any Attribute"
 			}
 		},
 		[12276]={
@@ -22422,7 +22406,7 @@ return {
 			},
 			skill=12276,
 			stats={
-				[1]="mace_slam_aftershock_chance_%"
+				[1]="8% chance to Aftershock for Slam Skills you use with Maces"
 			}
 		},
 		[12311]={
@@ -22439,7 +22423,7 @@ return {
 			},
 			skill=12311,
 			stats={
-				[1]="reload_speed_+%"
+				[1]="15% increased Crossbow Reload Speed"
 			}
 		},
 		[12322]={
@@ -22456,7 +22440,7 @@ return {
 			},
 			skill=12322,
 			stats={
-				[1]="charges_gained_+%"
+				[1]="8% increased Flask and Charm Charges gained"
 			}
 		},
 		[12337]={
@@ -22474,8 +22458,8 @@ return {
 			},
 			skill=12337,
 			stats={
-				[1]="base_reduce_enemy_lightning_resistance_%",
-				[2]="shock_chance_+%"
+				[1]="30% increased chance to Shock",
+				[2]="Damage Penetrates 15% Lightning Resistance"
 			}
 		},
 		[12367]={
@@ -22492,7 +22476,7 @@ return {
 			},
 			skill=12367,
 			stats={
-				[1]="chaos_damage_+%"
+				[1]="7% increased Chaos Damage"
 			}
 		},
 		[12418]={
@@ -22510,7 +22494,7 @@ return {
 			},
 			skill=12418,
 			stats={
-				[1]="empowered_attack_damage_+%"
+				[1]="Empowered Attacks deal 16% increased Damage"
 			}
 		},
 		[12419]={
@@ -22527,8 +22511,8 @@ return {
 			},
 			skill=12419,
 			stats={
-				[1]="chaos_damage_+%",
-				[2]="skill_effect_duration_+%"
+				[1]="5% increased Chaos Damage",
+				[2]="5% increased Skill Effect Duration"
 			}
 		},
 		[12430]={
@@ -22545,7 +22529,7 @@ return {
 			},
 			skill=12430,
 			stats={
-				[1]="melee_damage_+%"
+				[1]="10% increased Melee Damage"
 			}
 		},
 		[12451]={
@@ -22562,7 +22546,7 @@ return {
 			},
 			skill=12451,
 			stats={
-				[1]="base_cooldown_speed_+%"
+				[1]="5% increased Cooldown Recovery Rate"
 			}
 		},
 		[12462]={
@@ -22579,7 +22563,7 @@ return {
 			},
 			skill=12462,
 			stats={
-				[1]="aura_effect_+%"
+				[1]="8% increased Effect of Auras from your Skills"
 			}
 		},
 		[12488]={
@@ -22597,7 +22581,7 @@ return {
 			},
 			skill=12488,
 			stats={
-				[1]="elemental_damage_+%"
+				[1]="12% increased Elemental Damage"
 			}
 		},
 		[12498]={
@@ -22614,7 +22598,7 @@ return {
 			},
 			skill=12498,
 			stats={
-				[1]="quiver_mod_effect_+%"
+				[1]="10% increased bonuses gained from Equipped Quiver"
 			}
 		},
 		[12526]={
@@ -22631,7 +22615,7 @@ return {
 			},
 			skill=12526,
 			stats={
-				[1]="ailment_threshold_+%"
+				[1]="15% increased Elemental Ailment Threshold"
 			}
 		},
 		[12565]={
@@ -22648,8 +22632,8 @@ return {
 			},
 			skill=12565,
 			stats={
-				[1]="thorns_damage_+%",
-				[2]="block_chance_+%"
+				[1]="4% increased Block chance",
+				[2]="10% increased Thorns damage"
 			}
 		},
 		[12611]={
@@ -22668,7 +22652,7 @@ return {
 			},
 			skill=12611,
 			stats={
-				[1]="damage_+%_per_enemy_elemental_ailment"
+				[1]="15% increased Damage for each type of Elemental Ailment on Enemy"
 			}
 		},
 		[12661]={
@@ -22685,7 +22669,7 @@ return {
 			},
 			skill=12661,
 			stats={
-				[1]="stun_threshold_based_on_%_energy_shield_instead_of_life"
+				[1]="Stun Threshold is based on 30% of your Energy Shield instead of Life"
 			}
 		},
 		[12750]={
@@ -22702,7 +22686,7 @@ return {
 			},
 			skill=12750,
 			stats={
-				[1]="generate_x_charges_for_charms_per_minute"
+				[1]="Charms gain 0.15 charges per Second"
 			}
 		},
 		[12751]={
@@ -22719,7 +22703,7 @@ return {
 			},
 			skill=12751,
 			stats={
-				[1]="one_handed_melee_critical_strike_chance_+%"
+				[1]="10% increased Critical Hit Chance with One Handed Melee Weapons"
 			}
 		},
 		[12761]={
@@ -22736,8 +22720,8 @@ return {
 			},
 			skill=12761,
 			stats={
-				[1]="evasion_rating_+%",
-				[2]="maximum_energy_shield_+%"
+				[1]="12% increased Evasion Rating",
+				[2]="12% increased maximum Energy Shield"
 			}
 		},
 		[12777]={
@@ -22754,8 +22738,8 @@ return {
 			},
 			skill=12777,
 			stats={
-				[1]="physical_damage_reduction_rating_+%",
-				[2]="maximum_energy_shield_+%"
+				[1]="12% increased Armour",
+				[2]="12% increased maximum Energy Shield"
 			}
 		},
 		[12817]={
@@ -22772,7 +22756,7 @@ return {
 			},
 			skill=12817,
 			stats={
-				[1]="shield_armour_+%"
+				[1]="25% increased Defences from Equipped Shield"
 			}
 		},
 		[12851]={
@@ -22790,7 +22774,7 @@ return {
 			},
 			skill=12851,
 			stats={
-				[1]="physical_damage_+%"
+				[1]="10% increased Global Physical Damage"
 			}
 		},
 		[12876]={
@@ -22826,7 +22810,7 @@ return {
 			},
 			skill=12882,
 			stats={
-				[1]="trigger_elemental_storm_on_crit"
+				[1]="Trigger Elemental Storm on Critical Hit with Spells"
 			}
 		},
 		[12890]={
@@ -22846,7 +22830,7 @@ return {
 			},
 			skill=12890,
 			stats={
-				[1]="display_passive_attribute_text"
+				[1]="+5 to any Attribute"
 			}
 		},
 		[12918]={
@@ -22863,7 +22847,7 @@ return {
 			},
 			skill=12918,
 			stats={
-				[1]="energy_shield_recharge_rate_+%"
+				[1]="15% increased Energy Shield Recharge Rate"
 			}
 		},
 		[12925]={
@@ -22880,7 +22864,7 @@ return {
 			},
 			skill=12925,
 			stats={
-				[1]="shock_chance_+%"
+				[1]="15% increased chance to Shock"
 			}
 		},
 		[12998]={
@@ -22898,8 +22882,8 @@ return {
 			},
 			skill=12998,
 			stats={
-				[1]="freeze_threshold_+%",
-				[2]="base_self_freeze_duration_-%"
+				[1]="25% reduced Freeze Duration on you",
+				[2]="60% increased Freeze Threshold"
 			}
 		},
 		[13030]={
@@ -22916,7 +22900,7 @@ return {
 			},
 			skill=13030,
 			stats={
-				[1]="damaging_ailments_deal_damage_+%_faster"
+				[1]="Damaging Ailments deal damage 5% faster"
 			}
 		},
 		[13065]={
@@ -22934,7 +22918,7 @@ return {
 			},
 			skill=13065,
 			stats={
-				[1]="triggered_spell_spell_damage_+%"
+				[1]="Triggered Spells deal 16% increased Spell Damage"
 			}
 		},
 		[13075]={
@@ -22951,8 +22935,7 @@ return {
 			},
 			skill=13075,
 			stats={
-				[1]="base_strength",
-				[2]="maximum_mana_+%"
+				[1]="5% reduced maximum Mana"
 			}
 		},
 		[13081]={
@@ -22970,7 +22953,7 @@ return {
 			},
 			skill=13081,
 			stats={
-				[1]="projectile_damage_+%"
+				[1]="10% increased Projectile Damage"
 			}
 		},
 		[13157]={
@@ -22987,7 +22970,7 @@ return {
 			},
 			skill=13157,
 			stats={
-				[1]="flask_life_to_recover_+%"
+				[1]="10% increased Life Recovery from Flasks"
 			}
 		},
 		[13171]={
@@ -23004,7 +22987,7 @@ return {
 			},
 			skill=13171,
 			stats={
-				[1]="totem_additional_physical_damage_reduction_%"
+				[1]="Totems have 12% additional Physical Damage Reduction"
 			}
 		},
 		[13174]={
@@ -23024,10 +23007,11 @@ return {
 			},
 			skill=13174,
 			stats={
-				[1]="infernal_flame_instead_of_mana",
-				[2]="lose_%_of_max_infernal_flame_per_minute",
-				[3]="hit_for_%_max_life_es_on_max_infernal_flame",
-				[4]="lose_%_of_infernal_flame_on_reaching_max"
+				[1]="Maximum Mana is replaced by Maximum Infernal Flame",
+				[2]="Gain Infernal Flame instead of spending Mana for Skill costs",
+				[3]="Take maximum Life and Energy Shield as Fire Damage when Infernal Flame reaches maximum",
+				[4]="Lose all Infernal Flame on reaching maximum Infernal Flame",
+				[5]="10% of Infernal Flame lost per second if none was gained in the past 2 seconds"
 			}
 		},
 		[13233]={
@@ -23044,8 +23028,8 @@ return {
 			},
 			skill=13233,
 			stats={
-				[1]="base_skill_area_of_effect_+%",
-				[2]="area_damage_+%"
+				[1]="10% increased Area of Effect",
+				[2]="10% increased Area Damage"
 			}
 		},
 		[13241]={
@@ -23063,7 +23047,7 @@ return {
 			},
 			skill=13241,
 			stats={
-				[1]="display_passive_attribute_text"
+				[1]="+5 to any Attribute"
 			}
 		},
 		[13279]={
@@ -23082,7 +23066,7 @@ return {
 			},
 			skill=13279,
 			stats={
-				[1]="display_passive_attribute_text"
+				[1]="+5 to any Attribute"
 			}
 		},
 		[13293]={
@@ -23099,7 +23083,7 @@ return {
 			},
 			skill=13293,
 			stats={
-				[1]="armour_+%_if_you_havent_been_hit_recently"
+				[1]="20% increased Armour if you haven't been Hit Recently"
 			}
 		},
 		[13294]={
@@ -23116,7 +23100,7 @@ return {
 			},
 			skill=13294,
 			stats={
-				[1]="skill_effect_duration_+%"
+				[1]="10% increased Skill Effect Duration"
 			}
 		},
 		[13307]={
@@ -23133,7 +23117,7 @@ return {
 			},
 			skill=13307,
 			stats={
-				[1]="stun_threshold_+_from_%_maximum_energy_shield"
+				[1]="Gain 8% of maximum Energy Shield as additional Stun Threshold"
 			}
 		},
 		[13341]={
@@ -23151,7 +23135,7 @@ return {
 			},
 			skill=13341,
 			stats={
-				[1]="base_frenzy_charge_duration_+%"
+				[1]="20% increased Frenzy Charge Duration"
 			}
 		},
 		[13356]={
@@ -23168,7 +23152,7 @@ return {
 			},
 			skill=13356,
 			stats={
-				[1]="damage_+%_with_one_handed_weapons"
+				[1]="10% increased Damage with One Handed Weapons"
 			}
 		},
 		[13367]={
@@ -23186,7 +23170,7 @@ return {
 			},
 			skill=13367,
 			stats={
-				[1]="accuracy_rating_+%"
+				[1]="8% increased Accuracy Rating"
 			}
 		},
 		[13397]={
@@ -23203,7 +23187,7 @@ return {
 			},
 			skill=13397,
 			stats={
-				[1]="display_passive_attribute_text"
+				[1]="+5 to any Attribute"
 			}
 		},
 		[13407]={
@@ -23221,8 +23205,7 @@ return {
 			},
 			skill=13407,
 			stats={
-				[1]="base_critical_strike_multiplier_+",
-				[2]="base_strength"
+				[1]="35% increased Critical Damage Bonus"
 			}
 		},
 		[13411]={
@@ -23241,7 +23224,7 @@ return {
 			},
 			skill=13411,
 			stats={
-				[1]="display_passive_attribute_text"
+				[1]="+5 to any Attribute"
 			}
 		},
 		[13419]={
@@ -23259,7 +23242,7 @@ return {
 			},
 			skill=13419,
 			stats={
-				[1]="base_critical_strike_multiplier_+"
+				[1]="15% increased Critical Damage Bonus"
 			}
 		},
 		[13425]={
@@ -23276,7 +23259,7 @@ return {
 			},
 			skill=13425,
 			stats={
-				[1]="base_bleed_duration_+%"
+				[1]="10% increased Bleeding Duration"
 			}
 		},
 		[13457]={
@@ -23293,8 +23276,8 @@ return {
 			},
 			skill=13457,
 			stats={
-				[1]="energy_shield_delay_-%_if_stunned_recently",
-				[2]="evasion_+%_if_hit_recently"
+				[1]="30% increased Evasion Rating if you have been Hit Recently",
+				[2]="60% faster start of Energy Shield Recharge if you've been Stunned Recently"
 			}
 		},
 		[13474]={
@@ -23311,7 +23294,7 @@ return {
 			},
 			skill=13474,
 			stats={
-				[1]="damage_+%_with_one_handed_weapons"
+				[1]="10% increased Damage with One Handed Weapons"
 			}
 		},
 		[13500]={
@@ -23328,7 +23311,7 @@ return {
 			},
 			skill=13500,
 			stats={
-				[1]="mana_regeneration_rate_+%"
+				[1]="10% increased Mana Regeneration Rate"
 			}
 		},
 		[13505]={
@@ -23346,8 +23329,8 @@ return {
 			},
 			skill=13505,
 			stats={
-				[1]="life_regeneration_rate_+%",
-				[2]="damage_taken_goes_to_life_over_4_seconds_%"
+				[1]="20% increased Life Regeneration rate",
+				[2]="5% of Damage taken Recouped as Life"
 			}
 		},
 		[13537]={
@@ -23364,7 +23347,7 @@ return {
 			},
 			skill=13537,
 			stats={
-				[1]="maximum_energy_shield_+%"
+				[1]="15% increased maximum Energy Shield"
 			}
 		},
 		[13542]={
@@ -23381,7 +23364,7 @@ return {
 			},
 			skill=13542,
 			stats={
-				[1]="elemental_damage_taken_%_recouped_as_life"
+				[1]="15% of Elemental Damage taken Recouped as Life"
 			}
 		},
 		[13562]={
@@ -23398,7 +23381,7 @@ return {
 			},
 			skill=13562,
 			stats={
-				[1]="life_regeneration_rate_+%_while_on_low_life"
+				[1]="15% increased Life Regeneration Rate while on Low Life"
 			}
 		},
 		[13576]={
@@ -23415,7 +23398,7 @@ return {
 			},
 			skill=13576,
 			stats={
-				[1]="attack_and_cast_speed_+%_with_lightning_skills"
+				[1]="3% increased Attack and Cast Speed with Lightning Skills"
 			}
 		},
 		[13619]={
@@ -23432,7 +23415,7 @@ return {
 			},
 			skill=13619,
 			stats={
-				[1]="life_flask_charges_gained_+%"
+				[1]="15% increased Life Flask Charges gained"
 			}
 		},
 		[13624]={
@@ -23450,7 +23433,7 @@ return {
 			},
 			skill=13624,
 			stats={
-				[1]="mark_skill_duration_+%"
+				[1]="Mark Skills have 25% increased Skill Effect Duration"
 			}
 		},
 		[13634]={
@@ -23466,7 +23449,7 @@ return {
 			},
 			skill=13634,
 			stats={
-				[1]="offering_duration_+%"
+				[1]="Offering Skills have 30% increased Duration"
 			}
 		},
 		[13673]={
@@ -23484,7 +23467,7 @@ return {
 			},
 			skill=13673,
 			stats={
-				[1]="chill_duration_+%"
+				[1]="25% increased Chill Duration on Enemies"
 			}
 		},
 		[13675]={
@@ -23503,7 +23486,7 @@ return {
 			},
 			skill=13675,
 			stats={
-				[1]="pathfinder_ascendancy_poison_on_enemies_you_kill_spread_to_enemies_within_x"
+				[1]="The most Damaging Poison on Enemies you Kill is Spread to other Enemies within 1.5 metres"
 			}
 		},
 		[13694]={
@@ -23522,7 +23505,7 @@ return {
 			},
 			skill=13694,
 			stats={
-				[1]="link_skill_duration_+%"
+				[1]="Link Skills have 20% increased Skill Effect Duration"
 			}
 		},
 		[13701]={
@@ -23539,8 +23522,8 @@ return {
 			},
 			skill=13701,
 			stats={
-				[1]="freeze_threshold_+%",
-				[2]="chill_effectiveness_on_self_+%"
+				[1]="5% reduced Effect of Chill on you",
+				[2]="10% increased Freeze Threshold"
 			}
 		},
 		[13708]={
@@ -23557,8 +23540,7 @@ return {
 			},
 			skill=13708,
 			stats={
-				[1]="accuracy_rating_+%",
-				[2]="base_dexterity"
+				[1]="15% increased Accuracy Rating"
 			}
 		},
 		[13711]={
@@ -23575,8 +23557,8 @@ return {
 			},
 			skill=13711,
 			stats={
-				[1]="evasion_rating_+%",
-				[2]="maximum_energy_shield_+%"
+				[1]="12% increased Evasion Rating",
+				[2]="12% increased maximum Energy Shield"
 			}
 		},
 		[13715]={
@@ -23594,7 +23576,7 @@ return {
 			},
 			skill=13715,
 			stats={
-				[1]="hit_damage_stun_multiplier_+%"
+				[1]="18% increased Stun Buildup"
 			}
 		},
 		[13724]={
@@ -23612,8 +23594,8 @@ return {
 			},
 			skill=13724,
 			stats={
-				[1]="damage_+%_if_have_crit_in_past_8_seconds",
-				[2]="critical_strike_chance_+%"
+				[1]="12% increased Critical Hit Chance",
+				[2]="30% increased Damage if you've dealt a Critical Hit in the past 8 seconds"
 			}
 		},
 		[13738]={
@@ -23630,8 +23612,8 @@ return {
 			},
 			skill=13738,
 			stats={
-				[1]="lightning_damage_+%",
-				[2]="attack_and_cast_speed_+%_with_lightning_skills"
+				[1]="14% increased Lightning Damage",
+				[2]="8% increased Attack and Cast Speed with Lightning Skills"
 			}
 		},
 		[13748]={
@@ -23649,7 +23631,7 @@ return {
 			},
 			skill=13748,
 			stats={
-				[1]="elemental_damage_+%"
+				[1]="10% increased Elemental Damage"
 			}
 		},
 		[13769]={
@@ -23666,7 +23648,7 @@ return {
 			},
 			skill=13769,
 			stats={
-				[1]="mana_regeneration_rate_+%"
+				[1]="10% increased Mana Regeneration Rate"
 			}
 		},
 		[13783]={
@@ -23683,7 +23665,7 @@ return {
 			},
 			skill=13783,
 			stats={
-				[1]="ailment_chance_+%"
+				[1]="10% increased chance to inflict Ailments"
 			}
 		},
 		[13799]={
@@ -23700,8 +23682,8 @@ return {
 			},
 			skill=13799,
 			stats={
-				[1]="attack_damage_+%",
-				[2]="base_debuff_slow_magnitude_+%"
+				[1]="8% increased Attack Damage",
+				[2]="Debuffs you inflict have 4% increased Slow Magnitude"
 			}
 		},
 		[13823]={
@@ -23719,8 +23701,8 @@ return {
 			},
 			skill=13823,
 			stats={
-				[1]="base_enemy_critical_strike_chance_+%_against_self",
-				[2]="spell_critical_strike_chance_+%"
+				[1]="25% increased Critical Hit Chance for Spells",
+				[2]="Hits have 25% reduced Critical Hit Chance against you"
 			}
 		},
 		[13828]={
@@ -23738,7 +23720,7 @@ return {
 			},
 			skill=13828,
 			stats={
-				[1]="base_evasion_rating"
+				[1]="+16 to Evasion Rating"
 			}
 		},
 		[13839]={
@@ -23755,7 +23737,7 @@ return {
 			},
 			skill=13839,
 			stats={
-				[1]="totem_damage_+%"
+				[1]="16% increased Totem Damage"
 			}
 		},
 		[13855]={
@@ -23774,8 +23756,8 @@ return {
 			},
 			skill=13855,
 			stats={
-				[1]="base_physical_damage_reduction_rating",
-				[2]="base_maximum_energy_shield"
+				[1]="+10 to Armour",
+				[2]="+5 to maximum Energy Shield"
 			}
 		},
 		[13856]={
@@ -23792,8 +23774,8 @@ return {
 			},
 			skill=13856,
 			stats={
-				[1]="ailment_effect_+%",
-				[2]="attack_speed_+%"
+				[1]="1% reduced Attack Speed",
+				[2]="12% increased Magnitude of Ailments you inflict"
 			}
 		},
 		[13893]={
@@ -23810,8 +23792,8 @@ return {
 			},
 			skill=13893,
 			stats={
-				[1]="base_reduce_enemy_fire_resistance_%",
-				[2]="hit_damage_stun_multiplier_+%"
+				[1]="10% increased Stun Buildup",
+				[2]="Damage Penetrates 5% Fire Resistance"
 			}
 		},
 		[13895]={
@@ -23829,7 +23811,7 @@ return {
 			},
 			skill=13895,
 			stats={
-				[1]="spear_damage_+%"
+				[1]="25% increased Damage with Spears"
 			}
 		},
 		[13937]={
@@ -23847,7 +23829,7 @@ return {
 			},
 			skill=13937,
 			stats={
-				[1]="mace_damage_+%"
+				[1]="14% increased Damage with Maces"
 			}
 		},
 		[13942]={
@@ -23864,7 +23846,7 @@ return {
 			},
 			skill=13942,
 			stats={
-				[1]="physical_damage_reduction_rating_+%"
+				[1]="15% increased Armour"
 			}
 		},
 		[13980]={
@@ -23882,8 +23864,8 @@ return {
 			},
 			skill=13980,
 			stats={
-				[1]="mace_slam_aftershock_chance_%",
-				[2]="mace_strike_aftershock_chance_%"
+				[1]="10% chance to Aftershock for Slam Skills you use with Maces",
+				[2]="10% chance to Aftershock for Strike Skills you use with Maces"
 			}
 		},
 		[13987]={
@@ -23900,7 +23882,7 @@ return {
 			},
 			skill=13987,
 			stats={
-				[1]="melee_attack_speed_+%"
+				[1]="3% increased Melee Attack Speed"
 			}
 		},
 		[14001]={
@@ -23917,7 +23899,7 @@ return {
 			},
 			skill=14001,
 			stats={
-				[1]="charm_charges_used_+%"
+				[1]="6% reduced Charm Charges used"
 			}
 		},
 		[14045]={
@@ -23935,7 +23917,7 @@ return {
 			},
 			skill=14045,
 			stats={
-				[1]="projectile_damage_+%"
+				[1]="10% increased Projectile Damage"
 			}
 		},
 		[14048]={
@@ -23952,7 +23934,7 @@ return {
 			},
 			skill=14048,
 			stats={
-				[1]="mana_regeneration_rate_+%_while_not_on_low_mana"
+				[1]="16% increased Mana Regeneration Rate while not on Low Mana"
 			}
 		},
 		[14082]={
@@ -23970,7 +23952,7 @@ return {
 			},
 			skill=14082,
 			stats={
-				[1]="physical_damage_+%"
+				[1]="10% increased Global Physical Damage"
 			}
 		},
 		[14091]={
@@ -23989,8 +23971,8 @@ return {
 			},
 			skill=14091,
 			stats={
-				[1]="armour_break_amount_+%",
-				[2]="physical_damage_+%"
+				[1]="6% increased Global Physical Damage",
+				[2]="Break 10% increased Armour"
 			}
 		},
 		[14110]={
@@ -24009,7 +23991,7 @@ return {
 			},
 			skill=14110,
 			stats={
-				[1]="totem_damage_+%"
+				[1]="16% increased Totem Damage"
 			}
 		},
 		[14127]={
@@ -24026,7 +24008,7 @@ return {
 			},
 			skill=14127,
 			stats={
-				[1]="skill_effect_duration_+%"
+				[1]="8% reduced Skill Effect Duration"
 			}
 		},
 		[14176]={
@@ -24043,7 +24025,7 @@ return {
 			},
 			skill=14176,
 			stats={
-				[1]="rage_decay_speed_+%"
+				[1]="Inherent loss of Rage is 10% slower"
 			}
 		},
 		[14226]={
@@ -24060,7 +24042,7 @@ return {
 			},
 			skill=14226,
 			stats={
-				[1]="keystone_dance_with_death"
+				[1]="Dance with Death"
 			}
 		},
 		[14231]={
@@ -24078,7 +24060,7 @@ return {
 			},
 			skill=14231,
 			stats={
-				[1]="triggered_spell_spell_damage_+%"
+				[1]="Triggered Spells deal 14% increased Spell Damage"
 			}
 		},
 		[14254]={
@@ -24095,7 +24077,7 @@ return {
 			},
 			skill=14254,
 			stats={
-				[1]="attack_speed_+%"
+				[1]="3% increased Attack Speed"
 			}
 		},
 		[14262]={
@@ -24113,7 +24095,7 @@ return {
 			},
 			skill=14262,
 			stats={
-				[1]="display_passive_attribute_text"
+				[1]="+5 to any Attribute"
 			}
 		},
 		[14267]={
@@ -24132,7 +24114,7 @@ return {
 			},
 			skill=14267,
 			stats={
-				[1]="display_passive_attribute_text"
+				[1]="+5 to any Attribute"
 			}
 		},
 		[14324]={
@@ -24149,7 +24131,7 @@ return {
 			},
 			skill=14324,
 			stats={
-				[1]="mana_recovery_rate_+%"
+				[1]="15% increased Mana Recovery rate"
 			}
 		},
 		[14340]={
@@ -24169,7 +24151,7 @@ return {
 			},
 			skill=14340,
 			stats={
-				[1]="display_passive_attribute_text"
+				[1]="+5 to any Attribute"
 			}
 		},
 		[14342]={
@@ -24186,8 +24168,8 @@ return {
 			},
 			skill=14342,
 			stats={
-				[1]="physical_damage_reduction_rating_+%",
-				[2]="maximum_energy_shield_+%"
+				[1]="12% increased Armour",
+				[2]="12% increased maximum Energy Shield"
 			}
 		},
 		[14343]={
@@ -24204,8 +24186,8 @@ return {
 			},
 			skill=14343,
 			stats={
-				[1]="base_damaging_ailment_effect_+%",
-				[2]="cannot_have_more_than_1_damaging_ailment"
+				[1]="Damaging Ailments Cannot Be inflicted on you while you already have one",
+				[2]="20% increased Magnitude of Damaging Ailments you inflict"
 			}
 		},
 		[14355]={
@@ -24222,8 +24204,8 @@ return {
 			},
 			skill=14355,
 			stats={
-				[1]="spell_area_of_effect_+%",
-				[2]="spell_area_damage_+%"
+				[1]="12% increased Spell Area Damage",
+				[2]="Spell Skills have 5% reduced Area of Effect"
 			}
 		},
 		[14363]={
@@ -24240,7 +24222,7 @@ return {
 			},
 			skill=14363,
 			stats={
-				[1]="base_reduce_enemy_lightning_resistance_%"
+				[1]="Damage Penetrates 6% Lightning Resistance"
 			}
 		},
 		[14383]={
@@ -24257,8 +24239,8 @@ return {
 			},
 			skill=14383,
 			stats={
-				[1]="base_mana_leech_amount_+%",
-				[2]="unaffected_by_chill_while_mana_leeching"
+				[1]="30% increased amount of Mana Leeched",
+				[2]="Unaffected by Chill while Leeching Mana"
 			}
 		},
 		[14429]={
@@ -24276,8 +24258,8 @@ return {
 			},
 			skill=14429,
 			stats={
-				[1]="gemling_skill_cost_+%_final",
-				[2]="global_gem_attribute_requirements_+%_final_from_gemling"
+				[1]="30% less Cost of Skills",
+				[2]="Skill Gems have 30% more Attribute Requirements"
 			}
 		},
 		[14439]={
@@ -24294,8 +24276,8 @@ return {
 			},
 			skill=14439,
 			stats={
-				[1]="physical_damage_reduction_rating_+%",
-				[2]="maximum_energy_shield_+%"
+				[1]="12% increased Armour",
+				[2]="12% increased maximum Energy Shield"
 			}
 		},
 		[14446]={
@@ -24316,7 +24298,7 @@ return {
 			},
 			skill=14446,
 			stats={
-				[1]="display_passive_attribute_text"
+				[1]="+5 to any Attribute"
 			}
 		},
 		[14459]={
@@ -24333,7 +24315,7 @@ return {
 			},
 			skill=14459,
 			stats={
-				[1]="base_thorns_critical_strike_multiplier_+"
+				[1]="25% increased Thorns Critical Damage Bonus"
 			}
 		},
 		[14508]={
@@ -24351,7 +24333,7 @@ return {
 			},
 			skill=14508,
 			stats={
-				[1]="base_poison_effect_+%"
+				[1]="12% increased Magnitude of Poison you inflict"
 			}
 		},
 		[14515]={
@@ -24369,7 +24351,7 @@ return {
 			},
 			skill=14515,
 			stats={
-				[1]="jagged_ground_effect_+%"
+				[1]="15% increased Magnitude of Jagged Ground you create"
 			}
 		},
 		[14516]={
@@ -24386,7 +24368,7 @@ return {
 			},
 			skill=14516,
 			stats={
-				[1]="spell_area_of_effect_+%"
+				[1]="Spell Skills have 8% increased Area of Effect"
 			}
 		},
 		[14539]={
@@ -24403,7 +24385,7 @@ return {
 			},
 			skill=14539,
 			stats={
-				[1]="evasion_rating_+%"
+				[1]="15% increased Evasion Rating"
 			}
 		},
 		[14540]={
@@ -24420,7 +24402,7 @@ return {
 			},
 			skill=14540,
 			stats={
-				[1]="keystone_unwavering_stance"
+				[1]="Unwavering Stance"
 			}
 		},
 		[14548]={
@@ -24439,7 +24421,7 @@ return {
 			},
 			skill=14548,
 			stats={
-				[1]="minion_maximum_life_+%"
+				[1]="Minions have 10% increased maximum Life"
 			}
 		},
 		[14572]={
@@ -24456,7 +24438,7 @@ return {
 			},
 			skill=14572,
 			stats={
-				[1]="base_cooldown_speed_+%"
+				[1]="5% increased Cooldown Recovery Rate"
 			}
 		},
 		[14575]={
@@ -24472,7 +24454,7 @@ return {
 			},
 			skill=14575,
 			stats={
-				[1]="minion_lightning_damage_resistance_%"
+				[1]="Minions have +20% to Lightning Resistance"
 			}
 		},
 		[14654]={
@@ -24493,7 +24475,7 @@ return {
 			},
 			skill=14654,
 			stats={
-				[1]="display_passive_attribute_text"
+				[1]="+5 to any Attribute"
 			}
 		},
 		[14655]={
@@ -24510,7 +24492,7 @@ return {
 			},
 			skill=14655,
 			stats={
-				[1]="physical_damage_reduction_rating_+%"
+				[1]="15% increased Armour"
 			}
 		},
 		[14658]={
@@ -24529,7 +24511,7 @@ return {
 			},
 			skill=14658,
 			stats={
-				[1]="display_passive_attribute_text"
+				[1]="+5 to any Attribute"
 			}
 		},
 		[14666]={
@@ -24546,7 +24528,7 @@ return {
 			},
 			skill=14666,
 			stats={
-				[1]="energy_shield_recharge_rate_+%"
+				[1]="15% increased Energy Shield Recharge Rate"
 			}
 		},
 		[14693]={
@@ -24563,7 +24545,7 @@ return {
 			},
 			skill=14693,
 			stats={
-				[1]="mace_damage_+%"
+				[1]="14% increased Damage with Maces"
 			}
 		},
 		[14712]={
@@ -24580,7 +24562,7 @@ return {
 			},
 			skill=14712,
 			stats={
-				[1]="minion_maximum_life_+%"
+				[1]="Minions have 12% increased maximum Life"
 			}
 		},
 		[14724]={
@@ -24597,7 +24579,7 @@ return {
 			},
 			skill=14724,
 			stats={
-				[1]="shock_duration_+%"
+				[1]="20% increased Shock Duration"
 			}
 		},
 		[14725]={
@@ -24614,7 +24596,7 @@ return {
 			},
 			skill=14725,
 			stats={
-				[1]="skill_speed_+%"
+				[1]="3% increased Skill Speed"
 			}
 		},
 		[14739]={
@@ -24631,7 +24613,7 @@ return {
 			},
 			skill=14739,
 			stats={
-				[1]="energy_shield_delay_-%"
+				[1]="15% faster start of Energy Shield Recharge"
 			}
 		},
 		[14777]={
@@ -24648,8 +24630,8 @@ return {
 			},
 			skill=14777,
 			stats={
-				[1]="stun_threshold_+%_during_empowered_attacks",
-				[2]="empowered_attack_hit_damage_stun_multiplier_+%"
+				[1]="Empowered Attacks have 50% increased Stun Buildup",
+				[2]="100% increased Stun Threshold during Empowered Attacks"
 			}
 		},
 		[14890]={
@@ -24666,8 +24648,8 @@ return {
 			},
 			skill=14890,
 			stats={
-				[1]="chill_effect_+%",
-				[2]="chill_duration_+%"
+				[1]="10% increased Chill Duration on Enemies",
+				[2]="10% increased Magnitude of Chill you inflict"
 			}
 		},
 		[14926]={
@@ -24684,7 +24666,7 @@ return {
 			},
 			skill=14926,
 			stats={
-				[1]="life_regeneration_rate_per_minute_%"
+				[1]="Regenerate 0.2% of Life per second"
 			}
 		},
 		[14934]={
@@ -24701,8 +24683,8 @@ return {
 			},
 			skill=14934,
 			stats={
-				[1]="base_cast_speed_+%",
-				[2]="base_chaos_damage_resistance_%"
+				[1]="10% increased Cast Speed",
+				[2]="+7% to Chaos Resistance"
 			}
 		},
 		[14945]={
@@ -24720,8 +24702,8 @@ return {
 			},
 			skill=14945,
 			stats={
-				[1]="minion_skill_area_of_effect_+%",
-				[2]="minion_cooldown_recovery_+%"
+				[1]="Minions have 20% increased Area of Effect",
+				[2]="Minions have 20% increased Cooldown Recovery Rate"
 			}
 		},
 		[14958]={
@@ -24738,7 +24720,7 @@ return {
 			},
 			skill=14958,
 			stats={
-				[1]="critical_strike_chance_+%"
+				[1]="10% increased Critical Hit Chance"
 			}
 		},
 		[14997]={
@@ -24755,7 +24737,7 @@ return {
 			},
 			skill=14997,
 			stats={
-				[1]="damage_+%_with_two_handed_weapons"
+				[1]="12% increased Damage with Two Handed Weapons"
 			}
 		},
 		[15051]={
@@ -24773,7 +24755,7 @@ return {
 			},
 			skill=15051,
 			stats={
-				[1]="marked_enemy_accuracy_rating_+%"
+				[1]="Enemies you Mark have 15% reduced Accuracy Rating"
 			}
 		},
 		[15083]={
@@ -24790,8 +24772,8 @@ return {
 			},
 			skill=15083,
 			stats={
-				[1]="shock_effect_+%",
-				[2]="shock_duration_+%"
+				[1]="25% increased Shock Duration",
+				[2]="25% increased Magnitude of Shock you inflict"
 			}
 		},
 		[15180]={
@@ -24808,7 +24790,7 @@ return {
 			},
 			skill=15180,
 			stats={
-				[1]="support_anticipation_charge_gain_frequency_+%"
+				[1]="Skills Supported by Unleash have 10% increased Seal gain frequency"
 			}
 		},
 		[15182]={
@@ -24825,7 +24807,7 @@ return {
 			},
 			skill=15182,
 			stats={
-				[1]="display_passive_attribute_text"
+				[1]="+5 to any Attribute"
 			}
 		},
 		[15194]={
@@ -24842,7 +24824,7 @@ return {
 			},
 			skill=15194,
 			stats={
-				[1]="minion_fire_damage_resistance_%"
+				[1]="Minions have +20% to Fire Resistance"
 			}
 		},
 		[15207]={
@@ -24860,8 +24842,8 @@ return {
 			},
 			skill=15207,
 			stats={
-				[1]="accuracy_rating_+%",
-				[2]="attack_damage_+%"
+				[1]="8% increased Attack Damage",
+				[2]="8% increased Accuracy Rating"
 			}
 		},
 		[15301]={
@@ -24878,7 +24860,7 @@ return {
 			},
 			skill=15301,
 			stats={
-				[1]="accuracy_rating_+%"
+				[1]="8% increased Accuracy Rating"
 			}
 		},
 		[15304]={
@@ -24895,7 +24877,7 @@ return {
 			},
 			skill=15304,
 			stats={
-				[1]="base_cast_speed_+%"
+				[1]="3% increased Cast Speed"
 			}
 		},
 		[15356]={
@@ -24912,7 +24894,7 @@ return {
 			},
 			skill=15356,
 			stats={
-				[1]="base_reduce_enemy_lightning_resistance_%"
+				[1]="Damage Penetrates 6% Lightning Resistance"
 			}
 		},
 		[15358]={
@@ -24930,7 +24912,7 @@ return {
 			},
 			skill=15358,
 			stats={
-				[1]="minion_maximum_life_+%"
+				[1]="Minions have 10% increased maximum Life"
 			}
 		},
 		[15374]={
@@ -24947,7 +24929,7 @@ return {
 			},
 			skill=15374,
 			stats={
-				[1]="life_recovery_rate_+%"
+				[1]="15% increased Life Recovery rate"
 			}
 		},
 		[15408]={
@@ -24964,7 +24946,7 @@ return {
 			},
 			skill=15408,
 			stats={
-				[1]="maximum_energy_shield_+%"
+				[1]="15% increased maximum Energy Shield"
 			}
 		},
 		[15427]={
@@ -24981,7 +24963,7 @@ return {
 			},
 			skill=15427,
 			stats={
-				[1]="melee_damage_+%"
+				[1]="12% increased Melee Damage"
 			}
 		},
 		[15507]={
@@ -24998,7 +24980,7 @@ return {
 			},
 			skill=15507,
 			stats={
-				[1]="display_passive_attribute_text"
+				[1]="+5 to any Attribute"
 			}
 		},
 		[15522]={
@@ -25015,7 +24997,7 @@ return {
 			},
 			skill=15522,
 			stats={
-				[1]="base_ignite_effect_+%"
+				[1]="12% increased Magnitude of Ignite you inflict"
 			}
 		},
 		[15617]={
@@ -25032,9 +25014,9 @@ return {
 			},
 			skill=15617,
 			stats={
-				[1]="flask_life_to_recover_+%",
-				[2]="flask_duration_+%",
-				[3]="recover_%_life_when_you_use_a_life_flask_while_on_low_life"
+				[1]="30% increased Flask Effect Duration",
+				[2]="20% increased Life Recovery from Flasks",
+				[3]="Recover 5% of Life when you use a Life Flask while on Low Life"
 			}
 		},
 		[15618]={
@@ -25052,7 +25034,7 @@ return {
 			},
 			skill=15618,
 			stats={
-				[1]="base_spell_critical_strike_multiplier_+"
+				[1]="15% increased Critical Spell Damage Bonus"
 			}
 		},
 		[15628]={
@@ -25069,7 +25051,7 @@ return {
 			},
 			skill=15628,
 			stats={
-				[1]="arcane_surge_effect_on_self_+%"
+				[1]="15% increased effect of Arcane Surge on you"
 			}
 		},
 		[15644]={
@@ -25087,8 +25069,8 @@ return {
 			},
 			skill=15644,
 			stats={
-				[1]="ailment_threshold_+%",
-				[2]="base_all_ailment_duration_on_self_+%"
+				[1]="40% increased Elemental Ailment Threshold",
+				[2]="10% reduced Duration of Ailments on You"
 			}
 		},
 		[15671]={
@@ -25107,7 +25089,7 @@ return {
 			},
 			skill=15671,
 			stats={
-				[1]="display_passive_attribute_text"
+				[1]="+5 to any Attribute"
 			}
 		},
 		[15775]={
@@ -25126,7 +25108,7 @@ return {
 			},
 			skill=15775,
 			stats={
-				[1]="display_passive_attribute_text"
+				[1]="+5 to any Attribute"
 			}
 		},
 		[15782]={
@@ -25144,7 +25126,7 @@ return {
 			},
 			skill=15782,
 			stats={
-				[1]="display_passive_attribute_text"
+				[1]="+5 to any Attribute"
 			}
 		},
 		[15809]={
@@ -25162,7 +25144,7 @@ return {
 			},
 			skill=15809,
 			stats={
-				[1]="minion_critical_strike_chance_+%"
+				[1]="Minions have 20% increased Critical Hit Chance"
 			}
 		},
 		[15829]={
@@ -25180,8 +25162,8 @@ return {
 			},
 			skill=15829,
 			stats={
-				[1]="base_mana_leech_amount_+%",
-				[2]="recover_%_maximum_mana_on_kill"
+				[1]="Recover 2% of Mana on Kill",
+				[2]="25% increased amount of Mana Leeched"
 			}
 		},
 		[15838]={
@@ -25198,7 +25180,7 @@ return {
 			},
 			skill=15838,
 			stats={
-				[1]="ailment_chance_+%"
+				[1]="10% increased chance to inflict Ailments"
 			}
 		},
 		[15855]={
@@ -25215,7 +25197,7 @@ return {
 			},
 			skill=15855,
 			stats={
-				[1]="sword_damage_+%"
+				[1]="10% increased Damage with Swords"
 			}
 		},
 		[15885]={
@@ -25235,7 +25217,7 @@ return {
 			},
 			skill=15885,
 			stats={
-				[1]="display_passive_attribute_text"
+				[1]="+5 to any Attribute"
 			}
 		},
 		[15892]={
@@ -25252,7 +25234,7 @@ return {
 			},
 			skill=15892,
 			stats={
-				[1]="damage_+%_against_enemies_with_fully_broken_armour"
+				[1]="20% increased Damage against Enemies with Fully Broken Armour"
 			}
 		},
 		[15899]={
@@ -25269,7 +25251,7 @@ return {
 			},
 			skill=15899,
 			stats={
-				[1]="base_bleeding_effect_+%"
+				[1]="10% increased Magnitude of Bleeding you inflict"
 			}
 		},
 		[15969]={
@@ -25287,7 +25269,7 @@ return {
 			},
 			skill=15969,
 			stats={
-				[1]="damage_+%_vs_enemies_affected_by_status_ailments"
+				[1]="12% increased Damage with Hits against Enemies affected by Elemental Ailments"
 			}
 		},
 		[15975]={
@@ -25304,8 +25286,8 @@ return {
 			},
 			skill=15975,
 			stats={
-				[1]="evasion_rating_+%",
-				[2]="maximum_energy_shield_+%"
+				[1]="12% increased Evasion Rating",
+				[2]="12% increased maximum Energy Shield"
 			}
 		},
 		[15986]={
@@ -25322,8 +25304,8 @@ return {
 			},
 			skill=15986,
 			stats={
-				[1]="number_of_additional_poison_stacks",
-				[2]="base_poison_duration_+%"
+				[1]="25% reduced Poison Duration",
+				[2]="Targets can be affected by +1 of your Poisons at the same time"
 			}
 		},
 		[16013]={
@@ -25341,7 +25323,7 @@ return {
 			},
 			skill=16013,
 			stats={
-				[1]="daze_build_up_+%"
+				[1]="15% increased Daze Buildup"
 			}
 		},
 		[16051]={
@@ -25358,7 +25340,7 @@ return {
 			},
 			skill=16051,
 			stats={
-				[1]="totem_skill_attack_speed_+%"
+				[1]="Attacks used by Totems have 4% increased Attack Speed"
 			}
 		},
 		[16084]={
@@ -25375,7 +25357,7 @@ return {
 			},
 			skill=16084,
 			stats={
-				[1]="damage_+%_with_one_handed_weapons"
+				[1]="10% increased Damage with One Handed Weapons"
 			}
 		},
 		[16090]={
@@ -25392,7 +25374,7 @@ return {
 			},
 			skill=16090,
 			stats={
-				[1]="base_skill_cost_life_instead_of_mana_%"
+				[1]="6% of Skill Mana Costs Converted to Life Costs"
 			}
 		},
 		[16100]={
@@ -25410,7 +25392,7 @@ return {
 			},
 			skill=16100,
 			stats={
-				[1]="evasion_rating_+%"
+				[1]="20% increased Evasion Rating"
 			}
 		},
 		[16140]={
@@ -25427,7 +25409,7 @@ return {
 			},
 			skill=16140,
 			stats={
-				[1]="daze_build_up_+%"
+				[1]="15% increased Daze Buildup"
 			}
 		},
 		[16168]={
@@ -25446,7 +25428,7 @@ return {
 			},
 			skill=16168,
 			stats={
-				[1]="display_passive_attribute_text"
+				[1]="+5 to any Attribute"
 			}
 		},
 		[16256]={
@@ -25464,8 +25446,8 @@ return {
 			},
 			skill=16256,
 			stats={
-				[1]="mana_regeneration_rate_+%_while_stationary",
-				[2]="mana_regeneration_rate_+%_while_moving"
+				[1]="25% reduced Mana Regeneration Rate while stationary",
+				[2]="50% increased Mana Regeneration Rate while moving"
 			}
 		},
 		[16311]={
@@ -25482,7 +25464,7 @@ return {
 			},
 			skill=16311,
 			stats={
-				[1]="life_regeneration_rate_+%"
+				[1]="10% increased Life Regeneration rate"
 			}
 		},
 		[16329]={
@@ -25499,7 +25481,7 @@ return {
 			},
 			skill=16329,
 			stats={
-				[1]="flask_charges_used_+%"
+				[1]="5% reduced Flask Charges used"
 			}
 		},
 		[16347]={
@@ -25516,7 +25498,7 @@ return {
 			},
 			skill=16347,
 			stats={
-				[1]="maximum_rage"
+				[1]="+2 to Maximum Rage"
 			}
 		},
 		[16367]={
@@ -25534,7 +25516,7 @@ return {
 			},
 			skill=16367,
 			stats={
-				[1]="elemental_damage_+%"
+				[1]="10% increased Elemental Damage"
 			}
 		},
 		[16460]={
@@ -25553,7 +25535,7 @@ return {
 			},
 			skill=16460,
 			stats={
-				[1]="display_passive_attribute_text"
+				[1]="+5 to any Attribute"
 			}
 		},
 		[16466]={
@@ -25570,9 +25552,8 @@ return {
 			},
 			skill=16466,
 			stats={
-				[1]="base_cast_speed_+%",
-				[2]="mana_regeneration_rate_+%",
-				[3]="base_intelligence"
+				[1]="5% increased Cast Speed",
+				[2]="15% increased Mana Regeneration Rate"
 			}
 		},
 		[16484]={
@@ -25591,7 +25572,7 @@ return {
 			},
 			skill=16484,
 			stats={
-				[1]="display_passive_attribute_text"
+				[1]="+5 to any Attribute"
 			}
 		},
 		[16489]={
@@ -25610,7 +25591,7 @@ return {
 			},
 			skill=16489,
 			stats={
-				[1]="display_passive_attribute_text"
+				[1]="+5 to any Attribute"
 			}
 		},
 		[16499]={
@@ -25627,8 +25608,8 @@ return {
 			},
 			skill=16499,
 			stats={
-				[1]="base_curse_duration_+%",
-				[2]="curse_effect_+%"
+				[1]="40% increased Curse Duration",
+				[2]="10% increased Effect of your Curses"
 			}
 		},
 		[16538]={
@@ -25645,7 +25626,7 @@ return {
 			},
 			skill=16538,
 			stats={
-				[1]="damage_+%_with_one_handed_weapons"
+				[1]="10% increased Damage with One Handed Weapons"
 			}
 		},
 		[16596]={
@@ -25662,7 +25643,7 @@ return {
 			},
 			skill=16596,
 			stats={
-				[1]="attack_and_cast_speed_+%_with_elemental_skills"
+				[1]="3% increased Attack and Cast Speed with Elemental Skills"
 			}
 		},
 		[16618]={
@@ -25680,7 +25661,7 @@ return {
 			},
 			skill=16618,
 			stats={
-				[1]="damage_+%_per_5_of_your_lowest_attribute"
+				[1]="2% increased Damage per 5 of your lowest Attribute"
 			}
 		},
 		[16626]={
@@ -25698,8 +25679,8 @@ return {
 			},
 			skill=16626,
 			stats={
-				[1]="attack_area_of_effect_+%",
-				[2]="area_of_effect_+%_if_have_stunned_an_enemy_recently"
+				[1]="15% increased Area of Effect if you have Stunned an Enemy Recently",
+				[2]="15% increased Area of Effect for Attacks"
 			}
 		},
 		[16680]={
@@ -25716,7 +25697,7 @@ return {
 			},
 			skill=16680,
 			stats={
-				[1]="reload_speed_+%"
+				[1]="15% increased Crossbow Reload Speed"
 			}
 		},
 		[16691]={
@@ -25733,7 +25714,7 @@ return {
 			},
 			skill=16691,
 			stats={
-				[1]="base_life_leech_rate_+%"
+				[1]="Leech Life 15% faster"
 			}
 		},
 		[16705]={
@@ -25753,7 +25734,7 @@ return {
 			},
 			skill=16705,
 			stats={
-				[1]="display_passive_attribute_text"
+				[1]="+5 to any Attribute"
 			}
 		},
 		[16725]={
@@ -25772,7 +25753,7 @@ return {
 			},
 			skill=16725,
 			stats={
-				[1]="display_passive_attribute_text"
+				[1]="+5 to any Attribute"
 			}
 		},
 		[16744]={
@@ -25789,7 +25770,7 @@ return {
 			},
 			skill=16744,
 			stats={
-				[1]="evasion_rating_+%"
+				[1]="15% increased Evasion Rating"
 			}
 		},
 		[16784]={
@@ -25806,7 +25787,7 @@ return {
 			},
 			skill=16784,
 			stats={
-				[1]="totem_life_+%"
+				[1]="16% increased Totem Life"
 			}
 		},
 		[16816]={
@@ -25823,7 +25804,7 @@ return {
 			},
 			skill=16816,
 			stats={
-				[1]="accuracy_rating_+%_equal_to_%_attack_critical_strike_chance"
+				[1]="Attacks gain increased Accuracy Rating equal to their Critical Hit Chance"
 			}
 		},
 		[16845]={
@@ -25840,7 +25821,7 @@ return {
 			},
 			skill=16845,
 			stats={
-				[1]="display_passive_attribute_text"
+				[1]="+5 to any Attribute"
 			}
 		},
 		[16861]={
@@ -25857,8 +25838,8 @@ return {
 			},
 			skill=16861,
 			stats={
-				[1]="critical_strike_chance_+%",
-				[2]="maximum_mana_+%"
+				[1]="5% reduced maximum Mana",
+				[2]="15% increased Critical Hit Chance"
 			}
 		},
 		[16938]={
@@ -25875,7 +25856,7 @@ return {
 			},
 			skill=16938,
 			stats={
-				[1]="minion_damage_+%"
+				[1]="Minions deal 10% increased Damage"
 			}
 		},
 		[16948]={
@@ -25893,7 +25874,7 @@ return {
 			},
 			skill=16948,
 			stats={
-				[1]="link_skill_cast_speed_+%"
+				[1]="Link Skills have 8% increased Cast Speed"
 			}
 		},
 		[17024]={
@@ -25910,7 +25891,7 @@ return {
 			},
 			skill=17024,
 			stats={
-				[1]="attack_and_cast_speed_+%_with_lightning_skills"
+				[1]="3% increased Attack and Cast Speed with Lightning Skills"
 			}
 		},
 		[17029]={
@@ -25927,8 +25908,7 @@ return {
 			},
 			skill=17029,
 			stats={
-				[1]="defend_with_%_armour_against_critical_strikes",
-				[2]="base_strength"
+				[1]="Defend with 200% of Armour against Critical Hits"
 			}
 		},
 		[17088]={
@@ -25947,7 +25927,7 @@ return {
 			},
 			skill=17088,
 			stats={
-				[1]="display_passive_attribute_text"
+				[1]="+5 to any Attribute"
 			}
 		},
 		[17118]={
@@ -25967,7 +25947,7 @@ return {
 			},
 			skill=17118,
 			stats={
-				[1]="display_passive_attribute_text"
+				[1]="+5 to any Attribute"
 			}
 		},
 		[17138]={
@@ -25984,7 +25964,7 @@ return {
 			},
 			skill=17138,
 			stats={
-				[1]="melee_damage_+%"
+				[1]="10% increased Melee Damage"
 			}
 		},
 		[17146]={
@@ -26002,7 +25982,7 @@ return {
 			},
 			skill=17146,
 			stats={
-				[1]="block_chance_+%"
+				[1]="5% increased Block chance"
 			}
 		},
 		[17150]={
@@ -26020,7 +26000,7 @@ return {
 			},
 			skill=17150,
 			stats={
-				[1]="evasion_rating_%_to_gain_as_armour"
+				[1]="Gain 8% of Evasion Rating as extra Armour"
 			}
 		},
 		[17229]={
@@ -26037,7 +26017,7 @@ return {
 			},
 			skill=17229,
 			stats={
-				[1]="minion_elemental_resistance_%"
+				[1]="Minions have +20% to all Elemental Resistances"
 			}
 		},
 		[17248]={
@@ -26054,7 +26034,7 @@ return {
 			},
 			skill=17248,
 			stats={
-				[1]="display_passive_attribute_text"
+				[1]="+5 to any Attribute"
 			}
 		},
 		[17254]={
@@ -26071,8 +26051,8 @@ return {
 			},
 			skill=17254,
 			stats={
-				[1]="base_cast_speed_+%",
-				[2]="evasion_rating_+%"
+				[1]="15% increased Evasion Rating",
+				[2]="8% increased Cast Speed"
 			}
 		},
 		[17260]={
@@ -26089,7 +26069,7 @@ return {
 			},
 			skill=17260,
 			stats={
-				[1]="attack_damage_+%"
+				[1]="25% increased Attack Damage"
 			}
 		},
 		[17268]={
@@ -26107,7 +26087,7 @@ return {
 			},
 			skill=17268,
 			stats={
-				[1]="shock_effect_+%"
+				[1]="15% increased Magnitude of Shock you inflict"
 			}
 		},
 		[17282]={
@@ -26124,7 +26104,7 @@ return {
 			},
 			skill=17282,
 			stats={
-				[1]="mana_regeneration_rate_+%_while_stationary"
+				[1]="16% increased Mana Regeneration Rate while stationary"
 			}
 		},
 		[17294]={
@@ -26142,7 +26122,7 @@ return {
 			},
 			skill=17294,
 			stats={
-				[1]="life_regeneration_rate_+%"
+				[1]="10% increased Life Regeneration rate"
 			}
 		},
 		[17316]={
@@ -26160,7 +26140,7 @@ return {
 			},
 			skill=17316,
 			stats={
-				[1]="damage_+%_with_one_handed_weapons"
+				[1]="10% increased Damage with One Handed Weapons"
 			}
 		},
 		[17330]={
@@ -26178,8 +26158,8 @@ return {
 			},
 			skill=17330,
 			stats={
-				[1]="aggravate_bleeding_when_inflicted_vs_enemies_on_jagged_ground_chance_%",
-				[2]="jagged_ground_duration_+%"
+				[1]="20% chance for Bleeding to be Aggravated when Inflicted against Enemies on Jagged Ground",
+				[2]="40% increased Jagged Ground Duration"
 			}
 		},
 		[17340]={
@@ -26197,8 +26177,8 @@ return {
 			},
 			skill=17340,
 			stats={
-				[1]="movement_speed_+%_if_enemy_killed_recently",
-				[2]="attack_speed_+%_if_enemy_killed_recently"
+				[1]="4% increased Movement Speed if you've Killed Recently",
+				[2]="8% increased Attack Speed if you've Killed Recently"
 			}
 		},
 		[17348]={
@@ -26215,7 +26195,7 @@ return {
 			},
 			skill=17348,
 			stats={
-				[1]="base_ignite_effect_+%"
+				[1]="12% increased Magnitude of Ignite you inflict"
 			}
 		},
 		[17349]={
@@ -26232,8 +26212,8 @@ return {
 			},
 			skill=17349,
 			stats={
-				[1]="physical_damage_reduction_rating_+%",
-				[2]="maximum_energy_shield_+%"
+				[1]="12% increased Armour",
+				[2]="12% increased maximum Energy Shield"
 			}
 		},
 		[17366]={
@@ -26250,8 +26230,8 @@ return {
 			},
 			skill=17366,
 			stats={
-				[1]="evasion_rating_+%",
-				[2]="maximum_energy_shield_+%"
+				[1]="12% increased Evasion Rating",
+				[2]="12% increased maximum Energy Shield"
 			}
 		},
 		[17367]={
@@ -26269,8 +26249,8 @@ return {
 			},
 			skill=17367,
 			stats={
-				[1]="evasion_rating_+%",
-				[2]="maximum_energy_shield_+%"
+				[1]="12% increased Evasion Rating",
+				[2]="12% increased maximum Energy Shield"
 			}
 		},
 		[17372]={
@@ -26288,8 +26268,8 @@ return {
 			},
 			skill=17372,
 			stats={
-				[1]="melee_damage_+%",
-				[2]="melee_range_+"
+				[1]="25% increased Melee Damage",
+				[2]="+2 to Melee Strike Range"
 			}
 		},
 		[17378]={
@@ -26306,7 +26286,7 @@ return {
 			},
 			skill=17378,
 			stats={
-				[1]="minion_maximum_life_+%"
+				[1]="Minions have 10% increased maximum Life"
 			}
 		},
 		[17394]={
@@ -26324,7 +26304,7 @@ return {
 			},
 			skill=17394,
 			stats={
-				[1]="minion_accuracy_rating_+%"
+				[1]="15% increased Minion Accuracy Rating"
 			}
 		},
 		[17420]={
@@ -26342,7 +26322,7 @@ return {
 			},
 			skill=17420,
 			stats={
-				[1]="lightning_damage_+%"
+				[1]="12% increased Lightning Damage"
 			}
 		},
 		[17468]={
@@ -26359,7 +26339,7 @@ return {
 			},
 			skill=17468,
 			stats={
-				[1]="display_passive_attribute_text"
+				[1]="+5 to any Attribute"
 			}
 		},
 		[17501]={
@@ -26376,7 +26356,7 @@ return {
 			},
 			skill=17501,
 			stats={
-				[1]="minion_damage_+%"
+				[1]="Minions deal 10% increased Damage"
 			}
 		},
 		[17505]={
@@ -26394,7 +26374,7 @@ return {
 			},
 			skill=17505,
 			stats={
-				[1]="base_cast_speed_+%"
+				[1]="3% increased Cast Speed"
 			}
 		},
 		[17517]={
@@ -26412,7 +26392,7 @@ return {
 			},
 			skill=17517,
 			stats={
-				[1]="base_skill_area_of_effect_+%"
+				[1]="6% increased Area of Effect"
 			}
 		},
 		[17532]={
@@ -26430,7 +26410,7 @@ return {
 			},
 			skill=17532,
 			stats={
-				[1]="stun_threshold_+%"
+				[1]="12% increased Stun Threshold"
 			}
 		},
 		[17548]={
@@ -26448,8 +26428,8 @@ return {
 			},
 			skill=17548,
 			stats={
-				[1]="critical_strike_chance_+%",
-				[2]="critical_strike_multiplier_+_if_have_dealt_non_crit_recently"
+				[1]="20% increased Critical Hit Chance",
+				[2]="25% increased Critical Damage Bonus if you've dealt a Non-Critical Hit Recently"
 			}
 		},
 		[17553]={
@@ -26466,7 +26446,7 @@ return {
 			},
 			skill=17553,
 			stats={
-				[1]="projectile_chance_to_piece_vs_enemies_within_3m_distance_of_player"
+				[1]="10% chance for Projectiles to Pierce Enemies within 3m distance of you"
 			}
 		},
 		[17584]={
@@ -26483,7 +26463,7 @@ return {
 			},
 			skill=17584,
 			stats={
-				[1]="attack_area_of_effect_+%"
+				[1]="8% increased Area of Effect for Attacks"
 			}
 		},
 		[17589]={
@@ -26502,7 +26482,7 @@ return {
 			},
 			skill=17589,
 			stats={
-				[1]="attack_damage_+%"
+				[1]="10% increased Attack Damage"
 			}
 		},
 		[17600]={
@@ -26520,7 +26500,7 @@ return {
 			},
 			skill=17600,
 			stats={
-				[1]="minion_damage_+%"
+				[1]="Minions deal 25% increased Damage"
 			}
 		},
 		[17625]={
@@ -26537,7 +26517,7 @@ return {
 			},
 			skill=17625,
 			stats={
-				[1]="attack_damage_+%"
+				[1]="10% increased Attack Damage"
 			}
 		},
 		[17646]={
@@ -26555,7 +26535,7 @@ return {
 			},
 			skill=17646,
 			stats={
-				[1]="decimating_strike"
+				[1]="Decimating Strike"
 			}
 		},
 		[17655]={
@@ -26574,7 +26554,7 @@ return {
 			},
 			skill=17655,
 			stats={
-				[1]="aura_effect_+%"
+				[1]="8% increased Effect of Auras from your Skills"
 			}
 		},
 		[17686]={
@@ -26591,7 +26571,7 @@ return {
 			},
 			skill=17686,
 			stats={
-				[1]="melee_damage_+%"
+				[1]="10% increased Melee Damage"
 			}
 		},
 		[17687]={
@@ -26608,7 +26588,7 @@ return {
 			},
 			skill=17687,
 			stats={
-				[1]="mana_flask_charges_gained_+%"
+				[1]="15% increased Mana Flask Charges gained"
 			}
 		},
 		[17702]={
@@ -26627,7 +26607,7 @@ return {
 			},
 			skill=17702,
 			stats={
-				[1]="display_passive_attribute_text"
+				[1]="+5 to any Attribute"
 			}
 		},
 		[17706]={
@@ -26644,8 +26624,8 @@ return {
 			},
 			skill=17706,
 			stats={
-				[1]="energy_shield_recharge_rate_+%",
-				[2]="flask_mana_to_recover_+%"
+				[1]="10% increased Energy Shield Recharge Rate",
+				[2]="10% increased Mana Recovery from Flasks"
 			}
 		},
 		[17724]={
@@ -26662,7 +26642,7 @@ return {
 			},
 			skill=17724,
 			stats={
-				[1]="skill_area_of_effect_when_unarmed_+%"
+				[1]="15% increased Area of Effect while Unarmed"
 			}
 		},
 		[17726]={
@@ -26679,7 +26659,7 @@ return {
 			},
 			skill=17726,
 			stats={
-				[1]="hit_damage_stun_multiplier_+%"
+				[1]="15% increased Stun Buildup"
 			}
 		},
 		[17754]={
@@ -26697,8 +26677,7 @@ return {
 			},
 			skill=17754,
 			stats={
-				[1]="number_of_infernal_familiars_allowed",
-				[2]="hellhound_takes_%_damage_before_you"
+				[1]="20% of Damage from Hits is taken from your Hellhound's Life before you"
 			}
 		},
 		[17762]={
@@ -26715,7 +26694,7 @@ return {
 			},
 			skill=17762,
 			stats={
-				[1]="thorns_damage_+%"
+				[1]="40% increased Thorns damage"
 			}
 		},
 		[17791]={
@@ -26733,7 +26712,7 @@ return {
 			},
 			skill=17791,
 			stats={
-				[1]="mace_hit_damage_stun_multiplier_+%"
+				[1]="18% increased Stun Buildup with Maces"
 			}
 		},
 		[17854]={
@@ -26751,8 +26730,8 @@ return {
 			},
 			skill=17854,
 			stats={
-				[1]="evasion_rating_+%",
-				[2]="base_movement_velocity_+%"
+				[1]="3% increased Movement Speed",
+				[2]="30% increased Evasion Rating"
 			}
 		},
 		[17871]={
@@ -26769,8 +26748,8 @@ return {
 			},
 			skill=17871,
 			stats={
-				[1]="freeze_threshold_+%",
-				[2]="chill_effectiveness_on_self_+%"
+				[1]="5% reduced Effect of Chill on you",
+				[2]="10% increased Freeze Threshold"
 			}
 		},
 		[17882]={
@@ -26787,7 +26766,7 @@ return {
 			},
 			skill=17882,
 			stats={
-				[1]="grenade_fuse_duration_+%"
+				[1]="25% reduced Grenade fuse duration"
 			}
 		},
 		[17903]={
@@ -26804,7 +26783,7 @@ return {
 			},
 			skill=17903,
 			stats={
-				[1]="thorns_damage_+%"
+				[1]="16% increased Thorns damage"
 			}
 		},
 		[17923]={
@@ -26822,7 +26801,7 @@ return {
 			},
 			skill=17923,
 			stats={
-				[1]="base_mana_leech_amount_+%"
+				[1]="12% increased amount of Mana Leeched"
 			}
 		},
 		[17924]={
@@ -26839,7 +26818,7 @@ return {
 			},
 			skill=17924,
 			stats={
-				[1]="damage_vs_enemies_on_low_life_+%"
+				[1]="30% increased Damage with Hits against Enemies that are on Low Life"
 			}
 		},
 		[17955]={
@@ -26856,8 +26835,8 @@ return {
 			},
 			skill=17955,
 			stats={
-				[1]="evasion_+%_if_hit_recently",
-				[2]="evasion_rating_+%_if_have_not_been_hit_recently"
+				[1]="30% reduced Evasion Rating if you have been Hit Recently",
+				[2]="100% increased Evasion Rating if you haven't been Hit Recently"
 			}
 		},
 		[17973]={
@@ -26875,8 +26854,8 @@ return {
 			},
 			skill=17973,
 			stats={
-				[1]="energy_shield_recharge_rate_+%",
-				[2]="energy_shield_delay_-%"
+				[1]="25% increased Energy Shield Recharge Rate",
+				[2]="25% faster start of Energy Shield Recharge"
 			}
 		},
 		[17999]={
@@ -26894,8 +26873,8 @@ return {
 			},
 			skill=17999,
 			stats={
-				[1]="warcry_cooldown_speed_+%",
-				[2]="warcry_speed_+%"
+				[1]="8% increased Warcry Speed",
+				[2]="6% increased Warcry Cooldown Recovery Rate"
 			}
 		},
 		[18004]={
@@ -26912,7 +26891,7 @@ return {
 			},
 			skill=18004,
 			stats={
-				[1]="rage_decay_speed_+%"
+				[1]="Inherent loss of Rage is 10% slower"
 			}
 		},
 		[18049]={
@@ -26929,7 +26908,7 @@ return {
 			},
 			skill=18049,
 			stats={
-				[1]="projectile_damage_+%_vs_enemies_within_2m_distance"
+				[1]="Projectiles deal 12% increased Damage with Hits against Enemies within 2m"
 			}
 		},
 		[18073]={
@@ -26947,8 +26926,8 @@ return {
 			},
 			skill=18073,
 			stats={
-				[1]="attack_damage_+%",
-				[2]="attack_speed_+%"
+				[1]="1% reduced Attack Speed",
+				[2]="12% increased Attack Damage"
 			}
 		},
 		[18086]={
@@ -26965,8 +26944,7 @@ return {
 			},
 			skill=18086,
 			stats={
-				[1]="base_reduce_enemy_cold_resistance_%",
-				[2]="base_intelligence"
+				[1]="Damage Penetrates 15% Cold Resistance"
 			}
 		},
 		[18115]={
@@ -26983,7 +26961,7 @@ return {
 			},
 			skill=18115,
 			stats={
-				[1]="grenade_skill_damage_+%"
+				[1]="12% increased Grenade Damage"
 			}
 		},
 		[18146]={
@@ -27001,7 +26979,7 @@ return {
 			},
 			skill=18146,
 			stats={
-				[1]="global_item_attribute_requirements_+%"
+				[1]="Equipment and Skill Gems have 4% reduced Attribute Requirements"
 			}
 		},
 		[18158]={
@@ -27019,7 +26997,8 @@ return {
 			},
 			skill=18158,
 			stats={
-				[1]="you_and_allies_in_presence_all_damage_can_ignite_while_not_on_low_infernal_flame"
+				[1]="While not on Low Infernal Flame, all Damage from you and",
+				[2]="Allies in your Presence contributes to Ignite Chance and Magnitude"
 			}
 		},
 		[18160]={
@@ -27036,7 +27015,7 @@ return {
 			},
 			skill=18160,
 			stats={
-				[1]="minion_critical_strike_chance_+%"
+				[1]="Minions have 20% increased Critical Hit Chance"
 			}
 		},
 		[18186]={
@@ -27053,7 +27032,7 @@ return {
 			},
 			skill=18186,
 			stats={
-				[1]="physical_damage_reduction_rating_+%"
+				[1]="15% increased Armour"
 			}
 		},
 		[18245]={
@@ -27070,8 +27049,8 @@ return {
 			},
 			skill=18245,
 			stats={
-				[1]="minion_maximum_life_+%",
-				[2]="minion_additional_physical_damage_reduction_%"
+				[1]="Minions have 8% increased maximum Life",
+				[2]="Minions have 8% additional Physical Damage Reduction"
 			}
 		},
 		[18308]={
@@ -27088,8 +27067,8 @@ return {
 			},
 			skill=18308,
 			stats={
-				[1]="accuracy_rating_vs_bleeding_enemies",
-				[2]="faster_bleed_%"
+				[1]="+250 to Accuracy against Bleeding Enemies",
+				[2]="Bleeding you inflict deals Damage 10% faster"
 			}
 		},
 		[18348]={
@@ -27110,9 +27089,9 @@ return {
 			},
 			skill=18348,
 			stats={
-				[1]="physical_hit_and_dot_damage_%_taken_as_chaos",
-				[2]="cold_hit_and_dot_damage_%_taken_as_fire",
-				[3]="lightning_hit_and_dot_damage_%_taken_as_fire"
+				[1]="20% of Cold Damage taken as Fire Damage",
+				[2]="20% of Lightning Damage taken as Fire Damage",
+				[3]="20% of Physical Damage taken as Chaos Damage"
 			}
 		},
 		[18374]={
@@ -27129,7 +27108,7 @@ return {
 			},
 			skill=18374,
 			stats={
-				[1]="thorns_damage_+%"
+				[1]="16% increased Thorns damage"
 			}
 		},
 		[18397]={
@@ -27146,8 +27125,8 @@ return {
 			},
 			skill=18397,
 			stats={
-				[1]="base_life_leech_amount_+%",
-				[2]="base_life_leech_rate_+%"
+				[1]="35% increased amount of Life Leeched",
+				[2]="Leech Life 20% slower"
 			}
 		},
 		[18407]={
@@ -27164,7 +27143,7 @@ return {
 			},
 			skill=18407,
 			stats={
-				[1]="display_passive_attribute_text"
+				[1]="+5 to any Attribute"
 			}
 		},
 		[18419]={
@@ -27182,8 +27161,8 @@ return {
 			},
 			skill=18419,
 			stats={
-				[1]="life_regenerate_rate_per_second_%_while_totem_active",
-				[2]="totems_regenerate_%_life_per_minute"
+				[1]="Regenerate 1% of Life per second while you have a Totem",
+				[2]="Totems Regenerate 3% of Life per second"
 			}
 		},
 		[18448]={
@@ -27202,7 +27181,7 @@ return {
 			},
 			skill=18448,
 			stats={
-				[1]="display_passive_attribute_text"
+				[1]="+5 to any Attribute"
 			}
 		},
 		[18451]={
@@ -27219,7 +27198,7 @@ return {
 			},
 			skill=18451,
 			stats={
-				[1]="base_frenzy_charge_duration_+%"
+				[1]="20% increased Frenzy Charge Duration"
 			}
 		},
 		[18465]={
@@ -27237,8 +27216,8 @@ return {
 			},
 			skill=18465,
 			stats={
-				[1]="base_critical_strike_multiplier_+",
-				[2]="non_damaging_ailment_effect_+%_with_critical_strikes"
+				[1]="20% increased Critical Damage Bonus",
+				[2]="20% increased Magnitude of Non-Damaging Ailments you inflict with Critical Hits"
 			}
 		},
 		[18470]={
@@ -27255,7 +27234,7 @@ return {
 			},
 			skill=18470,
 			stats={
-				[1]="hit_damage_pin_multiplier_+%"
+				[1]="15% increased Pin Buildup"
 			}
 		},
 		[18472]={
@@ -27272,8 +27251,8 @@ return {
 			},
 			skill=18472,
 			stats={
-				[1]="hit_damage_stun_multiplier_+%",
-				[2]="hit_damage_freeze_multiplier_+%"
+				[1]="10% increased Stun Buildup",
+				[2]="10% increased Freeze Buildup"
 			}
 		},
 		[18489]={
@@ -27291,7 +27270,7 @@ return {
 			},
 			skill=18489,
 			stats={
-				[1]="damage_+%_with_one_handed_weapons"
+				[1]="10% increased Damage with One Handed Weapons"
 			}
 		},
 		[18496]={
@@ -27308,9 +27287,9 @@ return {
 			},
 			skill=18496,
 			stats={
-				[1]="ailment_effect_+%",
-				[2]="damaging_ailment_duration_+%",
-				[3]="attack_speed_+%"
+				[1]="5% reduced Attack Speed",
+				[2]="30% increased Magnitude of Ailments you inflict",
+				[3]="20% increased Duration of Damaging Ailments on Enemies"
 			}
 		},
 		[18505]={
@@ -27327,9 +27306,9 @@ return {
 			},
 			skill=18505,
 			stats={
-				[1]="attack_damage_+%",
-				[2]="hit_damage_stun_multiplier_+%",
-				[3]="attack_speed_+%"
+				[1]="5% reduced Attack Speed",
+				[2]="30% increased Stun Buildup",
+				[3]="50% increased Attack Damage"
 			}
 		},
 		[18519]={
@@ -27346,7 +27325,7 @@ return {
 			},
 			skill=18519,
 			stats={
-				[1]="minion_damage_+%"
+				[1]="Minions deal 10% increased Damage"
 			}
 		},
 		[18548]={
@@ -27363,7 +27342,7 @@ return {
 			},
 			skill=18548,
 			stats={
-				[1]="attack_speed_+%"
+				[1]="3% increased Attack Speed"
 			}
 		},
 		[18568]={
@@ -27380,8 +27359,8 @@ return {
 			},
 			skill=18568,
 			stats={
-				[1]="base_mana_leech_amount_+%",
-				[2]="base_cold_damage_resistance_%"
+				[1]="+5% to Cold Resistance",
+				[2]="10% increased amount of Mana Leeched"
 			}
 		},
 		[18585]={
@@ -27399,7 +27378,7 @@ return {
 			},
 			skill=18585,
 			stats={
-				[1]="physical_damage_reduction_rating_+%"
+				[1]="20% increased Armour"
 			}
 		},
 		[18629]={
@@ -27416,7 +27395,7 @@ return {
 			},
 			skill=18629,
 			stats={
-				[1]="block_chance_+%"
+				[1]="5% increased Block chance"
 			}
 		},
 		[18651]={
@@ -27433,7 +27412,7 @@ return {
 			},
 			skill=18651,
 			stats={
-				[1]="lightning_damage_+%"
+				[1]="12% increased Lightning Damage"
 			}
 		},
 		[18678]={
@@ -27451,7 +27430,7 @@ return {
 			},
 			skill=18678,
 			stats={
-				[1]="buff_time_passed_+%"
+				[1]="Buffs on you expire 10% slower"
 			}
 		},
 		[18684]={
@@ -27468,7 +27447,7 @@ return {
 			},
 			skill=18684,
 			stats={
-				[1]="keystone_avatar_of_fire"
+				[1]="Avatar of Fire"
 			}
 		},
 		[18717]={
@@ -27485,7 +27464,7 @@ return {
 			},
 			skill=18717,
 			stats={
-				[1]="lightning_damage_+%"
+				[1]="12% increased Lightning Damage"
 			}
 		},
 		[18742]={
@@ -27502,7 +27481,7 @@ return {
 			},
 			skill=18742,
 			stats={
-				[1]="stun_threshold_+%"
+				[1]="12% increased Stun Threshold"
 			}
 		},
 		[18746]={
@@ -27519,7 +27498,7 @@ return {
 			},
 			skill=18746,
 			stats={
-				[1]="block_chance_+%"
+				[1]="5% increased Block chance"
 			}
 		},
 		[18815]={
@@ -27536,7 +27515,7 @@ return {
 			},
 			skill=18815,
 			stats={
-				[1]="base_reduce_enemy_lightning_resistance_%"
+				[1]="Damage Penetrates 6% Lightning Resistance"
 			}
 		},
 		[18822]={
@@ -27554,7 +27533,7 @@ return {
 			},
 			skill=18822,
 			stats={
-				[1]="attack_damage_+%"
+				[1]="10% increased Attack Damage"
 			}
 		},
 		[18826]={
@@ -27573,7 +27552,7 @@ return {
 			},
 			skill=18826,
 			stats={
-				[1]="base_mana_leech_is_instant"
+				[1]="Mana Leech is instant"
 			}
 		},
 		[18831]={
@@ -27591,7 +27570,7 @@ return {
 			},
 			skill=18831,
 			stats={
-				[1]="block_chance_+%"
+				[1]="5% increased Block chance"
 			}
 		},
 		[18845]={
@@ -27609,7 +27588,7 @@ return {
 			},
 			skill=18845,
 			stats={
-				[1]="spell_damage_+%"
+				[1]="10% increased Spell Damage"
 			}
 		},
 		[18846]={
@@ -27626,7 +27605,7 @@ return {
 			},
 			skill=18846,
 			stats={
-				[1]="spell_area_of_effect_+%"
+				[1]="Spell Skills have 8% increased Area of Effect"
 			}
 		},
 		[18849]={
@@ -27644,7 +27623,7 @@ return {
 			},
 			skill=18849,
 			stats={
-				[1]="all_damage_can_chill"
+				[1]="All Damage from Hits Contributes to Chill Magnitude"
 			}
 		},
 		[18882]={
@@ -27663,7 +27642,7 @@ return {
 			},
 			skill=18882,
 			stats={
-				[1]="display_passive_attribute_text"
+				[1]="+5 to any Attribute"
 			}
 		},
 		[18895]={
@@ -27680,7 +27659,7 @@ return {
 			},
 			skill=18895,
 			stats={
-				[1]="stun_threshold_+_from_%_maximum_energy_shield"
+				[1]="Gain 8% of maximum Energy Shield as additional Stun Threshold"
 			}
 		},
 		[18910]={
@@ -27697,7 +27676,7 @@ return {
 			},
 			skill=18910,
 			stats={
-				[1]="spear_damage_+%"
+				[1]="10% increased Damage with Spears"
 			}
 		},
 		[18913]={
@@ -27714,8 +27693,8 @@ return {
 			},
 			skill=18913,
 			stats={
-				[1]="chaos_damage_+%",
-				[2]="skill_effect_duration_+%"
+				[1]="5% increased Chaos Damage",
+				[2]="5% increased Skill Effect Duration"
 			}
 		},
 		[18923]={
@@ -27736,7 +27715,7 @@ return {
 			},
 			skill=18923,
 			stats={
-				[1]="display_passive_attribute_text"
+				[1]="+5 to any Attribute"
 			}
 		},
 		[18940]={
@@ -27769,7 +27748,7 @@ return {
 			},
 			skill=18969,
 			stats={
-				[1]="bow_attack_speed_+%"
+				[1]="3% increased Attack Speed with Bows"
 			}
 		},
 		[18970]={
@@ -27787,8 +27766,8 @@ return {
 			},
 			skill=18970,
 			stats={
-				[1]="base_evasion_rating",
-				[2]="base_maximum_energy_shield"
+				[1]="+8 to Evasion Rating",
+				[2]="+5 to maximum Energy Shield"
 			}
 		},
 		[19003]={
@@ -27806,7 +27785,7 @@ return {
 			},
 			skill=19003,
 			stats={
-				[1]="cold_damage_+%"
+				[1]="10% increased Cold Damage"
 			}
 		},
 		[19011]={
@@ -27823,7 +27802,7 @@ return {
 			},
 			skill=19011,
 			stats={
-				[1]="melee_damage_+%"
+				[1]="10% increased Melee Damage"
 			}
 		},
 		[19044]={
@@ -27840,7 +27819,7 @@ return {
 			},
 			skill=19044,
 			stats={
-				[1]="spell_damage_+%_per_100_maximum_mana_up_to_60%"
+				[1]="3% increased Spell Damage per 100 maximum Mana"
 			}
 		},
 		[19104]={
@@ -27858,8 +27837,8 @@ return {
 			},
 			skill=19104,
 			stats={
-				[1]="accuracy_rating_+%",
-				[2]="accuracy_rating"
+				[1]="+30 to Accuracy Rating",
+				[2]="10% increased Accuracy Rating"
 			}
 		},
 		[19112]={
@@ -27876,7 +27855,7 @@ return {
 			},
 			skill=19112,
 			stats={
-				[1]="chaos_damage_+%"
+				[1]="7% increased Chaos Damage"
 			}
 		},
 		[19122]={
@@ -27894,7 +27873,7 @@ return {
 			},
 			skill=19122,
 			stats={
-				[1]="armour_+%_if_consumed_endurance_charge_recently"
+				[1]="20% increased Armour if you've consumed an Endurance Charge Recently"
 			}
 		},
 		[19125]={
@@ -27911,8 +27890,8 @@ return {
 			},
 			skill=19125,
 			stats={
-				[1]="spell_damage_+%",
-				[2]="base_cast_speed_+%"
+				[1]="30% increased Spell Damage",
+				[2]="5% reduced Cast Speed"
 			}
 		},
 		[19156]={
@@ -27929,8 +27908,8 @@ return {
 			},
 			skill=19156,
 			stats={
-				[1]="evasion_rating_+%_while_you_have_energy_shield",
-				[2]="evasion_rating_+%_if_energy_shield_recharge_started_in_past_2_seconds"
+				[1]="50% increased Evasion Rating if Energy Shield Recharge has started in the past 2 seconds",
+				[2]="30% increased Evasion Rating while you have Energy Shield"
 			}
 		},
 		[19223]={
@@ -27948,7 +27927,7 @@ return {
 			},
 			skill=19223,
 			stats={
-				[1]="attack_damage_+%"
+				[1]="10% increased Attack Damage"
 			}
 		},
 		[19236]={
@@ -27965,8 +27944,8 @@ return {
 			},
 			skill=19236,
 			stats={
-				[1]="physical_damage_reduction_rating_+%",
-				[2]="defend_with_%_armour_against_ranged_attacks"
+				[1]="30% increased Armour",
+				[2]="Defend with 120% of Armour against Projectile Attacks"
 			}
 		},
 		[19240]={
@@ -27984,7 +27963,7 @@ return {
 			},
 			skill=19240,
 			stats={
-				[1]="display_passive_attribute_text"
+				[1]="+5 to any Attribute"
 			}
 		},
 		[19249]={
@@ -28002,9 +27981,9 @@ return {
 			},
 			skill=19249,
 			stats={
-				[1]="damage_+%_while_totem_active",
-				[2]="totems_spells_cast_speed_+%_per_active_totem",
-				[3]="totems_attack_speed_+%_per_active_totem"
+				[1]="25% increased Damage while you have a Totem",
+				[2]="Totems have 2% increased Cast Speed per Summoned Totem",
+				[3]="Totems have 2% increased Attack Speed per Summoned Totem"
 			}
 		},
 		[19277]={
@@ -28021,7 +28000,7 @@ return {
 			},
 			skill=19277,
 			stats={
-				[1]="spell_area_of_effect_+%"
+				[1]="Spell Skills have 12% increased Area of Effect"
 			}
 		},
 		[19288]={
@@ -28038,7 +28017,7 @@ return {
 			},
 			skill=19288,
 			stats={
-				[1]="keystone_glancing_blows"
+				[1]="Glancing Blows"
 			}
 		},
 		[19330]={
@@ -28055,7 +28034,7 @@ return {
 			},
 			skill=19330,
 			stats={
-				[1]="life_regeneration_rate_+%"
+				[1]="10% increased Life Regeneration rate"
 			}
 		},
 		[19338]={
@@ -28071,7 +28050,6 @@ return {
 			},
 			skill=19338,
 			stats={
-				[1]="base_dexterity"
 			}
 		},
 		[19341]={
@@ -28088,7 +28066,7 @@ return {
 			},
 			skill=19341,
 			stats={
-				[1]="damage_vs_enemies_on_low_life_+%"
+				[1]="30% increased Damage with Hits against Enemies that are on Low Life"
 			}
 		},
 		[19342]={
@@ -28107,7 +28085,7 @@ return {
 			},
 			skill=19342,
 			stats={
-				[1]="projectile_damage_+%"
+				[1]="10% increased Projectile Damage"
 			}
 		},
 		[19355]={
@@ -28124,7 +28102,7 @@ return {
 			},
 			skill=19355,
 			stats={
-				[1]="maximum_energy_shield_+%"
+				[1]="15% increased maximum Energy Shield"
 			}
 		},
 		[19424]={
@@ -28142,7 +28120,7 @@ return {
 			},
 			skill=19424,
 			stats={
-				[1]="strength_+%"
+				[1]="4% increased Strength"
 			}
 		},
 		[19442]={
@@ -28159,9 +28137,9 @@ return {
 			},
 			skill=19442,
 			stats={
-				[1]="attack_damage_+%",
-				[2]="skill_effect_duration_+%",
-				[3]="buff_time_passed_+%"
+				[1]="16% increased Attack Damage",
+				[2]="16% increased Skill Effect Duration",
+				[3]="Buffs on you expire 10% slower"
 			}
 		},
 		[19470]={
@@ -28178,7 +28156,7 @@ return {
 			},
 			skill=19470,
 			stats={
-				[1]="flask_life_and_mana_to_recover_+%"
+				[1]="10% increased Life and Mana Recovery from Flasks"
 			}
 		},
 		[19482]={
@@ -28196,7 +28174,7 @@ return {
 			},
 			skill=19482,
 			stats={
-				[1]="maximum_life_+%"
+				[1]="3% increased maximum Life"
 			}
 		},
 		[19573]={
@@ -28213,7 +28191,7 @@ return {
 			},
 			skill=19573,
 			stats={
-				[1]="projectile_chance_to_piece_vs_enemies_within_3m_distance_of_player"
+				[1]="10% chance for Projectiles to Pierce Enemies within 3m distance of you"
 			}
 		},
 		[19644]={
@@ -28230,8 +28208,8 @@ return {
 			},
 			skill=19644,
 			stats={
-				[1]="minion_additional_physical_damage_reduction_%",
-				[2]="minion_chaos_resistance_%"
+				[1]="Minions have 20% additional Physical Damage Reduction",
+				[2]="Minions have +23% to Chaos Resistance"
 			}
 		},
 		[19674]={
@@ -28248,8 +28226,8 @@ return {
 			},
 			skill=19674,
 			stats={
-				[1]="attack_area_damage_+%",
-				[2]="attack_area_of_effect_+%"
+				[1]="8% increased Attack Area Damage",
+				[2]="5% increased Area of Effect for Attacks"
 			}
 		},
 		[19680]={
@@ -28266,7 +28244,7 @@ return {
 			},
 			skill=19680,
 			stats={
-				[1]="critical_strike_chance_+%"
+				[1]="10% increased Critical Hit Chance"
 			}
 		},
 		[19715]={
@@ -28283,8 +28261,8 @@ return {
 			},
 			skill=19715,
 			stats={
-				[1]="base_reduce_enemy_fire_resistance_%",
-				[2]="fire_exposure_effect_+%"
+				[1]="Damage Penetrates 18% Fire Resistance",
+				[2]="25% increased Fire Exposure Effect"
 			}
 		},
 		[19722]={
@@ -28302,8 +28280,8 @@ return {
 			},
 			skill=19722,
 			stats={
-				[1]="damage_+%_vs_frozen_enemies",
-				[2]="hit_damage_freeze_multiplier_+%"
+				[1]="20% increased Freeze Buildup",
+				[2]="50% increased Damage with Hits against Frozen Enemies"
 			}
 		},
 		[19767]={
@@ -28320,7 +28298,7 @@ return {
 			},
 			skill=19767,
 			stats={
-				[1]="spear_attack_speed_+%"
+				[1]="3% increased Attack Speed with Spears"
 			}
 		},
 		[19779]={
@@ -28337,7 +28315,7 @@ return {
 			},
 			skill=19779,
 			stats={
-				[1]="chaos_damage_+%"
+				[1]="7% increased Chaos Damage"
 			}
 		},
 		[19796]={
@@ -28355,7 +28333,7 @@ return {
 			},
 			skill=19796,
 			stats={
-				[1]="attack_damage_vs_bleeding_enemies_+%"
+				[1]="16% increased Attack Damage against Bleeding Enemies"
 			}
 		},
 		[19802]={
@@ -28372,7 +28350,7 @@ return {
 			},
 			skill=19802,
 			stats={
-				[1]="attack_critical_strike_multiplier_+"
+				[1]="15% increased Critical Damage Bonus for Attack Damage"
 			}
 		},
 		[19808]={
@@ -28389,7 +28367,7 @@ return {
 			},
 			skill=19808,
 			stats={
-				[1]="ailment_chance_+%"
+				[1]="10% increased chance to inflict Ailments"
 			}
 		},
 		[19873]={
@@ -28408,7 +28386,7 @@ return {
 			},
 			skill=19873,
 			stats={
-				[1]="base_skill_area_of_effect_+%"
+				[1]="6% increased Area of Effect"
 			}
 		},
 		[19880]={
@@ -28425,7 +28403,7 @@ return {
 			},
 			skill=19880,
 			stats={
-				[1]="evasion_rating_+%_if_consumed_frenzy_charge_recently"
+				[1]="20% increased Evasion Rating if you've consumed a Frenzy Charge Recently"
 			}
 		},
 		[19955]={
@@ -28443,7 +28421,7 @@ return {
 			},
 			skill=19955,
 			stats={
-				[1]="cold_skill_gem_level_+"
+				[1]="+1 to Level of all Cold Skills"
 			}
 		},
 		[19998]={
@@ -28460,7 +28438,7 @@ return {
 			},
 			skill=19998,
 			stats={
-				[1]="crossbow_damage_+%"
+				[1]="12% increased Damage with Crossbows"
 			}
 		},
 		[20024]={
@@ -28477,7 +28455,7 @@ return {
 			},
 			skill=20024,
 			stats={
-				[1]="base_critical_strike_multiplier_+"
+				[1]="15% increased Critical Damage Bonus"
 			}
 		},
 		[20032]={
@@ -28494,8 +28472,8 @@ return {
 			},
 			skill=20032,
 			stats={
-				[1]="cast_speed_+%_if_have_crit_recently",
-				[2]="critical_strike_chance_+%"
+				[1]="10% reduced Critical Hit Chance",
+				[2]="16% increased Cast Speed if you've dealt a Critical Hit Recently"
 			}
 		},
 		[20049]={
@@ -28513,7 +28491,7 @@ return {
 			},
 			skill=20049,
 			stats={
-				[1]="charm_charges_gained_+%"
+				[1]="10% increased Charm Charges gained"
 			}
 		},
 		[20091]={
@@ -28530,7 +28508,7 @@ return {
 			},
 			skill=20091,
 			stats={
-				[1]="sword_damage_+%"
+				[1]="10% increased Damage with Swords"
 			}
 		},
 		[20105]={
@@ -28547,7 +28525,7 @@ return {
 			},
 			skill=20105,
 			stats={
-				[1]="spear_damage_+%"
+				[1]="10% increased Damage with Spears"
 			}
 		},
 		[20165]={
@@ -28565,7 +28543,7 @@ return {
 			},
 			skill=20165,
 			stats={
-				[1]="mark_skill_duration_+%"
+				[1]="Mark Skills have 60% increased Skill Effect Duration"
 			}
 		},
 		[20205]={
@@ -28582,7 +28560,7 @@ return {
 			},
 			skill=20205,
 			stats={
-				[1]="stun_threshold_+%_when_not_stunned_recently"
+				[1]="20% increased Stun Threshold if you haven't been Stunned Recently"
 			}
 		},
 		[20236]={
@@ -28599,7 +28577,7 @@ return {
 			},
 			skill=20236,
 			stats={
-				[1]="critical_strike_chance_+%"
+				[1]="10% increased Critical Hit Chance"
 			}
 		},
 		[20303]={
@@ -28616,7 +28594,7 @@ return {
 			},
 			skill=20303,
 			stats={
-				[1]="life_regeneration_rate_+%"
+				[1]="10% increased Life Regeneration rate"
 			}
 		},
 		[20387]={
@@ -28633,7 +28611,7 @@ return {
 			},
 			skill=20387,
 			stats={
-				[1]="shock_chance_+%"
+				[1]="15% increased chance to Shock"
 			}
 		},
 		[20388]={
@@ -28650,7 +28628,7 @@ return {
 			},
 			skill=20388,
 			stats={
-				[1]="minion_damage_taken_%_recouped_as_their_life"
+				[1]="Minions Recoup 10% of Damage taken as Life"
 			}
 		},
 		[20397]={
@@ -28668,8 +28646,8 @@ return {
 			},
 			skill=20397,
 			stats={
-				[1]="attack_area_of_effect_+%",
-				[2]="base_cooldown_speed_+%"
+				[1]="20% increased Area of Effect for Attacks",
+				[2]="10% increased Cooldown Recovery Rate"
 			}
 		},
 		[20414]={
@@ -28687,8 +28665,8 @@ return {
 			},
 			skill=20414,
 			stats={
-				[1]="shield_evasion_rating_+%",
-				[2]="attack_skills_damage_+%_while_holding_shield"
+				[1]="Attack Skills deal 25% increased Damage while holding a Shield",
+				[2]="75% increased Evasion from Equipped Shield"
 			}
 		},
 		[20416]={
@@ -28705,8 +28683,8 @@ return {
 			},
 			skill=20416,
 			stats={
-				[1]="max_endurance_charges",
-				[2]="gain_maximum_endurance_charges_on_endurance_charge_gained_%_chance"
+				[1]="+1 to Maximum Endurance Charges",
+				[2]="5% chance that if you would gain Endurance Charges, you instead gain up to maximum Endurance Charges"
 			}
 		},
 		[20429]={
@@ -28723,7 +28701,7 @@ return {
 			},
 			skill=20429,
 			stats={
-				[1]="dagger_attack_speed_+%"
+				[1]="3% increased Attack Speed with Daggers"
 			}
 		},
 		[20504]={
@@ -28740,7 +28718,7 @@ return {
 			},
 			skill=20504,
 			stats={
-				[1]="recover_X_life_on_block"
+				[1]="Recover 5 Life when you Block"
 			}
 		},
 		[20582]={
@@ -28757,7 +28735,7 @@ return {
 			},
 			skill=20582,
 			stats={
-				[1]="block_chance_+%"
+				[1]="5% increased Block chance"
 			}
 		},
 		[20645]={
@@ -28774,7 +28752,7 @@ return {
 			},
 			skill=20645,
 			stats={
-				[1]="attack_area_of_effect_+%"
+				[1]="8% increased Area of Effect for Attacks"
 			}
 		},
 		[20649]={
@@ -28791,7 +28769,7 @@ return {
 			},
 			skill=20649,
 			stats={
-				[1]="hit_damage_electrocute_multiplier_+%"
+				[1]="15% increased Electrocute Buildup"
 			}
 		},
 		[20677]={
@@ -28810,8 +28788,7 @@ return {
 			},
 			skill=20677,
 			stats={
-				[1]="base_critical_strike_multiplier_+",
-				[2]="base_intelligence"
+				[1]="30% increased Critical Damage Bonus"
 			}
 		},
 		[20691]={
@@ -28828,7 +28805,7 @@ return {
 			},
 			skill=20691,
 			stats={
-				[1]="hit_damage_stun_multiplier_+%"
+				[1]="15% increased Stun Buildup"
 			}
 		},
 		[20718]={
@@ -28845,7 +28822,7 @@ return {
 			},
 			skill=20718,
 			stats={
-				[1]="skill_effect_duration_+%"
+				[1]="10% increased Skill Effect Duration"
 			}
 		},
 		[20782]={
@@ -28862,7 +28839,7 @@ return {
 			},
 			skill=20782,
 			stats={
-				[1]="chaos_damage_+%"
+				[1]="7% increased Chaos Damage"
 			}
 		},
 		[20820]={
@@ -28879,7 +28856,7 @@ return {
 			},
 			skill=20820,
 			stats={
-				[1]="attack_speed_+%"
+				[1]="3% increased Attack Speed"
 			}
 		},
 		[20830]={
@@ -28897,7 +28874,7 @@ return {
 			},
 			skill=20830,
 			stats={
-				[1]="base_skill_area_of_effect_+%"
+				[1]="10% increased Area of Effect"
 			}
 		},
 		[20831]={
@@ -28915,8 +28892,8 @@ return {
 			},
 			skill=20831,
 			stats={
-				[1]="evasion_rating_+%",
-				[2]="evasion_rating_+%_if_you_dodge_rolled_recently"
+				[1]="25% increased Evasion Rating",
+				[2]="25% increased Evasion Rating if you've Dodge Rolled Recently"
 			}
 		},
 		[20909]={
@@ -28933,7 +28910,7 @@ return {
 			},
 			skill=20909,
 			stats={
-				[1]="base_reduce_enemy_cold_resistance_%"
+				[1]="Damage Penetrates 6% Cold Resistance"
 			}
 		},
 		[20916]={
@@ -28950,8 +28927,8 @@ return {
 			},
 			skill=20916,
 			stats={
-				[1]="attack_damage_+%",
-				[2]="attacks_chance_to_blind_on_hit_%"
+				[1]="24% increased Attack Damage",
+				[2]="10% chance to Blind Enemies on Hit with Attacks"
 			}
 		},
 		[21005]={
@@ -28971,7 +28948,7 @@ return {
 			},
 			skill=21005,
 			stats={
-				[1]="mark_skill_cast_speed_+%"
+				[1]="Mark Skills have 10% increased Cast Speed"
 			}
 		},
 		[21017]={
@@ -28989,7 +28966,7 @@ return {
 			},
 			skill=21017,
 			stats={
-				[1]="critical_strike_chance_+%"
+				[1]="10% increased Critical Hit Chance"
 			}
 		},
 		[21070]={
@@ -29006,7 +28983,7 @@ return {
 			},
 			skill=21070,
 			stats={
-				[1]="attack_critical_strike_chance_+%"
+				[1]="10% increased Critical Hit Chance for Attacks"
 			}
 		},
 		[21077]={
@@ -29023,7 +29000,7 @@ return {
 			},
 			skill=21077,
 			stats={
-				[1]="grenade_skill_cooldown_speed_+%"
+				[1]="15% increased Cooldown Recovery Rate for Grenade Skills"
 			}
 		},
 		[21080]={
@@ -29041,7 +29018,7 @@ return {
 			},
 			skill=21080,
 			stats={
-				[1]="hit_damage_freeze_multiplier_+%"
+				[1]="15% increased Freeze Buildup"
 			}
 		},
 		[21081]={
@@ -29058,8 +29035,8 @@ return {
 			},
 			skill=21081,
 			stats={
-				[1]="physical_damage_reduction_rating_+%",
-				[2]="maximum_energy_shield_+%"
+				[1]="12% increased Armour",
+				[2]="12% increased maximum Energy Shield"
 			}
 		},
 		[21089]={
@@ -29076,7 +29053,7 @@ return {
 			},
 			skill=21089,
 			stats={
-				[1]="armour_+%_if_have_been_hit_recently"
+				[1]="20% increased Armour if you have been Hit Recently"
 			}
 		},
 		[21111]={
@@ -29094,7 +29071,7 @@ return {
 			},
 			skill=21111,
 			stats={
-				[1]="damage_+%_while_using_charm"
+				[1]="16% increased Damage while you have an active Charm"
 			}
 		},
 		[21112]={
@@ -29113,7 +29090,7 @@ return {
 			},
 			skill=21112,
 			stats={
-				[1]="bow_damage_+%"
+				[1]="10% increased Damage with Bows"
 			}
 		},
 		[21164]={
@@ -29131,7 +29108,7 @@ return {
 			},
 			skill=21164,
 			stats={
-				[1]="minion_maximum_life_%_to_gain_as_maximum_energy_shield"
+				[1]="Minions gain 15% of their Maximum Life as Extra Maximum Energy Shield"
 			}
 		},
 		[21205]={
@@ -29148,7 +29125,7 @@ return {
 			},
 			skill=21205,
 			stats={
-				[1]="additional_all_attributes"
+				[1]="+3 to all Attributes"
 			}
 		},
 		[21206]={
@@ -29165,8 +29142,8 @@ return {
 			},
 			skill=21206,
 			stats={
-				[1]="explode_burning_enemies_for_10%_life_as_fire_on_kill_chance_%",
-				[2]="base_skill_area_of_effect_+%"
+				[1]="15% increased Area of Effect",
+				[2]="Burning Enemies you kill have a 5% chance to Explode, dealing a tenth of their maximum Life as Fire Damage"
 			}
 		},
 		[21208]={
@@ -29183,8 +29160,8 @@ return {
 			},
 			skill=21208,
 			stats={
-				[1]="curse_effect_+%",
-				[2]="curse_delay_+%"
+				[1]="3% increased Effect of your Curses",
+				[2]="10% faster Curse Activation"
 			}
 		},
 		[21225]={
@@ -29202,7 +29179,7 @@ return {
 			},
 			skill=21225,
 			stats={
-				[1]="spear_damage_+%"
+				[1]="10% increased Damage with Spears"
 			}
 		},
 		[21227]={
@@ -29219,7 +29196,7 @@ return {
 			},
 			skill=21227,
 			stats={
-				[1]="energy_shield_delay_-%"
+				[1]="15% faster start of Energy Shield Recharge"
 			}
 		},
 		[21245]={
@@ -29237,7 +29214,7 @@ return {
 			},
 			skill=21245,
 			stats={
-				[1]="spell_critical_strike_chance_+%"
+				[1]="10% increased Critical Hit Chance for Spells"
 			}
 		},
 		[21274]={
@@ -29258,7 +29235,7 @@ return {
 			},
 			skill=21274,
 			stats={
-				[1]="display_passive_attribute_text"
+				[1]="+5 to any Attribute"
 			}
 		},
 		[21279]={
@@ -29275,8 +29252,8 @@ return {
 			},
 			skill=21279,
 			stats={
-				[1]="mark_effect_+%",
-				[2]="blind_effect_+%"
+				[1]="8% increased Effect of your Mark Skills",
+				[2]="10% increased Blind Effect"
 			}
 		},
 		[21280]={
@@ -29297,7 +29274,7 @@ return {
 			},
 			skill=21280,
 			stats={
-				[1]="display_passive_attribute_text"
+				[1]="+5 to any Attribute"
 			}
 		},
 		[21286]={
@@ -29314,7 +29291,7 @@ return {
 			},
 			skill=21286,
 			stats={
-				[1]="physical_damage_reduction_rating_+%"
+				[1]="15% increased Armour"
 			}
 		},
 		[21327]={
@@ -29332,7 +29309,7 @@ return {
 			},
 			skill=21327,
 			stats={
-				[1]="energy_shield_+%_if_consumed_power_charge_recently"
+				[1]="20% increased Energy Shield if you've consumed a Power Charge Recently"
 			}
 		},
 		[21336]={
@@ -29349,8 +29326,8 @@ return {
 			},
 			skill=21336,
 			stats={
-				[1]="evasion_rating_+%",
-				[2]="maximum_energy_shield_+%"
+				[1]="12% increased Evasion Rating",
+				[2]="12% increased maximum Energy Shield"
 			}
 		},
 		[21380]={
@@ -29367,7 +29344,7 @@ return {
 			},
 			skill=21380,
 			stats={
-				[1]="critical_strike_multiplier_vs_enemies_on_full_life_+"
+				[1]="100% increased Critical Damage Bonus against Enemies that are on Full Life"
 			}
 		},
 		[21387]={
@@ -29386,7 +29363,7 @@ return {
 			},
 			skill=21387,
 			stats={
-				[1]="display_passive_attribute_text"
+				[1]="+5 to any Attribute"
 			}
 		},
 		[21390]={
@@ -29404,7 +29381,7 @@ return {
 			},
 			skill=21390,
 			stats={
-				[1]="endurance_charge_duration_+%"
+				[1]="20% increased Endurance Charge Duration"
 			}
 		},
 		[21404]={
@@ -29421,7 +29398,7 @@ return {
 			},
 			skill=21404,
 			stats={
-				[1]="energy_shield_delay_-%"
+				[1]="15% faster start of Energy Shield Recharge"
 			}
 		},
 		[21415]={
@@ -29438,7 +29415,7 @@ return {
 			},
 			skill=21415,
 			stats={
-				[1]="stun_threshold_+_from_%_maximum_energy_shield"
+				[1]="Gain 8% of maximum Energy Shield as additional Stun Threshold"
 			}
 		},
 		[21438]={
@@ -29455,7 +29432,7 @@ return {
 			},
 			skill=21438,
 			stats={
-				[1]="evasion_and_physical_damage_reduction_rating_+%"
+				[1]="12% increased Armour and Evasion Rating"
 			}
 		},
 		[21453]={
@@ -29473,8 +29450,8 @@ return {
 			},
 			skill=21453,
 			stats={
-				[1]="armour_break_amount_+%",
-				[2]="chance_to_double_armour_effect_on_hit_%"
+				[1]="Break 60% increased Armour",
+				[2]="10% chance to Defend with 200% of Armour"
 			}
 		},
 		[21468]={
@@ -29492,7 +29469,7 @@ return {
 			},
 			skill=21468,
 			stats={
-				[1]="base_life_leech_amount_+%"
+				[1]="10% increased amount of Life Leeched"
 			}
 		},
 		[21495]={
@@ -29509,7 +29486,7 @@ return {
 			},
 			skill=21495,
 			stats={
-				[1]="elemental_damage_with_attack_skills_+%"
+				[1]="12% increased Elemental Damage with Attacks"
 			}
 		},
 		[21537]={
@@ -29526,7 +29503,7 @@ return {
 			},
 			skill=21537,
 			stats={
-				[1]="max_frenzy_charges"
+				[1]="+2 to Maximum Frenzy Charges"
 			}
 		},
 		[21540]={
@@ -29544,7 +29521,7 @@ return {
 			},
 			skill=21540,
 			stats={
-				[1]="damage_taken_goes_to_life_over_4_seconds_%"
+				[1]="3% of Damage taken Recouped as Life"
 			}
 		},
 		[21567]={
@@ -29561,7 +29538,7 @@ return {
 			},
 			skill=21567,
 			stats={
-				[1]="attack_damage_+%"
+				[1]="10% increased Attack Damage"
 			}
 		},
 		[21568]={
@@ -29579,7 +29556,7 @@ return {
 			},
 			skill=21568,
 			stats={
-				[1]="display_passive_attribute_text"
+				[1]="+5 to any Attribute"
 			}
 		},
 		[21572]={
@@ -29596,7 +29573,7 @@ return {
 			},
 			skill=21572,
 			stats={
-				[1]="damage_+%_vs_enemies_affected_by_status_ailments"
+				[1]="12% increased Damage with Hits against Enemies affected by Elemental Ailments"
 			}
 		},
 		[21606]={
@@ -29613,7 +29590,7 @@ return {
 			},
 			skill=21606,
 			stats={
-				[1]="minion_maximum_life_+%"
+				[1]="Minions have 10% increased maximum Life"
 			}
 		},
 		[21627]={
@@ -29630,7 +29607,7 @@ return {
 			},
 			skill=21627,
 			stats={
-				[1]="base_bleeding_effect_+%"
+				[1]="10% increased Magnitude of Bleeding you inflict"
 			}
 		},
 		[21670]={
@@ -29647,7 +29624,7 @@ return {
 			},
 			skill=21670,
 			stats={
-				[1]="hit_damage_stun_multiplier_+%"
+				[1]="15% increased Stun Buildup"
 			}
 		},
 		[21684]={
@@ -29664,8 +29641,8 @@ return {
 			},
 			skill=21684,
 			stats={
-				[1]="block_chance_+%",
-				[2]="shield_armour_+%"
+				[1]="4% increased Block chance",
+				[2]="15% increased Defences from Equipped Shield"
 			}
 		},
 		[21713]={
@@ -29683,7 +29660,7 @@ return {
 			},
 			skill=21713,
 			stats={
-				[1]="accuracy_rating_+%"
+				[1]="8% increased Accuracy Rating"
 			}
 		},
 		[21716]={
@@ -29701,7 +29678,7 @@ return {
 			},
 			skill=21716,
 			stats={
-				[1]="base_life_leech_amount_+%"
+				[1]="10% increased amount of Life Leeched"
 			}
 		},
 		[21721]={
@@ -29719,7 +29696,7 @@ return {
 			},
 			skill=21721,
 			stats={
-				[1]="base_chance_to_inflict_bleeding_%"
+				[1]="5% chance to inflict Bleeding on Hit"
 			}
 		},
 		[21746]={
@@ -29737,7 +29714,7 @@ return {
 			},
 			skill=21746,
 			stats={
-				[1]="display_passive_attribute_text"
+				[1]="+5 to any Attribute"
 			}
 		},
 		[21748]={
@@ -29754,8 +29731,8 @@ return {
 			},
 			skill=21748,
 			stats={
-				[1]="while_curse_is_50%_expired_curse_effect_+%",
-				[2]="curse_delay_+%"
+				[1]="40% faster Curse Activation",
+				[2]="Your Curses have 20% increased Effect if 50% of Curse Duration expired"
 			}
 		},
 		[21755]={
@@ -29778,7 +29755,7 @@ return {
 			},
 			skill=21755,
 			stats={
-				[1]="display_passive_attribute_text"
+				[1]="+5 to any Attribute"
 			}
 		},
 		[21779]={
@@ -29795,7 +29772,7 @@ return {
 			},
 			skill=21779,
 			stats={
-				[1]="base_critical_strike_multiplier_+"
+				[1]="15% increased Critical Damage Bonus"
 			}
 		},
 		[21788]={
@@ -29814,7 +29791,7 @@ return {
 			},
 			skill=21788,
 			stats={
-				[1]="bow_damage_+%"
+				[1]="12% increased Damage with Bows"
 			}
 		},
 		[21871]={
@@ -29832,7 +29809,7 @@ return {
 			},
 			skill=21871,
 			stats={
-				[1]="attack_damage_+%_while_ally_in_presence"
+				[1]="10% increased Attack Damage while you have an Ally in your Presence"
 			}
 		},
 		[21879]={
@@ -29849,7 +29826,7 @@ return {
 			},
 			skill=21879,
 			stats={
-				[1]="link_skill_cast_speed_+%"
+				[1]="Link Skills have 8% increased Cast Speed"
 			}
 		},
 		[21885]={
@@ -29866,8 +29843,7 @@ return {
 			},
 			skill=21885,
 			stats={
-				[1]="stun_threshold_+%",
-				[2]="base_strength"
+				[1]="10% increased Stun Threshold"
 			}
 		},
 		[21912]={
@@ -29884,7 +29860,7 @@ return {
 			},
 			skill=21912,
 			stats={
-				[1]="attack_damage_+%"
+				[1]="10% increased Attack Damage"
 			}
 		},
 		[21935]={
@@ -29901,8 +29877,8 @@ return {
 			},
 			skill=21935,
 			stats={
-				[1]="maximum_energy_shield_+%",
-				[2]="maximum_mana_+%"
+				[1]="30% increased maximum Energy Shield",
+				[2]="4% increased maximum Mana"
 			}
 		},
 		[21945]={
@@ -29919,7 +29895,7 @@ return {
 			},
 			skill=21945,
 			stats={
-				[1]="damage_+%_vs_dazed_enemies"
+				[1]="20% increased Damage against Dazed Enemies"
 			}
 		},
 		[21982]={
@@ -29936,8 +29912,8 @@ return {
 			},
 			skill=21982,
 			stats={
-				[1]="empowered_attack_damage_+%",
-				[2]="base_chance_to_inflict_bleeding_%"
+				[1]="5% chance to inflict Bleeding on Hit",
+				[2]="Empowered Attacks deal 10% increased Damage"
 			}
 		},
 		[21984]={
@@ -29972,7 +29948,7 @@ return {
 			},
 			skill=22045,
 			stats={
-				[1]="life_regeneration_rate_per_minute_%"
+				[1]="Regenerate 0.2% of Life per second"
 			}
 		},
 		[22057]={
@@ -29989,7 +29965,7 @@ return {
 			},
 			skill=22057,
 			stats={
-				[1]="shield_armour_+%"
+				[1]="25% increased Defences from Equipped Shield"
 			}
 		},
 		[22141]={
@@ -30006,7 +29982,7 @@ return {
 			},
 			skill=22141,
 			stats={
-				[1]="damage_taken_goes_to_life_over_4_seconds_%"
+				[1]="3% of Damage taken Recouped as Life"
 			}
 		},
 		[22147]={
@@ -30045,7 +30021,7 @@ return {
 			},
 			skill=22152,
 			stats={
-				[1]="base_cast_speed_+%"
+				[1]="3% increased Cast Speed"
 			}
 		},
 		[22188]={
@@ -30063,7 +30039,7 @@ return {
 			},
 			skill=22188,
 			stats={
-				[1]="herald_skills_mana_reservation_+%"
+				[1]="4% reduced Reservation of Herald Skills"
 			}
 		},
 		[22208]={
@@ -30081,8 +30057,8 @@ return {
 			},
 			skill=22208,
 			stats={
-				[1]="accuracy_rating_+%",
-				[2]="attack_critical_strike_chance_+%"
+				[1]="8% increased Critical Hit Chance for Attacks",
+				[2]="8% increased Accuracy Rating"
 			}
 		},
 		[22219]={
@@ -30100,7 +30076,7 @@ return {
 			},
 			skill=22219,
 			stats={
-				[1]="triggered_spell_spell_damage_+%"
+				[1]="Triggered Spells deal 14% increased Spell Damage"
 			}
 		},
 		[22271]={
@@ -30117,7 +30093,7 @@ return {
 			},
 			skill=22271,
 			stats={
-				[1]="shock_chance_+%"
+				[1]="15% increased chance to Shock"
 			}
 		},
 		[22290]={
@@ -30135,7 +30111,7 @@ return {
 			},
 			skill=22290,
 			stats={
-				[1]="spell_critical_strike_chance_+%"
+				[1]="10% increased Critical Hit Chance for Spells"
 			}
 		},
 		[22314]={
@@ -30154,7 +30130,7 @@ return {
 			},
 			skill=22314,
 			stats={
-				[1]="elemental_damage_+%"
+				[1]="8% increased Elemental Damage"
 			}
 		},
 		[22331]={
@@ -30171,7 +30147,7 @@ return {
 			},
 			skill=22331,
 			stats={
-				[1]="minion_elemental_resistance_%"
+				[1]="Minions have +8% to all Elemental Resistances"
 			}
 		},
 		[22359]={
@@ -30189,7 +30165,7 @@ return {
 			},
 			skill=22359,
 			stats={
-				[1]="elemental_damage_+%"
+				[1]="10% increased Elemental Damage"
 			}
 		},
 		[22393]={
@@ -30206,7 +30182,7 @@ return {
 			},
 			skill=22393,
 			stats={
-				[1]="minion_damage_+%"
+				[1]="Minions deal 10% increased Damage"
 			}
 		},
 		[22419]={
@@ -30223,7 +30199,7 @@ return {
 			},
 			skill=22419,
 			stats={
-				[1]="display_passive_attribute_text"
+				[1]="+5 to any Attribute"
 			}
 		},
 		[22439]={
@@ -30241,7 +30217,7 @@ return {
 			},
 			skill=22439,
 			stats={
-				[1]="elemental_damage_+%"
+				[1]="10% increased Elemental Damage"
 			}
 		},
 		[22484]={
@@ -30258,7 +30234,7 @@ return {
 			},
 			skill=22484,
 			stats={
-				[1]="totem_skill_cast_speed_+%"
+				[1]="Spells Cast by Totems have 4% increased Cast Speed"
 			}
 		},
 		[22517]={
@@ -30276,7 +30252,7 @@ return {
 			},
 			skill=22517,
 			stats={
-				[1]="base_chance_to_poison_on_hit_%"
+				[1]="8% chance to Poison on Hit"
 			}
 		},
 		[22533]={
@@ -30293,7 +30269,7 @@ return {
 			},
 			skill=22533,
 			stats={
-				[1]="base_cooldown_speed_+%"
+				[1]="5% increased Cooldown Recovery Rate"
 			}
 		},
 		[22556]={
@@ -30311,7 +30287,7 @@ return {
 			},
 			skill=22556,
 			stats={
-				[1]="evasion_rating_+%_while_surrounded"
+				[1]="30% increased Evasion Rating while Surrounded"
 			}
 		},
 		[22558]={
@@ -30329,7 +30305,7 @@ return {
 			},
 			skill=22558,
 			stats={
-				[1]="display_passive_attribute_text"
+				[1]="+5 to any Attribute"
 			}
 		},
 		[22616]={
@@ -30349,7 +30325,7 @@ return {
 			},
 			skill=22616,
 			stats={
-				[1]="display_passive_attribute_text"
+				[1]="+5 to any Attribute"
 			}
 		},
 		[22626]={
@@ -30367,7 +30343,7 @@ return {
 			},
 			skill=22626,
 			stats={
-				[1]="armour_break_duration_+%"
+				[1]="100% increased Armour Break Duration"
 			}
 		},
 		[22682]={
@@ -30384,7 +30360,7 @@ return {
 			},
 			skill=22682,
 			stats={
-				[1]="spell_skills_fire_2_additional_projectiles_final_chance_%"
+				[1]="6% chance for Spell Skills to fire 2 additional Projectiles"
 			}
 		},
 		[22691]={
@@ -30402,7 +30378,7 @@ return {
 			},
 			skill=22691,
 			stats={
-				[1]="energy_shield_delay_-%"
+				[1]="15% faster start of Energy Shield Recharge"
 			}
 		},
 		[22710]={
@@ -30419,7 +30395,7 @@ return {
 			},
 			skill=22710,
 			stats={
-				[1]="base_curse_duration_+%"
+				[1]="20% increased Curse Duration"
 			}
 		},
 		[22713]={
@@ -30438,7 +30414,7 @@ return {
 			},
 			skill=22713,
 			stats={
-				[1]="cold_damage_+%"
+				[1]="10% increased Cold Damage"
 			}
 		},
 		[22783]={
@@ -30456,7 +30432,7 @@ return {
 			},
 			skill=22783,
 			stats={
-				[1]="minion_damage_+%"
+				[1]="Minions deal 10% increased Damage"
 			}
 		},
 		[22795]={
@@ -30473,7 +30449,7 @@ return {
 			},
 			skill=22795,
 			stats={
-				[1]="projectile_damage_+%"
+				[1]="10% increased Projectile Damage"
 			}
 		},
 		[22821]={
@@ -30490,7 +30466,7 @@ return {
 			},
 			skill=22821,
 			stats={
-				[1]="cold_damage_+%"
+				[1]="10% increased Cold Damage"
 			}
 		},
 		[22864]={
@@ -30507,8 +30483,8 @@ return {
 			},
 			skill=22864,
 			stats={
-				[1]="non_damaging_ailment_effect_+%_with_critical_strikes",
-				[2]="attack_critical_strike_chance_+%"
+				[1]="25% increased Critical Hit Chance for Attacks",
+				[2]="30% increased Magnitude of Non-Damaging Ailments you inflict with Critical Hits"
 			}
 		},
 		[22873]={
@@ -30525,7 +30501,7 @@ return {
 			},
 			skill=22873,
 			stats={
-				[1]="base_penetrate_elemental_resistances_%"
+				[1]="Damage Penetrates 4% of Enemy Elemental Resistances"
 			}
 		},
 		[22909]={
@@ -30542,7 +30518,7 @@ return {
 			},
 			skill=22909,
 			stats={
-				[1]="stun_threshold_+_from_%_maximum_energy_shield"
+				[1]="Gain 8% of maximum Energy Shield as additional Stun Threshold"
 			}
 		},
 		[22927]={
@@ -30560,7 +30536,7 @@ return {
 			},
 			skill=22927,
 			stats={
-				[1]="shield_evasion_rating_+%"
+				[1]="30% increased Evasion from Equipped Shield"
 			}
 		},
 		[22928]={
@@ -30577,7 +30553,7 @@ return {
 			},
 			skill=22928,
 			stats={
-				[1]="display_passive_attribute_text"
+				[1]="+5 to any Attribute"
 			}
 		},
 		[22949]={
@@ -30595,7 +30571,7 @@ return {
 			},
 			skill=22949,
 			stats={
-				[1]="spell_area_of_effect_+%"
+				[1]="Spell Skills have 8% increased Area of Effect"
 			}
 		},
 		[22967]={
@@ -30613,8 +30589,8 @@ return {
 			},
 			skill=22967,
 			stats={
-				[1]="block_chance_+%",
-				[2]="life_gained_on_block"
+				[1]="12% increased Block chance",
+				[2]="6 Life gained when you Block"
 			}
 		},
 		[22975]={
@@ -30633,7 +30609,7 @@ return {
 			},
 			skill=22975,
 			stats={
-				[1]="display_passive_attribute_text"
+				[1]="+5 to any Attribute"
 			}
 		},
 		[23005]={
@@ -30652,7 +30628,7 @@ return {
 			},
 			skill=23005,
 			stats={
-				[1]="block_chance_from_equipped_shield_is_%"
+				[1]="Gain 40% Base Chance to Block from Equipped Shield instead of the Shield's value"
 			}
 		},
 		[23040]={
@@ -30669,7 +30645,7 @@ return {
 			},
 			skill=23040,
 			stats={
-				[1]="base_critical_strike_multiplier_+"
+				[1]="15% increased Critical Damage Bonus"
 			}
 		},
 		[23046]={
@@ -30686,7 +30662,7 @@ return {
 			},
 			skill=23046,
 			stats={
-				[1]="energy_shield_delay_-%"
+				[1]="15% faster start of Energy Shield Recharge"
 			}
 		},
 		[23062]={
@@ -30703,7 +30679,7 @@ return {
 			},
 			skill=23062,
 			stats={
-				[1]="armour_+%_if_consumed_endurance_charge_recently"
+				[1]="20% increased Armour if you've consumed an Endurance Charge Recently"
 			}
 		},
 		[23078]={
@@ -30720,7 +30696,7 @@ return {
 			},
 			skill=23078,
 			stats={
-				[1]="minion_maximum_life_+%"
+				[1]="Minions have 25% increased maximum Life"
 			}
 		},
 		[23091]={
@@ -30738,7 +30714,7 @@ return {
 			},
 			skill=23091,
 			stats={
-				[1]="fire_damage_+%"
+				[1]="12% increased Fire Damage"
 			}
 		},
 		[23192]={
@@ -30755,7 +30731,7 @@ return {
 			},
 			skill=23192,
 			stats={
-				[1]="block_chance_+%"
+				[1]="5% increased Block chance"
 			}
 		},
 		[23221]={
@@ -30772,7 +30748,7 @@ return {
 			},
 			skill=23221,
 			stats={
-				[1]="projectile_chance_to_chain_1_extra_time_from_terrain_%"
+				[1]="Projectiles have 15% chance to Chain an additional time from terrain"
 			}
 		},
 		[23227]={
@@ -30789,8 +30765,8 @@ return {
 			},
 			skill=23227,
 			stats={
-				[1]="melee_damage_+%_when_on_full_life",
-				[2]="attack_speed_+%_if_you_have_not_attacked_recently"
+				[1]="30% increased Melee Damage when on Full Life",
+				[2]="16% increased Attack Speed if you haven't Attacked Recently"
 			}
 		},
 		[23259]={
@@ -30808,7 +30784,7 @@ return {
 			},
 			skill=23259,
 			stats={
-				[1]="attack_critical_strike_chance_+%"
+				[1]="10% increased Critical Hit Chance for Attacks"
 			}
 		},
 		[23305]={
@@ -30826,7 +30802,7 @@ return {
 			},
 			skill=23305,
 			stats={
-				[1]="mark_skill_cast_speed_+%"
+				[1]="Mark Skills have 10% increased Cast Speed"
 			}
 		},
 		[23307]={
@@ -30845,7 +30821,7 @@ return {
 			},
 			skill=23307,
 			stats={
-				[1]="display_passive_attribute_text"
+				[1]="+5 to any Attribute"
 			}
 		},
 		[23329]={
@@ -30862,7 +30838,7 @@ return {
 			},
 			skill=23329,
 			stats={
-				[1]="link_skill_buff_effect_+%"
+				[1]="Link Skills have 10% increased Buff Effect"
 			}
 		},
 		[23343]={
@@ -30879,7 +30855,7 @@ return {
 			},
 			skill=23343,
 			stats={
-				[1]="flask_life_to_recover_+%"
+				[1]="10% increased Life Recovery from Flasks"
 			}
 		},
 		[23362]={
@@ -30896,8 +30872,8 @@ return {
 			},
 			skill=23362,
 			stats={
-				[1]="chill_effectiveness_on_self_+%",
-				[2]="unaffected_by_chill_during_dodge_roll"
+				[1]="25% reduced Effect of Chill on you",
+				[2]="Unaffected by Chill during Dodge Roll"
 			}
 		},
 		[23374]={
@@ -30914,7 +30890,7 @@ return {
 			},
 			skill=23374,
 			stats={
-				[1]="base_chance_to_poison_on_hit_%"
+				[1]="8% chance to Poison on Hit"
 			}
 		},
 		[23382]={
@@ -30932,7 +30908,7 @@ return {
 			},
 			skill=23382,
 			stats={
-				[1]="display_passive_attribute_text"
+				[1]="+5 to any Attribute"
 			}
 		},
 		[23415]={
@@ -30950,8 +30926,8 @@ return {
 			},
 			skill=23415,
 			stats={
-				[1]="evasion_rating_+%",
-				[2]="maximum_energy_shield_+%"
+				[1]="15% increased Evasion Rating",
+				[2]="15% increased maximum Energy Shield"
 			}
 		},
 		[23416]={
@@ -30969,7 +30945,7 @@ return {
 			},
 			skill=23416,
 			stats={
-				[1]="base_life_leech_from_all_spell_damage_permyriad"
+				[1]="10% of Spell Damage Leeched as Life"
 			}
 		},
 		[23427]={
@@ -30987,8 +30963,8 @@ return {
 			},
 			skill=23427,
 			stats={
-				[1]="chill_effect_+%",
-				[2]="chill_duration_+%"
+				[1]="20% increased Chill Duration on Enemies",
+				[2]="30% increased Magnitude of Chill you inflict"
 			}
 		},
 		[23450]={
@@ -31005,7 +30981,7 @@ return {
 			},
 			skill=23450,
 			stats={
-				[1]="fire_damage_+%"
+				[1]="12% increased Fire Damage"
 			}
 		},
 		[23455]={
@@ -31023,7 +30999,7 @@ return {
 			},
 			skill=23455,
 			stats={
-				[1]="cold_damage_+%"
+				[1]="10% increased Cold Damage"
 			}
 		},
 		[23508]={
@@ -31041,7 +31017,7 @@ return {
 			},
 			skill=23508,
 			stats={
-				[1]="chance_%_to_double_effect_of_removing_frenzy_charges"
+				[1]="Benefits from consuming Frenzy Charges for your Skills have 50% chance to be doubled"
 			}
 		},
 		[23570]={
@@ -31058,7 +31034,7 @@ return {
 			},
 			skill=23570,
 			stats={
-				[1]="display_passive_attribute_text"
+				[1]="+5 to any Attribute"
 			}
 		},
 		[23587]={
@@ -31077,8 +31053,8 @@ return {
 			},
 			skill=23587,
 			stats={
-				[1]="create_chilling_ground_on_freeze",
-				[2]="non_skill_base_all_damage_%_to_gain_as_cold"
+				[1]="Gain 10% of Damage as Extra Cold Damage",
+				[2]="On Freezing Enemies create Chilled Ground"
 			}
 		},
 		[23608]={
@@ -31096,7 +31072,7 @@ return {
 			},
 			skill=23608,
 			stats={
-				[1]="base_poison_effect_+%"
+				[1]="10% increased Magnitude of Poison you inflict"
 			}
 		},
 		[23650]={
@@ -31113,7 +31089,7 @@ return {
 			},
 			skill=23650,
 			stats={
-				[1]="life_regeneration_rate_+%_while_on_low_life"
+				[1]="15% increased Life Regeneration Rate while on Low Life"
 			}
 		},
 		[23667]={
@@ -31130,7 +31106,7 @@ return {
 			},
 			skill=23667,
 			stats={
-				[1]="totem_life_+%"
+				[1]="16% increased Totem Life"
 			}
 		},
 		[23702]={
@@ -31148,7 +31124,7 @@ return {
 			},
 			skill=23702,
 			stats={
-				[1]="attack_speed_+%"
+				[1]="3% increased Attack Speed"
 			}
 		},
 		[23738]={
@@ -31165,7 +31141,7 @@ return {
 			},
 			skill=23738,
 			stats={
-				[1]="non_skill_base_physical_damage_%_to_gain_as_chaos"
+				[1]="Gain 6% of Physical Damage as extra Chaos Damage"
 			}
 		},
 		[23764]={
@@ -31182,8 +31158,8 @@ return {
 			},
 			skill=23764,
 			stats={
-				[1]="mana_regeneration_rate_+%_if_enemy_shocked_recently",
-				[2]="shock_effect_+%"
+				[1]="25% increased Mana Regeneration Rate if you have Shocked an Enemy Recently",
+				[2]="20% increased Magnitude of Shock you inflict"
 			}
 		},
 		[23786]={
@@ -31200,7 +31176,7 @@ return {
 			},
 			skill=23786,
 			stats={
-				[1]="critical_hit_bleeding_effect_+%"
+				[1]="15% increased Magnitude of Bleeding you inflict with Critical Hits"
 			}
 		},
 		[23839]={
@@ -31217,7 +31193,7 @@ return {
 			},
 			skill=23839,
 			stats={
-				[1]="flask_mana_charges_used_+%"
+				[1]="4% reduced Flask Charges used from Mana Flasks"
 			}
 		},
 		[23861]={
@@ -31234,8 +31210,8 @@ return {
 			},
 			skill=23861,
 			stats={
-				[1]="hit_damage_stun_multiplier_+%",
-				[2]="damage_+%_with_two_handed_weapons"
+				[1]="10% increased Stun Buildup",
+				[2]="10% increased Damage with Two Handed Weapons"
 			}
 		},
 		[23880]={
@@ -31253,7 +31229,7 @@ return {
 			},
 			skill=23880,
 			stats={
-				[1]="maximum_mana_+%"
+				[1]="4% increased maximum Mana"
 			}
 		},
 		[23888]={
@@ -31271,7 +31247,7 @@ return {
 			},
 			skill=23888,
 			stats={
-				[1]="evasion_and_physical_damage_reduction_rating_+%"
+				[1]="12% increased Armour and Evasion Rating"
 			}
 		},
 		[23905]={
@@ -31288,7 +31264,7 @@ return {
 			},
 			skill=23905,
 			stats={
-				[1]="shock_effect_+%"
+				[1]="15% increased Magnitude of Shock you inflict"
 			}
 		},
 		[23915]={
@@ -31305,7 +31281,7 @@ return {
 			},
 			skill=23915,
 			stats={
-				[1]="base_critical_strike_multiplier_+"
+				[1]="15% increased Critical Damage Bonus"
 			}
 		},
 		[23930]={
@@ -31325,7 +31301,7 @@ return {
 			},
 			skill=23930,
 			stats={
-				[1]="elemental_damage_+%"
+				[1]="10% increased Elemental Damage"
 			}
 		},
 		[23939]={
@@ -31343,7 +31319,7 @@ return {
 			},
 			skill=23939,
 			stats={
-				[1]="damage_taken_goes_to_life_mana_es_over_4_seconds_%"
+				[1]="3% of Damage Taken Recouped as Life, Mana and Energy Shield"
 			}
 		},
 		[23940]={
@@ -31361,7 +31337,8 @@ return {
 			},
 			skill=23940,
 			stats={
-				[1]="additive_armour_modifiers_apply_to_energy_shield_recharge_rate_at_%_value"
+				[1]="Increases and Reductions to Armour also apply to Energy Shield",
+				[2]="Recharge Rate at 40% of their value"
 			}
 		},
 		[23993]={
@@ -31378,7 +31355,7 @@ return {
 			},
 			skill=23993,
 			stats={
-				[1]="physical_damage_+%"
+				[1]="12% increased Global Physical Damage"
 			}
 		},
 		[24009]={
@@ -31396,7 +31373,7 @@ return {
 			},
 			skill=24009,
 			stats={
-				[1]="evasion_and_physical_damage_reduction_rating_+%"
+				[1]="12% increased Armour and Evasion Rating"
 			}
 		},
 		[24039]={
@@ -31414,8 +31391,8 @@ return {
 			},
 			skill=24039,
 			stats={
-				[1]="ascendancy_beidats_hand_energy_shield_+_per_X_maximum_life",
-				[2]="life_reserved_by_stat_%"
+				[1]="Reserves 25% of Life",
+				[2]="+1 to Maximum Energy Shield per 8 Maximum Life"
 			}
 		},
 		[24045]={
@@ -31432,7 +31409,7 @@ return {
 			},
 			skill=24045,
 			stats={
-				[1]="flask_mana_to_recover_+%"
+				[1]="10% increased Mana Recovery from Flasks"
 			}
 		},
 		[24062]={
@@ -31449,9 +31426,8 @@ return {
 			},
 			skill=24062,
 			stats={
-				[1]="recover_%_maximum_life_on_kill",
-				[2]="base_intelligence",
-				[3]="energy_shield_recharge_rate_+%"
+				[1]="10% increased Energy Shield Recharge Rate",
+				[2]="Recover 2% of Life on Kill"
 			}
 		},
 		[24070]={
@@ -31468,7 +31444,6 @@ return {
 			},
 			skill=24070,
 			stats={
-				[1]="base_dexterity"
 			}
 		},
 		[24120]={
@@ -31486,8 +31461,8 @@ return {
 			},
 			skill=24120,
 			stats={
-				[1]="mana_regeneration_rate_+%",
-				[2]="mana_cost_+%_while_not_low_mana"
+				[1]="18% increased Mana Regeneration Rate",
+				[2]="15% reduced Mana Cost while not on Low Mana"
 			}
 		},
 		[24135]={
@@ -31505,7 +31480,7 @@ return {
 			},
 			skill=24135,
 			stats={
-				[1]="critical_strike_chance_+%"
+				[1]="12% increased Critical Hit Chance"
 			}
 		},
 		[24165]={
@@ -31525,7 +31500,7 @@ return {
 			},
 			skill=24165,
 			stats={
-				[1]="display_passive_attribute_text"
+				[1]="+5 to any Attribute"
 			}
 		},
 		[24226]={
@@ -31543,7 +31518,7 @@ return {
 			},
 			skill=24226,
 			stats={
-				[1]="deadeye_accuracy_unaffected_by_range"
+				[1]="You have no Accuracy Penalty at Distance"
 			}
 		},
 		[24239]={
@@ -31560,7 +31535,7 @@ return {
 			},
 			skill=24239,
 			stats={
-				[1]="base_life_gained_on_enemy_death"
+				[1]="Gain 5 Life per Enemy Killed"
 			}
 		},
 		[24240]={
@@ -31578,8 +31553,8 @@ return {
 			},
 			skill=24240,
 			stats={
-				[1]="base_debuff_slow_magnitude_+%",
-				[2]="debuff_time_passed_+%"
+				[1]="Debuffs you inflict have 10% increased Slow Magnitude",
+				[2]="Debuffs on you expire 20% faster"
 			}
 		},
 		[24259]={
@@ -31596,7 +31571,7 @@ return {
 			},
 			skill=24259,
 			stats={
-				[1]="totem_skill_attack_speed_+%"
+				[1]="Attacks used by Totems have 4% increased Attack Speed"
 			}
 		},
 		[24287]={
@@ -31615,7 +31590,7 @@ return {
 			},
 			skill=24287,
 			stats={
-				[1]="display_passive_attribute_text"
+				[1]="+5 to any Attribute"
 			}
 		},
 		[24295]={
@@ -31633,7 +31608,7 @@ return {
 			},
 			skill=24295,
 			stats={
-				[1]="base_frenzy_charge_duration_+%"
+				[1]="25% increased Frenzy Charge Duration"
 			}
 		},
 		[24321]={
@@ -31651,7 +31626,7 @@ return {
 			},
 			skill=24321,
 			stats={
-				[1]="display_passive_attribute_text"
+				[1]="+5 to any Attribute"
 			}
 		},
 		[24338]={
@@ -31668,7 +31643,7 @@ return {
 			},
 			skill=24338,
 			stats={
-				[1]="damage_+%_vs_enemies_affected_by_status_ailments"
+				[1]="12% increased Damage with Hits against Enemies affected by Elemental Ailments"
 			}
 		},
 		[24347]={
@@ -31687,7 +31662,7 @@ return {
 			},
 			skill=24347,
 			stats={
-				[1]="mark_skill_cast_speed_+%"
+				[1]="Mark Skills have 10% increased Cast Speed"
 			}
 		},
 		[24401]={
@@ -31704,7 +31679,7 @@ return {
 			},
 			skill=24401,
 			stats={
-				[1]="base_poison_duration_+%"
+				[1]="10% increased Poison Duration"
 			}
 		},
 		[24430]={
@@ -31723,7 +31698,7 @@ return {
 			},
 			skill=24430,
 			stats={
-				[1]="elemental_damage_+%"
+				[1]="10% increased Elemental Damage"
 			}
 		},
 		[24438]={
@@ -31742,8 +31717,8 @@ return {
 			},
 			skill=24438,
 			stats={
-				[1]="totem_elemental_resistance_%",
-				[2]="totem_additional_physical_damage_reduction_%"
+				[1]="Totems gain +20% to all Elemental Resistances",
+				[2]="Totems have 20% additional Physical Damage Reduction"
 			}
 		},
 		[24475]={
@@ -31761,7 +31736,7 @@ return {
 			},
 			skill=24475,
 			stats={
-				[1]="base_chaos_damage_resistance_%"
+				[1]="+7% to Chaos Resistance"
 			}
 		},
 		[24477]={
@@ -31778,8 +31753,7 @@ return {
 			},
 			skill=24477,
 			stats={
-				[1]="stun_threshold_+%",
-				[2]="base_strength"
+				[1]="10% increased Stun Threshold"
 			}
 		},
 		[24483]={
@@ -31797,7 +31771,8 @@ return {
 			},
 			skill=24483,
 			stats={
-				[1]="critical_strike_chance_+%_vs_enemies_without_elemental_status_ailments"
+				[1]="40% increased Critical Hit Chance against Enemies that are affected",
+				[2]="by no Elemental Ailments"
 			}
 		},
 		[24511]={
@@ -31814,7 +31789,7 @@ return {
 			},
 			skill=24511,
 			stats={
-				[1]="additional_all_attributes"
+				[1]="+3 to all Attributes"
 			}
 		},
 		[24630]={
@@ -31832,8 +31807,8 @@ return {
 			},
 			skill=24630,
 			stats={
-				[1]="hit_damage_+%_vs_ignited_enemies",
-				[2]="ignite_chance_+%"
+				[1]="40% increased chance to Ignite",
+				[2]="40% increased Damage with Hits against Ignited Enemies"
 			}
 		},
 		[24646]={
@@ -31850,8 +31825,7 @@ return {
 			},
 			skill=24646,
 			stats={
-				[1]="base_strength",
-				[2]="maximum_mana_+%"
+				[1]="5% reduced maximum Mana"
 			}
 		},
 		[24647]={
@@ -31871,7 +31845,7 @@ return {
 			},
 			skill=24647,
 			stats={
-				[1]="display_passive_attribute_text"
+				[1]="+5 to any Attribute"
 			}
 		},
 		[24655]={
@@ -31888,8 +31862,7 @@ return {
 			},
 			skill=24655,
 			stats={
-				[1]="base_reduce_enemy_fire_resistance_%",
-				[2]="base_strength"
+				[1]="Damage Penetrates 15% Fire Resistance"
 			}
 		},
 		[24748]={
@@ -31906,7 +31879,7 @@ return {
 			},
 			skill=24748,
 			stats={
-				[1]="evasion_rating_+%"
+				[1]="15% increased Evasion Rating"
 			}
 		},
 		[24753]={
@@ -31925,8 +31898,7 @@ return {
 			},
 			skill=24753,
 			stats={
-				[1]="accuracy_rating_+%_vs_enemies_in_close_range",
-				[2]="base_dexterity"
+				[1]="30% increased Accuracy Rating at Close Range"
 			}
 		},
 		[24767]={
@@ -31943,7 +31915,7 @@ return {
 			},
 			skill=24767,
 			stats={
-				[1]="energy_shield_from_focus_+%"
+				[1]="40% increased Energy Shield from Equipped Focus"
 			}
 		},
 		[24786]={
@@ -31962,7 +31934,7 @@ return {
 			},
 			skill=24786,
 			stats={
-				[1]="display_passive_attribute_text"
+				[1]="+5 to any Attribute"
 			}
 		},
 		[24807]={
@@ -31980,7 +31952,7 @@ return {
 			},
 			skill=24807,
 			stats={
-				[1]="ascendancy_titan_damage_reduction_rating_from_body_armour_+%_final"
+				[1]="50% more Armour from Equipped Body Armour"
 			}
 		},
 		[24812]={
@@ -31997,7 +31969,7 @@ return {
 			},
 			skill=24812,
 			stats={
-				[1]="power_charge_duration_+%"
+				[1]="20% increased Power Charge Duration"
 			}
 		},
 		[24813]={
@@ -32014,7 +31986,7 @@ return {
 			},
 			skill=24813,
 			stats={
-				[1]="attack_area_of_effect_+%"
+				[1]="8% increased Area of Effect for Attacks"
 			}
 		},
 		[24825]={
@@ -32032,7 +32004,7 @@ return {
 			},
 			skill=24825,
 			stats={
-				[1]="display_passive_attribute_text"
+				[1]="+5 to any Attribute"
 			}
 		},
 		[24868]={
@@ -32050,7 +32022,7 @@ return {
 			},
 			skill=24868,
 			stats={
-				[1]="slows_have_no_potency_on_you"
+				[1]="Your speed is unaffected by Slows"
 			}
 		},
 		[24871]={
@@ -32067,7 +32039,7 @@ return {
 			},
 			skill=24871,
 			stats={
-				[1]="one_handed_attack_speed_+%"
+				[1]="3% increased Attack Speed with One Handed Weapons"
 			}
 		},
 		[24880]={
@@ -32085,7 +32057,7 @@ return {
 			},
 			skill=24880,
 			stats={
-				[1]="attack_speed_+%"
+				[1]="3% increased Attack Speed"
 			}
 		},
 		[24922]={
@@ -32103,7 +32075,7 @@ return {
 			},
 			skill=24922,
 			stats={
-				[1]="display_passive_attribute_text"
+				[1]="+5 to any Attribute"
 			}
 		},
 		[24958]={
@@ -32122,7 +32094,7 @@ return {
 			},
 			skill=24958,
 			stats={
-				[1]="display_passive_attribute_text"
+				[1]="+5 to any Attribute"
 			}
 		},
 		[25026]={
@@ -32139,7 +32111,7 @@ return {
 			},
 			skill=25026,
 			stats={
-				[1]="mana_regeneration_rate_+%"
+				[1]="10% increased Mana Regeneration Rate"
 			}
 		},
 		[25055]={
@@ -32156,8 +32128,8 @@ return {
 			},
 			skill=25055,
 			stats={
-				[1]="attack_damage_+%",
-				[2]="base_movement_velocity_+%"
+				[1]="2% increased Movement Speed",
+				[2]="8% increased Attack Damage"
 			}
 		},
 		[25100]={
@@ -32174,7 +32146,7 @@ return {
 			},
 			skill=25100,
 			stats={
-				[1]="keystone_oasis"
+				[1]="Oasis"
 			}
 		},
 		[25101]={
@@ -32193,9 +32165,9 @@ return {
 			},
 			skill=25101,
 			stats={
-				[1]="lightning_exposure_effect_+%",
-				[2]="cold_exposure_effect_+%",
-				[3]="fire_exposure_effect_+%"
+				[1]="10% increased Cold Exposure Effect",
+				[2]="10% increased Fire Exposure Effect",
+				[3]="10% increased Lightning Exposure Effect"
 			}
 		},
 		[25170]={
@@ -32212,8 +32184,8 @@ return {
 			},
 			skill=25170,
 			stats={
-				[1]="attack_damage_+%",
-				[2]="skill_effect_duration_+%"
+				[1]="8% increased Attack Damage",
+				[2]="8% increased Skill Effect Duration"
 			}
 		},
 		[25172]={
@@ -32231,7 +32203,7 @@ return {
 			},
 			skill=25172,
 			stats={
-				[1]="base_cooldown_speed_+%"
+				[1]="6% increased Cooldown Recovery Rate"
 			}
 		},
 		[25213]={
@@ -32248,7 +32220,7 @@ return {
 			},
 			skill=25213,
 			stats={
-				[1]="attack_damage_+%_while_ally_in_presence"
+				[1]="16% increased Attack Damage while you have an Ally in your Presence"
 			}
 		},
 		[25229]={
@@ -32265,7 +32237,7 @@ return {
 			},
 			skill=25229,
 			stats={
-				[1]="endurance_charge_duration_+%"
+				[1]="20% increased Endurance Charge Duration"
 			}
 		},
 		[25239]={
@@ -32301,7 +32273,7 @@ return {
 			},
 			skill=25300,
 			stats={
-				[1]="armour_break_amount_+%"
+				[1]="Break 20% increased Armour"
 			}
 		},
 		[25303]={
@@ -32317,7 +32289,7 @@ return {
 			},
 			skill=25303,
 			stats={
-				[1]="minion_fire_damage_resistance_%"
+				[1]="Minions have +20% to Fire Resistance"
 			}
 		},
 		[25304]={
@@ -32334,7 +32306,7 @@ return {
 			},
 			skill=25304,
 			stats={
-				[1]="energy_generated_+%"
+				[1]="Meta Skills gain 8% increased Energy"
 			}
 		},
 		[25312]={
@@ -32353,7 +32325,7 @@ return {
 			},
 			skill=25312,
 			stats={
-				[1]="totem_damage_+%"
+				[1]="15% increased Totem Damage"
 			}
 		},
 		[25363]={
@@ -32371,7 +32343,7 @@ return {
 			},
 			skill=25363,
 			stats={
-				[1]="stun_threshold_+_from_%_maximum_energy_shield"
+				[1]="Gain 8% of maximum Energy Shield as additional Stun Threshold"
 			}
 		},
 		[25374]={
@@ -32389,7 +32361,7 @@ return {
 			},
 			skill=25374,
 			stats={
-				[1]="display_passive_attribute_text"
+				[1]="+5 to any Attribute"
 			}
 		},
 		[25434]={
@@ -32407,7 +32379,7 @@ return {
 			},
 			skill=25434,
 			stats={
-				[1]="chill_effect_+%"
+				[1]="15% increased Magnitude of Chill you inflict"
 			}
 		},
 		[25482]={
@@ -32427,7 +32399,6 @@ return {
 			},
 			skill=25482,
 			stats={
-				[1]="base_strength"
 			}
 		},
 		[25503]={
@@ -32444,7 +32415,7 @@ return {
 			},
 			skill=25503,
 			stats={
-				[1]="mana_regeneration_rate_+%"
+				[1]="10% increased Mana Regeneration Rate"
 			}
 		},
 		[25513]={
@@ -32461,9 +32432,9 @@ return {
 			},
 			skill=25513,
 			stats={
-				[1]="damage_+%_with_two_handed_weapons",
-				[2]="attack_speed_+%",
-				[3]="hit_damage_stun_multiplier_+%"
+				[1]="5% reduced Attack Speed",
+				[2]="20% increased Stun Buildup",
+				[3]="40% increased Damage with Two Handed Weapons"
 			}
 		},
 		[25520]={
@@ -32480,7 +32451,7 @@ return {
 			},
 			skill=25520,
 			stats={
-				[1]="keystone_charge_cycle"
+				[1]="Resonance"
 			}
 		},
 		[25557]={
@@ -32500,7 +32471,7 @@ return {
 			},
 			skill=25557,
 			stats={
-				[1]="display_passive_attribute_text"
+				[1]="+5 to any Attribute"
 			}
 		},
 		[25565]={
@@ -32518,7 +32489,7 @@ return {
 			},
 			skill=25565,
 			stats={
-				[1]="lightning_damage_+%"
+				[1]="12% increased Lightning Damage"
 			}
 		},
 		[25586]={
@@ -32534,7 +32505,7 @@ return {
 			},
 			skill=25586,
 			stats={
-				[1]="bow_critical_strike_multiplier_+"
+				[1]="16% increased Critical Damage Bonus with Bows"
 			}
 		},
 		[25594]={
@@ -32551,7 +32522,7 @@ return {
 			},
 			skill=25594,
 			stats={
-				[1]="offering_life_+%"
+				[1]="Offerings have 15% increased Maximum Life"
 			}
 		},
 		[25618]={
@@ -32569,7 +32540,7 @@ return {
 			},
 			skill=25618,
 			stats={
-				[1]="spell_critical_strike_chance_+%"
+				[1]="12% increased Critical Hit Chance for Spells"
 			}
 		},
 		[25619]={
@@ -32587,8 +32558,8 @@ return {
 			},
 			skill=25619,
 			stats={
-				[1]="attack_speed_+%",
-				[2]="attacks_chance_to_blind_on_hit_%"
+				[1]="10% increased Attack Speed",
+				[2]="15% chance to Blind Enemies on Hit with Attacks"
 			}
 		},
 		[25620]={
@@ -32606,7 +32577,7 @@ return {
 			},
 			skill=25620,
 			stats={
-				[1]="base_chance_to_not_consume_corpse_%"
+				[1]="15% chance to not destroy Corpses when Consuming Corpses"
 			}
 		},
 		[25700]={
@@ -32623,8 +32594,8 @@ return {
 			},
 			skill=25700,
 			stats={
-				[1]="elemental_damage_+%",
-				[2]="shock_chance_+%"
+				[1]="10% increased chance to Shock",
+				[2]="8% increased Elemental Damage"
 			}
 		},
 		[25711]={
@@ -32641,7 +32612,7 @@ return {
 			},
 			skill=25711,
 			stats={
-				[1]="attack_speed_+%_while_surrounded"
+				[1]="20% increased Attack Speed while Surrounded"
 			}
 		},
 		[25729]={
@@ -32658,7 +32629,7 @@ return {
 			},
 			skill=25729,
 			stats={
-				[1]="base_cast_speed_+%"
+				[1]="3% increased Cast Speed"
 			}
 		},
 		[25745]={
@@ -32675,8 +32646,8 @@ return {
 			},
 			skill=25745,
 			stats={
-				[1]="physical_damage_reduction_rating_+%",
-				[2]="maximum_energy_shield_+%"
+				[1]="12% increased Armour",
+				[2]="12% increased maximum Energy Shield"
 			}
 		},
 		[25779]={
@@ -32694,7 +32665,7 @@ return {
 			},
 			skill=25779,
 			stats={
-				[1]="maximum_darkness_+%"
+				[1]="10% increased maximum Darkness"
 			}
 		},
 		[25781]={
@@ -32712,9 +32683,9 @@ return {
 			},
 			skill=25781,
 			stats={
-				[1]="hit_%_chance_to_gain_25%_damage_as_chaos",
-				[2]="hit_%_chance_to_gain_50%_damage_as_chaos",
-				[3]="hit_%_chance_to_gain_100%_damage_as_chaos"
+				[1]="23% chance to Gain 25% of Damage with Hits as Extra Chaos Damage",
+				[2]="13% chance to Gain 50% of Damage with Hits as Extra Chaos Damage",
+				[3]="7% chance to Gain 100% of Damage with Hits as Extra Chaos Damage"
 			}
 		},
 		[25827]={
@@ -32731,7 +32702,7 @@ return {
 			},
 			skill=25827,
 			stats={
-				[1]="spell_skills_fire_2_additional_projectiles_final_chance_%"
+				[1]="4% chance for Spell Skills to fire 2 additional Projectiles"
 			}
 		},
 		[25851]={
@@ -32750,7 +32721,7 @@ return {
 			},
 			skill=25851,
 			stats={
-				[1]="physical_damage_+%"
+				[1]="10% increased Global Physical Damage"
 			}
 		},
 		[25885]={
@@ -32768,7 +32739,7 @@ return {
 			},
 			skill=25885,
 			stats={
-				[1]="maximum_darkness_+%"
+				[1]="10% increased maximum Darkness"
 			}
 		},
 		[25893]={
@@ -32785,7 +32756,7 @@ return {
 			},
 			skill=25893,
 			stats={
-				[1]="energy_shield_recharge_rate_+%"
+				[1]="15% increased Energy Shield Recharge Rate"
 			}
 		},
 		[25935]={
@@ -32803,7 +32774,7 @@ return {
 			},
 			skill=25935,
 			stats={
-				[1]="block_chance_+%"
+				[1]="6% increased Block chance"
 			}
 		},
 		[25971]={
@@ -32820,9 +32791,8 @@ return {
 			},
 			skill=25971,
 			stats={
-				[1]="attack_speed_+%",
-				[2]="attack_speed_+%_if_have_been_hit_recently",
-				[3]="base_strength"
+				[1]="4% increased Attack Speed",
+				[2]="6% increased Attack Speed if you've been Hit Recently"
 			}
 		},
 		[25992]={
@@ -32838,7 +32808,7 @@ return {
 			},
 			skill=25992,
 			stats={
-				[1]="bow_accuracy_rating_+%"
+				[1]="10% increased Accuracy Rating with Bows"
 			}
 		},
 		[26034]={
@@ -32856,8 +32826,8 @@ return {
 			},
 			skill=26034,
 			stats={
-				[1]="evasion_rating_+%",
-				[2]="maximum_energy_shield_+%"
+				[1]="12% increased Evasion Rating",
+				[2]="12% increased maximum Energy Shield"
 			}
 		},
 		[26070]={
@@ -32875,8 +32845,8 @@ return {
 			},
 			skill=26070,
 			stats={
-				[1]="empowered_attack_damage_+%",
-				[2]="warcry_skill_area_of_effect_+%"
+				[1]="Empowered Attacks deal 30% increased Damage",
+				[2]="Warcry Skills have 30% increased Area of Effect"
 			}
 		},
 		[26092]={
@@ -32893,7 +32863,7 @@ return {
 			},
 			skill=26092,
 			stats={
-				[1]="damage_+%_with_two_handed_weapons"
+				[1]="12% increased Damage with Two Handed Weapons"
 			}
 		},
 		[26107]={
@@ -32911,9 +32881,9 @@ return {
 			},
 			skill=26107,
 			stats={
-				[1]="base_projectile_speed_+%",
-				[2]="projectile_damage_+%",
-				[3]="base_movement_velocity_+%"
+				[1]="3% increased Movement Speed",
+				[2]="15% increased Projectile Speed",
+				[3]="15% increased Projectile Damage"
 			}
 		},
 		[26135]={
@@ -32930,8 +32900,8 @@ return {
 			},
 			skill=26135,
 			stats={
-				[1]="spell_damage_+%",
-				[2]="spell_skill_projectile_speed_+%"
+				[1]="8% increased Spell Damage",
+				[2]="8% increased Projectile Speed for Spell Skills"
 			}
 		},
 		[26176]={
@@ -32948,7 +32918,7 @@ return {
 			},
 			skill=26176,
 			stats={
-				[1]="attack_critical_strike_multiplier_+"
+				[1]="15% increased Critical Damage Bonus for Attack Damage"
 			}
 		},
 		[26196]={
@@ -32982,7 +32952,7 @@ return {
 			},
 			skill=26268,
 			stats={
-				[1]="base_curse_duration_+%"
+				[1]="20% increased Curse Duration"
 			}
 		},
 		[26282]={
@@ -33000,8 +32970,8 @@ return {
 			},
 			skill=26282,
 			stats={
-				[1]="non_skill_base_all_damage_%_to_gain_as_physical",
-				[2]="elemental_damage_can_inflict_bleeding"
+				[1]="Gain 10% of Damage as Extra Physical Damage",
+				[2]="Elemental Damage also Contributes to Bleeding Magnitude"
 			}
 		},
 		[26291]={
@@ -33018,8 +32988,8 @@ return {
 			},
 			skill=26291,
 			stats={
-				[1]="lightning_damage_+%",
-				[2]="shock_duration_+%"
+				[1]="25% increased Lightning Damage",
+				[2]="15% increased Shock Duration"
 			}
 		},
 		[26319]={
@@ -33036,7 +33006,7 @@ return {
 			},
 			skill=26319,
 			stats={
-				[1]="critical_strike_chance_+%"
+				[1]="10% increased Critical Hit Chance"
 			}
 		},
 		[26324]={
@@ -33054,7 +33024,7 @@ return {
 			},
 			skill=26324,
 			stats={
-				[1]="physical_damage_reduction_rating_+%"
+				[1]="15% increased Armour"
 			}
 		},
 		[26331]={
@@ -33072,8 +33042,8 @@ return {
 			},
 			skill=26331,
 			stats={
-				[1]="cast_speed_for_cold_skills_+%",
-				[2]="skill_effect_duration_+%"
+				[1]="8% increased Cast Speed with Cold Skills",
+				[2]="16% increased Skill Effect Duration"
 			}
 		},
 		[26339]={
@@ -33091,8 +33061,8 @@ return {
 			},
 			skill=26339,
 			stats={
-				[1]="attack_skills_additional_totems_allowed",
-				[2]="totem_placement_range_+%"
+				[1]="Attack Skills have +1 to maximum number of Summoned Totems",
+				[2]="20% increased Totem Placement range"
 			}
 		},
 		[26363]={
@@ -33109,7 +33079,7 @@ return {
 			},
 			skill=26363,
 			stats={
-				[1]="flask_life_to_recover_+%"
+				[1]="10% increased Life Recovery from Flasks"
 			}
 		},
 		[26383]={
@@ -33127,7 +33097,7 @@ return {
 			},
 			skill=26383,
 			stats={
-				[1]="base_spell_critical_strike_chance_override_permyriad"
+				[1]="Base Critical Hit Chance for Spells is 15%"
 			}
 		},
 		[26400]={
@@ -33144,7 +33114,7 @@ return {
 			},
 			skill=26400,
 			stats={
-				[1]="projectile_damage_+%_vs_enemies_further_than_6m_distance"
+				[1]="Projectiles deal 12% increased Damage with Hits against Enemies further than 6m"
 			}
 		},
 		[26432]={
@@ -33161,7 +33131,7 @@ return {
 			},
 			skill=26432,
 			stats={
-				[1]="display_passive_attribute_text"
+				[1]="+5 to any Attribute"
 			}
 		},
 		[26437]={
@@ -33178,7 +33148,7 @@ return {
 			},
 			skill=26437,
 			stats={
-				[1]="armour_break_amount_+%"
+				[1]="Break 20% increased Armour"
 			}
 		},
 		[26447]={
@@ -33195,8 +33165,8 @@ return {
 			},
 			skill=26447,
 			stats={
-				[1]="energy_shield_recharge_rate_+%",
-				[2]="mana_regeneration_rate_+%"
+				[1]="30% increased Energy Shield Recharge Rate",
+				[2]="20% increased Mana Regeneration Rate"
 			}
 		},
 		[26490]={
@@ -33213,7 +33183,7 @@ return {
 			},
 			skill=26490,
 			stats={
-				[1]="one_handed_melee_critical_strike_chance_+%"
+				[1]="10% increased Critical Hit Chance with One Handed Melee Weapons"
 			}
 		},
 		[26518]={
@@ -33230,8 +33200,8 @@ return {
 			},
 			skill=26518,
 			stats={
-				[1]="cold_damage_+%",
-				[2]="chill_duration_+%"
+				[1]="25% increased Cold Damage",
+				[2]="15% increased Chill Duration on Enemies"
 			}
 		},
 		[26520]={
@@ -33249,7 +33219,7 @@ return {
 			},
 			skill=26520,
 			stats={
-				[1]="base_life_leech_amount_+%"
+				[1]="10% increased amount of Life Leeched"
 			}
 		},
 		[26532]={
@@ -33267,7 +33237,7 @@ return {
 			},
 			skill=26532,
 			stats={
-				[1]="physical_damage_reduction_rating_+%"
+				[1]="15% increased Armour"
 			}
 		},
 		[26565]={
@@ -33284,7 +33254,7 @@ return {
 			},
 			skill=26565,
 			stats={
-				[1]="base_poison_duration_+%"
+				[1]="10% increased Poison Duration"
 			}
 		},
 		[26596]={
@@ -33302,7 +33272,7 @@ return {
 			},
 			skill=26596,
 			stats={
-				[1]="base_cast_speed_+%"
+				[1]="3% increased Cast Speed"
 			}
 		},
 		[26598]={
@@ -33322,7 +33292,7 @@ return {
 			},
 			skill=26598,
 			stats={
-				[1]="display_passive_attribute_text"
+				[1]="+5 to any Attribute"
 			}
 		},
 		[26614]={
@@ -33339,7 +33309,7 @@ return {
 			},
 			skill=26614,
 			stats={
-				[1]="stun_threshold_+_from_%_maximum_energy_shield"
+				[1]="Gain 8% of maximum Energy Shield as additional Stun Threshold"
 			}
 		},
 		[26638]={
@@ -33375,7 +33345,7 @@ return {
 			},
 			skill=26663,
 			stats={
-				[1]="base_cooldown_speed_+%"
+				[1]="5% increased Cooldown Recovery Rate"
 			}
 		},
 		[26682]={
@@ -33393,7 +33363,7 @@ return {
 			},
 			skill=26682,
 			stats={
-				[1]="base_spell_critical_strike_multiplier_+"
+				[1]="15% increased Critical Spell Damage Bonus"
 			}
 		},
 		[26725]={
@@ -33427,8 +33397,8 @@ return {
 			},
 			skill=26726,
 			stats={
-				[1]="knockback_distance_+%",
-				[2]="hit_damage_stun_multiplier_+%"
+				[1]="10% increased Stun Buildup",
+				[2]="10% increased Knockback Distance"
 			}
 		},
 		[26739]={
@@ -33445,7 +33415,7 @@ return {
 			},
 			skill=26739,
 			stats={
-				[1]="elemental_damage_+%"
+				[1]="10% increased Elemental Damage"
 			}
 		},
 		[26762]={
@@ -33462,7 +33432,7 @@ return {
 			},
 			skill=26762,
 			stats={
-				[1]="withered_effect_+%"
+				[1]="10% increased Effect of Withered"
 			}
 		},
 		[26772]={
@@ -33479,7 +33449,7 @@ return {
 			},
 			skill=26772,
 			stats={
-				[1]="base_debuff_slow_magnitude_+%"
+				[1]="Debuffs you inflict have 5% increased Slow Magnitude"
 			}
 		},
 		[26786]={
@@ -33500,7 +33470,7 @@ return {
 			},
 			skill=26786,
 			stats={
-				[1]="display_passive_attribute_text"
+				[1]="+5 to any Attribute"
 			}
 		},
 		[26798]={
@@ -33517,7 +33487,7 @@ return {
 			},
 			skill=26798,
 			stats={
-				[1]="skill_speed_+%"
+				[1]="3% increased Skill Speed"
 			}
 		},
 		[26804]={
@@ -33535,7 +33505,7 @@ return {
 			},
 			skill=26804,
 			stats={
-				[1]="damage_+%_if_you_have_consumed_a_corpse_recently"
+				[1]="15% increased Damage if you have Consumed a Corpse Recently"
 			}
 		},
 		[26821]={
@@ -33552,7 +33522,7 @@ return {
 			},
 			skill=26821,
 			stats={
-				[1]="base_cast_speed_+%"
+				[1]="3% increased Cast Speed"
 			}
 		},
 		[26885]={
@@ -33569,7 +33539,7 @@ return {
 			},
 			skill=26885,
 			stats={
-				[1]="chaos_damage_+%"
+				[1]="7% increased Chaos Damage"
 			}
 		},
 		[26905]={
@@ -33586,7 +33556,7 @@ return {
 			},
 			skill=26905,
 			stats={
-				[1]="lightning_damage_+%"
+				[1]="12% increased Lightning Damage"
 			}
 		},
 		[26931]={
@@ -33603,7 +33573,7 @@ return {
 			},
 			skill=26931,
 			stats={
-				[1]="base_life_gained_on_enemy_death"
+				[1]="Gain 3 Life per Enemy Killed"
 			}
 		},
 		[26945]={
@@ -33620,7 +33590,7 @@ return {
 			},
 			skill=26945,
 			stats={
-				[1]="minion_critical_strike_chance_+%"
+				[1]="Minions have 20% increased Critical Hit Chance"
 			}
 		},
 		[26969]={
@@ -33637,8 +33607,8 @@ return {
 			},
 			skill=26969,
 			stats={
-				[1]="critical_strike_chance_+%",
-				[2]="maximum_mana_+%"
+				[1]="5% reduced maximum Mana",
+				[2]="15% increased Critical Hit Chance"
 			}
 		},
 		[27009]={
@@ -33655,7 +33625,7 @@ return {
 			},
 			skill=27009,
 			stats={
-				[1]="minion_damage_+%_while_you_have_at_least_two_different_active_offerings"
+				[1]="40% increased Minion Damage while you have at least two different active Offerings"
 			}
 		},
 		[27068]={
@@ -33672,7 +33642,7 @@ return {
 			},
 			skill=27068,
 			stats={
-				[1]="mana_regeneration_rate_+%"
+				[1]="10% increased Mana Regeneration Rate"
 			}
 		},
 		[27082]={
@@ -33691,7 +33661,7 @@ return {
 			},
 			skill=27082,
 			stats={
-				[1]="display_passive_attribute_text"
+				[1]="+5 to any Attribute"
 			}
 		},
 		[27095]={
@@ -33709,7 +33679,7 @@ return {
 			},
 			skill=27095,
 			stats={
-				[1]="hit_damage_freeze_multiplier_+%"
+				[1]="15% increased Freeze Buildup"
 			}
 		},
 		[27108]={
@@ -33726,8 +33696,8 @@ return {
 			},
 			skill=27108,
 			stats={
-				[1]="attack_speed_+%",
-				[2]="allies_in_presence_attack_speed_+%"
+				[1]="Allies in your Presence have 6% increased Attack Speed",
+				[2]="6% increased Attack Speed"
 			}
 		},
 		[27176]={
@@ -33744,8 +33714,8 @@ return {
 			},
 			skill=27176,
 			stats={
-				[1]="critical_strike_multiplier_+_if_gained_power_charge_recently",
-				[2]="max_power_charges"
+				[1]="+1 to Maximum Power Charges",
+				[2]="20% increased Critical Damage Bonus if you've gained a Power Charge Recently"
 			}
 		},
 		[27262]={
@@ -33762,8 +33732,8 @@ return {
 			},
 			skill=27262,
 			stats={
-				[1]="ailment_chance_+%",
-				[2]="base_damaging_ailment_effect_+%"
+				[1]="6% increased chance to inflict Ailments",
+				[2]="6% increased Magnitude of Damaging Ailments you inflict"
 			}
 		},
 		[27270]={
@@ -33780,8 +33750,8 @@ return {
 			},
 			skill=27270,
 			stats={
-				[1]="attack_damage_+%",
-				[2]="accuracy_rating_+%"
+				[1]="6% increased Attack Damage",
+				[2]="5% increased Accuracy Rating"
 			}
 		},
 		[27290]={
@@ -33798,7 +33768,7 @@ return {
 			},
 			skill=27290,
 			stats={
-				[1]="sword_damage_+%"
+				[1]="25% increased Damage with Swords"
 			}
 		},
 		[27296]={
@@ -33818,7 +33788,7 @@ return {
 			},
 			skill=27296,
 			stats={
-				[1]="display_passive_attribute_text"
+				[1]="+5 to any Attribute"
 			}
 		},
 		[27303]={
@@ -33835,9 +33805,8 @@ return {
 			},
 			skill=27303,
 			stats={
-				[1]="critical_strike_chance_+%",
-				[2]="maximum_mana_+%",
-				[3]="base_strength"
+				[1]="10% reduced maximum Mana",
+				[2]="35% increased Critical Hit Chance"
 			}
 		},
 		[27373]={
@@ -33857,7 +33826,7 @@ return {
 			},
 			skill=27373,
 			stats={
-				[1]="display_passive_attribute_text"
+				[1]="+5 to any Attribute"
 			}
 		},
 		[27388]={
@@ -33874,8 +33843,8 @@ return {
 			},
 			skill=27388,
 			stats={
-				[1]="mana_regeneration_rate_+%",
-				[2]="gain_arcane_surge_on_crit_%_chance"
+				[1]="20% increased Mana Regeneration Rate",
+				[2]="10% chance to Gain Arcane Surge when you deal a Critical Hit"
 			}
 		},
 		[27417]={
@@ -33893,7 +33862,7 @@ return {
 			},
 			skill=27417,
 			stats={
-				[1]="trap_damage_+%"
+				[1]="25% increased Trap Damage"
 			}
 		},
 		[27418]={
@@ -33911,7 +33880,7 @@ return {
 			},
 			skill=27418,
 			stats={
-				[1]="strength_+%"
+				[1]="4% increased Strength"
 			}
 		},
 		[27422]={
@@ -33929,7 +33898,7 @@ return {
 			},
 			skill=27422,
 			stats={
-				[1]="flask_mana_to_recover_+%"
+				[1]="10% increased Mana Recovery from Flasks"
 			}
 		},
 		[27439]={
@@ -33948,7 +33917,7 @@ return {
 			},
 			skill=27439,
 			stats={
-				[1]="display_passive_attribute_text"
+				[1]="+5 to any Attribute"
 			}
 		},
 		[27491]={
@@ -33966,8 +33935,8 @@ return {
 			},
 			skill=27491,
 			stats={
-				[1]="maximum_energy_shield_+%",
-				[2]="maximum_life_+%"
+				[1]="40% increased maximum Energy Shield",
+				[2]="10% reduced maximum Life"
 			}
 		},
 		[27493]={
@@ -33984,7 +33953,7 @@ return {
 			},
 			skill=27493,
 			stats={
-				[1]="projectile_damage_+%"
+				[1]="10% increased Projectile Damage"
 			}
 		},
 		[27501]={
@@ -34001,7 +33970,7 @@ return {
 			},
 			skill=27501,
 			stats={
-				[1]="life_regeneration_rate_+%"
+				[1]="10% increased Life Regeneration rate"
 			}
 		},
 		[27540]={
@@ -34018,7 +33987,7 @@ return {
 			},
 			skill=27540,
 			stats={
-				[1]="empowered_attack_damage_+%"
+				[1]="Empowered Attacks deal 16% increased Damage"
 			}
 		},
 		[27581]={
@@ -34035,7 +34004,7 @@ return {
 			},
 			skill=27581,
 			stats={
-				[1]="block_chance_+%"
+				[1]="5% increased Block chance"
 			}
 		},
 		[27626]={
@@ -34053,7 +34022,7 @@ return {
 			},
 			skill=27626,
 			stats={
-				[1]="arcane_surge_effect_on_self_+%"
+				[1]="40% increased effect of Arcane Surge on you"
 			}
 		},
 		[27658]={
@@ -34070,7 +34039,7 @@ return {
 			},
 			skill=27658,
 			stats={
-				[1]="damage_taken_goes_to_life_over_4_seconds_%"
+				[1]="3% of Damage taken Recouped as Life"
 			}
 		},
 		[27662]={
@@ -34086,7 +34055,7 @@ return {
 			},
 			skill=27662,
 			stats={
-				[1]="spell_skills_fire_2_additional_projectiles_final_chance_%"
+				[1]="6% chance for Spell Skills to fire 2 additional Projectiles"
 			}
 		},
 		[27667]={
@@ -34104,7 +34073,7 @@ return {
 			},
 			skill=27667,
 			stats={
-				[1]="curses_never_expire"
+				[1]="Your Curses have infinite Duration"
 			}
 		},
 		[27674]={
@@ -34121,7 +34090,7 @@ return {
 			},
 			skill=27674,
 			stats={
-				[1]="energy_shield_recharge_rate_+%"
+				[1]="15% increased Energy Shield Recharge Rate"
 			}
 		},
 		[27686]={
@@ -34139,7 +34108,7 @@ return {
 			},
 			skill=27686,
 			stats={
-				[1]="energy_shield_recharge_rate_+%"
+				[1]="20% increased Energy Shield Recharge Rate"
 			}
 		},
 		[27687]={
@@ -34157,7 +34126,7 @@ return {
 			},
 			skill=27687,
 			stats={
-				[1]="attack_damage_+%_per_75_armour_or_evasion_on_shield"
+				[1]="2% increased Attack Damage per 75 Armour or Evasion Rating on Shield"
 			}
 		},
 		[27705]={
@@ -34176,7 +34145,7 @@ return {
 			},
 			skill=27705,
 			stats={
-				[1]="display_passive_attribute_text"
+				[1]="+5 to any Attribute"
 			}
 		},
 		[27726]={
@@ -34193,7 +34162,7 @@ return {
 			},
 			skill=27726,
 			stats={
-				[1]="physical_damage_reduction_rating_+%"
+				[1]="15% increased Armour"
 			}
 		},
 		[27785]={
@@ -34210,7 +34179,7 @@ return {
 			},
 			skill=27785,
 			stats={
-				[1]="base_reduce_enemy_lightning_resistance_%"
+				[1]="Damage Penetrates 6% Lightning Resistance"
 			}
 		},
 		[27834]={
@@ -34227,7 +34196,7 @@ return {
 			},
 			skill=27834,
 			stats={
-				[1]="trap_critical_strike_chance_+%"
+				[1]="10% increased Critical Hit Chance with Traps"
 			}
 		},
 		[27859]={
@@ -34245,7 +34214,7 @@ return {
 			},
 			skill=27859,
 			stats={
-				[1]="damage_+%_with_herald_skills"
+				[1]="Herald Skills deal 20% increased Damage"
 			}
 		},
 		[27875]={
@@ -34264,8 +34233,8 @@ return {
 			},
 			skill=27875,
 			stats={
-				[1]="shock_chance_+%",
-				[2]="attack_and_cast_speed_+%_with_lightning_skills"
+				[1]="40% increased chance to Shock",
+				[2]="5% increased Attack and Cast Speed with Lightning Skills"
 			}
 		},
 		[27950]={
@@ -34282,8 +34251,8 @@ return {
 			},
 			skill=27950,
 			stats={
-				[1]="stun_threshold_+_from_%_base_armour_from_equipment",
-				[2]="physical_damage_reduction_rating_+%"
+				[1]="25% increased Armour",
+				[2]="50% of Base Armour from Equipment also added to Stun Threshold"
 			}
 		},
 		[27990]={
@@ -34301,7 +34270,7 @@ return {
 			},
 			skill=27990,
 			stats={
-				[1]="base_debuff_slow_magnitude_+%"
+				[1]="Debuffs you inflict have 6% increased Slow Magnitude"
 			}
 		},
 		[28002]={
@@ -34320,7 +34289,7 @@ return {
 			},
 			skill=28002,
 			stats={
-				[1]="display_passive_attribute_text"
+				[1]="+5 to any Attribute"
 			}
 		},
 		[28021]={
@@ -34338,7 +34307,7 @@ return {
 			},
 			skill=28021,
 			stats={
-				[1]="base_critical_strike_multiplier_+"
+				[1]="15% increased Critical Damage Bonus"
 			}
 		},
 		[28044]={
@@ -34356,9 +34325,9 @@ return {
 			},
 			skill=28044,
 			stats={
-				[1]="lightning_damage_+%_while_affected_by_herald_of_thunder",
-				[2]="cold_damage_+%_while_affected_by_herald_of_ice",
-				[3]="fire_damage_+%_while_affected_by_herald_of_ash"
+				[1]="50% increased Cold Damage while affected by Herald of Ice",
+				[2]="50% increased Fire Damage while affected by Herald of Ash",
+				[3]="50% increased Lightning Damage while affected by Herald of Thunder"
 			}
 		},
 		[28050]={
@@ -34377,7 +34346,7 @@ return {
 			},
 			skill=28050,
 			stats={
-				[1]="display_passive_attribute_text"
+				[1]="+5 to any Attribute"
 			}
 		},
 		[28086]={
@@ -34394,7 +34363,7 @@ return {
 			},
 			skill=28086,
 			stats={
-				[1]="base_reduce_enemy_cold_resistance_%"
+				[1]="Damage Penetrates 6% Cold Resistance"
 			}
 		},
 		[28101]={
@@ -34412,7 +34381,7 @@ return {
 			},
 			skill=28101,
 			stats={
-				[1]="base_reduce_enemy_fire_resistance_%"
+				[1]="Damage Penetrates 6% Fire Resistance"
 			}
 		},
 		[28106]={
@@ -34429,7 +34398,7 @@ return {
 			},
 			skill=28106,
 			stats={
-				[1]="life_flask_charges_gained_+%"
+				[1]="15% increased Life Flask Charges gained"
 			}
 		},
 		[28153]={
@@ -34447,7 +34416,7 @@ return {
 			},
 			skill=28153,
 			stats={
-				[1]="recoup_effects_apply_over_4_seconds_instead"
+				[1]="Recoup Effects instead occur over 4 seconds"
 			}
 		},
 		[28175]={
@@ -34466,7 +34435,7 @@ return {
 			},
 			skill=28175,
 			stats={
-				[1]="display_passive_attribute_text"
+				[1]="+5 to any Attribute"
 			}
 		},
 		[28229]={
@@ -34483,7 +34452,7 @@ return {
 			},
 			skill=28229,
 			stats={
-				[1]="curse_area_of_effect_+%"
+				[1]="20% increased Area of Effect of Curses"
 			}
 		},
 		[28258]={
@@ -34504,7 +34473,7 @@ return {
 			},
 			skill=28258,
 			stats={
-				[1]="mark_effect_+%"
+				[1]="10% increased Effect of your Mark Skills"
 			}
 		},
 		[28267]={
@@ -34522,8 +34491,8 @@ return {
 			},
 			skill=28267,
 			stats={
-				[1]="base_critical_strike_multiplier_+",
-				[2]="base_self_critical_strike_multiplier_-%"
+				[1]="25% increased Critical Damage Bonus",
+				[2]="Hits against you have 25% reduced Critical Damage Bonus"
 			}
 		},
 		[28272]={
@@ -34541,7 +34510,7 @@ return {
 			},
 			skill=28272,
 			stats={
-				[1]="flask_charges_gained_+%"
+				[1]="10% increased Flask Charges gained"
 			}
 		},
 		[28304]={
@@ -34559,7 +34528,7 @@ return {
 			},
 			skill=28304,
 			stats={
-				[1]="display_passive_attribute_text"
+				[1]="+5 to any Attribute"
 			}
 		},
 		[28329]={
@@ -34577,8 +34546,8 @@ return {
 			},
 			skill=28329,
 			stats={
-				[1]="hit_damage_stun_multiplier_+%",
-				[2]="hit_damage_freeze_multiplier_+%"
+				[1]="35% increased Stun Buildup",
+				[2]="35% increased Freeze Buildup"
 			}
 		},
 		[28361]={
@@ -34595,7 +34564,7 @@ return {
 			},
 			skill=28361,
 			stats={
-				[1]="weapon_swap_speed_+%"
+				[1]="20% increased Weapon Swap Speed"
 			}
 		},
 		[28370]={
@@ -34616,7 +34585,7 @@ return {
 			},
 			skill=28370,
 			stats={
-				[1]="display_passive_attribute_text"
+				[1]="+5 to any Attribute"
 			}
 		},
 		[28371]={
@@ -34634,7 +34603,7 @@ return {
 			},
 			skill=28371,
 			stats={
-				[1]="damage_+%_vs_enemies_on_full_life"
+				[1]="20% increased Damage with Hits against Enemies that are on Full Life"
 			}
 		},
 		[28432]={
@@ -34652,7 +34621,7 @@ return {
 			},
 			skill=28432,
 			stats={
-				[1]="armour_+%_if_consumed_endurance_charge_recently"
+				[1]="20% increased Armour if you've consumed an Endurance Charge Recently"
 			}
 		},
 		[28446]={
@@ -34669,7 +34638,7 @@ return {
 			},
 			skill=28446,
 			stats={
-				[1]="attack_area_of_effect_+%"
+				[1]="8% increased Area of Effect for Attacks"
 			}
 		},
 		[28458]={
@@ -34686,7 +34655,7 @@ return {
 			},
 			skill=28458,
 			stats={
-				[1]="minion_damage_+%"
+				[1]="Minions deal 10% increased Damage"
 			}
 		},
 		[28475]={
@@ -34720,8 +34689,8 @@ return {
 			},
 			skill=28482,
 			stats={
-				[1]="refresh_ignite_duration_on_critical_strike_chance_%",
-				[2]="critical_strike_multiplier_+_vs_burning_enemies"
+				[1]="25% increased Critical Damage Bonus against Burning Enemies",
+				[2]="10% chance to refresh Ignite Duration on Critical Hit"
 			}
 		},
 		[28492]={
@@ -34738,7 +34707,7 @@ return {
 			},
 			skill=28492,
 			stats={
-				[1]="keystone_iron_reflexes"
+				[1]="Iron Reflexes"
 			}
 		},
 		[28510]={
@@ -34757,7 +34726,7 @@ return {
 			},
 			skill=28510,
 			stats={
-				[1]="display_passive_attribute_text"
+				[1]="+5 to any Attribute"
 			}
 		},
 		[28556]={
@@ -34775,7 +34744,7 @@ return {
 			},
 			skill=28556,
 			stats={
-				[1]="display_passive_attribute_text"
+				[1]="+5 to any Attribute"
 			}
 		},
 		[28564]={
@@ -34793,7 +34762,7 @@ return {
 			},
 			skill=28564,
 			stats={
-				[1]="warcry_speed_+%"
+				[1]="16% increased Warcry Speed"
 			}
 		},
 		[28573]={
@@ -34810,7 +34779,7 @@ return {
 			},
 			skill=28573,
 			stats={
-				[1]="minion_resummon_speed_+%"
+				[1]="Minions Revive 5% faster"
 			}
 		},
 		[28578]={
@@ -34827,7 +34796,7 @@ return {
 			},
 			skill=28578,
 			stats={
-				[1]="mana_regeneration_rate_+%"
+				[1]="10% increased Mana Regeneration Rate"
 			}
 		},
 		[28589]={
@@ -34844,7 +34813,7 @@ return {
 			},
 			skill=28589,
 			stats={
-				[1]="attack_speed_+%_if_have_been_hit_recently"
+				[1]="5% increased Attack Speed if you've been Hit Recently"
 			}
 		},
 		[28625]={
@@ -34861,7 +34830,7 @@ return {
 			},
 			skill=28625,
 			stats={
-				[1]="flask_life_and_mana_to_recover_+%"
+				[1]="15% increased Life and Mana Recovery from Flasks"
 			}
 		},
 		[28693]={
@@ -34878,7 +34847,7 @@ return {
 			},
 			skill=28693,
 			stats={
-				[1]="evasion_and_physical_damage_reduction_rating_+%"
+				[1]="12% increased Armour and Evasion Rating"
 			}
 		},
 		[28774]={
@@ -34896,7 +34865,7 @@ return {
 			},
 			skill=28774,
 			stats={
-				[1]="base_cast_speed_+%"
+				[1]="3% increased Cast Speed"
 			}
 		},
 		[28797]={
@@ -34913,7 +34882,7 @@ return {
 			},
 			skill=28797,
 			stats={
-				[1]="dagger_attack_speed_+%"
+				[1]="3% increased Attack Speed with Daggers"
 			}
 		},
 		[28823]={
@@ -34930,7 +34899,7 @@ return {
 			},
 			skill=28823,
 			stats={
-				[1]="damage_+%_while_using_charm"
+				[1]="16% increased Damage while you have an active Charm"
 			}
 		},
 		[28835]={
@@ -34949,7 +34918,7 @@ return {
 			},
 			skill=28835,
 			stats={
-				[1]="damage_+%_while_affected_by_a_herald"
+				[1]="12% increased Damage while affected by a Herald"
 			}
 		},
 		[28839]={
@@ -34966,7 +34935,7 @@ return {
 			},
 			skill=28839,
 			stats={
-				[1]="base_cast_speed_+%"
+				[1]="3% increased Cast Speed"
 			}
 		},
 		[28860]={
@@ -34983,7 +34952,7 @@ return {
 			},
 			skill=28860,
 			stats={
-				[1]="armour_break_amount_+%"
+				[1]="Break 20% increased Armour"
 			}
 		},
 		[28950]={
@@ -35004,9 +34973,8 @@ return {
 			},
 			skill=28950,
 			stats={
-				[1]="mana_regeneration_rate_+%",
-				[2]="life_regeneration_rate_per_minute_%",
-				[3]="base_strength_and_intelligence"
+				[1]="10% increased Mana Regeneration Rate",
+				[2]="Regenerate 0.5% of Life per second"
 			}
 		},
 		[28963]={
@@ -35024,8 +34992,8 @@ return {
 			},
 			skill=28963,
 			stats={
-				[1]="unarmed_attack_skill_melee_dash_range_+%",
-				[2]="evasion_rating_+%_if_you_have_hit_an_enemy_recently"
+				[1]="25% increased Evasion if you have Hit an Enemy Recently",
+				[2]="50% increased maximum Dash Distance with Unarmed Attack Skills"
 			}
 		},
 		[28975]={
@@ -35042,7 +35010,7 @@ return {
 			},
 			skill=28975,
 			stats={
-				[1]="lightning_damage_+%_per_10_intelligence"
+				[1]="2% increased Lightning Damage per 10 Intelligence"
 			}
 		},
 		[28976]={
@@ -35060,7 +35028,7 @@ return {
 			},
 			skill=28976,
 			stats={
-				[1]="base_poison_effect_+%"
+				[1]="10% increased Magnitude of Poison you inflict"
 			}
 		},
 		[28982]={
@@ -35080,7 +35048,7 @@ return {
 			},
 			skill=28982,
 			stats={
-				[1]="display_passive_attribute_text"
+				[1]="+5 to any Attribute"
 			}
 		},
 		[28992]={
@@ -35103,9 +35071,8 @@ return {
 			},
 			skill=28992,
 			stats={
-				[1]="attack_speed_+%",
-				[2]="base_projectile_speed_+%",
-				[3]="base_dexterity"
+				[1]="8% increased Projectile Speed",
+				[2]="8% increased Attack Speed"
 			}
 		},
 		[29009]={
@@ -35123,7 +35090,7 @@ return {
 			},
 			skill=29009,
 			stats={
-				[1]="display_passive_attribute_text"
+				[1]="+5 to any Attribute"
 			}
 		},
 		[29041]={
@@ -35140,7 +35107,7 @@ return {
 			},
 			skill=29041,
 			stats={
-				[1]="base_slow_potency_+%"
+				[1]="8% reduced Slowing Potency of Debuffs on You"
 			}
 		},
 		[29049]={
@@ -35157,7 +35124,7 @@ return {
 			},
 			skill=29049,
 			stats={
-				[1]="charm_duration_+%"
+				[1]="10% increased Charm Effect Duration"
 			}
 		},
 		[29074]={
@@ -35175,8 +35142,8 @@ return {
 			},
 			skill=29074,
 			stats={
-				[1]="double_number_of_poison_you_can_inflict",
-				[2]="pathfinder_poison_duration_+%_final"
+				[1]="Double the number of your Poisons that targets can be affected by at the same time",
+				[2]="35% less Poison Duration"
 			}
 		},
 		[29133]={
@@ -35194,7 +35161,7 @@ return {
 			},
 			skill=29133,
 			stats={
-				[1]="elemental_damage_+%"
+				[1]="12% increased Elemental Damage"
 			}
 		},
 		[29148]={
@@ -35213,7 +35180,7 @@ return {
 			},
 			skill=29148,
 			stats={
-				[1]="display_passive_attribute_text"
+				[1]="+5 to any Attribute"
 			}
 		},
 		[29240]={
@@ -35232,7 +35199,7 @@ return {
 			},
 			skill=29240,
 			stats={
-				[1]="display_passive_attribute_text"
+				[1]="+5 to any Attribute"
 			}
 		},
 		[29246]={
@@ -35249,7 +35216,7 @@ return {
 			},
 			skill=29246,
 			stats={
-				[1]="shield_evasion_rating_+%"
+				[1]="30% increased Evasion from Equipped Shield"
 			}
 		},
 		[29270]={
@@ -35266,7 +35233,7 @@ return {
 			},
 			skill=29270,
 			stats={
-				[1]="physical_attack_damage_+%"
+				[1]="10% increased Attack Physical Damage"
 			}
 		},
 		[29323]={
@@ -35284,7 +35251,7 @@ return {
 			},
 			skill=29323,
 			stats={
-				[1]="physical_damage_reduction_rating_+%"
+				[1]="20% increased Armour"
 			}
 		},
 		[29328]={
@@ -35301,7 +35268,7 @@ return {
 			},
 			skill=29328,
 			stats={
-				[1]="ailment_chance_+%"
+				[1]="10% increased chance to inflict Ailments"
 			}
 		},
 		[29358]={
@@ -35319,7 +35286,7 @@ return {
 			},
 			skill=29358,
 			stats={
-				[1]="hit_damage_stun_multiplier_+%"
+				[1]="15% increased Stun Buildup"
 			}
 		},
 		[29361]={
@@ -35336,8 +35303,8 @@ return {
 			},
 			skill=29361,
 			stats={
-				[1]="evasion_rating_+%",
-				[2]="maximum_energy_shield_+%"
+				[1]="12% increased Evasion Rating",
+				[2]="12% increased maximum Energy Shield"
 			}
 		},
 		[29369]={
@@ -35354,7 +35321,7 @@ return {
 			},
 			skill=29369,
 			stats={
-				[1]="chill_effect_+%"
+				[1]="15% increased Magnitude of Chill you inflict"
 			}
 		},
 		[29372]={
@@ -35371,7 +35338,7 @@ return {
 			},
 			skill=29372,
 			stats={
-				[1]="gain_max_rage_on_rage_gain_from_hit_%_chance"
+				[1]="3% chance that if you would gain Rage on Hit, you instead gain up to your maximum Rage"
 			}
 		},
 		[29398]={
@@ -35389,7 +35356,7 @@ return {
 			},
 			skill=29398,
 			stats={
-				[1]="chill_duration_+%"
+				[1]="25% increased Chill Duration on Enemies"
 			}
 		},
 		[29399]={
@@ -35406,7 +35373,7 @@ return {
 			},
 			skill=29399,
 			stats={
-				[1]="evasion_and_physical_damage_reduction_rating_+%"
+				[1]="12% increased Armour and Evasion Rating"
 			}
 		},
 		[29402]={
@@ -35423,7 +35390,7 @@ return {
 			},
 			skill=29402,
 			stats={
-				[1]="hit_damage_electrocute_multiplier_+%"
+				[1]="15% increased Electrocute Buildup"
 			}
 		},
 		[29408]={
@@ -35440,7 +35407,7 @@ return {
 			},
 			skill=29408,
 			stats={
-				[1]="base_mana_cost_-%"
+				[1]="4% reduced Mana Cost of Skills"
 			}
 		},
 		[29432]={
@@ -35457,7 +35424,7 @@ return {
 			},
 			skill=29432,
 			stats={
-				[1]="maximum_energy_shield_+%"
+				[1]="15% increased maximum Energy Shield"
 			}
 		},
 		[29458]={
@@ -35474,7 +35441,7 @@ return {
 			},
 			skill=29458,
 			stats={
-				[1]="base_poison_effect_+%"
+				[1]="10% increased Magnitude of Poison you inflict"
 			}
 		},
 		[29479]={
@@ -35494,7 +35461,7 @@ return {
 			},
 			skill=29479,
 			stats={
-				[1]="display_passive_attribute_text"
+				[1]="+5 to any Attribute"
 			}
 		},
 		[29502]={
@@ -35511,7 +35478,7 @@ return {
 			},
 			skill=29502,
 			stats={
-				[1]="base_cast_speed_+%"
+				[1]="3% increased Cast Speed"
 			}
 		},
 		[29514]={
@@ -35529,8 +35496,8 @@ return {
 			},
 			skill=29514,
 			stats={
-				[1]="grenade_skill_number_of_additional_projectiles",
-				[2]="grenade_fuse_duration_+%"
+				[1]="50% increased Grenade fuse duration",
+				[2]="Grenade Skills Fire an additional Projectile"
 			}
 		},
 		[29517]={
@@ -35548,7 +35515,7 @@ return {
 			},
 			skill=29517,
 			stats={
-				[1]="display_passive_attribute_text"
+				[1]="+5 to any Attribute"
 			}
 		},
 		[29527]={
@@ -35566,9 +35533,9 @@ return {
 			},
 			skill=29527,
 			stats={
-				[1]="critical_strike_chance_against_enemies_on_full_life_+%",
-				[2]="damage_+%_vs_enemies_on_full_life",
-				[3]="cannot_be_blinded_while_on_full_life"
+				[1]="50% increased Critical Hit Chance against Enemies on Full Life",
+				[2]="Cannot be Blinded while on Full Life",
+				[3]="80% increased Damage with Hits against Enemies that are on Full Life"
 			}
 		},
 		[29582]={
@@ -35585,7 +35552,7 @@ return {
 			},
 			skill=29582,
 			stats={
-				[1]="accuracy_rating_+%"
+				[1]="8% increased Accuracy Rating"
 			}
 		},
 		[29611]={
@@ -35604,7 +35571,7 @@ return {
 			},
 			skill=29611,
 			stats={
-				[1]="display_passive_attribute_text"
+				[1]="+5 to any Attribute"
 			}
 		},
 		[29645]={
@@ -35622,7 +35589,7 @@ return {
 			},
 			skill=29645,
 			stats={
-				[1]="warcries_bypass_cooldown"
+				[1]="Ignore Warcry Cooldowns"
 			}
 		},
 		[29652]={
@@ -35640,7 +35607,7 @@ return {
 			},
 			skill=29652,
 			stats={
-				[1]="spell_damage_+%"
+				[1]="10% increased Spell Damage"
 			}
 		},
 		[29695]={
@@ -35657,7 +35624,7 @@ return {
 			},
 			skill=29695,
 			stats={
-				[1]="energy_shield_delay_-%"
+				[1]="15% faster start of Energy Shield Recharge"
 			}
 		},
 		[29762]={
@@ -35675,8 +35642,8 @@ return {
 			},
 			skill=29762,
 			stats={
-				[1]="warcry_skill_area_of_effect_+%",
-				[2]="warcry_speed_+%"
+				[1]="30% increased Warcry Speed",
+				[2]="Warcry Skills have 30% increased Area of Effect"
 			}
 		},
 		[29763]={
@@ -35693,7 +35660,7 @@ return {
 			},
 			skill=29763,
 			stats={
-				[1]="base_reduce_enemy_lightning_resistance_%"
+				[1]="Damage Penetrates 6% Lightning Resistance"
 			}
 		},
 		[29788]={
@@ -35710,7 +35677,7 @@ return {
 			},
 			skill=29788,
 			stats={
-				[1]="base_life_leech_amount_+%"
+				[1]="12% increased amount of Life Leeched"
 			}
 		},
 		[29843]={
@@ -35727,7 +35694,7 @@ return {
 			},
 			skill=29843,
 			stats={
-				[1]="evasion_rating_+%"
+				[1]="15% increased Evasion Rating"
 			}
 		},
 		[29871]={
@@ -35745,7 +35712,7 @@ return {
 			},
 			skill=29871,
 			stats={
-				[1]="skill_speed_+%"
+				[1]="4% increased Skill Speed"
 			}
 		},
 		[29930]={
@@ -35763,7 +35730,7 @@ return {
 			},
 			skill=29930,
 			stats={
-				[1]="minion_damage_+%"
+				[1]="Minions deal 10% increased Damage"
 			}
 		},
 		[29959]={
@@ -35781,7 +35748,7 @@ return {
 			},
 			skill=29959,
 			stats={
-				[1]="base_critical_strike_multiplier_+"
+				[1]="15% increased Critical Damage Bonus"
 			}
 		},
 		[30007]={
@@ -35798,7 +35765,7 @@ return {
 			},
 			skill=30007,
 			stats={
-				[1]="armour_+%_if_have_been_hit_recently"
+				[1]="20% increased Armour if you have been Hit Recently"
 			}
 		},
 		[30047]={
@@ -35816,7 +35783,7 @@ return {
 			},
 			skill=30047,
 			stats={
-				[1]="display_passive_attribute_text"
+				[1]="+5 to any Attribute"
 			}
 		},
 		[30071]={
@@ -35834,7 +35801,7 @@ return {
 			},
 			skill=30071,
 			stats={
-				[1]="curse_effect_+%"
+				[1]="6% increased Effect of your Curses"
 			}
 		},
 		[30115]={
@@ -35852,7 +35819,7 @@ return {
 			},
 			skill=30115,
 			stats={
-				[1]="small_passives_effect_+%"
+				[1]="50% increased effect of Small Passive Skills"
 			}
 		},
 		[30117]={
@@ -35870,7 +35837,7 @@ return {
 			},
 			skill=30117,
 			stats={
-				[1]="spell_critical_strike_chance_+%"
+				[1]="12% increased Critical Hit Chance for Spells"
 			}
 		},
 		[30123]={
@@ -35888,7 +35855,7 @@ return {
 			},
 			skill=30123,
 			stats={
-				[1]="damage_+%_with_two_handed_weapons"
+				[1]="12% increased Damage with Two Handed Weapons"
 			}
 		},
 		[30136]={
@@ -35905,7 +35872,7 @@ return {
 			},
 			skill=30136,
 			stats={
-				[1]="damage_+%_against_enemies_with_fully_broken_armour"
+				[1]="20% increased Damage against Enemies with Fully Broken Armour"
 			}
 		},
 		[30141]={
@@ -35923,7 +35890,7 @@ return {
 			},
 			skill=30141,
 			stats={
-				[1]="display_passive_attribute_text"
+				[1]="+5 to any Attribute"
 			}
 		},
 		[30143]={
@@ -35941,7 +35908,7 @@ return {
 			},
 			skill=30143,
 			stats={
-				[1]="block_chance_+%"
+				[1]="5% increased Block chance"
 			}
 		},
 		[30252]={
@@ -35958,7 +35925,7 @@ return {
 			},
 			skill=30252,
 			stats={
-				[1]="charm_charges_gained_+%"
+				[1]="10% increased Charm Charges gained"
 			}
 		},
 		[30260]={
@@ -35976,7 +35943,7 @@ return {
 			},
 			skill=30260,
 			stats={
-				[1]="link_skill_buff_effect_+%"
+				[1]="Link Skills have 10% increased Buff Effect"
 			}
 		},
 		[30300]={
@@ -35994,7 +35961,7 @@ return {
 			},
 			skill=30300,
 			stats={
-				[1]="armour_+%_if_have_been_hit_recently"
+				[1]="20% increased Armour if you have been Hit Recently"
 			}
 		},
 		[30334]={
@@ -36011,7 +35978,7 @@ return {
 			},
 			skill=30334,
 			stats={
-				[1]="ignite_effect_on_self_+%"
+				[1]="10% reduced effect of Ignite on you"
 			}
 		},
 		[30341]={
@@ -36030,7 +35997,7 @@ return {
 			},
 			skill=30341,
 			stats={
-				[1]="quiver_mod_effect_+%"
+				[1]="30% increased bonuses gained from Equipped Quiver"
 			}
 		},
 		[30346]={
@@ -36048,7 +36015,7 @@ return {
 			},
 			skill=30346,
 			stats={
-				[1]="base_maximum_energy_shield"
+				[1]="+10 to maximum Energy Shield"
 			}
 		},
 		[30371]={
@@ -36066,7 +36033,7 @@ return {
 			},
 			skill=30371,
 			stats={
-				[1]="attack_skills_damage_+%_while_holding_shield"
+				[1]="Attack Skills deal 10% increased Damage while holding a Shield"
 			}
 		},
 		[30372]={
@@ -36083,7 +36050,7 @@ return {
 			},
 			skill=30372,
 			stats={
-				[1]="base_reduce_enemy_lightning_resistance_%"
+				[1]="Damage Penetrates 6% Lightning Resistance"
 			}
 		},
 		[30390]={
@@ -36100,7 +36067,7 @@ return {
 			},
 			skill=30390,
 			stats={
-				[1]="block_chance_+%"
+				[1]="5% increased Block chance"
 			}
 		},
 		[30392]={
@@ -36118,7 +36085,7 @@ return {
 			},
 			skill=30392,
 			stats={
-				[1]="life_regeneration_rate_+%_while_using_life_flask"
+				[1]="30% increased Life Regeneration rate during Effect of any Life Flask"
 			}
 		},
 		[30456]={
@@ -36136,8 +36103,8 @@ return {
 			},
 			skill=30456,
 			stats={
-				[1]="evasion_rating_+%_when_on_full_life",
-				[2]="stun_threshold_+%_when_on_full_life"
+				[1]="50% increased Evasion Rating when on Full Life",
+				[2]="25% increased Stun Threshold while on Full Life"
 			}
 		},
 		[30457]={
@@ -36155,7 +36122,7 @@ return {
 			},
 			skill=30457,
 			stats={
-				[1]="physical_damage_reduction_rating_+%"
+				[1]="15% increased Armour"
 			}
 		},
 		[30463]={
@@ -36174,7 +36141,7 @@ return {
 			},
 			skill=30463,
 			stats={
-				[1]="ailment_threshold_+%"
+				[1]="15% increased Elemental Ailment Threshold"
 			}
 		},
 		[30523]={
@@ -36191,8 +36158,8 @@ return {
 			},
 			skill=30523,
 			stats={
-				[1]="minions_gain_your_dexterity",
-				[2]="minion_evasion_rating_+%"
+				[1]="Minions have 25% increased Evasion Rating",
+				[2]="Your Dexterity is added to your Minions"
 			}
 		},
 		[30539]={
@@ -36209,7 +36176,7 @@ return {
 			},
 			skill=30539,
 			stats={
-				[1]="base_chance_to_not_consume_corpse_%"
+				[1]="5% chance to not destroy Corpses when Consuming Corpses"
 			}
 		},
 		[30554]={
@@ -36227,8 +36194,7 @@ return {
 			},
 			skill=30554,
 			stats={
-				[1]="minion_maximum_life_+%",
-				[2]="minion_chaos_resistance_%"
+				[1]="Minions have 10% increased maximum Life"
 			}
 		},
 		[30555]={
@@ -36245,7 +36211,7 @@ return {
 			},
 			skill=30555,
 			stats={
-				[1]="display_passive_attribute_text"
+				[1]="+5 to any Attribute"
 			}
 		},
 		[30562]={
@@ -36263,9 +36229,9 @@ return {
 			},
 			skill=30562,
 			stats={
-				[1]="evasion_rating_+%",
-				[2]="maximum_energy_shield_+%",
-				[3]="curse_effect_on_self_+%"
+				[1]="20% increased Evasion Rating",
+				[2]="20% increased maximum Energy Shield",
+				[3]="25% reduced effect of Curses on you"
 			}
 		},
 		[30615]={
@@ -36282,7 +36248,7 @@ return {
 			},
 			skill=30615,
 			stats={
-				[1]="critical_hit_damage_bonus_+%_if_consumed_power_charge_recently"
+				[1]="20% increased Critical Damage Bonus if you've consumed a Power Charge Recently"
 			}
 		},
 		[30634]={
@@ -36299,7 +36265,7 @@ return {
 			},
 			skill=30634,
 			stats={
-				[1]="energy_shield_delay_-%"
+				[1]="15% faster start of Energy Shield Recharge"
 			}
 		},
 		[30657]={
@@ -36318,7 +36284,7 @@ return {
 			},
 			skill=30657,
 			stats={
-				[1]="display_passive_attribute_text"
+				[1]="+5 to any Attribute"
 			}
 		},
 		[30662]={
@@ -36335,7 +36301,7 @@ return {
 			},
 			skill=30662,
 			stats={
-				[1]="lightning_damage_+%"
+				[1]="12% increased Lightning Damage"
 			}
 		},
 		[30695]={
@@ -36353,7 +36319,7 @@ return {
 			},
 			skill=30695,
 			stats={
-				[1]="damage_+%_vs_enemies_affected_by_status_ailments"
+				[1]="33% increased Damage with Hits against Enemies affected by Elemental Ailments"
 			}
 		},
 		[30704]={
@@ -36371,7 +36337,7 @@ return {
 			},
 			skill=30704,
 			stats={
-				[1]="life_regeneration_rate_per_minute_%"
+				[1]="Regenerate 0.2% of Life per second"
 			}
 		},
 		[30720]={
@@ -36388,8 +36354,8 @@ return {
 			},
 			skill=30720,
 			stats={
-				[1]="minions_deal_%_of_physical_damage_as_additional_chaos_damage",
-				[2]="minion_chaos_resistance_%"
+				[1]="Minions have +13% to Chaos Resistance",
+				[2]="Minions gain 8% of Physical Damage as Chaos Damage"
 			}
 		},
 		[30808]={
@@ -36409,7 +36375,7 @@ return {
 			},
 			skill=30808,
 			stats={
-				[1]="display_passive_attribute_text"
+				[1]="+5 to any Attribute"
 			}
 		},
 		[30820]={
@@ -36426,8 +36392,8 @@ return {
 			},
 			skill=30820,
 			stats={
-				[1]="attack_damage_+%",
-				[2]="skill_effect_duration_+%"
+				[1]="8% increased Attack Damage",
+				[2]="8% increased Skill Effect Duration"
 			}
 		},
 		[30829]={
@@ -36444,7 +36410,7 @@ return {
 			},
 			skill=30829,
 			stats={
-				[1]="accuracy_rating_+%"
+				[1]="8% increased Accuracy Rating"
 			}
 		},
 		[30834]={
@@ -36462,7 +36428,7 @@ return {
 			},
 			skill=30834,
 			stats={
-				[1]="mana_regeneration_rate_+%"
+				[1]="10% increased Mana Regeneration Rate"
 			}
 		},
 		[30839]={
@@ -36479,8 +36445,7 @@ return {
 			},
 			skill=30839,
 			stats={
-				[1]="attack_speed_+%",
-				[2]="base_dexterity"
+				[1]="2% increased Attack Speed"
 			}
 		},
 		[30871]={
@@ -36497,7 +36462,7 @@ return {
 			},
 			skill=30871,
 			stats={
-				[1]="flask_life_to_recover_+%"
+				[1]="10% increased Life Recovery from Flasks"
 			}
 		},
 		[30905]={
@@ -36515,7 +36480,7 @@ return {
 			},
 			skill=30905,
 			stats={
-				[1]="elemental_damage_with_attack_skills_+%"
+				[1]="12% increased Elemental Damage with Attacks"
 			}
 		},
 		[30910]={
@@ -36533,7 +36498,7 @@ return {
 			},
 			skill=30910,
 			stats={
-				[1]="minion_damage_+%"
+				[1]="Minions deal 10% increased Damage"
 			}
 		},
 		[30973]={
@@ -36550,7 +36515,7 @@ return {
 			},
 			skill=30973,
 			stats={
-				[1]="dagger_critical_strike_chance_+%"
+				[1]="10% increased Critical Hit Chance with Daggers"
 			}
 		},
 		[30979]={
@@ -36569,7 +36534,7 @@ return {
 			},
 			skill=30979,
 			stats={
-				[1]="display_passive_attribute_text"
+				[1]="+5 to any Attribute"
 			}
 		},
 		[30990]={
@@ -36586,7 +36551,7 @@ return {
 			},
 			skill=30990,
 			stats={
-				[1]="critical_strike_chance_+%"
+				[1]="10% increased Critical Hit Chance"
 			}
 		},
 		[30996]={
@@ -36604,7 +36569,7 @@ return {
 			},
 			skill=30996,
 			stats={
-				[1]="support_gem_limit_+"
+				[1]="You can use two copies of the same Support Gem in different Skills"
 			}
 		},
 		[31017]={
@@ -36621,7 +36586,7 @@ return {
 			},
 			skill=31017,
 			stats={
-				[1]="totem_damage_+%"
+				[1]="15% increased Totem Damage"
 			}
 		},
 		[31055]={
@@ -36638,7 +36603,7 @@ return {
 			},
 			skill=31055,
 			stats={
-				[1]="bow_attack_speed_+%"
+				[1]="3% increased Attack Speed with Bows"
 			}
 		},
 		[31116]={
@@ -36656,7 +36621,7 @@ return {
 			},
 			skill=31116,
 			stats={
-				[1]="gain_%_damage_as_chaos_from_unreserved_darkness"
+				[1]="Gain 1% of Damage as Extra Chaos Damage per 20 Unreserved Darkness"
 			}
 		},
 		[31159]={
@@ -36673,7 +36638,7 @@ return {
 			},
 			skill=31159,
 			stats={
-				[1]="life_regeneration_rate_+%_while_stationary"
+				[1]="15% increased Life Regeneration Rate while stationary"
 			}
 		},
 		[31172]={
@@ -36690,7 +36655,7 @@ return {
 			},
 			skill=31172,
 			stats={
-				[1]="attack_speed_+%_per_15_dex"
+				[1]="1% increased Attack Speed per 15 Dexterity"
 			}
 		},
 		[31175]={
@@ -36707,7 +36672,7 @@ return {
 			},
 			skill=31175,
 			stats={
-				[1]="minion_critical_strike_multiplier_+"
+				[1]="Minions have 40% increased Critical Damage Bonus"
 			}
 		},
 		[31189]={
@@ -36724,8 +36689,8 @@ return {
 			},
 			skill=31189,
 			stats={
-				[1]="attack_damage_+%",
-				[2]="gain_accuracy_rating_equal_to_strength"
+				[1]="10% increased Attack Damage",
+				[2]="Gain Accuracy Rating equal to your Strength"
 			}
 		},
 		[31223]={
@@ -36743,7 +36708,7 @@ return {
 			},
 			skill=31223,
 			stats={
-				[1]="gain_%_life_from_body_es"
+				[1]="Gain Energy Shield from equipped Body Armour as extra maximum Life"
 			}
 		},
 		[31238]={
@@ -36762,7 +36727,7 @@ return {
 			},
 			skill=31238,
 			stats={
-				[1]="display_passive_attribute_text"
+				[1]="+5 to any Attribute"
 			}
 		},
 		[31273]={
@@ -36779,7 +36744,7 @@ return {
 			},
 			skill=31273,
 			stats={
-				[1]="melee_damage_+%"
+				[1]="10% increased Melee Damage"
 			}
 		},
 		[31286]={
@@ -36797,7 +36762,7 @@ return {
 			},
 			skill=31286,
 			stats={
-				[1]="physical_damage_+%"
+				[1]="10% increased Global Physical Damage"
 			}
 		},
 		[31295]={
@@ -36814,7 +36779,7 @@ return {
 			},
 			skill=31295,
 			stats={
-				[1]="attack_area_of_effect_+%"
+				[1]="8% increased Area of Effect for Attacks"
 			}
 		},
 		[31326]={
@@ -36832,8 +36797,8 @@ return {
 			},
 			skill=31326,
 			stats={
-				[1]="base_ignite_effect_+%",
-				[2]="ignite_duration_+%"
+				[1]="20% increased Ignite Duration on Enemies",
+				[2]="20% increased Magnitude of Ignite you inflict"
 			}
 		},
 		[31345]={
@@ -36850,7 +36815,7 @@ return {
 			},
 			skill=31345,
 			stats={
-				[1]="base_reduce_enemy_lightning_resistance_%"
+				[1]="Damage Penetrates 6% Lightning Resistance"
 			}
 		},
 		[31364]={
@@ -36867,8 +36832,8 @@ return {
 			},
 			skill=31364,
 			stats={
-				[1]="charm_charges_gained_+%",
-				[2]="charm_duration_+%"
+				[1]="25% increased Charm Effect Duration",
+				[2]="25% increased Charm Charges gained"
 			}
 		},
 		[31366]={
@@ -36886,7 +36851,7 @@ return {
 			},
 			skill=31366,
 			stats={
-				[1]="block_chance_+%"
+				[1]="5% increased Block chance"
 			}
 		},
 		[31373]={
@@ -36903,7 +36868,7 @@ return {
 			},
 			skill=31373,
 			stats={
-				[1]="warcry_empowers_next_x_melee_attacks"
+				[1]="Warcries Empower an additional Attack"
 			}
 		},
 		[31388]={
@@ -36920,7 +36885,7 @@ return {
 			},
 			skill=31388,
 			stats={
-				[1]="base_slow_potency_+%"
+				[1]="8% reduced Slowing Potency of Debuffs on You"
 			}
 		},
 		[31409]={
@@ -36937,7 +36902,7 @@ return {
 			},
 			skill=31409,
 			stats={
-				[1]="evasion_rating_+%"
+				[1]="15% increased Evasion Rating"
 			}
 		},
 		[31419]={
@@ -36954,7 +36919,7 @@ return {
 			},
 			skill=31419,
 			stats={
-				[1]="skill_effect_duration_+%"
+				[1]="10% increased Skill Effect Duration"
 			}
 		},
 		[31433]={
@@ -36972,8 +36937,8 @@ return {
 			},
 			skill=31433,
 			stats={
-				[1]="elemental_damage_with_attack_skills_+%",
-				[2]="physical_damage_from_hits_%_taken_as_random_element"
+				[1]="20% increased Elemental Damage with Attacks",
+				[2]="5% of Physical Damage from Hits taken as Damage of a Random Element"
 			}
 		},
 		[31449]={
@@ -36990,7 +36955,7 @@ return {
 			},
 			skill=31449,
 			stats={
-				[1]="quarterstaff_critical_strike_chance_+%"
+				[1]="12% increased Critical Hit Chance with Quarterstaves"
 			}
 		},
 		[31566]={
@@ -37008,7 +36973,7 @@ return {
 			},
 			skill=31566,
 			stats={
-				[1]="armour_+%_while_surrounded"
+				[1]="30% increased Armour while Surrounded"
 			}
 		},
 		[31609]={
@@ -37025,7 +36990,7 @@ return {
 			},
 			skill=31609,
 			stats={
-				[1]="shield_armour_+%"
+				[1]="25% increased Defences from Equipped Shield"
 			}
 		},
 		[31630]={
@@ -37042,7 +37007,7 @@ return {
 			},
 			skill=31630,
 			stats={
-				[1]="energy_shield_delay_-%"
+				[1]="15% faster start of Energy Shield Recharge"
 			}
 		},
 		[31644]={
@@ -37060,7 +37025,7 @@ return {
 			},
 			skill=31644,
 			stats={
-				[1]="energy_shield_delay_-%"
+				[1]="15% faster start of Energy Shield Recharge"
 			}
 		},
 		[31647]={
@@ -37076,7 +37041,6 @@ return {
 			},
 			skill=31647,
 			stats={
-				[1]="base_dexterity"
 			}
 		},
 		[31650]={
@@ -37095,7 +37059,7 @@ return {
 			},
 			skill=31650,
 			stats={
-				[1]="totem_damage_+%"
+				[1]="15% increased Totem Damage"
 			}
 		},
 		[31683]={
@@ -37130,7 +37094,7 @@ return {
 			},
 			skill=31692,
 			stats={
-				[1]="critical_strike_chance_+%"
+				[1]="10% increased Critical Hit Chance"
 			}
 		},
 		[31763]={
@@ -37147,7 +37111,7 @@ return {
 			},
 			skill=31763,
 			stats={
-				[1]="crossbow_critical_strike_chance_+%"
+				[1]="10% increased Critical Hit Chance with Crossbows"
 			}
 		},
 		[31765]={
@@ -37166,7 +37130,7 @@ return {
 			},
 			skill=31765,
 			stats={
-				[1]="display_passive_attribute_text"
+				[1]="+5 to any Attribute"
 			}
 		},
 		[31805]={
@@ -37184,7 +37148,7 @@ return {
 			},
 			skill=31805,
 			stats={
-				[1]="skill_effect_duration_+%"
+				[1]="10% increased Skill Effect Duration"
 			}
 		},
 		[31848]={
@@ -37201,7 +37165,7 @@ return {
 			},
 			skill=31848,
 			stats={
-				[1]="armour_+%_if_have_been_hit_recently"
+				[1]="20% increased Armour if you have been Hit Recently"
 			}
 		},
 		[31855]={
@@ -37218,7 +37182,7 @@ return {
 			},
 			skill=31855,
 			stats={
-				[1]="flask_life_to_recover_+%"
+				[1]="10% increased Life Recovery from Flasks"
 			}
 		},
 		[31888]={
@@ -37235,7 +37199,7 @@ return {
 			},
 			skill=31888,
 			stats={
-				[1]="base_mana_cost_-%"
+				[1]="4% reduced Mana Cost of Skills"
 			}
 		},
 		[31890]={
@@ -37252,8 +37216,8 @@ return {
 			},
 			skill=31890,
 			stats={
-				[1]="physical_damage_reduction_rating_+%",
-				[2]="maximum_energy_shield_+%"
+				[1]="12% increased Armour",
+				[2]="12% increased maximum Energy Shield"
 			}
 		},
 		[31898]={
@@ -37270,7 +37234,7 @@ return {
 			},
 			skill=31898,
 			stats={
-				[1]="herald_skills_mana_reservation_+%"
+				[1]="4% reduced Reservation of Herald Skills"
 			}
 		},
 		[31903]={
@@ -37291,7 +37255,7 @@ return {
 			},
 			skill=31903,
 			stats={
-				[1]="display_passive_attribute_text"
+				[1]="+5 to any Attribute"
 			}
 		},
 		[31918]={
@@ -37309,7 +37273,7 @@ return {
 			},
 			skill=31918,
 			stats={
-				[1]="base_chance_to_pierce_%"
+				[1]="15% chance to Pierce an Enemy"
 			}
 		},
 		[31925]={
@@ -37327,9 +37291,9 @@ return {
 			},
 			skill=31925,
 			stats={
-				[1]="energy_shield_from_focus_+%",
-				[2]="curse_effect_on_self_+%",
-				[3]="damage_+%_per_active_curse_on_self"
+				[1]="30% increased Damage per Curse on you",
+				[2]="30% reduced effect of Curses on you",
+				[3]="60% increased Energy Shield from Equipped Focus"
 			}
 		},
 		[31950]={
@@ -37348,7 +37312,7 @@ return {
 			},
 			skill=31950,
 			stats={
-				[1]="display_passive_attribute_text"
+				[1]="+5 to any Attribute"
 			}
 		},
 		[31977]={
@@ -37367,7 +37331,7 @@ return {
 			},
 			skill=31977,
 			stats={
-				[1]="mana_regeneration_rate_+%"
+				[1]="10% increased Mana Regeneration Rate"
 			}
 		},
 		[31991]={
@@ -37384,7 +37348,7 @@ return {
 			},
 			skill=31991,
 			stats={
-				[1]="attack_area_of_effect_+%"
+				[1]="8% increased Area of Effect for Attacks"
 			}
 		},
 		[32009]={
@@ -37401,7 +37365,7 @@ return {
 			},
 			skill=32009,
 			stats={
-				[1]="base_curse_duration_+%"
+				[1]="20% increased Curse Duration"
 			}
 		},
 		[32016]={
@@ -37419,7 +37383,7 @@ return {
 			},
 			skill=32016,
 			stats={
-				[1]="spell_damage_+%_while_wielding_melee_weapon"
+				[1]="12% increased Spell Damage while wielding a Melee Weapon"
 			}
 		},
 		[32054]={
@@ -37436,7 +37400,7 @@ return {
 			},
 			skill=32054,
 			stats={
-				[1]="base_spell_critical_strike_multiplier_+"
+				[1]="15% increased Critical Spell Damage Bonus"
 			}
 		},
 		[32071]={
@@ -37454,8 +37418,8 @@ return {
 			},
 			skill=32071,
 			stats={
-				[1]="attack_area_of_effect_+%",
-				[2]="skill_area_of_effect_+%_if_enemy_killed_recently"
+				[1]="20% increased Area of Effect if you've Killed Recently",
+				[2]="10% increased Area of Effect for Attacks"
 			}
 		},
 		[32123]={
@@ -37472,7 +37436,7 @@ return {
 			},
 			skill=32123,
 			stats={
-				[1]="shock_chance_+%"
+				[1]="15% increased chance to Shock"
 			}
 		},
 		[32135]={
@@ -37490,7 +37454,7 @@ return {
 			},
 			skill=32135,
 			stats={
-				[1]="flask_charges_gained_+%"
+				[1]="10% increased Flask Charges gained"
 			}
 		},
 		[32148]={
@@ -37507,7 +37471,7 @@ return {
 			},
 			skill=32148,
 			stats={
-				[1]="flail_damage_+%"
+				[1]="25% increased Damage with Flails"
 			}
 		},
 		[32155]={
@@ -37524,8 +37488,8 @@ return {
 			},
 			skill=32155,
 			stats={
-				[1]="elemental_damage_+%",
-				[2]="shock_chance_+%"
+				[1]="10% increased chance to Shock",
+				[2]="8% increased Elemental Damage"
 			}
 		},
 		[32183]={
@@ -37544,7 +37508,7 @@ return {
 			},
 			skill=32183,
 			stats={
-				[1]="display_passive_attribute_text"
+				[1]="+5 to any Attribute"
 			}
 		},
 		[32194]={
@@ -37563,7 +37527,7 @@ return {
 			},
 			skill=32194,
 			stats={
-				[1]="display_passive_attribute_text"
+				[1]="+5 to any Attribute"
 			}
 		},
 		[32258]={
@@ -37580,7 +37544,7 @@ return {
 			},
 			skill=32258,
 			stats={
-				[1]="minion_maximum_life_+%"
+				[1]="Minions have 12% increased maximum Life"
 			}
 		},
 		[32271]={
@@ -37597,7 +37561,7 @@ return {
 			},
 			skill=32271,
 			stats={
-				[1]="critical_hit_ignite_effect_+%"
+				[1]="15% increased Magnitude of Ignite you inflict with Critical Hits"
 			}
 		},
 		[32301]={
@@ -37614,8 +37578,8 @@ return {
 			},
 			skill=32301,
 			stats={
-				[1]="shock_effect_+%",
-				[2]="mana_regeneration_rate_+%"
+				[1]="15% increased Mana Regeneration Rate",
+				[2]="30% increased Magnitude of Shock you inflict"
 			}
 		},
 		[32349]={
@@ -37632,7 +37596,7 @@ return {
 			},
 			skill=32349,
 			stats={
-				[1]="keystone_giants_blood"
+				[1]="Giant's Blood"
 			}
 		},
 		[32353]={
@@ -37649,7 +37613,7 @@ return {
 			},
 			skill=32353,
 			stats={
-				[1]="attack_damage_+%"
+				[1]="25% increased Attack Damage"
 			}
 		},
 		[32354]={
@@ -37667,7 +37631,7 @@ return {
 			},
 			skill=32354,
 			stats={
-				[1]="armour_and_evasion_on_low_life_+%"
+				[1]="80% increased Armour and Evasion Rating when on Low Life"
 			}
 		},
 		[32404]={
@@ -37685,7 +37649,7 @@ return {
 			},
 			skill=32404,
 			stats={
-				[1]="spell_critical_strike_chance_+%"
+				[1]="10% increased Critical Hit Chance for Spells"
 			}
 		},
 		[32416]={
@@ -37703,7 +37667,7 @@ return {
 			},
 			skill=32416,
 			stats={
-				[1]="body_armour_+%"
+				[1]="80% increased Armour from Equipped Body Armour"
 			}
 		},
 		[32427]={
@@ -37720,7 +37684,7 @@ return {
 			},
 			skill=32427,
 			stats={
-				[1]="base_reduce_enemy_cold_resistance_%"
+				[1]="Damage Penetrates 6% Cold Resistance"
 			}
 		},
 		[32438]={
@@ -37737,7 +37701,7 @@ return {
 			},
 			skill=32438,
 			stats={
-				[1]="chaos_damage_+%"
+				[1]="11% increased Chaos Damage"
 			}
 		},
 		[32442]={
@@ -37754,8 +37718,8 @@ return {
 			},
 			skill=32442,
 			stats={
-				[1]="quarterstaff_hit_damage_stun_multiplier_+%",
-				[2]="knockback_distance_+%"
+				[1]="20% increased Knockback Distance",
+				[2]="20% increased Stun Buildup with Quarterstaves"
 			}
 		},
 		[32474]={
@@ -37773,7 +37737,7 @@ return {
 			},
 			skill=32474,
 			stats={
-				[1]="display_passive_attribute_text"
+				[1]="+5 to any Attribute"
 			}
 		},
 		[32507]={
@@ -37790,9 +37754,9 @@ return {
 			},
 			skill=32507,
 			stats={
-				[1]="physical_damage_+%",
-				[2]="armour_break_equal_to_%_physical_damage_dealt_on_critical_strike_with_spells",
-				[3]="base_chance_to_inflict_bleeding_%"
+				[1]="20% increased Global Physical Damage",
+				[2]="Break Armour on Critical Hit with Spells equal to 10% of Physical Damage dealt",
+				[3]="10% chance to inflict Bleeding on Hit"
 			}
 		},
 		[32534]={
@@ -37832,8 +37796,8 @@ return {
 			},
 			skill=32543,
 			stats={
-				[1]="base_slow_potency_+%",
-				[2]="base_movement_velocity_+%"
+				[1]="3% increased Movement Speed",
+				[2]="20% reduced Slowing Potency of Debuffs on You"
 			}
 		},
 		[32545]={
@@ -37850,7 +37814,7 @@ return {
 			},
 			skill=32545,
 			stats={
-				[1]="skill_speed_+%"
+				[1]="3% increased Skill Speed"
 			}
 		},
 		[32559]={
@@ -37868,7 +37832,7 @@ return {
 			},
 			skill=32559,
 			stats={
-				[1]="base_cooldown_speed_+%"
+				[1]="6% increased Cooldown Recovery Rate"
 			}
 		},
 		[32561]={
@@ -37885,7 +37849,7 @@ return {
 			},
 			skill=32561,
 			stats={
-				[1]="damage_+%_with_two_handed_weapons"
+				[1]="12% increased Damage with Two Handed Weapons"
 			}
 		},
 		[32597]={
@@ -37902,8 +37866,8 @@ return {
 			},
 			skill=32597,
 			stats={
-				[1]="physical_damage_reduction_rating_+%",
-				[2]="maximum_energy_shield_+%"
+				[1]="12% increased Armour",
+				[2]="12% increased maximum Energy Shield"
 			}
 		},
 		[32600]={
@@ -37921,7 +37885,7 @@ return {
 			},
 			skill=32600,
 			stats={
-				[1]="life_regeneration_rate_+%"
+				[1]="10% increased Life Regeneration rate"
 			}
 		},
 		[32660]={
@@ -37938,7 +37902,7 @@ return {
 			},
 			skill=32660,
 			stats={
-				[1]="critical_strike_chance_+%_if_enemy_killed_recently"
+				[1]="20% increased Critical Hit Chance if you have Killed Recently"
 			}
 		},
 		[32664]={
@@ -37957,9 +37921,9 @@ return {
 			},
 			skill=32664,
 			stats={
-				[1]="unarmed_attack_speed_+%",
-				[2]="skill_area_of_effect_when_unarmed_+%",
-				[3]="damage_+%_while_unarmed"
+				[1]="20% increased Area of Effect while Unarmed",
+				[2]="25% reduced Damage with Unarmed Attacks",
+				[3]="20% increased Unarmed Attack Speed"
 			}
 		},
 		[32672]={
@@ -37977,8 +37941,8 @@ return {
 			},
 			skill=32672,
 			stats={
-				[1]="freeze_threshold_+%",
-				[2]="chill_effectiveness_on_self_+%"
+				[1]="5% reduced Effect of Chill on you",
+				[2]="10% increased Freeze Threshold"
 			}
 		},
 		[32683]={
@@ -37996,8 +37960,8 @@ return {
 			},
 			skill=32683,
 			stats={
-				[1]="non_skill_base_all_damage_%_to_gain_as_cold",
-				[2]="hit_damage_freeze_multiplier_+%"
+				[1]="Gain 5% of Damage as Extra Cold Damage",
+				[2]="20% increased Freeze Buildup"
 			}
 		},
 		[32699]={
@@ -38038,7 +38002,7 @@ return {
 			},
 			skill=32701,
 			stats={
-				[1]="display_passive_attribute_text"
+				[1]="+5 to any Attribute"
 			}
 		},
 		[32727]={
@@ -38055,7 +38019,7 @@ return {
 			},
 			skill=32727,
 			stats={
-				[1]="armour_break_equal_to_%_physical_damage_dealt_on_critical_strike_with_spells"
+				[1]="Break Armour on Critical Hit with Spells equal to 5% of Physical Damage dealt"
 			}
 		},
 		[32745]={
@@ -38073,7 +38037,7 @@ return {
 			},
 			skill=32745,
 			stats={
-				[1]="physical_damage_+%"
+				[1]="10% increased Global Physical Damage"
 			}
 		},
 		[32763]={
@@ -38108,7 +38072,7 @@ return {
 			},
 			skill=32771,
 			stats={
-				[1]="maximum_darkness_+%"
+				[1]="10% increased maximum Darkness"
 			}
 		},
 		[32813]={
@@ -38126,7 +38090,7 @@ return {
 			},
 			skill=32813,
 			stats={
-				[1]="flask_life_to_recover_+%"
+				[1]="10% increased Life Recovery from Flasks"
 			}
 		},
 		[32818]={
@@ -38143,7 +38107,7 @@ return {
 			},
 			skill=32818,
 			stats={
-				[1]="charm_charges_gained_+%"
+				[1]="10% increased Charm Charges gained"
 			}
 		},
 		[32856]={
@@ -38161,7 +38125,7 @@ return {
 			},
 			skill=32856,
 			stats={
-				[1]="base_cooldown_speed_+%"
+				[1]="6% increased Cooldown Recovery Rate"
 			}
 		},
 		[32885]={
@@ -38179,7 +38143,7 @@ return {
 			},
 			skill=32885,
 			stats={
-				[1]="block_chance_+%"
+				[1]="5% increased Block chance"
 			}
 		},
 		[32896]={
@@ -38196,7 +38160,7 @@ return {
 			},
 			skill=32896,
 			stats={
-				[1]="base_chance_to_poison_on_hit_%"
+				[1]="8% chance to Poison on Hit"
 			}
 		},
 		[32951]={
@@ -38213,7 +38177,7 @@ return {
 			},
 			skill=32951,
 			stats={
-				[1]="skill_effect_duration_+%"
+				[1]="25% increased Skill Effect Duration"
 			}
 		},
 		[33037]={
@@ -38230,7 +38194,7 @@ return {
 			},
 			skill=33037,
 			stats={
-				[1]="projectile_chance_to_chain_1_extra_time_from_terrain_%"
+				[1]="Projectiles have 5% chance to Chain an additional time from terrain"
 			}
 		},
 		[33053]={
@@ -38248,7 +38212,7 @@ return {
 			},
 			skill=33053,
 			stats={
-				[1]="projectile_damage_+%"
+				[1]="10% increased Projectile Damage"
 			}
 		},
 		[33059]={
@@ -38265,7 +38229,7 @@ return {
 			},
 			skill=33059,
 			stats={
-				[1]="base_stun_recovery_+%"
+				[1]="80% increased Stun Recovery"
 			}
 		},
 		[33093]={
@@ -38282,7 +38246,7 @@ return {
 			},
 			skill=33093,
 			stats={
-				[1]="cast_speed_+%_per_num_unique_spells_cast_recently"
+				[1]="4% increased Cast Speed for each different Non-Instant Spell you've Cast Recently"
 			}
 		},
 		[33099]={
@@ -38300,7 +38264,7 @@ return {
 			},
 			skill=33099,
 			stats={
-				[1]="charms_%_chance_on_use_to_use_another_charm_without_consuming_charges"
+				[1]="25% chance when a Charm is used to use another Charm without consuming Charges"
 			}
 		},
 		[33112]={
@@ -38317,7 +38281,7 @@ return {
 			},
 			skill=33112,
 			stats={
-				[1]="energy_shield_from_focus_+%"
+				[1]="40% increased Energy Shield from Equipped Focus"
 			}
 		},
 		[33137]={
@@ -38335,7 +38299,7 @@ return {
 			},
 			skill=33137,
 			stats={
-				[1]="base_bleeding_effect_+%"
+				[1]="10% increased Magnitude of Bleeding you inflict"
 			}
 		},
 		[33169]={
@@ -38354,7 +38318,7 @@ return {
 			},
 			skill=33169,
 			stats={
-				[1]="display_passive_attribute_text"
+				[1]="+5 to any Attribute"
 			}
 		},
 		[33180]={
@@ -38371,7 +38335,7 @@ return {
 			},
 			skill=33180,
 			stats={
-				[1]="spell_area_of_effect_+%"
+				[1]="Spell Skills have 8% increased Area of Effect"
 			}
 		},
 		[33209]={
@@ -38388,7 +38352,7 @@ return {
 			},
 			skill=33209,
 			stats={
-				[1]="totem_skill_cast_speed_+%"
+				[1]="Spells Cast by Totems have 4% increased Cast Speed"
 			}
 		},
 		[33216]={
@@ -38406,7 +38370,7 @@ return {
 			},
 			skill=33216,
 			stats={
-				[1]="aggravate_bleeding_older_than_ms_on_hit"
+				[1]="Attack Hits Aggravate any Bleeding on targets which is older than 4 seconds"
 			}
 		},
 		[33225]={
@@ -38422,7 +38386,7 @@ return {
 			},
 			skill=33225,
 			stats={
-				[1]="minion_fire_damage_resistance_%"
+				[1]="Minions have +20% to Fire Resistance"
 			}
 		},
 		[33240]={
@@ -38439,7 +38403,7 @@ return {
 			},
 			skill=33240,
 			stats={
-				[1]="minion_reservation_+%"
+				[1]="Minions have 12% reduced Reservation"
 			}
 		},
 		[33242]={
@@ -38456,7 +38420,7 @@ return {
 			},
 			skill=33242,
 			stats={
-				[1]="ailment_chance_+%"
+				[1]="10% increased chance to inflict Ailments"
 			}
 		},
 		[33245]={
@@ -38475,7 +38439,7 @@ return {
 			},
 			skill=33245,
 			stats={
-				[1]="projectile_damage_+%"
+				[1]="10% increased Projectile Damage"
 			}
 		},
 		[33254]={
@@ -38492,7 +38456,7 @@ return {
 			},
 			skill=33254,
 			stats={
-				[1]="spell_damage_+%"
+				[1]="10% increased Spell Damage"
 			}
 		},
 		[33345]={
@@ -38509,7 +38473,7 @@ return {
 			},
 			skill=33345,
 			stats={
-				[1]="mana_regeneration_rate_+%"
+				[1]="10% increased Mana Regeneration Rate"
 			}
 		},
 		[33366]={
@@ -38526,8 +38490,8 @@ return {
 			},
 			skill=33366,
 			stats={
-				[1]="evasion_rating_+%",
-				[2]="maximum_energy_shield_+%"
+				[1]="12% increased Evasion Rating",
+				[2]="12% increased maximum Energy Shield"
 			}
 		},
 		[33369]={
@@ -38544,7 +38508,7 @@ return {
 			},
 			skill=33369,
 			stats={
-				[1]="keystone_vaal_pact"
+				[1]="Vaal Pact"
 			}
 		},
 		[33391]={
@@ -38562,7 +38526,7 @@ return {
 			},
 			skill=33391,
 			stats={
-				[1]="critical_hit_bleeding_effect_+%"
+				[1]="15% increased Magnitude of Bleeding you inflict with Critical Hits"
 			}
 		},
 		[33393]={
@@ -38579,7 +38543,7 @@ return {
 			},
 			skill=33393,
 			stats={
-				[1]="flail_damage_+%"
+				[1]="10% increased Damage with Flails"
 			}
 		},
 		[33397]={
@@ -38597,7 +38561,7 @@ return {
 			},
 			skill=33397,
 			stats={
-				[1]="fire_damage_+%"
+				[1]="12% increased Fire Damage"
 			}
 		},
 		[33402]={
@@ -38614,7 +38578,7 @@ return {
 			},
 			skill=33402,
 			stats={
-				[1]="shield_armour_+%"
+				[1]="25% increased Defences from Equipped Shield"
 			}
 		},
 		[33404]={
@@ -38631,7 +38595,7 @@ return {
 			},
 			skill=33404,
 			stats={
-				[1]="keystone_eternal_youth"
+				[1]="Eternal Youth"
 			}
 		},
 		[33415]={
@@ -38648,7 +38612,7 @@ return {
 			},
 			skill=33415,
 			stats={
-				[1]="crossbow_critical_strike_chance_+%"
+				[1]="10% increased Critical Hit Chance with Crossbows"
 			}
 		},
 		[33445]={
@@ -38665,7 +38629,7 @@ return {
 			},
 			skill=33445,
 			stats={
-				[1]="block_chance_+%"
+				[1]="5% increased Block chance"
 			}
 		},
 		[33452]={
@@ -38683,7 +38647,7 @@ return {
 			},
 			skill=33452,
 			stats={
-				[1]="block_chance_+%"
+				[1]="5% increased Block chance"
 			}
 		},
 		[33502]={
@@ -38700,7 +38664,7 @@ return {
 			},
 			skill=33502,
 			stats={
-				[1]="attack_damage_+%"
+				[1]="10% increased Attack Damage"
 			}
 		},
 		[33556]={
@@ -38717,7 +38681,7 @@ return {
 			},
 			skill=33556,
 			stats={
-				[1]="melee_damage_+%"
+				[1]="8% increased Melee Damage"
 			}
 		},
 		[33601]={
@@ -38734,7 +38698,7 @@ return {
 			},
 			skill=33601,
 			stats={
-				[1]="chill_and_freeze_duration_+%"
+				[1]="10% increased Chill and Freeze Duration on Enemies"
 			}
 		},
 		[33612]={
@@ -38751,7 +38715,7 @@ return {
 			},
 			skill=33612,
 			stats={
-				[1]="minion_damage_+%"
+				[1]="Minions deal 12% increased Damage"
 			}
 		},
 		[33631]={
@@ -38786,7 +38750,7 @@ return {
 			},
 			skill=33713,
 			stats={
-				[1]="base_projectile_speed_+%"
+				[1]="8% increased Projectile Speed"
 			}
 		},
 		[33722]={
@@ -38805,7 +38769,7 @@ return {
 			},
 			skill=33722,
 			stats={
-				[1]="display_passive_attribute_text"
+				[1]="+5 to any Attribute"
 			}
 		},
 		[33729]={
@@ -38822,8 +38786,8 @@ return {
 			},
 			skill=33729,
 			stats={
-				[1]="elemental_damage_+%",
-				[2]="ignite_chance_+%"
+				[1]="10% increased chance to Ignite",
+				[2]="8% increased Elemental Damage"
 			}
 		},
 		[33736]={
@@ -38841,7 +38805,7 @@ return {
 			},
 			skill=33736,
 			stats={
-				[1]="skill_speed_+%"
+				[1]="4% increased Skill Speed"
 			}
 		},
 		[33751]={
@@ -38858,7 +38822,7 @@ return {
 			},
 			skill=33751,
 			stats={
-				[1]="base_cooldown_speed_+%"
+				[1]="5% increased Cooldown Recovery Rate"
 			}
 		},
 		[33797]={
@@ -38875,7 +38839,7 @@ return {
 			},
 			skill=33797,
 			stats={
-				[1]="attack_damage_+%"
+				[1]="10% increased Attack Damage"
 			}
 		},
 		[33812]={
@@ -38914,7 +38878,7 @@ return {
 			},
 			skill=33815,
 			stats={
-				[1]="base_poison_duration_+%"
+				[1]="10% increased Poison Duration"
 			}
 		},
 		[33848]={
@@ -38931,7 +38895,7 @@ return {
 			},
 			skill=33848,
 			stats={
-				[1]="base_projectile_speed_+%"
+				[1]="8% increased Projectile Speed"
 			}
 		},
 		[33866]={
@@ -38948,7 +38912,7 @@ return {
 			},
 			skill=33866,
 			stats={
-				[1]="attack_damage_+%"
+				[1]="10% increased Attack Damage"
 			}
 		},
 		[33887]={
@@ -38965,7 +38929,7 @@ return {
 			},
 			skill=33887,
 			stats={
-				[1]="crossbow_damage_+%_per_ammo_type_fired_in_past_10_seconds"
+				[1]="25% increased Damage with Crossbows for each type of Ammunition fired in the past 10 seconds"
 			}
 		},
 		[33914]={
@@ -38982,8 +38946,8 @@ return {
 			},
 			skill=33914,
 			stats={
-				[1]="maximum_energy_shield_+%",
-				[2]="mana_regeneration_rate_+%"
+				[1]="10% increased maximum Energy Shield",
+				[2]="6% increased Mana Regeneration Rate"
 			}
 		},
 		[33939]={
@@ -39000,7 +38964,7 @@ return {
 			},
 			skill=33939,
 			stats={
-				[1]="base_maximum_cold_damage_resistance_%"
+				[1]="+1% to Maximum Cold Resistance"
 			}
 		},
 		[33946]={
@@ -39018,7 +38982,7 @@ return {
 			},
 			skill=33946,
 			stats={
-				[1]="attack_critical_strike_chance_+%"
+				[1]="10% increased Critical Hit Chance for Attacks"
 			}
 		},
 		[33964]={
@@ -39035,7 +38999,7 @@ return {
 			},
 			skill=33964,
 			stats={
-				[1]="trap_critical_strike_chance_+%"
+				[1]="10% increased Critical Hit Chance with Traps"
 			}
 		},
 		[33974]={
@@ -39052,8 +39016,8 @@ return {
 			},
 			skill=33974,
 			stats={
-				[1]="attack_damage_+%",
-				[2]="accuracy_rating_+%"
+				[1]="6% increased Attack Damage",
+				[2]="5% increased Accuracy Rating"
 			}
 		},
 		[33978]={
@@ -39071,8 +39035,8 @@ return {
 			},
 			skill=33978,
 			stats={
-				[1]="block_chance_+%",
-				[2]="base_slow_potency_+%"
+				[1]="10% increased Block chance",
+				[2]="15% reduced Slowing Potency of Debuffs on You"
 			}
 		},
 		[33979]={
@@ -39089,7 +39053,7 @@ return {
 			},
 			skill=33979,
 			stats={
-				[1]="keystone_conduit"
+				[1]="Conduit"
 			}
 		},
 		[33989]={
@@ -39122,7 +39086,7 @@ return {
 			},
 			skill=34006,
 			stats={
-				[1]="maximum_energy_shield_+%"
+				[1]="15% increased maximum Energy Shield"
 			}
 		},
 		[34015]={
@@ -39141,7 +39105,7 @@ return {
 			},
 			skill=34015,
 			stats={
-				[1]="display_passive_attribute_text"
+				[1]="+5 to any Attribute"
 			}
 		},
 		[34030]={
@@ -39160,7 +39124,7 @@ return {
 			},
 			skill=34030,
 			stats={
-				[1]="offering_life_+%"
+				[1]="Offerings have 15% increased Maximum Life"
 			}
 		},
 		[34058]={
@@ -39179,7 +39143,7 @@ return {
 			},
 			skill=34058,
 			stats={
-				[1]="display_passive_attribute_text"
+				[1]="+5 to any Attribute"
 			}
 		},
 		[34061]={
@@ -39197,7 +39161,7 @@ return {
 			},
 			skill=34061,
 			stats={
-				[1]="evasion_and_physical_damage_reduction_rating_+%"
+				[1]="12% increased Armour and Evasion Rating"
 			}
 		},
 		[34074]={
@@ -39214,7 +39178,7 @@ return {
 			},
 			skill=34074,
 			stats={
-				[1]="attack_critical_strike_chance_+%"
+				[1]="10% increased Critical Hit Chance for Attacks"
 			}
 		},
 		[34076]={
@@ -39231,7 +39195,7 @@ return {
 			},
 			skill=34076,
 			stats={
-				[1]="block_recovery_+%"
+				[1]="25% increased Block Recovery"
 			}
 		},
 		[34090]={
@@ -39248,7 +39212,7 @@ return {
 			},
 			skill=34090,
 			stats={
-				[1]="physical_damage_reduction_rating_+%"
+				[1]="15% increased Armour"
 			}
 		},
 		[34096]={
@@ -39265,7 +39229,7 @@ return {
 			},
 			skill=34096,
 			stats={
-				[1]="spell_damage_+%"
+				[1]="10% increased Spell Damage"
 			}
 		},
 		[34136]={
@@ -39283,7 +39247,7 @@ return {
 			},
 			skill=34136,
 			stats={
-				[1]="display_passive_attribute_text"
+				[1]="+5 to any Attribute"
 			}
 		},
 		[34168]={
@@ -39301,7 +39265,7 @@ return {
 			},
 			skill=34168,
 			stats={
-				[1]="damage_+%_if_have_crit_in_past_8_seconds"
+				[1]="36% increased Damage if you've dealt a Critical Hit in the past 8 seconds"
 			}
 		},
 		[34199]={
@@ -39317,7 +39281,7 @@ return {
 			},
 			skill=34199,
 			stats={
-				[1]="minion_critical_strike_multiplier_+"
+				[1]="Minions have 15% increased Critical Damage Bonus"
 			}
 		},
 		[34201]={
@@ -39337,7 +39301,7 @@ return {
 			},
 			skill=34201,
 			stats={
-				[1]="display_passive_attribute_text"
+				[1]="+5 to any Attribute"
 			}
 		},
 		[34210]={
@@ -39354,7 +39318,7 @@ return {
 			},
 			skill=34210,
 			stats={
-				[1]="damage_+%_with_two_handed_weapons"
+				[1]="12% increased Damage with Two Handed Weapons"
 			}
 		},
 		[34233]={
@@ -39372,8 +39336,8 @@ return {
 			},
 			skill=34233,
 			stats={
-				[1]="skill_speed_+%",
-				[2]="mana_regeneration_rate_+%"
+				[1]="5% increased Skill Speed",
+				[2]="15% increased Mana Regeneration Rate"
 			}
 		},
 		[34248]={
@@ -39390,7 +39354,7 @@ return {
 			},
 			skill=34248,
 			stats={
-				[1]="mana_regeneration_rate_+%"
+				[1]="10% increased Mana Regeneration Rate"
 			}
 		},
 		[34290]={
@@ -39407,7 +39371,7 @@ return {
 			},
 			skill=34290,
 			stats={
-				[1]="base_ignite_effect_+%"
+				[1]="10% increased Magnitude of Ignite you inflict"
 			}
 		},
 		[34300]={
@@ -39425,8 +39389,8 @@ return {
 			},
 			skill=34300,
 			stats={
-				[1]="mana_regeneration_rate_+%",
-				[2]="base_mana_cost_-%"
+				[1]="20% increased Mana Regeneration Rate",
+				[2]="8% reduced Mana Cost of Skills"
 			}
 		},
 		[34308]={
@@ -39444,8 +39408,8 @@ return {
 			},
 			skill=34308,
 			stats={
-				[1]="melee_damage_+%",
-				[2]="melee_damage_+%_vs_immobilised_enemies"
+				[1]="20% increased Melee Damage",
+				[2]="25% increased Melee Damage against Immobilised Enemies"
 			}
 		},
 		[34316]={
@@ -39463,10 +39427,10 @@ return {
 			},
 			skill=34316,
 			stats={
-				[1]="defences_+%_while_wielding_staff",
-				[2]="quarterstaff_hit_damage_stun_multiplier_+%",
-				[3]="quarterstaff_hit_damage_freeze_multiplier_+%",
-				[4]="quarterstaff_daze_build_up_+%"
+				[1]="30% increased Defences while wielding a Staff",
+				[2]="30% increased Daze Buildup with Quarterstaves",
+				[3]="30% increased Freeze Buildup with Quarterstaves",
+				[4]="30% increased Stun Buildup with Quarterstaves"
 			}
 		},
 		[34324]={
@@ -39483,7 +39447,7 @@ return {
 			},
 			skill=34324,
 			stats={
-				[1]="maximum_energy_shield_+1_per_x_body_armour_evasion_rating"
+				[1]="+1 to Maximum Energy Shield per 12 Evasion Rating on Equipped Body Armour"
 			}
 		},
 		[34340]={
@@ -39500,8 +39464,8 @@ return {
 			},
 			skill=34340,
 			stats={
-				[1]="life_regeneration_rate_per_minute_%",
-				[2]="allies_in_presence_life_regeneration_rate_per_minute_equal_to_your_maximum_life_%"
+				[1]="Regenerate 0.5% of Life per second",
+				[2]="Allies in your Presence Regenerate 1% of your Maximum Life per second"
 			}
 		},
 		[34367]={
@@ -39519,7 +39483,7 @@ return {
 			},
 			skill=34367,
 			stats={
-				[1]="damage_taken_goes_to_life_over_4_seconds_%"
+				[1]="3% of Damage taken Recouped as Life"
 			}
 		},
 		[34375]={
@@ -39536,7 +39500,7 @@ return {
 			},
 			skill=34375,
 			stats={
-				[1]="shield_armour_+%"
+				[1]="25% increased Defences from Equipped Shield"
 			}
 		},
 		[34419]={
@@ -39554,8 +39518,8 @@ return {
 			},
 			skill=34419,
 			stats={
-				[1]="infernalist_critical_strike_multiplier_+%_final",
-				[2]="infernalist_burn_life_and_es_%_per_second_if_crit_recently"
+				[1]="Become Ignited when you deal a Critical Hit, taking 15% of your Life and Energy Shield as Fire Damage per second",
+				[2]="30% more Critical Damage Bonus"
 			}
 		},
 		[34433]={
@@ -39572,7 +39536,7 @@ return {
 			},
 			skill=34433,
 			stats={
-				[1]="evasion_and_physical_damage_reduction_rating_+%"
+				[1]="12% increased Armour and Evasion Rating"
 			}
 		},
 		[34449]={
@@ -39589,7 +39553,7 @@ return {
 			},
 			skill=34449,
 			stats={
-				[1]="trap_critical_strike_chance_+%"
+				[1]="10% increased Critical Hit Chance with Traps"
 			}
 		},
 		[34473]={
@@ -39606,11 +39570,11 @@ return {
 			},
 			skill=34473,
 			stats={
-				[1]="all_attributes_+%",
-				[2]="chaos_damage_+%",
-				[3]="base_chaos_damage_resistance_%",
-				[4]="light_radius_+%",
-				[5]="base_movement_velocity_+%"
+				[1]="3% increased Movement Speed",
+				[2]="29% increased Chaos Damage",
+				[3]="-13% to Chaos Resistance",
+				[4]="23% reduced Light Radius",
+				[5]="7% increased Attributes"
 			}
 		},
 		[34483]={
@@ -39647,7 +39611,7 @@ return {
 			},
 			skill=34493,
 			stats={
-				[1]="minion_damage_+%"
+				[1]="Minions deal 10% increased Damage"
 			}
 		},
 		[34497]={
@@ -39664,7 +39628,7 @@ return {
 			},
 			skill=34497,
 			stats={
-				[1]="keystone_heartstopper"
+				[1]="Heartstopper"
 			}
 		},
 		[34501]={
@@ -39682,7 +39646,7 @@ return {
 			},
 			skill=34501,
 			stats={
-				[1]="evasion_and_physical_damage_reduction_rating_+%"
+				[1]="15% increased Armour and Evasion Rating"
 			}
 		},
 		[34520]={
@@ -39702,7 +39666,7 @@ return {
 			},
 			skill=34520,
 			stats={
-				[1]="physical_damage_+%"
+				[1]="10% increased Global Physical Damage"
 			}
 		},
 		[34531]={
@@ -39720,8 +39684,8 @@ return {
 			},
 			skill=34531,
 			stats={
-				[1]="stun_threshold_+_from_%_maximum_energy_shield",
-				[2]="base_stun_recovery_+%"
+				[1]="20% increased Stun Recovery",
+				[2]="Gain 20% of maximum Energy Shield as additional Stun Threshold"
 			}
 		},
 		[34612]={
@@ -39738,7 +39702,7 @@ return {
 			},
 			skill=34612,
 			stats={
-				[1]="bow_damage_+%"
+				[1]="12% increased Damage with Bows"
 			}
 		},
 		[34621]={
@@ -39756,7 +39720,7 @@ return {
 			},
 			skill=34621,
 			stats={
-				[1]="base_critical_strike_multiplier_+"
+				[1]="15% increased Critical Damage Bonus"
 			}
 		},
 		[34626]={
@@ -39774,7 +39738,7 @@ return {
 			},
 			skill=34626,
 			stats={
-				[1]="recover_%_life_per_endurance_charge_consumed"
+				[1]="Recover 2% of Life for each Endurance Charge consumed"
 			}
 		},
 		[34671]={
@@ -39791,8 +39755,7 @@ return {
 			},
 			skill=34671,
 			stats={
-				[1]="stun_threshold_+%",
-				[2]="base_strength"
+				[1]="10% increased Stun Threshold"
 			}
 		},
 		[34717]={
@@ -39809,7 +39772,7 @@ return {
 			},
 			skill=34717,
 			stats={
-				[1]="mana_regeneration_rate_+%_while_not_on_low_mana"
+				[1]="16% increased Mana Regeneration Rate while not on Low Mana"
 			}
 		},
 		[34747]={
@@ -39827,7 +39790,7 @@ return {
 			},
 			skill=34747,
 			stats={
-				[1]="accuracy_rating_+%"
+				[1]="8% increased Accuracy Rating"
 			}
 		},
 		[34817]={
@@ -39845,7 +39808,7 @@ return {
 			},
 			skill=34817,
 			stats={
-				[1]="darkness_refresh_rate_+%"
+				[1]="50% reduced Darkness Reservation Duration"
 			}
 		},
 		[34840]={
@@ -39864,7 +39827,7 @@ return {
 			},
 			skill=34840,
 			stats={
-				[1]="display_passive_attribute_text"
+				[1]="+5 to any Attribute"
 			}
 		},
 		[34882]={
@@ -39882,7 +39845,7 @@ return {
 			},
 			skill=34882,
 			stats={
-				[1]="all_skill_gem_quality_+"
+				[1]="+2% to Quality of all Skills"
 			}
 		},
 		[34898]={
@@ -39899,7 +39862,7 @@ return {
 			},
 			skill=34898,
 			stats={
-				[1]="debuff_time_passed_+%"
+				[1]="Debuffs on you expire 10% faster"
 			}
 		},
 		[34912]={
@@ -39917,7 +39880,7 @@ return {
 			},
 			skill=34912,
 			stats={
-				[1]="trap_damage_+%"
+				[1]="10% increased Trap Damage"
 			}
 		},
 		[35015]={
@@ -39934,7 +39897,7 @@ return {
 			},
 			skill=35015,
 			stats={
-				[1]="base_bleeding_effect_+%"
+				[1]="10% increased Magnitude of Bleeding you inflict"
 			}
 		},
 		[35028]={
@@ -39951,7 +39914,7 @@ return {
 			},
 			skill=35028,
 			stats={
-				[1]="life_regeneration_rate_per_minute_%_while_surrounded"
+				[1]="Regenerate 2.5% of Life per second while Surrounded"
 			}
 		},
 		[35043]={
@@ -39968,7 +39931,7 @@ return {
 			},
 			skill=35043,
 			stats={
-				[1]="shield_evasion_rating_+%"
+				[1]="30% increased Evasion from Equipped Shield"
 			}
 		},
 		[35048]={
@@ -39985,7 +39948,7 @@ return {
 			},
 			skill=35048,
 			stats={
-				[1]="attack_critical_strike_chance_+%"
+				[1]="10% increased Critical Hit Chance for Attacks"
 			}
 		},
 		[35171]={
@@ -40002,7 +39965,7 @@ return {
 			},
 			skill=35171,
 			stats={
-				[1]="spell_area_of_effect_+%"
+				[1]="Spell Skills have 8% increased Area of Effect"
 			}
 		},
 		[35173]={
@@ -40020,8 +39983,8 @@ return {
 			},
 			skill=35173,
 			stats={
-				[1]="physical_damage_+%",
-				[2]="critical_strike_chance_+%"
+				[1]="5% increased Critical Hit Chance",
+				[2]="8% increased Global Physical Damage"
 			}
 		},
 		[35223]={
@@ -40039,7 +40002,7 @@ return {
 			},
 			skill=35223,
 			stats={
-				[1]="spear_critical_strike_chance_+%"
+				[1]="10% increased Critical Hit Chance with Spears"
 			}
 		},
 		[35234]={
@@ -40057,7 +40020,7 @@ return {
 			},
 			skill=35234,
 			stats={
-				[1]="projectile_damage_+%"
+				[1]="10% increased Projectile Damage"
 			}
 		},
 		[35265]={
@@ -40077,7 +40040,7 @@ return {
 			},
 			skill=35265,
 			stats={
-				[1]="display_passive_attribute_text"
+				[1]="+5 to any Attribute"
 			}
 		},
 		[35284]={
@@ -40094,7 +40057,7 @@ return {
 			},
 			skill=35284,
 			stats={
-				[1]="herald_skills_mana_reservation_+%"
+				[1]="4% reduced Reservation of Herald Skills"
 			}
 		},
 		[35324]={
@@ -40112,7 +40075,7 @@ return {
 			},
 			skill=35324,
 			stats={
-				[1]="faster_burn_%"
+				[1]="Ignites you inflict deal Damage 15% faster"
 			}
 		},
 		[35369]={
@@ -40129,8 +40092,8 @@ return {
 			},
 			skill=35369,
 			stats={
-				[1]="mana_regeneration_rate_+%_while_stationary",
-				[2]="mana_regeneration_rate_+%_while_moving"
+				[1]="40% increased Mana Regeneration Rate while stationary",
+				[2]="20% reduced Mana Regeneration Rate while moving"
 			}
 		},
 		[35380]={
@@ -40147,7 +40110,7 @@ return {
 			},
 			skill=35380,
 			stats={
-				[1]="withered_effect_+%"
+				[1]="10% increased Effect of Withered"
 			}
 		},
 		[35408]={
@@ -40165,7 +40128,7 @@ return {
 			},
 			skill=35408,
 			stats={
-				[1]="energy_shield_from_focus_+%"
+				[1]="40% increased Energy Shield from Equipped Focus"
 			}
 		},
 		[35426]={
@@ -40183,7 +40146,7 @@ return {
 			},
 			skill=35426,
 			stats={
-				[1]="display_passive_attribute_text"
+				[1]="+5 to any Attribute"
 			}
 		},
 		[35453]={
@@ -40201,7 +40164,7 @@ return {
 			},
 			skill=35453,
 			stats={
-				[1]="slam_skill_area_of_effect_+%"
+				[1]="Slam Skills have 12% increased Area of Effect"
 			}
 		},
 		[35477]={
@@ -40218,7 +40181,7 @@ return {
 			},
 			skill=35477,
 			stats={
-				[1]="distance_scaled_accuracy_rating_penalty_+%"
+				[1]="30% reduced penalty to Accuracy Rating at range"
 			}
 		},
 		[35503]={
@@ -40235,8 +40198,8 @@ return {
 			},
 			skill=35503,
 			stats={
-				[1]="mana_regeneration_rate_+%",
-				[2]="shock_effect_+%"
+				[1]="6% increased Mana Regeneration Rate",
+				[2]="10% increased Magnitude of Shock you inflict"
 			}
 		},
 		[35534]={
@@ -40254,7 +40217,7 @@ return {
 			},
 			skill=35534,
 			stats={
-				[1]="mark_skill_cast_speed_+%"
+				[1]="Mark Skills have 10% increased Cast Speed"
 			}
 		},
 		[35564]={
@@ -40272,7 +40235,7 @@ return {
 			},
 			skill=35564,
 			stats={
-				[1]="spell_skill_projectile_speed_+%"
+				[1]="20% reduced Projectile Speed for Spell Skills"
 			}
 		},
 		[35581]={
@@ -40289,8 +40252,8 @@ return {
 			},
 			skill=35581,
 			stats={
-				[1]="skill_effect_duration_+%",
-				[2]="base_slow_potency_+%"
+				[1]="16% reduced Skill Effect Duration",
+				[2]="10% reduced Slowing Potency of Debuffs on You"
 			}
 		},
 		[35602]={
@@ -40306,7 +40269,7 @@ return {
 			},
 			skill=35602,
 			stats={
-				[1]="offering_life_+%"
+				[1]="Offerings have 30% reduced Maximum Life"
 			}
 		},
 		[35644]={
@@ -40324,24 +40287,24 @@ return {
 			},
 			skill=35644,
 			stats={
-				[1]="base_poison_effect_+%"
+				[1]="10% increased Magnitude of Poison you inflict"
 			}
 		},
 		[35653]={
 			group=557,
 			icon="Art/2DArt/SkillIcons/passives/MineAreaOfEffectNode.dds",
 			["in"]={
-				[2]="3717"
+				[1]="3717"
 			},
 			name="Grenade Damage",
 			orbit=0,
 			orbitIndex=0,
 			out={
-				[2]="65468"
+				[1]="65468"
 			},
 			skill=35653,
 			stats={
-				[1]="grenade_skill_damage_+%"
+				[1]="12% increased Grenade Damage"
 			}
 		},
 		[35660]={
@@ -40358,7 +40321,7 @@ return {
 			},
 			skill=35660,
 			stats={
-				[1]="attack_speed_+%"
+				[1]="3% increased Attack Speed"
 			}
 		},
 		[35671]={
@@ -40375,8 +40338,7 @@ return {
 			},
 			skill=35671,
 			stats={
-				[1]="attack_speed_+%",
-				[2]="base_dexterity"
+				[1]="2% increased Attack Speed"
 			}
 		},
 		[35688]={
@@ -40393,7 +40355,7 @@ return {
 			},
 			skill=35688,
 			stats={
-				[1]="global_item_attribute_requirements_+%"
+				[1]="Equipment and Skill Gems have 4% reduced Attribute Requirements"
 			}
 		},
 		[35696]={
@@ -40413,7 +40375,7 @@ return {
 			},
 			skill=35696,
 			stats={
-				[1]="display_passive_attribute_text"
+				[1]="+5 to any Attribute"
 			}
 		},
 		[35708]={
@@ -40430,7 +40392,7 @@ return {
 			},
 			skill=35708,
 			stats={
-				[1]="chill_effect_+%"
+				[1]="15% increased Magnitude of Chill you inflict"
 			}
 		},
 		[35739]={
@@ -40448,8 +40410,8 @@ return {
 			},
 			skill=35739,
 			stats={
-				[1]="attack_area_damage_+%",
-				[2]="armour_break_duration_+%"
+				[1]="25% increased Armour Break Duration",
+				[2]="25% increased Attack Area Damage"
 			}
 		},
 		[35755]={
@@ -40466,7 +40428,7 @@ return {
 			},
 			skill=35755,
 			stats={
-				[1]="critical_strike_multiplier_with_dagger_+"
+				[1]="10% increased Critical Damage Bonus with Daggers"
 			}
 		},
 		[35760]={
@@ -40483,7 +40445,7 @@ return {
 			},
 			skill=35760,
 			stats={
-				[1]="elemental_damage_+%"
+				[1]="10% increased Elemental Damage"
 			}
 		},
 		[35787]={
@@ -40500,7 +40462,7 @@ return {
 			},
 			skill=35787,
 			stats={
-				[1]="skill_effect_duration_+%"
+				[1]="10% increased Skill Effect Duration"
 			}
 		},
 		[35801]={
@@ -40518,7 +40480,7 @@ return {
 			},
 			skill=35801,
 			stats={
-				[1]="base_frenzy_charge_duration_+%"
+				[1]="25% increased Frenzy Charge Duration"
 			}
 		},
 		[35809]={
@@ -40535,7 +40497,7 @@ return {
 			},
 			skill=35809,
 			stats={
-				[1]="life_regeneration_rate_per_minute_%_if_used_life_flask_in_past_10_seconds"
+				[1]="Regenerate 1% of Life per Second if you've used a Life Flask in the past 10 seconds"
 			}
 		},
 		[35831]={
@@ -40553,7 +40515,7 @@ return {
 			},
 			skill=35831,
 			stats={
-				[1]="mana_regeneration_rate_+%"
+				[1]="10% increased Mana Regeneration Rate"
 			}
 		},
 		[35848]={
@@ -40570,7 +40532,7 @@ return {
 			},
 			skill=35848,
 			stats={
-				[1]="flask_life_and_mana_to_recover_+%"
+				[1]="15% increased Life and Mana Recovery from Flasks"
 			}
 		},
 		[35849]={
@@ -40587,8 +40549,8 @@ return {
 			},
 			skill=35849,
 			stats={
-				[1]="life_regeneration_rate_per_minute_%_while_stationary",
-				[2]="base_movement_velocity_+%"
+				[1]="5% reduced Movement Speed",
+				[2]="Regenerate 1% of Life per second while stationary"
 			}
 		},
 		[35855]={
@@ -40606,8 +40568,8 @@ return {
 			},
 			skill=35855,
 			stats={
-				[1]="armour_evasion_+%_while_leeching",
-				[2]="base_life_leech_amount_+%"
+				[1]="20% increased amount of Life Leeched",
+				[2]="40% increased Armour and Evasion Rating while Leeching"
 			}
 		},
 		[35876]={
@@ -40625,8 +40587,8 @@ return {
 			},
 			skill=35876,
 			stats={
-				[1]="warcry_cooldown_speed_+%",
-				[2]="warcry_speed_+%"
+				[1]="25% increased Warcry Speed",
+				[2]="25% increased Warcry Cooldown Recovery Rate"
 			}
 		},
 		[35896]={
@@ -40645,7 +40607,7 @@ return {
 			},
 			skill=35896,
 			stats={
-				[1]="display_passive_attribute_text"
+				[1]="+5 to any Attribute"
 			}
 		},
 		[35901]={
@@ -40668,7 +40630,7 @@ return {
 			},
 			skill=35901,
 			stats={
-				[1]="display_passive_attribute_text"
+				[1]="+5 to any Attribute"
 			}
 		},
 		[35911]={
@@ -40685,7 +40647,7 @@ return {
 			},
 			skill=35911,
 			stats={
-				[1]="support_anticipation_charge_gain_frequency_+%"
+				[1]="Skills Supported by Unleash have 10% increased Seal gain frequency"
 			}
 		},
 		[35966]={
@@ -40703,8 +40665,8 @@ return {
 			},
 			skill=35966,
 			stats={
-				[1]="damage_taken_goes_to_life_over_4_seconds_%",
-				[2]="life_regeneration_rate_per_minute_%_if_have_been_hit_recently"
+				[1]="6% of Damage taken Recouped as Life",
+				[2]="Regenerate 0.4% of Life per second if you have been Hit Recently"
 			}
 		},
 		[35974]={
@@ -40721,7 +40683,7 @@ return {
 			},
 			skill=35974,
 			stats={
-				[1]="totem_life_+%"
+				[1]="16% increased Totem Life"
 			}
 		},
 		[35985]={
@@ -40738,7 +40700,7 @@ return {
 			},
 			skill=35985,
 			stats={
-				[1]="melee_damage_+%"
+				[1]="10% increased Melee Damage"
 			}
 		},
 		[35987]={
@@ -40761,9 +40723,8 @@ return {
 			},
 			skill=35987,
 			stats={
-				[1]="evasion_rating_+%",
-				[2]="base_movement_velocity_+%",
-				[3]="base_dexterity"
+				[1]="4% increased Movement Speed",
+				[2]="20% increased Evasion Rating"
 			}
 		},
 		[36027]={
@@ -40780,8 +40741,8 @@ return {
 			},
 			skill=36027,
 			stats={
-				[1]="attack_damage_+%",
-				[2]="attack_speed_+%"
+				[1]="1% reduced Attack Speed",
+				[2]="15% increased Attack Damage"
 			}
 		},
 		[36044]={
@@ -40816,7 +40777,7 @@ return {
 			},
 			skill=36070,
 			stats={
-				[1]="attack_area_of_effect_+%"
+				[1]="8% increased Area of Effect for Attacks"
 			}
 		},
 		[36085]={
@@ -40834,8 +40795,8 @@ return {
 			},
 			skill=36085,
 			stats={
-				[1]="attack_damage_+%_vs_rare_or_unique_enemy",
-				[2]="attack_critical_strike_chance_+%"
+				[1]="10% increased Critical Hit Chance for Attacks",
+				[2]="30% increased Attack Damage against Rare or Unique Enemies"
 			}
 		},
 		[36163]={
@@ -40853,7 +40814,7 @@ return {
 			},
 			skill=36163,
 			stats={
-				[1]="block_chance_+%"
+				[1]="5% increased Block chance"
 			}
 		},
 		[36169]={
@@ -40870,7 +40831,7 @@ return {
 			},
 			skill=36169,
 			stats={
-				[1]="grenade_skill_area_of_effect_+%"
+				[1]="12% increased Grenade Area of Effect"
 			}
 		},
 		[36170]={
@@ -40888,7 +40849,7 @@ return {
 			},
 			skill=36170,
 			stats={
-				[1]="evasion_and_physical_damage_reduction_rating_+%"
+				[1]="12% increased Armour and Evasion Rating"
 			}
 		},
 		[36191]={
@@ -40905,7 +40866,7 @@ return {
 			},
 			skill=36191,
 			stats={
-				[1]="stun_threshold_+%"
+				[1]="12% increased Stun Threshold"
 			}
 		},
 		[36231]={
@@ -40922,7 +40883,7 @@ return {
 			},
 			skill=36231,
 			stats={
-				[1]="critical_hit_damage_bonus_+%_if_consumed_power_charge_recently"
+				[1]="20% increased Critical Damage Bonus if you've consumed a Power Charge Recently"
 			}
 		},
 		[36270]={
@@ -40940,7 +40901,7 @@ return {
 			},
 			skill=36270,
 			stats={
-				[1]="daze_build_up_+%"
+				[1]="15% increased Daze Buildup"
 			}
 		},
 		[36290]={
@@ -40957,7 +40918,7 @@ return {
 			},
 			skill=36290,
 			stats={
-				[1]="energy_shield_delay_-%"
+				[1]="15% faster start of Energy Shield Recharge"
 			}
 		},
 		[36293]={
@@ -40974,7 +40935,7 @@ return {
 			},
 			skill=36293,
 			stats={
-				[1]="base_reduce_enemy_lightning_resistance_%"
+				[1]="Damage Penetrates 6% Lightning Resistance"
 			}
 		},
 		[36298]={
@@ -40992,7 +40953,7 @@ return {
 			},
 			skill=36298,
 			stats={
-				[1]="ailment_effect_+%"
+				[1]="10% increased Magnitude of Ailments you inflict"
 			}
 		},
 		[36302]={
@@ -41011,7 +40972,7 @@ return {
 			},
 			skill=36302,
 			stats={
-				[1]="base_cast_speed_+%"
+				[1]="6% increased Cast Speed"
 			}
 		},
 		[36325]={
@@ -41028,7 +40989,7 @@ return {
 			},
 			skill=36325,
 			stats={
-				[1]="base_reduce_enemy_fire_resistance_%"
+				[1]="Damage Penetrates 6% Fire Resistance"
 			}
 		},
 		[36341]={
@@ -41045,7 +41006,7 @@ return {
 			},
 			skill=36341,
 			stats={
-				[1]="culling_strike_threshold_+%"
+				[1]="25% increased Culling Strike Threshold"
 			}
 		},
 		[36358]={
@@ -41062,7 +41023,7 @@ return {
 			},
 			skill=36358,
 			stats={
-				[1]="chaos_damage_+%"
+				[1]="7% increased Chaos Damage"
 			}
 		},
 		[36364]={
@@ -41079,7 +41040,7 @@ return {
 			},
 			skill=36364,
 			stats={
-				[1]="electrocuted_enemy_damage_taken_+%"
+				[1]="Enemies you Electrocute have 20% increased Damage taken"
 			}
 		},
 		[36379]={
@@ -41096,7 +41057,7 @@ return {
 			},
 			skill=36379,
 			stats={
-				[1]="mana_regeneration_rate_+%"
+				[1]="10% increased Mana Regeneration Rate"
 			}
 		},
 		[36389]={
@@ -41113,7 +41074,7 @@ return {
 			},
 			skill=36389,
 			stats={
-				[1]="gain_x_rage_on_melee_hit"
+				[1]="Gain 1 Rage on Melee Hit"
 			}
 		},
 		[36450]={
@@ -41130,7 +41091,7 @@ return {
 			},
 			skill=36450,
 			stats={
-				[1]="spell_damage_+%_while_es_full"
+				[1]="12% increased Spell Damage while on Full Energy Shield"
 			}
 		},
 		[36474]={
@@ -41147,7 +41108,7 @@ return {
 			},
 			skill=36474,
 			stats={
-				[1]="curse_effect_on_self_+%"
+				[1]="15% reduced effect of Curses on you"
 			}
 		},
 		[36478]={
@@ -41165,7 +41126,7 @@ return {
 			},
 			skill=36478,
 			stats={
-				[1]="melee_damage_+%"
+				[1]="10% increased Melee Damage"
 			}
 		},
 		[36479]={
@@ -41183,8 +41144,8 @@ return {
 			},
 			skill=36479,
 			stats={
-				[1]="non_skill_base_all_damage_%_to_gain_as_lightning",
-				[2]="shock_chance_+%"
+				[1]="Gain 5% of Damage as Extra Lightning Damage",
+				[2]="30% increased chance to Shock"
 			}
 		},
 		[36507]={
@@ -41201,9 +41162,9 @@ return {
 			},
 			skill=36507,
 			stats={
-				[1]="minion_maximum_life_+%",
-				[2]="minion_life_regeneration_rate_per_minute_%",
-				[3]="minion_chaos_resistance_%"
+				[1]="Minions have 20% increased maximum Life",
+				[2]="Minions Regenerate 3% of Life per second",
+				[3]="Minions have +13% to Chaos Resistance"
 			}
 		},
 		[36522]={
@@ -41221,7 +41182,7 @@ return {
 			},
 			skill=36522,
 			stats={
-				[1]="attack_area_of_effect_+%"
+				[1]="8% increased Area of Effect for Attacks"
 			}
 		},
 		[36564]={
@@ -41239,8 +41200,8 @@ return {
 			},
 			skill=36564,
 			stats={
-				[1]="ascendancy_beidats_gaze_mana_+_per_X_maximum_life",
-				[2]="life_reserved_by_stat_%"
+				[1]="Reserves 25% of Life",
+				[2]="+1 to Maximum Mana per 6 Maximum Life"
 			}
 		},
 		[36576]={
@@ -41258,7 +41219,7 @@ return {
 			},
 			skill=36576,
 			stats={
-				[1]="attack_damage_+%"
+				[1]="10% increased Attack Damage"
 			}
 		},
 		[36596]={
@@ -41275,7 +41236,7 @@ return {
 			},
 			skill=36596,
 			stats={
-				[1]="damage_vs_enemies_on_low_life_+%"
+				[1]="30% increased Damage with Hits against Enemies that are on Low Life"
 			}
 		},
 		[36602]={
@@ -41292,7 +41253,7 @@ return {
 			},
 			skill=36602,
 			stats={
-				[1]="base_critical_strike_multiplier_+"
+				[1]="15% increased Critical Damage Bonus"
 			}
 		},
 		[36623]={
@@ -41309,8 +41270,8 @@ return {
 			},
 			skill=36623,
 			stats={
-				[1]="energy_shield_delay_-%",
-				[2]="energy_shield_recharge_rate_+%"
+				[1]="15% reduced Energy Shield Recharge Rate",
+				[2]="40% faster start of Energy Shield Recharge"
 			}
 		},
 		[36629]={
@@ -41330,7 +41291,7 @@ return {
 			},
 			skill=36629,
 			stats={
-				[1]="display_passive_attribute_text"
+				[1]="+5 to any Attribute"
 			}
 		},
 		[36634]={
@@ -41366,7 +41327,7 @@ return {
 			},
 			skill=36639,
 			stats={
-				[1]="base_curse_duration_+%"
+				[1]="20% increased Curse Duration"
 			}
 		},
 		[36659]={
@@ -41384,7 +41345,7 @@ return {
 			},
 			skill=36659,
 			stats={
-				[1]="warbringer_overbreak_armour"
+				[1]="You can Break Enemy Armour to below 0"
 			}
 		},
 		[36676]={
@@ -41418,7 +41379,7 @@ return {
 			},
 			skill=36677,
 			stats={
-				[1]="spear_critical_strike_chance_+%"
+				[1]="10% increased Critical Hit Chance with Spears"
 			}
 		},
 		[36709]={
@@ -41435,7 +41396,7 @@ return {
 			},
 			skill=36709,
 			stats={
-				[1]="stun_threshold_+%"
+				[1]="12% increased Stun Threshold"
 			}
 		},
 		[36723]={
@@ -41452,8 +41413,8 @@ return {
 			},
 			skill=36723,
 			stats={
-				[1]="hit_damage_stun_multiplier_+%",
-				[2]="hit_damage_freeze_multiplier_+%"
+				[1]="10% increased Stun Buildup",
+				[2]="10% increased Freeze Buildup"
 			}
 		},
 		[36728]={
@@ -41471,9 +41432,9 @@ return {
 			},
 			skill=36728,
 			stats={
-				[1]="maximum_fire_resistance_+1_per_X_corresponding_support",
-				[2]="maximum_lightning_resistance_+1_per_X_corresponding_support",
-				[3]="maximum_cold_resistance_+1_per_X_corresponding_support"
+				[1]="+1% to Maximum Cold Resistance per 4 Blue Support Gems Socketed",
+				[2]="+1% to Maximum Fire Resistance per 4 Red Support Gems Socketed",
+				[3]="+1% to Maximum Lightning Resistance per 4 Green Support Gems Socketed"
 			}
 		},
 		[36746]={
@@ -41490,7 +41451,7 @@ return {
 			},
 			skill=36746,
 			stats={
-				[1]="energy_shield_recharge_rate_+%"
+				[1]="15% increased Energy Shield Recharge Rate"
 			}
 		},
 		[36778]={
@@ -41507,7 +41468,7 @@ return {
 			},
 			skill=36778,
 			stats={
-				[1]="shock_chance_+%"
+				[1]="15% increased chance to Shock"
 			}
 		},
 		[36782]={
@@ -41525,7 +41486,7 @@ return {
 			},
 			skill=36782,
 			stats={
-				[1]="hit_damage_freeze_multiplier_+%"
+				[1]="15% increased Freeze Buildup"
 			}
 		},
 		[36788]={
@@ -41543,7 +41504,7 @@ return {
 			},
 			skill=36788,
 			stats={
-				[1]="chaos_damage_+%"
+				[1]="11% increased Chaos Damage"
 			}
 		},
 		[36808]={
@@ -41561,8 +41522,8 @@ return {
 			},
 			skill=36808,
 			stats={
-				[1]="shield_armour_+%",
-				[2]="attack_damage_+%_per_75_armour_or_evasion_on_shield"
+				[1]="50% increased Defences from Equipped Shield",
+				[2]="1% increased Attack Damage per 75 Armour or Evasion Rating on Shield"
 			}
 		},
 		[36814]={
@@ -41579,7 +41540,7 @@ return {
 			},
 			skill=36814,
 			stats={
-				[1]="base_curse_duration_+%"
+				[1]="20% increased Curse Duration"
 			}
 		},
 		[36822]={
@@ -41597,7 +41558,7 @@ return {
 			},
 			skill=36822,
 			stats={
-				[1]="all_attributes_+%"
+				[1]="3% increased Attributes"
 			}
 		},
 		[36880]={
@@ -41614,7 +41575,7 @@ return {
 			},
 			skill=36880,
 			stats={
-				[1]="arcane_surge_effect_on_self_+%"
+				[1]="15% increased effect of Arcane Surge on you"
 			}
 		},
 		[36894]={
@@ -41632,7 +41593,7 @@ return {
 			},
 			skill=36894,
 			stats={
-				[1]="base_chance_to_inflict_bleeding_%"
+				[1]="5% chance to inflict Bleeding on Hit"
 			}
 		},
 		[36927]={
@@ -41650,7 +41611,7 @@ return {
 			},
 			skill=36927,
 			stats={
-				[1]="mark_skill_cast_speed_+%"
+				[1]="Mark Skills have 10% increased Cast Speed"
 			}
 		},
 		[36976]={
@@ -41667,7 +41628,7 @@ return {
 			},
 			skill=36976,
 			stats={
-				[1]="culling_strike_vs_marked_enemy"
+				[1]="Culling Strike against Enemies you Mark"
 			}
 		},
 		[36994]={
@@ -41684,7 +41645,7 @@ return {
 			},
 			skill=36994,
 			stats={
-				[1]="maximum_energy_shield_+%"
+				[1]="15% increased maximum Energy Shield"
 			}
 		},
 		[37078]={
@@ -41702,7 +41663,9 @@ return {
 			},
 			skill=37078,
 			stats={
-				[1]="witchhunter_chance_to_explode_enemies_for_100%_of_life_as_physical"
+				[1]="10% chance for Enemies you Kill to Explode, dealing 100%",
+				[2]="of their maximum Life as Physical Damage",
+				[3]="Chance is doubled against Undead and Demons"
 			}
 		},
 		[37190]={
@@ -41719,7 +41682,7 @@ return {
 			},
 			skill=37190,
 			stats={
-				[1]="base_life_leech_amount_+%"
+				[1]="10% increased amount of Life Leeched"
 			}
 		},
 		[37220]={
@@ -41736,7 +41699,7 @@ return {
 			},
 			skill=37220,
 			stats={
-				[1]="evasion_rating_+%"
+				[1]="15% increased Evasion Rating"
 			}
 		},
 		[37226]={
@@ -41754,7 +41717,7 @@ return {
 			},
 			skill=37226,
 			stats={
-				[1]="warcry_speed_+%"
+				[1]="16% increased Warcry Speed"
 			}
 		},
 		[37244]={
@@ -41772,8 +41735,8 @@ return {
 			},
 			skill=37244,
 			stats={
-				[1]="block_chance_+%",
-				[2]="block_recovery_+%"
+				[1]="12% increased Block chance",
+				[2]="40% increased Block Recovery"
 			}
 		},
 		[37258]={
@@ -41791,7 +41754,7 @@ return {
 			},
 			skill=37258,
 			stats={
-				[1]="display_passive_attribute_text"
+				[1]="+5 to any Attribute"
 			}
 		},
 		[37266]={
@@ -41808,7 +41771,7 @@ return {
 			},
 			skill=37266,
 			stats={
-				[1]="minion_damage_+%"
+				[1]="Minions deal 25% increased Damage"
 			}
 		},
 		[37276]={
@@ -41825,7 +41788,7 @@ return {
 			},
 			skill=37276,
 			stats={
-				[1]="maximum_rage"
+				[1]="+8 to Maximum Rage"
 			}
 		},
 		[37304]={
@@ -41844,8 +41807,8 @@ return {
 			},
 			skill=37304,
 			stats={
-				[1]="shock_effect_+%",
-				[2]="chill_effect_+%"
+				[1]="10% increased Magnitude of Chill you inflict",
+				[2]="10% increased Magnitude of Shock you inflict"
 			}
 		},
 		[37327]={
@@ -41862,7 +41825,7 @@ return {
 			},
 			skill=37327,
 			stats={
-				[1]="mana_regeneration_rate_+%"
+				[1]="10% increased Mana Regeneration Rate"
 			}
 		},
 		[37336]={
@@ -41881,7 +41844,7 @@ return {
 			},
 			skill=37336,
 			stats={
-				[1]="gain_maximum_frenzy_charges_on_frenzy_charge_gained_%_chance"
+				[1]="30% chance that if you would gain Frenzy Charges, you instead gain up to your maximum number of Frenzy Charges"
 			}
 		},
 		[37361]={
@@ -41898,7 +41861,7 @@ return {
 			},
 			skill=37361,
 			stats={
-				[1]="base_bleeding_effect_+%"
+				[1]="10% increased Magnitude of Bleeding you inflict"
 			}
 		},
 		[37372]={
@@ -41915,7 +41878,7 @@ return {
 			},
 			skill=37372,
 			stats={
-				[1]="attack_and_cast_speed_+%_with_lightning_skills"
+				[1]="3% increased Attack and Cast Speed with Lightning Skills"
 			}
 		},
 		[37408]={
@@ -41933,8 +41896,7 @@ return {
 			},
 			skill=37408,
 			stats={
-				[1]="generate_x_charges_for_life_flasks_per_minute",
-				[2]="base_strength"
+				[1]="Life Flasks gain 0.1 charges per Second"
 			}
 		},
 		[37414]={
@@ -41951,7 +41913,7 @@ return {
 			},
 			skill=37414,
 			stats={
-				[1]="accuracy_rating_+%"
+				[1]="10% increased Accuracy Rating"
 			}
 		},
 		[37450]={
@@ -41968,7 +41930,7 @@ return {
 			},
 			skill=37450,
 			stats={
-				[1]="ailment_chance_+%"
+				[1]="10% increased chance to inflict Ailments"
 			}
 		},
 		[37458]={
@@ -41986,8 +41948,8 @@ return {
 			},
 			skill=37458,
 			stats={
-				[1]="link_skill_buff_effect_+%",
-				[2]="link_skill_duration_+%"
+				[1]="Link Skills have 20% increased Buff Effect",
+				[2]="Link Skills have 20% increased Skill Effect Duration"
 			}
 		},
 		[37484]={
@@ -42004,7 +41966,7 @@ return {
 			},
 			skill=37484,
 			stats={
-				[1]="keystone_acrobatics"
+				[1]="Acrobatics"
 			}
 		},
 		[37509]={
@@ -42021,7 +41983,7 @@ return {
 			},
 			skill=37509,
 			stats={
-				[1]="attack_damage_+%"
+				[1]="10% increased Attack Damage"
 			}
 		},
 		[37514]={
@@ -42040,8 +42002,8 @@ return {
 			},
 			skill=37514,
 			stats={
-				[1]="quarterstaff_attack_speed_+%",
-				[2]="knockback_on_crit_with_quarterstaff"
+				[1]="8% increased Attack Speed with Quarterstaves",
+				[2]="Knocks Back Enemies if you get a Critical Hit with a Quarterstaff"
 			}
 		},
 		[37543]={
@@ -42058,8 +42020,8 @@ return {
 			},
 			skill=37543,
 			stats={
-				[1]="mana_regeneration_rate_+%",
-				[2]="life_regeneration_rate_+%"
+				[1]="15% increased Life Regeneration rate",
+				[2]="15% increased Mana Regeneration Rate"
 			}
 		},
 		[37548]={
@@ -42078,7 +42040,7 @@ return {
 			},
 			skill=37548,
 			stats={
-				[1]="base_mana_leech_amount_+%"
+				[1]="10% increased amount of Mana Leeched"
 			}
 		},
 		[37594]={
@@ -42095,7 +42057,7 @@ return {
 			},
 			skill=37594,
 			stats={
-				[1]="minion_damage_+%"
+				[1]="Minions deal 12% increased Damage"
 			}
 		},
 		[37608]={
@@ -42113,7 +42075,7 @@ return {
 			},
 			skill=37608,
 			stats={
-				[1]="physical_damage_+%"
+				[1]="10% increased Global Physical Damage"
 			}
 		},
 		[37612]={
@@ -42132,7 +42094,7 @@ return {
 			},
 			skill=37612,
 			stats={
-				[1]="display_passive_attribute_text"
+				[1]="+5 to any Attribute"
 			}
 		},
 		[37629]={
@@ -42149,7 +42111,7 @@ return {
 			},
 			skill=37629,
 			stats={
-				[1]="display_passive_attribute_text"
+				[1]="+5 to any Attribute"
 			}
 		},
 		[37665]={
@@ -42166,8 +42128,8 @@ return {
 			},
 			skill=37665,
 			stats={
-				[1]="attack_area_damage_+%",
-				[2]="armour_break_amount_+%"
+				[1]="Break 10% increased Armour",
+				[2]="8% increased Attack Area Damage"
 			}
 		},
 		[37688]={
@@ -42185,7 +42147,7 @@ return {
 			},
 			skill=37688,
 			stats={
-				[1]="trap_damage_+%"
+				[1]="25% increased Trap Damage"
 			}
 		},
 		[37691]={
@@ -42203,7 +42165,7 @@ return {
 			},
 			skill=37691,
 			stats={
-				[1]="attack_damage_+%"
+				[1]="10% increased Attack Damage"
 			}
 		},
 		[37695]={
@@ -42221,7 +42183,7 @@ return {
 			},
 			skill=37695,
 			stats={
-				[1]="evasion_rating_+%"
+				[1]="15% increased Evasion Rating"
 			}
 		},
 		[37742]={
@@ -42239,8 +42201,8 @@ return {
 			},
 			skill=37742,
 			stats={
-				[1]="base_mana_leech_amount_+%",
-				[2]="ailment_chance_+%_vs_rare_or_unique_enemy"
+				[1]="50% increased amount of Mana Leeched",
+				[2]="25% increased chance to inflict Ailments against Rare or Unique Enemies"
 			}
 		},
 		[37746]={
@@ -42257,7 +42219,7 @@ return {
 			},
 			skill=37746,
 			stats={
-				[1]="ignite_chance_+%"
+				[1]="15% increased chance to Ignite"
 			}
 		},
 		[37767]={
@@ -42275,7 +42237,7 @@ return {
 			},
 			skill=37767,
 			stats={
-				[1]="attack_speed_+%_if_rare_or_unique_enemy_nearby"
+				[1]="4% increased Attack Speed while a Rare or Unique Enemy is in your Presence"
 			}
 		},
 		[37806]={
@@ -42292,7 +42254,7 @@ return {
 			},
 			skill=37806,
 			stats={
-				[1]="lightning_skill_additional_chain_chance_%"
+				[1]="60% chance for Lightning Skills to Chain an additional time"
 			}
 		},
 		[37813]={
@@ -42309,7 +42271,7 @@ return {
 			},
 			skill=37813,
 			stats={
-				[1]="shock_duration_+%"
+				[1]="20% increased Shock Duration"
 			}
 		},
 		[37872]={
@@ -42327,8 +42289,8 @@ return {
 			},
 			skill=37872,
 			stats={
-				[1]="attack_damage_+%_while_ally_in_presence",
-				[2]="allies_in_presence_accuracy_rating"
+				[1]="Allies in your Presence have +100 to Accuracy Rating",
+				[2]="35% increased Attack Damage while you have an Ally in your Presence"
 			}
 		},
 		[37876]={
@@ -42346,7 +42308,7 @@ return {
 			},
 			skill=37876,
 			stats={
-				[1]="spell_damage_+%"
+				[1]="10% increased Spell Damage"
 			}
 		},
 		[37905]={
@@ -42363,7 +42325,7 @@ return {
 			},
 			skill=37905,
 			stats={
-				[1]="ignite_chance_+%"
+				[1]="30% increased chance to Ignite"
 			}
 		},
 		[37946]={
@@ -42379,7 +42341,7 @@ return {
 			},
 			skill=37946,
 			stats={
-				[1]="quiver_mod_effect_+%"
+				[1]="15% increased bonuses gained from Equipped Quiver"
 			}
 		},
 		[37956]={
@@ -42396,7 +42358,7 @@ return {
 			},
 			skill=37956,
 			stats={
-				[1]="skill_effect_duration_+%"
+				[1]="8% reduced Skill Effect Duration"
 			}
 		},
 		[37963]={
@@ -42414,7 +42376,7 @@ return {
 			},
 			skill=37963,
 			stats={
-				[1]="sword_damage_+%"
+				[1]="10% increased Damage with Swords"
 			}
 		},
 		[37974]={
@@ -42431,7 +42393,7 @@ return {
 			},
 			skill=37974,
 			stats={
-				[1]="maximum_energy_shield_+%"
+				[1]="15% increased maximum Energy Shield"
 			}
 		},
 		[37991]={
@@ -42448,7 +42410,7 @@ return {
 			},
 			skill=37991,
 			stats={
-				[1]="curse_effect_+%"
+				[1]="6% increased Effect of your Curses"
 			}
 		},
 		[38003]={
@@ -42465,7 +42427,7 @@ return {
 			},
 			skill=38003,
 			stats={
-				[1]="weapon_swap_speed_+%"
+				[1]="20% increased Weapon Swap Speed"
 			}
 		},
 		[38004]={
@@ -42499,7 +42461,7 @@ return {
 			},
 			skill=38014,
 			stats={
-				[1]="slam_skill_area_of_effect_+%"
+				[1]="Slam Skills have 12% increased Area of Effect"
 			}
 		},
 		[38044]={
@@ -42516,7 +42478,7 @@ return {
 			},
 			skill=38044,
 			stats={
-				[1]="evasion_rating_+%"
+				[1]="15% increased Evasion Rating"
 			}
 		},
 		[38053]={
@@ -42534,8 +42496,8 @@ return {
 			},
 			skill=38053,
 			stats={
-				[1]="warcry_cooldown_speed_+%",
-				[2]="damage_+%_per_warcry_used_recently"
+				[1]="25% increased Warcry Cooldown Recovery Rate",
+				[2]="8% increased Damage for each time you've Warcried Recently"
 			}
 		},
 		[38057]={
@@ -42552,7 +42514,7 @@ return {
 			},
 			skill=38057,
 			stats={
-				[1]="evasion_and_physical_damage_reduction_rating_+%"
+				[1]="12% increased Armour and Evasion Rating"
 			}
 		},
 		[38066]={
@@ -42569,8 +42531,8 @@ return {
 			},
 			skill=38066,
 			stats={
-				[1]="armour_break_amount_+%",
-				[2]="physical_damage_reduction_rating_+%"
+				[1]="10% increased Armour",
+				[2]="Break 15% increased Armour"
 			}
 		},
 		[38068]={
@@ -42589,9 +42551,9 @@ return {
 			},
 			skill=38068,
 			stats={
-				[1]="shock_chance_+%",
-				[2]="hit_damage_freeze_multiplier_+%",
-				[3]="ignite_chance_+%"
+				[1]="12% increased chance to Ignite",
+				[2]="12% increased Freeze Buildup",
+				[3]="12% increased chance to Shock"
 			}
 		},
 		[38105]={
@@ -42608,7 +42570,7 @@ return {
 			},
 			skill=38105,
 			stats={
-				[1]="maximum_energy_shield_+%"
+				[1]="15% increased maximum Energy Shield"
 			}
 		},
 		[38111]={
@@ -42625,8 +42587,8 @@ return {
 			},
 			skill=38111,
 			stats={
-				[1]="damage_taken_goes_to_life_over_4_seconds_%",
-				[2]="recoup_speed_+%"
+				[1]="6% of Damage taken Recouped as Life",
+				[2]="25% increased speed of Recoup Effects"
 			}
 		},
 		[38124]={
@@ -42643,7 +42605,7 @@ return {
 			},
 			skill=38124,
 			stats={
-				[1]="totem_damage_+%"
+				[1]="16% increased Totem Damage"
 			}
 		},
 		[38130]={
@@ -42661,7 +42623,7 @@ return {
 			},
 			skill=38130,
 			stats={
-				[1]="warcry_cooldown_speed_+%"
+				[1]="10% increased Warcry Cooldown Recovery Rate"
 			}
 		},
 		[38138]={
@@ -42678,7 +42640,7 @@ return {
 			},
 			skill=38138,
 			stats={
-				[1]="global_item_attribute_requirements_+%"
+				[1]="Equipment and Skill Gems have 4% reduced Attribute Requirements"
 			}
 		},
 		[38143]={
@@ -42695,7 +42657,7 @@ return {
 			},
 			skill=38143,
 			stats={
-				[1]="display_passive_attribute_text"
+				[1]="+5 to any Attribute"
 			}
 		},
 		[38172]={
@@ -42712,7 +42674,7 @@ return {
 			},
 			skill=38172,
 			stats={
-				[1]="summon_totem_cast_speed_+%"
+				[1]="20% increased Totem Placement speed"
 			}
 		},
 		[38215]={
@@ -42730,7 +42692,7 @@ return {
 			},
 			skill=38215,
 			stats={
-				[1]="base_reduce_enemy_lightning_resistance_%"
+				[1]="Damage Penetrates 6% Lightning Resistance"
 			}
 		},
 		[38292]={
@@ -42747,7 +42709,7 @@ return {
 			},
 			skill=38292,
 			stats={
-				[1]="ignite_chance_+%"
+				[1]="15% increased chance to Ignite"
 			}
 		},
 		[38300]={
@@ -42764,7 +42726,7 @@ return {
 			},
 			skill=38300,
 			stats={
-				[1]="ignite_chance_+%"
+				[1]="15% increased chance to Ignite"
 			}
 		},
 		[38323]={
@@ -42783,7 +42745,7 @@ return {
 			},
 			skill=38323,
 			stats={
-				[1]="display_passive_attribute_text"
+				[1]="+5 to any Attribute"
 			}
 		},
 		[38338]={
@@ -42801,7 +42763,7 @@ return {
 			},
 			skill=38338,
 			stats={
-				[1]="elemental_damage_+%"
+				[1]="10% increased Elemental Damage"
 			}
 		},
 		[38342]={
@@ -42819,9 +42781,9 @@ return {
 			},
 			skill=38342,
 			stats={
-				[1]="daze_build_up_+%",
-				[2]="damage_+%_vs_dazed_enemies",
-				[3]="critical_strike_chance_+%_vs_dazed_enemies"
+				[1]="25% increased Critical Hit Chance against Dazed Enemies",
+				[2]="25% increased Damage against Dazed Enemies",
+				[3]="25% increased Daze Buildup"
 			}
 		},
 		[38365]={
@@ -42839,7 +42801,7 @@ return {
 			},
 			skill=38365,
 			stats={
-				[1]="recover_%_life_per_endurance_charge_consumed"
+				[1]="Recover 2% of Life for each Endurance Charge consumed"
 			}
 		},
 		[38368]={
@@ -42856,7 +42818,7 @@ return {
 			},
 			skill=38368,
 			stats={
-				[1]="damage_taken_goes_to_life_over_4_seconds_%"
+				[1]="3% of Damage taken Recouped as Life"
 			}
 		},
 		[38369]={
@@ -42873,7 +42835,7 @@ return {
 			},
 			skill=38369,
 			stats={
-				[1]="spear_damage_+%"
+				[1]="10% increased Damage with Spears"
 			}
 		},
 		[38398]={
@@ -42891,8 +42853,8 @@ return {
 			},
 			skill=38398,
 			stats={
-				[1]="additional_critical_strike_chance_permyriad_with_herald_skills",
-				[2]="damage_+%"
+				[1]="40% reduced Damage",
+				[2]="+6% to Critical Hit Chance of Herald Skills"
 			}
 		},
 		[38420]={
@@ -42909,7 +42871,7 @@ return {
 			},
 			skill=38420,
 			stats={
-				[1]="mana_regeneration_rate_+%"
+				[1]="10% increased Mana Regeneration Rate"
 			}
 		},
 		[38463]={
@@ -42930,7 +42892,7 @@ return {
 			},
 			skill=38463,
 			stats={
-				[1]="display_passive_attribute_text"
+				[1]="+5 to any Attribute"
 			}
 		},
 		[38479]={
@@ -42948,7 +42910,7 @@ return {
 			},
 			skill=38479,
 			stats={
-				[1]="projectile_chance_to_piece_vs_enemies_within_3m_distance_of_player"
+				[1]="25% chance for Projectiles to Pierce Enemies within 3m distance of you"
 			}
 		},
 		[38493]={
@@ -42966,7 +42928,7 @@ return {
 			},
 			skill=38493,
 			stats={
-				[1]="base_critical_strike_multiplier_+"
+				[1]="15% increased Critical Damage Bonus"
 			}
 		},
 		[38497]={
@@ -42983,7 +42945,7 @@ return {
 			},
 			skill=38497,
 			stats={
-				[1]="charm_charges_used_+%"
+				[1]="6% reduced Charm Charges used"
 			}
 		},
 		[38501]={
@@ -43000,7 +42962,7 @@ return {
 			},
 			skill=38501,
 			stats={
-				[1]="attack_speed_+%"
+				[1]="3% increased Attack Speed"
 			}
 		},
 		[38535]={
@@ -43018,8 +42980,8 @@ return {
 			},
 			skill=38535,
 			stats={
-				[1]="elemental_damage_+%_if_have_crit_recently",
-				[2]="critical_strike_chance_+%"
+				[1]="20% increased Critical Hit Chance",
+				[2]="40% increased Elemental Damage if you've dealt a Critical Hit Recently"
 			}
 		},
 		[38537]={
@@ -43037,8 +42999,7 @@ return {
 			},
 			skill=38537,
 			stats={
-				[1]="critical_strike_chance_+%",
-				[2]="base_intelligence"
+				[1]="25% increased Critical Hit Chance"
 			}
 		},
 		[38541]={
@@ -43055,7 +43016,7 @@ return {
 			},
 			skill=38541,
 			stats={
-				[1]="critical_strike_chance_+%"
+				[1]="10% increased Critical Hit Chance"
 			}
 		},
 		[38564]={
@@ -43074,7 +43035,7 @@ return {
 			},
 			skill=38564,
 			stats={
-				[1]="sword_damage_+%"
+				[1]="10% increased Damage with Swords"
 			}
 		},
 		[38578]={
@@ -43092,7 +43053,7 @@ return {
 			},
 			skill=38578,
 			stats={
-				[1]="elemental_storm_cooldown_recovery_speed_+%_final"
+				[1]="Elemental Storm has 150% more Cooldown Recovery Rate"
 			}
 		},
 		[38596]={
@@ -43109,7 +43070,7 @@ return {
 			},
 			skill=38596,
 			stats={
-				[1]="curse_effect_on_self_+%"
+				[1]="15% reduced effect of Curses on you"
 			}
 		},
 		[38601]={
@@ -43128,7 +43089,7 @@ return {
 			},
 			skill=38601,
 			stats={
-				[1]="witchhunter_armour_evasion_+%_final"
+				[1]="50% less Armour and Evasion Rating"
 			}
 		},
 		[38614]={
@@ -43147,7 +43108,7 @@ return {
 			},
 			skill=38614,
 			stats={
-				[1]="spell_skills_fire_2_additional_projectiles_final_chance_%"
+				[1]="12% chance for Spell Skills to fire 2 additional Projectiles"
 			}
 		},
 		[38628]={
@@ -43164,7 +43125,7 @@ return {
 			},
 			skill=38628,
 			stats={
-				[1]="poison_duration_+%_per_poison_applied_recently"
+				[1]="10% increased Poison Duration for each Poison you have inflicted Recently, up to a maximum of 100%"
 			}
 		},
 		[38646]={
@@ -43182,7 +43143,7 @@ return {
 			},
 			skill=38646,
 			stats={
-				[1]="base_physical_damage_reduction_rating"
+				[1]="+20 to Armour"
 			}
 		},
 		[38663]={
@@ -43200,7 +43161,7 @@ return {
 			},
 			skill=38663,
 			stats={
-				[1]="melee_critical_strike_chance_+%"
+				[1]="10% increased Melee Critical Hit Chance"
 			}
 		},
 		[38668]={
@@ -43218,7 +43179,7 @@ return {
 			},
 			skill=38668,
 			stats={
-				[1]="unarmed_attack_speed_+%"
+				[1]="3% increased Unarmed Attack Speed"
 			}
 		},
 		[38670]={
@@ -43235,7 +43196,7 @@ return {
 			},
 			skill=38670,
 			stats={
-				[1]="attack_speed_+%_if_have_been_hit_recently"
+				[1]="5% increased Attack Speed if you've been Hit Recently"
 			}
 		},
 		[38678]={
@@ -43255,7 +43216,7 @@ return {
 			},
 			skill=38678,
 			stats={
-				[1]="ailment_threshold_+%"
+				[1]="15% increased Elemental Ailment Threshold"
 			}
 		},
 		[38694]={
@@ -43272,7 +43233,7 @@ return {
 			},
 			skill=38694,
 			stats={
-				[1]="damage_+%_with_herald_skills"
+				[1]="Herald Skills deal 20% increased Damage"
 			}
 		},
 		[38703]={
@@ -43289,8 +43250,8 @@ return {
 			},
 			skill=38703,
 			stats={
-				[1]="accuracy_rating_+%",
-				[2]="attack_critical_strike_chance_+%"
+				[1]="8% increased Critical Hit Chance for Attacks",
+				[2]="6% increased Accuracy Rating"
 			}
 		},
 		[38707]={
@@ -43309,7 +43270,7 @@ return {
 			},
 			skill=38707,
 			stats={
-				[1]="display_passive_attribute_text"
+				[1]="+5 to any Attribute"
 			}
 		},
 		[38728]={
@@ -43326,7 +43287,7 @@ return {
 			},
 			skill=38728,
 			stats={
-				[1]="evasion_rating_+%"
+				[1]="15% increased Evasion Rating"
 			}
 		},
 		[38732]={
@@ -43345,7 +43306,7 @@ return {
 			},
 			skill=38732,
 			stats={
-				[1]="display_passive_attribute_text"
+				[1]="+5 to any Attribute"
 			}
 		},
 		[38763]={
@@ -43362,7 +43323,7 @@ return {
 			},
 			skill=38763,
 			stats={
-				[1]="herald_skills_mana_reservation_+%"
+				[1]="4% reduced Reservation of Herald Skills"
 			}
 		},
 		[38769]={
@@ -43380,7 +43341,7 @@ return {
 			},
 			skill=38769,
 			stats={
-				[1]="armour_break_amount_+%"
+				[1]="Break 25% increased Armour"
 			}
 		},
 		[38779]={
@@ -43397,7 +43358,7 @@ return {
 			},
 			skill=38779,
 			stats={
-				[1]="evasion_and_physical_damage_reduction_rating_+%"
+				[1]="12% increased Armour and Evasion Rating"
 			}
 		},
 		[38814]={
@@ -43417,7 +43378,7 @@ return {
 			},
 			skill=38814,
 			stats={
-				[1]="display_passive_attribute_text"
+				[1]="+5 to any Attribute"
 			}
 		},
 		[38827]={
@@ -43434,8 +43395,8 @@ return {
 			},
 			skill=38827,
 			stats={
-				[1]="physical_damage_reduction_rating_+%",
-				[2]="maximum_energy_shield_+%"
+				[1]="12% increased Armour",
+				[2]="12% increased maximum Energy Shield"
 			}
 		},
 		[38856]={
@@ -43454,7 +43415,7 @@ return {
 			},
 			skill=38856,
 			stats={
-				[1]="display_passive_attribute_text"
+				[1]="+5 to any Attribute"
 			}
 		},
 		[38876]={
@@ -43472,7 +43433,7 @@ return {
 			},
 			skill=38876,
 			stats={
-				[1]="display_passive_attribute_text"
+				[1]="+5 to any Attribute"
 			}
 		},
 		[38878]={
@@ -43489,7 +43450,7 @@ return {
 			},
 			skill=38878,
 			stats={
-				[1]="debuff_time_passed_+%"
+				[1]="Debuffs on you expire 10% faster"
 			}
 		},
 		[38888]={
@@ -43506,9 +43467,9 @@ return {
 			},
 			skill=38888,
 			stats={
-				[1]="two_handed_melee_accuracy_rating_+%",
-				[2]="one_handed_melee_accuracy_rating_+%",
-				[3]="melee_range_+"
+				[1]="10% increased Accuracy Rating with One Handed Melee Weapons",
+				[2]="10% increased Accuracy Rating with Two Handed Melee Weapons",
+				[3]="+2 to Melee Strike Range"
 			}
 		},
 		[38895]={
@@ -43525,7 +43486,7 @@ return {
 			},
 			skill=38895,
 			stats={
-				[1]="elemental_damage_with_attack_skills_+%_while_using_flask"
+				[1]="40% increased Elemental Damage with Attack Skills during any Flask Effect"
 			}
 		},
 		[38923]={
@@ -43542,7 +43503,7 @@ return {
 			},
 			skill=38923,
 			stats={
-				[1]="skill_speed_+%"
+				[1]="3% increased Skill Speed"
 			}
 		},
 		[38969]={
@@ -43561,8 +43522,8 @@ return {
 			},
 			skill=38969,
 			stats={
-				[1]="gain_accuracy_rating_equal_to_intelligence",
-				[2]="accuracy_rating_+%"
+				[1]="10% increased Accuracy Rating",
+				[2]="Gain Accuracy Rating equal to your Intelligence"
 			}
 		},
 		[38972]={
@@ -43580,7 +43541,7 @@ return {
 			},
 			skill=38972,
 			stats={
-				[1]="minion_resummon_speed_+%"
+				[1]="Minions Revive 25% faster"
 			}
 		},
 		[38993]={
@@ -43598,7 +43559,7 @@ return {
 			},
 			skill=38993,
 			stats={
-				[1]="bow_critical_strike_multiplier_+"
+				[1]="16% increased Critical Damage Bonus with Bows"
 			}
 		},
 		[39037]={
@@ -43618,7 +43579,7 @@ return {
 			},
 			skill=39037,
 			stats={
-				[1]="display_passive_attribute_text"
+				[1]="+5 to any Attribute"
 			}
 		},
 		[39050]={
@@ -43635,8 +43596,8 @@ return {
 			},
 			skill=39050,
 			stats={
-				[1]="damage_+%_vs_enemies_affected_by_status_ailments",
-				[2]="ignite_shock_chill_duration_+%"
+				[1]="25% increased Damage with Hits against Enemies affected by Elemental Ailments",
+				[2]="15% increased Duration of Ignite, Shock and Chill on Enemies"
 			}
 		},
 		[39083]={
@@ -43653,8 +43614,8 @@ return {
 			},
 			skill=39083,
 			stats={
-				[1]="skill_speed_+%",
-				[2]="base_skill_cost_life_instead_of_mana_%"
+				[1]="6% increased Skill Speed",
+				[2]="6% of Skill Mana Costs Converted to Life Costs"
 			}
 		},
 		[39131]={
@@ -43673,7 +43634,7 @@ return {
 			},
 			skill=39131,
 			stats={
-				[1]="display_passive_attribute_text"
+				[1]="+5 to any Attribute"
 			}
 		},
 		[39190]={
@@ -43690,7 +43651,7 @@ return {
 			},
 			skill=39190,
 			stats={
-				[1]="melee_damage_+%_at_close_range"
+				[1]="15% increased Melee Damage with Hits at Close Range"
 			}
 		},
 		[39204]={
@@ -43708,7 +43669,7 @@ return {
 			},
 			skill=39204,
 			stats={
-				[1]="arcane_surge_effect_+1%_per_X_maximum_mana"
+				[1]="1% increased Effect of Arcane Surge on you per 15 maximum Mana"
 			}
 		},
 		[39228]={
@@ -43725,7 +43686,7 @@ return {
 			},
 			skill=39228,
 			stats={
-				[1]="base_reduce_enemy_fire_resistance_%"
+				[1]="Damage Penetrates 6% Fire Resistance"
 			}
 		},
 		[39274]={
@@ -43742,7 +43703,7 @@ return {
 			},
 			skill=39274,
 			stats={
-				[1]="base_life_leech_amount_+%"
+				[1]="10% increased amount of Life Leeched"
 			}
 		},
 		[39280]={
@@ -43759,7 +43720,7 @@ return {
 			},
 			skill=39280,
 			stats={
-				[1]="skill_effect_duration_+%"
+				[1]="10% increased Skill Effect Duration"
 			}
 		},
 		[39292]={
@@ -43777,7 +43738,7 @@ return {
 			},
 			skill=39292,
 			stats={
-				[1]="flask_charges_gained_+%"
+				[1]="12% increased Flask Charges gained"
 			}
 		},
 		[39347]={
@@ -43794,8 +43755,8 @@ return {
 			},
 			skill=39347,
 			stats={
-				[1]="hit_damage_stun_multiplier_+%",
-				[2]="area_of_effect_+%_if_have_stunned_an_enemy_recently"
+				[1]="30% increased Stun Buildup",
+				[2]="15% increased Area of Effect if you have Stunned an Enemy Recently"
 			}
 		},
 		[39365]={
@@ -43813,7 +43774,7 @@ return {
 			},
 			skill=39365,
 			stats={
-				[1]="totem_life_+%"
+				[1]="20% increased Totem Life"
 			}
 		},
 		[39369]={
@@ -43831,7 +43792,7 @@ return {
 			},
 			skill=39369,
 			stats={
-				[1]="attack_additional_critical_strike_chance_permyriad"
+				[1]="Attacks have +1% to Critical Hit Chance"
 			}
 		},
 		[39411]={
@@ -43850,7 +43811,7 @@ return {
 			},
 			skill=39411,
 			stats={
-				[1]="spawn_defender_with_totem"
+				[1]="Trigger Ancestral Spirits when you Summon a Totem"
 			}
 		},
 		[39423]={
@@ -43867,7 +43828,7 @@ return {
 			},
 			skill=39423,
 			stats={
-				[1]="base_reduce_enemy_lightning_resistance_%"
+				[1]="Damage Penetrates 6% Lightning Resistance"
 			}
 		},
 		[39448]={
@@ -43884,7 +43845,7 @@ return {
 			},
 			skill=39448,
 			stats={
-				[1]="axe_attack_speed_+%"
+				[1]="3% increased Attack Speed with Axes"
 			}
 		},
 		[39470]={
@@ -43902,7 +43863,7 @@ return {
 			},
 			skill=39470,
 			stats={
-				[1]="minion_maximum_life_+%"
+				[1]="Minions have 12% increased maximum Life"
 			}
 		},
 		[39515]={
@@ -43919,7 +43880,7 @@ return {
 			},
 			skill=39515,
 			stats={
-				[1]="fire_damage_+%"
+				[1]="12% increased Fire Damage"
 			}
 		},
 		[39517]={
@@ -43936,7 +43897,7 @@ return {
 			},
 			skill=39517,
 			stats={
-				[1]="block_chance_+%"
+				[1]="5% increased Block chance"
 			}
 		},
 		[39540]={
@@ -43953,7 +43914,7 @@ return {
 			},
 			skill=39540,
 			stats={
-				[1]="critical_strike_chance_+%"
+				[1]="10% increased Critical Hit Chance"
 			}
 		},
 		[39564]={
@@ -43971,7 +43932,7 @@ return {
 			},
 			skill=39564,
 			stats={
-				[1]="melee_damage_+%"
+				[1]="10% increased Melee Damage"
 			}
 		},
 		[39567]={
@@ -43989,7 +43950,6 @@ return {
 			},
 			skill=39567,
 			stats={
-				[1]="base_intelligence"
 			}
 		},
 		[39569]={
@@ -44007,7 +43967,7 @@ return {
 			},
 			skill=39569,
 			stats={
-				[1]="base_critical_strike_multiplier_+"
+				[1]="15% increased Critical Damage Bonus"
 			}
 		},
 		[39570]={
@@ -44025,7 +43985,7 @@ return {
 			},
 			skill=39570,
 			stats={
-				[1]="bleed_on_crit_%_with_attacks"
+				[1]="10% chance to inflict Bleeding on Critical Hit with Attacks"
 			}
 		},
 		[39581]={
@@ -44042,7 +44002,7 @@ return {
 			},
 			skill=39581,
 			stats={
-				[1]="hit_damage_stun_multiplier_+%"
+				[1]="15% increased Stun Buildup"
 			}
 		},
 		[39594]={
@@ -44060,7 +44020,7 @@ return {
 			},
 			skill=39594,
 			stats={
-				[1]="base_reduce_enemy_fire_resistance_%"
+				[1]="Damage Penetrates 6% Fire Resistance"
 			}
 		},
 		[39607]={
@@ -44078,7 +44038,7 @@ return {
 			},
 			skill=39607,
 			stats={
-				[1]="flask_charges_gained_+%"
+				[1]="10% increased Flask Charges gained"
 			}
 		},
 		[39621]={
@@ -44095,7 +44055,7 @@ return {
 			},
 			skill=39621,
 			stats={
-				[1]="rage_decay_speed_+%"
+				[1]="Inherent loss of Rage is 10% slower"
 			}
 		},
 		[39640]={
@@ -44113,7 +44073,7 @@ return {
 			},
 			skill=39640,
 			stats={
-				[1]="all_damage_can_shock"
+				[1]="All Damage from Hits Contributes to Shock Chance"
 			}
 		},
 		[39658]={
@@ -44131,7 +44091,7 @@ return {
 			},
 			skill=39658,
 			stats={
-				[1]="block_chance_+%"
+				[1]="5% increased Block chance"
 			}
 		},
 		[39710]={
@@ -44148,7 +44108,7 @@ return {
 			},
 			skill=39710,
 			stats={
-				[1]="display_passive_attribute_text"
+				[1]="+5 to any Attribute"
 			}
 		},
 		[39716]={
@@ -44166,7 +44126,7 @@ return {
 			},
 			skill=39716,
 			stats={
-				[1]="ignite_chance_+%"
+				[1]="15% increased chance to Ignite"
 			}
 		},
 		[39723]={
@@ -44184,7 +44144,7 @@ return {
 			},
 			skill=39723,
 			stats={
-				[1]="accuracy_rating_+%"
+				[1]="12% increased Accuracy Rating"
 			}
 		},
 		[39752]={
@@ -44201,7 +44161,7 @@ return {
 			},
 			skill=39752,
 			stats={
-				[1]="ignite_shock_chill_duration_+%"
+				[1]="10% increased Duration of Ignite, Shock and Chill on Enemies"
 			}
 		},
 		[39759]={
@@ -44218,7 +44178,7 @@ return {
 			},
 			skill=39759,
 			stats={
-				[1]="life_regeneration_rate_+%"
+				[1]="10% increased Life Regeneration rate"
 			}
 		},
 		[39839]={
@@ -44235,7 +44195,7 @@ return {
 			},
 			skill=39839,
 			stats={
-				[1]="stun_threshold_+%_when_not_stunned_recently"
+				[1]="20% increased Stun Threshold if you haven't been Stunned Recently"
 			}
 		},
 		[39881]={
@@ -44253,9 +44213,9 @@ return {
 			},
 			skill=39881,
 			stats={
-				[1]="knockback_distance_+%",
-				[2]="physical_damage_+%",
-				[3]="base_critical_strike_multiplier_+"
+				[1]="20% increased Critical Damage Bonus",
+				[2]="20% increased Global Physical Damage",
+				[3]="20% increased Knockback Distance"
 			}
 		},
 		[39886]={
@@ -44272,7 +44232,7 @@ return {
 			},
 			skill=39886,
 			stats={
-				[1]="display_passive_attribute_text"
+				[1]="+5 to any Attribute"
 			}
 		},
 		[39935]={
@@ -44289,7 +44249,7 @@ return {
 			},
 			skill=39935,
 			stats={
-				[1]="minions_get_amulet_stats_instead_of_you"
+				[1]="All bonuses from an Equipped Amulet apply to your Minions instead of you"
 			}
 		},
 		[39964]={
@@ -44306,7 +44266,7 @@ return {
 			},
 			skill=39964,
 			stats={
-				[1]="mana_regeneration_rate_+%"
+				[1]="10% increased Mana Regeneration Rate"
 			}
 		},
 		[39987]={
@@ -44323,8 +44283,8 @@ return {
 			},
 			skill=39987,
 			stats={
-				[1]="chaos_damage_+%",
-				[2]="skill_effect_duration_+%"
+				[1]="5% increased Chaos Damage",
+				[2]="5% increased Skill Effect Duration"
 			}
 		},
 		[39990]={
@@ -44341,8 +44301,8 @@ return {
 			},
 			skill=39990,
 			stats={
-				[1]="base_debuff_slow_magnitude_+%",
-				[2]="skill_effect_duration_+%"
+				[1]="20% increased Skill Effect Duration",
+				[2]="Debuffs you inflict have 10% increased Slow Magnitude"
 			}
 		},
 		[40024]={
@@ -44360,7 +44320,7 @@ return {
 			},
 			skill=40024,
 			stats={
-				[1]="base_chance_to_poison_on_hit_%"
+				[1]="8% chance to Poison on Hit"
 			}
 		},
 		[40043]={
@@ -44377,7 +44337,7 @@ return {
 			},
 			skill=40043,
 			stats={
-				[1]="base_bleeding_effect_+%"
+				[1]="10% increased Magnitude of Bleeding you inflict"
 			}
 		},
 		[40068]={
@@ -44394,7 +44354,7 @@ return {
 			},
 			skill=40068,
 			stats={
-				[1]="hit_damage_freeze_multiplier_+%"
+				[1]="15% increased Freeze Buildup"
 			}
 		},
 		[40073]={
@@ -44411,8 +44371,8 @@ return {
 			},
 			skill=40073,
 			stats={
-				[1]="shock_chance_+%",
-				[2]="non_skill_base_lightning_damage_%_to_gain_as_cold"
+				[1]="40% increased chance to Shock",
+				[2]="Gain 5% of Lightning Damage as Extra Cold Damage"
 			}
 		},
 		[40117]={
@@ -44430,7 +44390,7 @@ return {
 			},
 			skill=40117,
 			stats={
-				[1]="base_body_armour_permyriad_to_gain_as_physical_thorns_damage"
+				[1]="Gain Physical Thorns damage equal to 2% of Armour from equipped Body Armour"
 			}
 		},
 		[40166]={
@@ -44447,8 +44407,8 @@ return {
 			},
 			skill=40166,
 			stats={
-				[1]="attack_speed_+%",
-				[2]="base_cost_+%"
+				[1]="8% increased Attack Speed",
+				[2]="10% reduced Cost of Skills"
 			}
 		},
 		[40200]={
@@ -44466,7 +44426,7 @@ return {
 			},
 			skill=40200,
 			stats={
-				[1]="minion_damage_+%"
+				[1]="Minions deal 12% increased Damage"
 			}
 		},
 		[40213]={
@@ -44483,8 +44443,8 @@ return {
 			},
 			skill=40213,
 			stats={
-				[1]="base_life_gained_on_enemy_death",
-				[2]="recover_maximum_life_on_enemy_killed_chance_%"
+				[1]="Gain 20 Life per Enemy Killed",
+				[2]="2% chance to Recover all Life when you Kill an Enemy"
 			}
 		},
 		[40244]={
@@ -44501,7 +44461,7 @@ return {
 			},
 			skill=40244,
 			stats={
-				[1]="one_handed_melee_attack_speed_+%"
+				[1]="3% increased Attack Speed with One Handed Melee Weapons"
 			}
 		},
 		[40270]={
@@ -44518,8 +44478,8 @@ return {
 			},
 			skill=40270,
 			stats={
-				[1]="gain_maximum_frenzy_charges_on_frenzy_charge_gained_%_chance",
-				[2]="max_frenzy_charges"
+				[1]="+1 to Maximum Frenzy Charges",
+				[2]="5% chance that if you would gain Frenzy Charges, you instead gain up to your maximum number of Frenzy Charges"
 			}
 		},
 		[40276]={
@@ -44536,7 +44496,7 @@ return {
 			},
 			skill=40276,
 			stats={
-				[1]="base_chance_to_inflict_bleeding_%"
+				[1]="5% chance to inflict Bleeding on Hit"
 			}
 		},
 		[40325]={
@@ -44554,8 +44514,8 @@ return {
 			},
 			skill=40325,
 			stats={
-				[1]="stun_threshold_+%",
-				[2]="global_defences_+%"
+				[1]="10% increased Global Defences",
+				[2]="25% increased Stun Threshold"
 			}
 		},
 		[40328]={
@@ -44572,7 +44532,7 @@ return {
 			},
 			skill=40328,
 			stats={
-				[1]="warcry_speed_+%"
+				[1]="16% increased Warcry Speed"
 			}
 		},
 		[40336]={
@@ -44589,7 +44549,7 @@ return {
 			},
 			skill=40336,
 			stats={
-				[1]="base_chance_to_inflict_bleeding_%"
+				[1]="5% chance to inflict Bleeding on Hit"
 			}
 		},
 		[40341]={
@@ -44606,7 +44566,7 @@ return {
 			},
 			skill=40341,
 			stats={
-				[1]="movement_speed_+%_if_enemy_killed_recently"
+				[1]="3% increased Movement Speed if you've Killed Recently"
 			}
 		},
 		[40345]={
@@ -44623,8 +44583,8 @@ return {
 			},
 			skill=40345,
 			stats={
-				[1]="curse_effect_+%",
-				[2]="base_curse_duration_+%"
+				[1]="25% reduced Curse Duration",
+				[2]="18% increased Effect of your Curses"
 			}
 		},
 		[40399]={
@@ -44641,7 +44601,7 @@ return {
 			},
 			skill=40399,
 			stats={
-				[1]="trigger_skills_refund_half_energy_spent_chance_%"
+				[1]="25% chance for Trigger skills to refund half of Energy Spent"
 			}
 		},
 		[40453]={
@@ -44658,7 +44618,7 @@ return {
 			},
 			skill=40453,
 			stats={
-				[1]="energy_generated_+%"
+				[1]="Meta Skills gain 8% increased Energy"
 			}
 		},
 		[40480]={
@@ -44675,8 +44635,8 @@ return {
 			},
 			skill=40480,
 			stats={
-				[1]="shock_effect_+%_with_critical_strikes",
-				[2]="critical_strike_chance_+%_vs_shocked_enemies"
+				[1]="25% increased Critical Hit Chance against Shocked Enemies",
+				[2]="40% increased Magnitude of Shock you inflict with Critical Hits"
 			}
 		},
 		[40596]={
@@ -44693,7 +44653,7 @@ return {
 			},
 			skill=40596,
 			stats={
-				[1]="stun_threshold_+%"
+				[1]="12% increased Stun Threshold"
 			}
 		},
 		[40630]={
@@ -44710,7 +44670,7 @@ return {
 			},
 			skill=40630,
 			stats={
-				[1]="flask_charges_gained_+%"
+				[1]="15% increased Flask Charges gained"
 			}
 		},
 		[40691]={
@@ -44727,7 +44687,7 @@ return {
 			},
 			skill=40691,
 			stats={
-				[1]="energy_shield_recharge_rate_+%"
+				[1]="15% increased Energy Shield Recharge Rate"
 			}
 		},
 		[40719]={
@@ -44745,7 +44705,7 @@ return {
 			},
 			skill=40719,
 			stats={
-				[1]="damage_vs_enemies_on_low_life_+%"
+				[1]="35% increased Damage with Hits against Enemies that are on Low Life"
 			}
 		},
 		[40721]={
@@ -44786,7 +44746,7 @@ return {
 			},
 			skill=40760,
 			stats={
-				[1]="critical_strike_chance_+%"
+				[1]="10% increased Critical Hit Chance"
 			}
 		},
 		[40783]={
@@ -44807,7 +44767,7 @@ return {
 			},
 			skill=40783,
 			stats={
-				[1]="display_passive_attribute_text"
+				[1]="+5 to any Attribute"
 			}
 		},
 		[40803]={
@@ -44824,7 +44784,7 @@ return {
 			},
 			skill=40803,
 			stats={
-				[1]="hit_damage_+%_vs_chilled_enemies"
+				[1]="30% increased Damage with Hits against Chilled Enemies"
 			}
 		},
 		[40894]={
@@ -44842,7 +44802,7 @@ return {
 			},
 			skill=40894,
 			stats={
-				[1]="minion_maximum_life_+%"
+				[1]="Minions have 10% increased maximum Life"
 			}
 		},
 		[40915]={
@@ -44860,7 +44820,7 @@ return {
 			},
 			skill=40915,
 			stats={
-				[1]="damage_removed_from_your_nearest_totem_before_life_or_es_%"
+				[1]="20% of Damage from Hits is taken from your nearest Totem's Life before you"
 			}
 		},
 		[40918]={
@@ -44877,8 +44837,8 @@ return {
 			},
 			skill=40918,
 			stats={
-				[1]="ailment_effect_+%",
-				[2]="damaging_ailment_duration_+%"
+				[1]="5% increased Magnitude of Ailments you inflict",
+				[2]="5% increased Duration of Damaging Ailments on Enemies"
 			}
 		},
 		[40990]={
@@ -44895,8 +44855,8 @@ return {
 			},
 			skill=40990,
 			stats={
-				[1]="base_reduce_enemy_lightning_resistance_%",
-				[2]="critical_strike_chance_+%_vs_enemies_with_lightning_exposure"
+				[1]="Damage Penetrates 18% Lightning Resistance",
+				[2]="30% increased Critical Hit Chance against enemies with Lightning Exposure"
 			}
 		},
 		[41017]={
@@ -44915,7 +44875,7 @@ return {
 			},
 			skill=41017,
 			stats={
-				[1]="display_passive_attribute_text"
+				[1]="+5 to any Attribute"
 			}
 		},
 		[41029]={
@@ -44935,7 +44895,7 @@ return {
 			},
 			skill=41029,
 			stats={
-				[1]="display_passive_attribute_text"
+				[1]="+5 to any Attribute"
 			}
 		},
 		[41031]={
@@ -44952,7 +44912,7 @@ return {
 			},
 			skill=41031,
 			stats={
-				[1]="display_passive_attribute_text"
+				[1]="+5 to any Attribute"
 			}
 		},
 		[41044]={
@@ -44969,7 +44929,7 @@ return {
 			},
 			skill=41044,
 			stats={
-				[1]="mana_regeneration_rate_+%"
+				[1]="10% increased Mana Regeneration Rate"
 			}
 		},
 		[41076]={
@@ -44989,9 +44949,11 @@ return {
 			},
 			skill=41076,
 			stats={
-				[1]="darkness_per_level",
-				[2]="base_darkness_refresh_rate_ms",
-				[3]="base_darkness"
+				[1]="Removes all Spirit",
+				[2]="Base Maximum Darkness is 100",
+				[3]="Damage taken is Reserved from Darkness before being taken from Life or Energy Shield",
+				[4]="Darkness Reservation lasts for 10 seconds",
+				[5]="+5 to Maximum Darkness per Level"
 			}
 		},
 		[41096]={
@@ -45009,8 +44971,8 @@ return {
 			},
 			skill=41096,
 			stats={
-				[1]="elemental_damage_+%",
-				[2]="shock_chance_+%"
+				[1]="10% increased chance to Shock",
+				[2]="8% increased Elemental Damage"
 			}
 		},
 		[41105]={
@@ -45027,7 +44989,7 @@ return {
 			},
 			skill=41105,
 			stats={
-				[1]="damage_taken_goes_to_life_over_4_seconds_%"
+				[1]="3% of Damage taken Recouped as Life"
 			}
 		},
 		[41126]={
@@ -45045,7 +45007,7 @@ return {
 			},
 			skill=41126,
 			stats={
-				[1]="attack_area_damage_+%"
+				[1]="12% increased Attack Area Damage"
 			}
 		},
 		[41129]={
@@ -45062,7 +45024,7 @@ return {
 			},
 			skill=41129,
 			stats={
-				[1]="damage_+%_vs_enemies_affected_by_status_ailments"
+				[1]="12% increased Damage with Hits against Enemies affected by Elemental Ailments"
 			}
 		},
 		[41154]={
@@ -45079,7 +45041,7 @@ return {
 			},
 			skill=41154,
 			stats={
-				[1]="chill_effect_+%"
+				[1]="15% increased Magnitude of Chill you inflict"
 			}
 		},
 		[41171]={
@@ -45097,7 +45059,7 @@ return {
 			},
 			skill=41171,
 			stats={
-				[1]="attack_speed_+%_if_rare_or_unique_enemy_nearby"
+				[1]="4% increased Attack Speed while a Rare or Unique Enemy is in your Presence"
 			}
 		},
 		[41186]={
@@ -45114,7 +45076,7 @@ return {
 			},
 			skill=41186,
 			stats={
-				[1]="summon_totem_cast_speed_+%"
+				[1]="12% increased Totem Placement speed"
 			}
 		},
 		[41210]={
@@ -45132,8 +45094,8 @@ return {
 			},
 			skill=41210,
 			stats={
-				[1]="projectile_damage_+%",
-				[2]="projectile_chance_to_chain_1_extra_time_from_terrain_%"
+				[1]="15% increased Projectile Damage",
+				[2]="Projectiles have 10% chance to Chain an additional time from terrain"
 			}
 		},
 		[41263]={
@@ -45168,7 +45130,7 @@ return {
 			},
 			skill=41363,
 			stats={
-				[1]="base_maximum_lightning_damage_resistance_%"
+				[1]="+1% to Maximum Lightning Resistance"
 			}
 		},
 		[41372]={
@@ -45185,8 +45147,8 @@ return {
 			},
 			skill=41372,
 			stats={
-				[1]="maximum_energy_shield_+%",
-				[2]="mana_regeneration_rate_+%"
+				[1]="10% increased maximum Energy Shield",
+				[2]="6% increased Mana Regeneration Rate"
 			}
 		},
 		[41414]={
@@ -45203,7 +45165,7 @@ return {
 			},
 			skill=41414,
 			stats={
-				[1]="base_maximum_cold_damage_resistance_%"
+				[1]="+1% to Maximum Cold Resistance"
 			}
 		},
 		[41493]={
@@ -45220,8 +45182,8 @@ return {
 			},
 			skill=41493,
 			stats={
-				[1]="attack_area_damage_+%",
-				[2]="attack_area_of_effect_+%"
+				[1]="8% increased Attack Area Damage",
+				[2]="5% increased Area of Effect for Attacks"
 			}
 		},
 		[41497]={
@@ -45238,8 +45200,8 @@ return {
 			},
 			skill=41497,
 			stats={
-				[1]="minion_maximum_life_+%",
-				[2]="minion_chaos_resistance_%"
+				[1]="Minions have 8% increased maximum Life",
+				[2]="Minions have +7% to Chaos Resistance"
 			}
 		},
 		[41512]={
@@ -45256,9 +45218,8 @@ return {
 			},
 			skill=41512,
 			stats={
-				[1]="melee_damage_+%",
-				[2]="base_strength",
-				[3]="melee_hit_damage_stun_multiplier_+%"
+				[1]="15% increased Melee Damage",
+				[2]="15% increased Stun Buildup with Melee Damage"
 			}
 		},
 		[41529]={
@@ -45275,7 +45236,7 @@ return {
 			},
 			skill=41529,
 			stats={
-				[1]="base_critical_strike_multiplier_+"
+				[1]="15% increased Critical Damage Bonus"
 			}
 		},
 		[41538]={
@@ -45293,7 +45254,7 @@ return {
 			},
 			skill=41538,
 			stats={
-				[1]="ailment_threshold_+%"
+				[1]="15% increased Elemental Ailment Threshold"
 			}
 		},
 		[41573]={
@@ -45310,7 +45271,7 @@ return {
 			},
 			skill=41573,
 			stats={
-				[1]="base_reduce_enemy_fire_resistance_%"
+				[1]="Damage Penetrates 6% Fire Resistance"
 			}
 		},
 		[41580]={
@@ -45328,8 +45289,8 @@ return {
 			},
 			skill=41580,
 			stats={
-				[1]="attack_damage_+%",
-				[2]="maim_on_hit_%"
+				[1]="25% increased Attack Damage",
+				[2]="Attacks have 25% chance to Maim on Hit"
 			}
 		},
 		[41615]={
@@ -45347,7 +45308,7 @@ return {
 			},
 			skill=41615,
 			stats={
-				[1]="summon_totem_cast_speed_+%"
+				[1]="20% increased Totem Placement speed"
 			}
 		},
 		[41619]={
@@ -45365,7 +45326,8 @@ return {
 			},
 			skill=41619,
 			stats={
-				[1]="life_flask_effects_are_not_removed_at_full_life"
+				[1]="Life Flask Effects are not removed when Unreserved Life is Filled",
+				[2]="Life Flask Effects do not Queue"
 			}
 		},
 		[41645]={
@@ -45383,7 +45345,7 @@ return {
 			},
 			skill=41645,
 			stats={
-				[1]="physical_damage_+%"
+				[1]="10% increased Global Physical Damage"
 			}
 		},
 		[41646]={
@@ -45401,7 +45363,7 @@ return {
 			},
 			skill=41646,
 			stats={
-				[1]="display_passive_attribute_text"
+				[1]="+5 to any Attribute"
 			}
 		},
 		[41657]={
@@ -45418,7 +45380,7 @@ return {
 			},
 			skill=41657,
 			stats={
-				[1]="physical_damage_reduction_rating_+%"
+				[1]="15% increased Armour"
 			}
 		},
 		[41665]={
@@ -45435,8 +45397,8 @@ return {
 			},
 			skill=41665,
 			stats={
-				[1]="base_critical_strike_multiplier_+",
-				[2]="base_mana_cost_-%"
+				[1]="20% increased Critical Damage Bonus",
+				[2]="5% increased Mana Cost of Skills"
 			}
 		},
 		[41669]={
@@ -45455,7 +45417,7 @@ return {
 			},
 			skill=41669,
 			stats={
-				[1]="cold_damage_+%"
+				[1]="12% increased Cold Damage"
 			}
 		},
 		[41739]={
@@ -45472,7 +45434,7 @@ return {
 			},
 			skill=41739,
 			stats={
-				[1]="hit_damage_stun_multiplier_+%"
+				[1]="15% increased Stun Buildup"
 			}
 		},
 		[41747]={
@@ -45489,7 +45451,7 @@ return {
 			},
 			skill=41747,
 			stats={
-				[1]="flail_critical_strike_chance_+%"
+				[1]="15% increased Critical Hit Chance with Flails"
 			}
 		},
 		[41768]={
@@ -45509,7 +45471,7 @@ return {
 			},
 			skill=41768,
 			stats={
-				[1]="display_passive_attribute_text"
+				[1]="+5 to any Attribute"
 			}
 		},
 		[41811]={
@@ -45527,8 +45489,8 @@ return {
 			},
 			skill=41811,
 			stats={
-				[1]="hit_damage_stun_multiplier_+%",
-				[2]="daze_build_up_+%"
+				[1]="30% increased Stun Buildup",
+				[2]="30% increased Daze Buildup"
 			}
 		},
 		[41873]={
@@ -45545,7 +45507,7 @@ return {
 			},
 			skill=41873,
 			stats={
-				[1]="base_frenzy_charge_duration_+%"
+				[1]="20% increased Frenzy Charge Duration"
 			}
 		},
 		[41875]={
@@ -45562,7 +45524,7 @@ return {
 			},
 			skill=41875,
 			stats={
-				[1]="deadeye_projectile_damage_+%_final_max_as_distance_travelled_decreases"
+				[1]="Projectiles deal 20% more Hit damage to targets in the first 3.5 metres of their movement, scaling down with distance travelled to reach 0% after 7 metres"
 			}
 		},
 		[41877]={
@@ -45583,7 +45545,7 @@ return {
 			},
 			skill=41877,
 			stats={
-				[1]="display_passive_attribute_text"
+				[1]="+5 to any Attribute"
 			}
 		},
 		[41905]={
@@ -45600,8 +45562,8 @@ return {
 			},
 			skill=41905,
 			stats={
-				[1]="minion_resummon_speed_+%",
-				[2]="you_gain_%_life_when_one_of_your_minions_is_revived"
+				[1]="Minions Revive 15% faster",
+				[2]="You gain 2% Life when one of your Minions is Revived"
 			}
 		},
 		[41965]={
@@ -45618,7 +45580,7 @@ return {
 			},
 			skill=41965,
 			stats={
-				[1]="spell_damage_+%"
+				[1]="8% increased Spell Damage"
 			}
 		},
 		[41972]={
@@ -45636,8 +45598,8 @@ return {
 			},
 			skill=41972,
 			stats={
-				[1]="base_reduce_enemy_cold_resistance_%",
-				[2]="cold_exposure_effect_+%"
+				[1]="Damage Penetrates 18% Cold Resistance",
+				[2]="25% increased Cold Exposure Effect"
 			}
 		},
 		[41991]={
@@ -45654,7 +45616,7 @@ return {
 			},
 			skill=41991,
 			stats={
-				[1]="minion_attack_and_cast_speed_+%"
+				[1]="Minions have 3% increased Attack and Cast Speed"
 			}
 		},
 		[42026]={
@@ -45671,7 +45633,7 @@ return {
 			},
 			skill=42026,
 			stats={
-				[1]="warcry_speed_+%"
+				[1]="16% increased Warcry Speed"
 			}
 		},
 		[42035]={
@@ -45690,7 +45652,7 @@ return {
 			},
 			skill=42035,
 			stats={
-				[1]="damage_taken_goes_to_life_over_4_seconds_%"
+				[1]="30% of Damage taken Recouped as Life"
 			}
 		},
 		[42036]={
@@ -45708,8 +45670,8 @@ return {
 			},
 			skill=42036,
 			stats={
-				[1]="block_chance_+%",
-				[2]="base_block_%_damage_taken"
+				[1]="30% increased Block chance",
+				[2]="You take 10% of damage from Blocked Hits"
 			}
 		},
 		[42065]={
@@ -45726,8 +45688,7 @@ return {
 			},
 			skill=42065,
 			stats={
-				[1]="base_reduce_enemy_lightning_resistance_%",
-				[2]="base_dexterity"
+				[1]="Damage Penetrates 15% Lightning Resistance"
 			}
 		},
 		[42076]={
@@ -45744,8 +45705,8 @@ return {
 			},
 			skill=42076,
 			stats={
-				[1]="energy_shield_recharge_rate_+%",
-				[2]="flask_mana_to_recover_+%"
+				[1]="10% increased Energy Shield Recharge Rate",
+				[2]="10% increased Mana Recovery from Flasks"
 			}
 		},
 		[42077]={
@@ -45763,8 +45724,7 @@ return {
 			},
 			skill=42077,
 			stats={
-				[1]="energy_shield_recharge_rate_+%",
-				[2]="base_intelligence"
+				[1]="40% increased Energy Shield Recharge Rate"
 			}
 		},
 		[42111]={
@@ -45782,7 +45742,7 @@ return {
 			},
 			skill=42111,
 			stats={
-				[1]="armour_break_amount_+%"
+				[1]="Break 20% increased Armour"
 			}
 		},
 		[42127]={
@@ -45799,7 +45759,7 @@ return {
 			},
 			skill=42127,
 			stats={
-				[1]="base_reduce_enemy_fire_resistance_%"
+				[1]="Damage Penetrates 6% Fire Resistance"
 			}
 		},
 		[42177]={
@@ -45817,9 +45777,9 @@ return {
 			},
 			skill=42177,
 			stats={
-				[1]="attack_speed_+%",
-				[2]="accuracy_rating_+%",
-				[3]="dexterity_+%"
+				[1]="5% increased Attack Speed",
+				[2]="5% increased Dexterity",
+				[3]="10% increased Accuracy Rating"
 			}
 		},
 		[42250]={
@@ -45839,7 +45799,7 @@ return {
 			},
 			skill=42250,
 			stats={
-				[1]="display_passive_attribute_text"
+				[1]="+5 to any Attribute"
 			}
 		},
 		[42275]={
@@ -45858,7 +45818,7 @@ return {
 			},
 			skill=42275,
 			stats={
-				[1]="slam_aftershock_chance_%"
+				[1]="20% chance for Slam Skills you use yourself to cause Aftershocks"
 			}
 		},
 		[42280]={
@@ -45875,7 +45835,7 @@ return {
 			},
 			skill=42280,
 			stats={
-				[1]="additional_all_attributes"
+				[1]="+3 to all Attributes"
 			}
 		},
 		[42290]={
@@ -45892,7 +45852,7 @@ return {
 			},
 			skill=42290,
 			stats={
-				[1]="curse_effect_+%"
+				[1]="6% increased Effect of your Curses"
 			}
 		},
 		[42302]={
@@ -45911,7 +45871,7 @@ return {
 			},
 			skill=42302,
 			stats={
-				[1]="chance_to_fork_extra_projectile_%"
+				[1]="Projectiles have 75% chance for an additional Projectile when Forking"
 			}
 		},
 		[42350]={
@@ -45928,7 +45888,7 @@ return {
 			},
 			skill=42350,
 			stats={
-				[1]="display_passive_attribute_text"
+				[1]="+5 to any Attribute"
 			}
 		},
 		[42354]={
@@ -45946,8 +45906,8 @@ return {
 			},
 			skill=42354,
 			stats={
-				[1]="blind_enemies_when_they_stun_you",
-				[2]="blind_effect_+%"
+				[1]="20% increased Blind Effect",
+				[2]="Blind Enemies when they Stun you"
 			}
 		},
 		[42379]={
@@ -45965,7 +45925,7 @@ return {
 			},
 			skill=42379,
 			stats={
-				[1]="display_passive_attribute_text"
+				[1]="+5 to any Attribute"
 			}
 		},
 		[42390]={
@@ -45983,7 +45943,7 @@ return {
 			},
 			skill=42390,
 			stats={
-				[1]="inflict_fire_exposure_on_hits_that_heavy_stun"
+				[1]="Hits that Heavy Stun inflict Fire Exposure"
 			}
 		},
 		[42410]={
@@ -46000,8 +45960,8 @@ return {
 			},
 			skill=42410,
 			stats={
-				[1]="attack_area_damage_+%",
-				[2]="armour_break_amount_+%"
+				[1]="Break 10% increased Armour",
+				[2]="8% increased Attack Area Damage"
 			}
 		},
 		[42416]={
@@ -46038,7 +45998,7 @@ return {
 			},
 			skill=42500,
 			stats={
-				[1]="display_passive_attribute_text"
+				[1]="+5 to any Attribute"
 			}
 		},
 		[42522]={
@@ -46056,7 +46016,7 @@ return {
 			},
 			skill=42522,
 			stats={
-				[1]="recoup_%_elemental_damage_as_energy_shield"
+				[1]="40% of Elemental Damage taken Recouped as Energy Shield"
 			}
 		},
 		[42578]={
@@ -46073,7 +46033,7 @@ return {
 			},
 			skill=42578,
 			stats={
-				[1]="block_chance_+%"
+				[1]="5% increased Block chance"
 			}
 		},
 		[42614]={
@@ -46089,7 +46049,7 @@ return {
 			},
 			skill=42614,
 			stats={
-				[1]="offering_duration_+%"
+				[1]="Offering Skills have 30% reduced Duration"
 			}
 		},
 		[42658]={
@@ -46106,7 +46066,7 @@ return {
 			},
 			skill=42658,
 			stats={
-				[1]="display_passive_attribute_text"
+				[1]="+5 to any Attribute"
 			}
 		},
 		[42710]={
@@ -46123,7 +46083,7 @@ return {
 			},
 			skill=42710,
 			stats={
-				[1]="summon_totem_cast_speed_+%"
+				[1]="20% increased Totem Placement speed"
 			}
 		},
 		[42736]={
@@ -46140,7 +46100,7 @@ return {
 			},
 			skill=42736,
 			stats={
-				[1]="display_passive_attribute_text"
+				[1]="+5 to any Attribute"
 			}
 		},
 		[42750]={
@@ -46159,7 +46119,7 @@ return {
 			},
 			skill=42750,
 			stats={
-				[1]="attack_damage_+%"
+				[1]="10% increased Attack Damage"
 			}
 		},
 		[42781]={
@@ -46177,8 +46137,8 @@ return {
 			},
 			skill=42781,
 			stats={
-				[1]="base_chance_to_pierce_%",
-				[2]="projectile_damage_+%"
+				[1]="15% chance to Pierce an Enemy",
+				[2]="15% increased Projectile Damage"
 			}
 		},
 		[42794]={
@@ -46195,7 +46155,7 @@ return {
 			},
 			skill=42794,
 			stats={
-				[1]="elemental_damage_with_attack_skills_+%"
+				[1]="12% increased Elemental Damage with Attacks"
 			}
 		},
 		[42805]={
@@ -46212,8 +46172,8 @@ return {
 			},
 			skill=42805,
 			stats={
-				[1]="evasion_rating_+%",
-				[2]="maximum_energy_shield_+%"
+				[1]="12% increased Evasion Rating",
+				[2]="12% increased maximum Energy Shield"
 			}
 		},
 		[42813]={
@@ -46230,7 +46190,7 @@ return {
 			},
 			skill=42813,
 			stats={
-				[1]="skill_effect_duration_+%"
+				[1]="25% increased Skill Effect Duration"
 			}
 		},
 		[42825]={
@@ -46247,7 +46207,7 @@ return {
 			},
 			skill=42825,
 			stats={
-				[1]="energy_shield_delay_-%"
+				[1]="15% faster start of Energy Shield Recharge"
 			}
 		},
 		[42857]={
@@ -46265,7 +46225,7 @@ return {
 			},
 			skill=42857,
 			stats={
-				[1]="skill_speed_+%"
+				[1]="3% increased Skill Speed"
 			}
 		},
 		[42914]={
@@ -46283,8 +46243,8 @@ return {
 			},
 			skill=42914,
 			stats={
-				[1]="flail_damage_+%",
-				[2]="flail_attack_speed_+%"
+				[1]="15% increased Damage with Flails",
+				[2]="6% increased Attack Speed with Flails"
 			}
 		},
 		[42916]={
@@ -46301,7 +46261,7 @@ return {
 			},
 			skill=42916,
 			stats={
-				[1]="energy_shield_delay_-%"
+				[1]="15% faster start of Energy Shield Recharge"
 			}
 		},
 		[42959]={
@@ -46319,7 +46279,7 @@ return {
 			},
 			skill=42959,
 			stats={
-				[1]="poison_effect_+%_vs_non_poisoned_enemies"
+				[1]="60% increased Effect of Poison you inflict on targets that are not Poisoned"
 			}
 		},
 		[42981]={
@@ -46338,8 +46298,8 @@ return {
 			},
 			skill=42981,
 			stats={
-				[1]="armour_break_amount_+%",
-				[2]="physical_damage_+%"
+				[1]="25% increased Global Physical Damage",
+				[2]="Break 40% increased Armour"
 			}
 		},
 		[42999]={
@@ -46356,7 +46316,7 @@ return {
 			},
 			skill=42999,
 			stats={
-				[1]="chaos_damage_+%"
+				[1]="7% increased Chaos Damage"
 			}
 		},
 		[43014]={
@@ -46373,7 +46333,7 @@ return {
 			},
 			skill=43014,
 			stats={
-				[1]="melee_damage_+%"
+				[1]="10% increased Melee Damage"
 			}
 		},
 		[43036]={
@@ -46391,7 +46351,7 @@ return {
 			},
 			skill=43036,
 			stats={
-				[1]="mana_regeneration_rate_+%"
+				[1]="10% increased Mana Regeneration Rate"
 			}
 		},
 		[43082]={
@@ -46408,8 +46368,8 @@ return {
 			},
 			skill=43082,
 			stats={
-				[1]="skill_speed_+%",
-				[2]="base_movement_velocity_+%"
+				[1]="3% increased Movement Speed",
+				[2]="10% increased Skill Speed"
 			}
 		},
 		[43128]={
@@ -46427,7 +46387,7 @@ return {
 			},
 			skill=43128,
 			stats={
-				[1]="base_cast_speed_+%"
+				[1]="4% increased Cast Speed"
 			}
 		},
 		[43131]={
@@ -46445,7 +46405,7 @@ return {
 			},
 			skill=43131,
 			stats={
-				[1]="damage_vs_enemies_on_low_life_+%"
+				[1]="35% increased Damage with Hits against Enemies that are on Low Life"
 			}
 		},
 		[43139]={
@@ -46463,7 +46423,7 @@ return {
 			},
 			skill=43139,
 			stats={
-				[1]="damage_+%_per_enemy_elemental_ailment"
+				[1]="15% increased Damage for each type of Elemental Ailment on Enemy"
 			}
 		},
 		[43155]={
@@ -46481,7 +46441,7 @@ return {
 			},
 			skill=43155,
 			stats={
-				[1]="crossbow_critical_strike_chance_+%"
+				[1]="10% increased Critical Hit Chance with Crossbows"
 			}
 		},
 		[43164]={
@@ -46498,7 +46458,7 @@ return {
 			},
 			skill=43164,
 			stats={
-				[1]="melee_damage_+%"
+				[1]="10% increased Melee Damage"
 			}
 		},
 		[43183]={
@@ -46515,8 +46475,8 @@ return {
 			},
 			skill=43183,
 			stats={
-				[1]="attack_speed_+%",
-				[2]="accuracy_rating_+%"
+				[1]="2% increased Attack Speed",
+				[2]="5% increased Accuracy Rating"
 			}
 		},
 		[43201]={
@@ -46533,7 +46493,7 @@ return {
 			},
 			skill=43201,
 			stats={
-				[1]="ailment_chance_+%"
+				[1]="10% increased chance to inflict Ailments"
 			}
 		},
 		[43263]={
@@ -46550,7 +46510,7 @@ return {
 			},
 			skill=43263,
 			stats={
-				[1]="one_handed_melee_attack_speed_+%"
+				[1]="3% increased Attack Speed with One Handed Melee Weapons"
 			}
 		},
 		[43281]={
@@ -46567,7 +46527,7 @@ return {
 			},
 			skill=43281,
 			stats={
-				[1]="triggered_spell_spell_damage_+%"
+				[1]="Triggered Spells deal 16% increased Spell Damage"
 			}
 		},
 		[43366]={
@@ -46584,7 +46544,7 @@ return {
 			},
 			skill=43366,
 			stats={
-				[1]="minion_additional_physical_damage_reduction_%"
+				[1]="Minions have 12% additional Physical Damage Reduction"
 			}
 		},
 		[43383]={
@@ -46602,8 +46562,8 @@ return {
 			},
 			skill=43383,
 			stats={
-				[1]="ailment_chance_+%",
-				[2]="armour_break_amount_+%_vs_enemies_affected_by_ailments"
+				[1]="15% increased chance to inflict Ailments",
+				[2]="Break 30% increased Armour on enemies affected by Ailments"
 			}
 		},
 		[43396]={
@@ -46620,8 +46580,8 @@ return {
 			},
 			skill=43396,
 			stats={
-				[1]="summon_totem_cast_speed_+%",
-				[2]="totem_placement_range_+%"
+				[1]="25% increased Totem Placement speed",
+				[2]="50% increased Totem Placement range"
 			}
 		},
 		[43423]={
@@ -46638,10 +46598,10 @@ return {
 			},
 			skill=43423,
 			stats={
-				[1]="shock_chance_+%",
-				[2]="ignite_chance_+%",
-				[3]="hit_damage_freeze_multiplier_+%",
-				[4]="hit_damage_electrocute_multiplier_+%"
+				[1]="25% increased chance to Ignite",
+				[2]="25% increased Freeze Buildup",
+				[3]="25% increased chance to Shock",
+				[4]="25% increased Electrocute Buildup"
 			}
 		},
 		[43443]={
@@ -46660,7 +46620,7 @@ return {
 			},
 			skill=43443,
 			stats={
-				[1]="flail_critical_strike_chance_+%"
+				[1]="15% increased Critical Hit Chance with Flails"
 			}
 		},
 		[43444]={
@@ -46677,7 +46637,7 @@ return {
 			},
 			skill=43444,
 			stats={
-				[1]="knockback_distance_+%"
+				[1]="8% increased Knockback Distance"
 			}
 		},
 		[43522]={
@@ -46695,7 +46655,7 @@ return {
 			},
 			skill=43522,
 			stats={
-				[1]="charm_charges_used_+%"
+				[1]="6% reduced Charm Charges used"
 			}
 		},
 		[43557]={
@@ -46711,7 +46671,7 @@ return {
 			},
 			skill=43557,
 			stats={
-				[1]="minion_critical_strike_multiplier_+"
+				[1]="Minions have 15% increased Critical Damage Bonus"
 			}
 		},
 		[43562]={
@@ -46730,7 +46690,7 @@ return {
 			},
 			skill=43562,
 			stats={
-				[1]="attacks_chance_to_blind_on_hit_%"
+				[1]="8% chance to Blind Enemies on Hit with Attacks"
 			}
 		},
 		[43575]={
@@ -46747,7 +46707,7 @@ return {
 			},
 			skill=43575,
 			stats={
-				[1]="melee_damage_+%"
+				[1]="10% increased Melee Damage"
 			}
 		},
 		[43576]={
@@ -46764,7 +46724,7 @@ return {
 			},
 			skill=43576,
 			stats={
-				[1]="mana_regeneration_rate_+%"
+				[1]="10% increased Mana Regeneration Rate"
 			}
 		},
 		[43578]={
@@ -46781,7 +46741,7 @@ return {
 			},
 			skill=43578,
 			stats={
-				[1]="projectile_damage_+%"
+				[1]="10% increased Projectile Damage"
 			}
 		},
 		[43650]={
@@ -46800,7 +46760,7 @@ return {
 			},
 			skill=43650,
 			stats={
-				[1]="hit_damage_stun_multiplier_+%_with_crits"
+				[1]="15% increased Stun Buildup with Critical Hits"
 			}
 		},
 		[43653]={
@@ -46817,7 +46777,7 @@ return {
 			},
 			skill=43653,
 			stats={
-				[1]="cold_damage_+%"
+				[1]="12% increased Cold Damage"
 			}
 		},
 		[43677]={
@@ -46834,8 +46794,8 @@ return {
 			},
 			skill=43677,
 			stats={
-				[1]="base_poison_effect_+%",
-				[2]="maim_on_hit_%_vs_poisoned_enemies"
+				[1]="25% chance for Attacks to Maim on Hit against Poisoned Enemies",
+				[2]="25% increased Magnitude of Poison you inflict"
 			}
 		},
 		[43691]={
@@ -46855,7 +46815,7 @@ return {
 			},
 			skill=43691,
 			stats={
-				[1]="display_passive_attribute_text"
+				[1]="+5 to any Attribute"
 			}
 		},
 		[43695]={
@@ -46872,8 +46832,8 @@ return {
 			},
 			skill=43695,
 			stats={
-				[1]="flask_duration_+%",
-				[2]="flask_charges_gained_+%"
+				[1]="25% increased Flask Effect Duration",
+				[2]="25% increased Flask Charges gained"
 			}
 		},
 		[43711]={
@@ -46890,7 +46850,7 @@ return {
 			},
 			skill=43711,
 			stats={
-				[1]="base_thorns_critical_strike_chance"
+				[1]="+5% to Thorns Critical Hit Chance"
 			}
 		},
 		[43713]={
@@ -46909,7 +46869,7 @@ return {
 			},
 			skill=43713,
 			stats={
-				[1]="offering_area_of_effect_+%"
+				[1]="Offering Skills have 20% increased Area of Effect"
 			}
 		},
 		[43720]={
@@ -46926,8 +46886,8 @@ return {
 			},
 			skill=43720,
 			stats={
-				[1]="base_mana_leech_amount_+%",
-				[2]="base_cold_damage_resistance_%"
+				[1]="+5% to Cold Resistance",
+				[2]="10% increased amount of Mana Leeched"
 			}
 		},
 		[43736]={
@@ -46944,7 +46904,7 @@ return {
 			},
 			skill=43736,
 			stats={
-				[1]="energy_shield_delay_-%"
+				[1]="15% faster start of Energy Shield Recharge"
 			}
 		},
 		[43746]={
@@ -46961,7 +46921,7 @@ return {
 			},
 			skill=43746,
 			stats={
-				[1]="display_passive_attribute_text"
+				[1]="+5 to any Attribute"
 			}
 		},
 		[43778]={
@@ -46979,7 +46939,7 @@ return {
 			},
 			skill=43778,
 			stats={
-				[1]="base_chance_to_inflict_bleeding_%"
+				[1]="5% chance to inflict Bleeding on Hit"
 			}
 		},
 		[43829]={
@@ -46996,7 +46956,7 @@ return {
 			},
 			skill=43829,
 			stats={
-				[1]="projectile_ailment_chance_+%"
+				[1]="25% increased chance to inflict Ailments with Projectiles"
 			}
 		},
 		[43867]={
@@ -47013,7 +46973,7 @@ return {
 			},
 			skill=43867,
 			stats={
-				[1]="base_reduce_enemy_fire_resistance_%"
+				[1]="Damage Penetrates 6% Fire Resistance"
 			}
 		},
 		[43893]={
@@ -47031,7 +46991,7 @@ return {
 			},
 			skill=43893,
 			stats={
-				[1]="elemental_damage_+%"
+				[1]="10% increased Elemental Damage"
 			}
 		},
 		[43895]={
@@ -47048,7 +47008,7 @@ return {
 			},
 			skill=43895,
 			stats={
-				[1]="life_regeneration_rate_+%_while_on_low_life"
+				[1]="15% increased Life Regeneration Rate while on Low Life"
 			}
 		},
 		[43923]={
@@ -47065,7 +47025,7 @@ return {
 			},
 			skill=43923,
 			stats={
-				[1]="accuracy_rating_+%"
+				[1]="8% increased Accuracy Rating"
 			}
 		},
 		[43938]={
@@ -47082,7 +47042,7 @@ return {
 			},
 			skill=43938,
 			stats={
-				[1]="trap_throwing_speed_+%"
+				[1]="6% increased Trap Throwing Speed"
 			}
 		},
 		[43939]={
@@ -47099,8 +47059,8 @@ return {
 			},
 			skill=43939,
 			stats={
-				[1]="ignite_effect_on_self_+%",
-				[2]="base_fire_damage_resistance_%"
+				[1]="+15% to Fire Resistance",
+				[2]="25% reduced effect of Ignite on you"
 			}
 		},
 		[43964]={
@@ -47117,7 +47077,7 @@ return {
 			},
 			skill=43964,
 			stats={
-				[1]="armour_break_amount_+%"
+				[1]="Break 20% increased Armour"
 			}
 		},
 		[44005]={
@@ -47134,8 +47094,8 @@ return {
 			},
 			skill=44005,
 			stats={
-				[1]="cast_speed_+%_per_num_unique_spells_cast_recently",
-				[2]="spell_damage_+%"
+				[1]="15% reduced Spell Damage",
+				[2]="6% increased Cast Speed for each different Non-Instant Spell you've Cast Recently"
 			}
 		},
 		[44014]={
@@ -47152,7 +47112,7 @@ return {
 			},
 			skill=44014,
 			stats={
-				[1]="accuracy_rating_+%"
+				[1]="8% increased Accuracy Rating"
 			}
 		},
 		[44017]={
@@ -47169,7 +47129,7 @@ return {
 			},
 			skill=44017,
 			stats={
-				[1]="resolute_technique"
+				[1]="Resolute Technique"
 			}
 		},
 		[44069]={
@@ -47186,7 +47146,7 @@ return {
 			},
 			skill=44069,
 			stats={
-				[1]="hit_damage_stun_multiplier_+%"
+				[1]="15% increased Stun Buildup"
 			}
 		},
 		[44082]={
@@ -47203,7 +47163,7 @@ return {
 			},
 			skill=44082,
 			stats={
-				[1]="energy_shield_recharge_rate_+%"
+				[1]="15% increased Energy Shield Recharge Rate"
 			}
 		},
 		[44092]={
@@ -47220,7 +47180,7 @@ return {
 			},
 			skill=44092,
 			stats={
-				[1]="base_ignite_effect_+%"
+				[1]="12% increased Magnitude of Ignite you inflict"
 			}
 		},
 		[44098]={
@@ -47238,7 +47198,7 @@ return {
 			},
 			skill=44098,
 			stats={
-				[1]="stun_threshold_+_from_%_maximum_energy_shield"
+				[1]="Gain 8% of maximum Energy Shield as additional Stun Threshold"
 			}
 		},
 		[44141]={
@@ -47255,7 +47215,7 @@ return {
 			},
 			skill=44141,
 			stats={
-				[1]="bow_attack_speed_+%"
+				[1]="3% increased Attack Speed with Bows"
 			}
 		},
 		[44176]={
@@ -47272,7 +47232,7 @@ return {
 			},
 			skill=44176,
 			stats={
-				[1]="additional_all_attributes"
+				[1]="+3 to all Attributes"
 			}
 		},
 		[44201]={
@@ -47288,7 +47248,7 @@ return {
 			},
 			skill=44201,
 			stats={
-				[1]="spell_skills_fire_2_additional_projectiles_final_chance_%"
+				[1]="6% chance for Spell Skills to fire 2 additional Projectiles"
 			}
 		},
 		[44204]={
@@ -47305,8 +47265,8 @@ return {
 			},
 			skill=44204,
 			stats={
-				[1]="elemental_damage_+%",
-				[2]="ignite_chance_+%"
+				[1]="10% increased chance to Ignite",
+				[2]="8% increased Elemental Damage"
 			}
 		},
 		[44223]={
@@ -47323,7 +47283,7 @@ return {
 			},
 			skill=44223,
 			stats={
-				[1]="base_critical_strike_multiplier_+"
+				[1]="15% increased Critical Damage Bonus"
 			}
 		},
 		[44239]={
@@ -47340,7 +47300,7 @@ return {
 			},
 			skill=44239,
 			stats={
-				[1]="hit_damage_pin_multiplier_+%"
+				[1]="15% increased Pin Buildup"
 			}
 		},
 		[44255]={
@@ -47358,7 +47318,7 @@ return {
 			},
 			skill=44255,
 			stats={
-				[1]="minion_resummon_speed_+%"
+				[1]="Minions Revive 5% faster"
 			}
 		},
 		[44280]={
@@ -47375,8 +47335,8 @@ return {
 			},
 			skill=44280,
 			stats={
-				[1]="mark_effect_+%",
-				[2]="attacks_chance_to_blind_on_hit_%"
+				[1]="8% increased Effect of your Mark Skills",
+				[2]="5% chance to Blind Enemies on Hit with Attacks"
 			}
 		},
 		[44299]={
@@ -47394,8 +47354,8 @@ return {
 			},
 			skill=44299,
 			stats={
-				[1]="additional_maximum_all_elemental_resistances_%",
-				[2]="maximum_energy_shield_+%"
+				[1]="25% increased maximum Energy Shield",
+				[2]="+1% to all Maximum Elemental Resistances"
 			}
 		},
 		[44330]={
@@ -47412,8 +47372,8 @@ return {
 			},
 			skill=44330,
 			stats={
-				[1]="damage_+%_with_one_handed_weapons",
-				[2]="one_handed_attack_ailment_chance_+%"
+				[1]="25% increased Damage with One Handed Weapons",
+				[2]="20% increased Chance to inflict Ailments with One-Handed Attacks"
 			}
 		},
 		[44343]={
@@ -47430,7 +47390,7 @@ return {
 			},
 			skill=44343,
 			stats={
-				[1]="display_passive_attribute_text"
+				[1]="+5 to any Attribute"
 			}
 		},
 		[44344]={
@@ -47448,7 +47408,7 @@ return {
 			},
 			skill=44344,
 			stats={
-				[1]="display_passive_attribute_text"
+				[1]="+5 to any Attribute"
 			}
 		},
 		[44345]={
@@ -47465,7 +47425,7 @@ return {
 			},
 			skill=44345,
 			stats={
-				[1]="lightning_damage_+%"
+				[1]="10% increased Lightning Damage"
 			}
 		},
 		[44357]={
@@ -47483,7 +47443,7 @@ return {
 			},
 			skill=44357,
 			stats={
-				[1]="critical_strike_chance_+%"
+				[1]="12% increased Critical Hit Chance"
 			}
 		},
 		[44373]={
@@ -47500,8 +47460,8 @@ return {
 			},
 			skill=44373,
 			stats={
-				[1]="withered_effect_+%",
-				[2]="inflict_withered_for_x_seconds_on_unwithered_enemies_when_they_enter_your_presence"
+				[1]="Unwithered enemies are Withered for 8 seconds when they enter your Presence",
+				[2]="20% increased Effect of Withered"
 			}
 		},
 		[44406]={
@@ -47518,7 +47478,7 @@ return {
 			},
 			skill=44406,
 			stats={
-				[1]="hit_damage_stun_multiplier_+%"
+				[1]="15% increased Stun Buildup"
 			}
 		},
 		[44419]={
@@ -47536,7 +47496,7 @@ return {
 			},
 			skill=44419,
 			stats={
-				[1]="base_life_leech_amount_+%"
+				[1]="10% increased amount of Life Leeched"
 			}
 		},
 		[44420]={
@@ -47553,7 +47513,7 @@ return {
 			},
 			skill=44420,
 			stats={
-				[1]="critical_strike_chance_+%"
+				[1]="10% increased Critical Hit Chance"
 			}
 		},
 		[44430]={
@@ -47570,7 +47530,7 @@ return {
 			},
 			skill=44430,
 			stats={
-				[1]="crossbow_damage_+%"
+				[1]="12% increased Damage with Crossbows"
 			}
 		},
 		[44455]={
@@ -47591,7 +47551,7 @@ return {
 			},
 			skill=44455,
 			stats={
-				[1]="cold_damage_+%"
+				[1]="12% increased Cold Damage"
 			}
 		},
 		[44461]={
@@ -47608,7 +47568,7 @@ return {
 			},
 			skill=44461,
 			stats={
-				[1]="skill_effect_duration_+%"
+				[1]="10% increased Skill Effect Duration"
 			}
 		},
 		[44484]={
@@ -47626,7 +47586,7 @@ return {
 			},
 			skill=44484,
 			stats={
-				[1]="base_resist_all_elements_%"
+				[1]="+4% to all Elemental Resistances"
 			}
 		},
 		[44498]={
@@ -47645,9 +47605,9 @@ return {
 			},
 			skill=44498,
 			stats={
-				[1]="lightning_exposure_effect_+%",
-				[2]="cold_exposure_effect_+%",
-				[3]="fire_exposure_effect_+%"
+				[1]="10% increased Cold Exposure Effect",
+				[2]="10% increased Fire Exposure Effect",
+				[3]="10% increased Lightning Exposure Effect"
 			}
 		},
 		[44516]={
@@ -47664,7 +47624,7 @@ return {
 			},
 			skill=44516,
 			stats={
-				[1]="quarterstaff_attack_speed_+%"
+				[1]="3% increased Attack Speed with Quarterstaves"
 			}
 		},
 		[44527]={
@@ -47682,8 +47642,8 @@ return {
 			},
 			skill=44527,
 			stats={
-				[1]="flask_duration_+%",
-				[2]="flask_charges_gained_+%"
+				[1]="15% increased Flask Effect Duration",
+				[2]="15% increased Flask Charges gained"
 			}
 		},
 		[44563]={
@@ -47700,8 +47660,8 @@ return {
 			},
 			skill=44563,
 			stats={
-				[1]="base_debuff_slow_magnitude_+%",
-				[2]="hinder_duration_+%"
+				[1]="Debuffs you inflict have 4% increased Slow Magnitude",
+				[2]="20% increased Hinder Duration"
 			}
 		},
 		[44566]={
@@ -47718,7 +47678,7 @@ return {
 			},
 			skill=44566,
 			stats={
-				[1]="extra_damage_rolls_with_lightning_damage_on_non_critical_hits"
+				[1]="Lightning Damage with Non-Critical Hits is Lucky"
 			}
 		},
 		[44605]={
@@ -47739,9 +47699,8 @@ return {
 			},
 			skill=44605,
 			stats={
-				[1]="projectile_damage_+%",
-				[2]="hit_damage_stun_multiplier_+%_vs_enemies_at_close_range",
-				[3]="base_strength_and_dexterity"
+				[1]="15% increased Projectile Damage",
+				[2]="30% increased Stun Buildup against enemies within 2 metres"
 			}
 		},
 		[44628]={
@@ -47759,7 +47718,7 @@ return {
 			},
 			skill=44628,
 			stats={
-				[1]="attack_speed_+%"
+				[1]="3% increased Attack Speed"
 			}
 		},
 		[44659]={
@@ -47776,7 +47735,7 @@ return {
 			},
 			skill=44659,
 			stats={
-				[1]="display_passive_attribute_text"
+				[1]="+5 to any Attribute"
 			}
 		},
 		[44669]={
@@ -47793,7 +47752,7 @@ return {
 			},
 			skill=44669,
 			stats={
-				[1]="skill_effect_duration_+%"
+				[1]="10% increased Skill Effect Duration"
 			}
 		},
 		[44683]={
@@ -47829,7 +47788,7 @@ return {
 			},
 			skill=44690,
 			stats={
-				[1]="skill_effect_duration_+%"
+				[1]="8% reduced Skill Effect Duration"
 			}
 		},
 		[44707]={
@@ -47847,7 +47806,7 @@ return {
 			},
 			skill=44707,
 			stats={
-				[1]="attack_skills_damage_+%_while_holding_shield"
+				[1]="Attack Skills deal 10% increased Damage while holding a Shield"
 			}
 		},
 		[44733]={
@@ -47867,7 +47826,7 @@ return {
 			},
 			skill=44733,
 			stats={
-				[1]="display_passive_attribute_text"
+				[1]="+5 to any Attribute"
 			}
 		},
 		[44756]={
@@ -47885,8 +47844,8 @@ return {
 			},
 			skill=44756,
 			stats={
-				[1]="mark_skill_mana_cost_+%",
-				[2]="movement_speed_+%_if_cast_a_mark_spell_recently"
+				[1]="30% reduced Mana Cost of Mark Skills",
+				[2]="4% increased Movement Speed if you've cast a Mark Spell Recently"
 			}
 		},
 		[44765]={
@@ -47903,8 +47862,8 @@ return {
 			},
 			skill=44765,
 			stats={
-				[1]="base_cooldown_speed_+%",
-				[2]="enemies_in_presence_cooldown_recovery_+%"
+				[1]="10% increased Cooldown Recovery Rate",
+				[2]="Enemies in your Presence have 10% reduced Cooldown Recovery Rate"
 			}
 		},
 		[44776]={
@@ -47922,7 +47881,7 @@ return {
 			},
 			skill=44776,
 			stats={
-				[1]="evasion_rating_+%"
+				[1]="15% increased Evasion Rating"
 			}
 		},
 		[44783]={
@@ -47939,7 +47898,7 @@ return {
 			},
 			skill=44783,
 			stats={
-				[1]="spell_area_of_effect_+%"
+				[1]="Spell Skills have 12% increased Area of Effect"
 			}
 		},
 		[44787]={
@@ -47957,7 +47916,7 @@ return {
 			},
 			skill=44787,
 			stats={
-				[1]="summon_totem_cast_speed_+%"
+				[1]="20% increased Totem Placement speed"
 			}
 		},
 		[44836]={
@@ -47975,8 +47934,8 @@ return {
 			},
 			skill=44836,
 			stats={
-				[1]="evasion_and_physical_damage_reduction_rating_+%",
-				[2]="stun_threshold_+%"
+				[1]="20% increased Armour and Evasion Rating",
+				[2]="20% increased Stun Threshold"
 			}
 		},
 		[44841]={
@@ -47994,7 +47953,7 @@ return {
 			},
 			skill=44841,
 			stats={
-				[1]="mark_skill_cast_speed_+%"
+				[1]="Mark Skills have 10% increased Cast Speed"
 			}
 		},
 		[44871]={
@@ -48012,7 +47971,7 @@ return {
 			},
 			skill=44871,
 			stats={
-				[1]="base_maximum_energy_shield"
+				[1]="+10 to maximum Energy Shield"
 			}
 		},
 		[44891]={
@@ -48030,7 +47989,7 @@ return {
 			},
 			skill=44891,
 			stats={
-				[1]="base_reduce_enemy_cold_resistance_%"
+				[1]="Damage Penetrates 6% Cold Resistance"
 			}
 		},
 		[44902]={
@@ -48047,8 +48006,8 @@ return {
 			},
 			skill=44902,
 			stats={
-				[1]="attack_damage_+%",
-				[2]="spell_damage_+%"
+				[1]="8% increased Spell Damage",
+				[2]="8% increased Attack Damage"
 			}
 		},
 		[44917]={
@@ -48065,8 +48024,8 @@ return {
 			},
 			skill=44917,
 			stats={
-				[1]="stun_threshold_+_from_%_maximum_energy_shield",
-				[2]="stun_threshold_+%_when_on_full_life"
+				[1]="Gain 20% of maximum Energy Shield as additional Stun Threshold",
+				[2]="20% increased Stun Threshold while on Full Life"
 			}
 		},
 		[44932]={
@@ -48083,7 +48042,7 @@ return {
 			},
 			skill=44932,
 			stats={
-				[1]="shock_effect_+%"
+				[1]="15% increased Magnitude of Shock you inflict"
 			}
 		},
 		[44951]={
@@ -48100,7 +48059,7 @@ return {
 			},
 			skill=44951,
 			stats={
-				[1]="minion_damage_+%"
+				[1]="Minions deal 10% increased Damage"
 			}
 		},
 		[44952]={
@@ -48118,7 +48077,7 @@ return {
 			},
 			skill=44952,
 			stats={
-				[1]="physical_damage_prevented_recouped_as_life_%"
+				[1]="15% of Physical Damage prevented Recouped as Life"
 			}
 		},
 		[45012]={
@@ -48136,7 +48095,7 @@ return {
 			},
 			skill=45012,
 			stats={
-				[1]="attack_damage_+%"
+				[1]="10% increased Attack Damage"
 			}
 		},
 		[45013]={
@@ -48154,8 +48113,8 @@ return {
 			},
 			skill=45013,
 			stats={
-				[1]="damage_vs_enemies_on_low_life_+%",
-				[2]="hit_damage_stun_multiplier_+%_vs_enemies_on_low_life"
+				[1]="60% increased Damage with Hits against Enemies that are on Low Life",
+				[2]="30% increased Stun Buildup against Enemies that are on Low Life"
 			}
 		},
 		[45037]={
@@ -48172,7 +48131,7 @@ return {
 			},
 			skill=45037,
 			stats={
-				[1]="evasion_and_physical_damage_reduction_rating_+%"
+				[1]="12% increased Armour and Evasion Rating"
 			}
 		},
 		[45086]={
@@ -48189,7 +48148,7 @@ return {
 			},
 			skill=45086,
 			stats={
-				[1]="non_skill_base_physical_damage_%_to_gain_as_chaos"
+				[1]="Gain 2% of Physical Damage as extra Chaos Damage"
 			}
 		},
 		[45090]={
@@ -48206,8 +48165,8 @@ return {
 			},
 			skill=45090,
 			stats={
-				[1]="attack_damage_+%",
-				[2]="attack_speed_+%"
+				[1]="1% reduced Attack Speed",
+				[2]="15% increased Attack Damage"
 			}
 		},
 		[45100]={
@@ -48224,8 +48183,8 @@ return {
 			},
 			skill=45100,
 			stats={
-				[1]="attack_speed_+%",
-				[2]="flask_duration_+%"
+				[1]="5% increased Flask Effect Duration",
+				[2]="2% increased Attack Speed"
 			}
 		},
 		[45111]={
@@ -48242,7 +48201,7 @@ return {
 			},
 			skill=45111,
 			stats={
-				[1]="base_curse_duration_+%"
+				[1]="20% increased Curse Duration"
 			}
 		},
 		[45193]={
@@ -48259,7 +48218,7 @@ return {
 			},
 			skill=45193,
 			stats={
-				[1]="base_poison_effect_+%"
+				[1]="10% increased Magnitude of Poison you inflict"
 			}
 		},
 		[45202]={
@@ -48276,7 +48235,7 @@ return {
 			},
 			skill=45202,
 			stats={
-				[1]="keystone_ancestral_bond"
+				[1]="Ancestral Bond"
 			}
 		},
 		[45227]={
@@ -48293,7 +48252,7 @@ return {
 			},
 			skill=45227,
 			stats={
-				[1]="armour_break_amount_+%"
+				[1]="Break 20% increased Armour"
 			}
 		},
 		[45230]={
@@ -48310,7 +48269,7 @@ return {
 			},
 			skill=45230,
 			stats={
-				[1]="curse_area_of_effect_+%"
+				[1]="20% increased Area of Effect of Curses"
 			}
 		},
 		[45244]={
@@ -48328,7 +48287,7 @@ return {
 			},
 			skill=45244,
 			stats={
-				[1]="generate_x_charges_for_life_flasks_per_minute"
+				[1]="Life Flasks gain 0.15 charges per Second"
 			}
 		},
 		[45248]={
@@ -48346,7 +48305,7 @@ return {
 			},
 			skill=45248,
 			stats={
-				[1]="all_skill_gem_quality_+"
+				[1]="+2% to Quality of all Skills"
 			}
 		},
 		[45272]={
@@ -48364,7 +48323,7 @@ return {
 			},
 			skill=45272,
 			stats={
-				[1]="additional_all_attributes"
+				[1]="+3 to all Attributes"
 			}
 		},
 		[45278]={
@@ -48381,7 +48340,7 @@ return {
 			},
 			skill=45278,
 			stats={
-				[1]="global_item_attribute_requirements_+%"
+				[1]="Equipment and Skill Gems have 4% reduced Attribute Requirements"
 			}
 		},
 		[45304]={
@@ -48399,7 +48358,7 @@ return {
 			},
 			skill=45304,
 			stats={
-				[1]="base_poison_duration_+%"
+				[1]="10% increased Poison Duration"
 			}
 		},
 		[45319]={
@@ -48417,7 +48376,7 @@ return {
 			},
 			skill=45319,
 			stats={
-				[1]="spell_damage_+%"
+				[1]="8% increased Spell Damage"
 			}
 		},
 		[45327]={
@@ -48434,7 +48393,7 @@ return {
 			},
 			skill=45327,
 			stats={
-				[1]="hit_damage_stun_multiplier_+%"
+				[1]="15% increased Stun Buildup"
 			}
 		},
 		[45331]={
@@ -48452,7 +48411,7 @@ return {
 			},
 			skill=45331,
 			stats={
-				[1]="projectile_chance_to_chain_1_extra_time_from_terrain_%"
+				[1]="Projectiles have 5% chance to Chain an additional time from terrain"
 			}
 		},
 		[45343]={
@@ -48469,7 +48428,7 @@ return {
 			},
 			skill=45343,
 			stats={
-				[1]="minion_skill_area_of_effect_+%"
+				[1]="Minions have 10% increased Area of Effect"
 			}
 		},
 		[45363]={
@@ -48487,8 +48446,8 @@ return {
 			},
 			skill=45363,
 			stats={
-				[1]="melee_damage_+%",
-				[2]="melee_damage_+%_vs_heavy_stunned_enemies"
+				[1]="20% increased Melee Damage",
+				[2]="40% increased Melee Damage against Heavy Stunned enemies"
 			}
 		},
 		[45383]={
@@ -48505,7 +48464,7 @@ return {
 			},
 			skill=45383,
 			stats={
-				[1]="lightning_damage_+%"
+				[1]="12% increased Lightning Damage"
 			}
 		},
 		[45390]={
@@ -48523,7 +48482,7 @@ return {
 			},
 			skill=45390,
 			stats={
-				[1]="mark_skill_duration_+%"
+				[1]="Mark Skills have 25% increased Skill Effect Duration"
 			}
 		},
 		[45481]={
@@ -48540,7 +48499,7 @@ return {
 			},
 			skill=45481,
 			stats={
-				[1]="mana_regeneration_rate_+%"
+				[1]="10% increased Mana Regeneration Rate"
 			}
 		},
 		[45488]={
@@ -48557,8 +48516,8 @@ return {
 			},
 			skill=45488,
 			stats={
-				[1]="accuracy_rating_while_dual_wielding_+%",
-				[2]="movement_speed_+%_while_dual_wielding"
+				[1]="20% increased Accuracy Rating while Dual Wielding",
+				[2]="3% increased Movement Speed while Dual Wielding"
 			}
 		},
 		[45503]={
@@ -48575,7 +48534,7 @@ return {
 			},
 			skill=45503,
 			stats={
-				[1]="ignite_chance_+%"
+				[1]="15% increased chance to Ignite"
 			}
 		},
 		[45522]={
@@ -48592,7 +48551,7 @@ return {
 			},
 			skill=45522,
 			stats={
-				[1]="lightning_damage_+%"
+				[1]="10% increased Lightning Damage"
 			}
 		},
 		[45530]={
@@ -48609,7 +48568,7 @@ return {
 			},
 			skill=45530,
 			stats={
-				[1]="minion_accuracy_rating_+%"
+				[1]="15% increased Minion Accuracy Rating"
 			}
 		},
 		[45569]={
@@ -48626,7 +48585,7 @@ return {
 			},
 			skill=45569,
 			stats={
-				[1]="base_spell_critical_strike_multiplier_+"
+				[1]="15% increased Critical Spell Damage Bonus"
 			}
 		},
 		[45570]={
@@ -48643,7 +48602,7 @@ return {
 			},
 			skill=45570,
 			stats={
-				[1]="offering_area_of_effect_+%"
+				[1]="Offering Skills have 20% increased Area of Effect"
 			}
 		},
 		[45599]={
@@ -48661,7 +48620,7 @@ return {
 			},
 			skill=45599,
 			stats={
-				[1]="damage_+%_per_1%_block_chance"
+				[1]="1% increased Damage per 1% Chance to Block"
 			}
 		},
 		[45609]={
@@ -48678,7 +48637,7 @@ return {
 			},
 			skill=45609,
 			stats={
-				[1]="base_critical_strike_multiplier_+"
+				[1]="15% increased Critical Damage Bonus"
 			}
 		},
 		[45612]={
@@ -48695,8 +48654,8 @@ return {
 			},
 			skill=45612,
 			stats={
-				[1]="block_chance_+%",
-				[2]="mana_gained_on_block"
+				[1]="12% increased Block chance",
+				[2]="2 Mana gained when you Block"
 			}
 		},
 		[45631]={
@@ -48713,8 +48672,8 @@ return {
 			},
 			skill=45631,
 			stats={
-				[1]="evasion_rating_+%",
-				[2]="energy_shield_recharge_rate_+%"
+				[1]="10% increased Evasion Rating",
+				[2]="10% increased Energy Shield Recharge Rate"
 			}
 		},
 		[45632]={
@@ -48731,8 +48690,8 @@ return {
 			},
 			skill=45632,
 			stats={
-				[1]="mana_regeneration_rate_+%",
-				[2]="damage_taken_goes_to_mana_%"
+				[1]="10% increased Mana Regeneration Rate",
+				[2]="6% of Damage taken Recouped as Mana"
 			}
 		},
 		[45693]={
@@ -48749,7 +48708,7 @@ return {
 			},
 			skill=45693,
 			stats={
-				[1]="shield_armour_+%"
+				[1]="30% increased Defences from Equipped Shield"
 			}
 		},
 		[45702]={
@@ -48767,7 +48726,7 @@ return {
 			},
 			skill=45702,
 			stats={
-				[1]="critical_strike_chance_+%"
+				[1]="10% increased Critical Hit Chance"
 			}
 		},
 		[45709]={
@@ -48784,7 +48743,7 @@ return {
 			},
 			skill=45709,
 			stats={
-				[1]="life_flask_charges_gained_+%"
+				[1]="15% increased Life Flask Charges gained"
 			}
 		},
 		[45712]={
@@ -48801,8 +48760,8 @@ return {
 			},
 			skill=45712,
 			stats={
-				[1]="elemental_damage_+%",
-				[2]="ignite_chance_+%"
+				[1]="10% increased chance to Ignite",
+				[2]="8% increased Elemental Damage"
 			}
 		},
 		[45713]={
@@ -48819,7 +48778,7 @@ return {
 			},
 			skill=45713,
 			stats={
-				[1]="flasks_%_chance_to_not_consume_charges"
+				[1]="20% chance for Flasks you use to not consume Charges"
 			}
 		},
 		[45774]={
@@ -48836,7 +48795,7 @@ return {
 			},
 			skill=45774,
 			stats={
-				[1]="base_debuff_slow_magnitude_+%"
+				[1]="Debuffs you inflict have 5% increased Slow Magnitude"
 			}
 		},
 		[45824]={
@@ -48854,7 +48813,7 @@ return {
 			},
 			skill=45824,
 			stats={
-				[1]="sword_damage_+%"
+				[1]="10% increased Damage with Swords"
 			}
 		},
 		[45885]={
@@ -48873,7 +48832,7 @@ return {
 			},
 			skill=45885,
 			stats={
-				[1]="display_passive_attribute_text"
+				[1]="+5 to any Attribute"
 			}
 		},
 		[45899]={
@@ -48890,8 +48849,8 @@ return {
 			},
 			skill=45899,
 			stats={
-				[1]="fire_damage_+%",
-				[2]="base_skill_area_of_effect_+%"
+				[1]="6% increased Fire Damage",
+				[2]="6% increased Area of Effect"
 			}
 		},
 		[45916]={
@@ -48909,7 +48868,7 @@ return {
 			},
 			skill=45916,
 			stats={
-				[1]="life_regeneration_rate_+%"
+				[1]="10% increased Life Regeneration rate"
 			}
 		},
 		[45918]={
@@ -48926,7 +48885,7 @@ return {
 			},
 			skill=45918,
 			stats={
-				[1]="keystone_mana_shield"
+				[1]="Mind over Matter"
 			}
 		},
 		[45923]={
@@ -48943,7 +48902,7 @@ return {
 			},
 			skill=45923,
 			stats={
-				[1]="display_passive_attribute_text"
+				[1]="+5 to any Attribute"
 			}
 		},
 		[45962]={
@@ -48961,7 +48920,7 @@ return {
 			},
 			skill=45962,
 			stats={
-				[1]="flask_life_to_recover_+%"
+				[1]="10% increased Life Recovery from Flasks"
 			}
 		},
 		[45969]={
@@ -48980,7 +48939,7 @@ return {
 			},
 			skill=45969,
 			stats={
-				[1]="display_passive_attribute_text"
+				[1]="+5 to any Attribute"
 			}
 		},
 		[45990]={
@@ -48997,7 +48956,7 @@ return {
 			},
 			skill=45990,
 			stats={
-				[1]="axe_attack_speed_+%"
+				[1]="4% increased Attack Speed with Axes"
 			}
 		},
 		[45992]={
@@ -49016,7 +48975,7 @@ return {
 			},
 			skill=45992,
 			stats={
-				[1]="physical_damage_reduction_rating_+%"
+				[1]="15% increased Armour"
 			}
 		},
 		[46016]={
@@ -49034,7 +48993,7 @@ return {
 			},
 			skill=46016,
 			stats={
-				[1]="maximum_life_+%"
+				[1]="3% increased maximum Life"
 			}
 		},
 		[46017]={
@@ -49051,7 +49010,7 @@ return {
 			},
 			skill=46017,
 			stats={
-				[1]="life_regeneration_rate_+%_while_stationary"
+				[1]="15% increased Life Regeneration Rate while stationary"
 			}
 		},
 		[46023]={
@@ -49068,7 +49027,7 @@ return {
 			},
 			skill=46023,
 			stats={
-				[1]="physical_damage_reduction_rating_+%"
+				[1]="15% increased Armour"
 			}
 		},
 		[46024]={
@@ -49085,7 +49044,7 @@ return {
 			},
 			skill=46024,
 			stats={
-				[1]="damage_vs_shocked_enemies_+%"
+				[1]="30% increased Damage with Hits against Shocked Enemies"
 			}
 		},
 		[46034]={
@@ -49103,7 +49062,7 @@ return {
 			},
 			skill=46034,
 			stats={
-				[1]="display_passive_attribute_text"
+				[1]="+5 to any Attribute"
 			}
 		},
 		[46060]={
@@ -49121,7 +49080,7 @@ return {
 			},
 			skill=46060,
 			stats={
-				[1]="leech_%_is_instant"
+				[1]="20% of Leech is Instant"
 			}
 		},
 		[46088]={
@@ -49138,7 +49097,7 @@ return {
 			},
 			skill=46088,
 			stats={
-				[1]="spell_critical_strike_chance_+%"
+				[1]="10% increased Critical Hit Chance for Spells"
 			}
 		},
 		[46146]={
@@ -49155,7 +49114,7 @@ return {
 			},
 			skill=46146,
 			stats={
-				[1]="base_mana_leech_amount_+%"
+				[1]="10% increased amount of Mana Leeched"
 			}
 		},
 		[46157]={
@@ -49172,7 +49131,7 @@ return {
 			},
 			skill=46157,
 			stats={
-				[1]="lightning_skill_additional_chain_chance_%"
+				[1]="20% chance for Lightning Skills to Chain an additional time"
 			}
 		},
 		[46197]={
@@ -49190,8 +49149,8 @@ return {
 			},
 			skill=46197,
 			stats={
-				[1]="base_critical_strike_multiplier_+",
-				[2]="critical_strike_chance_+%"
+				[1]="50% increased Critical Hit Chance",
+				[2]="20% reduced Critical Damage Bonus"
 			}
 		},
 		[46205]={
@@ -49210,7 +49169,7 @@ return {
 			},
 			skill=46205,
 			stats={
-				[1]="totem_damage_+%"
+				[1]="16% increased Totem Damage"
 			}
 		},
 		[46224]={
@@ -49228,8 +49187,7 @@ return {
 			},
 			skill=46224,
 			stats={
-				[1]="generate_x_charges_for_mana_flasks_per_minute",
-				[2]="base_intelligence"
+				[1]="Mana Flasks gain 0.1 charges per Second"
 			}
 		},
 		[46275]={
@@ -49246,7 +49204,7 @@ return {
 			},
 			skill=46275,
 			stats={
-				[1]="stun_threshold_+_from_%_maximum_energy_shield"
+				[1]="Gain 8% of maximum Energy Shield as additional Stun Threshold"
 			}
 		},
 		[46296]={
@@ -49263,8 +49221,8 @@ return {
 			},
 			skill=46296,
 			stats={
-				[1]="base_projectile_speed_+%",
-				[2]="projectile_damage_+%"
+				[1]="15% reduced Projectile Speed",
+				[2]="20% increased Projectile Damage"
 			}
 		},
 		[46300]={
@@ -49282,7 +49240,7 @@ return {
 			},
 			skill=46300,
 			stats={
-				[1]="ignite_chance_+%"
+				[1]="15% increased chance to Ignite"
 			}
 		},
 		[46325]={
@@ -49300,7 +49258,7 @@ return {
 			},
 			skill=46325,
 			stats={
-				[1]="melee_damage_+%"
+				[1]="8% increased Melee Damage"
 			}
 		},
 		[46358]={
@@ -49319,7 +49277,7 @@ return {
 			},
 			skill=46358,
 			stats={
-				[1]="display_passive_attribute_text"
+				[1]="+5 to any Attribute"
 			}
 		},
 		[46380]={
@@ -49336,7 +49294,7 @@ return {
 			},
 			skill=46380,
 			stats={
-				[1]="energy_shield_+%_if_consumed_power_charge_recently"
+				[1]="20% increased Energy Shield if you've consumed a Power Charge Recently"
 			}
 		},
 		[46384]={
@@ -49354,8 +49312,8 @@ return {
 			},
 			skill=46384,
 			stats={
-				[1]="block_chance_+%",
-				[2]="global_defences_+%"
+				[1]="30% increased Block chance",
+				[2]="25% reduced Global Defences"
 			}
 		},
 		[46402]={
@@ -49373,7 +49331,7 @@ return {
 			},
 			skill=46402,
 			stats={
-				[1]="evasion_rating_+%"
+				[1]="15% increased Evasion Rating"
 			}
 		},
 		[46454]={
@@ -49408,7 +49366,7 @@ return {
 			},
 			skill=46475,
 			stats={
-				[1]="evasion_and_physical_damage_reduction_rating_+%"
+				[1]="12% increased Armour and Evasion Rating"
 			}
 		},
 		[46499]={
@@ -49425,8 +49383,8 @@ return {
 			},
 			skill=46499,
 			stats={
-				[1]="max_endurance_charges",
-				[2]="recover_%_life_per_endurance_charge_consumed"
+				[1]="+1 to Maximum Endurance Charges",
+				[2]="Recover 3% of Life for each Endurance Charge consumed"
 			}
 		},
 		[46533]={
@@ -49443,8 +49401,8 @@ return {
 			},
 			skill=46533,
 			stats={
-				[1]="hit_damage_stun_multiplier_+%",
-				[2]="hit_damage_freeze_multiplier_+%"
+				[1]="10% increased Stun Buildup",
+				[2]="10% increased Freeze Buildup"
 			}
 		},
 		[46535]={
@@ -49462,7 +49420,7 @@ return {
 			},
 			skill=46535,
 			stats={
-				[1]="witchhunter_up_to_damage_+%_final_against_targets_with_missing_focus"
+				[1]="Deal up to 30% more Damage to Enemies based on their missing Concentration"
 			}
 		},
 		[46554]={
@@ -49483,7 +49441,7 @@ return {
 			},
 			skill=46554,
 			stats={
-				[1]="display_passive_attribute_text"
+				[1]="+5 to any Attribute"
 			}
 		},
 		[46565]={
@@ -49501,7 +49459,7 @@ return {
 			},
 			skill=46565,
 			stats={
-				[1]="while_using_sword_reduce_enemy_block_%"
+				[1]="50% reduced Enemy Chance to Block Sword Attacks"
 			}
 		},
 		[46601]={
@@ -49519,7 +49477,7 @@ return {
 			},
 			skill=46601,
 			stats={
-				[1]="base_mana_leech_amount_+%"
+				[1]="10% increased amount of Mana Leeched"
 			}
 		},
 		[46604]={
@@ -49536,7 +49494,7 @@ return {
 			},
 			skill=46604,
 			stats={
-				[1]="chaos_damage_+%"
+				[1]="7% increased Chaos Damage"
 			}
 		},
 		[46628]={
@@ -49555,7 +49513,7 @@ return {
 			},
 			skill=46628,
 			stats={
-				[1]="display_passive_attribute_text"
+				[1]="+5 to any Attribute"
 			}
 		},
 		[46644]={
@@ -49573,8 +49531,8 @@ return {
 			},
 			skill=46644,
 			stats={
-				[1]="ascendancy_beidats_will_spirit_+_per_X_maximum_life",
-				[2]="life_reserved_by_stat_%"
+				[1]="Reserves 25% of Life",
+				[2]="+1 to Maximum Spirit per 25 Maximum Life"
 			}
 		},
 		[46688]={
@@ -49591,7 +49549,7 @@ return {
 			},
 			skill=46688,
 			stats={
-				[1]="one_handed_melee_attack_speed_+%"
+				[1]="3% increased Attack Speed with One Handed Melee Weapons"
 			}
 		},
 		[46692]={
@@ -49608,8 +49566,8 @@ return {
 			},
 			skill=46692,
 			stats={
-				[1]="flask_life_and_mana_recovery_+%_while_using_charm",
-				[2]="charges_gained_+%"
+				[1]="20% increased Flask and Charm Charges gained",
+				[2]="40% increased Life and Mana Recovery from Flasks while you have an active Charm"
 			}
 		},
 		[46696]={
@@ -49626,8 +49584,8 @@ return {
 			},
 			skill=46696,
 			stats={
-				[1]="damage_+%_with_one_handed_weapons",
-				[2]="maim_on_hit_%"
+				[1]="25% increased Damage with One Handed Weapons",
+				[2]="Attacks have 10% chance to Maim on Hit"
 			}
 		},
 		[46741]={
@@ -49644,7 +49602,7 @@ return {
 			},
 			skill=46741,
 			stats={
-				[1]="hit_damage_stun_multiplier_+%"
+				[1]="15% increased Stun Buildup"
 			}
 		},
 		[46742]={
@@ -49661,7 +49619,7 @@ return {
 			},
 			skill=46742,
 			stats={
-				[1]="keystone_elemental_equilibrium"
+				[1]="Elemental Equilibrium"
 			}
 		},
 		[46748]={
@@ -49679,7 +49637,7 @@ return {
 			},
 			skill=46748,
 			stats={
-				[1]="totem_life_+%"
+				[1]="16% increased Totem Life"
 			}
 		},
 		[46760]={
@@ -49696,7 +49654,7 @@ return {
 			},
 			skill=46760,
 			stats={
-				[1]="critical_strike_chance_+%_if_have_not_crit_recently"
+				[1]="20% increased Critical Hit Chance if you haven't dealt a Critical Hit Recently"
 			}
 		},
 		[46782]={
@@ -49713,7 +49671,7 @@ return {
 			},
 			skill=46782,
 			stats={
-				[1]="attack_damage_+%"
+				[1]="10% increased Attack Damage"
 			}
 		},
 		[46819]={
@@ -49731,7 +49689,7 @@ return {
 			},
 			skill=46819,
 			stats={
-				[1]="display_passive_attribute_text"
+				[1]="+5 to any Attribute"
 			}
 		},
 		[46830]={
@@ -49748,7 +49706,7 @@ return {
 			},
 			skill=46830,
 			stats={
-				[1]="display_passive_attribute_text"
+				[1]="+5 to any Attribute"
 			}
 		},
 		[46854]={
@@ -49766,7 +49724,7 @@ return {
 			},
 			skill=46854,
 			stats={
-				[1]="base_projectile_speed_+%"
+				[1]="10% increased Projectile Speed"
 			}
 		},
 		[46857]={
@@ -49783,7 +49741,7 @@ return {
 			},
 			skill=46857,
 			stats={
-				[1]="energy_shield_delay_-%"
+				[1]="15% faster start of Energy Shield Recharge"
 			}
 		},
 		[46882]={
@@ -49818,7 +49776,7 @@ return {
 			},
 			skill=46887,
 			stats={
-				[1]="base_mana_leech_amount_+%"
+				[1]="10% increased amount of Mana Leeched"
 			}
 		},
 		[46972]={
@@ -49835,8 +49793,8 @@ return {
 			},
 			skill=46972,
 			stats={
-				[1]="energy_shield_recharge_rate_+%",
-				[2]="generate_x_charges_for_mana_flasks_per_minute"
+				[1]="25% increased Energy Shield Recharge Rate",
+				[2]="Mana Flasks gain 0.1 charges per Second"
 			}
 		},
 		[46989]={
@@ -49853,7 +49811,7 @@ return {
 			},
 			skill=46989,
 			stats={
-				[1]="spell_area_of_effect_+%"
+				[1]="Spell Skills have 8% increased Area of Effect"
 			}
 		},
 		[46990]={
@@ -49894,7 +49852,8 @@ return {
 			},
 			skill=47097,
 			stats={
-				[1]="corpses_in_your_presence_explode_dealing_%_maximum_life_physical_damage_on_warcry"
+				[1]="Corpses in your Presence Explode when you Warcry,",
+				[2]="dealing 25% of their Life as Physical Damage"
 			}
 		},
 		[47150]={
@@ -49911,7 +49870,7 @@ return {
 			},
 			skill=47150,
 			stats={
-				[1]="evasion_and_physical_damage_reduction_rating_+%"
+				[1]="12% increased Armour and Evasion Rating"
 			}
 		},
 		[47155]={
@@ -49929,7 +49888,7 @@ return {
 			},
 			skill=47155,
 			stats={
-				[1]="minion_damage_+%"
+				[1]="Minions deal 10% increased Damage"
 			}
 		},
 		[47168]={
@@ -49948,7 +49907,7 @@ return {
 			},
 			skill=47168,
 			stats={
-				[1]="display_passive_attribute_text"
+				[1]="+5 to any Attribute"
 			}
 		},
 		[47175]={
@@ -49986,7 +49945,7 @@ return {
 			},
 			skill=47177,
 			stats={
-				[1]="display_passive_attribute_text"
+				[1]="+5 to any Attribute"
 			}
 		},
 		[47191]={
@@ -50003,7 +49962,7 @@ return {
 			},
 			skill=47191,
 			stats={
-				[1]="fire_damage_+%"
+				[1]="12% increased Fire Damage"
 			}
 		},
 		[47204]={
@@ -50020,7 +49979,7 @@ return {
 			},
 			skill=47204,
 			stats={
-				[1]="melee_damage_+%"
+				[1]="10% increased Melee Damage"
 			}
 		},
 		[47252]={
@@ -50037,7 +49996,7 @@ return {
 			},
 			skill=47252,
 			stats={
-				[1]="mana_regeneration_rate_+%_while_stationary"
+				[1]="16% increased Mana Regeneration Rate while stationary"
 			}
 		},
 		[47263]={
@@ -50057,7 +50016,7 @@ return {
 			},
 			skill=47263,
 			stats={
-				[1]="display_passive_attribute_text"
+				[1]="+5 to any Attribute"
 			}
 		},
 		[47270]={
@@ -50075,8 +50034,8 @@ return {
 			},
 			skill=47270,
 			stats={
-				[1]="hit_damage_freeze_multiplier_+%",
-				[2]="freeze_duration_+%"
+				[1]="40% increased Freeze Buildup",
+				[2]="20% increased Freeze Duration on Enemies"
 			}
 		},
 		[47284]={
@@ -50093,7 +50052,7 @@ return {
 			},
 			skill=47284,
 			stats={
-				[1]="minion_cold_damage_resistance_%"
+				[1]="Minions have +20% to Cold Resistance"
 			}
 		},
 		[47307]={
@@ -50110,7 +50069,7 @@ return {
 			},
 			skill=47307,
 			stats={
-				[1]="base_cast_speed_+%"
+				[1]="3% increased Cast Speed"
 			}
 		},
 		[47316]={
@@ -50128,9 +50087,9 @@ return {
 			},
 			skill=47316,
 			stats={
-				[1]="base_life_leech_amount_+%",
-				[2]="physical_damage_+%",
-				[3]="maximum_life_+%"
+				[1]="5% reduced maximum Life",
+				[2]="40% increased Global Physical Damage",
+				[3]="30% increased amount of Life Leeched"
 			}
 		},
 		[47344]={
@@ -50148,7 +50107,7 @@ return {
 			},
 			skill=47344,
 			stats={
-				[1]="base_mana_leech_amount_+%"
+				[1]="12% increased amount of Mana Leeched"
 			}
 		},
 		[47354]={
@@ -50165,7 +50124,7 @@ return {
 			},
 			skill=47354,
 			stats={
-				[1]="melee_attack_speed_+%"
+				[1]="3% increased Melee Attack Speed"
 			}
 		},
 		[47359]={
@@ -50182,7 +50141,7 @@ return {
 			},
 			skill=47359,
 			stats={
-				[1]="triggered_spell_spell_damage_+%"
+				[1]="Triggered Spells deal 16% increased Spell Damage"
 			}
 		},
 		[47363]={
@@ -50199,8 +50158,7 @@ return {
 			},
 			skill=47363,
 			stats={
-				[1]="attack_area_of_effect_+%",
-				[2]="base_strength"
+				[1]="15% increased Area of Effect for Attacks"
 			}
 		},
 		[47371]={
@@ -50217,8 +50175,8 @@ return {
 			},
 			skill=47371,
 			stats={
-				[1]="empowered_attack_damage_+%",
-				[2]="base_chance_to_inflict_bleeding_%"
+				[1]="5% chance to inflict Bleeding on Hit",
+				[2]="Empowered Attacks deal 10% increased Damage"
 			}
 		},
 		[47374]={
@@ -50235,7 +50193,7 @@ return {
 			},
 			skill=47374,
 			stats={
-				[1]="projectile_damage_+%_vs_enemies_within_2m_distance"
+				[1]="Projectiles deal 12% increased Damage with Hits against Enemies within 2m"
 			}
 		},
 		[47418]={
@@ -50253,8 +50211,8 @@ return {
 			},
 			skill=47418,
 			stats={
-				[1]="flask_mana_charges_used_+%",
-				[2]="remove_curse_on_mana_flask_use"
+				[1]="10% reduced Flask Charges used from Mana Flasks",
+				[2]="Remove a Curse when you use a Mana Flask"
 			}
 		},
 		[47429]={
@@ -50271,7 +50229,7 @@ return {
 			},
 			skill=47429,
 			stats={
-				[1]="warcry_cooldown_speed_+%"
+				[1]="10% increased Warcry Cooldown Recovery Rate"
 			}
 		},
 		[47441]={
@@ -50288,8 +50246,8 @@ return {
 			},
 			skill=47441,
 			stats={
-				[1]="recover_%_life_when_you_create_an_offering",
-				[2]="offering_life_+%"
+				[1]="Offerings have 30% increased Maximum Life",
+				[2]="Recover 3% of Life when you create an Offering"
 			}
 		},
 		[47555]={
@@ -50308,7 +50266,7 @@ return {
 			},
 			skill=47555,
 			stats={
-				[1]="display_passive_attribute_text"
+				[1]="+5 to any Attribute"
 			}
 		},
 		[47591]={
@@ -50325,7 +50283,7 @@ return {
 			},
 			skill=47591,
 			stats={
-				[1]="mana_regeneration_rate_+%"
+				[1]="10% increased Mana Regeneration Rate"
 			}
 		},
 		[47614]={
@@ -50342,7 +50300,7 @@ return {
 			},
 			skill=47614,
 			stats={
-				[1]="triggered_spell_spell_damage_+%"
+				[1]="Triggered Spells deal 14% increased Spell Damage"
 			}
 		},
 		[47635]={
@@ -50359,8 +50317,8 @@ return {
 			},
 			skill=47635,
 			stats={
-				[1]="base_reduce_enemy_lightning_resistance_%",
-				[2]="lightning_penetration_%_while_on_low_mana"
+				[1]="Damage Penetrates 10% Lightning Resistance if on Low Mana",
+				[2]="Damage Penetrates 15% Lightning Resistance"
 			}
 		},
 		[47677]={
@@ -50377,7 +50335,7 @@ return {
 			},
 			skill=47677,
 			stats={
-				[1]="base_projectile_speed_+%"
+				[1]="8% increased Projectile Speed"
 			}
 		},
 		[47683]={
@@ -50394,7 +50352,7 @@ return {
 			},
 			skill=47683,
 			stats={
-				[1]="projectile_chance_to_chain_1_extra_time_from_terrain_%"
+				[1]="Projectiles have 5% chance to Chain an additional time from terrain"
 			}
 		},
 		[47709]={
@@ -50412,7 +50370,7 @@ return {
 			},
 			skill=47709,
 			stats={
-				[1]="base_chance_to_inflict_bleeding_%"
+				[1]="5% chance to inflict Bleeding on Hit"
 			}
 		},
 		[47722]={
@@ -50429,7 +50387,7 @@ return {
 			},
 			skill=47722,
 			stats={
-				[1]="warcry_damage_+%"
+				[1]="16% increased Damage with Warcries"
 			}
 		},
 		[47733]={
@@ -50445,7 +50403,7 @@ return {
 			},
 			skill=47733,
 			stats={
-				[1]="one_handed_attack_ailment_chance_+%"
+				[1]="12% increased Chance to inflict Ailments with One-Handed Attacks"
 			}
 		},
 		[47754]={
@@ -50462,7 +50420,7 @@ return {
 			},
 			skill=47754,
 			stats={
-				[1]="cold_damage_+%"
+				[1]="10% increased Cold Damage"
 			}
 		},
 		[47759]={
@@ -50479,7 +50437,7 @@ return {
 			},
 			skill=47759,
 			stats={
-				[1]="keystone_hex_master"
+				[1]="Hex Master"
 			}
 		},
 		[47782]={
@@ -50497,7 +50455,7 @@ return {
 			},
 			skill=47782,
 			stats={
-				[1]="weapon_swap_speed_+%"
+				[1]="50% increased Weapon Swap Speed"
 			}
 		},
 		[47790]={
@@ -50514,7 +50472,7 @@ return {
 			},
 			skill=47790,
 			stats={
-				[1]="attack_damage_+%"
+				[1]="10% increased Attack Damage"
 			}
 		},
 		[47796]={
@@ -50532,7 +50490,7 @@ return {
 			},
 			skill=47796,
 			stats={
-				[1]="attack_speed_+%"
+				[1]="3% increased Attack Speed"
 			}
 		},
 		[47856]={
@@ -50549,7 +50507,7 @@ return {
 			},
 			skill=47856,
 			stats={
-				[1]="damage_+%_with_two_handed_weapons"
+				[1]="12% increased Damage with Two Handed Weapons"
 			}
 		},
 		[47893]={
@@ -50566,7 +50524,7 @@ return {
 			},
 			skill=47893,
 			stats={
-				[1]="attack_speed_while_dual_wielding_+%"
+				[1]="3% increased Attack Speed while Dual Wielding"
 			}
 		},
 		[47931]={
@@ -50585,7 +50543,7 @@ return {
 			},
 			skill=47931,
 			stats={
-				[1]="display_passive_attribute_text"
+				[1]="+5 to any Attribute"
 			}
 		},
 		[47976]={
@@ -50605,7 +50563,7 @@ return {
 			},
 			skill=47976,
 			stats={
-				[1]="display_passive_attribute_text"
+				[1]="+5 to any Attribute"
 			}
 		},
 		[48006]={
@@ -50622,8 +50580,8 @@ return {
 			},
 			skill=48006,
 			stats={
-				[1]="attack_area_of_effect_+%",
-				[2]="attack_area_damage_+%"
+				[1]="15% increased Attack Area Damage",
+				[2]="15% increased Area of Effect for Attacks"
 			}
 		},
 		[48014]={
@@ -50640,8 +50598,8 @@ return {
 			},
 			skill=48014,
 			stats={
-				[1]="melee_damage_+%_vs_immobilised_enemies",
-				[2]="armour_+%_if_hit_enemy_with_melee_attack_recently"
+				[1]="25% increased Armour if you've Hit an Enemy with a Melee Attack Recently",
+				[2]="50% increased Melee Damage against Immobilised Enemies"
 			}
 		},
 		[48030]={
@@ -50659,7 +50617,7 @@ return {
 			},
 			skill=48030,
 			stats={
-				[1]="maximum_energy_shield_+%"
+				[1]="15% increased maximum Energy Shield"
 			}
 		},
 		[48035]={
@@ -50677,7 +50635,7 @@ return {
 			},
 			skill=48035,
 			stats={
-				[1]="life_regeneration_rate_+%"
+				[1]="10% increased Life Regeneration rate"
 			}
 		},
 		[48103]={
@@ -50694,9 +50652,8 @@ return {
 			},
 			skill=48103,
 			stats={
-				[1]="knockback_distance_+%",
-				[2]="hit_damage_stun_multiplier_+%",
-				[3]="base_strength"
+				[1]="20% increased Stun Buildup",
+				[2]="20% increased Knockback Distance"
 			}
 		},
 		[48116]={
@@ -50715,7 +50672,7 @@ return {
 			},
 			skill=48116,
 			stats={
-				[1]="display_passive_attribute_text"
+				[1]="+5 to any Attribute"
 			}
 		},
 		[48121]={
@@ -50732,7 +50689,7 @@ return {
 			},
 			skill=48121,
 			stats={
-				[1]="totem_elemental_resistance_%"
+				[1]="Totems gain +12% to all Elemental Resistances"
 			}
 		},
 		[48135]={
@@ -50750,7 +50707,7 @@ return {
 			},
 			skill=48135,
 			stats={
-				[1]="charm_charges_gained_+%"
+				[1]="10% increased Charm Charges gained"
 			}
 		},
 		[48137]={
@@ -50767,7 +50724,7 @@ return {
 			},
 			skill=48137,
 			stats={
-				[1]="reload_speed_+%"
+				[1]="15% increased Crossbow Reload Speed"
 			}
 		},
 		[48171]={
@@ -50784,7 +50741,7 @@ return {
 			},
 			skill=48171,
 			stats={
-				[1]="cold_damage_+%"
+				[1]="12% increased Cold Damage"
 			}
 		},
 		[48198]={
@@ -50807,9 +50764,8 @@ return {
 			},
 			skill=48198,
 			stats={
-				[1]="mana_regeneration_rate_+%",
-				[2]="base_movement_velocity_+%",
-				[3]="base_dexterity_and_intelligence"
+				[1]="4% increased Movement Speed",
+				[2]="15% increased Mana Regeneration Rate"
 			}
 		},
 		[48240]={
@@ -50827,8 +50783,8 @@ return {
 			},
 			skill=48240,
 			stats={
-				[1]="base_stun_recovery_+%",
-				[2]="regenerate_%_life_over_1_second_when_stunned"
+				[1]="40% increased Stun Recovery",
+				[2]="Regenerate 5% of Life over 1 second when Stunned"
 			}
 		},
 		[48305]={
@@ -50847,7 +50803,7 @@ return {
 			},
 			skill=48305,
 			stats={
-				[1]="display_passive_attribute_text"
+				[1]="+5 to any Attribute"
 			}
 		},
 		[48401]={
@@ -50866,7 +50822,7 @@ return {
 			},
 			skill=48401,
 			stats={
-				[1]="display_passive_attribute_text"
+				[1]="+5 to any Attribute"
 			}
 		},
 		[48418]={
@@ -50884,7 +50840,7 @@ return {
 			},
 			skill=48418,
 			stats={
-				[1]="stun_threshold_+_per_strength"
+				[1]="+3 to Stun Threshold per Strength"
 			}
 		},
 		[48429]={
@@ -50902,7 +50858,7 @@ return {
 			},
 			skill=48429,
 			stats={
-				[1]="grenade_skill_cooldown_speed_+%"
+				[1]="15% increased Cooldown Recovery Rate for Grenade Skills"
 			}
 		},
 		[48462]={
@@ -50919,7 +50875,7 @@ return {
 			},
 			skill=48462,
 			stats={
-				[1]="charm_effect_+%"
+				[1]="Charms applied to you have 10% increased Effect"
 			}
 		},
 		[48519]={
@@ -50936,7 +50892,7 @@ return {
 			},
 			skill=48519,
 			stats={
-				[1]="flask_duration_+%"
+				[1]="10% increased Flask Effect Duration"
 			}
 		},
 		[48531]={
@@ -50953,7 +50909,7 @@ return {
 			},
 			skill=48531,
 			stats={
-				[1]="melee_attack_speed_+%"
+				[1]="3% increased Melee Attack Speed"
 			}
 		},
 		[48551]={
@@ -50971,7 +50927,7 @@ return {
 			},
 			skill=48551,
 			stats={
-				[1]="spell_critical_strike_chance_+%"
+				[1]="12% increased Critical Hit Chance for Spells"
 			}
 		},
 		[48552]={
@@ -50989,7 +50945,7 @@ return {
 			},
 			skill=48552,
 			stats={
-				[1]="display_passive_attribute_text"
+				[1]="+5 to any Attribute"
 			}
 		},
 		[48565]={
@@ -51006,7 +50962,7 @@ return {
 			},
 			skill=48565,
 			stats={
-				[1]="minion_damage_+%"
+				[1]="Minions deal 25% increased Damage"
 			}
 		},
 		[48568]={
@@ -51023,7 +50979,7 @@ return {
 			},
 			skill=48568,
 			stats={
-				[1]="display_passive_attribute_text"
+				[1]="+5 to any Attribute"
 			}
 		},
 		[48581]={
@@ -51041,8 +50997,8 @@ return {
 			},
 			skill=48581,
 			stats={
-				[1]="damage_+%_vs_enemies_affected_by_status_ailments",
-				[2]="ailment_chance_+%_vs_rare_or_unique_enemy"
+				[1]="24% increased Damage with Hits against Enemies affected by Elemental Ailments",
+				[2]="30% increased chance to inflict Ailments against Rare or Unique Enemies"
 			}
 		},
 		[48583]={
@@ -51059,8 +51015,8 @@ return {
 			},
 			skill=48583,
 			stats={
-				[1]="armour_evasion_+%_while_leeching",
-				[2]="base_life_leech_amount_+%"
+				[1]="8% increased amount of Life Leeched",
+				[2]="8% increased Armour and Evasion Rating while Leeching"
 			}
 		},
 		[48585]={
@@ -51077,7 +51033,7 @@ return {
 			},
 			skill=48585,
 			stats={
-				[1]="evasion_rating_+%"
+				[1]="15% increased Evasion Rating"
 			}
 		},
 		[48588]={
@@ -51094,7 +51050,7 @@ return {
 			},
 			skill=48588,
 			stats={
-				[1]="projectile_damage_+%"
+				[1]="10% increased Projectile Damage"
 			}
 		},
 		[48589]={
@@ -51112,7 +51068,7 @@ return {
 			},
 			skill=48589,
 			stats={
-				[1]="flask_life_to_recover_+%"
+				[1]="10% increased Life Recovery from Flasks"
 			}
 		},
 		[48611]={
@@ -51129,7 +51085,7 @@ return {
 			},
 			skill=48611,
 			stats={
-				[1]="minion_elemental_resistance_%"
+				[1]="Minions have +8% to all Elemental Resistances"
 			}
 		},
 		[48618]={
@@ -51147,7 +51103,7 @@ return {
 			},
 			skill=48618,
 			stats={
-				[1]="mana_regeneration_rate_+%"
+				[1]="10% increased Mana Regeneration Rate"
 			}
 		},
 		[48631]={
@@ -51165,7 +51121,7 @@ return {
 			},
 			skill=48631,
 			stats={
-				[1]="display_passive_attribute_text"
+				[1]="+5 to any Attribute"
 			}
 		},
 		[48635]={
@@ -51184,7 +51140,7 @@ return {
 			},
 			skill=48635,
 			stats={
-				[1]="display_passive_attribute_text"
+				[1]="+5 to any Attribute"
 			}
 		},
 		[48658]={
@@ -51201,9 +51157,9 @@ return {
 			},
 			skill=48658,
 			stats={
-				[1]="chill_effect_+%",
-				[2]="chill_duration_+%",
-				[3]="hit_damage_freeze_multiplier_+%"
+				[1]="25% increased Freeze Buildup",
+				[2]="15% increased Chill Duration on Enemies",
+				[3]="15% increased Magnitude of Chill you inflict"
 			}
 		},
 		[48670]={
@@ -51224,7 +51180,7 @@ return {
 			},
 			skill=48670,
 			stats={
-				[1]="display_passive_attribute_text"
+				[1]="+5 to any Attribute"
 			}
 		},
 		[48682]={
@@ -51242,7 +51198,7 @@ return {
 			},
 			skill=48682,
 			stats={
-				[1]="totem_life_+%"
+				[1]="20% increased Totem Life"
 			}
 		},
 		[48714]={
@@ -51259,7 +51215,7 @@ return {
 			},
 			skill=48714,
 			stats={
-				[1]="melee_attack_speed_+%"
+				[1]="3% increased Melee Attack Speed"
 			}
 		},
 		[48745]={
@@ -51277,7 +51233,7 @@ return {
 			},
 			skill=48745,
 			stats={
-				[1]="block_chance_+%"
+				[1]="5% increased Block chance"
 			}
 		},
 		[48768]={
@@ -51317,7 +51273,7 @@ return {
 			},
 			skill=48773,
 			stats={
-				[1]="display_passive_attribute_text"
+				[1]="+5 to any Attribute"
 			}
 		},
 		[48774]={
@@ -51334,7 +51290,7 @@ return {
 			},
 			skill=48774,
 			stats={
-				[1]="physical_damage_taken_recouped_as_life_%"
+				[1]="15% of Physical Damage taken Recouped as Life"
 			}
 		},
 		[48821]={
@@ -51352,7 +51308,7 @@ return {
 			},
 			skill=48821,
 			stats={
-				[1]="base_spell_critical_strike_multiplier_+"
+				[1]="15% increased Critical Spell Damage Bonus"
 			}
 		},
 		[48833]={
@@ -51370,7 +51326,7 @@ return {
 			},
 			skill=48833,
 			stats={
-				[1]="lightning_damage_+%"
+				[1]="10% increased Lightning Damage"
 			}
 		},
 		[48846]={
@@ -51387,7 +51343,7 @@ return {
 			},
 			skill=48846,
 			stats={
-				[1]="lightning_damage_+%"
+				[1]="12% increased Lightning Damage"
 			}
 		},
 		[48856]={
@@ -51404,7 +51360,7 @@ return {
 			},
 			skill=48856,
 			stats={
-				[1]="grenade_skill_damage_+%"
+				[1]="12% increased Grenade Damage"
 			}
 		},
 		[48974]={
@@ -51422,8 +51378,8 @@ return {
 			},
 			skill=48974,
 			stats={
-				[1]="flask_mana_to_recover_+%",
-				[2]="mana_recovery_rate_+%_while_affected_by_a_mana_flask"
+				[1]="25% increased Mana Recovery from Flasks",
+				[2]="10% increased Mana Recovery Rate during Effect of any Mana Flask"
 			}
 		},
 		[48979]={
@@ -51440,7 +51396,7 @@ return {
 			},
 			skill=48979,
 			stats={
-				[1]="totem_life_+%"
+				[1]="16% increased Totem Life"
 			}
 		},
 		[49023]={
@@ -51458,7 +51414,7 @@ return {
 			},
 			skill=49023,
 			stats={
-				[1]="block_chance_+%"
+				[1]="5% increased Block chance"
 			}
 		},
 		[49046]={
@@ -51475,7 +51431,7 @@ return {
 			},
 			skill=49046,
 			stats={
-				[1]="display_passive_attribute_text"
+				[1]="+5 to any Attribute"
 			}
 		},
 		[49049]={
@@ -51493,7 +51449,6 @@ return {
 			},
 			skill=49049,
 			stats={
-				[1]="ascendancy_chronomancer_apex_of_the_moment_base_slow_aura_value"
 			}
 		},
 		[49088]={
@@ -51510,8 +51465,8 @@ return {
 			},
 			skill=49088,
 			stats={
-				[1]="minion_accuracy_rating_+%",
-				[2]="minion_accuracy_rating"
+				[1]="Minions have +150 to Accuracy Rating",
+				[2]="25% increased Minion Accuracy Rating"
 			}
 		},
 		[49110]={
@@ -51528,8 +51483,8 @@ return {
 			},
 			skill=49110,
 			stats={
-				[1]="ailment_chance_+%",
-				[2]="base_damaging_ailment_effect_+%"
+				[1]="6% increased chance to inflict Ailments",
+				[2]="6% increased Magnitude of Damaging Ailments you inflict"
 			}
 		},
 		[49165]={
@@ -51547,7 +51502,7 @@ return {
 			},
 			skill=49165,
 			stats={
-				[1]="mark_effect_+%"
+				[1]="12% increased Effect of your Mark Skills"
 			}
 		},
 		[49189]={
@@ -51565,7 +51520,7 @@ return {
 			},
 			skill=49189,
 			stats={
-				[1]="exposure_you_inflict_lowers_affected_resistance_by_extra_%"
+				[1]="Exposure you inflict lowers the affected Resistance by an additional 20%"
 			}
 		},
 		[49192]={
@@ -51583,7 +51538,7 @@ return {
 			},
 			skill=49192,
 			stats={
-				[1]="summon_totem_cast_speed_+%"
+				[1]="20% increased Totem Placement speed"
 			}
 		},
 		[49198]={
@@ -51600,7 +51555,7 @@ return {
 			},
 			skill=49198,
 			stats={
-				[1]="block_chance_+%"
+				[1]="5% increased Block chance"
 			}
 		},
 		[49220]={
@@ -51624,8 +51579,7 @@ return {
 			},
 			skill=49220,
 			stats={
-				[1]="attack_and_cast_speed_+%",
-				[2]="base_dexterity_and_intelligence"
+				[1]="8% increased Attack and Cast Speed"
 			}
 		},
 		[49231]={
@@ -51643,7 +51597,7 @@ return {
 			},
 			skill=49231,
 			stats={
-				[1]="attack_speed_+%"
+				[1]="3% increased Attack Speed"
 			}
 		},
 		[49235]={
@@ -51660,7 +51614,7 @@ return {
 			},
 			skill=49235,
 			stats={
-				[1]="energy_shield_delay_-%"
+				[1]="15% faster start of Energy Shield Recharge"
 			}
 		},
 		[49256]={
@@ -51678,8 +51632,8 @@ return {
 			},
 			skill=49256,
 			stats={
-				[1]="physical_damage_reduction_rating_+%",
-				[2]="maximum_energy_shield_+%"
+				[1]="12% increased Armour",
+				[2]="12% increased maximum Energy Shield"
 			}
 		},
 		[49280]={
@@ -51696,7 +51650,7 @@ return {
 			},
 			skill=49280,
 			stats={
-				[1]="evasion_and_physical_damage_reduction_rating_+%"
+				[1]="12% increased Armour and Evasion Rating"
 			}
 		},
 		[49291]={
@@ -51713,7 +51667,7 @@ return {
 			},
 			skill=49291,
 			stats={
-				[1]="flask_life_to_recover_+%"
+				[1]="10% increased Life Recovery from Flasks"
 			}
 		},
 		[49320]={
@@ -51730,7 +51684,7 @@ return {
 			},
 			skill=49320,
 			stats={
-				[1]="dagger_critical_strike_chance_+%"
+				[1]="10% increased Critical Hit Chance with Daggers"
 			}
 		},
 		[49357]={
@@ -51749,7 +51703,7 @@ return {
 			},
 			skill=49357,
 			stats={
-				[1]="display_passive_attribute_text"
+				[1]="+5 to any Attribute"
 			}
 		},
 		[49370]={
@@ -51766,8 +51720,8 @@ return {
 			},
 			skill=49370,
 			stats={
-				[1]="flail_critical_strike_chance_+%",
-				[2]="flail_critical_strike_multiplier_+"
+				[1]="30% increased Critical Hit Chance with Flails",
+				[2]="20% increased Critical Damage Bonus with Flails"
 			}
 		},
 		[49380]={
@@ -51785,7 +51739,7 @@ return {
 			},
 			skill=49380,
 			stats={
-				[1]="armour_break_amount_+%"
+				[1]="Break 25% increased Armour"
 			}
 		},
 		[49388]={
@@ -51803,8 +51757,8 @@ return {
 			},
 			skill=49388,
 			stats={
-				[1]="shock_effect_+%",
-				[2]="chill_effect_+%"
+				[1]="10% increased Magnitude of Chill you inflict",
+				[2]="10% increased Magnitude of Shock you inflict"
 			}
 		},
 		[49394]={
@@ -51821,7 +51775,7 @@ return {
 			},
 			skill=49394,
 			stats={
-				[1]="critical_hit_bleeding_effect_+%"
+				[1]="15% increased Magnitude of Bleeding you inflict with Critical Hits"
 			}
 		},
 		[49406]={
@@ -51838,7 +51792,7 @@ return {
 			},
 			skill=49406,
 			stats={
-				[1]="projectile_damage_+%"
+				[1]="10% increased Projectile Damage"
 			}
 		},
 		[49455]={
@@ -51855,7 +51809,7 @@ return {
 			},
 			skill=49455,
 			stats={
-				[1]="maximum_energy_shield_+%"
+				[1]="15% increased maximum Energy Shield"
 			}
 		},
 		[49466]={
@@ -51873,7 +51827,7 @@ return {
 			},
 			skill=49466,
 			stats={
-				[1]="flask_life_to_recover_+%"
+				[1]="10% increased Life Recovery from Flasks"
 			}
 		},
 		[49503]={
@@ -51891,7 +51845,7 @@ return {
 			},
 			skill=49503,
 			stats={
-				[1]="mana_flask_charges_gained_+%"
+				[1]="20% increased Mana Flask Charges gained"
 			}
 		},
 		[49512]={
@@ -51909,7 +51863,7 @@ return {
 			},
 			skill=49512,
 			stats={
-				[1]="display_passive_attribute_text"
+				[1]="+5 to any Attribute"
 			}
 		},
 		[49537]={
@@ -51926,7 +51880,7 @@ return {
 			},
 			skill=49537,
 			stats={
-				[1]="attack_and_cast_speed_+%_with_elemental_skills"
+				[1]="3% increased Attack and Cast Speed with Elemental Skills"
 			}
 		},
 		[49545]={
@@ -51944,7 +51898,7 @@ return {
 			},
 			skill=49545,
 			stats={
-				[1]="shield_armour_+%"
+				[1]="25% increased Defences from Equipped Shield"
 			}
 		},
 		[49550]={
@@ -51961,7 +51915,7 @@ return {
 			},
 			skill=49550,
 			stats={
-				[1]="rage_decay_speed_+%"
+				[1]="Inherent loss of Rage is 25% slower"
 			}
 		},
 		[49593]={
@@ -51978,7 +51932,7 @@ return {
 			},
 			skill=49593,
 			stats={
-				[1]="minion_damage_+%"
+				[1]="Minions deal 10% increased Damage"
 			}
 		},
 		[49618]={
@@ -51996,8 +51950,7 @@ return {
 			},
 			skill=49618,
 			stats={
-				[1]="melee_critical_strike_chance_+%",
-				[2]="melee_critical_strike_chance_+%_when_on_full_life"
+				[1]="20% increased Melee Critical Hit Chance"
 			}
 		},
 		[49642]={
@@ -52014,7 +51967,7 @@ return {
 			},
 			skill=49642,
 			stats={
-				[1]="totem_damage_+%"
+				[1]="16% increased Totem Damage"
 			}
 		},
 		[49657]={
@@ -52035,7 +51988,7 @@ return {
 			},
 			skill=49657,
 			stats={
-				[1]="display_passive_attribute_text"
+				[1]="+5 to any Attribute"
 			}
 		},
 		[49661]={
@@ -52052,8 +52005,8 @@ return {
 			},
 			skill=49661,
 			stats={
-				[1]="critical_strike_chance_+%_vs_bleeding_enemies",
-				[2]="aggravate_bleeding_on_attack_crit_chance_%"
+				[1]="30% increased Critical Hit Chance against Bleeding Enemies",
+				[2]="20% chance to Aggravate Bleeding on targets you Critically Hit with Attacks"
 			}
 		},
 		[49691]={
@@ -52071,7 +52024,7 @@ return {
 			},
 			skill=49691,
 			stats={
-				[1]="base_evasion_rating"
+				[1]="+16 to Evasion Rating"
 			}
 		},
 		[49696]={
@@ -52088,7 +52041,7 @@ return {
 			},
 			skill=49696,
 			stats={
-				[1]="additional_all_attributes"
+				[1]="+3 to all Attributes"
 			}
 		},
 		[49734]={
@@ -52107,7 +52060,7 @@ return {
 			},
 			skill=49734,
 			stats={
-				[1]="display_passive_attribute_text"
+				[1]="+5 to any Attribute"
 			}
 		},
 		[49740]={
@@ -52124,7 +52077,7 @@ return {
 			},
 			skill=49740,
 			stats={
-				[1]="ice_crystal_maximum_life_+%"
+				[1]="60% reduced Ice Crystal Life"
 			}
 		},
 		[49759]={
@@ -52142,7 +52095,7 @@ return {
 			},
 			skill=49759,
 			stats={
-				[1]="shock_chance_+%"
+				[1]="20% increased chance to Shock"
 			}
 		},
 		[49799]={
@@ -52159,7 +52112,7 @@ return {
 			},
 			skill=49799,
 			stats={
-				[1]="flask_mana_to_recover_+%"
+				[1]="10% increased Mana Recovery from Flasks"
 			}
 		},
 		[49938]={
@@ -52177,7 +52130,7 @@ return {
 			},
 			skill=49938,
 			stats={
-				[1]="display_passive_attribute_text"
+				[1]="+5 to any Attribute"
 			}
 		},
 		[49952]={
@@ -52194,8 +52147,8 @@ return {
 			},
 			skill=49952,
 			stats={
-				[1]="ailment_effect_+%",
-				[2]="attack_speed_+%"
+				[1]="1% reduced Attack Speed",
+				[2]="12% increased Magnitude of Ailments you inflict"
 			}
 		},
 		[49976]={
@@ -52212,7 +52165,7 @@ return {
 			},
 			skill=49976,
 			stats={
-				[1]="base_damage_removed_from_mana_before_life_%"
+				[1]="4% of Damage is taken from Mana before Life"
 			}
 		},
 		[49984]={
@@ -52229,8 +52182,7 @@ return {
 			},
 			skill=49984,
 			stats={
-				[1]="spell_damage_+%_while_wielding_melee_weapon",
-				[2]="base_dexterity"
+				[1]="32% increased Spell Damage while wielding a Melee Weapon"
 			}
 		},
 		[49996]={
@@ -52249,7 +52201,7 @@ return {
 			},
 			skill=49996,
 			stats={
-				[1]="display_passive_attribute_text"
+				[1]="+5 to any Attribute"
 			}
 		},
 		[50062]={
@@ -52266,8 +52218,8 @@ return {
 			},
 			skill=50062,
 			stats={
-				[1]="defend_with_%_of_armour_while_not_on_low_energy_shield",
-				[2]="maximum_energy_shield_+%"
+				[1]="20% increased maximum Energy Shield",
+				[2]="Defend with 120% of Armour while not on Low Energy Shield"
 			}
 		},
 		[50084]={
@@ -52286,8 +52238,8 @@ return {
 			},
 			skill=50084,
 			stats={
-				[1]="attack_damage_+%",
-				[2]="spell_damage_+%"
+				[1]="8% increased Spell Damage",
+				[2]="8% increased Attack Damage"
 			}
 		},
 		[50098]={
@@ -52324,7 +52276,7 @@ return {
 			},
 			skill=50104,
 			stats={
-				[1]="display_passive_attribute_text"
+				[1]="+5 to any Attribute"
 			}
 		},
 		[50121]={
@@ -52341,7 +52293,7 @@ return {
 			},
 			skill=50121,
 			stats={
-				[1]="cold_damage_+%"
+				[1]="10% increased Cold Damage"
 			}
 		},
 		[50192]={
@@ -52359,7 +52311,7 @@ return {
 			},
 			skill=50192,
 			stats={
-				[1]="maximum_life_+%"
+				[1]="3% increased maximum Life"
 			}
 		},
 		[50216]={
@@ -52378,7 +52330,7 @@ return {
 			},
 			skill=50216,
 			stats={
-				[1]="mana_regeneration_rate_+%"
+				[1]="10% increased Mana Regeneration Rate"
 			}
 		},
 		[50219]={
@@ -52396,7 +52348,7 @@ return {
 			},
 			skill=50219,
 			stats={
-				[1]="debuff_time_passed_+%"
+				[1]="Debuffs on you expire 10% faster"
 			}
 		},
 		[50253]={
@@ -52413,7 +52365,7 @@ return {
 			},
 			skill=50253,
 			stats={
-				[1]="aftershock_area_of_effect_+%"
+				[1]="40% increased Aftershock Area of Effect"
 			}
 		},
 		[50273]={
@@ -52432,7 +52384,7 @@ return {
 			},
 			skill=50273,
 			stats={
-				[1]="damage_while_dual_wielding_+%"
+				[1]="12% increased Attack Damage while Dual Wielding"
 			}
 		},
 		[50277]={
@@ -52449,7 +52401,7 @@ return {
 			},
 			skill=50277,
 			stats={
-				[1]="shock_effect_+%"
+				[1]="15% increased Magnitude of Shock you inflict"
 			}
 		},
 		[50302]={
@@ -52466,7 +52418,7 @@ return {
 			},
 			skill=50302,
 			stats={
-				[1]="base_skill_cost_life_instead_of_mana_%"
+				[1]="6% of Skill Mana Costs Converted to Life Costs"
 			}
 		},
 		[50328]={
@@ -52483,7 +52435,7 @@ return {
 			},
 			skill=50328,
 			stats={
-				[1]="flask_life_and_mana_to_recover_+%"
+				[1]="10% increased Life and Mana Recovery from Flasks"
 			}
 		},
 		[50342]={
@@ -52500,7 +52452,7 @@ return {
 			},
 			skill=50342,
 			stats={
-				[1]="evasion_rating_+%"
+				[1]="15% increased Evasion Rating"
 			}
 		},
 		[50389]={
@@ -52518,7 +52470,7 @@ return {
 			},
 			skill=50389,
 			stats={
-				[1]="link_to_X_additional_random_allies"
+				[1]="Link Skills Link to 1 additional random target"
 			}
 		},
 		[50392]={
@@ -52535,8 +52487,8 @@ return {
 			},
 			skill=50392,
 			stats={
-				[1]="damage_+%_per_15_strength",
-				[2]="maximum_mana_+%"
+				[1]="10% reduced maximum Mana",
+				[2]="1% increased Damage per 15 Strength"
 			}
 		},
 		[50420]={
@@ -52554,7 +52506,7 @@ return {
 			},
 			skill=50420,
 			stats={
-				[1]="charm_charges_gained_+%"
+				[1]="10% increased Charm Charges gained"
 			}
 		},
 		[50423]={
@@ -52572,7 +52524,7 @@ return {
 			},
 			skill=50423,
 			stats={
-				[1]="display_passive_attribute_text"
+				[1]="+5 to any Attribute"
 			}
 		},
 		[50437]={
@@ -52589,7 +52541,7 @@ return {
 			},
 			skill=50437,
 			stats={
-				[1]="evasion_rating_+%"
+				[1]="15% increased Evasion Rating"
 			}
 		},
 		[50459]={
@@ -52625,7 +52577,7 @@ return {
 			},
 			skill=50469,
 			stats={
-				[1]="display_passive_attribute_text"
+				[1]="+5 to any Attribute"
 			}
 		},
 		[50483]={
@@ -52642,7 +52594,7 @@ return {
 			},
 			skill=50483,
 			stats={
-				[1]="minion_skill_area_of_effect_+%"
+				[1]="Minions have 10% increased Area of Effect"
 			}
 		},
 		[50485]={
@@ -52659,9 +52611,9 @@ return {
 			},
 			skill=50485,
 			stats={
-				[1]="curse_effect_+%",
-				[2]="curse_area_of_effect_+%",
-				[3]="enemies_you_curse_have_15%_hinder"
+				[1]="40% increased Area of Effect of Curses",
+				[2]="8% increased Effect of your Curses",
+				[3]="Enemies you Curse are Hindered, with 15% reduced Movement Speed"
 			}
 		},
 		[50510]={
@@ -52678,7 +52630,7 @@ return {
 			},
 			skill=50510,
 			stats={
-				[1]="block_chance_+%"
+				[1]="5% increased Block chance"
 			}
 		},
 		[50558]={
@@ -52697,7 +52649,7 @@ return {
 			},
 			skill=50558,
 			stats={
-				[1]="aura_effect_+%"
+				[1]="8% increased Effect of Auras from your Skills"
 			}
 		},
 		[50561]={
@@ -52714,7 +52666,7 @@ return {
 			},
 			skill=50561,
 			stats={
-				[1]="empowered_attack_damage_+%"
+				[1]="Empowered Attacks deal 16% increased Damage"
 			}
 		},
 		[50562]={
@@ -52731,9 +52683,8 @@ return {
 			},
 			skill=50562,
 			stats={
-				[1]="base_critical_strike_multiplier_+",
-				[2]="base_mana_cost_-%",
-				[3]="base_strength"
+				[1]="45% increased Critical Damage Bonus",
+				[2]="10% increased Mana Cost of Skills"
 			}
 		},
 		[50588]={
@@ -52751,7 +52702,7 @@ return {
 			},
 			skill=50588,
 			stats={
-				[1]="accuracy_rating_+%"
+				[1]="8% increased Accuracy Rating"
 			}
 		},
 		[50609]={
@@ -52769,8 +52720,8 @@ return {
 			},
 			skill=50609,
 			stats={
-				[1]="life_regeneration_rate_per_minute_%",
-				[2]="flask_life_recovery_rate_+%"
+				[1]="40% increased Flask Life Recovery rate",
+				[2]="Regenerate 0.75% of Life per second"
 			}
 		},
 		[50626]={
@@ -52787,8 +52738,8 @@ return {
 			},
 			skill=50626,
 			stats={
-				[1]="base_physical_damage_reduction_rating",
-				[2]="base_maximum_energy_shield"
+				[1]="+10 to Armour",
+				[2]="+5 to maximum Energy Shield"
 			}
 		},
 		[50629]={
@@ -52806,7 +52757,7 @@ return {
 			},
 			skill=50629,
 			stats={
-				[1]="elemental_damage_+%"
+				[1]="10% increased Elemental Damage"
 			}
 		},
 		[50635]={
@@ -52824,7 +52775,7 @@ return {
 			},
 			skill=50635,
 			stats={
-				[1]="attack_speed_+%"
+				[1]="3% increased Attack Speed"
 			}
 		},
 		[50687]={
@@ -52841,8 +52792,8 @@ return {
 			},
 			skill=50687,
 			stats={
-				[1]="hit_damage_electrocute_multiplier_+%",
-				[2]="shock_chance_+%_vs_electrocuted_enemies"
+				[1]="40% increased Electrocute Buildup",
+				[2]="30% increased Shock Chance against Electrocuted Enemies"
 			}
 		},
 		[50701]={
@@ -52860,7 +52811,7 @@ return {
 			},
 			skill=50701,
 			stats={
-				[1]="shock_effect_+%"
+				[1]="15% increased Magnitude of Shock you inflict"
 			}
 		},
 		[50720]={
@@ -52880,7 +52831,7 @@ return {
 			},
 			skill=50720,
 			stats={
-				[1]="minion_damage_+%"
+				[1]="Minions deal 10% increased Damage"
 			}
 		},
 		[50755]={
@@ -52898,7 +52849,6 @@ return {
 			},
 			skill=50755,
 			stats={
-				[1]="base_intelligence"
 			}
 		},
 		[50795]={
@@ -52915,8 +52865,8 @@ return {
 			},
 			skill=50795,
 			stats={
-				[1]="projectile_damage_+%",
-				[2]="accuracy_rating_+%_vs_enemies_in_close_range"
+				[1]="16% increased Projectile Damage",
+				[2]="40% increased Accuracy Rating at Close Range"
 			}
 		},
 		[50816]={
@@ -52934,7 +52884,6 @@ return {
 			},
 			skill=50816,
 			stats={
-				[1]="base_intelligence"
 			}
 		},
 		[50847]={
@@ -52951,7 +52900,7 @@ return {
 			},
 			skill=50847,
 			stats={
-				[1]="flail_damage_+%"
+				[1]="10% increased Damage with Flails"
 			}
 		},
 		[50986]={
@@ -52988,7 +52937,7 @@ return {
 			},
 			skill=51006,
 			stats={
-				[1]="flask_mana_charges_used_+%"
+				[1]="4% reduced Flask Charges used from Mana Flasks"
 			}
 		},
 		[51048]={
@@ -53007,7 +52956,7 @@ return {
 			},
 			skill=51048,
 			stats={
-				[1]="display_passive_attribute_text"
+				[1]="+5 to any Attribute"
 			}
 		},
 		[51052]={
@@ -53024,7 +52973,7 @@ return {
 			},
 			skill=51052,
 			stats={
-				[1]="display_passive_attribute_text"
+				[1]="+5 to any Attribute"
 			}
 		},
 		[51105]={
@@ -53042,8 +52991,8 @@ return {
 			},
 			skill=51105,
 			stats={
-				[1]="totem_life_+%",
-				[2]="totem_duration_+%"
+				[1]="30% increased Totem Life",
+				[2]="30% increased Totem Duration"
 			}
 		},
 		[51129]={
@@ -53061,7 +53010,7 @@ return {
 			},
 			skill=51129,
 			stats={
-				[1]="damage_+%_against_enemies_with_fully_broken_armour"
+				[1]="60% increased Damage against Enemies with Fully Broken Armour"
 			}
 		},
 		[51169]={
@@ -53078,7 +53027,7 @@ return {
 			},
 			skill=51169,
 			stats={
-				[1]="energy_shield_recovery_rate_+%"
+				[1]="15% increased Energy Shield Recovery rate"
 			}
 		},
 		[51184]={
@@ -53100,8 +53049,7 @@ return {
 			},
 			skill=51184,
 			stats={
-				[1]="spell_damage_+%",
-				[2]="base_intelligence"
+				[1]="20% increased Spell Damage"
 			}
 		},
 		[51206]={
@@ -53119,7 +53067,7 @@ return {
 			},
 			skill=51206,
 			stats={
-				[1]="totem_damage_+%"
+				[1]="16% increased Totem Damage"
 			}
 		},
 		[51213]={
@@ -53136,8 +53084,8 @@ return {
 			},
 			skill=51213,
 			stats={
-				[1]="damaging_ailment_duration_+%",
-				[2]="hit_damage_+%_vs_enemies_affected_by_ailments"
+				[1]="15% increased Duration of Damaging Ailments on Enemies",
+				[2]="30% increased Damage with Hits against Enemies affected by Ailments"
 			}
 		},
 		[51241]={
@@ -53154,7 +53102,7 @@ return {
 			},
 			skill=51241,
 			stats={
-				[1]="charm_charges_gained_+%"
+				[1]="10% increased Charm Charges gained"
 			}
 		},
 		[51248]={
@@ -53172,7 +53120,7 @@ return {
 			},
 			skill=51248,
 			stats={
-				[1]="fire_damage_+%"
+				[1]="10% increased Fire Damage"
 			}
 		},
 		[51299]={
@@ -53191,7 +53139,7 @@ return {
 			},
 			skill=51299,
 			stats={
-				[1]="display_passive_attribute_text"
+				[1]="+5 to any Attribute"
 			}
 		},
 		[51335]={
@@ -53209,8 +53157,8 @@ return {
 			},
 			skill=51335,
 			stats={
-				[1]="fire_damage_+%",
-				[2]="ignite_chance_+%"
+				[1]="18% increased Fire Damage",
+				[2]="30% increased chance to Ignite"
 			}
 		},
 		[51336]={
@@ -53228,7 +53176,7 @@ return {
 			},
 			skill=51336,
 			stats={
-				[1]="elemental_damage_with_attack_skills_+%"
+				[1]="12% increased Elemental Damage with Attacks"
 			}
 		},
 		[51369]={
@@ -53246,7 +53194,7 @@ return {
 			},
 			skill=51369,
 			stats={
-				[1]="damage_+%_vs_burning_enemies"
+				[1]="14% increased Damage with Hits against Burning Enemies"
 			}
 		},
 		[51394]={
@@ -53263,7 +53211,7 @@ return {
 			},
 			skill=51394,
 			stats={
-				[1]="base_slow_potency_+%"
+				[1]="24% reduced Slowing Potency of Debuffs on You"
 			}
 		},
 		[51416]={
@@ -53282,7 +53230,7 @@ return {
 			},
 			skill=51416,
 			stats={
-				[1]="spell_damage_+%_while_wielding_melee_weapon"
+				[1]="12% increased Spell Damage while wielding a Melee Weapon"
 			}
 		},
 		[51446]={
@@ -53300,7 +53248,7 @@ return {
 			},
 			skill=51446,
 			stats={
-				[1]="evasion_rating_+_per_1_armour_on_gloves"
+				[1]="+1 to Evasion Rating per 1 Armour on Equipped Gloves"
 			}
 		},
 		[51509]={
@@ -53317,8 +53265,8 @@ return {
 			},
 			skill=51509,
 			stats={
-				[1]="recover_%_maximum_life_on_mana_flask_use",
-				[2]="generate_x_charges_for_mana_flasks_per_minute"
+				[1]="Recover 2% of Life when you use a Mana Flask",
+				[2]="Mana Flasks gain 0.1 charges per Second"
 			}
 		},
 		[51534]={
@@ -53336,7 +53284,7 @@ return {
 			},
 			skill=51534,
 			stats={
-				[1]="critical_strike_chance_+%_if_have_not_crit_recently"
+				[1]="20% increased Critical Hit Chance if you haven't dealt a Critical Hit Recently"
 			}
 		},
 		[51535]={
@@ -53353,8 +53301,8 @@ return {
 			},
 			skill=51535,
 			stats={
-				[1]="base_life_leech_amount_+%",
-				[2]="base_life_leech_rate_+%"
+				[1]="15% increased amount of Life Leeched",
+				[2]="Leech Life 5% slower"
 			}
 		},
 		[51561]={
@@ -53373,7 +53321,7 @@ return {
 			},
 			skill=51561,
 			stats={
-				[1]="display_passive_attribute_text"
+				[1]="+5 to any Attribute"
 			}
 		},
 		[51565]={
@@ -53390,7 +53338,7 @@ return {
 			},
 			skill=51565,
 			stats={
-				[1]="spell_skills_fire_2_additional_projectiles_final_chance_%"
+				[1]="6% chance for Spell Skills to fire 2 additional Projectiles"
 			}
 		},
 		[51602]={
@@ -53407,8 +53355,8 @@ return {
 			},
 			skill=51602,
 			stats={
-				[1]="marked_enemies_cannot_deal_critical_strikes",
-				[2]="enemies_near_marked_enemy_are_blinded"
+				[1]="Enemies near Enemies you Mark are Blinded",
+				[2]="Enemies you Mark cannot deal Critical Hits"
 			}
 		},
 		[51606]={
@@ -53426,8 +53374,8 @@ return {
 			},
 			skill=51606,
 			stats={
-				[1]="evasion_rating_+%",
-				[2]="evasion_rating_+%_if_you_dodge_rolled_recently"
+				[1]="30% increased Evasion Rating",
+				[2]="30% increased Evasion Rating if you've Dodge Rolled Recently"
 			}
 		},
 		[51683]={
@@ -53444,7 +53392,7 @@ return {
 			},
 			skill=51683,
 			stats={
-				[1]="totem_damage_+%"
+				[1]="16% increased Totem Damage"
 			}
 		},
 		[51690]={
@@ -53462,7 +53410,7 @@ return {
 			},
 			skill=51690,
 			stats={
-				[1]="life_regeneration_rate_per_minute_%"
+				[1]="Regenerate 0.5% of Life per second"
 			}
 		},
 		[51702]={
@@ -53479,7 +53427,6 @@ return {
 			},
 			skill=51702,
 			stats={
-				[1]="base_strength"
 			}
 		},
 		[51707]={
@@ -53497,8 +53444,8 @@ return {
 			},
 			skill=51707,
 			stats={
-				[1]="evasion_rating_+%",
-				[2]="dexterity_+%"
+				[1]="30% increased Evasion Rating",
+				[2]="8% increased Dexterity"
 			}
 		},
 		[51728]={
@@ -53515,7 +53462,7 @@ return {
 			},
 			skill=51728,
 			stats={
-				[1]="base_chance_to_pierce_%"
+				[1]="15% chance to Pierce an Enemy"
 			}
 		},
 		[51735]={
@@ -53532,7 +53479,7 @@ return {
 			},
 			skill=51735,
 			stats={
-				[1]="attack_skills_damage_+%_while_holding_shield"
+				[1]="Attack Skills deal 10% increased Damage while holding a Shield"
 			}
 		},
 		[51737]={
@@ -53568,7 +53515,7 @@ return {
 			},
 			skill=51741,
 			stats={
-				[1]="display_passive_attribute_text"
+				[1]="+5 to any Attribute"
 			}
 		},
 		[51749]={
@@ -53585,7 +53532,7 @@ return {
 			},
 			skill=51749,
 			stats={
-				[1]="keystone_blood_magic"
+				[1]="Blood Magic"
 			}
 		},
 		[51795]={
@@ -53603,8 +53550,8 @@ return {
 			},
 			skill=51795,
 			stats={
-				[1]="ignite_chance_+%",
-				[2]="critical_strike_chance_+%"
+				[1]="6% increased Critical Hit Chance",
+				[2]="12% increased chance to Ignite"
 			}
 		},
 		[51797]={
@@ -53621,7 +53568,7 @@ return {
 			},
 			skill=51797,
 			stats={
-				[1]="damage_taken_goes_to_life_over_4_seconds_%"
+				[1]="3% of Damage taken Recouped as Life"
 			}
 		},
 		[51820]={
@@ -53640,7 +53587,7 @@ return {
 			},
 			skill=51820,
 			stats={
-				[1]="attack_and_cast_speed_+%_on_placing_totem"
+				[1]="12% increased Attack and Cast Speed if you've summoned a Totem Recently"
 			}
 		},
 		[51821]={
@@ -53660,7 +53607,7 @@ return {
 			},
 			skill=51821,
 			stats={
-				[1]="display_passive_attribute_text"
+				[1]="+5 to any Attribute"
 			}
 		},
 		[51825]={
@@ -53679,7 +53626,7 @@ return {
 			},
 			skill=51825,
 			stats={
-				[1]="damage_+%_with_two_handed_weapons"
+				[1]="12% increased Damage with Two Handed Weapons"
 			}
 		},
 		[51832]={
@@ -53697,7 +53644,7 @@ return {
 			},
 			skill=51832,
 			stats={
-				[1]="warcry_damage_+%"
+				[1]="16% increased Damage with Warcries"
 			}
 		},
 		[51847]={
@@ -53715,8 +53662,8 @@ return {
 			},
 			skill=51847,
 			stats={
-				[1]="attack_damage_+%",
-				[2]="accuracy_rating_+%"
+				[1]="6% increased Attack Damage",
+				[2]="5% increased Accuracy Rating"
 			}
 		},
 		[51867]={
@@ -53733,8 +53680,8 @@ return {
 			},
 			skill=51867,
 			stats={
-				[1]="damage_vs_enemies_on_low_life_+%",
-				[2]="damage_taken_+%_on_low_life"
+				[1]="120% increased Damage with Hits against Enemies that are on Low Life",
+				[2]="5% increased Damage taken while on Low Life"
 			}
 		},
 		[51871]={
@@ -53751,8 +53698,8 @@ return {
 			},
 			skill=51871,
 			stats={
-				[1]="base_mana_leech_amount_+%",
-				[2]="maximum_energy_shield_+%"
+				[1]="15% increased maximum Energy Shield",
+				[2]="25% increased amount of Mana Leeched"
 			}
 		},
 		[51891]={
@@ -53769,8 +53716,7 @@ return {
 			},
 			skill=51891,
 			stats={
-				[1]="base_damage_removed_from_mana_before_life_%",
-				[2]="base_intelligence"
+				[1]="8% of Damage is taken from Mana before Life"
 			}
 		},
 		[51903]={
@@ -53788,7 +53734,7 @@ return {
 			},
 			skill=51903,
 			stats={
-				[1]="melee_damage_+%"
+				[1]="10% increased Melee Damage"
 			}
 		},
 		[51921]={
@@ -53807,7 +53753,7 @@ return {
 			},
 			skill=51921,
 			stats={
-				[1]="display_passive_attribute_text"
+				[1]="+5 to any Attribute"
 			}
 		},
 		[51934]={
@@ -53824,8 +53770,8 @@ return {
 			},
 			skill=51934,
 			stats={
-				[1]="triggered_spell_spell_damage_+%",
-				[2]="recover_%_mana_when_you_invoke_a_spell"
+				[1]="Recover 3% of Mana when you Invoke a Spell",
+				[2]="Triggered Spells deal 45% increased Spell Damage"
 			}
 		},
 		[51944]={
@@ -53844,7 +53790,7 @@ return {
 			},
 			skill=51944,
 			stats={
-				[1]="projectile_damage_+%"
+				[1]="10% increased Projectile Damage"
 			}
 		},
 		[51968]={
@@ -53861,7 +53807,7 @@ return {
 			},
 			skill=51968,
 			stats={
-				[1]="fire_damage_+%"
+				[1]="10% increased Fire Damage"
 			}
 		},
 		[52053]={
@@ -53879,7 +53825,7 @@ return {
 			},
 			skill=52053,
 			stats={
-				[1]="mana_regeneration_rate_+%"
+				[1]="10% increased Mana Regeneration Rate"
 			}
 		},
 		[52068]={
@@ -53897,8 +53843,8 @@ return {
 			},
 			skill=52068,
 			stats={
-				[1]="can_block_all_hits_while_shield_is_lowered",
-				[2]="ascendancy_warbringer_block_chance_+%_final"
+				[1]="35% less Block chance",
+				[2]="Can Block Damage from all Hits while Shield is not Raised"
 			}
 		},
 		[52106]={
@@ -53916,7 +53862,7 @@ return {
 			},
 			skill=52106,
 			stats={
-				[1]="base_cast_speed_+%"
+				[1]="3% increased Cast Speed"
 			}
 		},
 		[52125]={
@@ -53935,7 +53881,7 @@ return {
 			},
 			skill=52125,
 			stats={
-				[1]="display_passive_attribute_text"
+				[1]="+5 to any Attribute"
 			}
 		},
 		[52126]={
@@ -53952,8 +53898,7 @@ return {
 			},
 			skill=52126,
 			stats={
-				[1]="stun_threshold_+%",
-				[2]="base_strength"
+				[1]="10% increased Stun Threshold"
 			}
 		},
 		[52191]={
@@ -53971,8 +53916,8 @@ return {
 			},
 			skill=52191,
 			stats={
-				[1]="chaos_damage_+%",
-				[2]="lose_%_of_life_and_energy_shield_when_you_use_a_chaos_skill"
+				[1]="53% increased Chaos Damage",
+				[2]="Lose 3% of Life and Energy Shield when you use a Chaos Skill"
 			}
 		},
 		[52199]={
@@ -53990,9 +53935,9 @@ return {
 			},
 			skill=52199,
 			stats={
-				[1]="lightning_exposure_effect_+%",
-				[2]="cold_exposure_effect_+%",
-				[3]="fire_exposure_effect_+%"
+				[1]="30% increased Cold Exposure Effect",
+				[2]="30% increased Fire Exposure Effect",
+				[3]="30% increased Lightning Exposure Effect"
 			}
 		},
 		[52215]={
@@ -54009,7 +53954,7 @@ return {
 			},
 			skill=52215,
 			stats={
-				[1]="dagger_critical_strike_chance_+%"
+				[1]="10% increased Critical Hit Chance with Daggers"
 			}
 		},
 		[52254]={
@@ -54026,7 +53971,7 @@ return {
 			},
 			skill=52254,
 			stats={
-				[1]="curse_effect_+%"
+				[1]="6% increased Effect of your Curses"
 			}
 		},
 		[52260]={
@@ -54043,7 +53988,7 @@ return {
 			},
 			skill=52260,
 			stats={
-				[1]="energy_generated_+%"
+				[1]="Meta Skills gain 8% increased Energy"
 			}
 		},
 		[52274]={
@@ -54061,7 +54006,7 @@ return {
 			},
 			skill=52274,
 			stats={
-				[1]="grenade_skill_damage_+%"
+				[1]="12% increased Grenade Damage"
 			}
 		},
 		[52298]={
@@ -54081,7 +54026,7 @@ return {
 			},
 			skill=52298,
 			stats={
-				[1]="display_passive_attribute_text"
+				[1]="+5 to any Attribute"
 			}
 		},
 		[52300]={
@@ -54098,7 +54043,7 @@ return {
 			},
 			skill=52300,
 			stats={
-				[1]="gain_x_rage_on_hit_with_axes"
+				[1]="Gain 1 Rage on Melee Axe Hit"
 			}
 		},
 		[52319]={
@@ -54115,7 +54060,7 @@ return {
 			},
 			skill=52319,
 			stats={
-				[1]="display_passive_attribute_text"
+				[1]="+5 to any Attribute"
 			}
 		},
 		[52348]={
@@ -54133,8 +54078,8 @@ return {
 			},
 			skill=52348,
 			stats={
-				[1]="totem_damage_+%",
-				[2]="attack_and_cast_speed_+%_on_placing_totem"
+				[1]="20% increased Totem Damage",
+				[2]="6% increased Attack and Cast Speed if you've summoned a Totem Recently"
 			}
 		},
 		[52351]={
@@ -54151,7 +54096,7 @@ return {
 			},
 			skill=52351,
 			stats={
-				[1]="energy_generated_+%"
+				[1]="Meta Skills gain 8% increased Energy"
 			}
 		},
 		[52354]={
@@ -54168,7 +54113,7 @@ return {
 			},
 			skill=52354,
 			stats={
-				[1]="attack_damage_+%_vs_rare_or_unique_enemy"
+				[1]="16% increased Attack Damage against Rare or Unique Enemies"
 			}
 		},
 		[52361]={
@@ -54185,7 +54130,7 @@ return {
 			},
 			skill=52361,
 			stats={
-				[1]="projectile_damage_+%"
+				[1]="10% increased Projectile Damage"
 			}
 		},
 		[52373]={
@@ -54203,7 +54148,7 @@ return {
 			},
 			skill=52373,
 			stats={
-				[1]="maximum_rage"
+				[1]="+2 to Maximum Rage"
 			}
 		},
 		[52392]={
@@ -54220,9 +54165,9 @@ return {
 			},
 			skill=52392,
 			stats={
-				[1]="damage_+%_with_two_handed_weapons",
-				[2]="attack_speed_+%",
-				[3]="hit_damage_stun_multiplier_+%"
+				[1]="5% reduced Attack Speed",
+				[2]="20% increased Stun Buildup",
+				[3]="40% increased Damage with Two Handed Weapons"
 			}
 		},
 		[52399]={
@@ -54239,7 +54184,7 @@ return {
 			},
 			skill=52399,
 			stats={
-				[1]="quarterstaff_critical_strike_multiplier_+"
+				[1]="18% increased Critical Damage Bonus with Quarterstaves"
 			}
 		},
 		[52410]={
@@ -54256,8 +54201,8 @@ return {
 			},
 			skill=52410,
 			stats={
-				[1]="block_chance_+%",
-				[2]="base_block_%_damage_taken"
+				[1]="15% increased Block chance",
+				[2]="You take 5% of damage from Blocked Hits"
 			}
 		},
 		[52429]={
@@ -54274,7 +54219,7 @@ return {
 			},
 			skill=52429,
 			stats={
-				[1]="base_cast_speed_+%"
+				[1]="3% increased Cast Speed"
 			}
 		},
 		[52442]={
@@ -54291,7 +54236,7 @@ return {
 			},
 			skill=52442,
 			stats={
-				[1]="attack_speed_+%"
+				[1]="3% increased Attack Speed"
 			}
 		},
 		[52448]={
@@ -54309,7 +54254,7 @@ return {
 			},
 			skill=52448,
 			stats={
-				[1]="trigger_wild_strike_on_attack_crit"
+				[1]="Trigger Elemental Expression on Melee Critical Hit"
 			}
 		},
 		[52454]={
@@ -54326,7 +54271,7 @@ return {
 			},
 			skill=52454,
 			stats={
-				[1]="chaos_damage_+%"
+				[1]="7% increased Chaos Damage"
 			}
 		},
 		[52464]={
@@ -54345,7 +54290,7 @@ return {
 			},
 			skill=52464,
 			stats={
-				[1]="recover_%_maximum_life_on_kill"
+				[1]="Recover 1% of Life on Kill"
 			}
 		},
 		[52537]={
@@ -54362,7 +54307,7 @@ return {
 			},
 			skill=52537,
 			stats={
-				[1]="chill_effect_+%"
+				[1]="10% increased Magnitude of Chill you inflict"
 			}
 		},
 		[52556]={
@@ -54379,7 +54324,7 @@ return {
 			},
 			skill=52556,
 			stats={
-				[1]="maximum_rage"
+				[1]="+2 to Maximum Rage"
 			}
 		},
 		[52574]={
@@ -54396,7 +54341,7 @@ return {
 			},
 			skill=52574,
 			stats={
-				[1]="attack_area_of_effect_+%"
+				[1]="8% increased Area of Effect for Attacks"
 			}
 		},
 		[52615]={
@@ -54413,7 +54358,7 @@ return {
 			},
 			skill=52615,
 			stats={
-				[1]="spell_area_of_effect_+%"
+				[1]="Spell Skills have 8% increased Area of Effect"
 			}
 		},
 		[52618]={
@@ -54430,7 +54375,7 @@ return {
 			},
 			skill=52618,
 			stats={
-				[1]="attack_damage_+%"
+				[1]="25% increased Attack Damage"
 			}
 		},
 		[52630]={
@@ -54447,7 +54392,7 @@ return {
 			},
 			skill=52630,
 			stats={
-				[1]="critical_strike_multiplier_vs_enemies_on_full_life_+"
+				[1]="40% increased Critical Damage Bonus against Enemies that are on Full Life"
 			}
 		},
 		[52659]={
@@ -54464,7 +54409,7 @@ return {
 			},
 			skill=52659,
 			stats={
-				[1]="life_regeneration_rate_+%"
+				[1]="10% increased Life Regeneration rate"
 			}
 		},
 		[52695]={
@@ -54482,7 +54427,7 @@ return {
 			},
 			skill=52695,
 			stats={
-				[1]="physical_damage_+%"
+				[1]="10% increased Global Physical Damage"
 			}
 		},
 		[52703]={
@@ -54501,7 +54446,7 @@ return {
 			},
 			skill=52703,
 			stats={
-				[1]="critical_damage_+1%_per_X_current_life"
+				[1]="1% increased Critical Damage Bonus per 40 Life"
 			}
 		},
 		[52746]={
@@ -54519,7 +54464,7 @@ return {
 			},
 			skill=52746,
 			stats={
-				[1]="fire_damage_+%"
+				[1]="12% increased Fire Damage"
 			}
 		},
 		[52765]={
@@ -54536,7 +54481,7 @@ return {
 			},
 			skill=52765,
 			stats={
-				[1]="mana_regeneration_rate_+%"
+				[1]="10% increased Mana Regeneration Rate"
 			}
 		},
 		[52774]={
@@ -54553,7 +54498,7 @@ return {
 			},
 			skill=52774,
 			stats={
-				[1]="ignite_chance_+%"
+				[1]="15% increased chance to Ignite"
 			}
 		},
 		[52796]={
@@ -54570,7 +54515,7 @@ return {
 			},
 			skill=52796,
 			stats={
-				[1]="attack_skills_damage_+%_while_holding_shield"
+				[1]="Attack Skills deal 10% increased Damage while holding a Shield"
 			}
 		},
 		[52799]={
@@ -54588,7 +54533,7 @@ return {
 			},
 			skill=52799,
 			stats={
-				[1]="hit_damage_freeze_multiplier_+%"
+				[1]="15% increased Freeze Buildup"
 			}
 		},
 		[52803]={
@@ -54606,8 +54551,8 @@ return {
 			},
 			skill=52803,
 			stats={
-				[1]="flask_life_to_recover_+%",
-				[2]="generate_x_charges_for_life_flasks_per_minute"
+				[1]="20% increased Life Recovery from Flasks",
+				[2]="Life Flasks gain 0.1 charges per Second"
 			}
 		},
 		[52829]={
@@ -54624,8 +54569,8 @@ return {
 			},
 			skill=52829,
 			stats={
-				[1]="mace_damage_+%",
-				[2]="hit_damage_stun_multiplier_+%"
+				[1]="12% increased Stun Buildup",
+				[2]="10% increased Damage with Maces"
 			}
 		},
 		[52836]={
@@ -54643,7 +54588,7 @@ return {
 			},
 			skill=52836,
 			stats={
-				[1]="block_chance_+%"
+				[1]="5% increased Block chance"
 			}
 		},
 		[52971]={
@@ -54660,8 +54605,8 @@ return {
 			},
 			skill=52971,
 			stats={
-				[1]="energy_shield_delay_-%",
-				[2]="energy_shield_delay_-%_when_not_on_full_life"
+				[1]="20% faster start of Energy Shield Recharge",
+				[2]="30% faster start of Energy Shield Recharge when not on Full Life"
 			}
 		},
 		[52973]={
@@ -54678,7 +54623,7 @@ return {
 			},
 			skill=52973,
 			stats={
-				[1]="base_chance_to_inflict_bleeding_%"
+				[1]="5% chance to inflict Bleeding on Hit"
 			}
 		},
 		[52980]={
@@ -54696,8 +54641,8 @@ return {
 			},
 			skill=52980,
 			stats={
-				[1]="base_evasion_rating",
-				[2]="base_maximum_energy_shield"
+				[1]="+8 to Evasion Rating",
+				[2]="+5 to maximum Energy Shield"
 			}
 		},
 		[53030]={
@@ -54714,8 +54659,7 @@ return {
 			},
 			skill=53030,
 			stats={
-				[1]="base_ignite_effect_+%",
-				[2]="base_strength"
+				[1]="25% increased Magnitude of Ignite you inflict"
 			}
 		},
 		[53089]={
@@ -54733,7 +54677,7 @@ return {
 			},
 			skill=53089,
 			stats={
-				[1]="attack_area_of_effect_+%"
+				[1]="8% increased Area of Effect for Attacks"
 			}
 		},
 		[53094]={
@@ -54751,7 +54695,7 @@ return {
 			},
 			skill=53094,
 			stats={
-				[1]="accuracy_rating_+%"
+				[1]="8% increased Accuracy Rating"
 			}
 		},
 		[53108]={
@@ -54770,7 +54714,7 @@ return {
 			},
 			skill=53108,
 			stats={
-				[1]="gem_requirements_can_be_satisfied_by_highest_attribute"
+				[1]="Attribute Requirements of Gems can be satisified by your highest Attribute"
 			}
 		},
 		[53149]={
@@ -54787,7 +54731,7 @@ return {
 			},
 			skill=53149,
 			stats={
-				[1]="hit_damage_freeze_multiplier_+%"
+				[1]="15% increased Freeze Buildup"
 			}
 		},
 		[53150]={
@@ -54805,8 +54749,8 @@ return {
 			},
 			skill=53150,
 			stats={
-				[1]="accuracy_rating_+%_vs_rare_or_unique_enemy",
-				[2]="attack_speed_+%"
+				[1]="5% increased Attack Speed",
+				[2]="30% increased Accuracy Rating against Rare or Unique Enemies"
 			}
 		},
 		[53194]={
@@ -54823,7 +54767,7 @@ return {
 			},
 			skill=53194,
 			stats={
-				[1]="warcry_cooldown_speed_+%"
+				[1]="10% increased Warcry Cooldown Recovery Rate"
 			}
 		},
 		[53196]={
@@ -54840,7 +54784,7 @@ return {
 			},
 			skill=53196,
 			stats={
-				[1]="charges_gained_+%"
+				[1]="8% increased Flask and Charm Charges gained"
 			}
 		},
 		[53207]={
@@ -54858,7 +54802,7 @@ return {
 			},
 			skill=53207,
 			stats={
-				[1]="base_reduce_enemy_lightning_resistance_%"
+				[1]="Damage Penetrates 6% Lightning Resistance"
 			}
 		},
 		[53266]={
@@ -54877,7 +54821,7 @@ return {
 			},
 			skill=53266,
 			stats={
-				[1]="attack_and_cast_speed_+%_with_lightning_skills"
+				[1]="3% increased Attack and Cast Speed with Lightning Skills"
 			}
 		},
 		[53294]={
@@ -54895,9 +54839,9 @@ return {
 			},
 			skill=53294,
 			stats={
-				[1]="fire_damage_+%",
-				[2]="base_reduce_enemy_fire_resistance_%",
-				[3]="base_ignite_effect_+%"
+				[1]="15% increased Fire Damage",
+				[2]="Damage Penetrates 10% Fire Resistance",
+				[3]="10% increased Magnitude of Ignite you inflict"
 			}
 		},
 		[53308]={
@@ -54914,7 +54858,7 @@ return {
 			},
 			skill=53308,
 			stats={
-				[1]="melee_damage_+%"
+				[1]="10% increased Melee Damage"
 			}
 		},
 		[53329]={
@@ -54931,7 +54875,7 @@ return {
 			},
 			skill=53329,
 			stats={
-				[1]="ignite_chance_+%"
+				[1]="15% increased chance to Ignite"
 			}
 		},
 		[53373]={
@@ -54949,7 +54893,7 @@ return {
 			},
 			skill=53373,
 			stats={
-				[1]="stun_threshold_+%"
+				[1]="12% increased Stun Threshold"
 			}
 		},
 		[53386]={
@@ -54966,7 +54910,7 @@ return {
 			},
 			skill=53386,
 			stats={
-				[1]="attack_critical_strike_multiplier_+"
+				[1]="15% increased Critical Damage Bonus for Attack Damage"
 			}
 		},
 		[53396]={
@@ -54983,7 +54927,7 @@ return {
 			},
 			skill=53396,
 			stats={
-				[1]="display_passive_attribute_text"
+				[1]="+5 to any Attribute"
 			}
 		},
 		[53405]={
@@ -55003,7 +54947,7 @@ return {
 			},
 			skill=53405,
 			stats={
-				[1]="display_passive_attribute_text"
+				[1]="+5 to any Attribute"
 			}
 		},
 		[53440]={
@@ -55020,7 +54964,7 @@ return {
 			},
 			skill=53440,
 			stats={
-				[1]="gain_x_rage_on_hit_with_axes"
+				[1]="Gain 2 Rage on Melee Axe Hit"
 			}
 		},
 		[53443]={
@@ -55037,7 +54981,7 @@ return {
 			},
 			skill=53443,
 			stats={
-				[1]="attack_area_of_effect_+%"
+				[1]="8% increased Area of Effect for Attacks"
 			}
 		},
 		[53505]={
@@ -55054,7 +54998,7 @@ return {
 			},
 			skill=53505,
 			stats={
-				[1]="base_life_leech_amount_+%"
+				[1]="10% increased amount of Life Leeched"
 			}
 		},
 		[53524]={
@@ -55071,7 +55015,7 @@ return {
 			},
 			skill=53524,
 			stats={
-				[1]="armour_break_equal_to_%_physical_damage_dealt_on_critical_strike_with_spells"
+				[1]="Break Armour on Critical Hit with Spells equal to 5% of Physical Damage dealt"
 			}
 		},
 		[53527]={
@@ -55088,7 +55032,7 @@ return {
 			},
 			skill=53527,
 			stats={
-				[1]="armour_break_%_of_armour_on_heavy_stunning"
+				[1]="Break 50% of Armour on Heavy Stunning an Enemy"
 			}
 		},
 		[53560]={
@@ -55105,7 +55049,7 @@ return {
 			},
 			skill=53560,
 			stats={
-				[1]="lightning_skill_additional_chain_chance_%"
+				[1]="20% chance for Lightning Skills to Chain an additional time"
 			}
 		},
 		[53589]={
@@ -55122,7 +55066,7 @@ return {
 			},
 			skill=53589,
 			stats={
-				[1]="display_passive_attribute_text"
+				[1]="+5 to any Attribute"
 			}
 		},
 		[53595]={
@@ -55140,7 +55084,7 @@ return {
 			},
 			skill=53595,
 			stats={
-				[1]="base_poison_effect_+%"
+				[1]="10% increased Magnitude of Poison you inflict"
 			}
 		},
 		[53632]={
@@ -55157,8 +55101,8 @@ return {
 			},
 			skill=53632,
 			stats={
-				[1]="ignite_chance_+%",
-				[2]="critical_strike_chance_+%"
+				[1]="6% increased Critical Hit Chance",
+				[2]="12% increased chance to Ignite"
 			}
 		},
 		[53647]={
@@ -55175,7 +55119,7 @@ return {
 			},
 			skill=53647,
 			stats={
-				[1]="evasion_and_physical_damage_reduction_rating_+%"
+				[1]="12% increased Armour and Evasion Rating"
 			}
 		},
 		[53697]={
@@ -55192,7 +55136,7 @@ return {
 			},
 			skill=53697,
 			stats={
-				[1]="display_passive_attribute_text"
+				[1]="+5 to any Attribute"
 			}
 		},
 		[53698]={
@@ -55209,7 +55153,7 @@ return {
 			},
 			skill=53698,
 			stats={
-				[1]="attack_damage_+%"
+				[1]="10% increased Attack Damage"
 			}
 		},
 		[53719]={
@@ -55230,7 +55174,7 @@ return {
 			},
 			skill=53719,
 			stats={
-				[1]="display_passive_attribute_text"
+				[1]="+5 to any Attribute"
 			}
 		},
 		[53762]={
@@ -55248,7 +55192,7 @@ return {
 			},
 			skill=53762,
 			stats={
-				[1]="global_item_attribute_requirements_+%"
+				[1]="Equipment and Skill Gems have 4% reduced Attribute Requirements"
 			}
 		},
 		[53771]={
@@ -55265,7 +55209,7 @@ return {
 			},
 			skill=53771,
 			stats={
-				[1]="projectile_damage_+%"
+				[1]="10% increased Projectile Damage"
 			}
 		},
 		[53785]={
@@ -55283,7 +55227,7 @@ return {
 			},
 			skill=53785,
 			stats={
-				[1]="attack_area_of_effect_+%"
+				[1]="8% increased Area of Effect for Attacks"
 			}
 		},
 		[53822]={
@@ -55300,7 +55244,7 @@ return {
 			},
 			skill=53822,
 			stats={
-				[1]="gain_x_rage_when_hit"
+				[1]="Gain 2 Rage when Hit by an Enemy"
 			}
 		},
 		[53823]={
@@ -55317,8 +55261,8 @@ return {
 			},
 			skill=53823,
 			stats={
-				[1]="block_chance_+%_if_blocked_with_active_block_recently",
-				[2]="shield_armour_+%"
+				[1]="50% increased Defences from Equipped Shield",
+				[2]="25% increased Chance to Block if you've Blocked with Active Block Recently"
 			}
 		},
 		[53853]={
@@ -55335,8 +55279,8 @@ return {
 			},
 			skill=53853,
 			stats={
-				[1]="armour_+%_if_you_havent_been_hit_recently",
-				[2]="evasion_+%_if_hit_recently"
+				[1]="40% increased Evasion Rating if you have been Hit Recently",
+				[2]="40% increased Armour if you haven't been Hit Recently"
 			}
 		},
 		[53901]={
@@ -55354,7 +55298,7 @@ return {
 			},
 			skill=53901,
 			stats={
-				[1]="block_chance_+%"
+				[1]="5% increased Block chance"
 			}
 		},
 		[53921]={
@@ -55372,8 +55316,8 @@ return {
 			},
 			skill=53921,
 			stats={
-				[1]="stun_threshold_+%",
-				[2]="ailment_threshold_+%"
+				[1]="30% increased Stun Threshold",
+				[2]="30% increased Elemental Ailment Threshold"
 			}
 		},
 		[53935]={
@@ -55390,7 +55334,7 @@ return {
 			},
 			skill=53935,
 			stats={
-				[1]="stun_threshold_+%_per_number_of_times_stunned_recently"
+				[1]="60% increased Stun Threshold for each time you've been Stunned Recently"
 			}
 		},
 		[53941]={
@@ -55408,8 +55352,8 @@ return {
 			},
 			skill=53941,
 			stats={
-				[1]="energy_shield_recovery_rate_+%_if_not_hit_recently",
-				[2]="movement_speed_+%_while_you_have_energy_shield"
+				[1]="20% increased Energy Shield Recovery Rate if you haven't been Hit Recently",
+				[2]="3% increased Movement Speed while you have Energy Shield"
 			}
 		},
 		[53958]={
@@ -55427,7 +55371,7 @@ return {
 			},
 			skill=53958,
 			stats={
-				[1]="flask_mana_to_recover_+%"
+				[1]="10% increased Mana Recovery from Flasks"
 			}
 		},
 		[53960]={
@@ -55446,7 +55390,7 @@ return {
 			},
 			skill=53960,
 			stats={
-				[1]="display_passive_attribute_text"
+				[1]="+5 to any Attribute"
 			}
 		},
 		[53965]={
@@ -55463,7 +55407,7 @@ return {
 			},
 			skill=53965,
 			stats={
-				[1]="base_reduce_enemy_lightning_resistance_%"
+				[1]="Damage Penetrates 6% Lightning Resistance"
 			}
 		},
 		[53975]={
@@ -55480,7 +55424,7 @@ return {
 			},
 			skill=53975,
 			stats={
-				[1]="spell_damage_+%"
+				[1]="10% increased Spell Damage"
 			}
 		},
 		[53989]={
@@ -55497,7 +55441,7 @@ return {
 			},
 			skill=53989,
 			stats={
-				[1]="gain_x_rage_on_melee_hit"
+				[1]="Gain 1 Rage on Melee Hit"
 			}
 		},
 		[53996]={
@@ -55515,7 +55459,7 @@ return {
 			},
 			skill=53996,
 			stats={
-				[1]="melee_damage_+%"
+				[1]="8% increased Melee Damage"
 			}
 		},
 		[54036]={
@@ -55533,7 +55477,7 @@ return {
 			},
 			skill=54036,
 			stats={
-				[1]="minion_damage_+%"
+				[1]="Minions deal 10% increased Damage"
 			}
 		},
 		[54058]={
@@ -55551,7 +55495,7 @@ return {
 			},
 			skill=54058,
 			stats={
-				[1]="critical_strike_multiplier_with_dagger_+"
+				[1]="10% increased Critical Damage Bonus with Daggers"
 			}
 		},
 		[54067]={
@@ -55568,7 +55512,7 @@ return {
 			},
 			skill=54067,
 			stats={
-				[1]="gain_arcane_surge_on_crit_%_chance"
+				[1]="5% chance to Gain Arcane Surge when you deal a Critical Hit"
 			}
 		},
 		[54099]={
@@ -55588,7 +55532,7 @@ return {
 			},
 			skill=54099,
 			stats={
-				[1]="display_passive_attribute_text"
+				[1]="+5 to any Attribute"
 			}
 		},
 		[54127]={
@@ -55624,7 +55568,7 @@ return {
 			},
 			skill=54138,
 			stats={
-				[1]="sword_attack_speed_+%"
+				[1]="3% increased Attack Speed with Swords"
 			}
 		},
 		[54148]={
@@ -55642,8 +55586,8 @@ return {
 			},
 			skill=54148,
 			stats={
-				[1]="base_reduce_enemy_fire_resistance_%",
-				[2]="damaging_ailment_duration_+%"
+				[1]="Damage Penetrates 15% Fire Resistance",
+				[2]="15% increased Duration of Damaging Ailments on Enemies"
 			}
 		},
 		[54176]={
@@ -55660,7 +55604,7 @@ return {
 			},
 			skill=54176,
 			stats={
-				[1]="shock_chance_+%"
+				[1]="15% increased chance to Shock"
 			}
 		},
 		[54194]={
@@ -55678,7 +55622,7 @@ return {
 			},
 			skill=54194,
 			stats={
-				[1]="debuff_time_passed_+%"
+				[1]="Debuffs on you expire 10% faster"
 			}
 		},
 		[54204]={
@@ -55695,7 +55639,7 @@ return {
 			},
 			skill=54204,
 			stats={
-				[1]="daze_build_up_+%"
+				[1]="20% increased Daze Buildup"
 			}
 		},
 		[54228]={
@@ -55712,7 +55656,7 @@ return {
 			},
 			skill=54228,
 			stats={
-				[1]="physical_damage_+%"
+				[1]="10% increased Global Physical Damage"
 			}
 		},
 		[54232]={
@@ -55731,7 +55675,7 @@ return {
 			},
 			skill=54232,
 			stats={
-				[1]="display_passive_attribute_text"
+				[1]="+5 to any Attribute"
 			}
 		},
 		[54282]={
@@ -55751,7 +55695,7 @@ return {
 			},
 			skill=54282,
 			stats={
-				[1]="display_passive_attribute_text"
+				[1]="+5 to any Attribute"
 			}
 		},
 		[54283]={
@@ -55768,7 +55712,7 @@ return {
 			},
 			skill=54283,
 			stats={
-				[1]="physical_damage_reduction_rating_+%"
+				[1]="15% increased Armour"
 			}
 		},
 		[54288]={
@@ -55786,7 +55730,7 @@ return {
 			},
 			skill=54288,
 			stats={
-				[1]="damage_taken_goes_to_life_over_4_seconds_%"
+				[1]="3% of Damage taken Recouped as Life"
 			}
 		},
 		[54311]={
@@ -55803,7 +55747,7 @@ return {
 			},
 			skill=54311,
 			stats={
-				[1]="critical_hit_ignite_effect_+%"
+				[1]="15% increased Magnitude of Ignite you inflict with Critical Hits"
 			}
 		},
 		[54351]={
@@ -55821,7 +55765,7 @@ return {
 			},
 			skill=54351,
 			stats={
-				[1]="recover_%_maximum_life_on_kill"
+				[1]="Recover 1% of Life on Kill"
 			}
 		},
 		[54416]={
@@ -55838,7 +55782,7 @@ return {
 			},
 			skill=54416,
 			stats={
-				[1]="armour_+%_if_have_been_hit_recently"
+				[1]="20% increased Armour if you have been Hit Recently"
 			}
 		},
 		[54417]={
@@ -55855,7 +55799,7 @@ return {
 			},
 			skill=54417,
 			stats={
-				[1]="display_passive_attribute_text"
+				[1]="+5 to any Attribute"
 			}
 		},
 		[54447]={
@@ -55893,7 +55837,6 @@ return {
 			},
 			skill=54485,
 			stats={
-				[1]="base_strength"
 			}
 		},
 		[54521]={
@@ -55913,7 +55856,7 @@ return {
 			},
 			skill=54521,
 			stats={
-				[1]="display_passive_attribute_text"
+				[1]="+5 to any Attribute"
 			}
 		},
 		[54557]={
@@ -55930,7 +55873,7 @@ return {
 			},
 			skill=54557,
 			stats={
-				[1]="base_reduce_enemy_cold_resistance_%"
+				[1]="Damage Penetrates 6% Cold Resistance"
 			}
 		},
 		[54632]={
@@ -55947,8 +55890,8 @@ return {
 			},
 			skill=54632,
 			stats={
-				[1]="minion_maximum_life_+%",
-				[2]="minion_chaos_resistance_%"
+				[1]="Minions have 8% increased maximum Life",
+				[2]="Minions have +7% to Chaos Resistance"
 			}
 		},
 		[54675]={
@@ -55965,7 +55908,7 @@ return {
 			},
 			skill=54675,
 			stats={
-				[1]="lightning_damage_+%"
+				[1]="10% increased Lightning Damage"
 			}
 		},
 		[54676]={
@@ -55983,7 +55926,7 @@ return {
 			},
 			skill=54676,
 			stats={
-				[1]="life_regeneration_rate_+%"
+				[1]="10% increased Life Regeneration rate"
 			}
 		},
 		[54678]={
@@ -56000,7 +55943,7 @@ return {
 			},
 			skill=54678,
 			stats={
-				[1]="shock_chance_+%"
+				[1]="15% increased chance to Shock"
 			}
 		},
 		[54701]={
@@ -56018,7 +55961,7 @@ return {
 			},
 			skill=54701,
 			stats={
-				[1]="thorns_damage_+%"
+				[1]="16% increased Thorns damage"
 			}
 		},
 		[54708]={
@@ -56035,7 +55978,7 @@ return {
 			},
 			skill=54708,
 			stats={
-				[1]="mana_regeneration_rate_+%"
+				[1]="10% increased Mana Regeneration Rate"
 			}
 		},
 		[54725]={
@@ -56052,8 +55995,8 @@ return {
 			},
 			skill=54725,
 			stats={
-				[1]="curse_effect_+%",
-				[2]="curse_delay_+%"
+				[1]="3% increased Effect of your Curses",
+				[2]="10% faster Curse Activation"
 			}
 		},
 		[54746]={
@@ -56070,8 +56013,8 @@ return {
 			},
 			skill=54746,
 			stats={
-				[1]="ailment_chance_+%",
-				[2]="base_damaging_ailment_effect_+%"
+				[1]="6% increased chance to inflict Ailments",
+				[2]="6% increased Magnitude of Damaging Ailments you inflict"
 			}
 		},
 		[54785]={
@@ -56088,7 +56031,7 @@ return {
 			},
 			skill=54785,
 			stats={
-				[1]="block_chance_+%"
+				[1]="5% increased Block chance"
 			}
 		},
 		[54805]={
@@ -56105,8 +56048,8 @@ return {
 			},
 			skill=54805,
 			stats={
-				[1]="damage_+%_vs_hindered_enemies",
-				[2]="base_debuff_slow_magnitude_+%"
+				[1]="30% increased Damage with Hits against Hindered Enemies",
+				[2]="Debuffs you inflict have 10% increased Slow Magnitude"
 			}
 		},
 		[54811]={
@@ -56126,7 +56069,7 @@ return {
 			},
 			skill=54811,
 			stats={
-				[1]="display_passive_attribute_text"
+				[1]="+5 to any Attribute"
 			}
 		},
 		[54818]={
@@ -56147,7 +56090,7 @@ return {
 			},
 			skill=54818,
 			stats={
-				[1]="display_passive_attribute_text"
+				[1]="+5 to any Attribute"
 			}
 		},
 		[54883]={
@@ -56164,7 +56107,7 @@ return {
 			},
 			skill=54883,
 			stats={
-				[1]="chaos_damage_+%"
+				[1]="7% increased Chaos Damage"
 			}
 		},
 		[54886]={
@@ -56181,8 +56124,8 @@ return {
 			},
 			skill=54886,
 			stats={
-				[1]="hit_damage_stun_multiplier_+%",
-				[2]="damage_+%_with_two_handed_weapons"
+				[1]="10% increased Stun Buildup",
+				[2]="10% increased Damage with Two Handed Weapons"
 			}
 		},
 		[54911]={
@@ -56200,8 +56143,8 @@ return {
 			},
 			skill=54911,
 			stats={
-				[1]="ignite_chance_+%",
-				[2]="ignites_apply_fire_resistance_+"
+				[1]="40% increased chance to Ignite",
+				[2]="Enemies Ignited by you have -5% to Fire Resistance"
 			}
 		},
 		[54937]={
@@ -56218,8 +56161,8 @@ return {
 			},
 			skill=54937,
 			stats={
-				[1]="gain_x_rage_when_hit",
-				[2]="armour_+%_per_rage"
+				[1]="Gain 5 Rage when Hit by an Enemy",
+				[2]="Every Rage also grants 1% increased Armour"
 			}
 		},
 		[54962]={
@@ -56236,7 +56179,7 @@ return {
 			},
 			skill=54962,
 			stats={
-				[1]="life_regeneration_rate_+%_while_stationary"
+				[1]="15% increased Life Regeneration Rate while stationary"
 			}
 		},
 		[54964]={
@@ -56253,7 +56196,7 @@ return {
 			},
 			skill=54964,
 			stats={
-				[1]="minion_damage_+%"
+				[1]="Minions deal 10% increased Damage"
 			}
 		},
 		[54975]={
@@ -56270,7 +56213,7 @@ return {
 			},
 			skill=54975,
 			stats={
-				[1]="base_debuff_slow_magnitude_+%"
+				[1]="Debuffs you inflict have 5% increased Slow Magnitude"
 			}
 		},
 		[54983]={
@@ -56287,7 +56230,7 @@ return {
 			},
 			skill=54983,
 			stats={
-				[1]="attack_critical_strike_chance_+%"
+				[1]="15% increased Critical Hit Chance for Attacks"
 			}
 		},
 		[54984]={
@@ -56306,7 +56249,7 @@ return {
 			},
 			skill=54984,
 			stats={
-				[1]="display_passive_attribute_text"
+				[1]="+5 to any Attribute"
 			}
 		},
 		[54990]={
@@ -56324,8 +56267,8 @@ return {
 			},
 			skill=54990,
 			stats={
-				[1]="base_chance_to_inflict_bleeding_%",
-				[2]="base_bleeding_effect_+%"
+				[1]="10% chance to inflict Bleeding on Hit",
+				[2]="15% increased Magnitude of Bleeding you inflict"
 			}
 		},
 		[54998]={
@@ -56342,8 +56285,8 @@ return {
 			},
 			skill=54998,
 			stats={
-				[1]="skill_effect_duration_+%",
-				[2]="damaging_ailment_duration_+%"
+				[1]="20% increased Skill Effect Duration",
+				[2]="15% increased Duration of Damaging Ailments on Enemies"
 			}
 		},
 		[55041]={
@@ -56360,8 +56303,8 @@ return {
 			},
 			skill=55041,
 			stats={
-				[1]="spell_damage_+%",
-				[2]="spell_skill_projectile_speed_+%"
+				[1]="8% increased Spell Damage",
+				[2]="8% reduced Projectile Speed for Spell Skills"
 			}
 		},
 		[55048]={
@@ -56378,7 +56321,7 @@ return {
 			},
 			skill=55048,
 			stats={
-				[1]="keystone_pain_attunement"
+				[1]="Pain Attunement"
 			}
 		},
 		[55058]={
@@ -56395,7 +56338,7 @@ return {
 			},
 			skill=55058,
 			stats={
-				[1]="melee_damage_+%_vs_immobilised_enemies"
+				[1]="20% increased Melee Damage against Immobilised Enemies"
 			}
 		},
 		[55060]={
@@ -56413,8 +56356,8 @@ return {
 			},
 			skill=55060,
 			stats={
-				[1]="base_chance_to_pierce_%",
-				[2]="projectile_chance_to_chain_1_extra_time_from_terrain_%"
+				[1]="30% chance to Pierce an Enemy",
+				[2]="Projectiles have 10% chance to Chain an additional time from terrain"
 			}
 		},
 		[55063]={
@@ -56431,8 +56374,8 @@ return {
 			},
 			skill=55063,
 			stats={
-				[1]="base_life_leech_amount_+%",
-				[2]="base_life_leech_rate_+%"
+				[1]="15% increased amount of Life Leeched",
+				[2]="Leech Life 5% slower"
 			}
 		},
 		[55066]={
@@ -56449,7 +56392,7 @@ return {
 			},
 			skill=55066,
 			stats={
-				[1]="attack_damage_vs_bleeding_enemies_+%"
+				[1]="16% increased Attack Damage against Bleeding Enemies"
 			}
 		},
 		[55088]={
@@ -56466,7 +56409,7 @@ return {
 			},
 			skill=55088,
 			stats={
-				[1]="critical_strike_chance_+%"
+				[1]="10% increased Critical Hit Chance"
 			}
 		},
 		[55101]={
@@ -56483,7 +56426,7 @@ return {
 			},
 			skill=55101,
 			stats={
-				[1]="elemental_damage_+%"
+				[1]="10% increased Elemental Damage"
 			}
 		},
 		[55104]={
@@ -56500,7 +56443,7 @@ return {
 			},
 			skill=55104,
 			stats={
-				[1]="spell_damage_+%"
+				[1]="10% increased Spell Damage"
 			}
 		},
 		[55118]={
@@ -56518,7 +56461,7 @@ return {
 			},
 			skill=55118,
 			stats={
-				[1]="charm_charges_gained_+%"
+				[1]="10% increased Charm Charges gained"
 			}
 		},
 		[55149]={
@@ -56535,7 +56478,7 @@ return {
 			},
 			skill=55149,
 			stats={
-				[1]="non_skill_base_all_damage_%_to_gain_as_chaos"
+				[1]="Gain 11% of Damage as Extra Chaos Damage"
 			}
 		},
 		[55180]={
@@ -56553,8 +56496,8 @@ return {
 			},
 			skill=55180,
 			stats={
-				[1]="minion_attack_and_cast_speed_+%",
-				[2]="minion_movement_speed_+%"
+				[1]="Minions have 20% increased Movement Speed",
+				[2]="Minions have 8% increased Attack and Cast Speed"
 			}
 		},
 		[55190]={
@@ -56588,7 +56531,7 @@ return {
 			},
 			skill=55193,
 			stats={
-				[1]="evasion_rating_+_per_1_helmet_energy_shield"
+				[1]="+2 to Evasion Rating per 1 Maximum Energy Shield on Equipped Helmet"
 			}
 		},
 		[55194]={
@@ -56605,7 +56548,7 @@ return {
 			},
 			skill=55194,
 			stats={
-				[1]="minion_damage_+%"
+				[1]="Minions deal 10% increased Damage"
 			}
 		},
 		[55227]={
@@ -56622,7 +56565,7 @@ return {
 			},
 			skill=55227,
 			stats={
-				[1]="base_mana_leech_amount_+%"
+				[1]="10% increased amount of Mana Leeched"
 			}
 		},
 		[55231]={
@@ -56640,7 +56583,7 @@ return {
 			},
 			skill=55231,
 			stats={
-				[1]="base_chance_to_inflict_bleeding_%"
+				[1]="5% chance to inflict Bleeding on Hit"
 			}
 		},
 		[55241]={
@@ -56657,7 +56600,7 @@ return {
 			},
 			skill=55241,
 			stats={
-				[1]="spell_skills_fire_2_additional_projectiles_final_chance_%"
+				[1]="4% chance for Spell Skills to fire 2 additional Projectiles"
 			}
 		},
 		[55250]={
@@ -56674,7 +56617,7 @@ return {
 			},
 			skill=55250,
 			stats={
-				[1]="base_reduce_enemy_cold_resistance_%"
+				[1]="Damage Penetrates 6% Cold Resistance"
 			}
 		},
 		[55270]={
@@ -56691,7 +56634,7 @@ return {
 			},
 			skill=55270,
 			stats={
-				[1]="hit_damage_pin_multiplier_+%"
+				[1]="15% increased Pin Buildup"
 			}
 		},
 		[55275]={
@@ -56708,7 +56651,7 @@ return {
 			},
 			skill=55275,
 			stats={
-				[1]="evasion_rating_+%"
+				[1]="15% increased Evasion Rating"
 			}
 		},
 		[55276]={
@@ -56725,7 +56668,7 @@ return {
 			},
 			skill=55276,
 			stats={
-				[1]="display_passive_attribute_text"
+				[1]="+5 to any Attribute"
 			}
 		},
 		[55329]={
@@ -56742,7 +56685,7 @@ return {
 			},
 			skill=55329,
 			stats={
-				[1]="block_chance_+%"
+				[1]="5% increased Block chance"
 			}
 		},
 		[55342]={
@@ -56759,7 +56702,7 @@ return {
 			},
 			skill=55342,
 			stats={
-				[1]="display_passive_attribute_text"
+				[1]="+5 to any Attribute"
 			}
 		},
 		[55397]={
@@ -56776,7 +56719,7 @@ return {
 			},
 			skill=55397,
 			stats={
-				[1]="flask_charges_gained_+%"
+				[1]="15% increased Flask Charges gained"
 			}
 		},
 		[55400]={
@@ -56793,7 +56736,7 @@ return {
 			},
 			skill=55400,
 			stats={
-				[1]="base_reduce_enemy_lightning_resistance_%"
+				[1]="Damage Penetrates 6% Lightning Resistance"
 			}
 		},
 		[55405]={
@@ -56810,7 +56753,7 @@ return {
 			},
 			skill=55405,
 			stats={
-				[1]="damage_+%_if_you_have_consumed_a_corpse_recently"
+				[1]="15% increased Damage if you have Consumed a Corpse Recently"
 			}
 		},
 		[55429]={
@@ -56827,7 +56770,7 @@ return {
 			},
 			skill=55429,
 			stats={
-				[1]="projectile_damage_+%"
+				[1]="10% increased Projectile Damage"
 			}
 		},
 		[55463]={
@@ -56844,7 +56787,7 @@ return {
 			},
 			skill=55463,
 			stats={
-				[1]="shock_chance_+%"
+				[1]="15% increased chance to Shock"
 			}
 		},
 		[55473]={
@@ -56861,7 +56804,7 @@ return {
 			},
 			skill=55473,
 			stats={
-				[1]="melee_damage_+%"
+				[1]="10% increased Melee Damage"
 			}
 		},
 		[55478]={
@@ -56879,7 +56822,7 @@ return {
 			},
 			skill=55478,
 			stats={
-				[1]="attack_area_of_effect_+%"
+				[1]="8% increased Area of Effect for Attacks"
 			}
 		},
 		[55507]={
@@ -56897,7 +56840,7 @@ return {
 			},
 			skill=55507,
 			stats={
-				[1]="elemental_damage_+%"
+				[1]="10% increased Elemental Damage"
 			}
 		},
 		[55536]={
@@ -56934,7 +56877,7 @@ return {
 			},
 			skill=55554,
 			stats={
-				[1]="shock_chance_+%"
+				[1]="15% increased chance to Shock"
 			}
 		},
 		[55568]={
@@ -56951,8 +56894,8 @@ return {
 			},
 			skill=55568,
 			stats={
-				[1]="skill_effect_duration_+%",
-				[2]="base_cooldown_speed_+%"
+				[1]="16% reduced Skill Effect Duration",
+				[2]="10% increased Cooldown Recovery Rate"
 			}
 		},
 		[55572]={
@@ -56969,8 +56912,8 @@ return {
 			},
 			skill=55572,
 			stats={
-				[1]="cold_damage_+%",
-				[2]="fire_damage_+%"
+				[1]="8% increased Fire Damage",
+				[2]="8% increased Cold Damage"
 			}
 		},
 		[55575]={
@@ -56987,7 +56930,7 @@ return {
 			},
 			skill=55575,
 			stats={
-				[1]="non_skill_base_physical_damage_%_to_gain_as_chaos"
+				[1]="Gain 2% of Physical Damage as extra Chaos Damage"
 			}
 		},
 		[55582]={
@@ -57005,7 +56948,7 @@ return {
 			},
 			skill=55582,
 			stats={
-				[1]="all_skill_gem_quality_+"
+				[1]="+2% to Quality of all Skills"
 			}
 		},
 		[55596]={
@@ -57023,7 +56966,7 @@ return {
 			},
 			skill=55596,
 			stats={
-				[1]="base_critical_strike_multiplier_+"
+				[1]="15% increased Critical Damage Bonus"
 			}
 		},
 		[55598]={
@@ -57041,7 +56984,7 @@ return {
 			},
 			skill=55598,
 			stats={
-				[1]="ailment_threshold_+%"
+				[1]="15% increased Elemental Ailment Threshold"
 			}
 		},
 		[55611]={
@@ -57059,7 +57002,7 @@ return {
 			},
 			skill=55611,
 			stats={
-				[1]="elemental_damage_+%"
+				[1]="12% increased Elemental Damage"
 			}
 		},
 		[55621]={
@@ -57076,7 +57019,7 @@ return {
 			},
 			skill=55621,
 			stats={
-				[1]="critical_strike_chance_+%"
+				[1]="10% increased Critical Hit Chance"
 			}
 		},
 		[55668]={
@@ -57096,7 +57039,7 @@ return {
 			},
 			skill=55668,
 			stats={
-				[1]="display_passive_attribute_text"
+				[1]="+5 to any Attribute"
 			}
 		},
 		[55680]={
@@ -57113,7 +57056,7 @@ return {
 			},
 			skill=55680,
 			stats={
-				[1]="spear_damage_+%"
+				[1]="10% increased Damage with Spears"
 			}
 		},
 		[55708]={
@@ -57130,8 +57073,8 @@ return {
 			},
 			skill=55708,
 			stats={
-				[1]="base_reduce_enemy_lightning_resistance_%",
-				[2]="lightning_exposure_effect_+%"
+				[1]="Damage Penetrates 18% Lightning Resistance",
+				[2]="25% increased Lightning Exposure Effect"
 			}
 		},
 		[55746]={
@@ -57148,7 +57091,7 @@ return {
 			},
 			skill=55746,
 			stats={
-				[1]="gain_x_rage_on_melee_hit"
+				[1]="Gain 1 Rage on Melee Hit"
 			}
 		},
 		[55789]={
@@ -57165,8 +57108,8 @@ return {
 			},
 			skill=55789,
 			stats={
-				[1]="base_critical_strike_multiplier_+",
-				[2]="base_mana_cost_-%"
+				[1]="20% increased Critical Damage Bonus",
+				[2]="5% increased Mana Cost of Skills"
 			}
 		},
 		[55802]={
@@ -57185,7 +57128,7 @@ return {
 			},
 			skill=55802,
 			stats={
-				[1]="display_passive_attribute_text"
+				[1]="+5 to any Attribute"
 			}
 		},
 		[55807]={
@@ -57202,7 +57145,7 @@ return {
 			},
 			skill=55807,
 			stats={
-				[1]="mana_regeneration_rate_+%"
+				[1]="10% increased Mana Regeneration Rate"
 			}
 		},
 		[55835]={
@@ -57220,8 +57163,8 @@ return {
 			},
 			skill=55835,
 			stats={
-				[1]="base_reduce_enemy_cold_resistance_%",
-				[2]="cold_exposure_you_inflict_lowers_cold_resistance_by_extra_%"
+				[1]="Damage Penetrates 15% Cold Resistance",
+				[2]="Cold Exposure you inflict lowers Total Cold Resistance by an extra 5%"
 			}
 		},
 		[55846]={
@@ -57238,7 +57181,7 @@ return {
 			},
 			skill=55846,
 			stats={
-				[1]="base_life_gained_on_enemy_death"
+				[1]="Gain 5 Life per Enemy Killed"
 			}
 		},
 		[55847]={
@@ -57255,7 +57198,7 @@ return {
 			},
 			skill=55847,
 			stats={
-				[1]="ice_crystal_maximum_life_+%"
+				[1]="200% increased Ice Crystal Life"
 			}
 		},
 		[55888]={
@@ -57274,8 +57217,8 @@ return {
 			},
 			skill=55888,
 			stats={
-				[1]="physical_damage_reduction_rating_+%",
-				[2]="maximum_energy_shield_+%"
+				[1]="12% increased Armour",
+				[2]="12% increased maximum Energy Shield"
 			}
 		},
 		[55931]={
@@ -57292,7 +57235,7 @@ return {
 			},
 			skill=55931,
 			stats={
-				[1]="base_maximum_fire_damage_resistance_%"
+				[1]="+1% to Maximum Fire Resistance"
 			}
 		},
 		[55933]={
@@ -57312,7 +57255,7 @@ return {
 			},
 			skill=55933,
 			stats={
-				[1]="display_passive_attribute_text"
+				[1]="+5 to any Attribute"
 			}
 		},
 		[55947]={
@@ -57330,7 +57273,7 @@ return {
 			},
 			skill=55947,
 			stats={
-				[1]="spell_critical_strike_chance_+%"
+				[1]="10% increased Critical Hit Chance for Spells"
 			}
 		},
 		[55995]={
@@ -57347,7 +57290,7 @@ return {
 			},
 			skill=55995,
 			stats={
-				[1]="base_frenzy_charge_duration_+%"
+				[1]="20% increased Frenzy Charge Duration"
 			}
 		},
 		[56045]={
@@ -57366,7 +57309,7 @@ return {
 			},
 			skill=56045,
 			stats={
-				[1]="display_passive_attribute_text"
+				[1]="+5 to any Attribute"
 			}
 		},
 		[56061]={
@@ -57383,7 +57326,7 @@ return {
 			},
 			skill=56061,
 			stats={
-				[1]="damage_+%_vs_burning_enemies"
+				[1]="14% increased Damage with Hits against Burning Enemies"
 			}
 		},
 		[56063]={
@@ -57400,8 +57343,8 @@ return {
 			},
 			skill=56063,
 			stats={
-				[1]="chaos_damage_+%",
-				[2]="skill_effect_duration_+%"
+				[1]="23% increased Chaos Damage",
+				[2]="15% increased Skill Effect Duration"
 			}
 		},
 		[56104]={
@@ -57418,7 +57361,7 @@ return {
 			},
 			skill=56104,
 			stats={
-				[1]="armour_break_amount_+%"
+				[1]="Break 20% increased Armour"
 			}
 		},
 		[56118]={
@@ -57435,7 +57378,7 @@ return {
 			},
 			skill=56118,
 			stats={
-				[1]="damage_vs_enemies_on_low_life_+%"
+				[1]="30% increased Damage with Hits against Enemies that are on Low Life"
 			}
 		},
 		[56162]={
@@ -57454,7 +57397,7 @@ return {
 			},
 			skill=56162,
 			stats={
-				[1]="lose_%_of_life_loss_over_4_seconds_instead"
+				[1]="25% of Life Loss from Hits is prevented, then that much Life is lost over 4 seconds instead"
 			}
 		},
 		[56214]={
@@ -57471,7 +57414,7 @@ return {
 			},
 			skill=56214,
 			stats={
-				[1]="ignite_effect_on_self_+%"
+				[1]="10% reduced effect of Ignite on you"
 			}
 		},
 		[56216]={
@@ -57488,7 +57431,7 @@ return {
 			},
 			skill=56216,
 			stats={
-				[1]="display_passive_attribute_text"
+				[1]="+5 to any Attribute"
 			}
 		},
 		[56265]={
@@ -57506,8 +57449,8 @@ return {
 			},
 			skill=56265,
 			stats={
-				[1]="base_critical_strike_multiplier_+",
-				[2]="critical_strike_chance_+%"
+				[1]="20% reduced Critical Hit Chance",
+				[2]="60% increased Critical Damage Bonus"
 			}
 		},
 		[56330]={
@@ -57524,7 +57467,7 @@ return {
 			},
 			skill=56330,
 			stats={
-				[1]="bleed_on_crit_%_with_attacks"
+				[1]="10% chance to inflict Bleeding on Critical Hit with Attacks"
 			}
 		},
 		[56336]={
@@ -57541,8 +57484,8 @@ return {
 			},
 			skill=56336,
 			stats={
-				[1]="curse_effect_+%",
-				[2]="curse_delay_+%"
+				[1]="3% increased Effect of your Curses",
+				[2]="10% faster Curse Activation"
 			}
 		},
 		[56342]={
@@ -57559,7 +57502,7 @@ return {
 			},
 			skill=56342,
 			stats={
-				[1]="gain_x_rage_when_hit"
+				[1]="Gain 2 Rage when Hit by an Enemy"
 			}
 		},
 		[56349]={
@@ -57576,7 +57519,7 @@ return {
 			},
 			skill=56349,
 			stats={
-				[1]="keystone_chaos_inoculation"
+				[1]="Chaos Inoculation"
 			}
 		},
 		[56360]={
@@ -57594,7 +57537,7 @@ return {
 			},
 			skill=56360,
 			stats={
-				[1]="power_charge_duration_+%"
+				[1]="20% increased Power Charge Duration"
 			}
 		},
 		[56366]={
@@ -57613,8 +57556,8 @@ return {
 			},
 			skill=56366,
 			stats={
-				[1]="dagger_critical_strike_chance_+%",
-				[2]="dagger_attack_speed_+%"
+				[1]="5% increased Attack Speed with Daggers",
+				[2]="15% increased Critical Hit Chance with Daggers"
 			}
 		},
 		[56409]={
@@ -57633,9 +57576,9 @@ return {
 			},
 			skill=56409,
 			stats={
-				[1]="shock_chance_+%",
-				[2]="hit_damage_freeze_multiplier_+%",
-				[3]="ignite_chance_+%"
+				[1]="12% increased chance to Ignite",
+				[2]="12% increased Freeze Buildup",
+				[3]="12% increased chance to Shock"
 			}
 		},
 		[56453]={
@@ -57652,8 +57595,8 @@ return {
 			},
 			skill=56453,
 			stats={
-				[1]="attack_damage_+%_when_on_full_life",
-				[2]="attack_damage_+%_when_on_low_life"
+				[1]="30% increased Attack Damage when on Full Life",
+				[2]="50% increased Attack Damage when on Low Life"
 			}
 		},
 		[56564]={
@@ -57670,7 +57613,7 @@ return {
 			},
 			skill=56564,
 			stats={
-				[1]="energy_shield_recharge_rate_+%"
+				[1]="15% increased Energy Shield Recharge Rate"
 			}
 		},
 		[56567]={
@@ -57688,7 +57631,7 @@ return {
 			},
 			skill=56567,
 			stats={
-				[1]="accuracy_rating_+%"
+				[1]="8% increased Accuracy Rating"
 			}
 		},
 		[56605]={
@@ -57705,7 +57648,7 @@ return {
 			},
 			skill=56605,
 			stats={
-				[1]="keystone_bulwark"
+				[1]="Bulwark"
 			}
 		},
 		[56616]={
@@ -57722,8 +57665,8 @@ return {
 			},
 			skill=56616,
 			stats={
-				[1]="life_regeneration_rate_per_minute_%_when_on_low_life",
-				[2]="life_recovery_+%_from_flasks_while_on_low_life"
+				[1]="Regenerate 1.5% of Life per second while on Low Life",
+				[2]="40% increased Life Recovery from Flasks used when on Low Life"
 			}
 		},
 		[56618]={
@@ -57756,7 +57699,7 @@ return {
 			},
 			skill=56638,
 			stats={
-				[1]="stun_threshold_+%_when_not_stunned_recently"
+				[1]="20% increased Stun Threshold if you haven't been Stunned Recently"
 			}
 		},
 		[56640]={
@@ -57773,7 +57716,7 @@ return {
 			},
 			skill=56640,
 			stats={
-				[1]="base_spell_critical_strike_multiplier_+"
+				[1]="15% increased Critical Spell Damage Bonus"
 			}
 		},
 		[56649]={
@@ -57791,7 +57734,7 @@ return {
 			},
 			skill=56649,
 			stats={
-				[1]="base_reduce_enemy_cold_resistance_%"
+				[1]="Damage Penetrates 6% Cold Resistance"
 			}
 		},
 		[56651]={
@@ -57809,7 +57752,7 @@ return {
 			},
 			skill=56651,
 			stats={
-				[1]="projectile_damage_+%"
+				[1]="10% increased Projectile Damage"
 			}
 		},
 		[56703]={
@@ -57826,7 +57769,7 @@ return {
 			},
 			skill=56703,
 			stats={
-				[1]="base_cast_speed_+%"
+				[1]="3% increased Cast Speed"
 			}
 		},
 		[56757]={
@@ -57843,7 +57786,7 @@ return {
 			},
 			skill=56757,
 			stats={
-				[1]="summon_totem_cast_speed_+%"
+				[1]="20% increased Totem Placement speed"
 			}
 		},
 		[56761]={
@@ -57861,7 +57804,7 @@ return {
 			},
 			skill=56761,
 			stats={
-				[1]="melee_damage_+%"
+				[1]="8% increased Melee Damage"
 			}
 		},
 		[56762]={
@@ -57878,7 +57821,7 @@ return {
 			},
 			skill=56762,
 			stats={
-				[1]="base_cast_speed_+%"
+				[1]="3% increased Cast Speed"
 			}
 		},
 		[56776]={
@@ -57896,7 +57839,7 @@ return {
 			},
 			skill=56776,
 			stats={
-				[1]="critical_strike_multiplier_+_during_any_flask_effect"
+				[1]="50% increased Critical Damage Bonus during any Flask Effect"
 			}
 		},
 		[56806]={
@@ -57913,8 +57856,8 @@ return {
 			},
 			skill=56806,
 			stats={
-				[1]="block_chance_+%",
-				[2]="movement_speed_+%_for_4_seconds_on_block"
+				[1]="12% increased Block chance",
+				[2]="1% increased Movement Speed for each time you've Blocked in the past 10 seconds"
 			}
 		},
 		[56818]={
@@ -57932,7 +57875,7 @@ return {
 			},
 			skill=56818,
 			stats={
-				[1]="elemental_damage_with_attack_skills_+%"
+				[1]="12% increased Elemental Damage with Attacks"
 			}
 		},
 		[56838]={
@@ -57950,8 +57893,8 @@ return {
 			},
 			skill=56838,
 			stats={
-				[1]="evasion_rating_+%",
-				[2]="maximum_energy_shield_+%"
+				[1]="12% increased Evasion Rating",
+				[2]="12% increased maximum Energy Shield"
 			}
 		},
 		[56841]={
@@ -57969,7 +57912,7 @@ return {
 			},
 			skill=56841,
 			stats={
-				[1]="base_frenzy_charge_duration_+%"
+				[1]="20% increased Frenzy Charge Duration"
 			}
 		},
 		[56842]={
@@ -57987,7 +57930,7 @@ return {
 			},
 			skill=56842,
 			stats={
-				[1]="hit_damage_stun_multiplier_+%"
+				[1]="18% increased Stun Buildup"
 			}
 		},
 		[56847]={
@@ -58004,7 +57947,7 @@ return {
 			},
 			skill=56847,
 			stats={
-				[1]="damage_+%_while_affected_by_a_herald"
+				[1]="12% increased Damage while affected by a Herald"
 			}
 		},
 		[56870]={
@@ -58021,7 +57964,7 @@ return {
 			},
 			skill=56870,
 			stats={
-				[1]="flask_charges_gained_+%"
+				[1]="10% increased Flask Charges gained"
 			}
 		},
 		[56876]={
@@ -58039,7 +57982,7 @@ return {
 			},
 			skill=56876,
 			stats={
-				[1]="energy_shield_+%_if_consumed_power_charge_recently"
+				[1]="20% increased Energy Shield if you've consumed a Power Charge Recently"
 			}
 		},
 		[56893]={
@@ -58057,8 +58000,8 @@ return {
 			},
 			skill=56893,
 			stats={
-				[1]="recover_%_maximum_mana_on_charm_use",
-				[2]="charms_%_chance_to_not_consume_charges"
+				[1]="20% chance for Charms you use to not consume Charges",
+				[2]="Recover 5% of Mana when a Charm is used"
 			}
 		},
 		[56910]={
@@ -58079,9 +58022,8 @@ return {
 			},
 			skill=56910,
 			stats={
-				[1]="evasion_and_physical_damage_reduction_rating_+%",
-				[2]="base_self_critical_strike_multiplier_-%",
-				[3]="base_strength_and_dexterity"
+				[1]="Hits against you have 20% reduced Critical Damage Bonus",
+				[2]="20% increased Armour and Evasion Rating"
 			}
 		},
 		[56914]={
@@ -58098,7 +58040,7 @@ return {
 			},
 			skill=56914,
 			stats={
-				[1]="base_reduce_enemy_lightning_resistance_%"
+				[1]="Damage Penetrates 6% Lightning Resistance"
 			}
 		},
 		[56928]={
@@ -58115,8 +58057,8 @@ return {
 			},
 			skill=56928,
 			stats={
-				[1]="attack_speed_+%",
-				[2]="flask_duration_+%"
+				[1]="5% increased Flask Effect Duration",
+				[2]="2% increased Attack Speed"
 			}
 		},
 		[56935]={
@@ -58135,7 +58077,7 @@ return {
 			},
 			skill=56935,
 			stats={
-				[1]="display_passive_attribute_text"
+				[1]="+5 to any Attribute"
 			}
 		},
 		[56956]={
@@ -58152,8 +58094,8 @@ return {
 			},
 			skill=56956,
 			stats={
-				[1]="minion_maximum_life_+%",
-				[2]="minion_chaos_resistance_%"
+				[1]="Minions have 8% increased maximum Life",
+				[2]="Minions have +7% to Chaos Resistance"
 			}
 		},
 		[56978]={
@@ -58170,7 +58112,7 @@ return {
 			},
 			skill=56978,
 			stats={
-				[1]="display_passive_attribute_text"
+				[1]="+5 to any Attribute"
 			}
 		},
 		[56996]={
@@ -58187,7 +58129,7 @@ return {
 			},
 			skill=56996,
 			stats={
-				[1]="totem_life_+%"
+				[1]="16% increased Totem Life"
 			}
 		},
 		[56997]={
@@ -58205,7 +58147,7 @@ return {
 			},
 			skill=56997,
 			stats={
-				[1]="heavy_stuns_have_culling_strike"
+				[1]="Hits that Heavy Stun Enemies have Culling Strike"
 			}
 		},
 		[56999]={
@@ -58222,8 +58164,8 @@ return {
 			},
 			skill=56999,
 			stats={
-				[1]="accuracy_rating_+%",
-				[2]="attack_critical_strike_chance_+%"
+				[1]="15% increased Critical Hit Chance for Attacks",
+				[2]="15% increased Accuracy Rating"
 			}
 		},
 		[57021]={
@@ -58240,7 +58182,7 @@ return {
 			},
 			skill=57021,
 			stats={
-				[1]="minion_skill_area_of_effect_+%"
+				[1]="Minions have 10% increased Area of Effect"
 			}
 		},
 		[57039]={
@@ -58257,7 +58199,7 @@ return {
 			},
 			skill=57039,
 			stats={
-				[1]="base_cooldown_speed_+%"
+				[1]="5% increased Cooldown Recovery Rate"
 			}
 		},
 		[57047]={
@@ -58275,7 +58217,7 @@ return {
 			},
 			skill=57047,
 			stats={
-				[1]="all_attributes_+%"
+				[1]="10% increased Attributes"
 			}
 		},
 		[57088]={
@@ -58292,7 +58234,7 @@ return {
 			},
 			skill=57088,
 			stats={
-				[1]="base_reduce_enemy_cold_resistance_%"
+				[1]="Damage Penetrates 6% Cold Resistance"
 			}
 		},
 		[57097]={
@@ -58310,7 +58252,7 @@ return {
 			},
 			skill=57097,
 			stats={
-				[1]="link_skills_can_target_minions"
+				[1]="Link Skills can target Damageable Minions"
 			}
 		},
 		[57110]={
@@ -58327,8 +58269,8 @@ return {
 			},
 			skill=57110,
 			stats={
-				[1]="damage_taken_goes_to_life_over_4_seconds_%",
-				[2]="base_maximum_life"
+				[1]="+20 to maximum Life",
+				[2]="8% of Damage taken Recouped as Life"
 			}
 		},
 		[57141]={
@@ -58368,8 +58310,8 @@ return {
 			},
 			skill=57178,
 			stats={
-				[1]="spell_critical_strike_chance_+%",
-				[2]="critical_hit_damaging_ailment_effect_+%"
+				[1]="10% increased Critical Hit Chance for Spells",
+				[2]="15% increased Magnitude of Damaging Ailments you inflict with Critical Hits"
 			}
 		},
 		[57181]={
@@ -58387,7 +58329,7 @@ return {
 			},
 			skill=57181,
 			stats={
-				[1]="critical_strike_chance_+%"
+				[1]="12% increased Critical Hit Chance"
 			}
 		},
 		[57190]={
@@ -58404,8 +58346,8 @@ return {
 			},
 			skill=57190,
 			stats={
-				[1]="area_of_effect_+%_with_herald_skills",
-				[2]="damage_+%_with_herald_skills"
+				[1]="Herald Skills have 30% increased Area of Effect",
+				[2]="Herald Skills deal 30% increased Damage"
 			}
 		},
 		[57196]={
@@ -58422,7 +58364,7 @@ return {
 			},
 			skill=57196,
 			stats={
-				[1]="attack_speed_+%"
+				[1]="3% increased Attack Speed"
 			}
 		},
 		[57204]={
@@ -58440,7 +58382,7 @@ return {
 			},
 			skill=57204,
 			stats={
-				[1]="critical_strike_chance_+%"
+				[1]="25% increased Critical Hit Chance"
 			}
 		},
 		[57227]={
@@ -58457,7 +58399,7 @@ return {
 			},
 			skill=57227,
 			stats={
-				[1]="attack_critical_strike_chance_+%"
+				[1]="10% increased Critical Hit Chance for Attacks"
 			}
 		},
 		[57230]={
@@ -58476,7 +58418,7 @@ return {
 			},
 			skill=57230,
 			stats={
-				[1]="physical_damage_+%"
+				[1]="10% increased Global Physical Damage"
 			}
 		},
 		[57373]={
@@ -58493,7 +58435,7 @@ return {
 			},
 			skill=57373,
 			stats={
-				[1]="ignite_chance_+%"
+				[1]="15% increased chance to Ignite"
 			}
 		},
 		[57379]={
@@ -58511,7 +58453,7 @@ return {
 			},
 			skill=57379,
 			stats={
-				[1]="melee_damage_+%_at_close_range"
+				[1]="40% increased Melee Damage with Hits at Close Range"
 			}
 		},
 		[57388]={
@@ -58529,9 +58471,9 @@ return {
 			},
 			skill=57388,
 			stats={
-				[1]="attack_critical_strike_chance_+%",
-				[2]="attack_critical_strike_multiplier_+",
-				[3]="hit_damage_stun_multiplier_+%_with_crits"
+				[1]="20% increased Critical Hit Chance for Attacks",
+				[2]="20% increased Critical Damage Bonus for Attack Damage",
+				[3]="20% increased Stun Buildup with Critical Hits"
 			}
 		},
 		[57462]={
@@ -58548,7 +58490,7 @@ return {
 			},
 			skill=57462,
 			stats={
-				[1]="base_projectile_speed_+%"
+				[1]="8% increased Projectile Speed"
 			}
 		},
 		[57471]={
@@ -58565,8 +58507,8 @@ return {
 			},
 			skill=57471,
 			stats={
-				[1]="recover_X_life_on_block",
-				[2]="notable_knockback_distance_+%_final_for_blocked_hits"
+				[1]="Recover 20 Life when you Block",
+				[2]="80% less Knockback Distance for Blocked Hits"
 			}
 		},
 		[57506]={
@@ -58583,7 +58525,7 @@ return {
 			},
 			skill=57506,
 			stats={
-				[1]="display_passive_attribute_text"
+				[1]="+5 to any Attribute"
 			}
 		},
 		[57513]={
@@ -58600,7 +58542,7 @@ return {
 			},
 			skill=57513,
 			stats={
-				[1]="keystone_eldritch_battery"
+				[1]="Eldritch Battery"
 			}
 		},
 		[57518]={
@@ -58618,7 +58560,7 @@ return {
 			},
 			skill=57518,
 			stats={
-				[1]="block_chance_+%"
+				[1]="5% increased Block chance"
 			}
 		},
 		[57552]={
@@ -58636,7 +58578,7 @@ return {
 			},
 			skill=57552,
 			stats={
-				[1]="damage_+%_with_one_handed_weapons"
+				[1]="10% increased Damage with One Handed Weapons"
 			}
 		},
 		[57555]={
@@ -58653,7 +58595,7 @@ return {
 			},
 			skill=57555,
 			stats={
-				[1]="base_chance_to_inflict_bleeding_%"
+				[1]="5% chance to inflict Bleeding on Hit"
 			}
 		},
 		[57571]={
@@ -58670,7 +58612,7 @@ return {
 			},
 			skill=57571,
 			stats={
-				[1]="ignite_chance_+%"
+				[1]="30% increased chance to Ignite"
 			}
 		},
 		[57608]={
@@ -58687,7 +58629,7 @@ return {
 			},
 			skill=57608,
 			stats={
-				[1]="attack_damage_+%"
+				[1]="10% increased Attack Damage"
 			}
 		},
 		[57626]={
@@ -58704,8 +58646,8 @@ return {
 			},
 			skill=57626,
 			stats={
-				[1]="cold_damage_+%",
-				[2]="fire_damage_+%"
+				[1]="8% increased Fire Damage",
+				[2]="8% increased Cold Damage"
 			}
 		},
 		[57703]={
@@ -58725,7 +58667,7 @@ return {
 			},
 			skill=57703,
 			stats={
-				[1]="display_passive_attribute_text"
+				[1]="+5 to any Attribute"
 			}
 		},
 		[57710]={
@@ -58747,7 +58689,7 @@ return {
 			},
 			skill=57710,
 			stats={
-				[1]="display_passive_attribute_text"
+				[1]="+5 to any Attribute"
 			}
 		},
 		[57724]={
@@ -58764,7 +58706,7 @@ return {
 			},
 			skill=57724,
 			stats={
-				[1]="chaos_damage_+%"
+				[1]="7% increased Chaos Damage"
 			}
 		},
 		[57774]={
@@ -58781,7 +58723,7 @@ return {
 			},
 			skill=57774,
 			stats={
-				[1]="attack_speed_while_dual_wielding_+%"
+				[1]="3% increased Attack Speed while Dual Wielding"
 			}
 		},
 		[57776]={
@@ -58798,8 +58740,8 @@ return {
 			},
 			skill=57776,
 			stats={
-				[1]="maximum_energy_shield_+%",
-				[2]="mana_regeneration_rate_+%"
+				[1]="10% increased maximum Energy Shield",
+				[2]="6% increased Mana Regeneration Rate"
 			}
 		},
 		[57805]={
@@ -58817,8 +58759,8 @@ return {
 			},
 			skill=57805,
 			stats={
-				[1]="knockback_distance_+%",
-				[2]="knockback_chance_%_at_close_range"
+				[1]="20% increased Knockback Distance",
+				[2]="20% chance toKnock Enemies Back with Hits at Close Range"
 			}
 		},
 		[57810]={
@@ -58835,7 +58777,7 @@ return {
 			},
 			skill=57810,
 			stats={
-				[1]="shock_chance_+%"
+				[1]="15% increased chance to Shock"
 			}
 		},
 		[57819]={
@@ -58855,7 +58797,7 @@ return {
 			},
 			skill=57819,
 			stats={
-				[1]="num_additional_skill_slots"
+				[1]="Grants 3 additional Skill Slots"
 			}
 		},
 		[57821]={
@@ -58876,7 +58818,7 @@ return {
 			},
 			skill=57821,
 			stats={
-				[1]="display_passive_attribute_text"
+				[1]="+5 to any Attribute"
 			}
 		},
 		[57832]={
@@ -58893,7 +58835,7 @@ return {
 			},
 			skill=57832,
 			stats={
-				[1]="base_ignite_effect_+%"
+				[1]="10% increased Magnitude of Ignite you inflict"
 			}
 		},
 		[57846]={
@@ -58910,7 +58852,7 @@ return {
 			},
 			skill=57846,
 			stats={
-				[1]="hit_damage_stun_multiplier_+%"
+				[1]="15% increased Stun Buildup"
 			}
 		},
 		[57880]={
@@ -58928,7 +58870,7 @@ return {
 			},
 			skill=57880,
 			stats={
-				[1]="axe_damage_+%"
+				[1]="12% increased Damage with Axes"
 			}
 		},
 		[57945]={
@@ -58946,7 +58888,7 @@ return {
 			},
 			skill=57945,
 			stats={
-				[1]="flask_life_to_recover_+%"
+				[1]="10% increased Life Recovery from Flasks"
 			}
 		},
 		[57967]={
@@ -58963,8 +58905,8 @@ return {
 			},
 			skill=57967,
 			stats={
-				[1]="mana_regeneration_rate_+%",
-				[2]="base_maximum_mana"
+				[1]="+30 to maximum Mana",
+				[2]="14% increased Mana Regeneration Rate"
 			}
 		},
 		[57970]={
@@ -58981,7 +58923,7 @@ return {
 			},
 			skill=57970,
 			stats={
-				[1]="base_frenzy_charge_duration_+%"
+				[1]="20% increased Frenzy Charge Duration"
 			}
 		},
 		[58002]={
@@ -58999,7 +58941,7 @@ return {
 			},
 			skill=58002,
 			stats={
-				[1]="physical_damage_+%"
+				[1]="10% increased Global Physical Damage"
 			}
 		},
 		[58013]={
@@ -59016,7 +58958,7 @@ return {
 			},
 			skill=58013,
 			stats={
-				[1]="projectile_damage_+%"
+				[1]="10% increased Projectile Damage"
 			}
 		},
 		[58016]={
@@ -59034,8 +58976,8 @@ return {
 			},
 			skill=58016,
 			stats={
-				[1]="elemental_damage_+%",
-				[2]="base_resist_all_elements_%"
+				[1]="+5% to all Elemental Resistances",
+				[2]="30% increased Elemental Damage"
 			}
 		},
 		[58022]={
@@ -59053,7 +58995,7 @@ return {
 			},
 			skill=58022,
 			stats={
-				[1]="chaos_damage_+%"
+				[1]="11% increased Chaos Damage"
 			}
 		},
 		[58038]={
@@ -59071,7 +59013,7 @@ return {
 			},
 			skill=58038,
 			stats={
-				[1]="attack_damage_+%_while_surrounded"
+				[1]="25% increased Attack Damage while Surrounded"
 			}
 		},
 		[58090]={
@@ -59088,7 +59030,7 @@ return {
 			},
 			skill=58090,
 			stats={
-				[1]="damage_taken_goes_to_life_over_4_seconds_%"
+				[1]="3% of Damage taken Recouped as Life"
 			}
 		},
 		[58096]={
@@ -59106,8 +59048,8 @@ return {
 			},
 			skill=58096,
 			stats={
-				[1]="spell_damage_+%",
-				[2]="skill_effect_duration_+%"
+				[1]="20% increased Spell Damage",
+				[2]="20% increased Skill Effect Duration"
 			}
 		},
 		[58109]={
@@ -59126,7 +59068,7 @@ return {
 			},
 			skill=58109,
 			stats={
-				[1]="display_passive_attribute_text"
+				[1]="+5 to any Attribute"
 			}
 		},
 		[58117]={
@@ -59145,7 +59087,7 @@ return {
 			},
 			skill=58117,
 			stats={
-				[1]="totem_damage_+%"
+				[1]="16% increased Totem Damage"
 			}
 		},
 		[58125]={
@@ -59162,7 +59104,7 @@ return {
 			},
 			skill=58125,
 			stats={
-				[1]="shield_armour_+%"
+				[1]="25% increased Defences from Equipped Shield"
 			}
 		},
 		[58170]={
@@ -59179,7 +59121,7 @@ return {
 			},
 			skill=58170,
 			stats={
-				[1]="spell_damage_+%"
+				[1]="10% increased Spell Damage"
 			}
 		},
 		[58182]={
@@ -59196,7 +59138,7 @@ return {
 			},
 			skill=58182,
 			stats={
-				[1]="base_life_gained_on_enemy_death"
+				[1]="Gain 3 Life per Enemy Killed"
 			}
 		},
 		[58183]={
@@ -59214,8 +59156,8 @@ return {
 			},
 			skill=58183,
 			stats={
-				[1]="physical_damage_+%",
-				[2]="base_bleeding_effect_+%"
+				[1]="25% increased Global Physical Damage",
+				[2]="15% increased Magnitude of Bleeding you inflict"
 			}
 		},
 		[58295]={
@@ -59233,7 +59175,7 @@ return {
 			},
 			skill=58295,
 			stats={
-				[1]="display_passive_attribute_text"
+				[1]="+5 to any Attribute"
 			}
 		},
 		[58329]={
@@ -59252,7 +59194,7 @@ return {
 			},
 			skill=58329,
 			stats={
-				[1]="display_passive_attribute_text"
+				[1]="+5 to any Attribute"
 			}
 		},
 		[58379]={
@@ -59285,7 +59227,7 @@ return {
 			},
 			skill=58387,
 			stats={
-				[1]="chaos_damage_+%"
+				[1]="7% increased Chaos Damage"
 			}
 		},
 		[58388]={
@@ -59303,7 +59245,7 @@ return {
 			},
 			skill=58388,
 			stats={
-				[1]="flask_life_to_recover_+%"
+				[1]="10% increased Life Recovery from Flasks"
 			}
 		},
 		[58397]={
@@ -59323,7 +59265,6 @@ return {
 			},
 			skill=58397,
 			stats={
-				[1]="base_dexterity"
 			}
 		},
 		[58426]={
@@ -59340,7 +59281,7 @@ return {
 			},
 			skill=58426,
 			stats={
-				[1]="blind_effect_+%"
+				[1]="50% increased Blind Effect"
 			}
 		},
 		[58528]={
@@ -59357,7 +59298,7 @@ return {
 			},
 			skill=58528,
 			stats={
-				[1]="melee_damage_+%"
+				[1]="10% increased Melee Damage"
 			}
 		},
 		[58591]={
@@ -59375,7 +59316,7 @@ return {
 			},
 			skill=58591,
 			stats={
-				[1]="gemling_double_basic_attribute_bonuses"
+				[1]="Inherent bonuses from Intelligence, Strength and Dexterity are doubled"
 			}
 		},
 		[58651]={
@@ -59393,7 +59334,7 @@ return {
 			},
 			skill=58651,
 			stats={
-				[1]="minion_damage_+%"
+				[1]="Minions deal 10% increased Damage"
 			}
 		},
 		[58704]={
@@ -59412,7 +59353,7 @@ return {
 			},
 			skill=58704,
 			stats={
-				[1]="armour_break_damage_%_dealt_as_armour_break"
+				[1]="Break Armour equal to 10% of Hit Damage dealt"
 			}
 		},
 		[58714]={
@@ -59429,7 +59370,7 @@ return {
 			},
 			skill=58714,
 			stats={
-				[1]="grenade_skill_cooldown_count_+"
+				[1]="Grenade Skills have +1 Cooldown Use"
 			}
 		},
 		[58718]={
@@ -59446,7 +59387,7 @@ return {
 			},
 			skill=58718,
 			stats={
-				[1]="base_bleeding_effect_+%"
+				[1]="10% increased Magnitude of Bleeding you inflict"
 			}
 		},
 		[58747]={
@@ -59480,8 +59421,8 @@ return {
 			},
 			skill=58783,
 			stats={
-				[1]="armour_evasion_+%_while_leeching",
-				[2]="base_life_leech_amount_+%"
+				[1]="8% increased amount of Life Leeched",
+				[2]="8% increased Armour and Evasion Rating while Leeching"
 			}
 		},
 		[58789]={
@@ -59498,7 +59439,7 @@ return {
 			},
 			skill=58789,
 			stats={
-				[1]="stun_threshold_+_from_%_maximum_energy_shield"
+				[1]="Gain 8% of maximum Energy Shield as additional Stun Threshold"
 			}
 		},
 		[58814]={
@@ -59517,7 +59458,7 @@ return {
 			},
 			skill=58814,
 			stats={
-				[1]="display_passive_attribute_text"
+				[1]="+5 to any Attribute"
 			}
 		},
 		[58838]={
@@ -59534,7 +59475,7 @@ return {
 			},
 			skill=58838,
 			stats={
-				[1]="stun_threshold_+%"
+				[1]="12% increased Stun Threshold"
 			}
 		},
 		[58930]={
@@ -59551,7 +59492,7 @@ return {
 			},
 			skill=58930,
 			stats={
-				[1]="base_cast_speed_+%"
+				[1]="3% increased Cast Speed"
 			}
 		},
 		[58939]={
@@ -59568,7 +59509,7 @@ return {
 			},
 			skill=58939,
 			stats={
-				[1]="critical_strike_chance_+%_if_have_not_crit_recently"
+				[1]="80% increased Critical Hit Chance if you haven't dealt a Critical Hit Recently"
 			}
 		},
 		[58971]={
@@ -59587,7 +59528,7 @@ return {
 			},
 			skill=58971,
 			stats={
-				[1]="ailment_threshold_+%"
+				[1]="15% increased Elemental Ailment Threshold"
 			}
 		},
 		[59006]={
@@ -59604,7 +59545,7 @@ return {
 			},
 			skill=59006,
 			stats={
-				[1]="skill_effect_duration_+%"
+				[1]="8% reduced Skill Effect Duration"
 			}
 		},
 		[59028]={
@@ -59621,7 +59562,7 @@ return {
 			},
 			skill=59028,
 			stats={
-				[1]="projectile_damage_+%"
+				[1]="10% increased Projectile Damage"
 			}
 		},
 		[59047]={
@@ -59641,7 +59582,7 @@ return {
 			},
 			skill=59047,
 			stats={
-				[1]="mark_effect_+%"
+				[1]="15% increased Effect of your Mark Skills"
 			}
 		},
 		[59053]={
@@ -59658,8 +59599,8 @@ return {
 			},
 			skill=59053,
 			stats={
-				[1]="base_debuff_slow_magnitude_+%",
-				[2]="hinder_duration_+%"
+				[1]="Debuffs you inflict have 4% increased Slow Magnitude",
+				[2]="20% increased Hinder Duration"
 			}
 		},
 		[59061]={
@@ -59676,7 +59617,7 @@ return {
 			},
 			skill=59061,
 			stats={
-				[1]="critical_strike_multiplier_+_if_have_not_dealt_critical_strike_recently"
+				[1]="20% increased Critical Damage Bonus if you haven't dealt a Critical Hit Recently"
 			}
 		},
 		[59064]={
@@ -59693,7 +59634,7 @@ return {
 			},
 			skill=59064,
 			stats={
-				[1]="mark_effect_+%"
+				[1]="10% increased Effect of your Mark Skills"
 			}
 		},
 		[59093]={
@@ -59713,7 +59654,7 @@ return {
 			},
 			skill=59093,
 			stats={
-				[1]="display_passive_attribute_text"
+				[1]="+5 to any Attribute"
 			}
 		},
 		[59142]={
@@ -59730,7 +59671,7 @@ return {
 			},
 			skill=59142,
 			stats={
-				[1]="flask_effect_+%"
+				[1]="Flasks applied to you have 25% increased Effect"
 			}
 		},
 		[59213]={
@@ -59747,7 +59688,7 @@ return {
 			},
 			skill=59213,
 			stats={
-				[1]="base_stun_recovery_+%"
+				[1]="20% increased Stun Recovery"
 			}
 		},
 		[59214]={
@@ -59764,9 +59705,9 @@ return {
 			},
 			skill=59214,
 			stats={
-				[1]="base_curse_duration_+%",
-				[2]="enemies_you_curse_cannot_recharge_energy_shield",
-				[3]="enemies_cursed_by_you_have_life_regeneration_rate_+%"
+				[1]="30% increased Curse Duration",
+				[2]="Enemies Cursed by you have 50% reduced Life Regeneration Rate",
+				[3]="Enemies you Curse cannot Recharge Energy Shield"
 			}
 		},
 		[59256]={
@@ -59783,7 +59724,7 @@ return {
 			},
 			skill=59256,
 			stats={
-				[1]="critical_strike_chance_+%_if_enemy_killed_recently"
+				[1]="20% increased Critical Hit Chance if you have Killed Recently"
 			}
 		},
 		[59263]={
@@ -59800,7 +59741,7 @@ return {
 			},
 			skill=59263,
 			stats={
-				[1]="sword_damage_+%"
+				[1]="25% increased Damage with Swords"
 			}
 		},
 		[59303]={
@@ -59818,8 +59759,8 @@ return {
 			},
 			skill=59303,
 			stats={
-				[1]="damage_+%_while_using_charm",
-				[2]="movement_speed_+%_while_using_charm"
+				[1]="30% increased Damage while you have an active Charm",
+				[2]="6% increased Movement Speed while you have an active Charm"
 			}
 		},
 		[59342]={
@@ -59837,7 +59778,7 @@ return {
 			},
 			skill=59342,
 			stats={
-				[1]="base_life_leech_amount_+%"
+				[1]="12% increased amount of Life Leeched"
 			}
 		},
 		[59362]={
@@ -59856,7 +59797,7 @@ return {
 			},
 			skill=59362,
 			stats={
-				[1]="display_passive_attribute_text"
+				[1]="+5 to any Attribute"
 			}
 		},
 		[59372]={
@@ -59875,7 +59816,6 @@ return {
 			},
 			skill=59372,
 			stats={
-				[1]="crushing_blow"
 			}
 		},
 		[59376]={
@@ -59893,7 +59833,7 @@ return {
 			},
 			skill=59376,
 			stats={
-				[1]="display_passive_attribute_text"
+				[1]="+5 to any Attribute"
 			}
 		},
 		[59390]={
@@ -59911,7 +59851,7 @@ return {
 			},
 			skill=59390,
 			stats={
-				[1]="evasion_rating_+%_if_consumed_frenzy_charge_recently"
+				[1]="20% increased Evasion Rating if you've consumed a Frenzy Charge Recently"
 			}
 		},
 		[59425]={
@@ -59928,7 +59868,7 @@ return {
 			},
 			skill=59425,
 			stats={
-				[1]="damage_taken_goes_to_life_over_4_seconds_%"
+				[1]="3% of Damage taken Recouped as Life"
 			}
 		},
 		[59466]={
@@ -59946,7 +59886,7 @@ return {
 			},
 			skill=59466,
 			stats={
-				[1]="empowered_attack_damage_+%"
+				[1]="Empowered Attacks deal 16% increased Damage"
 			}
 		},
 		[59480]={
@@ -59964,7 +59904,7 @@ return {
 			},
 			skill=59480,
 			stats={
-				[1]="attack_area_damage_+%"
+				[1]="12% increased Attack Area Damage"
 			}
 		},
 		[59503]={
@@ -59981,8 +59921,8 @@ return {
 			},
 			skill=59503,
 			stats={
-				[1]="accuracy_rating_+%",
-				[2]="attack_critical_strike_chance_+%"
+				[1]="8% increased Critical Hit Chance for Attacks",
+				[2]="8% increased Accuracy Rating"
 			}
 		},
 		[59538]={
@@ -60001,7 +59941,7 @@ return {
 			},
 			skill=59538,
 			stats={
-				[1]="display_passive_attribute_text"
+				[1]="+5 to any Attribute"
 			}
 		},
 		[59540]={
@@ -60019,7 +59959,7 @@ return {
 			},
 			skill=59540,
 			stats={
-				[1]="titan_damage_+%_final_against_heavy_stunned_enemies"
+				[1]="40% more Damage against Heavy Stunned Enemies"
 			}
 		},
 		[59541]={
@@ -60037,8 +59977,8 @@ return {
 			},
 			skill=59541,
 			stats={
-				[1]="minion_maximum_life_+%",
-				[2]="minion_life_recovery_rate_+%"
+				[1]="Minions have 40% increased maximum Life",
+				[2]="Minions have 10% reduced Life Recovery rate"
 			}
 		},
 		[59542]={
@@ -60055,7 +59995,7 @@ return {
 			},
 			skill=59542,
 			stats={
-				[1]="deadeye_projectile_damage_+%_final_max_as_distance_travelled_increases"
+				[1]="Projectiles deal 0% more Hit damage to targets in the first 3.5 metres of their movement, scaling up with distance travelled to reach 20% after 7 metres"
 			}
 		},
 		[59589]={
@@ -60073,7 +60013,7 @@ return {
 			},
 			skill=59589,
 			stats={
-				[1]="armour_+_from_%_strength_requirements_from_boots_gloves_helmets"
+				[1]="100% of Strength Requirements from Boots, Gloves and Helmets also added to Armour"
 			}
 		},
 		[59596]={
@@ -60090,8 +60030,8 @@ return {
 			},
 			skill=59596,
 			stats={
-				[1]="energy_shield_recharge_rate_+%",
-				[2]="energy_shield_gained_on_block"
+				[1]="25% increased Energy Shield Recharge Rate",
+				[2]="Gain 20 Energy Shield when you Block"
 			}
 		},
 		[59600]={
@@ -60109,7 +60049,7 @@ return {
 			},
 			skill=59600,
 			stats={
-				[1]="life_recovery_+%_from_flasks_while_on_low_life"
+				[1]="25% increased Life Recovery from Flasks used when on Low Life"
 			}
 		},
 		[59603]={
@@ -60126,7 +60066,7 @@ return {
 			},
 			skill=59603,
 			stats={
-				[1]="damage_taken_goes_to_life_over_4_seconds_%"
+				[1]="3% of Damage taken Recouped as Life"
 			}
 		},
 		[59636]={
@@ -60144,7 +60084,7 @@ return {
 			},
 			skill=59636,
 			stats={
-				[1]="mana_regeneration_rate_+%"
+				[1]="25% increased Mana Regeneration Rate"
 			}
 		},
 		[59644]={
@@ -60161,7 +60101,7 @@ return {
 			},
 			skill=59644,
 			stats={
-				[1]="base_poison_effect_+%"
+				[1]="10% increased Magnitude of Poison you inflict"
 			}
 		},
 		[59647]={
@@ -60178,7 +60118,7 @@ return {
 			},
 			skill=59647,
 			stats={
-				[1]="minion_maximum_life_+%"
+				[1]="Minions have 10% increased maximum Life"
 			}
 		},
 		[59653]={
@@ -60195,7 +60135,7 @@ return {
 			},
 			skill=59653,
 			stats={
-				[1]="base_movement_velocity_+%"
+				[1]="2% increased Movement Speed"
 			}
 		},
 		[59694]={
@@ -60212,7 +60152,7 @@ return {
 			},
 			skill=59694,
 			stats={
-				[1]="quarterstaff_critical_strike_multiplier_+"
+				[1]="18% increased Critical Damage Bonus with Quarterstaves"
 			}
 		},
 		[59695]={
@@ -60229,7 +60169,7 @@ return {
 			},
 			skill=59695,
 			stats={
-				[1]="mana_regeneration_rate_+%"
+				[1]="10% increased Mana Regeneration Rate"
 			}
 		},
 		[59710]={
@@ -60246,7 +60186,7 @@ return {
 			},
 			skill=59710,
 			stats={
-				[1]="attack_damage_+%"
+				[1]="10% increased Attack Damage"
 			}
 		},
 		[59720]={
@@ -60264,7 +60204,7 @@ return {
 			},
 			skill=59720,
 			stats={
-				[1]="body_armour_evasion_rating_+%"
+				[1]="100% increased Evasion Rating from Equipped Body Armour"
 			}
 		},
 		[59740]={
@@ -60299,8 +60239,8 @@ return {
 			},
 			skill=59759,
 			stats={
-				[1]="chaos_damage_resistance_is_doubled",
-				[2]="base_maximum_chaos_damage_resistance_%"
+				[1]="+10% to Maximum Chaos Resistance",
+				[2]="Chaos Resistance is doubled"
 			}
 		},
 		[59767]={
@@ -60318,8 +60258,8 @@ return {
 			},
 			skill=59767,
 			stats={
-				[1]="attack_area_of_effect_+%",
-				[2]="armour_break_amount_+%"
+				[1]="Break 25% increased Armour",
+				[2]="16% increased Area of Effect for Attacks"
 			}
 		},
 		[59775]={
@@ -60336,7 +60276,7 @@ return {
 			},
 			skill=59775,
 			stats={
-				[1]="chaos_damage_+%"
+				[1]="7% increased Chaos Damage"
 			}
 		},
 		[59777]={
@@ -60356,7 +60296,7 @@ return {
 			},
 			skill=59777,
 			stats={
-				[1]="display_passive_attribute_text"
+				[1]="+5 to any Attribute"
 			}
 		},
 		[59779]={
@@ -60375,8 +60315,8 @@ return {
 			},
 			skill=59779,
 			stats={
-				[1]="base_physical_damage_reduction_rating",
-				[2]="base_evasion_rating"
+				[1]="+10 to Armour",
+				[2]="+8 to Evasion Rating"
 			}
 		},
 		[59785]={
@@ -60395,7 +60335,7 @@ return {
 			},
 			skill=59785,
 			stats={
-				[1]="display_passive_attribute_text"
+				[1]="+5 to any Attribute"
 			}
 		},
 		[59795]={
@@ -60412,7 +60352,7 @@ return {
 			},
 			skill=59795,
 			stats={
-				[1]="display_passive_attribute_text"
+				[1]="+5 to any Attribute"
 			}
 		},
 		[59822]={
@@ -60449,7 +60389,7 @@ return {
 			},
 			skill=59881,
 			stats={
-				[1]="display_passive_attribute_text"
+				[1]="+5 to any Attribute"
 			}
 		},
 		[59886]={
@@ -60466,7 +60406,7 @@ return {
 			},
 			skill=59886,
 			stats={
-				[1]="base_maximum_lightning_damage_resistance_%"
+				[1]="+1% to Maximum Lightning Resistance"
 			}
 		},
 		[59909]={
@@ -60483,7 +60423,7 @@ return {
 			},
 			skill=59909,
 			stats={
-				[1]="base_chance_to_not_consume_corpse_%"
+				[1]="5% chance to not destroy Corpses when Consuming Corpses"
 			}
 		},
 		[59913]={
@@ -60501,7 +60441,7 @@ return {
 			},
 			skill=59913,
 			stats={
-				[1]="number_of_additional_marks_allowed"
+				[1]="You can apply an additional Mark"
 			}
 		},
 		[59915]={
@@ -60520,7 +60460,7 @@ return {
 			},
 			skill=59915,
 			stats={
-				[1]="projectile_damage_+%"
+				[1]="10% increased Projectile Damage"
 			}
 		},
 		[60013]={
@@ -60538,7 +60478,7 @@ return {
 			},
 			skill=60013,
 			stats={
-				[1]="maximum_energy_shield_+%"
+				[1]="15% increased maximum Energy Shield"
 			}
 		},
 		[60034]={
@@ -60556,7 +60496,7 @@ return {
 			},
 			skill=60034,
 			stats={
-				[1]="attack_speed_+%_per_200_accuracy_rating"
+				[1]="1% increased Attack Speed per 250 Accuracy Rating"
 			}
 		},
 		[60064]={
@@ -60573,7 +60513,7 @@ return {
 			},
 			skill=60064,
 			stats={
-				[1]="physical_damage_+%"
+				[1]="10% increased Global Physical Damage"
 			}
 		},
 		[60083]={
@@ -60591,8 +60531,8 @@ return {
 			},
 			skill=60083,
 			stats={
-				[1]="hit_damage_pin_multiplier_+%",
-				[2]="movement_speed_+%_if_pinned_enemy_recently"
+				[1]="30% increased Pin Buildup",
+				[2]="5% increased Movement Speed if you've Pinned an Enemy Recently"
 			}
 		},
 		[60107]={
@@ -60609,7 +60549,7 @@ return {
 			},
 			skill=60107,
 			stats={
-				[1]="critical_strike_chance_+%"
+				[1]="10% increased Critical Hit Chance"
 			}
 		},
 		[60138]={
@@ -60626,9 +60566,8 @@ return {
 			},
 			skill=60138,
 			stats={
-				[1]="armour_break_amount_+%_vs_enemies_affected_by_ailments",
-				[2]="physical_damage_+%",
-				[3]="base_strength"
+				[1]="25% increased Global Physical Damage",
+				[2]="Break 30% increased Armour on enemies affected by Ailments"
 			}
 		},
 		[60173]={
@@ -60645,7 +60584,7 @@ return {
 			},
 			skill=60173,
 			stats={
-				[1]="one_handed_melee_accuracy_rating_+%"
+				[1]="12% increased Accuracy Rating with One Handed Melee Weapons"
 			}
 		},
 		[60230]={
@@ -60664,7 +60603,7 @@ return {
 			},
 			skill=60230,
 			stats={
-				[1]="elemental_damage_+%"
+				[1]="8% increased Elemental Damage"
 			}
 		},
 		[60241]={
@@ -60682,7 +60621,7 @@ return {
 			},
 			skill=60241,
 			stats={
-				[1]="base_chance_to_inflict_bleeding_%"
+				[1]="5% chance to inflict Bleeding on Hit"
 			}
 		},
 		[60269]={
@@ -60699,8 +60638,8 @@ return {
 			},
 			skill=60269,
 			stats={
-				[1]="spell_area_of_effect_+%",
-				[2]="spell_area_damage_+%"
+				[1]="10% reduced Spell Area Damage",
+				[2]="Spell Skills have 30% increased Area of Effect"
 			}
 		},
 		[60274]={
@@ -60718,7 +60657,7 @@ return {
 			},
 			skill=60274,
 			stats={
-				[1]="physical_damage_reduction_rating_+%"
+				[1]="15% increased Armour"
 			}
 		},
 		[60287]={
@@ -60736,7 +60675,7 @@ return {
 			},
 			skill=60287,
 			stats={
-				[1]="all_skill_gem_level_+"
+				[1]="+1 to Level of all Skills"
 			}
 		},
 		[60362]={
@@ -60753,7 +60692,7 @@ return {
 			},
 			skill=60362,
 			stats={
-				[1]="base_critical_strike_multiplier_+"
+				[1]="15% increased Critical Damage Bonus"
 			}
 		},
 		[60404]={
@@ -60770,8 +60709,8 @@ return {
 			},
 			skill=60404,
 			stats={
-				[1]="hit_damage_stun_multiplier_+%",
-				[2]="damage_with_hits_is_lucky_vs_heavy_stunned_enemies"
+				[1]="30% increased Stun Buildup",
+				[2]="Damage with Hits is Lucky against Heavy Stunned Enemies"
 			}
 		},
 		[60464]={
@@ -60789,8 +60728,8 @@ return {
 			},
 			skill=60464,
 			stats={
-				[1]="ailment_threshold_+%",
-				[2]="base_self_ignite_duration_-%"
+				[1]="25% reduced Ignite Duration on you",
+				[2]="40% increased Elemental Ailment Threshold"
 			}
 		},
 		[60480]={
@@ -60806,7 +60745,7 @@ return {
 			},
 			skill=60480,
 			stats={
-				[1]="herald_skills_mana_reservation_+%"
+				[1]="6% reduced Reservation of Herald Skills"
 			}
 		},
 		[60483]={
@@ -60823,7 +60762,7 @@ return {
 			},
 			skill=60483,
 			stats={
-				[1]="lightning_damage_+%"
+				[1]="12% increased Lightning Damage"
 			}
 		},
 		[60505]={
@@ -60844,7 +60783,7 @@ return {
 			},
 			skill=60505,
 			stats={
-				[1]="display_passive_attribute_text"
+				[1]="+5 to any Attribute"
 			}
 		},
 		[60515]={
@@ -60862,7 +60801,7 @@ return {
 			},
 			skill=60515,
 			stats={
-				[1]="cold_damage_+%"
+				[1]="12% increased Cold Damage"
 			}
 		},
 		[60560]={
@@ -60879,7 +60818,7 @@ return {
 			},
 			skill=60560,
 			stats={
-				[1]="damage_+%_vs_enemies_on_full_life"
+				[1]="20% increased Damage with Hits against Enemies that are on Full Life"
 			}
 		},
 		[60568]={
@@ -60897,7 +60836,7 @@ return {
 			},
 			skill=60568,
 			stats={
-				[1]="summon_totem_cast_speed_+%"
+				[1]="20% increased Totem Placement speed"
 			}
 		},
 		[60620]={
@@ -60914,7 +60853,6 @@ return {
 			},
 			skill=60620,
 			stats={
-				[1]="base_strength"
 			}
 		},
 		[60634]={
@@ -60933,7 +60871,7 @@ return {
 			},
 			skill=60634,
 			stats={
-				[1]="titan_expanded_main_inventory"
+				[1]="Carry a Chest which adds 20 Inventory Slots"
 			}
 		},
 		[60685]={
@@ -60952,7 +60890,7 @@ return {
 			},
 			skill=60685,
 			stats={
-				[1]="display_passive_attribute_text"
+				[1]="+5 to any Attribute"
 			}
 		},
 		[60692]={
@@ -60970,7 +60908,7 @@ return {
 			},
 			skill=60692,
 			stats={
-				[1]="elemental_damage_+%_if_enemy_ignited_recently"
+				[1]="30% increased Elemental Damage if you've Ignited an Enemy Recently"
 			}
 		},
 		[60735]={
@@ -61005,7 +60943,7 @@ return {
 			},
 			skill=60738,
 			stats={
-				[1]="flask_life_to_recover_+%"
+				[1]="10% increased Life Recovery from Flasks"
 			}
 		},
 		[60764]={
@@ -61023,7 +60961,7 @@ return {
 			},
 			skill=60764,
 			stats={
-				[1]="arrow_speed_additive_modifiers_also_apply_to_bow_damage"
+				[1]="Increases and Reductions to Projectile Speed also apply to Damage with Bows"
 			}
 		},
 		[60886]={
@@ -61040,7 +60978,7 @@ return {
 			},
 			skill=60886,
 			stats={
-				[1]="base_stun_recovery_+%"
+				[1]="20% increased Stun Recovery"
 			}
 		},
 		[60899]={
@@ -61057,7 +60995,7 @@ return {
 			},
 			skill=60899,
 			stats={
-				[1]="base_slow_potency_+%"
+				[1]="8% reduced Slowing Potency of Debuffs on You"
 			}
 		},
 		[61026]={
@@ -61075,8 +61013,8 @@ return {
 			},
 			skill=61026,
 			stats={
-				[1]="minion_elemental_resistance_%",
-				[2]="minion_maximum_all_elemental_resistances_%"
+				[1]="Minions have +20% to all Elemental Resistances",
+				[2]="Minions have +5% to all Maximum Elemental Resistances"
 			}
 		},
 		[61027]={
@@ -61094,8 +61032,8 @@ return {
 			},
 			skill=61027,
 			stats={
-				[1]="base_maximum_mana",
-				[2]="maximum_mana_+%"
+				[1]="+20 to maximum Mana",
+				[2]="5% increased maximum Mana"
 			}
 		},
 		[61042]={
@@ -61113,7 +61051,7 @@ return {
 			},
 			skill=61042,
 			stats={
-				[1]="display_passive_attribute_text"
+				[1]="+5 to any Attribute"
 			}
 		},
 		[61056]={
@@ -61130,7 +61068,7 @@ return {
 			},
 			skill=61056,
 			stats={
-				[1]="energy_generated_+%"
+				[1]="Meta Skills gain 8% increased Energy"
 			}
 		},
 		[61063]={
@@ -61147,7 +61085,7 @@ return {
 			},
 			skill=61063,
 			stats={
-				[1]="base_penetrate_elemental_resistances_%"
+				[1]="Damage Penetrates 4% of Enemy Elemental Resistances"
 			}
 		},
 		[61067]={
@@ -61164,7 +61102,7 @@ return {
 			},
 			skill=61067,
 			stats={
-				[1]="base_spell_critical_strike_multiplier_+"
+				[1]="15% increased Critical Spell Damage Bonus"
 			}
 		},
 		[61106]={
@@ -61181,7 +61119,7 @@ return {
 			},
 			skill=61106,
 			stats={
-				[1]="base_movement_velocity_+%"
+				[1]="2% increased Movement Speed"
 			}
 		},
 		[61112]={
@@ -61199,7 +61137,7 @@ return {
 			},
 			skill=61112,
 			stats={
-				[1]="spear_damage_+%"
+				[1]="25% increased Damage with Spears"
 			}
 		},
 		[61119]={
@@ -61217,7 +61155,7 @@ return {
 			},
 			skill=61119,
 			stats={
-				[1]="base_poison_duration_+%"
+				[1]="10% increased Poison Duration"
 			}
 		},
 		[61142]={
@@ -61234,7 +61172,7 @@ return {
 			},
 			skill=61142,
 			stats={
-				[1]="recover_%_life_per_endurance_charge_consumed"
+				[1]="Recover 2% of Life for each Endurance Charge consumed"
 			}
 		},
 		[61179]={
@@ -61251,7 +61189,7 @@ return {
 			},
 			skill=61179,
 			stats={
-				[1]="spell_critical_strike_chance_+%"
+				[1]="10% increased Critical Hit Chance for Spells"
 			}
 		},
 		[61196]={
@@ -61273,7 +61211,7 @@ return {
 			},
 			skill=61196,
 			stats={
-				[1]="display_passive_attribute_text"
+				[1]="+5 to any Attribute"
 			}
 		},
 		[61246]={
@@ -61290,8 +61228,8 @@ return {
 			},
 			skill=61246,
 			stats={
-				[1]="elemental_damage_+%",
-				[2]="hit_damage_freeze_multiplier_+%"
+				[1]="10% increased Freeze Buildup",
+				[2]="8% increased Elemental Damage"
 			}
 		},
 		[61267]={
@@ -61309,7 +61247,7 @@ return {
 			},
 			skill=61267,
 			stats={
-				[1]="max_demon_form_stacks"
+				[1]="Maximum 10 Demonflame"
 			}
 		},
 		[61281]={
@@ -61326,7 +61264,7 @@ return {
 			},
 			skill=61281,
 			stats={
-				[1]="damage_+%_with_one_handed_weapons"
+				[1]="10% increased Damage with One Handed Weapons"
 			}
 		},
 		[61312]={
@@ -61343,7 +61281,7 @@ return {
 			},
 			skill=61312,
 			stats={
-				[1]="display_passive_attribute_text"
+				[1]="+5 to any Attribute"
 			}
 		},
 		[61318]={
@@ -61360,7 +61298,7 @@ return {
 			},
 			skill=61318,
 			stats={
-				[1]="evasion_and_physical_damage_reduction_rating_+%"
+				[1]="16% increased Armour and Evasion Rating"
 			}
 		},
 		[61333]={
@@ -61377,7 +61315,7 @@ return {
 			},
 			skill=61333,
 			stats={
-				[1]="critical_strike_chance_+%"
+				[1]="10% increased Critical Hit Chance"
 			}
 		},
 		[61338]={
@@ -61394,8 +61332,7 @@ return {
 			},
 			skill=61338,
 			stats={
-				[1]="base_reduce_enemy_lightning_resistance_%",
-				[2]="base_dexterity"
+				[1]="Damage Penetrates 15% Lightning Resistance"
 			}
 		},
 		[61356]={
@@ -61412,7 +61349,7 @@ return {
 			},
 			skill=61356,
 			stats={
-				[1]="quiver_mod_effect_+%"
+				[1]="10% increased bonuses gained from Equipped Quiver"
 			}
 		},
 		[61396]={
@@ -61429,7 +61366,7 @@ return {
 			},
 			skill=61396,
 			stats={
-				[1]="evasion_and_physical_damage_reduction_rating_+%"
+				[1]="16% increased Armour and Evasion Rating"
 			}
 		},
 		[61403]={
@@ -61448,7 +61385,7 @@ return {
 			},
 			skill=61403,
 			stats={
-				[1]="display_passive_attribute_text"
+				[1]="+5 to any Attribute"
 			}
 		},
 		[61404]={
@@ -61465,8 +61402,8 @@ return {
 			},
 			skill=61404,
 			stats={
-				[1]="attack_damage_+%_for_4_seconds_on_cast",
-				[2]="cast_speed_+%_for_4_seconds_on_attack"
+				[1]="30% increased Attack Damage if you've Cast a Spell Recently",
+				[2]="10% increased Cast Speed if you've Attacked Recently"
 			}
 		},
 		[61409]={
@@ -61483,8 +61420,7 @@ return {
 			},
 			skill=61409,
 			stats={
-				[1]="base_strength",
-				[2]="maximum_mana_+%"
+				[1]="5% reduced maximum Mana"
 			}
 		},
 		[61419]={
@@ -61521,8 +61457,8 @@ return {
 			},
 			skill=61429,
 			stats={
-				[1]="attack_damage_+%",
-				[2]="spell_damage_+%"
+				[1]="8% increased Spell Damage",
+				[2]="8% increased Attack Damage"
 			}
 		},
 		[61438]={
@@ -61539,7 +61475,7 @@ return {
 			},
 			skill=61438,
 			stats={
-				[1]="display_passive_attribute_text"
+				[1]="+5 to any Attribute"
 			}
 		},
 		[61441]={
@@ -61556,7 +61492,7 @@ return {
 			},
 			skill=61441,
 			stats={
-				[1]="sword_attack_speed_+%"
+				[1]="3% increased Attack Speed with Swords"
 			}
 		},
 		[61444]={
@@ -61574,7 +61510,7 @@ return {
 			},
 			skill=61444,
 			stats={
-				[1]="support_anticipation_charge_gain_frequency_+%"
+				[1]="Skills Supported by Unleash have 25% increased Seal gain frequency"
 			}
 		},
 		[61461]={
@@ -61592,7 +61528,7 @@ return {
 			},
 			skill=61461,
 			stats={
-				[1]="base_projectile_speed_+%"
+				[1]="10% increased Projectile Speed"
 			}
 		},
 		[61472]={
@@ -61610,7 +61546,6 @@ return {
 			},
 			skill=61472,
 			stats={
-				[1]="base_strength"
 			}
 		},
 		[61487]={
@@ -61627,7 +61562,7 @@ return {
 			},
 			skill=61487,
 			stats={
-				[1]="damage_vs_enemies_on_low_life_+%"
+				[1]="30% increased Damage with Hits against Enemies that are on Low Life"
 			}
 		},
 		[61490]={
@@ -61646,7 +61581,7 @@ return {
 			},
 			skill=61490,
 			stats={
-				[1]="display_passive_attribute_text"
+				[1]="+5 to any Attribute"
 			}
 		},
 		[61493]={
@@ -61663,8 +61598,8 @@ return {
 			},
 			skill=61493,
 			stats={
-				[1]="stun_threshold_+_from_%_maximum_energy_shield",
-				[2]="additional_all_attributes"
+				[1]="+5 to all Attributes",
+				[2]="Gain 20% of maximum Energy Shield as additional Stun Threshold"
 			}
 		},
 		[61525]={
@@ -61698,7 +61633,7 @@ return {
 			},
 			skill=61534,
 			stats={
-				[1]="life_regeneration_rate_per_minute_%"
+				[1]="Regenerate 0.2% of Life per second"
 			}
 		},
 		[61601]={
@@ -61716,8 +61651,7 @@ return {
 			},
 			skill=61601,
 			stats={
-				[1]="critical_strike_chance_+%",
-				[2]="base_dexterity"
+				[1]="20% increased Critical Hit Chance"
 			}
 		},
 		[61632]={
@@ -61734,8 +61668,8 @@ return {
 			},
 			skill=61632,
 			stats={
-				[1]="quarterstaff_hit_damage_freeze_multiplier_+%",
-				[2]="quarterstaff_daze_build_up_+%"
+				[1]="20% increased Daze Buildup with Quarterstaves",
+				[2]="20% increased Freeze Buildup with Quarterstaves"
 			}
 		},
 		[61703]={
@@ -61752,7 +61686,7 @@ return {
 			},
 			skill=61703,
 			stats={
-				[1]="attack_damage_+%"
+				[1]="25% increased Attack Damage"
 			}
 		},
 		[61718]={
@@ -61770,7 +61704,7 @@ return {
 			},
 			skill=61718,
 			stats={
-				[1]="daze_build_up_+%"
+				[1]="15% increased Daze Buildup"
 			}
 		},
 		[61741]={
@@ -61788,8 +61722,8 @@ return {
 			},
 			skill=61741,
 			stats={
-				[1]="base_poison_duration_+%",
-				[2]="skill_effect_duration_+%"
+				[1]="10% increased Skill Effect Duration",
+				[2]="50% increased Poison Duration"
 			}
 		},
 		[61768]={
@@ -61805,7 +61739,7 @@ return {
 			},
 			skill=61768,
 			stats={
-				[1]="minion_cold_damage_resistance_%"
+				[1]="Minions have +20% to Cold Resistance"
 			}
 		},
 		[61796]={
@@ -61822,7 +61756,7 @@ return {
 			},
 			skill=61796,
 			stats={
-				[1]="armour_break_duration_+%"
+				[1]="20% increased Armour Break Duration"
 			}
 		},
 		[61800]={
@@ -61839,7 +61773,7 @@ return {
 			},
 			skill=61800,
 			stats={
-				[1]="critical_strike_multiplier_vs_enemies_on_full_life_+"
+				[1]="40% increased Critical Damage Bonus against Enemies that are on Full Life"
 			}
 		},
 		[61804]={
@@ -61857,7 +61791,7 @@ return {
 			},
 			skill=61804,
 			stats={
-				[1]="base_poison_effect_+%"
+				[1]="12% increased Magnitude of Poison you inflict"
 			}
 		},
 		[61834]={
@@ -61893,7 +61827,7 @@ return {
 			},
 			skill=61842,
 			stats={
-				[1]="minion_damage_+%"
+				[1]="Minions deal 12% increased Damage"
 			}
 		},
 		[61847]={
@@ -61910,7 +61844,7 @@ return {
 			},
 			skill=61847,
 			stats={
-				[1]="flail_critical_strike_chance_+%"
+				[1]="15% increased Critical Hit Chance with Flails"
 			}
 		},
 		[61897]={
@@ -61928,7 +61862,7 @@ return {
 			},
 			skill=61897,
 			stats={
-				[1]="evasion_and_physical_damage_reduction_rating_+%"
+				[1]="15% increased Armour and Evasion Rating"
 			}
 		},
 		[61921]={
@@ -61946,8 +61880,8 @@ return {
 			},
 			skill=61921,
 			stats={
-				[1]="base_reduce_enemy_cold_resistance_%",
-				[2]="base_reduce_enemy_lightning_resistance_%"
+				[1]="Damage Penetrates 8% Cold Resistance",
+				[2]="Damage Penetrates 15% Lightning Resistance"
 			}
 		},
 		[61923]={
@@ -61964,7 +61898,7 @@ return {
 			},
 			skill=61923,
 			stats={
-				[1]="mana_regeneration_rate_+%"
+				[1]="10% increased Mana Regeneration Rate"
 			}
 		},
 		[61927]={
@@ -61982,7 +61916,7 @@ return {
 			},
 			skill=61927,
 			stats={
-				[1]="jagged_ground_effect_+%"
+				[1]="15% increased Magnitude of Jagged Ground you create"
 			}
 		},
 		[61934]={
@@ -61999,7 +61933,7 @@ return {
 			},
 			skill=61934,
 			stats={
-				[1]="stun_threshold_+%"
+				[1]="12% increased Stun Threshold"
 			}
 		},
 		[61935]={
@@ -62016,7 +61950,7 @@ return {
 			},
 			skill=61935,
 			stats={
-				[1]="gain_x_rage_on_melee_hit"
+				[1]="Gain 1 Rage on Melee Hit"
 			}
 		},
 		[61938]={
@@ -62034,7 +61968,7 @@ return {
 			},
 			skill=61938,
 			stats={
-				[1]="jagged_ground_effect_+%"
+				[1]="15% increased Magnitude of Jagged Ground you create"
 			}
 		},
 		[61973]={
@@ -62053,7 +61987,7 @@ return {
 			},
 			skill=61973,
 			stats={
-				[1]="kill_enemy_on_hit_if_under_10%_life"
+				[1]="Culling Strike"
 			}
 		},
 		[61976]={
@@ -62071,7 +62005,7 @@ return {
 			},
 			skill=61976,
 			stats={
-				[1]="display_passive_attribute_text"
+				[1]="+5 to any Attribute"
 			}
 		},
 		[61985]={
@@ -62090,9 +62024,9 @@ return {
 			},
 			skill=61985,
 			stats={
-				[1]="can_apply_additional_chill",
-				[2]="stormweaver_chill_effect_+%_final",
-				[3]="elementalist_chill_maximum_magnitude_override"
+				[1]="Targets can be affected by two of your Chills at the same time",
+				[2]="Your Chills can Slow targets by up to a maximum of 35%",
+				[3]="25% less Magnitude of Chill you inflict"
 			}
 		},
 		[61991]={
@@ -62111,7 +62045,7 @@ return {
 			},
 			skill=61991,
 			stats={
-				[1]="deadeye_movement_speed_penalty_+%_final_while_performing_action"
+				[1]="30% less Movement Speed Penalty from using Skills while moving"
 			}
 		},
 		[62001]={
@@ -62128,7 +62062,7 @@ return {
 			},
 			skill=62001,
 			stats={
-				[1]="critical_strike_multiplier_with_dagger_+"
+				[1]="25% increased Critical Damage Bonus with Daggers"
 			}
 		},
 		[62034]={
@@ -62147,8 +62081,8 @@ return {
 			},
 			skill=62034,
 			stats={
-				[1]="additional_maximum_all_elemental_resistances_%",
-				[2]="base_resist_all_elements_%"
+				[1]="+1% to all Maximum Elemental Resistances",
+				[2]="+5% to all Elemental Resistances"
 			}
 		},
 		[62039]={
@@ -62166,7 +62100,7 @@ return {
 			},
 			skill=62039,
 			stats={
-				[1]="melee_damage_+%"
+				[1]="10% increased Melee Damage"
 			}
 		},
 		[62051]={
@@ -62183,7 +62117,7 @@ return {
 			},
 			skill=62051,
 			stats={
-				[1]="movement_speed_+%_if_enemy_killed_recently"
+				[1]="3% increased Movement Speed if you've Killed Recently"
 			}
 		},
 		[62122]={
@@ -62200,7 +62134,7 @@ return {
 			},
 			skill=62122,
 			stats={
-				[1]="base_damage_removed_from_mana_before_life_%"
+				[1]="4% of Damage is taken from Mana before Life"
 			}
 		},
 		[62153]={
@@ -62217,7 +62151,7 @@ return {
 			},
 			skill=62153,
 			stats={
-				[1]="base_spell_critical_strike_multiplier_+"
+				[1]="15% increased Critical Spell Damage Bonus"
 			}
 		},
 		[62159]={
@@ -62234,7 +62168,7 @@ return {
 			},
 			skill=62159,
 			stats={
-				[1]="damage_taken_goes_to_life_over_4_seconds_%"
+				[1]="3% of Damage taken Recouped as Life"
 			}
 		},
 		[62185]={
@@ -62251,8 +62185,8 @@ return {
 			},
 			skill=62185,
 			stats={
-				[1]="shock_duration_+%",
-				[2]="base_maximum_mana"
+				[1]="+20 to maximum Mana",
+				[2]="50% increased Shock Duration"
 			}
 		},
 		[62200]={
@@ -62269,7 +62203,7 @@ return {
 			},
 			skill=62200,
 			stats={
-				[1]="warcry_cooldown_speed_+%"
+				[1]="10% increased Warcry Cooldown Recovery Rate"
 			}
 		},
 		[62216]={
@@ -62286,7 +62220,7 @@ return {
 			},
 			skill=62216,
 			stats={
-				[1]="empowered_attack_damage_+%"
+				[1]="Empowered Attacks deal 16% increased Damage"
 			}
 		},
 		[62230]={
@@ -62304,8 +62238,8 @@ return {
 			},
 			skill=62230,
 			stats={
-				[1]="maximum_energy_shield_+%",
-				[2]="energy_shield_delay_-%"
+				[1]="60% increased maximum Energy Shield",
+				[2]="20% slower start of Energy Shield Recharge"
 			}
 		},
 		[62310]={
@@ -62323,8 +62257,8 @@ return {
 			},
 			skill=62310,
 			stats={
-				[1]="damage_+%_vs_burning_enemies",
-				[2]="ignite_chance_+%"
+				[1]="30% increased chance to Ignite",
+				[2]="30% increased Damage with Hits against Burning Enemies"
 			}
 		},
 		[62313]={
@@ -62341,7 +62275,7 @@ return {
 			},
 			skill=62313,
 			stats={
-				[1]="base_maximum_fire_damage_resistance_%"
+				[1]="+1% to Maximum Fire Resistance"
 			}
 		},
 		[62341]={
@@ -62359,7 +62293,7 @@ return {
 			},
 			skill=62341,
 			stats={
-				[1]="block_chance_+%"
+				[1]="5% increased Block chance"
 			}
 		},
 		[62350]={
@@ -62376,8 +62310,8 @@ return {
 			},
 			skill=62350,
 			stats={
-				[1]="attack_speed_+%",
-				[2]="flask_duration_+%"
+				[1]="5% increased Flask Effect Duration",
+				[2]="2% increased Attack Speed"
 			}
 		},
 		[62388]={
@@ -62395,7 +62329,7 @@ return {
 			},
 			skill=62388,
 			stats={
-				[1]="bleed_on_crit_%"
+				[1]="15% chance to inflict Bleeding on Critical Hit"
 			}
 		},
 		[62436]={
@@ -62412,7 +62346,7 @@ return {
 			},
 			skill=62436,
 			stats={
-				[1]="maximum_energy_shield_+%"
+				[1]="15% increased maximum Energy Shield"
 			}
 		},
 		[62438]={
@@ -62429,7 +62363,7 @@ return {
 			},
 			skill=62438,
 			stats={
-				[1]="flask_duration_+%"
+				[1]="10% increased Flask Effect Duration"
 			}
 		},
 		[62439]={
@@ -62446,7 +62380,7 @@ return {
 			},
 			skill=62439,
 			stats={
-				[1]="maximum_rage_+_while_wielding_axe"
+				[1]="+10 to Maximum Rage while wielding an Axe"
 			}
 		},
 		[62464]={
@@ -62463,7 +62397,7 @@ return {
 			},
 			skill=62464,
 			stats={
-				[1]="evasion_rating_+%"
+				[1]="15% increased Evasion Rating"
 			}
 		},
 		[62496]={
@@ -62480,7 +62414,7 @@ return {
 			},
 			skill=62496,
 			stats={
-				[1]="trap_damage_+%"
+				[1]="10% increased Trap Damage"
 			}
 		},
 		[62498]={
@@ -62499,7 +62433,7 @@ return {
 			},
 			skill=62498,
 			stats={
-				[1]="display_passive_attribute_text"
+				[1]="+5 to any Attribute"
 			}
 		},
 		[62510]={
@@ -62517,7 +62451,7 @@ return {
 			},
 			skill=62510,
 			stats={
-				[1]="elemental_damage_with_attack_skills_+%"
+				[1]="12% increased Elemental Damage with Attacks"
 			}
 		},
 		[62518]={
@@ -62534,7 +62468,7 @@ return {
 			},
 			skill=62518,
 			stats={
-				[1]="base_maximum_fire_damage_resistance_%"
+				[1]="+1% to Maximum Fire Resistance"
 			}
 		},
 		[62542]={
@@ -62552,7 +62486,7 @@ return {
 			},
 			skill=62542,
 			stats={
-				[1]="flask_charges_gained_+%"
+				[1]="10% increased Flask Charges gained"
 			}
 		},
 		[62603]={
@@ -62569,7 +62503,7 @@ return {
 			},
 			skill=62603,
 			stats={
-				[1]="base_reduce_enemy_fire_resistance_%"
+				[1]="Damage Penetrates 6% Fire Resistance"
 			}
 		},
 		[62609]={
@@ -62587,7 +62521,7 @@ return {
 			},
 			skill=62609,
 			stats={
-				[1]="totems_attack_speed_+%_per_active_totem"
+				[1]="Totems have 4% increased Attack Speed per Summoned Totem"
 			}
 		},
 		[62624]={
@@ -62604,8 +62538,8 @@ return {
 			},
 			skill=62624,
 			stats={
-				[1]="base_evasion_rating",
-				[2]="base_maximum_energy_shield"
+				[1]="+30 to Evasion Rating",
+				[2]="+15 to maximum Energy Shield"
 			}
 		},
 		[62640]={
@@ -62622,7 +62556,7 @@ return {
 			},
 			skill=62640,
 			stats={
-				[1]="attack_speed_+%"
+				[1]="3% increased Attack Speed"
 			}
 		},
 		[62677]={
@@ -62642,7 +62576,7 @@ return {
 			},
 			skill=62677,
 			stats={
-				[1]="display_passive_attribute_text"
+				[1]="+5 to any Attribute"
 			}
 		},
 		[62732]={
@@ -62660,8 +62594,8 @@ return {
 			},
 			skill=62732,
 			stats={
-				[1]="stun_threshold_+%",
-				[2]="life_regeneration_rate_+%_while_moving"
+				[1]="25% increased Stun Threshold",
+				[2]="20% increased Life Regeneration Rate while moving"
 			}
 		},
 		[62757]={
@@ -62678,7 +62612,7 @@ return {
 			},
 			skill=62757,
 			stats={
-				[1]="hit_damage_stun_multiplier_+%"
+				[1]="15% increased Stun Buildup"
 			}
 		},
 		[62803]={
@@ -62696,7 +62630,7 @@ return {
 			},
 			skill=62803,
 			stats={
-				[1]="charm_effect_+%"
+				[1]="Charms applied to you have 25% increased Effect"
 			}
 		},
 		[62841]={
@@ -62714,8 +62648,8 @@ return {
 			},
 			skill=62841,
 			stats={
-				[1]="evasion_rating_+%",
-				[2]="maximum_energy_shield_+%"
+				[1]="12% increased Evasion Rating",
+				[2]="12% increased maximum Energy Shield"
 			}
 		},
 		[62844]={
@@ -62732,7 +62666,7 @@ return {
 			},
 			skill=62844,
 			stats={
-				[1]="base_reduce_enemy_cold_resistance_%"
+				[1]="Damage Penetrates 6% Cold Resistance"
 			}
 		},
 		[62887]={
@@ -62749,8 +62683,8 @@ return {
 			},
 			skill=62887,
 			stats={
-				[1]="minion_elemental_resistance_%",
-				[2]="minion_maximum_all_elemental_resistances_%"
+				[1]="Minions have +22% to all Elemental Resistances",
+				[2]="Minions have +3% to all Maximum Elemental Resistances"
 			}
 		},
 		[62914]={
@@ -62768,7 +62702,7 @@ return {
 			},
 			skill=62914,
 			stats={
-				[1]="cold_damage_+%"
+				[1]="12% increased Cold Damage"
 			}
 		},
 		[62936]={
@@ -62785,7 +62719,7 @@ return {
 			},
 			skill=62936,
 			stats={
-				[1]="base_damage_removed_from_mana_before_life_%"
+				[1]="4% of Damage is taken from Mana before Life"
 			}
 		},
 		[62978]={
@@ -62803,7 +62737,7 @@ return {
 			},
 			skill=62978,
 			stats={
-				[1]="base_skill_area_of_effect_+%"
+				[1]="6% increased Area of Effect"
 			}
 		},
 		[62984]={
@@ -62821,8 +62755,8 @@ return {
 			},
 			skill=62984,
 			stats={
-				[1]="evasion_rating_+%",
-				[2]="maximum_energy_shield_+%"
+				[1]="24% increased Evasion Rating",
+				[2]="24% increased maximum Energy Shield"
 			}
 		},
 		[62986]={
@@ -62839,7 +62773,7 @@ return {
 			},
 			skill=62986,
 			stats={
-				[1]="one_handed_melee_accuracy_rating_+%"
+				[1]="12% increased Accuracy Rating with One Handed Melee Weapons"
 			}
 		},
 		[62998]={
@@ -62856,7 +62790,7 @@ return {
 			},
 			skill=62998,
 			stats={
-				[1]="hit_damage_electrocute_multiplier_+%"
+				[1]="15% increased Electrocute Buildup"
 			}
 		},
 		[63002]={
@@ -62874,7 +62808,7 @@ return {
 			},
 			skill=63002,
 			stats={
-				[1]="buff_time_passed_+%"
+				[1]="Buffs on you expire 10% slower"
 			}
 		},
 		[63021]={
@@ -62892,7 +62826,7 @@ return {
 			},
 			skill=63021,
 			stats={
-				[1]="fire_damage_+%"
+				[1]="12% increased Fire Damage"
 			}
 		},
 		[63037]={
@@ -62909,7 +62843,7 @@ return {
 			},
 			skill=63037,
 			stats={
-				[1]="hit_damage_+%_vs_ignited_enemies"
+				[1]="30% increased Damage with Hits against Ignited Enemies"
 			}
 		},
 		[63064]={
@@ -62927,8 +62861,8 @@ return {
 			},
 			skill=63064,
 			stats={
-				[1]="energy_shield_delay_-%",
-				[2]="stun_threshold_+%_when_on_full_life"
+				[1]="30% faster start of Energy Shield Recharge",
+				[2]="30% increased Stun Threshold while on Full Life"
 			}
 		},
 		[63074]={
@@ -62945,7 +62879,7 @@ return {
 			},
 			skill=63074,
 			stats={
-				[1]="chaos_skill_gem_level_+"
+				[1]="+1 to Level of all Chaos Skills"
 			}
 		},
 		[63114]={
@@ -62965,7 +62899,7 @@ return {
 			},
 			skill=63114,
 			stats={
-				[1]="display_passive_attribute_text"
+				[1]="+5 to any Attribute"
 			}
 		},
 		[63132]={
@@ -63000,7 +62934,7 @@ return {
 			},
 			skill=63182,
 			stats={
-				[1]="minion_maximum_life_+%"
+				[1]="Minions have 10% increased maximum Life"
 			}
 		},
 		[63209]={
@@ -63018,7 +62952,7 @@ return {
 			},
 			skill=63209,
 			stats={
-				[1]="life_regeneration_rate_per_minute_%"
+				[1]="Regenerate 0.2% of Life per second"
 			}
 		},
 		[63236]={
@@ -63036,7 +62970,7 @@ return {
 			},
 			skill=63236,
 			stats={
-				[1]="ascendancy_energy_generated_+%_final"
+				[1]="Meta Skills gain 35% more Energy"
 			}
 		},
 		[63255]={
@@ -63053,8 +62987,8 @@ return {
 			},
 			skill=63255,
 			stats={
-				[1]="evasion_rating_+%_if_consumed_frenzy_charge_recently",
-				[2]="max_frenzy_charges"
+				[1]="+1 to Maximum Frenzy Charges",
+				[2]="50% increased Evasion Rating if you've consumed a Frenzy Charge Recently"
 			}
 		},
 		[63267]={
@@ -63071,7 +63005,7 @@ return {
 			},
 			skill=63267,
 			stats={
-				[1]="damage_while_dual_wielding_+%"
+				[1]="12% increased Attack Damage while Dual Wielding"
 			}
 		},
 		[63393]={
@@ -63088,7 +63022,7 @@ return {
 			},
 			skill=63393,
 			stats={
-				[1]="stun_threshold_+%"
+				[1]="12% increased Stun Threshold"
 			}
 		},
 		[63431]={
@@ -63105,8 +63039,8 @@ return {
 			},
 			skill=63431,
 			stats={
-				[1]="base_poison_effect_+%",
-				[2]="recover_%_maximum_life_on_killing_poisoned_enemy"
+				[1]="30% increased Magnitude of Poison you inflict",
+				[2]="Recover 2% of Life on Killing a Poisoned Enemy"
 			}
 		},
 		[63445]={
@@ -63123,7 +63057,7 @@ return {
 			},
 			skill=63445,
 			stats={
-				[1]="attack_speed_+%"
+				[1]="3% increased Attack Speed"
 			}
 		},
 		[63451]={
@@ -63142,8 +63076,8 @@ return {
 			},
 			skill=63451,
 			stats={
-				[1]="hit_damage_stun_multiplier_+%",
-				[2]="gain_endurance_charge_on_heavy_stunning_rare_or_unique_enemy"
+				[1]="30% increased Stun Buildup",
+				[2]="Gain an Endurance Charge when you Heavy Stun a Rare or Unique Enemy"
 			}
 		},
 		[63469]={
@@ -63161,7 +63095,7 @@ return {
 			},
 			skill=63469,
 			stats={
-				[1]="mana_regeneration_rate_+%"
+				[1]="10% increased Mana Regeneration Rate"
 			}
 		},
 		[63470]={
@@ -63178,7 +63112,7 @@ return {
 			},
 			skill=63470,
 			stats={
-				[1]="base_skill_cost_life_instead_of_mana_%"
+				[1]="6% of Skill Mana Costs Converted to Life Costs"
 			}
 		},
 		[63484]={
@@ -63196,7 +63130,7 @@ return {
 			},
 			skill=63484,
 			stats={
-				[1]="maximum_mana_+%"
+				[1]="4% increased maximum Mana"
 			}
 		},
 		[63517]={
@@ -63213,7 +63147,7 @@ return {
 			},
 			skill=63517,
 			stats={
-				[1]="flask_mana_to_recover_+%"
+				[1]="10% increased Mana Recovery from Flasks"
 			}
 		},
 		[63525]={
@@ -63230,8 +63164,8 @@ return {
 			},
 			skill=63525,
 			stats={
-				[1]="accuracy_rating_+%",
-				[2]="attack_critical_strike_chance_+%"
+				[1]="8% increased Critical Hit Chance for Attacks",
+				[2]="6% increased Accuracy Rating"
 			}
 		},
 		[63526]={
@@ -63251,7 +63185,7 @@ return {
 			},
 			skill=63526,
 			stats={
-				[1]="display_passive_attribute_text"
+				[1]="+5 to any Attribute"
 			}
 		},
 		[63545]={
@@ -63269,7 +63203,7 @@ return {
 			},
 			skill=63545,
 			stats={
-				[1]="minion_damage_+%"
+				[1]="Minions deal 10% increased Damage"
 			}
 		},
 		[63566]={
@@ -63288,7 +63222,7 @@ return {
 			},
 			skill=63566,
 			stats={
-				[1]="display_passive_attribute_text"
+				[1]="+5 to any Attribute"
 			}
 		},
 		[63585]={
@@ -63305,8 +63239,8 @@ return {
 			},
 			skill=63585,
 			stats={
-				[1]="hit_damage_electrocute_multiplier_+%_vs_shocked_enemies",
-				[2]="shock_chance_+%_vs_electrocuted_enemies"
+				[1]="50% increased Electrocute Buildup against Shocked Enemies",
+				[2]="50% increased Shock Chance against Electrocuted Enemies"
 			}
 		},
 		[63600]={
@@ -63323,7 +63257,7 @@ return {
 			},
 			skill=63600,
 			stats={
-				[1]="hit_damage_electrocute_multiplier_+%"
+				[1]="15% increased Electrocute Buildup"
 			}
 		},
 		[63659]={
@@ -63341,7 +63275,7 @@ return {
 			},
 			skill=63659,
 			stats={
-				[1]="trap_critical_strike_chance_+%"
+				[1]="25% increased Critical Hit Chance with Traps"
 			}
 		},
 		[63713]={
@@ -63360,7 +63294,7 @@ return {
 			},
 			skill=63713,
 			stats={
-				[1]="critical_strikes_ignore_positive_elemental_resistances"
+				[1]="Critical Hits ignore non-negative Enemy Monster Elemental Resistances"
 			}
 		},
 		[63731]={
@@ -63377,7 +63311,7 @@ return {
 			},
 			skill=63731,
 			stats={
-				[1]="attack_damage_+%_vs_rare_or_unique_enemy"
+				[1]="16% increased Attack Damage against Rare or Unique Enemies"
 			}
 		},
 		[63732]={
@@ -63394,7 +63328,7 @@ return {
 			},
 			skill=63732,
 			stats={
-				[1]="damage_vs_enemies_on_low_life_+%"
+				[1]="30% increased Damage with Hits against Enemies that are on Low Life"
 			}
 		},
 		[63759]={
@@ -63412,8 +63346,8 @@ return {
 			},
 			skill=63759,
 			stats={
-				[1]="number_of_additional_poison_stacks",
-				[2]="base_poison_effect_+%"
+				[1]="Targets can be affected by +1 of your Poisons at the same time",
+				[2]="20% reduced Magnitude of Poison you inflict"
 			}
 		},
 		[63790]={
@@ -63430,7 +63364,7 @@ return {
 			},
 			skill=63790,
 			stats={
-				[1]="melee_damage_+%_vs_immobilised_enemies"
+				[1]="20% increased Melee Damage against Immobilised Enemies"
 			}
 		},
 		[63813]={
@@ -63447,7 +63381,7 @@ return {
 			},
 			skill=63813,
 			stats={
-				[1]="warcry_speed_+%"
+				[1]="16% increased Warcry Speed"
 			}
 		},
 		[63814]={
@@ -63464,7 +63398,7 @@ return {
 			},
 			skill=63814,
 			stats={
-				[1]="base_chance_to_inflict_bleeding_%"
+				[1]="5% chance to inflict Bleeding on Hit"
 			}
 		},
 		[63830]={
@@ -63482,7 +63416,7 @@ return {
 			},
 			skill=63830,
 			stats={
-				[1]="marked_enemy_damage_taken_+%"
+				[1]="Enemies you Mark take 10% increased Damage"
 			}
 		},
 		[63863]={
@@ -63500,7 +63434,7 @@ return {
 			},
 			skill=63863,
 			stats={
-				[1]="lightning_damage_+%"
+				[1]="12% increased Lightning Damage"
 			}
 		},
 		[63888]={
@@ -63520,7 +63454,7 @@ return {
 			},
 			skill=63888,
 			stats={
-				[1]="display_passive_attribute_text"
+				[1]="+5 to any Attribute"
 			}
 		},
 		[63891]={
@@ -63537,7 +63471,7 @@ return {
 			},
 			skill=63891,
 			stats={
-				[1]="chaos_damage_+%"
+				[1]="7% increased Chaos Damage"
 			}
 		},
 		[63894]={
@@ -63555,7 +63489,7 @@ return {
 			},
 			skill=63894,
 			stats={
-				[1]="spell_damage_+%"
+				[1]="12% increased Spell Damage"
 			}
 		},
 		[63926]={
@@ -63571,7 +63505,7 @@ return {
 			},
 			skill=63926,
 			stats={
-				[1]="minion_lightning_damage_resistance_%"
+				[1]="Minions have +20% to Lightning Resistance"
 			}
 		},
 		[63979]={
@@ -63588,7 +63522,7 @@ return {
 			},
 			skill=63979,
 			stats={
-				[1]="warcry_cooldown_speed_+%"
+				[1]="10% increased Warcry Cooldown Recovery Rate"
 			}
 		},
 		[63981]={
@@ -63606,8 +63540,8 @@ return {
 			},
 			skill=63981,
 			stats={
-				[1]="stun_threshold_+%_when_not_stunned_recently",
-				[2]="base_stun_recovery_+%"
+				[1]="30% increased Stun Recovery",
+				[2]="30% increased Stun Threshold if you haven't been Stunned Recently"
 			}
 		},
 		[64020]={
@@ -63624,7 +63558,7 @@ return {
 			},
 			skill=64020,
 			stats={
-				[1]="spell_damage_+%"
+				[1]="10% increased Spell Damage"
 			}
 		},
 		[64031]={
@@ -63643,7 +63577,6 @@ return {
 			},
 			skill=64031,
 			stats={
-				[1]="gain_unbound_ailment_stacks"
 			}
 		},
 		[64046]={
@@ -63661,8 +63594,8 @@ return {
 			},
 			skill=64046,
 			stats={
-				[1]="lightning_damage_+%",
-				[2]="shock_chance_+%"
+				[1]="18% increased Lightning Damage",
+				[2]="30% increased chance to Shock"
 			}
 		},
 		[64064]={
@@ -63680,7 +63613,7 @@ return {
 			},
 			skill=64064,
 			stats={
-				[1]="accuracy_rating_+%"
+				[1]="8% increased Accuracy Rating"
 			}
 		},
 		[64117]={
@@ -63698,7 +63631,7 @@ return {
 			},
 			skill=64117,
 			stats={
-				[1]="warcry_speed_+%"
+				[1]="20% increased Warcry Speed"
 			}
 		},
 		[64119]={
@@ -63715,7 +63648,7 @@ return {
 			},
 			skill=64119,
 			stats={
-				[1]="reload_speed_+%"
+				[1]="40% increased Crossbow Reload Speed"
 			}
 		},
 		[64140]={
@@ -63733,7 +63666,7 @@ return {
 			},
 			skill=64140,
 			stats={
-				[1]="elemental_damage_with_attack_skills_+%"
+				[1]="12% increased Elemental Damage with Attacks"
 			}
 		},
 		[64192]={
@@ -63750,7 +63683,7 @@ return {
 			},
 			skill=64192,
 			stats={
-				[1]="stun_threshold_+%"
+				[1]="12% increased Stun Threshold"
 			}
 		},
 		[64213]={
@@ -63767,8 +63700,8 @@ return {
 			},
 			skill=64213,
 			stats={
-				[1]="elemental_damage_+%",
-				[2]="hit_damage_freeze_multiplier_+%"
+				[1]="10% increased Freeze Buildup",
+				[2]="8% increased Elemental Damage"
 			}
 		},
 		[64240]={
@@ -63785,8 +63718,8 @@ return {
 			},
 			skill=64240,
 			stats={
-				[1]="physical_damage_+%",
-				[2]="attack_and_cast_speed_+%"
+				[1]="25% increased Global Physical Damage",
+				[2]="5% increased Attack and Cast Speed"
 			}
 		},
 		[64284]={
@@ -63804,7 +63737,7 @@ return {
 			},
 			skill=64284,
 			stats={
-				[1]="melee_damage_+%"
+				[1]="8% increased Melee Damage"
 			}
 		},
 		[64295]={
@@ -63821,7 +63754,7 @@ return {
 			},
 			skill=64295,
 			stats={
-				[1]="trap_critical_strike_chance_+%"
+				[1]="10% increased Critical Hit Chance with Traps"
 			}
 		},
 		[64299]={
@@ -63839,7 +63772,7 @@ return {
 			},
 			skill=64299,
 			stats={
-				[1]="aura_effect_+%"
+				[1]="20% increased Effect of Auras from your Skills"
 			}
 		},
 		[64312]={
@@ -63857,7 +63790,7 @@ return {
 			},
 			skill=64312,
 			stats={
-				[1]="damage_+%_with_two_handed_weapons"
+				[1]="12% increased Damage with Two Handed Weapons"
 			}
 		},
 		[64318]={
@@ -63875,7 +63808,7 @@ return {
 			},
 			skill=64318,
 			stats={
-				[1]="base_penetrate_elemental_resistances_%"
+				[1]="Damage Penetrates 4% of Enemy Elemental Resistances"
 			}
 		},
 		[64325]={
@@ -63892,7 +63825,7 @@ return {
 			},
 			skill=64325,
 			stats={
-				[1]="base_poison_effect_+%"
+				[1]="10% increased Magnitude of Poison you inflict"
 			}
 		},
 		[64327]={
@@ -63910,8 +63843,8 @@ return {
 			},
 			skill=64327,
 			stats={
-				[1]="block_chance_+%",
-				[2]="heavy_stun_poise_decay_rate_+%"
+				[1]="12% increased Block chance",
+				[2]="Stagger empties 50% faster while your Shield is lowered"
 			}
 		},
 		[64352]={
@@ -63928,7 +63861,7 @@ return {
 			},
 			skill=64352,
 			stats={
-				[1]="lightning_damage_+%"
+				[1]="10% increased Lightning Damage"
 			}
 		},
 		[64357]={
@@ -63945,8 +63878,8 @@ return {
 			},
 			skill=64357,
 			stats={
-				[1]="physical_damage_reduction_rating_+%",
-				[2]="maximum_energy_shield_+%"
+				[1]="12% increased Armour",
+				[2]="12% increased maximum Energy Shield"
 			}
 		},
 		[64370]={
@@ -63963,7 +63896,7 @@ return {
 			},
 			skill=64370,
 			stats={
-				[1]="display_passive_attribute_text"
+				[1]="+5 to any Attribute"
 			}
 		},
 		[64379]={
@@ -63981,7 +63914,7 @@ return {
 			},
 			skill=64379,
 			stats={
-				[1]="spell_damage_+%"
+				[1]="12% increased Spell Damage"
 			}
 		},
 		[64399]={
@@ -63998,7 +63931,7 @@ return {
 			},
 			skill=64399,
 			stats={
-				[1]="attack_critical_strike_multiplier_+"
+				[1]="15% increased Critical Damage Bonus for Attack Damage"
 			}
 		},
 		[64405]={
@@ -64015,7 +63948,7 @@ return {
 			},
 			skill=64405,
 			stats={
-				[1]="totem_damage_+%"
+				[1]="15% increased Totem Damage"
 			}
 		},
 		[64443]={
@@ -64033,8 +63966,8 @@ return {
 			},
 			skill=64443,
 			stats={
-				[1]="attack_area_damage_+%",
-				[2]="hit_damage_stun_multiplier_+%"
+				[1]="20% increased Stun Buildup",
+				[2]="25% increased Attack Area Damage"
 			}
 		},
 		[64462]={
@@ -64053,7 +63986,7 @@ return {
 			},
 			skill=64462,
 			stats={
-				[1]="base_mana_leech_amount_+%"
+				[1]="10% increased amount of Mana Leeched"
 			}
 		},
 		[64471]={
@@ -64073,7 +64006,7 @@ return {
 			},
 			skill=64471,
 			stats={
-				[1]="display_passive_attribute_text"
+				[1]="+5 to any Attribute"
 			}
 		},
 		[64474]={
@@ -64090,7 +64023,7 @@ return {
 			},
 			skill=64474,
 			stats={
-				[1]="energy_shield_delay_-%"
+				[1]="15% faster start of Energy Shield Recharge"
 			}
 		},
 		[64492]={
@@ -64107,7 +64040,7 @@ return {
 			},
 			skill=64492,
 			stats={
-				[1]="one_handed_melee_attack_speed_+%"
+				[1]="3% increased Attack Speed with One Handed Melee Weapons"
 			}
 		},
 		[64543]={
@@ -64124,10 +64057,10 @@ return {
 			},
 			skill=64543,
 			stats={
-				[1]="shock_effect_+%",
-				[2]="chill_effect_+%",
-				[3]="shock_duration_+%",
-				[4]="chill_duration_+%"
+				[1]="40% increased Chill Duration on Enemies",
+				[2]="40% increased Shock Duration",
+				[3]="25% increased Magnitude of Chill you inflict",
+				[4]="25% increased Magnitude of Shock you inflict"
 			}
 		},
 		[64637]={
@@ -64144,7 +64077,7 @@ return {
 			},
 			skill=64637,
 			stats={
-				[1]="base_slow_potency_+%"
+				[1]="8% reduced Slowing Potency of Debuffs on You"
 			}
 		},
 		[64643]={
@@ -64162,7 +64095,7 @@ return {
 			},
 			skill=64643,
 			stats={
-				[1]="power_charge_duration_+%"
+				[1]="20% increased Power Charge Duration"
 			}
 		},
 		[64665]={
@@ -64179,8 +64112,8 @@ return {
 			},
 			skill=64665,
 			stats={
-				[1]="attack_damage_+%",
-				[2]="accuracy_rating_+%"
+				[1]="6% increased Attack Damage",
+				[2]="5% increased Accuracy Rating"
 			}
 		},
 		[64700]={
@@ -64197,8 +64130,8 @@ return {
 			},
 			skill=64700,
 			stats={
-				[1]="quarterstaff_hit_damage_freeze_multiplier_+%",
-				[2]="quarterstaff_daze_build_up_+%"
+				[1]="20% increased Daze Buildup with Quarterstaves",
+				[2]="20% increased Freeze Buildup with Quarterstaves"
 			}
 		},
 		[64724]={
@@ -64215,7 +64148,7 @@ return {
 			},
 			skill=64724,
 			stats={
-				[1]="ignite_chance_+%"
+				[1]="15% increased chance to Ignite"
 			}
 		},
 		[64789]={
@@ -64233,7 +64166,7 @@ return {
 			},
 			skill=64789,
 			stats={
-				[1]="maximum_mana_+%"
+				[1]="4% increased maximum Mana"
 			}
 		},
 		[64851]={
@@ -64251,8 +64184,8 @@ return {
 			},
 			skill=64851,
 			stats={
-				[1]="block_chance_+%",
-				[2]="shield_armour_+%"
+				[1]="12% increased Block chance",
+				[2]="40% increased Defences from Equipped Shield"
 			}
 		},
 		[64870]={
@@ -64269,7 +64202,7 @@ return {
 			},
 			skill=64870,
 			stats={
-				[1]="physical_damage_reduction_rating_+%"
+				[1]="15% increased Armour"
 			}
 		},
 		[64927]={
@@ -64288,7 +64221,7 @@ return {
 			},
 			skill=64927,
 			stats={
-				[1]="recover_%_maximum_life_on_kill"
+				[1]="Recover 1% of Life on Kill"
 			}
 		},
 		[64939]={
@@ -64305,7 +64238,7 @@ return {
 			},
 			skill=64939,
 			stats={
-				[1]="damage_+%_with_two_handed_weapons"
+				[1]="12% increased Damage with Two Handed Weapons"
 			}
 		},
 		[64995]={
@@ -64322,7 +64255,7 @@ return {
 			},
 			skill=64995,
 			stats={
-				[1]="damage_vs_enemies_on_low_life_+%"
+				[1]="30% increased Damage with Hits against Enemies that are on Low Life"
 			}
 		},
 		[65009]={
@@ -64344,7 +64277,7 @@ return {
 			},
 			skill=65009,
 			stats={
-				[1]="display_passive_attribute_text"
+				[1]="+5 to any Attribute"
 			}
 		},
 		[65016]={
@@ -64361,7 +64294,7 @@ return {
 			},
 			skill=65016,
 			stats={
-				[1]="damage_+%_vs_burning_enemies"
+				[1]="35% increased Damage with Hits against Burning Enemies"
 			}
 		},
 		[65023]={
@@ -64378,7 +64311,7 @@ return {
 			},
 			skill=65023,
 			stats={
-				[1]="defend_with_%_armour_against_attacks_from_distance_greater_than_6m"
+				[1]="Defend with 150% of Armour against Attacks from further than 6m"
 			}
 		},
 		[65091]={
@@ -64396,7 +64329,7 @@ return {
 			},
 			skill=65091,
 			stats={
-				[1]="evasion_rating_+%"
+				[1]="15% increased Evasion Rating"
 			}
 		},
 		[65160]={
@@ -64414,9 +64347,9 @@ return {
 			},
 			skill=65160,
 			stats={
-				[1]="hit_damage_stun_multiplier_+%",
-				[2]="stun_threshold_+%",
-				[3]="strength_+%"
+				[1]="30% increased Stun Buildup",
+				[2]="5% increased Strength",
+				[3]="30% increased Stun Threshold"
 			}
 		},
 		[65173]={
@@ -64434,8 +64367,8 @@ return {
 			},
 			skill=65173,
 			stats={
-				[1]="master_of_elements_evasion_rating_+%_final",
-				[2]="evasion_rating_also_reduces_physical_damage"
+				[1]="Evasion Rating also grants Physical Damage reduction",
+				[2]="40% less Evasion Rating"
 			}
 		},
 		[65176]={
@@ -64452,7 +64385,7 @@ return {
 			},
 			skill=65176,
 			stats={
-				[1]="projectile_damage_+%"
+				[1]="10% increased Projectile Damage"
 			}
 		},
 		[65189]={
@@ -64469,7 +64402,7 @@ return {
 			},
 			skill=65189,
 			stats={
-				[1]="attack_damage_+%"
+				[1]="10% increased Attack Damage"
 			}
 		},
 		[65193]={
@@ -64487,8 +64420,7 @@ return {
 			},
 			skill=65193,
 			stats={
-				[1]="melee_attack_speed_+%",
-				[2]="base_dexterity"
+				[1]="8% increased Melee Attack Speed"
 			}
 		},
 		[65204]={
@@ -64505,7 +64437,7 @@ return {
 			},
 			skill=65204,
 			stats={
-				[1]="max_power_charges"
+				[1]="+2 to Maximum Power Charges"
 			}
 		},
 		[65207]={
@@ -64522,7 +64454,7 @@ return {
 			},
 			skill=65207,
 			stats={
-				[1]="evasion_rating_+%"
+				[1]="15% increased Evasion Rating"
 			}
 		},
 		[65212]={
@@ -64540,7 +64472,7 @@ return {
 			},
 			skill=65212,
 			stats={
-				[1]="base_slow_potency_+%"
+				[1]="8% reduced Slowing Potency of Debuffs on You"
 			}
 		},
 		[65248]={
@@ -64557,7 +64489,7 @@ return {
 			},
 			skill=65248,
 			stats={
-				[1]="ignite_shock_chill_duration_+%"
+				[1]="10% increased Duration of Ignite, Shock and Chill on Enemies"
 			}
 		},
 		[65265]={
@@ -64576,8 +64508,8 @@ return {
 			},
 			skill=65265,
 			stats={
-				[1]="block_chance_+%",
-				[2]="mana_gained_on_block"
+				[1]="12% increased Block chance",
+				[2]="10 Mana gained when you Block"
 			}
 		},
 		[65287]={
@@ -64594,7 +64526,7 @@ return {
 			},
 			skill=65287,
 			stats={
-				[1]="totem_damage_+%"
+				[1]="16% increased Totem Damage"
 			}
 		},
 		[65310]={
@@ -64611,7 +64543,7 @@ return {
 			},
 			skill=65310,
 			stats={
-				[1]="spell_skills_fire_2_additional_projectiles_final_chance_%"
+				[1]="6% chance for Spell Skills to fire 2 additional Projectiles"
 			}
 		},
 		[65322]={
@@ -64630,7 +64562,7 @@ return {
 			},
 			skill=65322,
 			stats={
-				[1]="base_chance_to_inflict_bleeding_%"
+				[1]="5% chance to inflict Bleeding on Hit"
 			}
 		},
 		[65328]={
@@ -64647,7 +64579,7 @@ return {
 			},
 			skill=65328,
 			stats={
-				[1]="minion_damage_+%"
+				[1]="Minions deal 10% increased Damage"
 			}
 		},
 		[65413]={
@@ -64665,7 +64597,7 @@ return {
 			},
 			skill=65413,
 			stats={
-				[1]="spell_critical_strike_chance_+%"
+				[1]="12% increased Critical Hit Chance for Spells"
 			}
 		},
 		[65424]={
@@ -64682,7 +64614,7 @@ return {
 			},
 			skill=65424,
 			stats={
-				[1]="damage_while_dual_wielding_+%"
+				[1]="12% increased Attack Damage while Dual Wielding"
 			}
 		},
 		[65437]={
@@ -64699,7 +64631,7 @@ return {
 			},
 			skill=65437,
 			stats={
-				[1]="energy_shield_delay_-%"
+				[1]="15% faster start of Energy Shield Recharge"
 			}
 		},
 		[65468]={
@@ -64717,212 +64649,213 @@ return {
 			},
 			skill=65468,
 			stats={
-				[1]="grenade_skill_%_chance_to_explode_twice"
+				[1]="Grenades have 15% chance to activate a second time"
 			}
 		}
 	},
+	pob=1,
 	sprites={
 		["line"]= {
-        [0.3835] = {
-            ["filename"]= "line-3.png",
-            ["w"]= 368,
-            ["h"]= 1140,
-            ["coords"]= {
-                ["LineConnectorActive"]= {
-                    ["x"]= 4,
-                    ["y"]= 5,
-                    ["w"]= 360,
-                    ["h"]= 12
-                },
-                ["Orbit1Active"]= {
-                    ["x"]= 339,
-                    ["y"]= 335,
-                    ["w"]= 24,
-                    ["h"]= 24
-                },
-                ["Orbit2Active"]= {
-                    ["x"]= 319,
-                    ["y"]= 315,
-                    ["w"]= 44,
-                    ["h"]= 44
-                },
-                ["Orbit3Active"]= {
-                    ["x"]= 297,
-                    ["y"]= 293,
-                    ["w"]= 66,
-                    ["h"]= 66
-                },
-                ["Orbit4Active"]= {
-                    ["x"]= 276,
-                    ["y"]= 272,
-                    ["w"]= 87,
-                    ["h"]= 87
-                },
-                ["Orbit5Active"]= {
-                    ["x"]= 237,
-                    ["y"]= 233,
-                    ["w"]= 126,
-                    ["h"]= 126
-                },
-                ["Orbit6Active"]= {
-                    ["x"]= 195,
-                    ["y"]= 191,
-                    ["w"]= 168,
-                    ["h"]= 168
-                },
-				["Orbit7Active"]= {
-                    ["x"]= 149,
-                    ["y"]= 145,
-                    ["w"]= 214,
-                    ["h"]= 214
-                },
-				["Orbit8Active"]= {
-                    ["x"]= 90,
-                    ["y"]= 86,
-                    ["w"]= 273,
-                    ["h"]= 273
-                },
-				["Orbit9Active"]= {
-                    ["x"]= 25,
-                    ["y"]= 29,
-                    ["w"]= 334,
-                    ["h"]= 334
-                },
-                ["LineConnectorNormal"]= {
-                    ["x"]= 4,
-                    ["y"]= 364,
-                    ["w"]= 360,
-                    ["h"]= 12
-                },
-                ["Orbit1Normal"]= {
-                    ["x"]= 339,
-                    ["y"]= 1053,
-                    ["w"]= 24,
-                    ["h"]= 24
-                },
-                ["Orbit2Normal"]= {
-                    ["x"]= 319,
-                    ["y"]= 1033,
-                    ["w"]= 44,
-                    ["h"]= 44
-                },
-                ["Orbit3Normal"]= {
-                    ["x"]= 297,
-                    ["y"]= 1011,
-                    ["w"]= 66,
-                    ["h"]= 66
-                },
-                ["Orbit4Normal"]= {
-                    ["x"]= 276,
-                    ["y"]= 990,
-                    ["w"]= 87,
-                    ["h"]= 87
-                },
-                ["Orbit5Normal"]= {
-                    ["x"]= 237,
-                    ["y"]= 951,
-                    ["w"]= 126,
-                    ["h"]= 126
-                },
-                ["Orbit6Normal"]= {
-                    ["x"]= 195,
-                    ["y"]= 909,
-                    ["w"]= 168,
-                    ["h"]= 168
-                },
-				["Orbit7Normal"]= {
-                    ["x"]= 149,
-                    ["y"]= 863,
-                    ["w"]= 214,
-                    ["h"]= 214
-                },
-				["Orbit8Normal"]= {
-                    ["x"]= 90,
-                    ["y"]= 804,
-                    ["w"]= 273,
-                    ["h"]= 273
-                },
-				["Orbit9Normal"]= {
-                    ["x"]= 29,
-                    ["y"]= 743,
-                    ["w"]= 334,
-                    ["h"]= 334
-                },
-                ["LineConnectorIntermediate"]= {
-                    ["x"]= 4,
-                    ["y"]= 364,
-                    ["w"]= 360,
-                    ["h"]= 12
-                },
-                ["Orbit1Intermediate"]= {
-                    ["x"]= 339,
-                    ["y"]= 694,
-                    ["w"]= 24,
-                    ["h"]= 24
-                },
-                ["Orbit2Intermediate"]= {
-                    ["x"]= 319,
-                    ["y"]= 674,
-                    ["w"]= 44,
-                    ["h"]= 44
-                },
-                ["Orbit3Intermediate"]= {
-                    ["x"]= 297,
-                    ["y"]= 652,
-                    ["w"]= 66,
-                    ["h"]= 66
-                },
-                ["Orbit4Intermediate"]= {
-                    ["x"]= 276,
-                    ["y"]= 631,
-                    ["w"]= 87,
-                    ["h"]= 87
-                },
-                ["Orbit5Intermediate"]= {
-                    ["x"]= 237,
-                    ["y"]= 592,
-                    ["w"]= 126,
-                    ["h"]= 126
-                },
-                ["Orbit6Intermediate"]= {
-                    ["x"]= 195,
-                    ["y"]= 550,
-                    ["w"]= 168,
-                    ["h"]= 168
-                },
-				["Orbit7Intermediate"]= {
-                    ["x"]= 149,
-                    ["y"]= 504,
-                    ["w"]= 214,
-                    ["h"]= 214
-                },
-				["Orbit8Intermediate"]= {
-                    ["x"]= 90,
-                    ["y"]= 445,
-                    ["w"]= 273,
-                    ["h"]= 273
-                },
-				["Orbit9Intermediate"]= {
-                    ["x"]= 29,
-                    ["y"]= 445,
-                    ["w"]= 334,
-                    ["h"]= 334
-                },
-                ["PSLineDecoHighlighted"]= {
-                    ["x"]= 0,
-                    ["y"]= 1104,
-                    ["w"]= 18,
-                    ["h"]= 18
-                },
-                ["PSLineDeco"]= {
-                    ["x"]= 0,
-                    ["y"]= 1122,
-                    ["w"]= 18,
-                    ["h"]= 18
-                }
-            }
-        }
-    },
+			[0.3835] = {
+				["filename"]= "line-3.png",
+				["w"]= 368,
+				["h"]= 1140,
+				["coords"]= {
+					["LineConnectorActive"]= {
+						["x"]= 4,
+						["y"]= 5,
+						["w"]= 360,
+						["h"]= 12
+					},
+					["Orbit1Active"]= {
+						["x"]= 339,
+						["y"]= 335,
+						["w"]= 24,
+						["h"]= 24
+					},
+					["Orbit2Active"]= {
+						["x"]= 319,
+						["y"]= 315,
+						["w"]= 44,
+						["h"]= 44
+					},
+					["Orbit3Active"]= {
+						["x"]= 297,
+						["y"]= 293,
+						["w"]= 66,
+						["h"]= 66
+					},
+					["Orbit4Active"]= {
+						["x"]= 276,
+						["y"]= 272,
+						["w"]= 87,
+						["h"]= 87
+					},
+					["Orbit5Active"]= {
+						["x"]= 237,
+						["y"]= 233,
+						["w"]= 126,
+						["h"]= 126
+					},
+					["Orbit6Active"]= {
+						["x"]= 195,
+						["y"]= 191,
+						["w"]= 168,
+						["h"]= 168
+					},
+					["Orbit7Active"]= {
+						["x"]= 149,
+						["y"]= 145,
+						["w"]= 214,
+						["h"]= 214
+					},
+					["Orbit8Active"]= {
+						["x"]= 90,
+						["y"]= 86,
+						["w"]= 273,
+						["h"]= 273
+					},
+					["Orbit9Active"]= {
+						["x"]= 25,
+						["y"]= 29,
+						["w"]= 334,
+						["h"]= 334
+					},
+					["LineConnectorNormal"]= {
+						["x"]= 4,
+						["y"]= 364,
+						["w"]= 360,
+						["h"]= 12
+					},
+					["Orbit1Normal"]= {
+						["x"]= 339,
+						["y"]= 1053,
+						["w"]= 24,
+						["h"]= 24
+					},
+					["Orbit2Normal"]= {
+						["x"]= 319,
+						["y"]= 1033,
+						["w"]= 44,
+						["h"]= 44
+					},
+					["Orbit3Normal"]= {
+						["x"]= 297,
+						["y"]= 1011,
+						["w"]= 66,
+						["h"]= 66
+					},
+					["Orbit4Normal"]= {
+						["x"]= 276,
+						["y"]= 990,
+						["w"]= 87,
+						["h"]= 87
+					},
+					["Orbit5Normal"]= {
+						["x"]= 237,
+						["y"]= 951,
+						["w"]= 126,
+						["h"]= 126
+					},
+					["Orbit6Normal"]= {
+						["x"]= 195,
+						["y"]= 909,
+						["w"]= 168,
+						["h"]= 168
+					},
+					["Orbit7Normal"]= {
+						["x"]= 149,
+						["y"]= 863,
+						["w"]= 214,
+						["h"]= 214
+					},
+					["Orbit8Normal"]= {
+						["x"]= 90,
+						["y"]= 804,
+						["w"]= 273,
+						["h"]= 273
+					},
+					["Orbit9Normal"]= {
+						["x"]= 29,
+						["y"]= 743,
+						["w"]= 334,
+						["h"]= 334
+					},
+					["LineConnectorIntermediate"]= {
+						["x"]= 4,
+						["y"]= 364,
+						["w"]= 360,
+						["h"]= 12
+					},
+					["Orbit1Intermediate"]= {
+						["x"]= 339,
+						["y"]= 694,
+						["w"]= 24,
+						["h"]= 24
+					},
+					["Orbit2Intermediate"]= {
+						["x"]= 319,
+						["y"]= 674,
+						["w"]= 44,
+						["h"]= 44
+					},
+					["Orbit3Intermediate"]= {
+						["x"]= 297,
+						["y"]= 652,
+						["w"]= 66,
+						["h"]= 66
+					},
+					["Orbit4Intermediate"]= {
+						["x"]= 276,
+						["y"]= 631,
+						["w"]= 87,
+						["h"]= 87
+					},
+					["Orbit5Intermediate"]= {
+						["x"]= 237,
+						["y"]= 592,
+						["w"]= 126,
+						["h"]= 126
+					},
+					["Orbit6Intermediate"]= {
+						["x"]= 195,
+						["y"]= 550,
+						["w"]= 168,
+						["h"]= 168
+					},
+					["Orbit7Intermediate"]= {
+						["x"]= 149,
+						["y"]= 504,
+						["w"]= 214,
+						["h"]= 214
+					},
+					["Orbit8Intermediate"]= {
+						["x"]= 90,
+						["y"]= 445,
+						["w"]= 273,
+						["h"]= 273
+					},
+					["Orbit9Intermediate"]= {
+						["x"]= 29,
+						["y"]= 445,
+						["w"]= 334,
+						["h"]= 334
+					},
+					["PSLineDecoHighlighted"]= {
+						["x"]= 0,
+						["y"]= 1104,
+						["w"]= 18,
+						["h"]= 18
+					},
+					["PSLineDeco"]= {
+						["x"]= 0,
+						["y"]= 1122,
+						["w"]= 18,
+						["h"]= 18
+					}
+				}
+			}
+		},
 		keystoneActive={
 			[0.1246]={
 				coords={

@@ -417,6 +417,7 @@ end
 
 
 local tree = {
+	["pob"] = 1,
 	["tree"] = idPassiveTree,
 	["min_x"]= 0,
     ["min_y"]= 0,
@@ -606,19 +607,30 @@ for i, group in ipairs(psg.groups) do
 			-- Stats
 			if passiveRow.Stats ~= nil then
 				node["stats"] = {}
+				local parseStats = {}
 				for k, stat in ipairs(passiveRow.Stats) do
-					table.insert(node["stats"], stat.Id)
+					parseStats[stat.Id] = { min = passiveRow["Stat" .. k], max = passiveRow["Stat" .. k] }
+				end
+				local out, orders = describeStats(parseStats)
+				for k, line in ipairs(out) do
+					table.insert(node["stats"], line)
 				end
 			end
 
 		end
 		
 		for k, connection in ipairs(passive.connections) do
+			-- validate connection to itself and not allow
+			if connection.id == passive.id then
+				printf("Node " .. passive.id .. " has a connection to itself")
+				goto nextconnection
+			end
 			table.insert(node.out, tostring(connection.id))
 			if nodesIn[connection.id] == nil then
 				nodesIn[connection.id] = {}
 			end
 			nodesIn[connection.id][passive.id] = true
+			:: nextconnection ::
 		end
 
 		-- classStartIndex: is this node exist in psg.passives
@@ -672,6 +684,10 @@ for id, inIds in pairs(nodesIn) do
 					break
 				end
 			end
+			goto continuepassive
+		end
+		if id == inId then
+			printf("Node " .. id .. " has a connection to itself")
 			goto continuepassive
 		end
 		table.insert(tree.nodes[id]["in"], tostring(inId))
