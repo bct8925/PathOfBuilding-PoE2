@@ -172,6 +172,10 @@ function PassiveTreeViewClass:Draw(build, viewPort, inputEvents)
 
 	-- Create functions that will convert coordinates between the screen and tree coordinate spaces
 	local scale = m_min(viewPort.width, viewPort.height) / tree.size * self.zoom
+	if tree.pob ~= 1 then
+		scale = scale * 1.33
+	end
+
 	local offsetX = self.zoomX + viewPort.x + viewPort.width/2
 	local offsetY = self.zoomY + viewPort.y + viewPort.height/2
 	local function treeToScreen(x, y)
@@ -416,7 +420,8 @@ function PassiveTreeViewClass:Draw(build, viewPort, inputEvents)
 			setConnectorColor(0.75, 0.75, 0.75)
 		end
 		SetDrawColor(unpack(connectorColor))
-		DrawImageQuad(tree.assets[connector.type..state].handle, unpack(connector.c))
+		local handle = tree.assets[connector.type..state] and tree.assets[connector.type..state].handle or tree.spriteMap[connector.type..state] and tree.spriteMap[connector.type..state].line.handle
+		DrawImageQuad(handle, unpack(connector.c))
 	end
 
 	-- Draw the connecting lines between nodes
@@ -643,7 +648,11 @@ function PassiveTreeViewClass:Draw(build, viewPort, inputEvents)
 				self:DrawAsset(base, scrX, scrY, scale)
 				SetDrawColor(1, 1, 1);
 			else
-				self:DrawAsset(base, scrX, scrY, scale)
+				if tree.pob == 1 then
+					self:DrawAsset(base, scrX, scrY, scale * tree.scaleImage)
+				else
+					self:DrawAsset(base, scrX, scrY, scale)
+				end
 			end
 		end
 
@@ -815,8 +824,8 @@ function PassiveTreeViewClass:DrawAsset(data, x, y, scale, isHalf)
 			return
 		end
 	end
-	local width = data.width * scale * 1.33
-	local height = data.height * scale * 1.33
+	local width = data.width * scale
+	local height = data.height * scale
 	if isHalf then
 		DrawImage(data.handle, x - width, y - height * 2, width * 2, height * 2)
 		DrawImage(data.handle, x - width, y, width * 2, height * 2, 0, 1, 1, 0)
@@ -828,7 +837,7 @@ end
 -- Zoom the tree in or out
 function PassiveTreeViewClass:Zoom(level, viewPort)
 	-- Calculate new zoom level and zoom factor
-	self.zoomLevel = m_max(0, m_min(12, self.zoomLevel + level))
+	self.zoomLevel = m_max(0, m_min(20, self.zoomLevel + level))
 	local oldZoom = self.zoom
 	self.zoom = 1.2 ^ self.zoomLevel
 

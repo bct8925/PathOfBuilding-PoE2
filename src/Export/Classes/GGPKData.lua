@@ -286,6 +286,8 @@ function GGPKClass:GetNeededFiles()
 		"Data/traptools.dat",
 		"Data/uncutgemadditionaltiers.dat",
 		"Data/uncutgemtiers.dat",
+		"Data/passiveskilltrees.dat",
+		"Data/passiveskilltreeuiart.dat",
 	}
 	local csdFiles = {
 		"^Metadata/StatDescriptions/specific_skill_stat_descriptions/\\w+.csd$",
