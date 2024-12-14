@@ -2074,7 +2074,7 @@ return {
 			name="Description",
 			refTo="",
 			type="String",
-			width=150
+			width=440
 		},
 		[3]={
 			list=false,
@@ -4800,11 +4800,11 @@ return {
 			width=150
 		},
 		[10]={
-			list=false,
-			name="UtilityBuff",
+			list=true,
+			name="UtilityBuffs",
 			refTo="UtilityFlaskBuffs",
 			type="Key",
-			width=150
+			width=240
 		}
 	},
 	flaskstashbasetypeordering={
@@ -7578,6 +7578,15 @@ return {
 	},
 	mobiletutorialgroup={
 	},
+	moddomains={
+		[1]={
+			list=false,
+			name="",
+			refTo="",
+			type="String",
+			width=220
+		}
+	},
 	modeffectstats={
 		[1]={
 			list=false,
@@ -7675,6 +7684,15 @@ return {
 			width=200
 		}
 	},
+	modgenerationtypes={
+		[1]={
+			list=false,
+			name="",
+			refTo="",
+			type="String",
+			width=150
+		}
+	},
 	modgrantedskills={
 		[1]={
 			list=false,
@@ -7751,9 +7769,9 @@ return {
 		[9]={
 			list=false,
 			name="Domain",
-			refTo="ModDomains",
-			type="Int",
-			width=60
+			refTo="modDomains",
+			type="Enum",
+			width=140
 		},
 		[10]={
 			list=false,
@@ -7765,9 +7783,9 @@ return {
 		[11]={
 			list=false,
 			name="GenerationType",
-			refTo="ModGenerationType",
-			type="Int",
-			width=100
+			refTo="modGenerationTypes",
+			type="Enum",
+			width=120
 		},
 		[12]={
 			list=true,
@@ -13826,28 +13844,28 @@ return {
 			name="BuffDefinitionsKey",
 			refTo="BuffDefinitions",
 			type="Key",
-			width=220
+			width=250
 		},
 		[2]={
 			list=true,
 			name="StatValues",
 			refTo="",
 			type="Int",
-			width=150
+			width=240
 		},
 		[3]={
 			list=true,
 			name="StatValues2",
 			refTo="",
 			type="Int",
-			width=150
+			width=250
 		},
 		[4]={
 			list=false,
 			name="",
 			refTo="",
 			type="Key",
-			width=150
+			width=250
 		}
 	},
 	villageuniquedisenchantvalues={
