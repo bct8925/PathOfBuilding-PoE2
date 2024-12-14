@@ -1206,6 +1206,9 @@ local preFlagList = {
 	-- While in the presence of...
 	["^while a unique enemy is in your presence, "] = { tag = { type = "ActorCondition", actor = "enemy", var = "RareOrUnique" } },
 	["^while a pinnacle atlas boss is in your presence, "] = { tag = { type = "ActorCondition", actor = "enemy", var = "PinnacleBoss" } },
+	-- Rune and SoulCore related
+	["^armour: "] = { tag = { type = "SocketedIn", slotType = "Armour" } },
+	["^martial weapons: "] = { tag = { type = "SocketedIn", slotType = "Martial Weapons" } },
 }
 
 -- List of modifier tags
@@ -2733,7 +2736,7 @@ local specialModList = {
 		-- Display only. For Kalandra's Touch.
 	},
 	["has (%d+) sockets?"] = function(num) return { mod("SocketCount", "BASE", num) } end,
-	["has (%d+) abyssal sockets?"] = function(num) return { mod("AbyssalSocketCount", "BASE", num) } end,
+	["has (%d+) abyssal sockets?"] = function(num) return { mod("SocketCount", "BASE", num) } end,
 	["no physical damage"] = { mod("WeaponData", "LIST", { key = "PhysicalMin" }), mod("WeaponData", "LIST", { key = "PhysicalMax" }), mod("WeaponData", "LIST", { key = "PhysicalDPS" }) },
 	["has (%d+)%% increased elemental damage"] = function(num) return { mod("LocalElementalDamage", "INC", num) } end,
 	["all attacks with this weapon are critical strikes"] = { mod("WeaponData", "LIST", { key = "CritChance", value = 100 }) },
