@@ -5,7 +5,107 @@
 --
 local skills, mod, flag, skill = ...
 
+#skill AncestralSpiritsPlayer
+#flags
+#mods
+
+#skill BleedingConcoctionPlayer
+#flags
+#mods
+
+#skill MeleeBowPlayer
+#flags
+#mods
+
+#skill MeleeCrossbowPlayer
+#flags
+#mods
+
+#skill DemonFormPlayer
+#flags
+#mods
+
+#skill ElementalExpressionTriggeredPlayer
+#flags
+#mods
+
+#skill ElementalStormPlayer
+#flags
+#mods
+
+#skill EncaseInJadePlayer
+#flags
+#mods
+
+#skill ExplosiveConcoctionPlayer
+#flags
+#mods
+
+#skill FulminatingConcoctionPlayer
+#flags
+#mods
+
+#skill IntoTheBreachPlayer
+#flags
+#mods
+
+#skill LifeRemnantsPlayer
+#flags
+#mods
+
+#skill Melee1HMacePlayer
+#flags
+#mods
+
+#skill Melee2HMacePlayer
+#flags
+#mods
+
+#skill MeleeMaceMacePlayer
+#flags
+#mods
+
+#skill MeditatePlayer
+#flags
+#mods
+
+#skill PoisonousConcoctionPlayer
+#flags
+#mods
+
 #noGem
 #skill MeleeUnarmedPlayer
 #flags attack area melee
+#mods
+
+#skill MeleeQuarterstaffPlayer
+#flags
+#mods
+
+#skill ShatteringConcoctionPlayer
+#flags
+#mods
+
+#skill SorceryWardPlayer
+#flags
+#mods
+
+#skill SummonInfernalHoundPlayer
+#flags
+#mods
+
+#skill TemporalRiftPlayer
+#flags
+#mods
+
+#skill TimeFreezePlayer
+#flags
+#mods
+
+#skill TimeSnapPlayer
+#flags
+#mods
+
+#skill UnboundAvatarPlayer
+#flags
 #mods
