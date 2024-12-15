@@ -23,6 +23,7 @@ skills["AncestralWarriorTotemPlayer"] = {
 	skillTotemId = 15,
 	castTime = 0.5,
 	baseFlags = {
+		totem = true,
 	},
 	qualityStats = {
 		Default = {

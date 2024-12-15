@@ -16,6 +16,7 @@ skills["AncestralSpiritsPlayer"] = {
 	minionSkillTypes = { [SkillType.Attack] = true, [SkillType.Melee] = true, [SkillType.MeleeSingleTarget] = true, [SkillType.Multistrikeable] = true, [SkillType.Spell] = true, [SkillType.Damage] = true, [SkillType.Area] = true, [SkillType.Projectile] = true, [SkillType.Chains] = true, [SkillType.Duration] = true, [SkillType.DamageOverTime] = true, [SkillType.RangedAttack] = true, [SkillType.ProjectilesFromUser] = true, },
 	statDescriptionScope = "skill_stat_descriptions",
 	castTime = 0,
+	fromTree = true,
 	baseFlags = {
 	},
 	qualityStats = {
@@ -82,6 +83,7 @@ skills["BleedingConcoctionPlayer"] = {
 	skillTypes = { [SkillType.Attack] = true, [SkillType.RangedAttack] = true, [SkillType.ProjectilesFromUser] = true, [SkillType.Triggerable] = true, [SkillType.Area] = true, [SkillType.Projectile] = true, [SkillType.UseGlobalStats] = true, [SkillType.Physical] = true, [SkillType.Nonpathing] = true, [SkillType.ProjectileNoCollision] = true, },
 	statDescriptionScope = "throw_flask_bleed",
 	castTime = 1,
+	fromTree = true,
 	baseFlags = {
 	},
 	qualityStats = {
@@ -165,6 +167,7 @@ skills["MeleeBowPlayer"] = {
 	},
 	statDescriptionScope = "skill_stat_descriptions",
 	castTime = 1,
+	fromItem = true,
 	baseFlags = {
 	},
 	constantStats = {
@@ -233,6 +236,7 @@ skills["MeleeCrossbowPlayer"] = {
 	skillTypes = { [SkillType.Attack] = true, [SkillType.RangedAttack] = true, [SkillType.Projectile] = true, [SkillType.ProjectilesFromUser] = true, [SkillType.Area] = true, [SkillType.CrossbowSkill] = true, [SkillType.Trappable] = true, [SkillType.Totemable] = true, [SkillType.Mineable] = true, [SkillType.Nonpathing] = true, },
 	statDescriptionScope = "skill_stat_descriptions",
 	castTime = 1,
+	fromItem = true,
 	baseFlags = {
 	},
 	constantStats = {
@@ -310,6 +314,7 @@ skills["DemonFormPlayer"] = {
 	skillTypes = { [SkillType.Buff] = true, [SkillType.Persistent] = true, [SkillType.Cooldown] = true, [SkillType.Shapeshift] = true, [SkillType.ManualCooldownConsumption] = true, },
 	statDescriptionScope = "demon_transformation",
 	castTime = 1,
+	fromTree = true,
 	baseFlags = {
 	},
 	constantStats = {
@@ -373,6 +378,7 @@ skills["ElementalExpressionTriggeredPlayer"] = {
 	skillTypes = { [SkillType.Damage] = true, [SkillType.Triggerable] = true, [SkillType.Spell] = true, [SkillType.Cooldown] = true, [SkillType.Triggered] = true, [SkillType.InbuiltTrigger] = true, [SkillType.Lightning] = true, [SkillType.Cold] = true, [SkillType.Fire] = true, [SkillType.Projectile] = true, [SkillType.Area] = true, [SkillType.Chains] = true, },
 	statDescriptionScope = "skill_stat_descriptions",
 	castTime = 0,
+	fromTree = true,
 	baseFlags = {
 	},
 	qualityStats = {
@@ -438,6 +444,7 @@ skills["ElementalStormPlayer"] = {
 	skillTypes = { [SkillType.Spell] = true, [SkillType.Duration] = true, [SkillType.Trappable] = true, [SkillType.Totemable] = true, [SkillType.Mineable] = true, [SkillType.Triggerable] = true, [SkillType.Damage] = true, [SkillType.Physical] = true, [SkillType.Area] = true, [SkillType.Orb] = true, [SkillType.AreaSpell] = true, [SkillType.Triggered] = true, [SkillType.InbuiltTrigger] = true, [SkillType.Cooldown] = true, [SkillType.Fire] = true, [SkillType.Cold] = true, [SkillType.Lightning] = true, },
 	statDescriptionScope = "tornado_triggered",
 	castTime = 0,
+	fromTree = true,
 	baseFlags = {
 	},
 	qualityStats = {
@@ -512,6 +519,7 @@ skills["EncaseInJadePlayer"] = {
 	skillTypes = { [SkillType.Spell] = true, [SkillType.Buff] = true, [SkillType.Guard] = true, [SkillType.Cooldown] = true, [SkillType.Duration] = true, [SkillType.Physical] = true, },
 	statDescriptionScope = "encase_in_jade",
 	castTime = 0.3,
+	fromTree = true,
 	baseFlags = {
 	},
 	qualityStats = {
@@ -580,6 +588,7 @@ skills["ExplosiveConcoctionPlayer"] = {
 	skillTypes = { [SkillType.Attack] = true, [SkillType.RangedAttack] = true, [SkillType.ProjectilesFromUser] = true, [SkillType.Triggerable] = true, [SkillType.Area] = true, [SkillType.Projectile] = true, [SkillType.UseGlobalStats] = true, [SkillType.Duration] = true, [SkillType.Fire] = true, [SkillType.Nonpathing] = true, [SkillType.ProjectileNoCollision] = true, },
 	statDescriptionScope = "throw_flask_fire",
 	castTime = 1,
+	fromTree = true,
 	baseFlags = {
 	},
 	qualityStats = {
@@ -660,6 +669,7 @@ skills["FulminatingConcoctionPlayer"] = {
 	skillTypes = { [SkillType.Attack] = true, [SkillType.RangedAttack] = true, [SkillType.ProjectilesFromUser] = true, [SkillType.Triggerable] = true, [SkillType.Area] = true, [SkillType.Projectile] = true, [SkillType.UseGlobalStats] = true, [SkillType.Duration] = true, [SkillType.Lightning] = true, [SkillType.Nonpathing] = true, [SkillType.ProjectileNoCollision] = true, },
 	statDescriptionScope = "throw_flask_lightning",
 	castTime = 1,
+	fromTree = true,
 	baseFlags = {
 	},
 	qualityStats = {
@@ -739,6 +749,7 @@ skills["IntoTheBreachPlayer"] = {
 	skillTypes = { [SkillType.Buff] = true, [SkillType.Persistent] = true, [SkillType.OngoingSkill] = true, [SkillType.HasReservation] = true, },
 	statDescriptionScope = "skill_stat_descriptions",
 	castTime = 0,
+	fromTree = true,
 	baseFlags = {
 	},
 	qualityStats = {
@@ -808,6 +819,7 @@ skills["LifeRemnantsPlayer"] = {
 	skillTypes = { [SkillType.Buff] = true, [SkillType.HasReservation] = true, [SkillType.OngoingSkill] = true, [SkillType.Persistent] = true, },
 	statDescriptionScope = "life_remnants",
 	castTime = 0,
+	fromTree = true,
 	baseFlags = {
 	},
 	qualityStats = {
@@ -879,6 +891,7 @@ skills["Melee1HMacePlayer"] = {
 	},
 	statDescriptionScope = "skill_stat_descriptions",
 	castTime = 1,
+	fromItem = true,
 	baseFlags = {
 	},
 	constantStats = {
@@ -942,6 +955,7 @@ skills["Melee2HMacePlayer"] = {
 	},
 	statDescriptionScope = "skill_stat_descriptions",
 	castTime = 1,
+	fromItem = true,
 	baseFlags = {
 	},
 	constantStats = {
@@ -1006,6 +1020,7 @@ skills["MeleeMaceMacePlayer"] = {
 	},
 	statDescriptionScope = "skill_stat_descriptions",
 	castTime = 1,
+	fromItem = true,
 	baseFlags = {
 	},
 	constantStats = {
@@ -1068,6 +1083,7 @@ skills["MeditatePlayer"] = {
 	skillTypes = { [SkillType.Spell] = true, [SkillType.Channel] = true, [SkillType.Cooldown] = true, },
 	statDescriptionScope = "skill_stat_descriptions",
 	castTime = 1,
+	fromTree = true,
 	baseFlags = {
 	},
 	qualityStats = {
@@ -1139,6 +1155,7 @@ skills["PoisonousConcoctionPlayer"] = {
 	skillTypes = { [SkillType.Attack] = true, [SkillType.RangedAttack] = true, [SkillType.ProjectilesFromUser] = true, [SkillType.Triggerable] = true, [SkillType.Area] = true, [SkillType.Projectile] = true, [SkillType.UseGlobalStats] = true, [SkillType.Chaos] = true, [SkillType.Nonpathing] = true, [SkillType.ProjectileNoCollision] = true, },
 	statDescriptionScope = "throw_flask_poison",
 	castTime = 1,
+	fromTree = true,
 	baseFlags = {
 	},
 	qualityStats = {
@@ -1282,6 +1299,7 @@ skills["MeleeQuarterstaffPlayer"] = {
 	skillTypes = { [SkillType.Attack] = true, [SkillType.MeleeSingleTarget] = true, [SkillType.Multistrikeable] = true, [SkillType.Melee] = true, [SkillType.Area] = true, [SkillType.QuarterstaffSkill] = true, },
 	statDescriptionScope = "skill_stat_descriptions",
 	castTime = 1,
+	fromItem = true,
 	baseFlags = {
 	},
 	constantStats = {
@@ -1344,6 +1362,7 @@ skills["ShatteringConcoctionPlayer"] = {
 	skillTypes = { [SkillType.Attack] = true, [SkillType.RangedAttack] = true, [SkillType.ProjectilesFromUser] = true, [SkillType.Triggerable] = true, [SkillType.Area] = true, [SkillType.Projectile] = true, [SkillType.UseGlobalStats] = true, [SkillType.Duration] = true, [SkillType.Cold] = true, [SkillType.Nonpathing] = true, [SkillType.ProjectileNoCollision] = true, },
 	statDescriptionScope = "throw_flask_cold",
 	castTime = 1,
+	fromTree = true,
 	baseFlags = {
 	},
 	qualityStats = {
@@ -1423,6 +1442,7 @@ skills["SorceryWardPlayer"] = {
 	skillTypes = { [SkillType.Spell] = true, [SkillType.Aegis] = true, [SkillType.Fire] = true, [SkillType.Cold] = true, [SkillType.Lightning] = true, [SkillType.Buff] = true, [SkillType.OngoingSkill] = true, [SkillType.Persistent] = true, [SkillType.HasReservation] = true, },
 	statDescriptionScope = "sorcery_ward",
 	castTime = 1,
+	fromTree = true,
 	baseFlags = {
 	},
 	qualityStats = {
@@ -1493,6 +1513,7 @@ skills["SummonInfernalHoundPlayer"] = {
 	minionSkillTypes = { [SkillType.Attack] = true, [SkillType.Melee] = true, [SkillType.MeleeSingleTarget] = true, [SkillType.Multistrikeable] = true, [SkillType.Area] = true, },
 	statDescriptionScope = "summon_infernal_familiar",
 	castTime = 0,
+	fromTree = true,
 	baseFlags = {
 	},
 	qualityStats = {
@@ -1560,6 +1581,7 @@ skills["TemporalRiftPlayer"] = {
 	skillTypes = { [SkillType.Spell] = true, [SkillType.Cooldown] = true, [SkillType.HasReservation] = true, [SkillType.Buff] = true, [SkillType.Persistent] = true, [SkillType.OngoingSkill] = true, [SkillType.PersistentShowsCastTime] = true, [SkillType.FixedCastTime] = true, },
 	statDescriptionScope = "temporal_rift",
 	castTime = 0.5,
+	fromTree = true,
 	baseFlags = {
 	},
 	qualityStats = {
@@ -1627,6 +1649,7 @@ skills["TimeFreezePlayer"] = {
 	skillTypes = { [SkillType.Spell] = true, [SkillType.Cooldown] = true, [SkillType.Area] = true, [SkillType.Duration] = true, },
 	statDescriptionScope = "time_stop",
 	castTime = 0.7,
+	fromTree = true,
 	baseFlags = {
 	},
 	qualityStats = {
@@ -1694,6 +1717,7 @@ skills["TimeSnapPlayer"] = {
 	skillTypes = { [SkillType.Spell] = true, [SkillType.Cooldown] = true, },
 	statDescriptionScope = "skill_stat_descriptions",
 	castTime = 0.6,
+	fromTree = true,
 	baseFlags = {
 	},
 	qualityStats = {
@@ -1755,6 +1779,7 @@ skills["UnboundAvatarPlayer"] = {
 	skillTypes = { [SkillType.Buff] = true, [SkillType.Cooldown] = true, [SkillType.Instant] = true, [SkillType.Fire] = true, [SkillType.Cold] = true, [SkillType.Lightning] = true, [SkillType.InstantNoRepeatWhenHeld] = true, [SkillType.InstantShiftAttackForLeftMouse] = true, [SkillType.Duration] = true, },
 	statDescriptionScope = "ailment_bearer",
 	castTime = 0,
+	fromTree = true,
 	baseFlags = {
 	},
 	qualityStats = {
