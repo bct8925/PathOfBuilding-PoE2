@@ -12294,7 +12294,7 @@ return {
 		},
 		[30]={
 			list=false,
-			name="",
+			name="GemStatAffinity",
 			refTo="",
 			type="String",
 			width=150
