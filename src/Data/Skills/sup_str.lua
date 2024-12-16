@@ -44,44 +44,6 @@ skills["SupportAncestralUrgencyPlayer"] = {
 		[1] = { levelRequirement = 0, actorLevel = 1, },
 	},
 }
-skills["SupportArmourExplosionPlayer"] = {
-	name = "Armour Explosion",
-	description = "Supports Attacks, causing them to trigger a Fiery explosion when they Fully Break an enemy's Armour.",
-	color = 1,
-	incrementalEffectiveness = 0.054999999701977,
-	support = true,
-	requireSkillTypes = { SkillType.Attack, SkillType.CrossbowAmmoSkill, },
-	addSkillTypes = { },
-	excludeSkillTypes = { },
-	statDescriptionScope = "gem_stat_descriptions",
-	stats = {
-		"support_armour_explosion",
-	},
-	levels = {
-		[1] = { levelRequirement = 0, actorLevel = 1, },
-	},
-}
-skills["ArmourExplosionPlayer"] = {
-	name = "[DNT] armour_explosion",
-	hidden = true,
-	incrementalEffectiveness = 0.054999999701977,
-	skillTypes = { [SkillType.Attack] = true, [SkillType.Area] = true, [SkillType.Damage] = true, [SkillType.Triggered] = true, [SkillType.Triggerable] = true, [SkillType.SkillGrantedBySupport] = true, },
-	statDescriptionScope = "armour_explosion",
-	castTime = 1,
-	baseFlags = {
-	},
-	constantStats = {
-		{ "active_skill_base_area_of_effect_radius", 14 },
-		{ "trigger_on_armour_break_%_chance", 100 },
-		{ "active_skill_base_physical_damage_%_to_convert_to_fire", 100 },
-	},
-	stats = {
-		"is_area_damage",
-	},
-	levels = {
-		[1] = { levelRequirement = 0, actorLevel = 1, },
-	},
-}
 skills["SupportAutoReloadPlayer"] = {
 	name = "Auto Reload",
 	description = "Supports Crossbow Ammunition Skills, causing them to automatically reload when they Heavy Stun an enemy.",
