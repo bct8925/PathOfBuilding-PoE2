@@ -51,6 +51,7 @@ end
 
 local PassiveTreeClass = newClass("PassiveTree", function(self, treeVersion)
 	self.treeVersion = treeVersion
+	self.scaleImage = 0.3835
 	local versionNum = treeVersions[treeVersion].num
 
 	self.legion = LoadModule("Data/TimelessJewelData/LegionPassives")
@@ -235,6 +236,8 @@ local PassiveTreeClass = newClass("PassiveTree", function(self, treeVersion)
 		local maxZoom
 		if not self.imageZoomLevels then
 			maxZoom = data
+		elseif self.pob == 1 then
+			maxZoom = data[self.scaleImage]
 		elseif versionNum >= 3.19 then
 			maxZoom = data[0.3835] or data[1]
 		else
@@ -807,7 +810,7 @@ function PassiveTreeClass:BuildConnector(node1, node2)
 
 	-- Generate a straight line
 	connector.type = "LineConnector"
-	local art = self.assets.LineConnectorNormal
+	local art = self.spriteMap["LineConnectorNormal"] and self.spriteMap["LineConnectorNormal"].line or self.assets.LineConnectorNormal
 	local vX, vY = node2.x - node1.x, node2.y - node1.y
 	local dist = m_sqrt(vX * vX + vY * vY)
 	local scale = art.height * 1.33 / dist
@@ -843,7 +846,7 @@ function PassiveTreeClass:BuildArc(arcAngle, node1, connector, isMirroredArc)
 	connector.vert = { }
 	for _, state in pairs({ "Normal", "Intermediate", "Active" }) do
 		-- The different line states have differently-sized artwork, so the vertex coords must be calculated separately for each one
-		local art = self.assets[connector.type .. state]
+		local art = self.spriteMap[connector.type .. state] and self.spriteMap[connector.type .. state].line or self.assets[connector.type .. state]
 		local size = art.width * 2 * 1.33
 		local oX, oY = size * m_sqrt(2) * m_sin(angle + m_pi / 4), size * m_sqrt(2) * -m_cos(angle + m_pi / 4)
 		local cX, cY = node1.group.x + oX, node1.group.y + oY
