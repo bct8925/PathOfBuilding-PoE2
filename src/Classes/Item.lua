@@ -69,7 +69,7 @@ for _, curInfluenceInfo in ipairs(influenceInfo) do
 end
 
 local lineFlags = {
-	["crafted"] = true, ["crucible"] = true, ["custom"] = true, ["eater"] = true, ["enchant"] = true,
+	["crafted"] = true, ["crucible"] = true, ["custom"] = true, ["eater"] = true, ["enchant"] = true, ["rune"] = true,
 	["exarch"] = true, ["fractured"] = true, ["implicit"] = true, ["scourge"] = true, ["synthesis"] = true,
 }
 
@@ -299,6 +299,7 @@ function ItemClass:ParseRaw(raw, rarity, highQuality)
 	self.rawLines = { }
 	-- Find non-blank lines and trim whitespace
 	for line in raw:gmatch("%s*([^\n]*%S)") do
+		line = line:gsub("%[([^|%]]+)%]", "%1"):gsub("%[[^|]+|([^|]+)%]", "%1") -- Remove game text 
 		t_insert(self.rawLines, line)
 	end
 	local mode = rarity and "GAME" or "WIKI"
@@ -575,7 +576,7 @@ function ItemClass:ParseRaw(raw, rarity, highQuality)
 				       specName == "Int" or specName == "Intelligence" then
 					self.requirements[specName:sub(1,3):lower()] = specToNumber(specVal)
 				elseif specName == "Critical Strike Range" or specName == "Attacks per Second" or specName == "Weapon Range" or
-				       specName == "Critical Strike Chance" or specName == "Physical Damage" or specName == "Elemental Damage" or
+				       specName == "Critical Hit Chance" or specName == "Physical Damage" or specName == "Elemental Damage" or
 				       specName == "Chaos Damage" or specName == "Chance to Block" or specName == "Armour" or
 					   specName == "Energy Shield" or specName == "Evasion" then
 					self.hidden_specs = true
@@ -618,7 +619,7 @@ function ItemClass:ParseRaw(raw, rarity, highQuality)
 					return ""
 				end)
 
-				if modLine.enchant then
+				if modLine.enchant or modLine.rune then
 					modLine.crafted = true
 					modLine.implicit = true
 				end
