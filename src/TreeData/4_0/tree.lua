@@ -14449,7 +14449,8 @@ return {
 				[1]="51561",
 				[2]="28304"
 			},
-			name="[Jewel] Socket",
+			name="Jewel Socket",
+			isJewelSocket= true,
 			orbit=1,
 			orbitIndex=10,
 			out={
@@ -17519,7 +17520,8 @@ return {
 				[1]="1019",
 				[2]="21274"
 			},
-			name="[Jewel] Socket",
+			name="Jewel Socket",
+			isJewelSocket= true,
 			orbit=0,
 			orbitIndex=0,
 			out={
@@ -18804,7 +18806,8 @@ return {
 				[4]="35408",
 				[5]="48552"
 			},
-			name="[Jewel] Socket",
+			name="Jewel Socket",
+			isJewelSocket= true,
 			orbit=1,
 			orbitIndex=2,
 			out={
@@ -29923,7 +29926,8 @@ return {
 				[1]="3251",
 				[2]="10382"
 			},
-			name="[Jewel] Socket",
+			name="Jewel Socket",
+			isJewelSocket= true,
 			orbit=1,
 			orbitIndex=4,
 			out={
@@ -32927,7 +32931,8 @@ return {
 			["in"]={
 				[1]="32474"
 			},
-			name="[Jewel] Socket",
+			name="Jewel Socket",
+			isJewelSocket= true,
 			orbit=0,
 			orbitIndex=0,
 			out={
@@ -33373,7 +33378,8 @@ return {
 				[1]="59777",
 				[2]="21387"
 			},
-			name="[Jewel] Socket",
+			name="Jewel Socket",
+			isJewelSocket= true,
 			orbit=0,
 			orbitIndex=0,
 			out={
@@ -34664,7 +34670,8 @@ return {
 			["in"]={
 				[1]="38732"
 			},
-			name="[Jewel] Socket",
+			name="Jewel Socket",
+			isJewelSocket= true,
 			orbit=0,
 			orbitIndex=0,
 			out={
@@ -37069,7 +37076,8 @@ return {
 				[1]="21495",
 				[2]="7526"
 			},
-			name="[Jewel] Socket",
+			name="Jewel Socket",
+			isJewelSocket= true,
 			orbit=0,
 			orbitIndex=0,
 			out={
@@ -38048,7 +38056,8 @@ return {
 				[2]="48773",
 				[3]="14267"
 			},
-			name="[Jewel] Socket",
+			name="Jewel Socket",
+			isJewelSocket= true,
 			orbit=1,
 			orbitIndex=6,
 			out={
@@ -38725,7 +38734,8 @@ return {
 				[1]="29148",
 				[2]="7424"
 			},
-			name="[Jewel] Socket",
+			name="Jewel Socket",
+			isJewelSocket= true,
 			orbit=0,
 			orbitIndex=0,
 			out={
@@ -39062,7 +39072,8 @@ return {
 			["in"]={
 				[1]="51821"
 			},
-			name="[Jewel] Socket",
+			name="Jewel Socket",
+			isJewelSocket= true,
 			orbit=0,
 			orbitIndex=0,
 			out={
@@ -39582,7 +39593,8 @@ return {
 			icon="Art/2DArt/SkillIcons/passives/MasteryBlank.dds",
 			["in"]={
 			},
-			name="[Jewel] Socket",
+			name="Jewel Socket",
+			isJewelSocket= true,
 			orbit=0,
 			orbitIndex=0,
 			out={
@@ -40751,7 +40763,8 @@ return {
 			["in"]={
 				[1]="30371"
 			},
-			name="[Jewel] Socket",
+			name="Jewel Socket",
+			isJewelSocket= true,
 			orbit=0,
 			orbitIndex=0,
 			out={
@@ -41300,7 +41313,8 @@ return {
 			["in"]={
 				[1]="59480"
 			},
-			name="[Jewel] Socket",
+			name="Jewel Socket",
+			isJewelSocket= true,
 			orbit=0,
 			orbitIndex=0,
 			out={
@@ -45106,7 +45120,8 @@ return {
 				[2]="22949",
 				[3]="55596"
 			},
-			name="[Jewel] Socket",
+			name="Jewel Socket",
+			isJewelSocket= true,
 			orbit=0,
 			orbitIndex=0,
 			out={
@@ -49752,7 +49767,8 @@ return {
 				[2]="34201",
 				[3]="38463"
 			},
-			name="[Jewel] Socket",
+			name="Jewel Socket",
+			isJewelSocket= true,
 			orbit=1,
 			orbitIndex=8,
 			out={
@@ -51246,7 +51262,8 @@ return {
 				[4]="61490",
 				[5]="44406"
 			},
-			name="[Jewel] Socket",
+			name="Jewel Socket",
+			isJewelSocket= true,
 			orbit=0,
 			orbitIndex=0,
 			out={
@@ -55543,7 +55560,8 @@ return {
 				[2]="55802",
 				[3]="52125"
 			},
-			name="[Jewel] Socket",
+			name="Jewel Socket",
+			isJewelSocket= true,
 			orbit=0,
 			orbitIndex=0,
 			out={
@@ -56508,7 +56526,8 @@ return {
 				[2]="1200",
 				[3]="28982"
 			},
-			name="[Jewel] Socket",
+			name="Jewel Socket",
+			isJewelSocket= true,
 			orbit=1,
 			orbitIndex=0,
 			out={
@@ -60215,7 +60234,8 @@ return {
 				[2]="2408",
 				[3]="57518"
 			},
-			name="[Jewel] Socket",
+			name="Jewel Socket",
+			isJewelSocket= true,
 			orbit=0,
 			orbitIndex=0,
 			out={
@@ -60919,7 +60939,8 @@ return {
 				[2]="24287",
 				[3]="48116"
 			},
-			name="[Jewel] Socket",
+			name="Jewel Socket",
+			isJewelSocket= true,
 			orbit=0,
 			orbitIndex=0,
 			out={
@@ -61430,7 +61451,8 @@ return {
 				[1]="45885",
 				[2]="29009"
 			},
-			name="[Jewel] Socket",
+			name="Jewel Socket",
+			isJewelSocket= true,
 			orbit=0,
 			orbitIndex=0,
 			out={
@@ -61800,7 +61822,8 @@ return {
 			["in"]={
 				[1]="57821"
 			},
-			name="[Jewel] Socket",
+			name="Jewel Socket",
+			isJewelSocket= true,
 			orbit=0,
 			orbitIndex=0,
 			out={
@@ -62908,7 +62931,8 @@ return {
 			["in"]={
 				[1]="4328"
 			},
-			name="[Jewel] Socket",
+			name="Jewel Socket",
+			isJewelSocket= true,
 			orbit=4,
 			orbitIndex=5,
 			out={
