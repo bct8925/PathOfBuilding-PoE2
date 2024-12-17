@@ -958,7 +958,7 @@ function calcs.offence(env, actor, activeSkill)
 		if skillModList:Flag(skillCfg, "CannotChain") or skillModList:Flag(skillCfg, "NoAdditionalChains")then
 			output.ChainMaxString = "Cannot chain"
 		else
-			output.ChainMax = skillModList:Sum("BASE", skillCfg, "ChainCountMax", not skillFlags.projectile and "BeamChainCountMax" or nil)
+			output.ChainMax = skillModList:Sum("BASE", skillCfg, "ChainCountMax", not skillFlags.projectile and "BeamChainCountMax" or nil) * skillModList:More(skillCfg, "ChainCountMax", not skillFlags.projectile and "BeamChainCountMax" or nil)
 			if skillModList:Flag(skillCfg, "AdditionalProjectilesAddChainsInstead") then
 				output.ChainMax = output.ChainMax + m_floor((skillModList:Sum("BASE", skillCfg, "ProjectileCount") - 1) * skillModList:More(skillCfg, "ProjectileCount"))
 			end
@@ -2151,7 +2151,7 @@ function calcs.offence(env, actor, activeSkill)
 				skillModList:NewMod("Multiplier:TraumaStacks", "BASE", skillModList:Sum("BASE", skillCfg, "Multiplier:SustainableTraumaStacks"), "Maximum Sustainable Trauma Stacks")
 			end
 			local inc = skillModList:Sum("INC", cfg, "Speed")
-			output.Speed = 1 / baseTime * round((1 + inc/100) * more, 2)
+			output.Speed = 1 / (baseTime / round((1 + inc/100) * more, 2) + skillModList:Sum("BASE", cfg, "TotalAttackTime"))
 			output.CastRate = output.Speed
 			if skillFlags.selfCast then
 				-- Self-cast skill; apply action speed

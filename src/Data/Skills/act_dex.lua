@@ -381,6 +381,9 @@ skills["EscapeShotPlayer"] = {
 	statDescriptionScope = "escape_shot",
 	castTime = 1,
 	baseFlags = {
+		attack = true,
+		projectile = true,
+		area = true,
 	},
 	qualityStats = {
 		Default = {

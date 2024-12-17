@@ -27,7 +27,7 @@ local skills, mod, flag, skill = ...
 #mods
 
 #skill EscapeShotPlayer
-#flags
+#flags attack projectile area
 #mods
 
 #skill FreezingSalvoPlayer

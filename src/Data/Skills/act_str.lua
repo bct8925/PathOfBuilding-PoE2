@@ -1364,9 +1364,6 @@ skills["EarthshatterPlayer"] = {
 		area = true,
 		duration = true,
 	},
-	baseMods = {
-		skill("radius", 18, { type = "SkillPart", skillPart = 1 }),
-	},
 	qualityStats = {
 		Default = {
 			{ "spike_slam_max_spikes", 0.15 },

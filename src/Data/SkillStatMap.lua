@@ -461,6 +461,9 @@ return {
 ["blind_effect_+%"] = {
 	mod("BlindEffect", "INC", nil, 0, 0, { type = "GlobalEffect", effectType = "Debuff", effectName = "Vaal Blade Flurry" }),
 },
+["global_chance_to_blind_on_hit_%"] = {
+	mod("BlindChance", "BASE", nil),
+},
 ["cannot_be_stunned_while_leeching"] = {
 	mod("AvoidStun", "BASE", 100, { type = "Condition", var = "Leeching"}),
 },
@@ -925,6 +928,49 @@ return {
 ["base_physical_damage_%_to_convert_to_chaos"] = {
 	mod("PhysicalDamageConvertToChaos", "BASE", nil),
 },
+-- Active Skill Physical
+["active_skill_base_physical_damage_%_to_convert_to_lightning"] = {
+	mod("SkillPhysicalDamageConvertToLightning", "BASE", nil),
+},
+["active_skill_base_physical_damage_%_to_convert_to_cold"] = {
+	mod("SkillPhysicalDamageConvertToCold", "BASE", nil),
+},
+["active_skill_base_physical_damage_%_to_convert_to_fire"] = {
+	mod("SkillPhysicalDamageConvertToFire", "BASE", nil),
+},
+["active_skill_base_physical_damage_%_to_convert_to_chaos"] = {
+	mod("SkillPhysicalDamageConvertToChaos", "BASE", nil),
+},
+-- Active Skill Lightning Conversion
+["active_skill_base_lightning_damage_%_to_convert_to_chaos"] = {
+	mod("SkillLightningDamageConvertToChaos", "BASE", nil),
+},
+["active_skill_base_lightning_damage_%_to_convert_to_fire"] = {
+	mod("SkillLightningDamageConvertToFire", "BASE", nil),
+},
+["active_skill_base_lightning_damage_%_to_convert_to_cold"] = {
+	mod("SkillLightningDamageConvertToCold", "BASE", nil),
+},
+-- Active Skill Cold Conversion
+["active_skill_base_cold_damage_%_to_convert_to_fire"] = {
+	mod("SkillColdDamageConvertToFire", "BASE", nil),
+},
+["active_skill_base_cold_damage_%_to_convert_to_lightning"] = {
+	mod("SkillColdDamageConvertToLightning", "BASE", nil),
+},
+["active_skill_base_cold_damage_%_to_convert_to_chaos"] = {
+	mod("SkillColdDamageConvertToChaos", "BASE", nil),
+},
+-- Active Skill Fire Conversion
+["active_skill_base_fire_damage_%_to_convert_to_cold"] = {
+	mod("SkillFireDamageConvertToCold", "BASE", nil),
+},
+["active_skill_base_fire_damage_%_to_convert_to_lightning"] = {
+	mod("SkillFireDamageConvertToLightning", "BASE", nil),
+},
+["active_skill_base_fire_damage_%_to_convert_to_chaos"] = {
+	mod("SkillFireDamageConvertToChaos", "BASE", nil),
+},
 -- Skill Physical
 ["skill_physical_damage_%_to_convert_to_lightning"] = {
 	mod("SkillPhysicalDamageConvertToLightning", "BASE", nil),
@@ -1081,6 +1127,9 @@ return {
 	mod("EnemyChillEffect", "INC", nil),
 	mod("EnemyFreezeEffect", "INC", nil),
 	mod("EnemyBrittleEffect", "INC", nil),
+},
+["active_skill_hit_damage_freeze_multiplier_+%_final"] = {
+	mod("EnemyFreezeEffect", "MORE", nil),
 },
 ["base_poison_duration_+%"] = {
 	mod("EnemyPoisonDuration", "INC", nil),
@@ -1376,6 +1425,9 @@ return {
 ["number_of_chains"] = {
 	mod("ChainCountMax", "BASE", nil),
 },
+["chains_hit_X_more_times"] = {
+	mod("ChainCountMax", "MORE", nil),
+},
 ["additional_beam_only_chains"] = {
 	mod("BeamChainCountMax", "BASE", nil),
 },
@@ -1640,6 +1692,10 @@ return {
 ["additional_critical_strike_chance_per_10_shield_maximum_energy_shield_permyriad"] = {
 	mod("CritChance", "BASE", nil, 0, 0, { type = "PerStat", stat = "EnergyShieldOnWeapon 2", div = 10, }),
 	div = 100,
+},
+["added_attack_time_ms"] = {
+	mod("TotalAttackTime", "BASE", nil),
+	div = 1000,
 },
 -- Impale
 ["attacks_impale_on_hit_%_chance"] = {

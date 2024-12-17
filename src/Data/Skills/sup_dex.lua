@@ -17,6 +17,11 @@ skills["SupportFasterProjectilesPlayer"] = {
 	addSkillTypes = { },
 	excludeSkillTypes = { SkillType.FixedSpeedProjectile, },
 	statDescriptionScope = "gem_stat_descriptions",
+	statMap = {
+		["support_faster_projectiles_projectile_speed_+%_final"] = {
+			mod("ProjectileSpeed", "MORE", nil),
+		},
+	},
 	constantStats = {
 		{ "support_faster_projectiles_projectile_speed_+%_final", 40 },
 	},
@@ -36,6 +41,11 @@ skills["SupportAmmoConservationPlayer"] = {
 	addSkillTypes = { },
 	excludeSkillTypes = { },
 	statDescriptionScope = "gem_stat_descriptions",
+	statMap = {
+		["crossbow_attack_%_chance_to_not_consume_ammo"] = {
+			mod("ChanceToNotConsumeAmmo", "BASE", nil),
+		},
+	},
 	constantStats = {
 		{ "crossbow_attack_%_chance_to_not_consume_ammo", 25 },
 	},
@@ -95,6 +105,11 @@ skills["SupportAdditionalAccuracyPlayer"] = {
 	addSkillTypes = { },
 	excludeSkillTypes = { },
 	statDescriptionScope = "gem_stat_descriptions",
+	statMap = {
+		["support_additional_accurary_rating_+%_final"] = {
+			mod("Accuracy", "MORE", nil),
+		},
+	},
 	constantStats = {
 		{ "support_additional_accurary_rating_+%_final", 50 },
 	},
@@ -158,6 +173,11 @@ skills["SupportChainPlayer"] = {
 	addSkillTypes = { },
 	excludeSkillTypes = { SkillType.CannotChain, SkillType.ProjectileNoCollision, },
 	statDescriptionScope = "gem_stat_descriptions",
+	statMap = {
+		["support_chain_hit_damage_+%_final"] = {
+			mod("Damage", "MORE", nil),
+		},
+	},
 	constantStats = {
 		{ "number_of_chains", 1 },
 		{ "chains_hit_X_more_times", 1 },
@@ -180,6 +200,7 @@ skills["SupportCloseCombatPlayer"] = {
 	excludeSkillTypes = { },
 	ignoreMinionTypes = true,
 	statDescriptionScope = "gem_stat_descriptions",
+
 	constantStats = {
 		{ "support_close_combat_attack_damage_+%_final_from_distance", 25 },
 	},
@@ -211,6 +232,7 @@ skills["SupportComboFinisherPlayer"] = {
 		["One Handed Sword"] = true,
 	},
 	statDescriptionScope = "gem_stat_descriptions",
+
 	constantStats = {
 		{ "support_combo_finisher_required_number_of_combo_stacks", 5 },
 		{ "support_combo_finisher_damage_+%_final", 40 },
@@ -232,6 +254,7 @@ skills["SupportMultiplePoisonPlayer"] = {
 	addSkillTypes = { },
 	excludeSkillTypes = { },
 	statDescriptionScope = "gem_stat_descriptions",
+
 	constantStats = {
 		{ "number_of_additional_poison_stacks", 1 },
 		{ "support_multi_poison_poison_duration_+%_final", -30 },
@@ -252,6 +275,7 @@ skills["SupportChanceToShockPlayer"] = {
 	addSkillTypes = { },
 	excludeSkillTypes = { },
 	statDescriptionScope = "gem_stat_descriptions",
+
 	constantStats = {
 		{ "support_conduction_chance_to_shock_+%_final", 100 },
 	},
@@ -271,6 +295,7 @@ skills["SupportCorrosionPlayer"] = {
 	addSkillTypes = { },
 	excludeSkillTypes = { SkillType.ConsumesFullyBrokenArmour, },
 	statDescriptionScope = "gem_stat_descriptions",
+
 	constantStats = {
 		{ "armour_break_for_%_of_poison_damage_over_poison_duration", 80 },
 	},
@@ -290,6 +315,7 @@ skills["SupportCrescendoPlayer"] = {
 	addSkillTypes = { },
 	excludeSkillTypes = { },
 	statDescriptionScope = "gem_stat_descriptions",
+
 	stats = {
 		"repeat_last_step_of_combo_attack",
 	},
@@ -307,6 +333,7 @@ skills["SupportCullingStrikePlayer"] = {
 	addSkillTypes = { },
 	excludeSkillTypes = { },
 	statDescriptionScope = "gem_stat_descriptions",
+
 	stats = {
 		"support_culling_strike_vs_rare_or_unique_enemy",
 	},
@@ -324,6 +351,7 @@ skills["SupportCulminationPlayer"] = {
 	addSkillTypes = { SkillType.ComboStacking, SkillType.SupportedByComboMastery, },
 	excludeSkillTypes = { SkillType.ComboStacking, SkillType.SupportedByComboMastery, SkillType.NOT, SkillType.AND, },
 	statDescriptionScope = "gem_stat_descriptions",
+
 	constantStats = {
 		{ "support_damage_+%_final_per_combo_stack", 2 },
 		{ "base_combo_stacks_decay_delay_ms", 3000 },
@@ -345,6 +373,7 @@ skills["SupportDeadlyPoisonPlayer"] = {
 	addSkillTypes = { },
 	excludeSkillTypes = { },
 	statDescriptionScope = "gem_stat_descriptions",
+
 	constantStats = {
 		{ "support_deadly_poison_hit_damage_+%_final", -25 },
 		{ "support_deadly_poison_poison_effect_+%_final", 75 },
@@ -365,6 +394,11 @@ skills["SupportSlowerProjectilesPlayer"] = {
 	addSkillTypes = { },
 	excludeSkillTypes = { SkillType.FixedSpeedProjectile, },
 	statDescriptionScope = "gem_stat_descriptions",
+	statMap = {
+		["support_faster_projectiles_projectile_speed_+%_final"] = {
+			mod("ProjectileSpeed", "MORE", nil),
+		},
+	},
 	constantStats = {
 		{ "support_slower_projectiles_projectile_speed_+%_final", -30 },
 	},
@@ -384,6 +418,7 @@ skills["SupportDazingPlayer"] = {
 	addSkillTypes = { },
 	excludeSkillTypes = { },
 	statDescriptionScope = "gem_stat_descriptions",
+
 	constantStats = {
 		{ "support_physical_damage_%_to_gain_as_daze_build_up", 100 },
 	},
@@ -403,6 +438,7 @@ skills["SupportElectrocutePlayer"] = {
 	addSkillTypes = { },
 	excludeSkillTypes = { },
 	statDescriptionScope = "gem_stat_descriptions",
+
 	constantStats = {
 		{ "support_electrocute_damage_+%_final", -40 },
 	},
@@ -423,6 +459,7 @@ skills["SupportEncumberancePlayer"] = {
 	addSkillTypes = { },
 	excludeSkillTypes = { },
 	statDescriptionScope = "gem_stat_descriptions",
+
 	constantStats = {
 		{ "base_debuff_slow_magnitude_+%", 15 },
 	},
@@ -442,6 +479,7 @@ skills["SupportChanceToPoisonPlayer"] = {
 	addSkillTypes = { },
 	excludeSkillTypes = { },
 	statDescriptionScope = "gem_stat_descriptions",
+
 	constantStats = {
 		{ "base_chance_to_poison_on_hit_%", 60 },
 	},
@@ -461,6 +499,7 @@ skills["SupportFerocityPlayer"] = {
 	addSkillTypes = { SkillType.SkillConsumesFrenzyChargesOnUse, SkillType.SupportedByFerocity, },
 	excludeSkillTypes = { SkillType.Minion, SkillType.SummonsTotem, SkillType.UsedByTotem, SkillType.Persistent, SkillType.SkillConsumesFrenzyChargesOnUse, SkillType.SupportedByFerocity, SkillType.NOT, SkillType.AND, },
 	statDescriptionScope = "gem_stat_descriptions",
+
 	constantStats = {
 		{ "skill_consume_frenzy_charge_to_gain_skill_speed_+%_final", 30 },
 	},
@@ -481,6 +520,7 @@ skills["SupportForkPlayer"] = {
 	addSkillTypes = { },
 	excludeSkillTypes = { SkillType.ProjectileNoCollision, },
 	statDescriptionScope = "gem_stat_descriptions",
+
 	constantStats = {
 		{ "terrain_arrow_attachment_chance_reduction_+%", 100 },
 		{ "support_fork_forked_projectile_damage_+%_final", -50 },
@@ -501,6 +541,7 @@ skills["SupportFusilladePlayer"] = {
 	addSkillTypes = { },
 	excludeSkillTypes = { },
 	statDescriptionScope = "gem_stat_descriptions",
+
 	constantStats = {
 		{ "number_of_additional_projectiles", 4 },
 	},
@@ -523,6 +564,7 @@ skills["SupportCooldownReductionPlayer"] = {
 	addSkillTypes = { },
 	excludeSkillTypes = { },
 	statDescriptionScope = "gem_stat_descriptions",
+
 	constantStats = {
 		{ "support_cooldown_reduction_cooldown_recovery_+%", 30 },
 	},
@@ -543,6 +585,7 @@ skills["SupportInnervatePlayer"] = {
 	excludeSkillTypes = { SkillType.Trapped, SkillType.RemoteMined, SkillType.SummonsTotem, },
 	ignoreMinionTypes = true,
 	statDescriptionScope = "gem_stat_descriptions",
+
 	constantStats = {
 		{ "support_innervate_buff_grant_%_added_lightning_attack_damage", 35 },
 		{ "support_innervate_buff_base_duration_ms", 3000 },
@@ -563,6 +606,7 @@ skills["SupportLastingShockPlayer"] = {
 	addSkillTypes = { },
 	excludeSkillTypes = { },
 	statDescriptionScope = "gem_stat_descriptions",
+
 	constantStats = {
 		{ "shock_duration_+%", 100 },
 		{ "support_lasting_shock_chance_to_shock_+%_final", -25 },
@@ -583,6 +627,7 @@ skills["SupportLeveragePlayer"] = {
 	addSkillTypes = { },
 	excludeSkillTypes = { },
 	statDescriptionScope = "gem_stat_descriptions",
+
 	constantStats = {
 		{ "critical_strike_chance_+%_vs_immobilised_enemies", 50 },
 	},
@@ -602,6 +647,7 @@ skills["SupportLifeFlaskPlayer"] = {
 	addSkillTypes = { },
 	excludeSkillTypes = { },
 	statDescriptionScope = "gem_stat_descriptions",
+
 	constantStats = {
 		{ "support_life_flask_charges_gained_+%_final_from_killing_blow", 100 },
 	},
@@ -621,6 +667,7 @@ skills["SupportLifeOnCullPlayer"] = {
 	addSkillTypes = { },
 	excludeSkillTypes = { },
 	statDescriptionScope = "gem_stat_descriptions",
+
 	constantStats = {
 		{ "recover_%_maximum_life_on_cull", 12 },
 	},
@@ -640,6 +687,7 @@ skills["SupportLightningExposurePlayer"] = {
 	addSkillTypes = { SkillType.Duration, },
 	excludeSkillTypes = { },
 	statDescriptionScope = "gem_stat_descriptions",
+
 	constantStats = {
 		{ "inflict_lightning_exposure_for_x_ms_on_shock", 8000 },
 		{ "support_lightning_exposure_damage_+%_final", -25 },
@@ -688,6 +736,7 @@ skills["SupportLightningPenetrationPlayer"] = {
 	addSkillTypes = { },
 	excludeSkillTypes = { },
 	statDescriptionScope = "gem_stat_descriptions",
+
 	constantStats = {
 		{ "base_reduce_enemy_lightning_resistance_%", 30 },
 	},
@@ -707,6 +756,7 @@ skills["SupportLockdownPlayer"] = {
 	addSkillTypes = { },
 	excludeSkillTypes = { },
 	statDescriptionScope = "gem_stat_descriptions",
+
 	constantStats = {
 		{ "support_lockdown_distance_based_pin_damage_+%_final", 120 },
 	},
@@ -727,6 +777,7 @@ skills["SupportFarCombatPlayer"] = {
 	excludeSkillTypes = { },
 	ignoreMinionTypes = true,
 	statDescriptionScope = "gem_stat_descriptions",
+
 	constantStats = {
 		{ "support_far_combat_attack_damage_+%_final_from_distance", 35 },
 	},
@@ -746,6 +797,7 @@ skills["SupportMaimPlayer"] = {
 	addSkillTypes = { SkillType.AppliesMaim, },
 	excludeSkillTypes = { },
 	statDescriptionScope = "gem_stat_descriptions",
+
 	constantStats = {
 		{ "maim_on_hit_%", 100 },
 	},
@@ -767,6 +819,7 @@ skills["SupportManaFlaskPlayer"] = {
 	addSkillTypes = { },
 	excludeSkillTypes = { },
 	statDescriptionScope = "gem_stat_descriptions",
+
 	constantStats = {
 		{ "support_mana_flask_charges_gained_+%_final_from_killing_blow", 100 },
 	},
@@ -787,6 +840,7 @@ skills["SupportFasterAttackPlayer"] = {
 	addSkillTypes = { },
 	excludeSkillTypes = { SkillType.Herald, },
 	statDescriptionScope = "gem_stat_descriptions",
+
 	constantStats = {
 		{ "support_faster_attacks_attack_speed_+%_final", 25 },
 		{ "support_faster_attacks_damage_+%_final", 0 },
@@ -807,6 +861,7 @@ skills["SupportMobilityPlayer"] = {
 	addSkillTypes = { },
 	excludeSkillTypes = { },
 	statDescriptionScope = "gem_stat_descriptions",
+
 	constantStats = {
 		{ "support_mobility_damage_+%_final", -20 },
 		{ "support_mobility_movement_speed_penalty_+%_final_while_performing_action", -40 },
@@ -828,6 +883,7 @@ skills["SupportMomentumPlayer"] = {
 	excludeSkillTypes = { SkillType.Triggered, SkillType.Trapped, SkillType.RemoteMined, SkillType.SummonsTotem, },
 	ignoreMinionTypes = true,
 	statDescriptionScope = "gem_stat_descriptions",
+
 	constantStats = {
 		{ "support_momentum_distance_travelled_to_gain_momentum", 20 },
 		{ "support_momnetum_damage_+%_final_with_momentum", 40 },
@@ -848,6 +904,7 @@ skills["SupportEmpoweredCullPlayer"] = {
 	addSkillTypes = { },
 	excludeSkillTypes = { },
 	statDescriptionScope = "gem_stat_descriptions",
+
 	stats = {
 		"support_empowered_culling_strike",
 	},
@@ -865,6 +922,7 @@ skills["SupportNeuralOverloadPlayer"] = {
 	addSkillTypes = { },
 	excludeSkillTypes = { },
 	statDescriptionScope = "gem_stat_descriptions",
+
 	stats = {
 		"active_skill_show_overload_range",
 		"active_skill_can_overload",
@@ -883,6 +941,7 @@ skills["SupportNimbleReloadPlayer"] = {
 	addSkillTypes = { },
 	excludeSkillTypes = { },
 	statDescriptionScope = "gem_stat_descriptions",
+
 	constantStats = {
 		{ "reload_speed_+%", 60 },
 	},
@@ -902,6 +961,7 @@ skills["SupportIncreaseLimitPlayer"] = {
 	addSkillTypes = { },
 	excludeSkillTypes = { },
 	statDescriptionScope = "gem_stat_descriptions",
+
 	constantStats = {
 		{ "base_limit_+", 1 },
 		{ "support_limit_skill_effect_duration_+%_final", -50 },
@@ -922,6 +982,7 @@ skills["SupportOverchargePlayer"] = {
 	addSkillTypes = { },
 	excludeSkillTypes = { },
 	statDescriptionScope = "gem_stat_descriptions",
+
 	constantStats = {
 		{ "support_pure_shock_shock_duration_+%_final", -50 },
 		{ "shock_effect_+%", 75 },
@@ -942,6 +1003,7 @@ skills["SupportPayloadPlayer"] = {
 	addSkillTypes = { },
 	excludeSkillTypes = { },
 	statDescriptionScope = "gem_stat_descriptions",
+
 	constantStats = {
 		{ "grenade_skill_%_chance_to_explode_twice", 50 },
 		{ "base_cooldown_speed_+%", -70 },
@@ -962,6 +1024,7 @@ skills["SupportPerpetualChargePlayer"] = {
 	addSkillTypes = { },
 	excludeSkillTypes = { },
 	statDescriptionScope = "gem_stat_descriptions",
+
 	constantStats = {
 		{ "charge_skip_consume_chance_%", 35 },
 	},
@@ -984,6 +1047,7 @@ skills["SupportPiercePlayer"] = {
 	addSkillTypes = { },
 	excludeSkillTypes = { SkillType.ProjectileNoCollision, },
 	statDescriptionScope = "gem_stat_descriptions",
+
 	constantStats = {
 		{ "base_chance_to_pierce_%", 100 },
 		{ "support_pierce_projectile_damage_+%_final_if_pierced_enemy", -30 },
@@ -1004,6 +1068,7 @@ skills["SupportPinPlayer"] = {
 	addSkillTypes = { },
 	excludeSkillTypes = { },
 	statDescriptionScope = "gem_stat_descriptions",
+
 	constantStats = {
 		{ "support_pin_spell_pinned_art_variation", 1 },
 		{ "support_pin_hit_damage_stun_multiplier_+%_final", -100 },
@@ -1025,6 +1090,7 @@ skills["SupportPracticedComboPlayer"] = {
 	addSkillTypes = { },
 	excludeSkillTypes = { SkillType.Minion, },
 	statDescriptionScope = "gem_stat_descriptions",
+
 	constantStats = {
 		{ "additional_combo_gain_chance_%", 40 },
 	},
@@ -1044,6 +1110,7 @@ skills["SupportPrecisionPlayer"] = {
 	addSkillTypes = { },
 	excludeSkillTypes = { },
 	statDescriptionScope = "gem_stat_descriptions",
+
 	constantStats = {
 		{ "support_precision_accuracy_rating_+%", 30 },
 	},
@@ -1063,6 +1130,7 @@ skills["SupportMultipleChargesPlayer"] = {
 	addSkillTypes = { },
 	excludeSkillTypes = { },
 	statDescriptionScope = "gem_stat_descriptions",
+
 	constantStats = {
 		{ "chance_to_gain_1_more_charge_%", 50 },
 	},
@@ -1082,6 +1150,7 @@ skills["SupportRicochetPlayer"] = {
 	addSkillTypes = { },
 	excludeSkillTypes = { SkillType.CannotChain, },
 	statDescriptionScope = "gem_stat_descriptions",
+
 	constantStats = {
 		{ "projectile_chance_to_chain_1_extra_time_from_terrain_%", 20 },
 	},
@@ -1102,6 +1171,7 @@ skills["SupportMultipleProjectilesPlayer"] = {
 	addSkillTypes = { },
 	excludeSkillTypes = { SkillType.ProjectilesNumberModifiersNotApplied, },
 	statDescriptionScope = "gem_stat_descriptions",
+
 	constantStats = {
 		{ "number_of_additional_projectiles", 2 },
 		{ "support_multiple_damage_+%_final", -20 },
@@ -1124,6 +1194,7 @@ skills["SupportSecondWindPlayer"] = {
 	addSkillTypes = { },
 	excludeSkillTypes = { SkillType.Triggered, SkillType.Instant, },
 	statDescriptionScope = "gem_stat_descriptions",
+
 	constantStats = {
 		{ "base_cooldown_speed_+%_final", -50 },
 	},
@@ -1144,6 +1215,7 @@ skills["SupportManaOnCullPlayer"] = {
 	addSkillTypes = { },
 	excludeSkillTypes = { },
 	statDescriptionScope = "gem_stat_descriptions",
+
 	constantStats = {
 		{ "recover_%_maximum_mana_on_cull", 12 },
 	},
@@ -1163,6 +1235,7 @@ skills["SupportSwiftAfflictionPlayer"] = {
 	addSkillTypes = { },
 	excludeSkillTypes = { },
 	statDescriptionScope = "gem_stat_descriptions",
+
 	constantStats = {
 		{ "support_rapid_decay_damage_over_time_+%_final", 35 },
 		{ "support_swift_affliction_skill_effect_and_damaging_ailment_duration_+%_final", -20 },
@@ -1183,6 +1256,7 @@ skills["SupportKnockbackWavePlayer"] = {
 	addSkillTypes = { },
 	excludeSkillTypes = { SkillType.Instant, SkillType.Persistent, },
 	statDescriptionScope = "gem_stat_descriptions",
+
 	stats = {
 		"support_knockback_wave_on_stunned",
 	},
@@ -1197,6 +1271,7 @@ skills["KnockbackWavePlayer"] = {
 	skillTypes = { [SkillType.Area] = true, [SkillType.Triggered] = true, [SkillType.Triggerable] = true, [SkillType.InbuiltTrigger] = true, [SkillType.SkillGrantedBySupport] = true, },
 	statDescriptionScope = "skill_stat_descriptions",
 	castTime = 1,
+
 	baseFlags = {
 	},
 	constantStats = {
@@ -1225,6 +1300,7 @@ skills["SupportWindowOfOpportunityPlayer"] = {
 	addSkillTypes = { },
 	excludeSkillTypes = { },
 	statDescriptionScope = "gem_stat_descriptions",
+
 	constantStats = {
 		{ "perfect_timing_window_ms_+%", -25 },
 		{ "support_window_of_opportunity_perfect_timing_damage_+%_final", 50 },
