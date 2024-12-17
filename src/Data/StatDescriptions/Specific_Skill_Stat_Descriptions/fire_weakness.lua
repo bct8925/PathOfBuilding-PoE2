@@ -45,22 +45,6 @@ return {
 	[3]={
 		[1]={
 			[1]={
-				limit={
-					[1]={
-						[1]="#",
-						[2]="#"
-					}
-				},
-				text="Cursed enemies have {0:+d}% to Fire Resistance"
-			}
-		},
-		stats={
-			[1]="base_fire_damage_resistance_%"
-		}
-	},
-	[4]={
-		[1]={
-			[1]={
 				[1]={
 					k="milliseconds_to_seconds_2dp_if_required",
 					v=1
@@ -91,17 +75,33 @@ return {
 			[1]="base_skill_effect_duration"
 		}
 	},
-	[5]={
+	[4]={
 		[1]={
 		},
 		stats={
 			[1]="skill_effect_duration"
 		}
 	},
+	[5]={
+		[1]={
+			[1]={
+				limit={
+					[1]={
+						[1]="#",
+						[2]="#"
+					}
+				},
+				text="Cursed enemies have {0:+d}% to Fire Resistance"
+			}
+		},
+		stats={
+			[1]="skill_granted_fire_damage_resistance_%"
+		}
+	},
 	["active_skill_area_of_effect_radius"]=1,
 	["active_skill_base_area_of_effect_radius"]=2,
-	["base_fire_damage_resistance_%"]=3,
-	["base_skill_effect_duration"]=4,
+	["base_skill_effect_duration"]=3,
 	parent="skill_stat_descriptions",
-	["skill_effect_duration"]=5
+	["skill_effect_duration"]=4,
+	["skill_granted_fire_damage_resistance_%"]=5
 }

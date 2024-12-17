@@ -7389,7 +7389,7 @@ return {
 						[2]=99
 					}
 				},
-				text="Killing Blows from Supported Skills against Ignited\nenemies have {0}% chance to cause the enemy to explode"
+				text="Enemies Ignited by Supported Skills have {0}% chance to\nexplode on death"
 			},
 			[2]={
 				limit={
@@ -7398,7 +7398,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Killing Blows from Supported Skills against Ignited\nenemies cause the enemy to explode"
+				text="Enemies Ignited by Supported Skills explode on death"
 			}
 		},
 		stats={

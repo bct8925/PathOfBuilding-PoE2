@@ -15,9 +15,9 @@ return {
 			}
 		},
 		stats={
-			[1]="base_lightning_damage_resistance_%"
+			[1]="skill_granted_lightning_damage_resistance_%"
 		}
 	},
-	["base_lightning_damage_resistance_%"]=1,
-	parent="skill_stat_descriptions"
+	parent="skill_stat_descriptions",
+	["skill_granted_lightning_damage_resistance_%"]=1
 }

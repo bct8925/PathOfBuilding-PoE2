@@ -15,7 +15,7 @@ return {
 			}
 		},
 		stats={
-			[1]="base_chaos_damage_resistance_%"
+			[1]="skill_granted_chaos_damage_resistance_%"
 		}
 	},
 	[2]={
@@ -100,8 +100,8 @@ return {
 	},
 	["active_skill_area_of_effect_radius"]=2,
 	["active_skill_base_area_of_effect_radius"]=3,
-	["base_chaos_damage_resistance_%"]=1,
 	["base_skill_effect_duration"]=4,
 	parent="skill_stat_descriptions",
-	["skill_effect_duration"]=5
+	["skill_effect_duration"]=5,
+	["skill_granted_chaos_damage_resistance_%"]=1
 }

@@ -127008,7 +127008,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Evasion Rating also grants Physical Damage reduction"
+				text="Physical Damage Reduction from Armour is based on your combined Armour and Evasion Rating"
 			}
 		},
 		stats={

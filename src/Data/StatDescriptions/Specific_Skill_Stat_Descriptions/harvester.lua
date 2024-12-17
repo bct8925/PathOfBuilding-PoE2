@@ -16,6 +16,15 @@ return {
 					}
 				},
 				text="Skills can use your undead Reviving Minions in\nplace of Corpses\nMinions Revive {0}% more slowly"
+			},
+			[2]={
+				limit={
+					[1]={
+						[1]=1,
+						[2]="#"
+					}
+				},
+				text="Minions Revive {0:+d}% more quickly"
 			}
 		},
 		stats={

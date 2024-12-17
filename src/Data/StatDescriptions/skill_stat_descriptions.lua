@@ -13373,23 +13373,27 @@ return {
 			}
 		},
 		stats={
-			[1]="cast_on_block_gain_X_energy_on_block"
+			[1]="cast_on_block_gain_X_centienergy_on_block"
 		}
 	},
 	[566]={
 		[1]={
 			[1]={
+				[1]={
+					k="divide_by_one_hundred_2dp_if_required",
+					v=1
+				},
 				limit={
 					[1]={
 						[1]="#",
 						[2]="#"
 					}
 				},
-				text="Gains {0} Energy when you deal a Critical Hit with a Skill"
+				text="Gains {0} Energy per Power of enemies you\nCritically Hit with Skills"
 			}
 		},
 		stats={
-			[1]="cast_on_crit_gain_X_energy_on_crit"
+			[1]="cast_on_crit_gain_X_centienergy_per_monster_power_on_crit"
 		}
 	},
 	[567]={
@@ -13430,7 +13434,7 @@ return {
 			}
 		},
 		stats={
-			[1]="cast_on_damage_taken_gain_X_energy_when_hit"
+			[1]="cast_on_damage_taken_gain_X_centienergy_when_hit"
 		}
 	},
 	[569]={
@@ -13446,12 +13450,16 @@ return {
 			}
 		},
 		stats={
-			[1]="cast_on_death_gain_X_energy_on_death"
+			[1]="cast_on_death_gain_X_centienergy_on_death"
 		}
 	},
 	[570]={
 		[1]={
 			[1]={
+				[1]={
+					k="divide_by_one_hundred_2dp_if_required",
+					v=1
+				},
 				limit={
 					[1]={
 						[1]="#",
@@ -13462,7 +13470,7 @@ return {
 			}
 		},
 		stats={
-			[1]="cast_on_dodge_roll_gain_X_energy_per_unit_travelled_while_dodge_rolling"
+			[1]="cast_on_dodge_roll_gain_X_centienergy_per_unit_travelled_while_dodge_rolling"
 		}
 	},
 	[571]={
@@ -13493,33 +13501,41 @@ return {
 	[572]={
 		[1]={
 			[1]={
+				[1]={
+					k="divide_by_one_hundred_2dp_if_required",
+					v=1
+				},
 				limit={
 					[1]={
 						[1]="#",
 						[2]="#"
 					}
 				},
-				text="Gains {0} Energy when you Freeze an enemy with a Hit from a Skill, once per Skill use"
+				text="Gains {0} Energy per Power of enemies you Freeze with\nHits from Skills"
 			}
 		},
 		stats={
-			[1]="cast_on_freeze_gain_X_energy_on_freeze"
+			[1]="cast_on_freeze_gain_X_centienergy_per_monster_power_on_freeze"
 		}
 	},
 	[573]={
 		[1]={
 			[1]={
+				[1]={
+					k="divide_by_one_hundred_2dp_if_required",
+					v=1
+				},
 				limit={
 					[1]={
 						[1]="#",
 						[2]="#"
 					}
 				},
-				text="Gains {0} Energy when you Ignite an enemy with a Hit from a Skill, once per Skill use"
+				text="Gains {0} Energy per Power of enemies you Ignite with Hits from Skills, modified by the percentage of the enemy's Ailment Threshold the Ignite will deal"
 			}
 		},
 		stats={
-			[1]="cast_on_ignite_gain_X_energy_on_ignite"
+			[1]="cast_on_ignite_gain_X_centienergy_per_monster_power_on_ignite"
 		}
 	},
 	[574]={
@@ -13535,7 +13551,7 @@ return {
 			}
 		},
 		stats={
-			[1]="cast_on_melee_kill_gain_X_energy_on_melee_kill"
+			[1]="cast_on_melee_kill_gain_X_centienergy_per_monster_power_on_melee_kill"
 		}
 	},
 	[575]={
@@ -13551,7 +13567,7 @@ return {
 			}
 		},
 		stats={
-			[1]="cast_on_melee_stun_gain_X_energy_on_heavy_stun"
+			[1]="cast_on_melee_stun_gain_X_centienergy_per_monster_power_on_heavy_stun"
 		}
 	},
 	[576]={
@@ -13567,7 +13583,7 @@ return {
 			}
 		},
 		stats={
-			[1]="cast_on_melee_stun_gain_X_energy_on_stun"
+			[1]="cast_on_melee_stun_gain_X_centienergy_per_monster_power_on_stun"
 		}
 	},
 	[577]={
@@ -13589,17 +13605,21 @@ return {
 	[578]={
 		[1]={
 			[1]={
+				[1]={
+					k="divide_by_one_hundred_2dp_if_required",
+					v=1
+				},
 				limit={
 					[1]={
 						[1]="#",
 						[2]="#"
 					}
 				},
-				text="Gains {0} Energy when you Shock an enemy with a Hit from a Skill, once per Skill use"
+				text="Gains {0} Energy per Power of enemies you Shock with\nHits from Skills"
 			}
 		},
 		stats={
-			[1]="cast_on_shock_gain_X_energy_on_shock"
+			[1]="cast_on_shock_gain_X_centienergy_per_monster_power_on_shock"
 		}
 	},
 	[579]={
@@ -13615,7 +13635,7 @@ return {
 			}
 		},
 		stats={
-			[1]="cast_when_stunned_gain_X_energy_when_stunned"
+			[1]="cast_when_stunned_gain_X_centienergy_when_stunned"
 		}
 	},
 	[580]={
@@ -17723,49 +17743,61 @@ return {
 	[785]={
 		[1]={
 			[1]={
+				[1]={
+					k="divide_by_one_hundred_2dp_if_required",
+					v=1
+				},
 				limit={
 					[1]={
 						[1]="#",
 						[2]="#"
 					}
 				},
-				text="Gains {0} Energy when you Freeze an enemy"
+				text="Gains {0} Energy per Power of enemies you Freeze with\nHits from Skills"
 			}
 		},
 		stats={
-			[1]="elemental_invocation_gain_X_energy_on_freeze"
+			[1]="elemental_invocation_gain_X_centienergy_per_monster_power_on_freeze"
 		}
 	},
 	[786]={
 		[1]={
 			[1]={
+				[1]={
+					k="divide_by_one_hundred_2dp_if_required",
+					v=1
+				},
 				limit={
 					[1]={
 						[1]="#",
 						[2]="#"
 					}
 				},
-				text="Gains {0} Energy when you Ignite an enemy"
+				text="Gains {0} Energy per Power of enemies you Ignite with Hits from Skills, modified by the percentage of the enemy's Ailment Threshold the Ignite will deal"
 			}
 		},
 		stats={
-			[1]="elemental_invocation_gain_X_energy_on_ignite"
+			[1]="elemental_invocation_gain_X_centienergy_per_monster_power_on_ignite"
 		}
 	},
 	[787]={
 		[1]={
 			[1]={
+				[1]={
+					k="divide_by_one_hundred_2dp_if_required",
+					v=1
+				},
 				limit={
 					[1]={
 						[1]="#",
 						[2]="#"
 					}
 				},
-				text="Gains {0} Energy when you Shock an enemy"
+				text="Gains {0} Energy per Power of enemies you Shock with\nHits from Skills"
 			}
 		},
 		stats={
-			[1]="elemental_invocation_gain_X_energy_on_shock"
+			[1]="elemental_invocation_gain_X_centienergy_per_monster_power_on_shock"
 		}
 	},
 	[788]={
@@ -18081,6 +18113,28 @@ return {
 	},
 	[802]={
 		[1]={
+			[1]={
+				limit={
+					[1]={
+						[1]=1,
+						[2]="#"
+					}
+				},
+				text="{0}% increased Energy gained"
+			},
+			[2]={
+				[1]={
+					k="negate",
+					v=1
+				},
+				limit={
+					[1]={
+						[1]="#",
+						[2]=-1
+					}
+				},
+				text="{0}% reduced Energy gained"
+			}
 		},
 		stats={
 			[1]="energy_generated_+%"
@@ -23247,6 +23301,10 @@ return {
 	[1043]={
 		[1]={
 			[1]={
+				[1]={
+					k="divide_by_one_hundred_2dp_if_required",
+					v=1
+				},
 				limit={
 					[1]={
 						[1]="#",
@@ -23257,7 +23315,7 @@ return {
 			}
 		},
 		stats={
-			[1]="melee_kill_invocation_gain_X_energy_per_monster_power_on_melee_kill"
+			[1]="melee_kill_invocation_gain_X_centienergy_per_monster_power_on_melee_kill"
 		}
 	},
 	[1044]={
@@ -36561,34 +36619,34 @@ return {
 	["cast_linked_spells_on_melee_kill_%"]=248,
 	["cast_on_any_damage_taken_%"]=261,
 	["cast_on_attack_use_%"]=255,
-	["cast_on_block_gain_X_energy_on_block"]=565,
+	["cast_on_block_gain_X_centienergy_on_block"]=565,
 	["cast_on_crit_%"]=567,
-	["cast_on_crit_gain_X_energy_on_crit"]=566,
+	["cast_on_crit_gain_X_centienergy_per_monster_power_on_crit"]=566,
 	["cast_on_damage_taken_%"]=274,
-	["cast_on_damage_taken_gain_X_energy_when_hit"]=568,
+	["cast_on_damage_taken_gain_X_centienergy_when_hit"]=568,
 	["cast_on_damage_taken_threshold"]=274,
 	["cast_on_death_%"]=263,
-	["cast_on_death_gain_X_energy_on_death"]=569,
-	["cast_on_dodge_roll_gain_X_energy_per_unit_travelled_while_dodge_rolling"]=570,
+	["cast_on_death_gain_X_centienergy_on_death"]=569,
+	["cast_on_dodge_roll_gain_X_centienergy_per_unit_travelled_while_dodge_rolling"]=570,
 	["cast_on_flask_use_%"]=571,
-	["cast_on_freeze_gain_X_energy_on_freeze"]=572,
+	["cast_on_freeze_gain_X_centienergy_per_monster_power_on_freeze"]=572,
 	["cast_on_gain_avians_flight_or_avians_might_%"]=267,
 	["cast_on_hit_%"]=268,
 	["cast_on_hit_if_cursed_%"]=269,
-	["cast_on_ignite_gain_X_energy_on_ignite"]=573,
+	["cast_on_ignite_gain_X_centienergy_per_monster_power_on_ignite"]=573,
 	["cast_on_lose_cats_stealth"]=270,
 	["cast_on_melee_hit_if_cursed_%"]=271,
-	["cast_on_melee_kill_gain_X_energy_on_melee_kill"]=574,
-	["cast_on_melee_stun_gain_X_energy_on_heavy_stun"]=575,
-	["cast_on_melee_stun_gain_X_energy_on_stun"]=576,
+	["cast_on_melee_kill_gain_X_centienergy_per_monster_power_on_melee_kill"]=574,
+	["cast_on_melee_stun_gain_X_centienergy_per_monster_power_on_heavy_stun"]=575,
+	["cast_on_melee_stun_gain_X_centienergy_per_monster_power_on_stun"]=576,
 	["cast_on_minion_death_gain_1_energy_per_X_minion_relative_defensiveness_%"]=577,
-	["cast_on_shock_gain_X_energy_on_shock"]=578,
+	["cast_on_shock_gain_X_centienergy_per_monster_power_on_shock"]=578,
 	["cast_on_skill_use_%"]=256,
 	["cast_on_stunned_%"]=265,
 	["cast_speed_+%_granted_from_skill"]=16,
 	["cast_speed_+%_when_on_low_life"]=54,
 	["cast_when_hit_%"]=262,
-	["cast_when_stunned_gain_X_energy_when_stunned"]=579,
+	["cast_when_stunned_gain_X_centienergy_when_stunned"]=579,
 	["cast_while_channelling_gain_X_energy_per_second_while_channelling"]=580,
 	["cast_while_channelling_lose_X_energy_per_second_while_not_channelling"]=581,
 	["cast_while_channelling_time_ms"]=278,
@@ -36861,9 +36919,9 @@ return {
 	["elemental_hit_area_of_effect_+100%_final_vs_enemy_with_associated_ailment"]=783,
 	["elemental_hit_damage_+10%_final_per_enemy_elemental_ailment"]=784,
 	["elemental_hit_no_physical_chaos_damage"]=305,
-	["elemental_invocation_gain_X_energy_on_freeze"]=785,
-	["elemental_invocation_gain_X_energy_on_ignite"]=786,
-	["elemental_invocation_gain_X_energy_on_shock"]=787,
+	["elemental_invocation_gain_X_centienergy_per_monster_power_on_freeze"]=785,
+	["elemental_invocation_gain_X_centienergy_per_monster_power_on_ignite"]=786,
+	["elemental_invocation_gain_X_centienergy_per_monster_power_on_shock"]=787,
 	["elemental_penetration_%_from_resonance"]=788,
 	["elemental_strike_physical_damage_%_to_convert"]=336,
 	["elusive_effect_+%"]=789,
@@ -37231,7 +37289,7 @@ return {
 	["melee_counterattack_trigger_on_block_%"]=251,
 	["melee_counterattack_trigger_on_hit_%"]=249,
 	["melee_damage_vs_bleeding_enemies_+%"]=330,
-	["melee_kill_invocation_gain_X_energy_per_monster_power_on_melee_kill"]=1043,
+	["melee_kill_invocation_gain_X_centienergy_per_monster_power_on_melee_kill"]=1043,
 	["melee_physical_damage_+%"]=154,
 	["melee_range_+"]=338,
 	["melee_weapon_range_+"]=337,
