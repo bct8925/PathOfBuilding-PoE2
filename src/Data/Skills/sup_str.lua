@@ -17,7 +17,7 @@ skills["SupportAftershockChancePlayer"] = {
 	excludeSkillTypes = { SkillType.SummonsTotem, SkillType.UsedByTotem, SkillType.Trapped, SkillType.RemoteMined, SkillType.Vaal, },
 	statDescriptionScope = "gem_stat_descriptions",
 	constantStats = {
-		{ "slam_aftershock_chance_%", 20 },
+		{ "slam_aftershock_chance_%", 25 },
 	},
 	stats = {
 	},
@@ -496,7 +496,7 @@ skills["LessDurationSupportPlayer"] = {
 }
 skills["SupportFireExposurePlayer"] = {
 	name = "Fire Exposure",
-	description = "Supports any skill that Hits enemies, causing it to deal less damage but inflict Fire Exposure when it Ignites an enemy.",
+	description = "Supports any skill that Hits enemies, causing it to inflict Fire Exposure when it Ignites an enemy.",
 	color = 1,
 	incrementalEffectiveness = 0.054999999701977,
 	support = true,
@@ -508,18 +508,14 @@ skills["SupportFireExposurePlayer"] = {
 		["inflict_fire_exposure_for_x_ms_on_ignite"] = {
 			mod("FireExposureChance", "BASE", nil, 0, 0, { type = "ActorCondition", actor = "enemy", var = "Ignited"}),
 		},
-		["support_fire_exposure_damage_+%_final"] = {
-			mod("Damage", "MORE", nil),
-		},
 	},
 	constantStats = {
 		{ "inflict_fire_exposure_for_x_ms_on_ignite", 8000 },
-		{ "support_fire_exposure_damage_+%_final", -25 },
 	},
 	stats = {
 	},
 	levels = {
-		[1] = { levelRequirement = 0, actorLevel = 1, },
+		[1] = { manaMultiplier = 20, levelRequirement = 0, actorLevel = 1, },
 	},
 }
 skills["SupportAddedFireDamagePlayer"] = {
@@ -831,7 +827,7 @@ skills["ImpactShockwaveSupportPlayer"] = {
 	excludeSkillTypes = { },
 	statDescriptionScope = "gem_stat_descriptions",
 	constantStats = {
-		{ "support_impact_shockwave_base_splash_radius", 14 },
+		{ "support_impact_shockwave_base_splash_radius", 20 },
 	},
 	stats = {
 	},
@@ -952,7 +948,7 @@ skills["SupportChanceToBleedPlayer"] = {
 	excludeSkillTypes = { },
 	statDescriptionScope = "gem_stat_descriptions",
 	constantStats = {
-		{ "base_chance_to_inflict_bleeding_%", 30 },
+		{ "base_chance_to_inflict_bleeding_%", 50 },
 	},
 	stats = {
 	},
@@ -1319,11 +1315,33 @@ skills["StompingGroundShockwavePlayer"] = {
 	constantStats = {
 		{ "active_skill_base_area_of_effect_radius", 18 },
 		{ "stomping_ground_trigger_on_footstep_%_chance", 100 },
-		{ "attack_minimum_added_physical_damage_as_%_of_strength", 20 },
-		{ "attack_maximum_added_physical_damage_as_%_of_strength", 30 },
+		{ "attack_minimum_added_physical_damage_as_%_of_strength", 80 },
+		{ "attack_maximum_added_physical_damage_as_%_of_strength", 120 },
 	},
 	stats = {
 		"is_area_damage",
+	},
+	levels = {
+		[1] = { levelRequirement = 0, actorLevel = 1, },
+	},
+}
+skills["SupportTremorsPlayer"] = {
+	name = "Tremors",
+	description = "Supports Slam Skills you use yourself. Supported Skills gain multiple independent chances to cause Aftershocks, but deal less Damage.",
+	color = 1,
+	incrementalEffectiveness = 0.054999999701977,
+	support = true,
+	requireSkillTypes = { SkillType.Slam, },
+	addSkillTypes = { },
+	excludeSkillTypes = { SkillType.Minion, SkillType.UsedByTotem, },
+	statDescriptionScope = "gem_stat_descriptions",
+	constantStats = {
+		{ "support_slam_chance_for_one_additional_aftershock_%", 30 },
+		{ "support_slam_chance_for_two_additional_aftershocks_%", 15 },
+		{ "support_slam_chance_for_three_additional_aftershocks_%", 10 },
+		{ "support_unstable_earth_damage_+%_final", -35 },
+	},
+	stats = {
 	},
 	levels = {
 		[1] = { levelRequirement = 0, actorLevel = 1, },

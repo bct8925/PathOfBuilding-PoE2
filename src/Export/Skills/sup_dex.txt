@@ -50,39 +50,30 @@ local skills, mod, flag, skill = ...
 #mods
 
 #skill SupportCloseCombatPlayer
-
 #mods
 
 #skill SupportComboFinisherPlayer
-
 #mods
 
 #skill SupportMultiplePoisonPlayer
-
 #mods
 
 #skill SupportChanceToShockPlayer
-
 #mods
 
 #skill SupportCorrosionPlayer
-
 #mods
 
 #skill SupportCrescendoPlayer
-
 #mods
 
 #skill SupportCullingStrikePlayer
-
 #mods
 
 #skill SupportCulminationPlayer
-
 #mods
 
 #skill SupportDeadlyPoisonPlayer
-
 #mods
 
 #skill SupportSlowerProjectilesPlayer
@@ -94,59 +85,45 @@ local skills, mod, flag, skill = ...
 #mods
 
 #skill SupportDazingPlayer
-
 #mods
 
 #skill SupportElectrocutePlayer
-
 #mods
 
 #skill SupportEncumberancePlayer
-
 #mods
 
 #skill SupportChanceToPoisonPlayer
-
 #mods
 
 #skill SupportFerocityPlayer
-
 #mods
 
 #skill SupportForkPlayer
-
 #mods
 
 #skill SupportFusilladePlayer
-
 #mods
 
 #skill SupportCooldownReductionPlayer
-
 #mods
 
 #skill SupportInnervatePlayer
-
 #mods
 
 #skill SupportLastingShockPlayer
-
 #mods
 
 #skill SupportLeveragePlayer
-
 #mods
 
 #skill SupportLifeFlaskPlayer
-
 #mods
 
 #skill SupportLifeOnCullPlayer
-
 #mods
 
 #skill SupportLightningExposurePlayer
-
 #mods
 
 #skill SupportAddedLightningDamagePlayer
@@ -159,113 +136,85 @@ local skills, mod, flag, skill = ...
 #mods
 
 #skill SupportLightningPenetrationPlayer
-
 #mods
 
 #skill SupportLockdownPlayer
-
 #mods
 
 #skill SupportFarCombatPlayer
-
 #mods
 
 #skill SupportMaimPlayer
-
 #mods
 
 #skill SupportManaFlaskPlayer
-
 #mods
 
 #skill SupportFasterAttackPlayer
-
 #mods
 
 #skill SupportMobilityPlayer
-
 #mods
 
 #skill SupportMomentumPlayer
-
 #mods
 
 #skill SupportEmpoweredCullPlayer
-
 #mods
 
 #skill SupportNeuralOverloadPlayer
-
 #mods
 
 #skill SupportNimbleReloadPlayer
-
 #mods
 
 #skill SupportIncreaseLimitPlayer
-
 #mods
 
 #skill SupportOverchargePlayer
-
 #mods
 
 #skill SupportPayloadPlayer
-
 #mods
 
 #skill SupportPerpetualChargePlayer
-
 #mods
 
 #skill SupportPiercePlayer
-
 #mods
 
 #skill SupportPinPlayer
-
 #mods
 
 #skill SupportPracticedComboPlayer
-
 #mods
 
 #skill SupportPrecisionPlayer
-
 #mods
 
 #skill SupportMultipleChargesPlayer
-
 #mods
 
 #skill SupportRicochetPlayer
-
 #mods
 
 #skill SupportMultipleProjectilesPlayer
-
 #mods
 
 #skill SupportSecondWindPlayer
-
 #mods
 
 #skill SupportManaOnCullPlayer
-
 #mods
 
 #skill SupportSwiftAfflictionPlayer
-
 #mods
 
 #skill SupportKnockbackWavePlayer
-
 #mods
 
 #skill KnockbackWavePlayer
-
 #mods
 
 #skill SupportWindowOfOpportunityPlayer
-
 #mods

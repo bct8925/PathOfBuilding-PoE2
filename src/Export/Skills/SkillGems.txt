@@ -119,6 +119,7 @@ Ruthless                      		----		RuthlessSupportPlayer
 Searing Flame                 		----		SupportDeadlyIgnitesPlayer
 Splinter                      		----		SupportArmourBreakPlayer
 Stomping Ground               		----		SupportStompingGroundPlayer	StompingGroundShockwavePlayer
+Tremors                       		----		SupportTremorsPlayer
 Unbreakable                   		----		UnbreakableSupportPlayer
 Upheaval                      		----		SupportUpheavalPlayer
 Vitality                      		----		SupportVitalityPlayer
@@ -335,6 +336,7 @@ Ambush                        		----		SupportAmbushPlayer
 Arcane Surge                  		----		SupportArcaneSurgePlayer
 Arcane Tempo                  		----		SupportFasterCastPlayer
 Astral Projection             		----		SupportAstralProjectionPlayer
+Bidding                       		----		SupportBiddingPlayer
 Biting Frost                  		----		SupportBitingFrostPlayer
 Burning Inscription           		----		SupportBurningRunesPlayer	TriggeredBurningRunesPlayer
 Capacitor                     		----		SupportCapacitorPlayer

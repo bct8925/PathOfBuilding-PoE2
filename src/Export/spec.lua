@@ -140,6 +140,55 @@ return {
 	activeskillrequirementicons={
 	},
 	activeskillrequirements={
+		[1]={
+			list=false,
+			name="",
+			refTo="",
+			type="Key",
+			width=230
+		},
+		[2]={
+			list=false,
+			name="",
+			refTo="",
+			type="Key",
+			width=350
+		},
+		[3]={
+			list=false,
+			name="",
+			refTo="",
+			type="Int",
+			width=150
+		},
+		[4]={
+			list=false,
+			name="",
+			refTo="",
+			type="Int",
+			width=150
+		},
+		[5]={
+			list=false,
+			name="",
+			refTo="",
+			type="Bool",
+			width=150
+		},
+		[6]={
+			list=false,
+			name="",
+			refTo="",
+			type="Key",
+			width=50
+		},
+		[7]={
+			list=false,
+			name="",
+			refTo="",
+			type="Key",
+			width=50
+		}
 	},
 	activeskills={
 		[1]={
@@ -361,14 +410,14 @@ return {
 		},
 		[32]={
 			list=false,
-			name="",
-			refTo="",
+			name="Audio",
+			refTo="CharacterAudioEvents",
 			type="Key",
 			width=150
 		},
 		[33]={
 			list=false,
-			name="",
+			name="CompanionAIScript",
 			refTo="",
 			type="String",
 			width=150
@@ -3589,24 +3638,24 @@ return {
 	classpassiveskilloverrides={
 		[1]={
 			list=false,
-			name="",
-			refTo="",
+			name="Character",
+			refTo="Characters",
 			type="Key",
-			width=150
+			width=200
 		},
 		[2]={
 			list=false,
-			name="",
-			refTo="",
+			name="OriginalNode",
+			refTo="PassiveSkills",
 			type="Key",
-			width=350
+			width=200
 		},
 		[3]={
 			list=false,
-			name="",
-			refTo="",
+			name="SwitchedNode",
+			refTo="PassiveSkills",
 			type="Key",
-			width=300
+			width=200
 		}
 	},
 	clientlakedifficulty={
@@ -5625,7 +5674,7 @@ return {
 			list=false,
 			name="",
 			refTo="",
-			type="UInt",
+			type="Int",
 			width=150
 		},
 		[5]={
@@ -13178,38 +13227,17 @@ return {
 	startingpassiveskills={
 		[1]={
 			list=false,
-			name="",
+			name="Id",
 			refTo="",
 			type="String",
 			width=150
 		},
 		[2]={
-			list=false,
-			name="",
-			refTo="",
-			type="Int",
-			width=150
-		},
-		[3]={
-			list=false,
-			name="",
-			refTo="",
-			type="Int",
-			width=150
-		},
-		[4]={
-			list=false,
-			name="",
-			refTo="",
-			type="Int",
-			width=150
-		},
-		[5]={
-			list=false,
-			name="",
-			refTo="",
-			type="Int",
-			width=150
+			list=true,
+			name="PassiveSkills",
+			refTo="PassiveSkills",
+			type="Key",
+			width=300
 		}
 	},
 	stashid={

@@ -141158,7 +141158,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Hits ignore Elemental Resistances of Frozen Enemies"
+				text="Hits ignore non-negative Elemental Resistances of Frozen Enemies"
 			}
 		},
 		stats={
@@ -153095,7 +153095,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="{0}% increased Effect of Jewel Socket Passive Skills\ncontaining Corrupted Magic Basic Jewels"
+				text="{0}% increased Effect of Jewel Socket Passive Skills\ncontaining Corrupted Magic Jewels"
 			},
 			[2]={
 				[1]={
@@ -153108,7 +153108,7 @@ return {
 						[2]=-1
 					}
 				},
-				text="{0}% reduced Effect of Jewel Socket Passive Skills\ncontaining Corrupted Magic Basic Jewels"
+				text="{0}% reduced Effect of Jewel Socket Passive Skills\ncontaining Corrupted Magic Jewels"
 			}
 		},
 		stats={
@@ -154468,7 +154468,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Mana Flask Effects are not removed when Unreserved Mana is Filled\nMana Flask Effects do not Queue"
+				text="Mana Flask Effects are not removed when Unreserved Mana is Filled\Mana Flask Effects do not Queue"
 			}
 		},
 		stats={
@@ -177610,6 +177610,31 @@ return {
 						[2]=1
 					}
 				},
+				text="{0:+d} Charm Slot"
+			},
+			[2]={
+				limit={
+					[1]={
+						[1]=2,
+						[2]="#"
+					}
+				},
+				text="{0:+d} Charm Slots"
+			}
+		},
+		stats={
+			[1]="num_charm_slots"
+		}
+	},
+	[8116]={
+		[1]={
+			[1]={
+				limit={
+					[1]={
+						[1]=1,
+						[2]=1
+					}
+				},
 				text="Bow Attacks fire an additional Arrow while Main Hand Accuracy Rating is at least 3000"
 			},
 			[2]={
@@ -177626,7 +177651,7 @@ return {
 			[1]="number_of_additional_arrows_while_main_hand_accuracy_is_3000_or_more"
 		}
 	},
-	[8116]={
+	[8117]={
 		[1]={
 			[1]={
 				limit={
@@ -177642,7 +177667,7 @@ return {
 			[1]="number_of_additional_chains_for_projectiles_while_phasing"
 		}
 	},
-	[8117]={
+	[8118]={
 		[1]={
 			[1]={
 				limit={
@@ -177667,7 +177692,7 @@ return {
 			[1]="number_of_additional_curses_allowed_while_affected_by_malevolence"
 		}
 	},
-	[8118]={
+	[8119]={
 		[1]={
 			[1]={
 				limit={
@@ -177692,7 +177717,7 @@ return {
 			[1]="number_of_additional_curses_allowed_while_at_maximum_power_charges"
 		}
 	},
-	[8119]={
+	[8120]={
 		[1]={
 			[1]={
 				limit={
@@ -177717,7 +177742,7 @@ return {
 			[1]="number_of_additional_ignites_allowed"
 		}
 	},
-	[8120]={
+	[8121]={
 		[1]={
 			[1]={
 				limit={
@@ -177742,7 +177767,7 @@ return {
 			[1]="number_of_additional_mines_to_place_with_at_least_500_dex"
 		}
 	},
-	[8121]={
+	[8122]={
 		[1]={
 			[1]={
 				limit={
@@ -177767,7 +177792,7 @@ return {
 			[1]="number_of_additional_mines_to_place_with_at_least_500_int"
 		}
 	},
-	[8122]={
+	[8123]={
 		[1]={
 			[1]={
 				limit={
@@ -177783,7 +177808,7 @@ return {
 			[1]="number_of_additional_poison_stacks"
 		}
 	},
-	[8123]={
+	[8124]={
 		[1]={
 			[1]={
 				limit={
@@ -177808,7 +177833,7 @@ return {
 			[1]="number_of_additional_projectiles_if_last_movement_skill_was_retreating_throw"
 		}
 	},
-	[8124]={
+	[8125]={
 		[1]={
 			[1]={
 				limit={
@@ -177833,7 +177858,7 @@ return {
 			[1]="number_of_additional_projectiles_if_you_have_been_hit_recently"
 		}
 	},
-	[8125]={
+	[8126]={
 		[1]={
 			[1]={
 				limit={
@@ -177858,7 +177883,7 @@ return {
 			[1]="number_of_additional_projectiles_if_you_have_used_movement_skill_recently"
 		}
 	},
-	[8126]={
+	[8127]={
 		[1]={
 			[1]={
 				limit={
@@ -177883,7 +177908,7 @@ return {
 			[1]="number_of_additional_traps_to_throw"
 		}
 	},
-	[8127]={
+	[8128]={
 		[1]={
 			[1]={
 				limit={
@@ -177899,7 +177924,7 @@ return {
 			[1]="number_of_animated_weapons_allowed"
 		}
 	},
-	[8128]={
+	[8129]={
 		[1]={
 			[1]={
 				limit={
@@ -177915,7 +177940,7 @@ return {
 			[1]="base_number_of_arbalists"
 		}
 	},
-	[8129]={
+	[8130]={
 		[1]={
 			[1]={
 				limit={
@@ -177940,7 +177965,7 @@ return {
 			[1]="number_of_endurance_charges_to_gain_every_4_seconds_while_stationary"
 		}
 	},
-	[8130]={
+	[8131]={
 		[1]={
 			[1]={
 				limit={
@@ -177956,7 +177981,7 @@ return {
 			[1]="number_of_golems_allowed_with_3_primordial_jewels"
 		}
 	},
-	[8131]={
+	[8132]={
 		[1]={
 			[1]={
 				limit={
@@ -177981,7 +178006,7 @@ return {
 			[1]="number_of_projectiles_+%_final_from_skill"
 		}
 	},
-	[8132]={
+	[8133]={
 		[1]={
 			[1]={
 				limit={
@@ -177997,7 +178022,7 @@ return {
 			[1]="number_of_raging_spirits_is_limited_to_3"
 		}
 	},
-	[8133]={
+	[8134]={
 		[1]={
 			[1]={
 				[1]={
@@ -178017,7 +178042,7 @@ return {
 			[1]="number_of_skeletons_allowed_per_2_old"
 		}
 	},
-	[8134]={
+	[8135]={
 		[1]={
 			[1]={
 				limit={
@@ -178033,7 +178058,7 @@ return {
 			[1]="number_of_support_ghosts_is_limited_to_3"
 		}
 	},
-	[8135]={
+	[8136]={
 		[1]={
 			[1]={
 				limit={
@@ -178049,7 +178074,7 @@ return {
 			[1]="number_of_zombies_allowed_+1_per_X_strength"
 		}
 	},
-	[8136]={
+	[8137]={
 		[1]={
 			[1]={
 				limit={
@@ -178078,7 +178103,7 @@ return {
 			[1]="occultist_chaos_damage_+%_final"
 		}
 	},
-	[8137]={
+	[8138]={
 		[1]={
 			[1]={
 				limit={
@@ -178107,7 +178132,7 @@ return {
 			[1]="occultist_cold_damage_+%_final"
 		}
 	},
-	[8138]={
+	[8139]={
 		[1]={
 			[1]={
 				limit={
@@ -178123,7 +178148,7 @@ return {
 			[1]="off_hand_accuracy_equal_to_main_hand_accuracy_while_wielding_sword"
 		}
 	},
-	[8139]={
+	[8140]={
 		[1]={
 			[1]={
 				limit={
@@ -178152,7 +178177,7 @@ return {
 			[1]="off_hand_attack_speed_+%_while_dual_wielding"
 		}
 	},
-	[8140]={
+	[8141]={
 		[1]={
 			[1]={
 				limit={
@@ -178181,7 +178206,7 @@ return {
 			[1]="off_hand_attack_speed_+%_while_wielding_two_weapon_types"
 		}
 	},
-	[8141]={
+	[8142]={
 		[1]={
 			[1]={
 				limit={
@@ -178210,7 +178235,7 @@ return {
 			[1]="off_hand_claw_mana_gain_on_hit"
 		}
 	},
-	[8142]={
+	[8143]={
 		[1]={
 			[1]={
 				[1]={
@@ -178230,7 +178255,7 @@ return {
 			[1]="off_hand_critical_strike_chance_+_per_10_es_on_shield"
 		}
 	},
-	[8143]={
+	[8144]={
 		[1]={
 			[1]={
 				limit={
@@ -178246,7 +178271,7 @@ return {
 			[1]="off_hand_critical_strike_multiplier_+_per_10_es_on_shield"
 		}
 	},
-	[8144]={
+	[8145]={
 		[1]={
 			[1]={
 				limit={
@@ -178262,7 +178287,7 @@ return {
 			[1]="off_hand_critical_strike_multiplier_+_per_melee_abyss_jewel_up_to_+100"
 		}
 	},
-	[8145]={
+	[8146]={
 		[1]={
 			[1]={
 				limit={
@@ -178291,7 +178316,7 @@ return {
 			[1]="offering_area_of_effect_+%"
 		}
 	},
-	[8146]={
+	[8147]={
 		[1]={
 			[1]={
 				limit={
@@ -178320,7 +178345,7 @@ return {
 			[1]="offering_duration_+%"
 		}
 	},
-	[8147]={
+	[8148]={
 		[1]={
 			[1]={
 				limit={
@@ -178349,7 +178374,7 @@ return {
 			[1]="offering_life_+%"
 		}
 	},
-	[8148]={
+	[8149]={
 		[1]={
 			[1]={
 				limit={
@@ -178365,7 +178390,7 @@ return {
 			[1]="on_cast_lose_all_mana_gain_%_as_maximum_lightning_damage_for_4_seconds"
 		}
 	},
-	[8149]={
+	[8150]={
 		[1]={
 			[1]={
 				limit={
@@ -178381,7 +178406,7 @@ return {
 			[1]="on_casting_banner_recover_%_of_planted_banner_stages"
 		}
 	},
-	[8150]={
+	[8151]={
 		[1]={
 			[1]={
 				limit={
@@ -178397,7 +178422,7 @@ return {
 			[1]="on_kill_effects_occur_twice"
 		}
 	},
-	[8151]={
+	[8152]={
 		[1]={
 			[1]={
 				[1]={
@@ -178417,7 +178442,7 @@ return {
 			[1]="on_planting_banner_you_and_nearby_allies_recover_permyriad_maximum_life_per_stage"
 		}
 	},
-	[8152]={
+	[8153]={
 		[1]={
 			[1]={
 				limit={
@@ -178446,7 +178471,7 @@ return {
 			[1]="one_handed_attack_ailment_chance_+%"
 		}
 	},
-	[8153]={
+	[8154]={
 		[1]={
 			[1]={
 				limit={
@@ -178462,7 +178487,7 @@ return {
 			[1]="open_nearby_chests_on_cast_chance_%"
 		}
 	},
-	[8154]={
+	[8155]={
 		[1]={
 			[1]={
 				limit={
@@ -178478,7 +178503,7 @@ return {
 			[1]="orb_of_storm_strike_rate_while_channelling_+%"
 		}
 	},
-	[8155]={
+	[8156]={
 		[1]={
 			[1]={
 				limit={
@@ -178494,7 +178519,7 @@ return {
 			[1]="orb_of_storms_cast_speed_+%"
 		}
 	},
-	[8156]={
+	[8157]={
 		[1]={
 			[1]={
 				limit={
@@ -178510,7 +178535,7 @@ return {
 			[1]="overkill_damage_%_as_physical_to_nearby_enemies"
 		}
 	},
-	[8157]={
+	[8158]={
 		[1]={
 			[1]={
 				limit={
@@ -178526,7 +178551,7 @@ return {
 			[1]="override_block_chance_for_allies_in_your_presence"
 		}
 	},
-	[8158]={
+	[8159]={
 		[1]={
 			[1]={
 				limit={
@@ -178542,7 +178567,7 @@ return {
 			[1]="override_maximum_damage_resistance_%"
 		}
 	},
-	[8159]={
+	[8160]={
 		[1]={
 			[1]={
 				[1]={
@@ -178562,7 +178587,7 @@ return {
 			[1]="override_weapon_base_critical_strike_chance"
 		}
 	},
-	[8160]={
+	[8161]={
 		[1]={
 			[1]={
 				limit={
@@ -178591,7 +178616,7 @@ return {
 			[1]="pantheon_abberath_ignite_duration_on_self_+%_final"
 		}
 	},
-	[8161]={
+	[8162]={
 		[1]={
 			[1]={
 				limit={
@@ -178620,7 +178645,7 @@ return {
 			[1]="pantheon_shakari_self_poison_duration_+%_final"
 		}
 	},
-	[8162]={
+	[8163]={
 		[1]={
 			[1]={
 				limit={
@@ -178649,7 +178674,7 @@ return {
 			[1]="passive_mastery_chaos_damage_+%_final_against_enemies_with_energy_shield"
 		}
 	},
-	[8163]={
+	[8164]={
 		[1]={
 			[1]={
 				limit={
@@ -178678,7 +178703,7 @@ return {
 			[1]="passive_mastery_damage_taken_over_time_+%_final"
 		}
 	},
-	[8164]={
+	[8165]={
 		[1]={
 			[1]={
 				limit={
@@ -178694,7 +178719,7 @@ return {
 			[1]="passive_mastery_exposure_you_inflict_has_minimum_resistance_lower_%"
 		}
 	},
-	[8165]={
+	[8166]={
 		[1]={
 			[1]={
 				limit={
@@ -178723,7 +178748,7 @@ return {
 			[1]="passive_mastery_less_projectile_speed_+%_final"
 		}
 	},
-	[8166]={
+	[8167]={
 		[1]={
 			[1]={
 				limit={
@@ -178752,7 +178777,7 @@ return {
 			[1]="passive_mastery_less_skill_effect_duration_+%_final"
 		}
 	},
-	[8167]={
+	[8168]={
 		[1]={
 			[1]={
 				limit={
@@ -178781,7 +178806,7 @@ return {
 			[1]="passive_mastery_maximum_physical_attack_damage_+%_final_with_daggers"
 		}
 	},
-	[8168]={
+	[8169]={
 		[1]={
 			[1]={
 				limit={
@@ -178810,7 +178835,7 @@ return {
 			[1]="passive_mastery_more_projectile_speed_+%_final"
 		}
 	},
-	[8169]={
+	[8170]={
 		[1]={
 			[1]={
 				limit={
@@ -178839,7 +178864,7 @@ return {
 			[1]="passive_mastery_more_skill_effect_duration_+%_final"
 		}
 	},
-	[8170]={
+	[8171]={
 		[1]={
 			[1]={
 				limit={
@@ -178868,7 +178893,7 @@ return {
 			[1]="passive_mastery_physical_damage_taken_+%_final_while_on_full_energy_shield"
 		}
 	},
-	[8171]={
+	[8172]={
 		[1]={
 			[1]={
 				limit={
@@ -178897,7 +178922,7 @@ return {
 			[1]="passive_mastery_stun_duration_+%_final_with_two_hand_weapon"
 		}
 	},
-	[8172]={
+	[8173]={
 		[1]={
 			[1]={
 				limit={
@@ -178926,7 +178951,7 @@ return {
 			[1]="passive_tree_damage_taken_+%_final_from_hindered_enemies"
 		}
 	},
-	[8173]={
+	[8174]={
 		[1]={
 			[1]={
 				limit={
@@ -178955,7 +178980,7 @@ return {
 			[1]="passive_tree_mace_damage_+%_final_vs_heavy_stunned_enemies"
 		}
 	},
-	[8174]={
+	[8175]={
 		[1]={
 			[1]={
 				[1]={
@@ -178975,7 +179000,7 @@ return {
 			[1]="pathfinder_ascendancy_poison_on_enemies_you_kill_spread_to_enemies_within_x"
 		}
 	},
-	[8175]={
+	[8176]={
 		[1]={
 			[1]={
 				limit={
@@ -179004,7 +179029,7 @@ return {
 			[1]="pathfinder_flask_amount_to_recover_+%_final"
 		}
 	},
-	[8176]={
+	[8177]={
 		[1]={
 			[1]={
 				limit={
@@ -179033,7 +179058,7 @@ return {
 			[1]="pathfinder_flask_life_to_recover_+%_final"
 		}
 	},
-	[8177]={
+	[8178]={
 		[1]={
 			[1]={
 				limit={
@@ -179062,7 +179087,7 @@ return {
 			[1]="pathfinder_poison_duration_+%_final"
 		}
 	},
-	[8178]={
+	[8179]={
 		[1]={
 			[1]={
 				limit={
@@ -179091,7 +179116,7 @@ return {
 			[1]="penance_brand_area_of_effect_+%"
 		}
 	},
-	[8179]={
+	[8180]={
 		[1]={
 			[1]={
 				limit={
@@ -179120,7 +179145,7 @@ return {
 			[1]="penance_brand_cast_speed_+%"
 		}
 	},
-	[8180]={
+	[8181]={
 		[1]={
 			[1]={
 				limit={
@@ -179149,7 +179174,7 @@ return {
 			[1]="penance_brand_damage_+%"
 		}
 	},
-	[8181]={
+	[8182]={
 		[1]={
 			[1]={
 				limit={
@@ -179165,7 +179190,7 @@ return {
 			[1]="penetrate_elemental_resistance_%_per_abyssal_jewel_affecting_you"
 		}
 	},
-	[8182]={
+	[8183]={
 		[1]={
 			[1]={
 				limit={
@@ -179181,7 +179206,7 @@ return {
 			[1]="perandus_double_number_of_coins_found"
 		}
 	},
-	[8183]={
+	[8184]={
 		[1]={
 			[1]={
 				limit={
@@ -179197,7 +179222,7 @@ return {
 			[1]="%_chance_to_deal_150%_area_damage_+%_final"
 		}
 	},
-	[8184]={
+	[8185]={
 		[1]={
 			[1]={
 				limit={
@@ -179222,7 +179247,7 @@ return {
 			[1]="%_chance_to_gain_endurance_charge_each_second_while_channelling"
 		}
 	},
-	[8185]={
+	[8186]={
 		[1]={
 			[1]={
 				limit={
@@ -179238,7 +179263,7 @@ return {
 			[1]="%_chance_to_gain_random_charge_on_trap_triggered_by_an_enemy"
 		}
 	},
-	[8186]={
+	[8187]={
 		[1]={
 			[1]={
 				limit={
@@ -179267,7 +179292,7 @@ return {
 			[1]="%_number_of_raging_spirits_allowed"
 		}
 	},
-	[8187]={
+	[8188]={
 		[1]={
 			[1]={
 				limit={
@@ -179296,7 +179321,7 @@ return {
 			[1]="perfect_timing_window_ms_+%"
 		}
 	},
-	[8188]={
+	[8189]={
 		[1]={
 			[1]={
 				limit={
@@ -179312,7 +179337,7 @@ return {
 			[1]="permanent_damage_+%_per_second_of_chill"
 		}
 	},
-	[8189]={
+	[8190]={
 		[1]={
 			[1]={
 				limit={
@@ -179328,7 +179353,7 @@ return {
 			[1]="permanent_damage_+%_per_second_of_freeze"
 		}
 	},
-	[8190]={
+	[8191]={
 		[1]={
 			[1]={
 				limit={
@@ -179344,7 +179369,7 @@ return {
 			[1]="permanently_intimidate_enemy_on_block"
 		}
 	},
-	[8191]={
+	[8192]={
 		[1]={
 			[1]={
 				[1]={
@@ -179377,7 +179402,7 @@ return {
 			[1]="petrified_blood_mana_reservation_efficiency_-2%_per_1"
 		}
 	},
-	[8192]={
+	[8193]={
 		[1]={
 			[1]={
 				limit={
@@ -179406,7 +179431,7 @@ return {
 			[1]="petrified_blood_mana_reservation_efficiency_+%"
 		}
 	},
-	[8193]={
+	[8194]={
 		[1]={
 			[1]={
 				limit={
@@ -179435,7 +179460,7 @@ return {
 			[1]="petrified_blood_reservation_+%"
 		}
 	},
-	[8194]={
+	[8195]={
 		[1]={
 			[1]={
 				limit={
@@ -179460,7 +179485,7 @@ return {
 			[1]="phantasm_refresh_duration_on_hit_vs_unique_%_chance"
 		}
 	},
-	[8195]={
+	[8196]={
 		[1]={
 			[1]={
 				limit={
@@ -179485,7 +179510,7 @@ return {
 			[1]="phase_run_%_chance_to_not_replace_buff_on_skill_use"
 		}
 	},
-	[8196]={
+	[8197]={
 		[1]={
 			[1]={
 				limit={
@@ -179501,7 +179526,7 @@ return {
 			[1]="phasing_if_blocked_recently"
 		}
 	},
-	[8197]={
+	[8198]={
 		[1]={
 			[1]={
 				limit={
@@ -179530,7 +179555,7 @@ return {
 			[1]="phys_cascade_trap_cooldown_speed_+%"
 		}
 	},
-	[8198]={
+	[8199]={
 		[1]={
 			[1]={
 				limit={
@@ -179559,7 +179584,7 @@ return {
 			[1]="phys_cascade_trap_damage_+%"
 		}
 	},
-	[8199]={
+	[8200]={
 		[1]={
 			[1]={
 				limit={
@@ -179588,7 +179613,7 @@ return {
 			[1]="phys_cascade_trap_duration_+%"
 		}
 	},
-	[8200]={
+	[8201]={
 		[1]={
 			[1]={
 				limit={
@@ -179613,7 +179638,7 @@ return {
 			[1]="phys_cascade_trap_number_of_additional_cascades"
 		}
 	},
-	[8201]={
+	[8202]={
 		[1]={
 			[1]={
 				limit={
@@ -179642,7 +179667,7 @@ return {
 			[1]="physical_and_chaos_damage_taken_+%_final_while_not_unhinged"
 		}
 	},
-	[8202]={
+	[8203]={
 		[1]={
 			[1]={
 				limit={
@@ -179658,7 +179683,7 @@ return {
 			[1]="physical_damage_+%_per_explicit_map_mod_affecting_area"
 		}
 	},
-	[8203]={
+	[8204]={
 		[1]={
 			[1]={
 				limit={
@@ -179674,7 +179699,7 @@ return {
 			[1]="physical_damage_from_hits_%_taken_as_random_element"
 		}
 	},
-	[8204]={
+	[8205]={
 		[1]={
 			[1]={
 				limit={
@@ -179703,7 +179728,7 @@ return {
 			[1]="physical_damage_over_time_taken_+%_while_moving"
 		}
 	},
-	[8205]={
+	[8206]={
 		[1]={
 			[1]={
 				limit={
@@ -179732,7 +179757,7 @@ return {
 			[1]="physical_damage_+%_if_skill_costs_life"
 		}
 	},
-	[8206]={
+	[8207]={
 		[1]={
 			[1]={
 				limit={
@@ -179761,7 +179786,7 @@ return {
 			[1]="physical_damage_+%_per_10_rage"
 		}
 	},
-	[8207]={
+	[8208]={
 		[1]={
 			[1]={
 				limit={
@@ -179790,7 +179815,7 @@ return {
 			[1]="physical_damage_+%_vs_ignited_enemies"
 		}
 	},
-	[8208]={
+	[8209]={
 		[1]={
 			[1]={
 				limit={
@@ -179819,7 +179844,7 @@ return {
 			[1]="physical_damage_+%_while_affected_by_herald_of_purity"
 		}
 	},
-	[8209]={
+	[8210]={
 		[1]={
 			[1]={
 				limit={
@@ -179848,7 +179873,7 @@ return {
 			[1]="physical_damage_+%_with_axes_swords"
 		}
 	},
-	[8210]={
+	[8211]={
 		[1]={
 			[1]={
 				limit={
@@ -179877,7 +179902,7 @@ return {
 			[1]="physical_damage_+%_with_unholy_might"
 		}
 	},
-	[8211]={
+	[8212]={
 		[1]={
 			[1]={
 				limit={
@@ -179893,7 +179918,7 @@ return {
 			[1]="physical_damage_prevented_recouped_as_life_%"
 		}
 	},
-	[8212]={
+	[8213]={
 		[1]={
 			[1]={
 				limit={
@@ -179909,7 +179934,7 @@ return {
 			[1]="physical_damage_reduction_%_at_devotion_threshold"
 		}
 	},
-	[8213]={
+	[8214]={
 		[1]={
 			[1]={
 				limit={
@@ -179925,7 +179950,7 @@ return {
 			[1]="physical_damage_reduction_percent_per_frenzy_charge"
 		}
 	},
-	[8214]={
+	[8215]={
 		[1]={
 			[1]={
 				limit={
@@ -179941,7 +179966,7 @@ return {
 			[1]="physical_damage_reduction_%_per_hit_you_have_taken_recently"
 		}
 	},
-	[8215]={
+	[8216]={
 		[1]={
 			[1]={
 				limit={
@@ -179957,7 +179982,7 @@ return {
 			[1]="physical_damage_reduction_percent_per_power_charge"
 		}
 	},
-	[8216]={
+	[8217]={
 		[1]={
 			[1]={
 				limit={
@@ -179973,7 +179998,7 @@ return {
 			[1]="physical_damage_reduction_%_while_affected_by_herald_of_purity"
 		}
 	},
-	[8217]={
+	[8218]={
 		[1]={
 			[1]={
 				limit={
@@ -179989,7 +180014,7 @@ return {
 			[1]="physical_damage_reduction_rating_during_soul_gain_prevention"
 		}
 	},
-	[8218]={
+	[8219]={
 		[1]={
 			[1]={
 				limit={
@@ -180005,7 +180030,7 @@ return {
 			[1]="physical_damage_reduction_rating_if_you_have_hit_an_enemy_recently"
 		}
 	},
-	[8219]={
+	[8220]={
 		[1]={
 			[1]={
 				limit={
@@ -180021,7 +180046,7 @@ return {
 			[1]="physical_damage_reduction_rating_per_endurance_charge"
 		}
 	},
-	[8220]={
+	[8221]={
 		[1]={
 			[1]={
 				limit={
@@ -180037,7 +180062,7 @@ return {
 			[1]="physical_damage_reduction_%_if_only_one_enemy_nearby"
 		}
 	},
-	[8221]={
+	[8222]={
 		[1]={
 			[1]={
 				limit={
@@ -180053,7 +180078,7 @@ return {
 			[1]="physical_damage_reduction_rating_+%_per_endurance_charge"
 		}
 	},
-	[8222]={
+	[8223]={
 		[1]={
 			[1]={
 				limit={
@@ -180069,7 +180094,7 @@ return {
 			[1]="physical_damage_reduction_%_per_nearby_enemy"
 		}
 	},
-	[8223]={
+	[8224]={
 		[1]={
 			[1]={
 				limit={
@@ -180085,7 +180110,7 @@ return {
 			[1]="physical_damage_taken_%_as_cold_while_affected_by_purity_of_elements"
 		}
 	},
-	[8224]={
+	[8225]={
 		[1]={
 			[1]={
 				limit={
@@ -180101,7 +180126,7 @@ return {
 			[1]="physical_damage_taken_%_as_cold_while_affected_by_purity_of_ice"
 		}
 	},
-	[8225]={
+	[8226]={
 		[1]={
 			[1]={
 				limit={
@@ -180117,7 +180142,7 @@ return {
 			[1]="physical_damage_taken_%_as_fire_while_affected_by_purity_of_elements"
 		}
 	},
-	[8226]={
+	[8227]={
 		[1]={
 			[1]={
 				limit={
@@ -180133,7 +180158,7 @@ return {
 			[1]="physical_damage_taken_%_as_fire_while_affected_by_purity_of_fire"
 		}
 	},
-	[8227]={
+	[8228]={
 		[1]={
 			[1]={
 				limit={
@@ -180149,7 +180174,7 @@ return {
 			[1]="physical_damage_taken_%_as_lightning_while_affected_by_purity_of_elements"
 		}
 	},
-	[8228]={
+	[8229]={
 		[1]={
 			[1]={
 				limit={
@@ -180165,7 +180190,7 @@ return {
 			[1]="physical_damage_taken_%_as_lightning_while_affected_by_purity_of_lightning"
 		}
 	},
-	[8229]={
+	[8230]={
 		[1]={
 			[1]={
 				limit={
@@ -180181,7 +180206,7 @@ return {
 			[1]="physical_damage_taken_recouped_as_life_%"
 		}
 	},
-	[8230]={
+	[8231]={
 		[1]={
 			[1]={
 				limit={
@@ -180210,7 +180235,7 @@ return {
 			[1]="physical_damage_with_attack_skills_+%"
 		}
 	},
-	[8231]={
+	[8232]={
 		[1]={
 			[1]={
 				limit={
@@ -180239,7 +180264,7 @@ return {
 			[1]="physical_damage_with_spell_skills_+%"
 		}
 	},
-	[8232]={
+	[8233]={
 		[1]={
 			[1]={
 				limit={
@@ -180255,7 +180280,7 @@ return {
 			[1]="physical_dot_multiplier_+_if_crit_recently"
 		}
 	},
-	[8233]={
+	[8234]={
 		[1]={
 			[1]={
 				limit={
@@ -180271,7 +180296,7 @@ return {
 			[1]="physical_dot_multiplier_+_if_spent_life_recently"
 		}
 	},
-	[8234]={
+	[8235]={
 		[1]={
 			[1]={
 				limit={
@@ -180300,7 +180325,7 @@ return {
 			[1]="physical_dot_multiplier_+_while_wielding_axes_swords"
 		}
 	},
-	[8235]={
+	[8236]={
 		[1]={
 			[1]={
 				limit={
@@ -180316,7 +180341,7 @@ return {
 			[1]="physical_hit_and_dot_damage_%_taken_as_fire"
 		}
 	},
-	[8236]={
+	[8237]={
 		[1]={
 			[1]={
 				limit={
@@ -180332,7 +180357,7 @@ return {
 			[1]="physical_hit_and_dot_damage_%_taken_as_chaos"
 		}
 	},
-	[8237]={
+	[8238]={
 		[1]={
 			[1]={
 				limit={
@@ -180361,7 +180386,7 @@ return {
 			[1]="physical_reflect_damage_taken_and_minion_physical_reflect_damage_taken_+%"
 		}
 	},
-	[8238]={
+	[8239]={
 		[1]={
 			[1]={
 				limit={
@@ -180377,7 +180402,7 @@ return {
 			[1]="physical_skill_gem_level_+"
 		}
 	},
-	[8239]={
+	[8240]={
 		[1]={
 			[1]={
 				limit={
@@ -180406,7 +180431,7 @@ return {
 			[1]="piercing_projectiles_critical_strike_chance_+%"
 		}
 	},
-	[8240]={
+	[8241]={
 		[1]={
 			[1]={
 				limit={
@@ -180435,7 +180460,7 @@ return {
 			[1]="placed_banner_attack_damage_+%"
 		}
 	},
-	[8241]={
+	[8242]={
 		[1]={
 			[1]={
 				limit={
@@ -180464,7 +180489,7 @@ return {
 			[1]="plague_bearer_chaos_damage_taken_+%_while_incubating"
 		}
 	},
-	[8242]={
+	[8243]={
 		[1]={
 			[1]={
 				limit={
@@ -180493,7 +180518,7 @@ return {
 			[1]="plague_bearer_maximum_stored_poison_damage_+%"
 		}
 	},
-	[8243]={
+	[8244]={
 		[1]={
 			[1]={
 				limit={
@@ -180522,7 +180547,7 @@ return {
 			[1]="plague_bearer_movement_speed_+%_while_infecting"
 		}
 	},
-	[8244]={
+	[8245]={
 		[1]={
 			[1]={
 				limit={
@@ -180551,7 +180576,7 @@ return {
 			[1]="plague_bearer_poison_effect_+%_while_infecting"
 		}
 	},
-	[8245]={
+	[8246]={
 		[1]={
 			[1]={
 				limit={
@@ -180567,7 +180592,7 @@ return {
 			[1]="player_can_be_touched_by_tormented_spirits"
 		}
 	},
-	[8246]={
+	[8247]={
 		[1]={
 			[1]={
 				limit={
@@ -180583,7 +180608,7 @@ return {
 			[1]="poison_as_though_dealing_X_damage_on_block"
 		}
 	},
-	[8247]={
+	[8248]={
 		[1]={
 			[1]={
 				limit={
@@ -180612,7 +180637,7 @@ return {
 			[1]="poison_chance_+%"
 		}
 	},
-	[8248]={
+	[8249]={
 		[1]={
 			[1]={
 				limit={
@@ -180641,7 +180666,7 @@ return {
 			[1]="poison_duration_+%_per_poison_applied_recently"
 		}
 	},
-	[8249]={
+	[8250]={
 		[1]={
 			[1]={
 				limit={
@@ -180670,7 +180695,7 @@ return {
 			[1]="poison_duration_+%_per_power_charge"
 		}
 	},
-	[8250]={
+	[8251]={
 		[1]={
 			[1]={
 				limit={
@@ -180699,7 +180724,7 @@ return {
 			[1]="poison_duration_+%_with_over_150_intelligence"
 		}
 	},
-	[8251]={
+	[8252]={
 		[1]={
 			[1]={
 				limit={
@@ -180728,7 +180753,7 @@ return {
 			[1]="poison_effect_+%_vs_non_poisoned_enemies"
 		}
 	},
-	[8252]={
+	[8253]={
 		[1]={
 			[1]={
 				limit={
@@ -180744,7 +180769,7 @@ return {
 			[1]="poison_effect_+100%_final_chance_during_flask_effect"
 		}
 	},
-	[8253]={
+	[8254]={
 		[1]={
 			[1]={
 				limit={
@@ -180773,7 +180798,7 @@ return {
 			[1]="base_poison_effect_+%"
 		}
 	},
-	[8254]={
+	[8255]={
 		[1]={
 			[1]={
 				limit={
@@ -180802,7 +180827,7 @@ return {
 			[1]="poison_effect_+%_per_frenzy_charge"
 		}
 	},
-	[8255]={
+	[8256]={
 		[1]={
 			[1]={
 				limit={
@@ -180831,7 +180856,7 @@ return {
 			[1]="poison_effect_+%_vs_bleeding_enemies"
 		}
 	},
-	[8256]={
+	[8257]={
 		[1]={
 			[1]={
 				limit={
@@ -180860,7 +180885,7 @@ return {
 			[1]="poison_effect_+%_while_wielding_claw_or_dagger"
 		}
 	},
-	[8257]={
+	[8258]={
 		[1]={
 			[1]={
 				limit={
@@ -180889,7 +180914,7 @@ return {
 			[1]="poison_effect_+%_with_spells"
 		}
 	},
-	[8258]={
+	[8259]={
 		[1]={
 			[1]={
 				limit={
@@ -180905,7 +180930,7 @@ return {
 			[1]="poison_on_critical_strike"
 		}
 	},
-	[8259]={
+	[8260]={
 		[1]={
 			[1]={
 				limit={
@@ -180921,7 +180946,7 @@ return {
 			[1]="poison_reflected_to_self"
 		}
 	},
-	[8260]={
+	[8261]={
 		[1]={
 			[1]={
 				limit={
@@ -180950,7 +180975,7 @@ return {
 			[1]="poison_time_passed_+%"
 		}
 	},
-	[8261]={
+	[8262]={
 		[1]={
 			[1]={
 				limit={
@@ -180979,7 +181004,7 @@ return {
 			[1]="poisonous_concoction_damage_+%"
 		}
 	},
-	[8262]={
+	[8263]={
 		[1]={
 			[1]={
 				limit={
@@ -181008,7 +181033,7 @@ return {
 			[1]="poisonous_concoction_flask_charges_consumed_+%"
 		}
 	},
-	[8263]={
+	[8264]={
 		[1]={
 			[1]={
 				limit={
@@ -181037,7 +181062,7 @@ return {
 			[1]="poisonous_concoction_skill_area_of_effect_+%"
 		}
 	},
-	[8264]={
+	[8265]={
 		[1]={
 			[1]={
 				limit={
@@ -181053,7 +181078,7 @@ return {
 			[1]="poisons_you_inflict_can_stack_infintely"
 		}
 	},
-	[8265]={
+	[8266]={
 		[1]={
 			[1]={
 				[1]={
@@ -181073,7 +181098,7 @@ return {
 			[1]="portal_alternate_destination_chance_permyriad"
 		}
 	},
-	[8266]={
+	[8267]={
 		[1]={
 			[1]={
 				limit={
@@ -181102,7 +181127,7 @@ return {
 			[1]="power_charge_duration_+%_final"
 		}
 	},
-	[8267]={
+	[8268]={
 		[1]={
 			[1]={
 				limit={
@@ -181118,7 +181143,7 @@ return {
 			[1]="power_charge_on_kill_percent_chance_while_holding_shield"
 		}
 	},
-	[8268]={
+	[8269]={
 		[1]={
 			[1]={
 				limit={
@@ -181134,7 +181159,7 @@ return {
 			[1]="power_charge_on_non_critical_strike_%_chance_with_claws_daggers"
 		}
 	},
-	[8269]={
+	[8270]={
 		[1]={
 			[1]={
 				limit={
@@ -181150,7 +181175,7 @@ return {
 			[1]="power_charge_on_spell_block_%_chance"
 		}
 	},
-	[8270]={
+	[8271]={
 		[1]={
 			[1]={
 				limit={
@@ -181175,7 +181200,7 @@ return {
 			[1]="power_siphon_number_of_additional_projectiles"
 		}
 	},
-	[8271]={
+	[8272]={
 		[1]={
 			[1]={
 				[1]={
@@ -181208,7 +181233,7 @@ return {
 			[1]="precision_mana_reservation_efficiency_-2%_per_1"
 		}
 	},
-	[8272]={
+	[8273]={
 		[1]={
 			[1]={
 				limit={
@@ -181224,7 +181249,7 @@ return {
 			[1]="precision_mana_reservation_efficiency_+100%"
 		}
 	},
-	[8273]={
+	[8274]={
 		[1]={
 			[1]={
 				limit={
@@ -181253,7 +181278,7 @@ return {
 			[1]="precision_mana_reservation_efficiency_+%"
 		}
 	},
-	[8274]={
+	[8275]={
 		[1]={
 			[1]={
 				limit={
@@ -181269,7 +181294,7 @@ return {
 			[1]="precision_mana_reservation_-50%_final"
 		}
 	},
-	[8275]={
+	[8276]={
 		[1]={
 			[1]={
 				limit={
@@ -181298,7 +181323,7 @@ return {
 			[1]="precision_mana_reservation_+%"
 		}
 	},
-	[8276]={
+	[8277]={
 		[1]={
 			[1]={
 				limit={
@@ -181314,7 +181339,7 @@ return {
 			[1]="precision_reserves_no_mana"
 		}
 	},
-	[8277]={
+	[8278]={
 		[1]={
 			[1]={
 				limit={
@@ -181339,7 +181364,7 @@ return {
 			[1]="prevent_projectile_chaining_%_chance"
 		}
 	},
-	[8278]={
+	[8279]={
 		[1]={
 			[1]={
 				limit={
@@ -181368,7 +181393,7 @@ return {
 			[1]="pride_aura_effect_+%"
 		}
 	},
-	[8279]={
+	[8280]={
 		[1]={
 			[1]={
 				limit={
@@ -181384,7 +181409,7 @@ return {
 			[1]="pride_chance_to_deal_double_damage_%"
 		}
 	},
-	[8280]={
+	[8281]={
 		[1]={
 			[1]={
 				limit={
@@ -181409,7 +181434,7 @@ return {
 			[1]="pride_chance_to_impale_with_attacks_%"
 		}
 	},
-	[8281]={
+	[8282]={
 		[1]={
 			[1]={
 				limit={
@@ -181425,7 +181450,7 @@ return {
 			[1]="pride_intimidate_enemy_for_4_seconds_on_hit"
 		}
 	},
-	[8282]={
+	[8283]={
 		[1]={
 			[1]={
 				[1]={
@@ -181458,7 +181483,7 @@ return {
 			[1]="pride_mana_reservation_efficiency_-2%_per_1"
 		}
 	},
-	[8283]={
+	[8284]={
 		[1]={
 			[1]={
 				limit={
@@ -181487,7 +181512,7 @@ return {
 			[1]="pride_mana_reservation_efficiency_+%"
 		}
 	},
-	[8284]={
+	[8285]={
 		[1]={
 			[1]={
 				limit={
@@ -181516,7 +181541,7 @@ return {
 			[1]="pride_mana_reservation_+%"
 		}
 	},
-	[8285]={
+	[8286]={
 		[1]={
 			[1]={
 				limit={
@@ -181545,7 +181570,7 @@ return {
 			[1]="pride_physical_damage_+%"
 		}
 	},
-	[8286]={
+	[8287]={
 		[1]={
 			[1]={
 				limit={
@@ -181561,7 +181586,7 @@ return {
 			[1]="pride_reserves_no_mana"
 		}
 	},
-	[8287]={
+	[8288]={
 		[1]={
 			[1]={
 				limit={
@@ -181577,7 +181602,7 @@ return {
 			[1]="pride_your_impaled_debuff_lasts_+_additional_hits"
 		}
 	},
-	[8288]={
+	[8289]={
 		[1]={
 			[1]={
 				limit={
@@ -181606,7 +181631,7 @@ return {
 			[1]="prismatic_rain_beam_frequency_+%"
 		}
 	},
-	[8289]={
+	[8290]={
 		[1]={
 			[1]={
 				limit={
@@ -181622,7 +181647,7 @@ return {
 			[1]="profane_ground_on_crit_chance_%_if_highest_attribute_is_intelligence"
 		}
 	},
-	[8290]={
+	[8291]={
 		[1]={
 			[1]={
 				limit={
@@ -181651,7 +181676,7 @@ return {
 			[1]="projectile_ailment_chance_+%"
 		}
 	},
-	[8291]={
+	[8292]={
 		[1]={
 			[1]={
 				limit={
@@ -181680,7 +181705,7 @@ return {
 			[1]="projectile_attack_damage_+%_during_flask_effect"
 		}
 	},
-	[8292]={
+	[8293]={
 		[1]={
 			[1]={
 				limit={
@@ -181709,7 +181734,7 @@ return {
 			[1]="projectile_attack_damage_+%_with_claw_or_dagger"
 		}
 	},
-	[8293]={
+	[8294]={
 		[1]={
 			[1]={
 				limit={
@@ -181738,7 +181763,7 @@ return {
 			[1]="projectile_attack_range_+%"
 		}
 	},
-	[8294]={
+	[8295]={
 		[1]={
 			[1]={
 				limit={
@@ -181754,7 +181779,7 @@ return {
 			[1]="projectile_attack_skill_critical_strike_multiplier_+"
 		}
 	},
-	[8295]={
+	[8296]={
 		[1]={
 			[1]={
 				limit={
@@ -181770,7 +181795,7 @@ return {
 			[1]="projectile_chance_to_be_able_to_chain_from_terrain_%_per_ranged_abyss_jewel_up_to_20%"
 		}
 	},
-	[8296]={
+	[8297]={
 		[1]={
 			[1]={
 				limit={
@@ -181786,7 +181811,7 @@ return {
 			[1]="projectile_chance_to_chain_1_extra_time_from_terrain_%"
 		}
 	},
-	[8297]={
+	[8298]={
 		[1]={
 			[1]={
 				limit={
@@ -181802,7 +181827,7 @@ return {
 			[1]="projectile_chance_to_piece_vs_enemies_within_3m_distance_of_player"
 		}
 	},
-	[8298]={
+	[8299]={
 		[1]={
 			[1]={
 				limit={
@@ -181831,7 +181856,7 @@ return {
 			[1]="projectile_damage_+%_vs_enemies_further_than_6m_distance"
 		}
 	},
-	[8299]={
+	[8300]={
 		[1]={
 			[1]={
 				limit={
@@ -181860,7 +181885,7 @@ return {
 			[1]="projectile_damage_+%_vs_enemies_within_2m_distance"
 		}
 	},
-	[8300]={
+	[8301]={
 		[1]={
 			[1]={
 				limit={
@@ -181889,7 +181914,7 @@ return {
 			[1]="projectile_damage_+%_max_before_distance_increase"
 		}
 	},
-	[8301]={
+	[8302]={
 		[1]={
 			[1]={
 				limit={
@@ -181905,7 +181930,7 @@ return {
 			[1]="projectile_damage_+%_per_16_dexterity"
 		}
 	},
-	[8302]={
+	[8303]={
 		[1]={
 			[1]={
 				limit={
@@ -181921,7 +181946,7 @@ return {
 			[1]="projectile_damage_+%_per_chain"
 		}
 	},
-	[8303]={
+	[8304]={
 		[1]={
 			[1]={
 				limit={
@@ -181937,7 +181962,7 @@ return {
 			[1]="projectile_damage_+%_per_pierced_enemy"
 		}
 	},
-	[8304]={
+	[8305]={
 		[1]={
 			[1]={
 				limit={
@@ -181966,7 +181991,7 @@ return {
 			[1]="projectile_damage_+%_per_remaining_chain"
 		}
 	},
-	[8305]={
+	[8306]={
 		[1]={
 			[1]={
 				limit={
@@ -181995,7 +182020,7 @@ return {
 			[1]="projectile_damage_+%_vs_chained_enemy"
 		}
 	},
-	[8306]={
+	[8307]={
 		[1]={
 			[1]={
 				limit={
@@ -182024,7 +182049,7 @@ return {
 			[1]="projectile_damage_+%_vs_nearby_enemies"
 		}
 	},
-	[8307]={
+	[8308]={
 		[1]={
 			[1]={
 				limit={
@@ -182053,7 +182078,7 @@ return {
 			[1]="projectile_hit_damage_stun_multiplier_+%"
 		}
 	},
-	[8308]={
+	[8309]={
 		[1]={
 			[1]={
 				limit={
@@ -182069,7 +182094,7 @@ return {
 			[1]="projectile_number_to_split"
 		}
 	},
-	[8309]={
+	[8310]={
 		[1]={
 			[1]={
 				limit={
@@ -182098,7 +182123,7 @@ return {
 			[1]="projectile_speed_+%_with_daggers"
 		}
 	},
-	[8310]={
+	[8311]={
 		[1]={
 			[1]={
 				[1]={
@@ -182118,7 +182143,7 @@ return {
 			[1]="projectile_spell_cooldown_modifier_ms"
 		}
 	},
-	[8311]={
+	[8312]={
 		[1]={
 			[1]={
 				limit={
@@ -182134,7 +182159,7 @@ return {
 			[1]="projectiles_always_pierce_you"
 		}
 	},
-	[8312]={
+	[8313]={
 		[1]={
 			[1]={
 				limit={
@@ -182150,7 +182175,7 @@ return {
 			[1]="projectiles_from_spells_cannot_pierce"
 		}
 	},
-	[8313]={
+	[8314]={
 		[1]={
 			[1]={
 				limit={
@@ -182179,7 +182204,7 @@ return {
 			[1]="projectiles_pierce_1_additional_target_per_10_stat_value"
 		}
 	},
-	[8314]={
+	[8315]={
 		[1]={
 			[1]={
 				limit={
@@ -182208,7 +182233,7 @@ return {
 			[1]="projectiles_pierce_1_additional_target_per_15_stat_value"
 		}
 	},
-	[8315]={
+	[8316]={
 		[1]={
 			[1]={
 				limit={
@@ -182224,7 +182249,7 @@ return {
 			[1]="projectiles_pierce_all_nearby_targets"
 		}
 	},
-	[8316]={
+	[8317]={
 		[1]={
 			[1]={
 				limit={
@@ -182240,7 +182265,7 @@ return {
 			[1]="projectiles_pierce_while_phasing"
 		}
 	},
-	[8317]={
+	[8318]={
 		[1]={
 			[1]={
 				limit={
@@ -182265,7 +182290,7 @@ return {
 			[1]="projectiles_pierce_x_additional_targets_while_you_have_phasing"
 		}
 	},
-	[8318]={
+	[8319]={
 		[1]={
 			[1]={
 				limit={
@@ -182294,7 +182319,7 @@ return {
 			[1]="protective_link_duration_+%"
 		}
 	},
-	[8319]={
+	[8320]={
 		[1]={
 			[1]={
 				limit={
@@ -182310,7 +182335,7 @@ return {
 			[1]="puncture_and_ensnaring_arrow_enemies_explode_on_death_by_attack_for_10%_life_as_physical_damage_chance_%"
 		}
 	},
-	[8320]={
+	[8321]={
 		[1]={
 			[1]={
 				limit={
@@ -182326,7 +182351,7 @@ return {
 			[1]="punishment_no_reservation"
 		}
 	},
-	[8321]={
+	[8322]={
 		[1]={
 			[1]={
 				[1]={
@@ -182359,7 +182384,7 @@ return {
 			[1]="puppet_master_base_duration_ms"
 		}
 	},
-	[8322]={
+	[8323]={
 		[1]={
 			[1]={
 				limit={
@@ -182388,7 +182413,7 @@ return {
 			[1]="purge_damage_+%"
 		}
 	},
-	[8323]={
+	[8324]={
 		[1]={
 			[1]={
 				limit={
@@ -182417,7 +182442,7 @@ return {
 			[1]="purge_duration_+%"
 		}
 	},
-	[8324]={
+	[8325]={
 		[1]={
 			[1]={
 				limit={
@@ -182433,7 +182458,7 @@ return {
 			[1]="purge_expose_resist_%_matching_highest_element_damage"
 		}
 	},
-	[8325]={
+	[8326]={
 		[1]={
 			[1]={
 				limit={
@@ -182458,7 +182483,7 @@ return {
 			[1]="purifying_flame_%_chance_to_create_consecrated_ground_around_you"
 		}
 	},
-	[8326]={
+	[8327]={
 		[1]={
 			[1]={
 				[1]={
@@ -182491,7 +182516,7 @@ return {
 			[1]="purity_of_elements_mana_reservation_efficiency_-2%_per_1"
 		}
 	},
-	[8327]={
+	[8328]={
 		[1]={
 			[1]={
 				limit={
@@ -182520,7 +182545,7 @@ return {
 			[1]="purity_of_elements_mana_reservation_efficiency_+%"
 		}
 	},
-	[8328]={
+	[8329]={
 		[1]={
 			[1]={
 				limit={
@@ -182536,7 +182561,7 @@ return {
 			[1]="purity_of_elements_reserves_no_mana"
 		}
 	},
-	[8329]={
+	[8330]={
 		[1]={
 			[1]={
 				[1]={
@@ -182569,7 +182594,7 @@ return {
 			[1]="purity_of_fire_mana_reservation_efficiency_-2%_per_1"
 		}
 	},
-	[8330]={
+	[8331]={
 		[1]={
 			[1]={
 				limit={
@@ -182598,7 +182623,7 @@ return {
 			[1]="purity_of_fire_mana_reservation_efficiency_+%"
 		}
 	},
-	[8331]={
+	[8332]={
 		[1]={
 			[1]={
 				limit={
@@ -182614,7 +182639,7 @@ return {
 			[1]="purity_of_fire_reserves_no_mana"
 		}
 	},
-	[8332]={
+	[8333]={
 		[1]={
 			[1]={
 				[1]={
@@ -182647,7 +182672,7 @@ return {
 			[1]="purity_of_ice_mana_reservation_efficiency_-2%_per_1"
 		}
 	},
-	[8333]={
+	[8334]={
 		[1]={
 			[1]={
 				limit={
@@ -182676,7 +182701,7 @@ return {
 			[1]="purity_of_ice_mana_reservation_efficiency_+%"
 		}
 	},
-	[8334]={
+	[8335]={
 		[1]={
 			[1]={
 				limit={
@@ -182692,7 +182717,7 @@ return {
 			[1]="purity_of_ice_reserves_no_mana"
 		}
 	},
-	[8335]={
+	[8336]={
 		[1]={
 			[1]={
 				[1]={
@@ -182725,7 +182750,7 @@ return {
 			[1]="purity_of_lightning_mana_reservation_efficiency_-2%_per_1"
 		}
 	},
-	[8336]={
+	[8337]={
 		[1]={
 			[1]={
 				limit={
@@ -182754,7 +182779,7 @@ return {
 			[1]="purity_of_lightning_mana_reservation_efficiency_+%"
 		}
 	},
-	[8337]={
+	[8338]={
 		[1]={
 			[1]={
 				limit={
@@ -182770,7 +182795,7 @@ return {
 			[1]="purity_of_lightning_reserves_no_mana"
 		}
 	},
-	[8338]={
+	[8339]={
 		[1]={
 			[1]={
 				limit={
@@ -182799,7 +182824,7 @@ return {
 			[1]="quarterstaff_daze_build_up_+%"
 		}
 	},
-	[8339]={
+	[8340]={
 		[1]={
 			[1]={
 				limit={
@@ -182828,7 +182853,7 @@ return {
 			[1]="quarterstaff_hit_damage_freeze_multiplier_+%"
 		}
 	},
-	[8340]={
+	[8341]={
 		[1]={
 			[1]={
 				limit={
@@ -182857,7 +182882,7 @@ return {
 			[1]="quarterstaff_hit_damage_stun_multiplier_+%"
 		}
 	},
-	[8341]={
+	[8342]={
 		[1]={
 			[1]={
 				limit={
@@ -182886,7 +182911,7 @@ return {
 			[1]="quarterstaff_shock_chance_+%"
 		}
 	},
-	[8342]={
+	[8343]={
 		[1]={
 			[1]={
 				limit={
@@ -182911,7 +182936,7 @@ return {
 			[1]="quarterstaff_skills_that_consume_power_charges_count_as_consuming_x_additional_power_charges"
 		}
 	},
-	[8343]={
+	[8344]={
 		[1]={
 			[1]={
 				limit={
@@ -182936,7 +182961,7 @@ return {
 			[1]="quick_dodge_added_cooldown_count"
 		}
 	},
-	[8344]={
+	[8345]={
 		[1]={
 			[1]={
 				limit={
@@ -182965,7 +182990,7 @@ return {
 			[1]="quick_dodge_travel_distance_+%"
 		}
 	},
-	[8345]={
+	[8346]={
 		[1]={
 			[1]={
 				limit={
@@ -182981,7 +183006,7 @@ return {
 			[1]="quick_guard_additional_physical_damage_reduction_%"
 		}
 	},
-	[8346]={
+	[8347]={
 		[1]={
 			[1]={
 				limit={
@@ -182997,7 +183022,7 @@ return {
 			[1]="quicksilver_flasks_apply_to_nearby_allies"
 		}
 	},
-	[8347]={
+	[8348]={
 		[1]={
 			[1]={
 				limit={
@@ -183026,7 +183051,7 @@ return {
 			[1]="quiver_mod_effect_+%"
 		}
 	},
-	[8348]={
+	[8349]={
 		[1]={
 			[1]={
 				limit={
@@ -183042,7 +183067,7 @@ return {
 			[1]="quiver_projectiles_pierce_1_additional_target"
 		}
 	},
-	[8349]={
+	[8350]={
 		[1]={
 			[1]={
 				limit={
@@ -183058,7 +183083,7 @@ return {
 			[1]="quiver_projectiles_pierce_2_additional_targets"
 		}
 	},
-	[8350]={
+	[8351]={
 		[1]={
 			[1]={
 				limit={
@@ -183074,7 +183099,7 @@ return {
 			[1]="quiver_projectiles_pierce_3_additional_targets"
 		}
 	},
-	[8351]={
+	[8352]={
 		[1]={
 			[1]={
 				limit={
@@ -183090,7 +183115,7 @@ return {
 			[1]="maximum_rage"
 		}
 	},
-	[8352]={
+	[8353]={
 		[1]={
 			[1]={
 				limit={
@@ -183106,7 +183131,7 @@ return {
 			[1]="rage_effects_tripled"
 		}
 	},
-	[8353]={
+	[8354]={
 		[1]={
 			[1]={
 				limit={
@@ -183122,7 +183147,7 @@ return {
 			[1]="rage_effects_doubled"
 		}
 	},
-	[8354]={
+	[8355]={
 		[1]={
 			[1]={
 				limit={
@@ -183138,7 +183163,7 @@ return {
 			[1]="gain_rage_on_kill"
 		}
 	},
-	[8355]={
+	[8356]={
 		[1]={
 			[1]={
 				limit={
@@ -183163,7 +183188,7 @@ return {
 			[1]="gain_rage_on_hitting_rare_unique_enemy_%"
 		}
 	},
-	[8356]={
+	[8357]={
 		[1]={
 			[1]={
 				limit={
@@ -183179,7 +183204,7 @@ return {
 			[1]="gain_rage_when_you_use_a_warcry"
 		}
 	},
-	[8357]={
+	[8358]={
 		[1]={
 			[1]={
 				limit={
@@ -183195,7 +183220,7 @@ return {
 			[1]="cannot_be_stunned_with_25_rage"
 		}
 	},
-	[8358]={
+	[8359]={
 		[1]={
 			[1]={
 				limit={
@@ -183211,7 +183236,7 @@ return {
 			[1]="gain_rage_on_hit"
 		}
 	},
-	[8359]={
+	[8360]={
 		[1]={
 			[1]={
 				limit={
@@ -183240,7 +183265,7 @@ return {
 			[1]="rage_decay_speed_+%"
 		}
 	},
-	[8360]={
+	[8361]={
 		[1]={
 			[1]={
 				limit={
@@ -183256,7 +183281,7 @@ return {
 			[1]="rage_grants_spell_damage_instead"
 		}
 	},
-	[8361]={
+	[8362]={
 		[1]={
 			[1]={
 				limit={
@@ -183285,7 +183310,7 @@ return {
 			[1]="rage_loss_delay_ms"
 		}
 	},
-	[8362]={
+	[8363]={
 		[1]={
 			[1]={
 				limit={
@@ -183301,7 +183326,7 @@ return {
 			[1]="rage_slash_sacrifice_rage_%"
 		}
 	},
-	[8363]={
+	[8364]={
 		[1]={
 			[1]={
 				limit={
@@ -183330,7 +183355,7 @@ return {
 			[1]="rage_vortex_area_of_effect_+%"
 		}
 	},
-	[8364]={
+	[8365]={
 		[1]={
 			[1]={
 				limit={
@@ -183359,7 +183384,7 @@ return {
 			[1]="rage_vortex_damage_+%"
 		}
 	},
-	[8365]={
+	[8366]={
 		[1]={
 			[1]={
 				limit={
@@ -183375,7 +183400,7 @@ return {
 			[1]="raging_spirits_always_ignite"
 		}
 	},
-	[8366]={
+	[8367]={
 		[1]={
 			[1]={
 				limit={
@@ -183400,7 +183425,7 @@ return {
 			[1]="raging_spirits_refresh_duration_on_hit_vs_unique_%_chance"
 		}
 	},
-	[8367]={
+	[8368]={
 		[1]={
 			[1]={
 				limit={
@@ -183416,7 +183441,7 @@ return {
 			[1]="raging_spirits_refresh_duration_when_they_kill_ignited_enemy"
 		}
 	},
-	[8368]={
+	[8369]={
 		[1]={
 			[1]={
 				limit={
@@ -183445,7 +183470,7 @@ return {
 			[1]="raider_chance_to_evade_attacks_+%_final_during_onslaught"
 		}
 	},
-	[8369]={
+	[8370]={
 		[1]={
 			[1]={
 				limit={
@@ -183474,7 +183499,7 @@ return {
 			[1]="raider_nearby_enemies_accuracy_rating_+%_final_while_phasing"
 		}
 	},
-	[8370]={
+	[8371]={
 		[1]={
 			[1]={
 				limit={
@@ -183490,7 +183515,7 @@ return {
 			[1]="rain_of_arrows_additional_sequence_chance_%"
 		}
 	},
-	[8371]={
+	[8372]={
 		[1]={
 			[1]={
 				limit={
@@ -183506,7 +183531,7 @@ return {
 			[1]="rain_of_arrows_rain_of_arrows_additional_sequence_chance_%"
 		}
 	},
-	[8372]={
+	[8373]={
 		[1]={
 			[1]={
 				limit={
@@ -183535,7 +183560,7 @@ return {
 			[1]="raise_spectre_mana_cost_+%"
 		}
 	},
-	[8373]={
+	[8374]={
 		[1]={
 			[1]={
 				limit={
@@ -183551,7 +183576,7 @@ return {
 			[1]="raise_zombie_does_not_use_corpses"
 		}
 	},
-	[8374]={
+	[8375]={
 		[1]={
 			[1]={
 				limit={
@@ -183567,7 +183592,7 @@ return {
 			[1]="raised_zombie_%_chance_to_taunt"
 		}
 	},
-	[8375]={
+	[8376]={
 		[1]={
 			[1]={
 				limit={
@@ -183583,7 +183608,7 @@ return {
 			[1]="raised_zombies_are_usable_as_corpses_when_alive"
 		}
 	},
-	[8376]={
+	[8377]={
 		[1]={
 			[1]={
 				limit={
@@ -183608,7 +183633,7 @@ return {
 			[1]="raised_zombies_cover_in_ash_on_hit_%"
 		}
 	},
-	[8377]={
+	[8378]={
 		[1]={
 			[1]={
 				[1]={
@@ -183628,7 +183653,7 @@ return {
 			[1]="raised_zombies_fire_damage_%_of_maximum_life_taken_per_minute"
 		}
 	},
-	[8378]={
+	[8379]={
 		[1]={
 			[1]={
 				limit={
@@ -183644,7 +183669,7 @@ return {
 			[1]="raised_zombies_have_avatar_of_fire"
 		}
 	},
-	[8379]={
+	[8380]={
 		[1]={
 			[1]={
 				[1]={
@@ -183664,7 +183689,7 @@ return {
 			[1]="rallying_cry_buff_effect_1%_per_3_stat_value"
 		}
 	},
-	[8380]={
+	[8381]={
 		[1]={
 			[1]={
 				[1]={
@@ -183684,7 +183709,7 @@ return {
 			[1]="rallying_cry_buff_effect_1%_per_5_stat_value"
 		}
 	},
-	[8381]={
+	[8382]={
 		[1]={
 			[1]={
 				limit={
@@ -183709,7 +183734,7 @@ return {
 			[1]="rallying_cry_exerts_x_additional_attacks"
 		}
 	},
-	[8382]={
+	[8383]={
 		[1]={
 			[1]={
 				limit={
@@ -183725,7 +183750,7 @@ return {
 			[1]="random_curse_on_hit_%_against_uncursed_enemies"
 		}
 	},
-	[8383]={
+	[8384]={
 		[1]={
 			[1]={
 				limit={
@@ -183750,7 +183775,7 @@ return {
 			[1]="random_curse_when_hit_%_ignoring_curse_limit"
 		}
 	},
-	[8384]={
+	[8385]={
 		[1]={
 			[1]={
 				limit={
@@ -183766,7 +183791,7 @@ return {
 			[1]="random_projectile_direction"
 		}
 	},
-	[8385]={
+	[8386]={
 		[1]={
 			[1]={
 				limit={
@@ -183795,7 +183820,7 @@ return {
 			[1]="ranger_hidden_ascendancy_non_damaging_elemental_ailment_effect_+%_final"
 		}
 	},
-	[8386]={
+	[8387]={
 		[1]={
 			[1]={
 				limit={
@@ -183824,7 +183849,7 @@ return {
 			[1]="rare_or_unique_monster_dropped_item_rarity_+%"
 		}
 	},
-	[8387]={
+	[8388]={
 		[1]={
 			[1]={
 				limit={
@@ -183840,7 +183865,7 @@ return {
 			[1]="reap_debuff_deals_fire_damage_instead_of_physical_damage"
 		}
 	},
-	[8388]={
+	[8389]={
 		[1]={
 			[1]={
 				limit={
@@ -183856,7 +183881,7 @@ return {
 			[1]="reapply_enemy_shock_on_consuming_enemy_shock_chance_%"
 		}
 	},
-	[8389]={
+	[8390]={
 		[1]={
 			[1]={
 				limit={
@@ -183885,7 +183910,7 @@ return {
 			[1]="recall_sigil_target_search_range_+%"
 		}
 	},
-	[8390]={
+	[8391]={
 		[1]={
 			[1]={
 				limit={
@@ -183901,7 +183926,7 @@ return {
 			[1]="receive_bleeding_chance_%_when_hit"
 		}
 	},
-	[8391]={
+	[8392]={
 		[1]={
 			[1]={
 				limit={
@@ -183917,7 +183942,7 @@ return {
 			[1]="receive_bleeding_chance_%_when_hit_by_attack"
 		}
 	},
-	[8392]={
+	[8393]={
 		[1]={
 			[1]={
 				limit={
@@ -183933,7 +183958,7 @@ return {
 			[1]="received_attack_hits_have_impale_chance_%"
 		}
 	},
-	[8393]={
+	[8394]={
 		[1]={
 			[1]={
 				limit={
@@ -183949,7 +183974,7 @@ return {
 			[1]="recharge_flasks_on_crit_while_affected_by_precision"
 		}
 	},
-	[8394]={
+	[8395]={
 		[1]={
 			[1]={
 				limit={
@@ -183965,7 +183990,7 @@ return {
 			[1]="recoup_%_elemental_damage_as_energy_shield"
 		}
 	},
-	[8395]={
+	[8396]={
 		[1]={
 			[1]={
 				limit={
@@ -183981,7 +184006,7 @@ return {
 			[1]="recoup_%_of_damage_taken_by_your_totems_as_life"
 		}
 	},
-	[8396]={
+	[8397]={
 		[1]={
 			[1]={
 				limit={
@@ -183997,7 +184022,7 @@ return {
 			[1]="recoup_effects_apply_over_4_seconds_instead"
 		}
 	},
-	[8397]={
+	[8398]={
 		[1]={
 			[1]={
 				limit={
@@ -184013,7 +184038,7 @@ return {
 			[1]="recoup_life_effects_apply_over_3_seconds_instead"
 		}
 	},
-	[8398]={
+	[8399]={
 		[1]={
 			[1]={
 				limit={
@@ -184042,7 +184067,7 @@ return {
 			[1]="recoup_speed_+%"
 		}
 	},
-	[8399]={
+	[8400]={
 		[1]={
 			[1]={
 				limit={
@@ -184058,7 +184083,7 @@ return {
 			[1]="recover_%_energy_shield_over_1_second_when_you_take_physical_damage_from_enemy_hits"
 		}
 	},
-	[8400]={
+	[8401]={
 		[1]={
 			[1]={
 				limit={
@@ -184074,7 +184099,7 @@ return {
 			[1]="recover_%_life_on_heavy_stunning_rare_or_unique_enemy"
 		}
 	},
-	[8401]={
+	[8402]={
 		[1]={
 			[1]={
 				limit={
@@ -184090,7 +184115,7 @@ return {
 			[1]="recover_%_life_per_endurance_charge_consumed"
 		}
 	},
-	[8402]={
+	[8403]={
 		[1]={
 			[1]={
 				limit={
@@ -184106,7 +184131,7 @@ return {
 			[1]="recover_%_life_when_you_create_an_offering"
 		}
 	},
-	[8403]={
+	[8404]={
 		[1]={
 			[1]={
 				limit={
@@ -184122,7 +184147,7 @@ return {
 			[1]="recover_%_mana_when_you_invoke_a_spell"
 		}
 	},
-	[8404]={
+	[8405]={
 		[1]={
 			[1]={
 				limit={
@@ -184138,7 +184163,7 @@ return {
 			[1]="recover_%_maximum_energy_shield_on_killing_cursed_enemy"
 		}
 	},
-	[8405]={
+	[8406]={
 		[1]={
 			[1]={
 				limit={
@@ -184154,7 +184179,7 @@ return {
 			[1]="recover_%_maximum_life_on_killing_cursed_enemy"
 		}
 	},
-	[8406]={
+	[8407]={
 		[1]={
 			[1]={
 				limit={
@@ -184183,7 +184208,7 @@ return {
 			[1]="recover_%_maximum_life_on_suppressing_spell"
 		}
 	},
-	[8407]={
+	[8408]={
 		[1]={
 			[1]={
 				limit={
@@ -184199,7 +184224,7 @@ return {
 			[1]="recover_%_maximum_life_when_cursing_non_cursed_enemy"
 		}
 	},
-	[8408]={
+	[8409]={
 		[1]={
 			[1]={
 				limit={
@@ -184215,7 +184240,7 @@ return {
 			[1]="recover_%_maximum_mana_when_cursing_non_cursed_enemy"
 		}
 	},
-	[8409]={
+	[8410]={
 		[1]={
 			[1]={
 				limit={
@@ -184231,7 +184256,7 @@ return {
 			[1]="recover_10%_mana_on_skill_use_%_chance_while_affected_by_clarity"
 		}
 	},
-	[8410]={
+	[8411]={
 		[1]={
 			[1]={
 				[1]={
@@ -184251,7 +184276,7 @@ return {
 			[1]="recover_1_life_per_x_life_regeneration_per_minute_every_4_seconds"
 		}
 	},
-	[8411]={
+	[8412]={
 		[1]={
 			[1]={
 				limit={
@@ -184267,7 +184292,7 @@ return {
 			[1]="recover_X_life_on_enemy_ignited"
 		}
 	},
-	[8412]={
+	[8413]={
 		[1]={
 			[1]={
 				limit={
@@ -184283,7 +184308,7 @@ return {
 			[1]="recover_X_life_on_suppressing_spell"
 		}
 	},
-	[8413]={
+	[8414]={
 		[1]={
 			[1]={
 				limit={
@@ -184299,7 +184324,7 @@ return {
 			[1]="recover_X_life_when_fortification_expires_per_fortification_lost"
 		}
 	},
-	[8414]={
+	[8415]={
 		[1]={
 			[1]={
 				limit={
@@ -184315,7 +184340,7 @@ return {
 			[1]="recover_X_mana_on_killing_frozen_enemy"
 		}
 	},
-	[8415]={
+	[8416]={
 		[1]={
 			[1]={
 				limit={
@@ -184331,7 +184356,7 @@ return {
 			[1]="recover_energy_shield_%_on_consuming_steel_shard"
 		}
 	},
-	[8416]={
+	[8417]={
 		[1]={
 			[1]={
 				limit={
@@ -184347,7 +184372,7 @@ return {
 			[1]="recover_es_as_well_as_life_from_life_regeneration"
 		}
 	},
-	[8417]={
+	[8418]={
 		[1]={
 			[1]={
 				limit={
@@ -184363,7 +184388,7 @@ return {
 			[1]="recover_maximum_life_on_enemy_killed_chance_%"
 		}
 	},
-	[8418]={
+	[8419]={
 		[1]={
 			[1]={
 				limit={
@@ -184379,7 +184404,7 @@ return {
 			[1]="recover_%_energy_shield_when_you_block_spell_damage_while_wielding_a_staff"
 		}
 	},
-	[8419]={
+	[8420]={
 		[1]={
 			[1]={
 				limit={
@@ -184395,7 +184420,7 @@ return {
 			[1]="recover_%_life_when_gaining_adrenaline"
 		}
 	},
-	[8420]={
+	[8421]={
 		[1]={
 			[1]={
 				limit={
@@ -184411,7 +184436,7 @@ return {
 			[1]="recover_%_life_when_you_block_attack_damage_while_wielding_a_staff"
 		}
 	},
-	[8421]={
+	[8422]={
 		[1]={
 			[1]={
 				limit={
@@ -184427,7 +184452,7 @@ return {
 			[1]="recover_%_life_when_you_ignite_a_non_ignited_enemy"
 		}
 	},
-	[8422]={
+	[8423]={
 		[1]={
 			[1]={
 				limit={
@@ -184443,7 +184468,7 @@ return {
 			[1]="recover_%_life_when_you_use_a_life_flask_while_on_low_life"
 		}
 	},
-	[8423]={
+	[8424]={
 		[1]={
 			[1]={
 				limit={
@@ -184459,7 +184484,7 @@ return {
 			[1]="recover_%_mana_when_attached_brand_expires"
 		}
 	},
-	[8424]={
+	[8425]={
 		[1]={
 			[1]={
 				limit={
@@ -184475,7 +184500,7 @@ return {
 			[1]="recover_%_maximum_life_on_killing_chilled_enemy"
 		}
 	},
-	[8425]={
+	[8426]={
 		[1]={
 			[1]={
 				limit={
@@ -184491,7 +184516,7 @@ return {
 			[1]="recover_%_maximum_life_on_killing_enemy_while_you_have_rage"
 		}
 	},
-	[8426]={
+	[8427]={
 		[1]={
 			[1]={
 				limit={
@@ -184507,7 +184532,7 @@ return {
 			[1]="recover_%_maximum_life_on_killing_poisoned_enemy"
 		}
 	},
-	[8427]={
+	[8428]={
 		[1]={
 			[1]={
 				limit={
@@ -184523,7 +184548,7 @@ return {
 			[1]="recover_%_maximum_mana_on_charm_use"
 		}
 	},
-	[8428]={
+	[8429]={
 		[1]={
 			[1]={
 				[1]={
@@ -184543,7 +184568,7 @@ return {
 			[1]="recover_%_maximum_mana_when_enemy_frozen_permyriad"
 		}
 	},
-	[8429]={
+	[8430]={
 		[1]={
 			[1]={
 				limit={
@@ -184559,7 +184584,7 @@ return {
 			[1]="recover_%_of_maximum_mana_over_1_second_on_guard_skill_use"
 		}
 	},
-	[8430]={
+	[8431]={
 		[1]={
 			[1]={
 				[1]={
@@ -184579,7 +184604,7 @@ return {
 			[1]="recover_permyriad_life_on_skill_use"
 		}
 	},
-	[8431]={
+	[8432]={
 		[1]={
 			[1]={
 				[1]={
@@ -184599,7 +184624,7 @@ return {
 			[1]="recover_permyriad_maximum_life_per_poison_on_enemy_on_kill"
 		}
 	},
-	[8432]={
+	[8433]={
 		[1]={
 			[1]={
 				limit={
@@ -184615,7 +184640,7 @@ return {
 			[1]="recover_x_energy_shield_on_spell_block"
 		}
 	},
-	[8433]={
+	[8434]={
 		[1]={
 			[1]={
 				limit={
@@ -184631,7 +184656,7 @@ return {
 			[1]="recover_x_energy_shield_on_suppressing_spell"
 		}
 	},
-	[8434]={
+	[8435]={
 		[1]={
 			[1]={
 				limit={
@@ -184660,7 +184685,7 @@ return {
 			[1]="reduce_enemy_chaos_resistance_%"
 		}
 	},
-	[8435]={
+	[8436]={
 		[1]={
 			[1]={
 				limit={
@@ -184676,7 +184701,7 @@ return {
 			[1]="reduce_enemy_cold_resistance_%_while_affected_by_hatred"
 		}
 	},
-	[8436]={
+	[8437]={
 		[1]={
 			[1]={
 				limit={
@@ -184692,7 +184717,7 @@ return {
 			[1]="reduce_enemy_fire_resistance_%_vs_blinded_enemies"
 		}
 	},
-	[8437]={
+	[8438]={
 		[1]={
 			[1]={
 				limit={
@@ -184708,7 +184733,7 @@ return {
 			[1]="reduce_enemy_fire_resistance_%_while_affected_by_anger"
 		}
 	},
-	[8438]={
+	[8439]={
 		[1]={
 			[1]={
 				limit={
@@ -184724,7 +184749,7 @@ return {
 			[1]="reduce_enemy_lightning_resistance_%_while_affected_by_wrath"
 		}
 	},
-	[8439]={
+	[8440]={
 		[1]={
 			[1]={
 				limit={
@@ -184740,7 +184765,7 @@ return {
 			[1]="reflect_%_of_physical_damage_prevented"
 		}
 	},
-	[8440]={
+	[8441]={
 		[1]={
 			[1]={
 				limit={
@@ -184769,7 +184794,7 @@ return {
 			[1]="reflect_damage_taken_and_minion_reflect_damage_taken_+%"
 		}
 	},
-	[8441]={
+	[8442]={
 		[1]={
 			[1]={
 				limit={
@@ -184794,7 +184819,7 @@ return {
 			[1]="reflect_non_damaging_ailments_%_chance"
 		}
 	},
-	[8442]={
+	[8443]={
 		[1]={
 			[1]={
 				limit={
@@ -184810,7 +184835,7 @@ return {
 			[1]="reflect_shocks"
 		}
 	},
-	[8443]={
+	[8444]={
 		[1]={
 			[1]={
 				limit={
@@ -184826,7 +184851,7 @@ return {
 			[1]="reflect_shocks_to_enemies_in_radius"
 		}
 	},
-	[8444]={
+	[8445]={
 		[1]={
 			[1]={
 				limit={
@@ -184855,7 +184880,7 @@ return {
 			[1]="reflected_physical_damage_taken_+%_while_affected_by_determination"
 		}
 	},
-	[8445]={
+	[8446]={
 		[1]={
 			[1]={
 				limit={
@@ -184871,7 +184896,7 @@ return {
 			[1]="refresh_duration_of_shock_chill_ignite_on_enemy_when_cursing_enemy"
 		}
 	},
-	[8446]={
+	[8447]={
 		[1]={
 			[1]={
 				limit={
@@ -184887,7 +184912,7 @@ return {
 			[1]="refresh_endurance_charges_duration_when_hit_chance_%"
 		}
 	},
-	[8447]={
+	[8448]={
 		[1]={
 			[1]={
 				limit={
@@ -184903,7 +184928,7 @@ return {
 			[1]="refresh_ignite_duration_on_critical_strike_chance_%"
 		}
 	},
-	[8448]={
+	[8449]={
 		[1]={
 			[1]={
 				limit={
@@ -184919,7 +184944,7 @@ return {
 			[1]="regenerate_%_energy_shield_over_1_second_when_stunned"
 		}
 	},
-	[8449]={
+	[8450]={
 		[1]={
 			[1]={
 				limit={
@@ -184935,7 +184960,7 @@ return {
 			[1]="regenerate_%_life_over_1_second_when_hit_while_affected_by_vitality"
 		}
 	},
-	[8450]={
+	[8451]={
 		[1]={
 			[1]={
 				limit={
@@ -184951,7 +184976,7 @@ return {
 			[1]="regenerate_%_life_over_1_second_when_stunned"
 		}
 	},
-	[8451]={
+	[8452]={
 		[1]={
 			[1]={
 				limit={
@@ -184967,7 +184992,7 @@ return {
 			[1]="regenerate_1_rage_per_x_life_regeneration"
 		}
 	},
-	[8452]={
+	[8453]={
 		[1]={
 			[1]={
 				limit={
@@ -184983,7 +185008,7 @@ return {
 			[1]="regenerate_1_rage_per_x_mana_regeneration"
 		}
 	},
-	[8453]={
+	[8454]={
 		[1]={
 			[1]={
 				limit={
@@ -184999,7 +185024,7 @@ return {
 			[1]="regenerate_energy_shield_equal_to_%_evasion_rating_over_1_second_every_4_seconds"
 		}
 	},
-	[8454]={
+	[8455]={
 		[1]={
 			[1]={
 				limit={
@@ -185015,7 +185040,7 @@ return {
 			[1]="regenerate_energy_shield_instead_of_life"
 		}
 	},
-	[8455]={
+	[8456]={
 		[1]={
 			[1]={
 				limit={
@@ -185031,7 +185056,7 @@ return {
 			[1]="regenerate_%_life_over_1_second_when_hit_while_not_unhinged"
 		}
 	},
-	[8456]={
+	[8457]={
 		[1]={
 			[1]={
 				limit={
@@ -185047,7 +185072,7 @@ return {
 			[1]="regenerate_%_maximum_energy_shield_over_2_seconds_on_consuming_corpse"
 		}
 	},
-	[8457]={
+	[8458]={
 		[1]={
 			[1]={
 				limit={
@@ -185063,7 +185088,7 @@ return {
 			[1]="regenerate_%_maximum_mana_over_2_seconds_on_consuming_corpse"
 		}
 	},
-	[8458]={
+	[8459]={
 		[1]={
 			[1]={
 				[1]={
@@ -185083,7 +185108,7 @@ return {
 			[1]="regenerate_x_mana_per_minute_while_you_have_arcane_surge"
 		}
 	},
-	[8459]={
+	[8460]={
 		[1]={
 			[1]={
 				limit={
@@ -185112,7 +185137,7 @@ return {
 			[1]="reload_speed_+%"
 		}
 	},
-	[8460]={
+	[8461]={
 		[1]={
 			[1]={
 				limit={
@@ -185128,7 +185153,7 @@ return {
 			[1]="remove_ailments_and_burning_on_gaining_adrenaline"
 		}
 	},
-	[8461]={
+	[8462]={
 		[1]={
 			[1]={
 				limit={
@@ -185144,7 +185169,7 @@ return {
 			[1]="remove_all_damaging_ailments_on_warcry"
 		}
 	},
-	[8462]={
+	[8463]={
 		[1]={
 			[1]={
 				limit={
@@ -185160,7 +185185,7 @@ return {
 			[1]="remove_bleed_on_life_flask_use"
 		}
 	},
-	[8463]={
+	[8464]={
 		[1]={
 			[1]={
 				limit={
@@ -185176,7 +185201,7 @@ return {
 			[1]="remove_bleeding_on_warcry"
 		}
 	},
-	[8464]={
+	[8465]={
 		[1]={
 			[1]={
 				limit={
@@ -185192,7 +185217,7 @@ return {
 			[1]="remove_chill_and_freeze_on_flask_use"
 		}
 	},
-	[8465]={
+	[8466]={
 		[1]={
 			[1]={
 				limit={
@@ -185208,7 +185233,7 @@ return {
 			[1]="remove_curse_on_mana_flask_use"
 		}
 	},
-	[8466]={
+	[8467]={
 		[1]={
 			[1]={
 				limit={
@@ -185224,7 +185249,7 @@ return {
 			[1]="remove_damaging_ailments_on_swapping_stance"
 		}
 	},
-	[8467]={
+	[8468]={
 		[1]={
 			[1]={
 				limit={
@@ -185249,7 +185274,7 @@ return {
 			[1]="remove_elemental_ailments_on_curse_cast_%"
 		}
 	},
-	[8468]={
+	[8469]={
 		[1]={
 			[1]={
 				limit={
@@ -185265,7 +185290,7 @@ return {
 			[1]="remove_ignite_and_burning_on_flask_use"
 		}
 	},
-	[8469]={
+	[8470]={
 		[1]={
 			[1]={
 				limit={
@@ -185281,7 +185306,7 @@ return {
 			[1]="remove_maim_and_hinder_on_flask_use"
 		}
 	},
-	[8470]={
+	[8471]={
 		[1]={
 			[1]={
 				limit={
@@ -185297,7 +185322,7 @@ return {
 			[1]="remove_%_of_mana_on_hit"
 		}
 	},
-	[8471]={
+	[8472]={
 		[1]={
 			[1]={
 				limit={
@@ -185313,7 +185338,7 @@ return {
 			[1]="remove_random_ailment_on_flask_use_if_all_equipped_items_are_elder"
 		}
 	},
-	[8472]={
+	[8473]={
 		[1]={
 			[1]={
 				limit={
@@ -185329,7 +185354,7 @@ return {
 			[1]="remove_random_ailment_when_you_warcry"
 		}
 	},
-	[8473]={
+	[8474]={
 		[1]={
 			[1]={
 				limit={
@@ -185345,7 +185370,7 @@ return {
 			[1]="remove_random_charge_on_hit_%"
 		}
 	},
-	[8474]={
+	[8475]={
 		[1]={
 			[1]={
 				limit={
@@ -185361,7 +185386,7 @@ return {
 			[1]="remove_random_elemental_ailment_on_mana_flask_use"
 		}
 	},
-	[8475]={
+	[8476]={
 		[1]={
 			[1]={
 				limit={
@@ -185377,7 +185402,7 @@ return {
 			[1]="remove_random_non_elemental_ailment_on_life_flask_use"
 		}
 	},
-	[8476]={
+	[8477]={
 		[1]={
 			[1]={
 				limit={
@@ -185393,7 +185418,7 @@ return {
 			[1]="remove_shock_on_flask_use"
 		}
 	},
-	[8477]={
+	[8478]={
 		[1]={
 			[1]={
 				limit={
@@ -185418,7 +185443,7 @@ return {
 			[1]="remove_x_curses_after_channelling_for_2_seconds"
 		}
 	},
-	[8478]={
+	[8479]={
 		[1]={
 			[1]={
 				limit={
@@ -185447,7 +185472,7 @@ return {
 			[1]="replica_unique_hyrris_truth_hatred_mana_reservation_+%_final"
 		}
 	},
-	[8479]={
+	[8480]={
 		[1]={
 			[1]={
 				limit={
@@ -185476,7 +185501,7 @@ return {
 			[1]="reservation_efficiency_+%_with_unique_abyss_jewel_socketed"
 		}
 	},
-	[8480]={
+	[8481]={
 		[1]={
 			[1]={
 				[1]={
@@ -185509,7 +185534,7 @@ return {
 			[1]="reserve_life_instead_of_loss_from_damage_for_x_ms"
 		}
 	},
-	[8481]={
+	[8482]={
 		[1]={
 			[1]={
 				limit={
@@ -185525,7 +185550,7 @@ return {
 			[1]="resist_all_%"
 		}
 	},
-	[8482]={
+	[8483]={
 		[1]={
 			[1]={
 				limit={
@@ -185541,7 +185566,7 @@ return {
 			[1]="resist_all_%_for_enemies_you_inflict_spiders_web_upon"
 		}
 	},
-	[8483]={
+	[8484]={
 		[1]={
 			[1]={
 				limit={
@@ -185557,7 +185582,7 @@ return {
 			[1]="restore_energy_shield_and_mana_when_you_focus_%"
 		}
 	},
-	[8484]={
+	[8485]={
 		[1]={
 			[1]={
 				limit={
@@ -185573,7 +185598,7 @@ return {
 			[1]="returning_projectiles_always_pierce"
 		}
 	},
-	[8485]={
+	[8486]={
 		[1]={
 			[1]={
 				[1]={
@@ -185606,7 +185631,7 @@ return {
 			[1]="revive_golems_if_killed_by_enemies_ms"
 		}
 	},
-	[8486]={
+	[8487]={
 		[1]={
 			[1]={
 				limit={
@@ -185622,7 +185647,7 @@ return {
 			[1]="righteous_fire_and_fire_beam_regenerate_x_mana_per_second_while_enemies_are_within"
 		}
 	},
-	[8487]={
+	[8488]={
 		[1]={
 			[1]={
 				limit={
@@ -185651,7 +185676,7 @@ return {
 			[1]="rogue_trader_map_rogue_exile_maximum_life_+%_final"
 		}
 	},
-	[8488]={
+	[8489]={
 		[1]={
 			[1]={
 				limit={
@@ -185667,7 +185692,7 @@ return {
 			[1]="rune_blast_teleports_to_detonated_rune_with_100_ms_cooldown"
 		}
 	},
-	[8489]={
+	[8490]={
 		[1]={
 			[1]={
 				limit={
@@ -185683,7 +185708,7 @@ return {
 			[1]="rune_blast_teleports_to_detonated_rune_with_150_ms_cooldown"
 		}
 	},
-	[8490]={
+	[8491]={
 		[1]={
 			[1]={
 				limit={
@@ -185712,7 +185737,7 @@ return {
 			[1]="sabotuer_mines_apply_damage_+%_to_nearby_enemies_up_to_-10%"
 		}
 	},
-	[8491]={
+	[8492]={
 		[1]={
 			[1]={
 				limit={
@@ -185741,7 +185766,7 @@ return {
 			[1]="sabotuer_mines_apply_damage_taken_+%_to_nearby_enemies_up_to_10%"
 		}
 	},
-	[8492]={
+	[8493]={
 		[1]={
 			[1]={
 				limit={
@@ -185757,7 +185782,7 @@ return {
 			[1]="sacrifice_%_life_on_spell_skill"
 		}
 	},
-	[8493]={
+	[8494]={
 		[1]={
 			[1]={
 				limit={
@@ -185773,7 +185798,7 @@ return {
 			[1]="sacrifice_%_maximum_life_to_gain_as_es_on_spell_cast"
 		}
 	},
-	[8494]={
+	[8495]={
 		[1]={
 			[1]={
 				limit={
@@ -185802,7 +185827,7 @@ return {
 			[1]="sanctify_area_of_effect_+%_when_targeting_consecrated_ground"
 		}
 	},
-	[8495]={
+	[8496]={
 		[1]={
 			[1]={
 				limit={
@@ -185831,7 +185856,7 @@ return {
 			[1]="sanctify_consecrated_ground_enemy_damage_taken_+%"
 		}
 	},
-	[8496]={
+	[8497]={
 		[1]={
 			[1]={
 				limit={
@@ -185860,7 +185885,7 @@ return {
 			[1]="sanctify_damage_+%"
 		}
 	},
-	[8497]={
+	[8498]={
 		[1]={
 			[1]={
 				limit={
@@ -185876,7 +185901,7 @@ return {
 			[1]="sap_on_critical_strike_with_lightning_skills"
 		}
 	},
-	[8498]={
+	[8499]={
 		[1]={
 			[1]={
 				limit={
@@ -185905,7 +185930,7 @@ return {
 			[1]="scorch_effect_+%"
 		}
 	},
-	[8499]={
+	[8500]={
 		[1]={
 			[1]={
 				limit={
@@ -185921,7 +185946,7 @@ return {
 			[1]="scorch_enemies_in_close_range_on_block"
 		}
 	},
-	[8500]={
+	[8501]={
 		[1]={
 			[1]={
 				limit={
@@ -185937,7 +185962,7 @@ return {
 			[1]="scorched_enemies_explode_on_death_for_8%_life_as_fire_degen_chance"
 		}
 	},
-	[8501]={
+	[8502]={
 		[1]={
 			[1]={
 				limit={
@@ -185966,7 +185991,7 @@ return {
 			[1]="scourge_arrow_damage_+%"
 		}
 	},
-	[8502]={
+	[8503]={
 		[1]={
 			[1]={
 				limit={
@@ -185995,7 +186020,7 @@ return {
 			[1]="secondary_skill_effect_duration_+%"
 		}
 	},
-	[8503]={
+	[8504]={
 		[1]={
 			[1]={
 				limit={
@@ -186011,7 +186036,7 @@ return {
 			[1]="seismic_cry_exerted_attack_damage_+%"
 		}
 	},
-	[8504]={
+	[8505]={
 		[1]={
 			[1]={
 				limit={
@@ -186027,7 +186052,7 @@ return {
 			[1]="seismic_cry_minimum_power"
 		}
 	},
-	[8505]={
+	[8506]={
 		[1]={
 			[1]={
 				[1]={
@@ -186047,7 +186072,7 @@ return {
 			[1]="self_chaos_damage_taken_per_minute_while_affected_by_flask"
 		}
 	},
-	[8506]={
+	[8507]={
 		[1]={
 			[1]={
 				limit={
@@ -186063,7 +186088,7 @@ return {
 			[1]="self_cold_damage_on_reaching_maximum_power_charges"
 		}
 	},
-	[8507]={
+	[8508]={
 		[1]={
 			[1]={
 				limit={
@@ -186092,7 +186117,7 @@ return {
 			[1]="self_critical_strike_multiplier_+%_while_ignited"
 		}
 	},
-	[8508]={
+	[8509]={
 		[1]={
 			[1]={
 				limit={
@@ -186121,7 +186146,7 @@ return {
 			[1]="self_curse_duration_+%_per_10_devotion"
 		}
 	},
-	[8509]={
+	[8510]={
 		[1]={
 			[1]={
 				limit={
@@ -186150,7 +186175,7 @@ return {
 			[1]="self_elemental_status_duration_-%_per_10_devotion"
 		}
 	},
-	[8510]={
+	[8511]={
 		[1]={
 			[1]={
 				limit={
@@ -186166,7 +186191,7 @@ return {
 			[1]="self_physical_damage_on_movement_skill_use"
 		}
 	},
-	[8511]={
+	[8512]={
 		[1]={
 			[1]={
 				limit={
@@ -186182,7 +186207,7 @@ return {
 			[1]="self_physical_damage_on_skill_use_%_max_life_per_warcry_exerting_action"
 		}
 	},
-	[8512]={
+	[8513]={
 		[1]={
 			[1]={
 				limit={
@@ -186198,7 +186223,7 @@ return {
 			[1]="self_take_no_extra_damage_from_critical_strikes_if_have_been_crit_recently"
 		}
 	},
-	[8513]={
+	[8514]={
 		[1]={
 			[1]={
 				limit={
@@ -186214,7 +186239,7 @@ return {
 			[1]="self_take_no_extra_damage_from_critical_strikes_if_left_ring_is_magic_item"
 		}
 	},
-	[8514]={
+	[8515]={
 		[1]={
 			[1]={
 				limit={
@@ -186230,7 +186255,7 @@ return {
 			[1]="self_take_no_extra_damage_from_critical_strikes_if_only_one_nearby_enemy"
 		}
 	},
-	[8515]={
+	[8516]={
 		[1]={
 			[1]={
 				limit={
@@ -186246,7 +186271,7 @@ return {
 			[1]="self_take_no_extra_damage_from_critical_strikes_if_there_is_at_most_1_rare_or_unique_enemy_nearby"
 		}
 	},
-	[8516]={
+	[8517]={
 		[1]={
 			[1]={
 				limit={
@@ -186262,7 +186287,7 @@ return {
 			[1]="self_take_no_extra_damage_from_critical_strikes_while_affected_by_elusive"
 		}
 	},
-	[8517]={
+	[8518]={
 		[1]={
 			[1]={
 				limit={
@@ -186291,7 +186316,7 @@ return {
 			[1]="sentinel_minion_cooldown_speed_+%"
 		}
 	},
-	[8518]={
+	[8519]={
 		[1]={
 			[1]={
 				limit={
@@ -186320,7 +186345,7 @@ return {
 			[1]="sentinel_of_purity_damage_+%"
 		}
 	},
-	[8519]={
+	[8520]={
 		[1]={
 			[1]={
 				limit={
@@ -186345,7 +186370,7 @@ return {
 			[1]="serpent_strike_maximum_snakes"
 		}
 	},
-	[8520]={
+	[8521]={
 		[1]={
 			[1]={
 				limit={
@@ -186361,7 +186386,7 @@ return {
 			[1]="share_charges_with_allies_in_your_presence"
 		}
 	},
-	[8521]={
+	[8522]={
 		[1]={
 			[1]={
 				limit={
@@ -186377,7 +186402,7 @@ return {
 			[1]="shatter_has_%_chance_to_cover_in_frost"
 		}
 	},
-	[8522]={
+	[8523]={
 		[1]={
 			[1]={
 				limit={
@@ -186393,7 +186418,7 @@ return {
 			[1]="shatter_on_kill_vs_bleeding_enemies"
 		}
 	},
-	[8523]={
+	[8524]={
 		[1]={
 			[1]={
 				limit={
@@ -186409,7 +186434,7 @@ return {
 			[1]="shatter_on_kill_vs_poisoned_enemies"
 		}
 	},
-	[8524]={
+	[8525]={
 		[1]={
 			[1]={
 				limit={
@@ -186438,7 +186463,7 @@ return {
 			[1]="shattering_steel_damage_+%"
 		}
 	},
-	[8525]={
+	[8526]={
 		[1]={
 			[1]={
 				limit={
@@ -186454,7 +186479,7 @@ return {
 			[1]="shattering_steel_fortify_on_hit_close_range"
 		}
 	},
-	[8526]={
+	[8527]={
 		[1]={
 			[1]={
 				limit={
@@ -186479,7 +186504,7 @@ return {
 			[1]="shattering_steel_number_of_additional_projectiles"
 		}
 	},
-	[8527]={
+	[8528]={
 		[1]={
 			[1]={
 				limit={
@@ -186495,7 +186520,7 @@ return {
 			[1]="shattering_steel_%_chance_to_not_consume_ammo"
 		}
 	},
-	[8528]={
+	[8529]={
 		[1]={
 			[1]={
 				limit={
@@ -186511,7 +186536,7 @@ return {
 			[1]="shield_crush_and_spectral_shield_throw_cannot_add_physical_damage_per_armour_and_evasion_rating"
 		}
 	},
-	[8529]={
+	[8530]={
 		[1]={
 			[1]={
 				limit={
@@ -186532,7 +186557,7 @@ return {
 			[2]="shield_crush_and_spectral_shield_throw_off_hand_maximum_added_lightning_damage_per_15_energy_shield_on_shield"
 		}
 	},
-	[8530]={
+	[8531]={
 		[1]={
 			[1]={
 				limit={
@@ -186561,7 +186586,7 @@ return {
 			[1]="shield_crush_attack_speed_+%"
 		}
 	},
-	[8531]={
+	[8532]={
 		[1]={
 			[1]={
 				limit={
@@ -186590,7 +186615,7 @@ return {
 			[1]="shield_crush_damage_+%"
 		}
 	},
-	[8532]={
+	[8533]={
 		[1]={
 			[1]={
 				limit={
@@ -186619,7 +186644,7 @@ return {
 			[1]="shield_crush_helmet_enchantment_aoe_+%_final"
 		}
 	},
-	[8533]={
+	[8534]={
 		[1]={
 			[1]={
 				limit={
@@ -186648,7 +186673,7 @@ return {
 			[1]="shield_defences_+%_per_10_devotion"
 		}
 	},
-	[8534]={
+	[8535]={
 		[1]={
 			[1]={
 				limit={
@@ -186677,7 +186702,7 @@ return {
 			[1]="shock_and_freeze_apply_elemental_damage_taken_+%"
 		}
 	},
-	[8535]={
+	[8536]={
 		[1]={
 			[1]={
 				limit={
@@ -186702,7 +186727,7 @@ return {
 			[1]="shock_attackers_for_4_seconds_on_block_%_chance"
 		}
 	},
-	[8536]={
+	[8537]={
 		[1]={
 			[1]={
 				limit={
@@ -186731,7 +186756,7 @@ return {
 			[1]="shock_chance_+%_vs_electrocuted_enemies"
 		}
 	},
-	[8537]={
+	[8538]={
 		[1]={
 			[1]={
 				limit={
@@ -186760,7 +186785,7 @@ return {
 			[1]="shock_effect_against_cursed_enemies_+%"
 		}
 	},
-	[8538]={
+	[8539]={
 		[1]={
 			[1]={
 				limit={
@@ -186789,7 +186814,7 @@ return {
 			[1]="shock_effect_+%"
 		}
 	},
-	[8539]={
+	[8540]={
 		[1]={
 			[1]={
 				limit={
@@ -186818,7 +186843,7 @@ return {
 			[1]="shock_effect_+%_with_critical_strikes"
 		}
 	},
-	[8540]={
+	[8541]={
 		[1]={
 			[1]={
 				limit={
@@ -186834,7 +186859,7 @@ return {
 			[1]="shock_enemies_in_150cm_radius_on_shock_chance_%"
 		}
 	},
-	[8541]={
+	[8542]={
 		[1]={
 			[1]={
 				limit={
@@ -186850,7 +186875,7 @@ return {
 			[1]="shock_magnitude_calculated_from_damage"
 		}
 	},
-	[8542]={
+	[8543]={
 		[1]={
 			[1]={
 				limit={
@@ -186866,7 +186891,7 @@ return {
 			[1]="shock_maximum_magnitude_is_60%"
 		}
 	},
-	[8543]={
+	[8544]={
 		[1]={
 			[1]={
 				limit={
@@ -186882,7 +186907,7 @@ return {
 			[1]="shock_maximum_magnitude_+"
 		}
 	},
-	[8544]={
+	[8545]={
 		[1]={
 			[1]={
 				[1]={
@@ -186902,7 +186927,7 @@ return {
 			[1]="shock_self_for_x_ms_when_you_focus"
 		}
 	},
-	[8545]={
+	[8546]={
 		[1]={
 			[1]={
 				[1]={
@@ -186922,7 +186947,7 @@ return {
 			[1]="shock_nearby_enemies_for_x_ms_when_you_focus"
 		}
 	},
-	[8546]={
+	[8547]={
 		[1]={
 			[1]={
 				limit={
@@ -186938,7 +186963,7 @@ return {
 			[1]="shock_nova_and_storm_call_all_damage_can_ignite"
 		}
 	},
-	[8547]={
+	[8548]={
 		[1]={
 			[1]={
 				limit={
@@ -186954,7 +186979,7 @@ return {
 			[1]="shock_nova_ring_chance_to_shock_+%"
 		}
 	},
-	[8548]={
+	[8549]={
 		[1]={
 			[1]={
 				limit={
@@ -186983,7 +187008,7 @@ return {
 			[1]="shock_nova_ring_shocks_as_if_dealing_damage_+%_final"
 		}
 	},
-	[8549]={
+	[8550]={
 		[1]={
 			[1]={
 				limit={
@@ -187012,7 +187037,7 @@ return {
 			[1]="shocked_chilled_effect_on_self_+%"
 		}
 	},
-	[8550]={
+	[8551]={
 		[1]={
 			[1]={
 				limit={
@@ -187041,7 +187066,7 @@ return {
 			[1]="shocked_effect_on_self_+%"
 		}
 	},
-	[8551]={
+	[8552]={
 		[1]={
 			[1]={
 				limit={
@@ -187057,7 +187082,7 @@ return {
 			[1]="shocked_enemies_explode_for_%_life_as_lightning_damage"
 		}
 	},
-	[8552]={
+	[8553]={
 		[1]={
 			[1]={
 				limit={
@@ -187086,7 +187111,7 @@ return {
 			[1]="shocked_ground_base_magnitude_override"
 		}
 	},
-	[8553]={
+	[8554]={
 		[1]={
 			[1]={
 				limit={
@@ -187111,7 +187136,7 @@ return {
 			[1]="shocked_ground_on_death_%"
 		}
 	},
-	[8554]={
+	[8555]={
 		[1]={
 			[1]={
 				limit={
@@ -187136,7 +187161,7 @@ return {
 			[1]="shrapnel_ballista_num_additional_arrows"
 		}
 	},
-	[8555]={
+	[8556]={
 		[1]={
 			[1]={
 				limit={
@@ -187161,7 +187186,7 @@ return {
 			[1]="shrapnel_ballista_num_pierce"
 		}
 	},
-	[8556]={
+	[8557]={
 		[1]={
 			[1]={
 				limit={
@@ -187190,7 +187215,7 @@ return {
 			[1]="shrapnel_ballista_projectile_speed_+%"
 		}
 	},
-	[8557]={
+	[8558]={
 		[1]={
 			[1]={
 				limit={
@@ -187219,7 +187244,7 @@ return {
 			[1]="shrapnel_ballista_totems_from_this_skill_grant_shrapnel_ballista_attack_speed_-%"
 		}
 	},
-	[8558]={
+	[8559]={
 		[1]={
 			[1]={
 				limit={
@@ -187248,7 +187273,7 @@ return {
 			[1]="galvanic_arrow_area_damage_+%"
 		}
 	},
-	[8559]={
+	[8560]={
 		[1]={
 			[1]={
 				limit={
@@ -187277,7 +187302,7 @@ return {
 			[1]="shrapnel_trap_area_of_effect_+%"
 		}
 	},
-	[8560]={
+	[8561]={
 		[1]={
 			[1]={
 				limit={
@@ -187306,7 +187331,7 @@ return {
 			[1]="shrapnel_trap_damage_+%"
 		}
 	},
-	[8561]={
+	[8562]={
 		[1]={
 			[1]={
 				limit={
@@ -187331,7 +187356,7 @@ return {
 			[1]="shrapnel_trap_number_of_additional_secondary_explosions"
 		}
 	},
-	[8562]={
+	[8563]={
 		[1]={
 			[1]={
 				limit={
@@ -187360,7 +187385,7 @@ return {
 			[1]="siege_ballista_totems_from_this_skill_grant_siege_ballista_attack_speed_-%"
 		}
 	},
-	[8563]={
+	[8564]={
 		[1]={
 			[1]={
 				limit={
@@ -187389,7 +187414,7 @@ return {
 			[1]="sigil_attached_target_damage_+%"
 		}
 	},
-	[8564]={
+	[8565]={
 		[1]={
 			[1]={
 				limit={
@@ -187418,7 +187443,7 @@ return {
 			[1]="sigil_attached_target_damage_taken_+%"
 		}
 	},
-	[8565]={
+	[8566]={
 		[1]={
 			[1]={
 				limit={
@@ -187447,7 +187472,7 @@ return {
 			[1]="sigil_critical_strike_chance_+%"
 		}
 	},
-	[8566]={
+	[8567]={
 		[1]={
 			[1]={
 				limit={
@@ -187463,7 +187488,7 @@ return {
 			[1]="sigil_critical_strike_multiplier_+"
 		}
 	},
-	[8567]={
+	[8568]={
 		[1]={
 			[1]={
 				limit={
@@ -187492,7 +187517,7 @@ return {
 			[1]="sigil_damage_+%"
 		}
 	},
-	[8568]={
+	[8569]={
 		[1]={
 			[1]={
 				limit={
@@ -187521,7 +187546,7 @@ return {
 			[1]="sigil_damage_+%_per_10_devotion"
 		}
 	},
-	[8569]={
+	[8570]={
 		[1]={
 			[1]={
 				limit={
@@ -187550,7 +187575,7 @@ return {
 			[1]="sigil_duration_+%"
 		}
 	},
-	[8570]={
+	[8571]={
 		[1]={
 			[1]={
 				limit={
@@ -187579,7 +187604,7 @@ return {
 			[1]="sigil_recall_cooldown_speed_+%"
 		}
 	},
-	[8571]={
+	[8572]={
 		[1]={
 			[1]={
 				limit={
@@ -187608,7 +187633,7 @@ return {
 			[1]="sigil_recall_cooldown_speed_+%_per_brand_up_to_40%"
 		}
 	},
-	[8572]={
+	[8573]={
 		[1]={
 			[1]={
 				limit={
@@ -187637,7 +187662,7 @@ return {
 			[1]="sigil_repeat_frequency_+%"
 		}
 	},
-	[8573]={
+	[8574]={
 		[1]={
 			[1]={
 				limit={
@@ -187666,7 +187691,7 @@ return {
 			[1]="sigil_repeat_frequency_+%_if_havent_used_a_brand_skill_recently"
 		}
 	},
-	[8574]={
+	[8575]={
 		[1]={
 			[1]={
 				limit={
@@ -187695,7 +187720,7 @@ return {
 			[1]="sigil_target_search_range_+%"
 		}
 	},
-	[8575]={
+	[8576]={
 		[1]={
 			[1]={
 				limit={
@@ -187724,7 +187749,7 @@ return {
 			[1]="skeletal_chains_area_of_effect_+%"
 		}
 	},
-	[8576]={
+	[8577]={
 		[1]={
 			[1]={
 				limit={
@@ -187753,7 +187778,7 @@ return {
 			[1]="skeletal_chains_cast_speed_+%"
 		}
 	},
-	[8577]={
+	[8578]={
 		[1]={
 			[1]={
 				limit={
@@ -187782,7 +187807,7 @@ return {
 			[1]="skeleton_attack_speed_+%"
 		}
 	},
-	[8578]={
+	[8579]={
 		[1]={
 			[1]={
 				limit={
@@ -187811,7 +187836,7 @@ return {
 			[1]="skeleton_cast_speed_+%"
 		}
 	},
-	[8579]={
+	[8580]={
 		[1]={
 			[1]={
 				limit={
@@ -187840,7 +187865,7 @@ return {
 			[1]="skeleton_minion_reservation_+%"
 		}
 	},
-	[8580]={
+	[8581]={
 		[1]={
 			[1]={
 				limit={
@@ -187869,7 +187894,7 @@ return {
 			[1]="skeleton_movement_speed_+%"
 		}
 	},
-	[8581]={
+	[8582]={
 		[1]={
 			[1]={
 				limit={
@@ -187885,7 +187910,7 @@ return {
 			[1]="skeletons_and_holy_relics_convert_%_physical_damage_to_a_random_element"
 		}
 	},
-	[8582]={
+	[8583]={
 		[1]={
 			[1]={
 				limit={
@@ -187901,7 +187926,7 @@ return {
 			[1]="skeletons_and_holy_relics_+%_effect_of_non_damaging_ailments"
 		}
 	},
-	[8583]={
+	[8584]={
 		[1]={
 			[1]={
 				limit={
@@ -187917,7 +187942,7 @@ return {
 			[1]="skeletons_are_permanent_minions"
 		}
 	},
-	[8584]={
+	[8585]={
 		[1]={
 			[1]={
 				limit={
@@ -187933,7 +187958,7 @@ return {
 			[1]="skill_cost_base_life_equal_to_base_mana"
 		}
 	},
-	[8585]={
+	[8586]={
 		[1]={
 			[1]={
 				limit={
@@ -187962,7 +187987,7 @@ return {
 			[1]="skill_effect_duration_+%_while_affected_by_malevolence"
 		}
 	},
-	[8586]={
+	[8587]={
 		[1]={
 			[1]={
 				limit={
@@ -187991,7 +188016,7 @@ return {
 			[1]="skill_effect_duration_+%_with_bow_skills"
 		}
 	},
-	[8587]={
+	[8588]={
 		[1]={
 			[1]={
 				limit={
@@ -188020,7 +188045,7 @@ return {
 			[1]="skill_effect_duration_+%_with_non_curse_aura_skills"
 		}
 	},
-	[8588]={
+	[8589]={
 		[1]={
 			[1]={
 				limit={
@@ -188036,7 +188061,7 @@ return {
 			[1]="skill_life_cost_+_with_channelling_skills"
 		}
 	},
-	[8589]={
+	[8590]={
 		[1]={
 			[1]={
 				limit={
@@ -188052,7 +188077,7 @@ return {
 			[1]="skill_life_cost_+_with_non_channelling_skills"
 		}
 	},
-	[8590]={
+	[8591]={
 		[1]={
 			[1]={
 				limit={
@@ -188068,7 +188093,7 @@ return {
 			[1]="skill_mana_cost_+_while_affected_by_clarity"
 		}
 	},
-	[8591]={
+	[8592]={
 		[1]={
 			[1]={
 				limit={
@@ -188084,7 +188109,7 @@ return {
 			[1]="skill_mana_cost_+_with_channelling_skills"
 		}
 	},
-	[8592]={
+	[8593]={
 		[1]={
 			[1]={
 				limit={
@@ -188100,7 +188125,7 @@ return {
 			[1]="base_mana_cost_+_with_channelling_skills"
 		}
 	},
-	[8593]={
+	[8594]={
 		[1]={
 			[1]={
 				limit={
@@ -188116,7 +188141,7 @@ return {
 			[1]="skill_mana_cost_+_with_non_channelling_skills"
 		}
 	},
-	[8594]={
+	[8595]={
 		[1]={
 			[1]={
 				limit={
@@ -188132,7 +188157,7 @@ return {
 			[1]="base_mana_cost_+_with_non_channelling_skills"
 		}
 	},
-	[8595]={
+	[8596]={
 		[1]={
 			[1]={
 				limit={
@@ -188148,7 +188173,7 @@ return {
 			[1]="skill_mana_cost_+_with_non_channelling_skills_while_affected_by_clarity"
 		}
 	},
-	[8596]={
+	[8597]={
 		[1]={
 			[1]={
 				limit={
@@ -188164,7 +188189,7 @@ return {
 			[1]="skills_cost_no_mana_while_focused"
 		}
 	},
-	[8597]={
+	[8598]={
 		[1]={
 			[1]={
 				limit={
@@ -188189,7 +188214,7 @@ return {
 			[1]="skills_fire_x_additional_projectiles_for_4_seconds_after_consuming_12_steel_ammo"
 		}
 	},
-	[8598]={
+	[8599]={
 		[1]={
 			[1]={
 				[1]={
@@ -188209,7 +188234,7 @@ return {
 			[1]="skills_gain_intensity_every_x_milliseconds_if_gained_intensity_recently"
 		}
 	},
-	[8599]={
+	[8600]={
 		[1]={
 			[1]={
 				[1]={
@@ -188229,7 +188254,7 @@ return {
 			[1]="skills_lose_intensity_every_x_milliseconds_if_gained_intensity_recently"
 		}
 	},
-	[8600]={
+	[8601]={
 		[1]={
 			[1]={
 				limit={
@@ -188258,7 +188283,7 @@ return {
 			[1]="skills_supported_by_nightblade_have_elusive_effect_+%"
 		}
 	},
-	[8601]={
+	[8602]={
 		[1]={
 			[1]={
 				[1]={
@@ -188291,7 +188316,7 @@ return {
 			[1]="skitterbots_mana_reservation_efficiency_-2%_per_1"
 		}
 	},
-	[8602]={
+	[8603]={
 		[1]={
 			[1]={
 				limit={
@@ -188320,7 +188345,7 @@ return {
 			[1]="skitterbots_mana_reservation_efficiency_+%"
 		}
 	},
-	[8603]={
+	[8604]={
 		[1]={
 			[1]={
 				limit={
@@ -188345,7 +188370,7 @@ return {
 			[1]="slam_aftershock_chance_%"
 		}
 	},
-	[8604]={
+	[8605]={
 		[1]={
 			[1]={
 				limit={
@@ -188374,7 +188399,7 @@ return {
 			[1]="slam_skill_area_of_effect_+%"
 		}
 	},
-	[8605]={
+	[8606]={
 		[1]={
 			[1]={
 				limit={
@@ -188390,7 +188415,7 @@ return {
 			[1]="slams_always_ancestral_slam"
 		}
 	},
-	[8606]={
+	[8607]={
 		[1]={
 			[1]={
 				limit={
@@ -188419,7 +188444,7 @@ return {
 			[1]="slayer_area_of_effect_+%_per_enemy_killed_recently_up_to_50%"
 		}
 	},
-	[8607]={
+	[8608]={
 		[1]={
 			[1]={
 				limit={
@@ -188435,7 +188460,7 @@ return {
 			[1]="slayer_critical_strike_multiplier_+_per_nearby_enemy_up_to_100"
 		}
 	},
-	[8608]={
+	[8609]={
 		[1]={
 			[1]={
 				limit={
@@ -188464,7 +188489,7 @@ return {
 			[1]="slayer_damage_+%_final_against_unique_enemies"
 		}
 	},
-	[8609]={
+	[8610]={
 		[1]={
 			[1]={
 				limit={
@@ -188493,7 +188518,7 @@ return {
 			[1]="slayer_damage_+%_final_from_distance"
 		}
 	},
-	[8610]={
+	[8611]={
 		[1]={
 			[1]={
 				limit={
@@ -188522,7 +188547,7 @@ return {
 			[1]="slither_elusive_effect_+%"
 		}
 	},
-	[8611]={
+	[8612]={
 		[1]={
 			[1]={
 				limit={
@@ -188538,7 +188563,7 @@ return {
 			[1]="slither_wither_stacks"
 		}
 	},
-	[8612]={
+	[8613]={
 		[1]={
 			[1]={
 				limit={
@@ -188554,7 +188579,7 @@ return {
 			[1]="slows_have_no_potency_on_you"
 		}
 	},
-	[8613]={
+	[8614]={
 		[1]={
 			[1]={
 				limit={
@@ -188583,7 +188608,7 @@ return {
 			[1]="small_passives_effect_+%"
 		}
 	},
-	[8614]={
+	[8615]={
 		[1]={
 			[1]={
 				limit={
@@ -188599,7 +188624,7 @@ return {
 			[1]="smite_aura_effect_+%"
 		}
 	},
-	[8615]={
+	[8616]={
 		[1]={
 			[1]={
 				limit={
@@ -188615,7 +188640,7 @@ return {
 			[1]="smite_chance_for_lighting_to_strike_extra_target_%"
 		}
 	},
-	[8616]={
+	[8617]={
 		[1]={
 			[1]={
 				limit={
@@ -188644,7 +188669,7 @@ return {
 			[1]="smite_damage_+%"
 		}
 	},
-	[8617]={
+	[8618]={
 		[1]={
 			[1]={
 				limit={
@@ -188660,7 +188685,7 @@ return {
 			[1]="smite_static_strike_killing_blow_consumes_corpse_restore_%_life"
 		}
 	},
-	[8618]={
+	[8619]={
 		[1]={
 			[1]={
 				limit={
@@ -188676,7 +188701,7 @@ return {
 			[1]="smoke_cloud_while_stationary_radius"
 		}
 	},
-	[8619]={
+	[8620]={
 		[1]={
 			[1]={
 				limit={
@@ -188705,7 +188730,7 @@ return {
 			[1]="snapping_adder_damage_+%"
 		}
 	},
-	[8620]={
+	[8621]={
 		[1]={
 			[1]={
 				limit={
@@ -188721,7 +188746,7 @@ return {
 			[1]="snapping_adder_%_chance_to_retain_projectile_on_release"
 		}
 	},
-	[8621]={
+	[8622]={
 		[1]={
 			[1]={
 				limit={
@@ -188746,7 +188771,7 @@ return {
 			[1]="snapping_adder_withered_on_hit_for_2_seconds_%_chance"
 		}
 	},
-	[8622]={
+	[8623]={
 		[1]={
 			[1]={
 				limit={
@@ -188775,7 +188800,7 @@ return {
 			[1]="snipe_attack_speed_+%"
 		}
 	},
-	[8623]={
+	[8624]={
 		[1]={
 			[1]={
 				limit={
@@ -188804,7 +188829,7 @@ return {
 			[1]="sorcery_ward_+%_strength"
 		}
 	},
-	[8624]={
+	[8625]={
 		[1]={
 			[1]={
 				limit={
@@ -188829,7 +188854,7 @@ return {
 			[1]="soul_eater_maximum_stacks"
 		}
 	},
-	[8625]={
+	[8626]={
 		[1]={
 			[1]={
 				limit={
@@ -188858,7 +188883,7 @@ return {
 			[1]="soul_link_duration_+%"
 		}
 	},
-	[8626]={
+	[8627]={
 		[1]={
 			[1]={
 				limit={
@@ -188874,7 +188899,7 @@ return {
 			[1]="soulfeast_number_of_secondary_projectiles"
 		}
 	},
-	[8627]={
+	[8628]={
 		[1]={
 			[1]={
 				limit={
@@ -188903,7 +188928,7 @@ return {
 			[1]="soulrend_applies_hinder_movement_speed_+%"
 		}
 	},
-	[8628]={
+	[8629]={
 		[1]={
 			[1]={
 				limit={
@@ -188932,7 +188957,7 @@ return {
 			[1]="soulrend_damage_+%"
 		}
 	},
-	[8629]={
+	[8630]={
 		[1]={
 			[1]={
 				limit={
@@ -188957,7 +188982,7 @@ return {
 			[1]="soulrend_number_of_additional_projectiles"
 		}
 	},
-	[8630]={
+	[8631]={
 		[1]={
 			[1]={
 				limit={
@@ -188982,7 +189007,7 @@ return {
 			[1]="spark_number_of_additional_projectiles"
 		}
 	},
-	[8631]={
+	[8632]={
 		[1]={
 			[1]={
 				limit={
@@ -188998,7 +189023,7 @@ return {
 			[1]="spark_projectiles_nova"
 		}
 	},
-	[8632]={
+	[8633]={
 		[1]={
 			[1]={
 				limit={
@@ -189027,7 +189052,7 @@ return {
 			[1]="spark_skill_effect_duration_+%"
 		}
 	},
-	[8633]={
+	[8634]={
 		[1]={
 			[1]={
 				limit={
@@ -189052,7 +189077,7 @@ return {
 			[1]="spark_totems_from_this_skill_grant_totemified_lightning_tendrils_larger_pulse_interval_-X_to_parent"
 		}
 	},
-	[8634]={
+	[8635]={
 		[1]={
 			[1]={
 				limit={
@@ -189068,7 +189093,7 @@ return {
 			[1]="spawn_defender_with_totem"
 		}
 	},
-	[8635]={
+	[8636]={
 		[1]={
 			[1]={
 				limit={
@@ -189097,7 +189122,7 @@ return {
 			[1]="spectral_helix_damage_+%"
 		}
 	},
-	[8636]={
+	[8637]={
 		[1]={
 			[1]={
 				limit={
@@ -189126,7 +189151,7 @@ return {
 			[1]="spectral_helix_projectile_speed_+%"
 		}
 	},
-	[8637]={
+	[8638]={
 		[1]={
 			[1]={
 				[1]={
@@ -189146,7 +189171,7 @@ return {
 			[1]="spectral_helix_rotations_%"
 		}
 	},
-	[8638]={
+	[8639]={
 		[1]={
 			[1]={
 				limit={
@@ -189171,7 +189196,7 @@ return {
 			[1]="spectral_shield_throw_additional_chains"
 		}
 	},
-	[8639]={
+	[8640]={
 		[1]={
 			[1]={
 				limit={
@@ -189200,7 +189225,7 @@ return {
 			[1]="spectral_shield_throw_damage_+%"
 		}
 	},
-	[8640]={
+	[8641]={
 		[1]={
 			[1]={
 				limit={
@@ -189225,7 +189250,7 @@ return {
 			[1]="spectral_shield_throw_num_of_additional_projectiles"
 		}
 	},
-	[8641]={
+	[8642]={
 		[1]={
 			[1]={
 				limit={
@@ -189254,7 +189279,7 @@ return {
 			[1]="spectral_shield_throw_projectile_speed_+%"
 		}
 	},
-	[8642]={
+	[8643]={
 		[1]={
 			[1]={
 				limit={
@@ -189270,7 +189295,7 @@ return {
 			[1]="spectral_shield_throw_secondary_projectiles_pierce"
 		}
 	},
-	[8643]={
+	[8644]={
 		[1]={
 			[1]={
 				[1]={
@@ -189299,7 +189324,7 @@ return {
 			[1]="spectral_shield_throw_shard_projectiles_+%_final"
 		}
 	},
-	[8644]={
+	[8645]={
 		[1]={
 			[1]={
 				limit={
@@ -189324,7 +189349,7 @@ return {
 			[1]="spectral_spiral_weapon_base_number_of_bounces"
 		}
 	},
-	[8645]={
+	[8646]={
 		[1]={
 			[1]={
 				[1]={
@@ -189344,7 +189369,7 @@ return {
 			[1]="spectral_throw_an_spectral_helix_active_skill_projectile_speed_+%_variation_final"
 		}
 	},
-	[8646]={
+	[8647]={
 		[1]={
 			[1]={
 				limit={
@@ -189360,7 +189385,7 @@ return {
 			[1]="spectral_throw_gain_vaal_soul_for_vaal_spectral_throw_on_hit_%"
 		}
 	},
-	[8647]={
+	[8648]={
 		[1]={
 			[1]={
 				limit={
@@ -189376,7 +189401,7 @@ return {
 			[1]="spectre_maximum_life_+"
 		}
 	},
-	[8648]={
+	[8649]={
 		[1]={
 			[1]={
 				limit={
@@ -189405,7 +189430,7 @@ return {
 			[1]="demon_minion_reservation_+%"
 		}
 	},
-	[8649]={
+	[8650]={
 		[1]={
 			[1]={
 				limit={
@@ -189434,7 +189459,7 @@ return {
 			[1]="spectre_zombie_skeleton_critical_strike_multiplier_+"
 		}
 	},
-	[8650]={
+	[8651]={
 		[1]={
 			[1]={
 				limit={
@@ -189450,7 +189475,7 @@ return {
 			[1]="spectres_and_zombies_gain_adrenaline_for_X_seconds_when_raised"
 		}
 	},
-	[8651]={
+	[8652]={
 		[1]={
 			[1]={
 				limit={
@@ -189466,7 +189491,7 @@ return {
 			[1]="spectres_critical_strike_chance_+%"
 		}
 	},
-	[8652]={
+	[8653]={
 		[1]={
 			[1]={
 				limit={
@@ -189482,7 +189507,7 @@ return {
 			[1]="spectres_gain_soul_eater_for_20_seconds_on_kill_%_chance"
 		}
 	},
-	[8653]={
+	[8654]={
 		[1]={
 			[1]={
 				[1]={
@@ -189502,7 +189527,7 @@ return {
 			[1]="spectres_have_base_duration_ms"
 		}
 	},
-	[8654]={
+	[8655]={
 		[1]={
 			[1]={
 				[1]={
@@ -189522,7 +189547,7 @@ return {
 			[1]="spell_additional_critical_strike_chance_permyriad"
 		}
 	},
-	[8655]={
+	[8656]={
 		[1]={
 			[1]={
 				limit={
@@ -189543,7 +189568,7 @@ return {
 			[2]="spell_and_attack_maximum_added_chaos_damage_during_flask_effect"
 		}
 	},
-	[8656]={
+	[8657]={
 		[1]={
 			[1]={
 				limit={
@@ -189572,7 +189597,7 @@ return {
 			[1]="spell_area_damage_+%"
 		}
 	},
-	[8657]={
+	[8658]={
 		[1]={
 			[1]={
 				limit={
@@ -189601,7 +189626,7 @@ return {
 			[1]="spell_area_of_effect_+%"
 		}
 	},
-	[8658]={
+	[8659]={
 		[1]={
 			[1]={
 				limit={
@@ -189617,7 +189642,7 @@ return {
 			[1]="spell_block_chance_%_while_holding_staff_or_shield"
 		}
 	},
-	[8659]={
+	[8660]={
 		[1]={
 			[1]={
 				limit={
@@ -189633,7 +189658,7 @@ return {
 			[1]="spell_block_%_if_blocked_a_spell_recently"
 		}
 	},
-	[8660]={
+	[8661]={
 		[1]={
 			[1]={
 				limit={
@@ -189649,7 +189674,7 @@ return {
 			[1]="spell_block_%_if_blocked_an_attack_recently"
 		}
 	},
-	[8661]={
+	[8662]={
 		[1]={
 			[1]={
 				limit={
@@ -189665,7 +189690,7 @@ return {
 			[1]="spell_block_%_while_at_max_power_charges"
 		}
 	},
-	[8662]={
+	[8663]={
 		[1]={
 			[1]={
 				limit={
@@ -189690,7 +189715,7 @@ return {
 			[1]="spell_chance_to_deal_double_damage_%"
 		}
 	},
-	[8663]={
+	[8664]={
 		[1]={
 			[1]={
 				limit={
@@ -189719,7 +189744,7 @@ return {
 			[1]="spell_critical_strike_chance_+%_if_removed_maximum_number_of_seals"
 		}
 	},
-	[8664]={
+	[8665]={
 		[1]={
 			[1]={
 				limit={
@@ -189748,7 +189773,7 @@ return {
 			[1]="spell_critical_strike_chance_+%_per_100_max_life"
 		}
 	},
-	[8665]={
+	[8666]={
 		[1]={
 			[1]={
 				limit={
@@ -189777,7 +189802,7 @@ return {
 			[1]="spell_critical_strike_chance_+%_per_raised_spectre"
 		}
 	},
-	[8666]={
+	[8667]={
 		[1]={
 			[1]={
 				limit={
@@ -189793,7 +189818,7 @@ return {
 			[1]="spell_damage_%_suppressed_if_taken_a_savage_hit_recently"
 		}
 	},
-	[8667]={
+	[8668]={
 		[1]={
 			[1]={
 				limit={
@@ -189809,7 +189834,7 @@ return {
 			[1]="spell_damage_%_suppressed_per_hit_suppressed_recently"
 		}
 	},
-	[8668]={
+	[8669]={
 		[1]={
 			[1]={
 				limit={
@@ -189838,7 +189863,7 @@ return {
 			[1]="spell_damage_+%_final_if_you_have_been_stunned_while_casting_recently"
 		}
 	},
-	[8669]={
+	[8670]={
 		[1]={
 			[1]={
 				limit={
@@ -189867,7 +189892,7 @@ return {
 			[1]="spell_damage_+%_if_have_crit_recently"
 		}
 	},
-	[8670]={
+	[8671]={
 		[1]={
 			[1]={
 				limit={
@@ -189896,7 +189921,7 @@ return {
 			[1]="spell_damage_+%_per_500_maximum_mana"
 		}
 	},
-	[8671]={
+	[8672]={
 		[1]={
 			[1]={
 				limit={
@@ -189925,7 +189950,7 @@ return {
 			[1]="spell_damage_+%_while_wielding_melee_weapon"
 		}
 	},
-	[8672]={
+	[8673]={
 		[1]={
 			[1]={
 				limit={
@@ -189954,7 +189979,7 @@ return {
 			[1]="spell_damage_+%_during_flask_effect"
 		}
 	},
-	[8673]={
+	[8674]={
 		[1]={
 			[1]={
 				limit={
@@ -189983,7 +190008,7 @@ return {
 			[1]="spell_damage_+%_if_have_crit_in_past_8_seconds"
 		}
 	},
-	[8674]={
+	[8675]={
 		[1]={
 			[1]={
 				limit={
@@ -190012,7 +190037,7 @@ return {
 			[1]="spell_damage_+%_if_you_have_blocked_recently"
 		}
 	},
-	[8675]={
+	[8676]={
 		[1]={
 			[1]={
 				limit={
@@ -190041,7 +190066,7 @@ return {
 			[1]="spell_damage_+%_per_100_max_life"
 		}
 	},
-	[8676]={
+	[8677]={
 		[1]={
 			[1]={
 				limit={
@@ -190070,7 +190095,7 @@ return {
 			[1]="spell_damage_+%_per_100_maximum_mana_up_to_60%"
 		}
 	},
-	[8677]={
+	[8678]={
 		[1]={
 			[1]={
 				limit={
@@ -190086,7 +190111,7 @@ return {
 			[1]="spell_damage_+%_per_10_spirit"
 		}
 	},
-	[8678]={
+	[8679]={
 		[1]={
 			[1]={
 				limit={
@@ -190115,7 +190140,7 @@ return {
 			[1]="spell_damage_+%_per_10_strength"
 		}
 	},
-	[8679]={
+	[8680]={
 		[1]={
 			[1]={
 				limit={
@@ -190144,7 +190169,7 @@ return {
 			[1]="spell_damage_+%_per_16_dex"
 		}
 	},
-	[8680]={
+	[8681]={
 		[1]={
 			[1]={
 				limit={
@@ -190173,7 +190198,7 @@ return {
 			[1]="spell_damage_+%_per_16_int"
 		}
 	},
-	[8681]={
+	[8682]={
 		[1]={
 			[1]={
 				limit={
@@ -190202,7 +190227,7 @@ return {
 			[1]="spell_damage_+%_per_16_strength"
 		}
 	},
-	[8682]={
+	[8683]={
 		[1]={
 			[1]={
 				limit={
@@ -190218,7 +190243,7 @@ return {
 			[1]="spell_damage_+%_per_5%_spell_block_chance"
 		}
 	},
-	[8683]={
+	[8684]={
 		[1]={
 			[1]={
 				limit={
@@ -190247,7 +190272,7 @@ return {
 			[1]="spell_damage_+%_while_shocked"
 		}
 	},
-	[8684]={
+	[8685]={
 		[1]={
 			[1]={
 				limit={
@@ -190276,7 +190301,7 @@ return {
 			[1]="spell_damage_+%_while_you_have_arcane_surge"
 		}
 	},
-	[8685]={
+	[8686]={
 		[1]={
 			[1]={
 				limit={
@@ -190301,7 +190326,7 @@ return {
 			[1]="spell_hits_against_you_inflict_poison_%"
 		}
 	},
-	[8686]={
+	[8687]={
 		[1]={
 			[1]={
 				limit={
@@ -190326,7 +190351,7 @@ return {
 			[1]="spell_impale_on_crit_%_chance"
 		}
 	},
-	[8687]={
+	[8688]={
 		[1]={
 			[1]={
 				limit={
@@ -190347,7 +190372,7 @@ return {
 			[2]="spell_maximum_base_cold_damage_as_%_of_intelligence"
 		}
 	},
-	[8688]={
+	[8689]={
 		[1]={
 			[1]={
 				limit={
@@ -190368,7 +190393,7 @@ return {
 			[2]="spell_maximum_base_fire_damage_as_%_of_intelligence"
 		}
 	},
-	[8689]={
+	[8690]={
 		[1]={
 			[1]={
 				limit={
@@ -190389,7 +190414,7 @@ return {
 			[2]="spell_maximum_base_lightning_damage_as_%_of_intelligence"
 		}
 	},
-	[8690]={
+	[8691]={
 		[1]={
 			[1]={
 				limit={
@@ -190405,7 +190430,7 @@ return {
 			[1]="spell_projectile_skills_fire_X_additional_projectiles_in_a_circle"
 		}
 	},
-	[8691]={
+	[8692]={
 		[1]={
 			[1]={
 				limit={
@@ -190434,7 +190459,7 @@ return {
 			[1]="spell_skill_projectile_speed_+%"
 		}
 	},
-	[8692]={
+	[8693]={
 		[1]={
 			[1]={
 				limit={
@@ -190450,7 +190475,7 @@ return {
 			[1]="spell_skills_always_crit_on_final_repeat"
 		}
 	},
-	[8693]={
+	[8694]={
 		[1]={
 			[1]={
 				limit={
@@ -190479,7 +190504,7 @@ return {
 			[1]="spell_skills_critical_strike_multiplier_+_on_final_repeat"
 		}
 	},
-	[8694]={
+	[8695]={
 		[1]={
 			[1]={
 				limit={
@@ -190495,7 +190520,7 @@ return {
 			[1]="spell_skills_deal_no_damage"
 		}
 	},
-	[8695]={
+	[8696]={
 		[1]={
 			[1]={
 				limit={
@@ -190511,7 +190536,7 @@ return {
 			[1]="spell_skills_fire_2_additional_projectiles_final_chance_%"
 		}
 	},
-	[8696]={
+	[8697]={
 		[1]={
 			[1]={
 				limit={
@@ -190527,7 +190552,7 @@ return {
 			[1]="spell_skills_never_crit_except_on_final_repeat"
 		}
 	},
-	[8697]={
+	[8698]={
 		[1]={
 			[1]={
 				limit={
@@ -190543,7 +190568,7 @@ return {
 			[1]="spell_suppression_chance_%_if_all_equipment_grants_evasion"
 		}
 	},
-	[8698]={
+	[8699]={
 		[1]={
 			[1]={
 				limit={
@@ -190559,7 +190584,7 @@ return {
 			[1]="spell_suppression_chance_%_if_enemy_hit_recently"
 		}
 	},
-	[8699]={
+	[8700]={
 		[1]={
 			[1]={
 				limit={
@@ -190575,7 +190600,7 @@ return {
 			[1]="spell_suppression_chance_%_per_endurance_charge"
 		}
 	},
-	[8700]={
+	[8701]={
 		[1]={
 			[1]={
 				limit={
@@ -190591,7 +190616,7 @@ return {
 			[1]="spell_suppression_chance_%_per_equipped_dagger"
 		}
 	},
-	[8701]={
+	[8702]={
 		[1]={
 			[1]={
 				limit={
@@ -190607,7 +190632,7 @@ return {
 			[1]="spell_suppression_chance_%_per_hit_suppressed_recently"
 		}
 	},
-	[8702]={
+	[8703]={
 		[1]={
 			[1]={
 				limit={
@@ -190623,7 +190648,7 @@ return {
 			[1]="spell_suppression_chance_%_per_power_charge"
 		}
 	},
-	[8703]={
+	[8704]={
 		[1]={
 			[1]={
 				limit={
@@ -190639,7 +190664,7 @@ return {
 			[1]="spell_suppression_chance_%_while_affected_by_grace"
 		}
 	},
-	[8704]={
+	[8705]={
 		[1]={
 			[1]={
 				limit={
@@ -190655,7 +190680,7 @@ return {
 			[1]="spell_suppression_chance_%_while_affected_by_haste"
 		}
 	},
-	[8705]={
+	[8706]={
 		[1]={
 			[1]={
 				limit={
@@ -190671,7 +190696,7 @@ return {
 			[1]="spell_suppression_chance_%_while_channelling"
 		}
 	},
-	[8706]={
+	[8707]={
 		[1]={
 			[1]={
 				limit={
@@ -190687,7 +190712,7 @@ return {
 			[1]="spell_suppression_chance_%_while_holding_shield"
 		}
 	},
-	[8707]={
+	[8708]={
 		[1]={
 			[1]={
 				limit={
@@ -190703,7 +190728,7 @@ return {
 			[1]="spell_suppression_chance_%_while_moving"
 		}
 	},
-	[8708]={
+	[8709]={
 		[1]={
 			[1]={
 				limit={
@@ -190719,7 +190744,7 @@ return {
 			[1]="spell_suppression_chance_%_while_off_hand_empty"
 		}
 	},
-	[8709]={
+	[8710]={
 		[1]={
 			[1]={
 				limit={
@@ -190735,7 +190760,7 @@ return {
 			[1]="spell_suppression_chance_%_while_phasing"
 		}
 	},
-	[8710]={
+	[8711]={
 		[1]={
 			[1]={
 				limit={
@@ -190751,7 +190776,7 @@ return {
 			[1]="spell_suppression_chance_is_lucky"
 		}
 	},
-	[8711]={
+	[8712]={
 		[1]={
 			[1]={
 				limit={
@@ -190767,7 +190792,7 @@ return {
 			[1]="spell_suppression_chance_modifiers_apply_to_avoid_all_elemental_ailments_at_%_value"
 		}
 	},
-	[8712]={
+	[8713]={
 		[1]={
 			[1]={
 				limit={
@@ -190783,7 +190808,7 @@ return {
 			[1]="spell_suppression_chance_%_if_suppressed_spell_recently"
 		}
 	},
-	[8713]={
+	[8714]={
 		[1]={
 			[1]={
 				limit={
@@ -190799,7 +190824,7 @@ return {
 			[1]="spell_suppression_chance_%_while_on_full_energy_shield"
 		}
 	},
-	[8714]={
+	[8715]={
 		[1]={
 			[1]={
 				limit={
@@ -190815,7 +190840,7 @@ return {
 			[1]="spell_suppression_chance_%_while_on_full_life"
 		}
 	},
-	[8715]={
+	[8716]={
 		[1]={
 			[1]={
 				limit={
@@ -190840,7 +190865,7 @@ return {
 			[1]="spells_chance_to_hinder_on_hit_%"
 		}
 	},
-	[8716]={
+	[8717]={
 		[1]={
 			[1]={
 				limit={
@@ -190856,7 +190881,7 @@ return {
 			[1]="spells_chance_to_knockback_on_hit_%"
 		}
 	},
-	[8717]={
+	[8718]={
 		[1]={
 			[1]={
 				limit={
@@ -190872,7 +190897,7 @@ return {
 			[1]="spells_chance_to_poison_on_hit_%"
 		}
 	},
-	[8718]={
+	[8719]={
 		[1]={
 			[1]={
 				limit={
@@ -190888,7 +190913,7 @@ return {
 			[1]="spells_cost_life_instead_of_mana_%"
 		}
 	},
-	[8719]={
+	[8720]={
 		[1]={
 			[1]={
 				limit={
@@ -190904,7 +190929,7 @@ return {
 			[1]="spells_impale_on_hit_%_chance"
 		}
 	},
-	[8720]={
+	[8721]={
 		[1]={
 			[1]={
 				limit={
@@ -190920,7 +190945,7 @@ return {
 			[1]="spells_you_cast_gain_%_of_weapon_damage_as_added_spell_damage"
 		}
 	},
-	[8721]={
+	[8722]={
 		[1]={
 			[1]={
 				limit={
@@ -190936,7 +190961,7 @@ return {
 			[1]="spells_you_cast_gain_%_of_base_main_hand_weapon_damage_as_added_spell_damage"
 		}
 	},
-	[8722]={
+	[8723]={
 		[1]={
 			[1]={
 				limit={
@@ -190965,7 +190990,7 @@ return {
 			[1]="spellslinger_cooldown_duration_+%"
 		}
 	},
-	[8723]={
+	[8724]={
 		[1]={
 			[1]={
 				[1]={
@@ -190998,7 +191023,7 @@ return {
 			[1]="spellslinger_mana_reservation_efficiency_-2%_per_1"
 		}
 	},
-	[8724]={
+	[8725]={
 		[1]={
 			[1]={
 				limit={
@@ -191027,7 +191052,7 @@ return {
 			[1]="spellslinger_mana_reservation_efficiency_+%"
 		}
 	},
-	[8725]={
+	[8726]={
 		[1]={
 			[1]={
 				limit={
@@ -191056,7 +191081,7 @@ return {
 			[1]="spellslinger_mana_reservation_+%"
 		}
 	},
-	[8726]={
+	[8727]={
 		[1]={
 			[1]={
 				limit={
@@ -191085,7 +191110,7 @@ return {
 			[1]="spider_aspect_debuff_duration_+%"
 		}
 	},
-	[8727]={
+	[8728]={
 		[1]={
 			[1]={
 				limit={
@@ -191114,7 +191139,7 @@ return {
 			[1]="spider_aspect_skill_area_of_effect_+%"
 		}
 	},
-	[8728]={
+	[8729]={
 		[1]={
 			[1]={
 				[1]={
@@ -191134,7 +191159,7 @@ return {
 			[1]="spider_aspect_web_interval_ms_override"
 		}
 	},
-	[8729]={
+	[8730]={
 		[1]={
 			[1]={
 				limit={
@@ -191159,7 +191184,7 @@ return {
 			[1]="spike_slam_num_spikes"
 		}
 	},
-	[8730]={
+	[8731]={
 		[1]={
 			[1]={
 				limit={
@@ -191188,7 +191213,7 @@ return {
 			[1]="spirit_offering_critical_strike_chance_+%"
 		}
 	},
-	[8731]={
+	[8732]={
 		[1]={
 			[1]={
 				limit={
@@ -191204,7 +191229,7 @@ return {
 			[1]="spirit_offering_critical_strike_multiplier_+"
 		}
 	},
-	[8732]={
+	[8733]={
 		[1]={
 			[1]={
 				limit={
@@ -191220,7 +191245,7 @@ return {
 			[1]="spirit_+%_per_stackable_unique_jewel"
 		}
 	},
-	[8733]={
+	[8734]={
 		[1]={
 			[1]={
 				limit={
@@ -191234,35 +191259,6 @@ return {
 		},
 		stats={
 			[1]="split_arrow_projectiles_fire_in_parallel_x_dist"
-		}
-	},
-	[8734]={
-		[1]={
-			[1]={
-				limit={
-					[1]={
-						[1]=1,
-						[2]="#"
-					}
-				},
-				text="Splitting Steel has {0}% increased Area of Effect"
-			},
-			[2]={
-				[1]={
-					k="negate",
-					v=1
-				},
-				limit={
-					[1]={
-						[1]="#",
-						[2]=-1
-					}
-				},
-				text="Splitting Steel has {0}% reduced Area of Effect"
-			}
-		},
-		stats={
-			[1]="splitting_steel_area_of_effect_+%"
 		}
 	},
 	[8735]={
@@ -191303,6 +191299,35 @@ return {
 						[2]="#"
 					}
 				},
+				text="Splitting Steel has {0}% increased Area of Effect"
+			},
+			[2]={
+				[1]={
+					k="negate",
+					v=1
+				},
+				limit={
+					[1]={
+						[1]="#",
+						[2]=-1
+					}
+				},
+				text="Splitting Steel has {0}% reduced Area of Effect"
+			}
+		},
+		stats={
+			[1]="splitting_steel_area_of_effect_+%"
+		}
+	},
+	[8737]={
+		[1]={
+			[1]={
+				limit={
+					[1]={
+						[1]=1,
+						[2]="#"
+					}
+				},
 				text="Splitting Steel deals {0}% increased Damage"
 			},
 			[2]={
@@ -191323,7 +191348,7 @@ return {
 			[1]="splitting_steel_damage_+%"
 		}
 	},
-	[8737]={
+	[8738]={
 		[1]={
 			[1]={
 				[1]={
@@ -191343,7 +191368,7 @@ return {
 			[1]="spread_ignite_from_killed_enemies_range"
 		}
 	},
-	[8738]={
+	[8739]={
 		[1]={
 			[1]={
 				limit={
@@ -191372,7 +191397,7 @@ return {
 			[1]="staff_attack_area_of_effect_+%"
 		}
 	},
-	[8739]={
+	[8740]={
 		[1]={
 			[1]={
 				[1]={
@@ -191392,7 +191417,7 @@ return {
 			[1]="life_regeneration_per_minute_in_blood_stance"
 		}
 	},
-	[8740]={
+	[8741]={
 		[1]={
 			[1]={
 				limit={
@@ -191421,7 +191446,7 @@ return {
 			[1]="projectile_damage_+%_in_blood_stance"
 		}
 	},
-	[8741]={
+	[8742]={
 		[1]={
 			[1]={
 				limit={
@@ -191450,7 +191475,7 @@ return {
 			[1]="evasion_rating_plus_in_sand_stance"
 		}
 	},
-	[8742]={
+	[8743]={
 		[1]={
 			[1]={
 				limit={
@@ -191479,7 +191504,7 @@ return {
 			[1]="stance_skill_cooldown_speed_+%"
 		}
 	},
-	[8743]={
+	[8744]={
 		[1]={
 			[1]={
 				limit={
@@ -191508,7 +191533,7 @@ return {
 			[1]="stance_skills_mana_reservation_efficiency_+%"
 		}
 	},
-	[8744]={
+	[8745]={
 		[1]={
 			[1]={
 				limit={
@@ -191537,7 +191562,7 @@ return {
 			[1]="stance_skill_reservation_+%"
 		}
 	},
-	[8745]={
+	[8746]={
 		[1]={
 			[1]={
 				limit={
@@ -191566,7 +191591,7 @@ return {
 			[1]="skill_area_of_effect_+%_in_sand_stance"
 		}
 	},
-	[8746]={
+	[8747]={
 		[1]={
 			[1]={
 				[1]={
@@ -191586,7 +191611,7 @@ return {
 			[1]="stance_swap_cooldown_modifier_ms"
 		}
 	},
-	[8747]={
+	[8748]={
 		[1]={
 			[1]={
 				limit={
@@ -191615,7 +191640,7 @@ return {
 			[1]="attack_speed_+%_if_changed_stance_recently"
 		}
 	},
-	[8748]={
+	[8749]={
 		[1]={
 			[1]={
 				limit={
@@ -191631,7 +191656,7 @@ return {
 			[1]="start_at_zero_energy_shield"
 		}
 	},
-	[8749]={
+	[8750]={
 		[1]={
 			[1]={
 				limit={
@@ -191647,7 +191672,7 @@ return {
 			[1]="start_energy_shield_recharge_when_you_use_a_mana_flask"
 		}
 	},
-	[8750]={
+	[8751]={
 		[1]={
 			[1]={
 				limit={
@@ -191663,7 +191688,7 @@ return {
 			[1]="static_strike_additional_number_of_beam_targets"
 		}
 	},
-	[8751]={
+	[8752]={
 		[1]={
 			[1]={
 				limit={
@@ -191692,7 +191717,7 @@ return {
 			[1]="status_ailments_you_inflict_duration_+%_while_focused"
 		}
 	},
-	[8752]={
+	[8753]={
 		[1]={
 			[1]={
 				limit={
@@ -191721,7 +191746,7 @@ return {
 			[1]="status_ailments_you_inflict_duration_+%_with_bows"
 		}
 	},
-	[8753]={
+	[8754]={
 		[1]={
 			[1]={
 				limit={
@@ -191750,7 +191775,7 @@ return {
 			[1]="stealth_+%"
 		}
 	},
-	[8754]={
+	[8755]={
 		[1]={
 			[1]={
 				limit={
@@ -191779,7 +191804,7 @@ return {
 			[1]="stealth_+%_if_have_hit_with_claw_recently"
 		}
 	},
-	[8755]={
+	[8756]={
 		[1]={
 			[1]={
 				limit={
@@ -191808,7 +191833,7 @@ return {
 			[1]="steel_steal_area_of_effect_+%"
 		}
 	},
-	[8756]={
+	[8757]={
 		[1]={
 			[1]={
 				limit={
@@ -191837,7 +191862,7 @@ return {
 			[1]="steel_steal_cast_speed_+%"
 		}
 	},
-	[8757]={
+	[8758]={
 		[1]={
 			[1]={
 				limit={
@@ -191866,7 +191891,7 @@ return {
 			[1]="steel_steal_reflect_damage_+%"
 		}
 	},
-	[8758]={
+	[8759]={
 		[1]={
 			[1]={
 				limit={
@@ -191895,7 +191920,7 @@ return {
 			[1]="steelskin_damage_limit_+%"
 		}
 	},
-	[8759]={
+	[8760]={
 		[1]={
 			[1]={
 				limit={
@@ -191924,7 +191949,7 @@ return {
 			[1]="stibnite_flask_evasion_rating_+%_final"
 		}
 	},
-	[8760]={
+	[8761]={
 		[1]={
 			[1]={
 				limit={
@@ -191940,7 +191965,7 @@ return {
 			[1]="stone_golem_impale_on_hit_if_same_number_of_summoned_carrion_golems"
 		}
 	},
-	[8761]={
+	[8762]={
 		[1]={
 			[1]={
 				limit={
@@ -191956,7 +191981,7 @@ return {
 			[1]="storm_armageddon_sigils_can_target_reaper_minions"
 		}
 	},
-	[8762]={
+	[8763]={
 		[1]={
 			[1]={
 				limit={
@@ -191985,7 +192010,7 @@ return {
 			[1]="storm_blade_has_local_attack_speed_+%"
 		}
 	},
-	[8763]={
+	[8764]={
 		[1]={
 			[1]={
 				limit={
@@ -192001,7 +192026,7 @@ return {
 			[1]="storm_blade_has_local_lightning_penetration_%"
 		}
 	},
-	[8764]={
+	[8765]={
 		[1]={
 			[1]={
 				limit={
@@ -192017,7 +192042,7 @@ return {
 			[1]="storm_blade_quality_chance_to_shock_%"
 		}
 	},
-	[8765]={
+	[8766]={
 		[1]={
 			[1]={
 				limit={
@@ -192046,7 +192071,7 @@ return {
 			[1]="storm_blade_quality_local_critical_strike_chance_+%"
 		}
 	},
-	[8766]={
+	[8767]={
 		[1]={
 			[1]={
 				limit={
@@ -192062,7 +192087,7 @@ return {
 			[1]="storm_blade_quality_non_skill_lightning_damage_%_to_convert_to_chaos_with_attacks"
 		}
 	},
-	[8767]={
+	[8768]={
 		[1]={
 			[1]={
 				limit={
@@ -192078,7 +192103,7 @@ return {
 			[1]="storm_brand_additional_chain_chance_%"
 		}
 	},
-	[8768]={
+	[8769]={
 		[1]={
 			[1]={
 				limit={
@@ -192094,7 +192119,7 @@ return {
 			[1]="storm_brand_attached_target_lightning_penetration_%"
 		}
 	},
-	[8769]={
+	[8770]={
 		[1]={
 			[1]={
 				limit={
@@ -192123,7 +192148,7 @@ return {
 			[1]="storm_brand_damage_+%"
 		}
 	},
-	[8770]={
+	[8771]={
 		[1]={
 			[1]={
 				limit={
@@ -192139,7 +192164,7 @@ return {
 			[1]="storm_burst_15_%_chance_to_create_additional_orb"
 		}
 	},
-	[8771]={
+	[8772]={
 		[1]={
 			[1]={
 				limit={
@@ -192155,7 +192180,7 @@ return {
 			[1]="storm_burst_additional_object_chance_%"
 		}
 	},
-	[8772]={
+	[8773]={
 		[1]={
 			[1]={
 				limit={
@@ -192184,7 +192209,7 @@ return {
 			[1]="storm_burst_area_of_effect_+%"
 		}
 	},
-	[8773]={
+	[8774]={
 		[1]={
 			[1]={
 				limit={
@@ -192200,7 +192225,7 @@ return {
 			[1]="storm_burst_avoid_interruption_while_casting_%"
 		}
 	},
-	[8774]={
+	[8775]={
 		[1]={
 			[1]={
 				limit={
@@ -192225,7 +192250,7 @@ return {
 			[1]="storm_burst_number_of_additional_projectiles"
 		}
 	},
-	[8775]={
+	[8776]={
 		[1]={
 			[1]={
 				limit={
@@ -192254,7 +192279,7 @@ return {
 			[1]="storm_rain_damage_+%"
 		}
 	},
-	[8776]={
+	[8777]={
 		[1]={
 			[1]={
 				limit={
@@ -192279,7 +192304,7 @@ return {
 			[1]="storm_rain_num_additional_arrows"
 		}
 	},
-	[8777]={
+	[8778]={
 		[1]={
 			[1]={
 				limit={
@@ -192308,7 +192333,7 @@ return {
 			[1]="stormbind_skill_area_of_effect_+%"
 		}
 	},
-	[8778]={
+	[8779]={
 		[1]={
 			[1]={
 				limit={
@@ -192337,7 +192362,7 @@ return {
 			[1]="stormbind_skill_damage_+%"
 		}
 	},
-	[8779]={
+	[8780]={
 		[1]={
 			[1]={
 				limit={
@@ -192366,7 +192391,7 @@ return {
 			[1]="stormblast_icicle_pyroclast_mine_aura_effect_+%"
 		}
 	},
-	[8780]={
+	[8781]={
 		[1]={
 			[1]={
 				limit={
@@ -192382,7 +192407,7 @@ return {
 			[1]="stormblast_icicle_pyroclast_mine_base_deal_no_damage"
 		}
 	},
-	[8781]={
+	[8782]={
 		[1]={
 			[1]={
 				limit={
@@ -192411,7 +192436,7 @@ return {
 			[1]="stormweaver_chill_effect_+%_final"
 		}
 	},
-	[8782]={
+	[8783]={
 		[1]={
 			[1]={
 				limit={
@@ -192440,7 +192465,7 @@ return {
 			[1]="stormweaver_shock_duration_+%_final"
 		}
 	},
-	[8783]={
+	[8784]={
 		[1]={
 			[1]={
 				limit={
@@ -192456,7 +192481,7 @@ return {
 			[1]="strength_applies_to_fish_reel_speed_at_20%_value"
 		}
 	},
-	[8784]={
+	[8785]={
 		[1]={
 			[1]={
 				limit={
@@ -192472,7 +192497,7 @@ return {
 			[1]="strength_can_satisfy_dexterity_and_intelligence_requirements_of_melee_weapons_and_skills"
 		}
 	},
-	[8785]={
+	[8786]={
 		[1]={
 			[1]={
 				limit={
@@ -192488,7 +192513,7 @@ return {
 			[1]="strength_damage_bonus_grants_melee_physical_damage_+3%_per_10_strength_instead"
 		}
 	},
-	[8786]={
+	[8787]={
 		[1]={
 			[1]={
 				limit={
@@ -192504,7 +192529,7 @@ return {
 			[1]="strength_skill_gem_level_+"
 		}
 	},
-	[8787]={
+	[8788]={
 		[1]={
 			[1]={
 				limit={
@@ -192520,7 +192545,7 @@ return {
 			[1]="strike_skills_knockback_on_melee_hit"
 		}
 	},
-	[8788]={
+	[8789]={
 		[1]={
 			[1]={
 				limit={
@@ -192536,7 +192561,7 @@ return {
 			[1]="stun_duration_on_critical_strike_+%"
 		}
 	},
-	[8789]={
+	[8790]={
 		[1]={
 			[1]={
 				limit={
@@ -192565,7 +192590,7 @@ return {
 			[1]="stun_duration_+%_per_15_strength"
 		}
 	},
-	[8790]={
+	[8791]={
 		[1]={
 			[1]={
 				limit={
@@ -192594,7 +192619,7 @@ return {
 			[1]="stun_duration_+%_per_endurance_charge"
 		}
 	},
-	[8791]={
+	[8792]={
 		[1]={
 			[1]={
 				limit={
@@ -192610,7 +192635,7 @@ return {
 			[1]="stun_nearby_enemies_when_stunned_chance_%"
 		}
 	},
-	[8792]={
+	[8793]={
 		[1]={
 			[1]={
 				limit={
@@ -192639,7 +192664,7 @@ return {
 			[1]="stun_threshold_+%_during_empowered_attacks"
 		}
 	},
-	[8793]={
+	[8794]={
 		[1]={
 			[1]={
 				limit={
@@ -192668,7 +192693,7 @@ return {
 			[1]="stun_threshold_+%_per_number_of_times_stunned_recently"
 		}
 	},
-	[8794]={
+	[8795]={
 		[1]={
 			[1]={
 				limit={
@@ -192684,7 +192709,7 @@ return {
 			[1]="stun_threshold_+_from_%_base_armour_from_equipment"
 		}
 	},
-	[8795]={
+	[8796]={
 		[1]={
 			[1]={
 				limit={
@@ -192700,7 +192725,7 @@ return {
 			[1]="stun_threshold_+_from_lowest_of_base_helmet_evasion_rating_and_armour"
 		}
 	},
-	[8796]={
+	[8797]={
 		[1]={
 			[1]={
 				limit={
@@ -192716,7 +192741,7 @@ return {
 			[1]="stun_threshold_+_per_strength"
 		}
 	},
-	[8797]={
+	[8798]={
 		[1]={
 			[1]={
 				limit={
@@ -192732,7 +192757,7 @@ return {
 			[1]="stun_threshold_based_on_%_energy_shield_instead_of_life"
 		}
 	},
-	[8798]={
+	[8799]={
 		[1]={
 			[1]={
 				limit={
@@ -192748,7 +192773,7 @@ return {
 			[1]="stun_threshold_+_from_%_maximum_energy_shield"
 		}
 	},
-	[8799]={
+	[8800]={
 		[1]={
 			[1]={
 				limit={
@@ -192764,7 +192789,7 @@ return {
 			[1]="stun_threshold_+%_per_rage"
 		}
 	},
-	[8800]={
+	[8801]={
 		[1]={
 			[1]={
 				limit={
@@ -192793,7 +192818,7 @@ return {
 			[1]="stun_threshold_+%_when_not_stunned_recently"
 		}
 	},
-	[8801]={
+	[8802]={
 		[1]={
 			[1]={
 				limit={
@@ -192822,7 +192847,7 @@ return {
 			[1]="stun_threshold_+%_when_on_full_life"
 		}
 	},
-	[8802]={
+	[8803]={
 		[1]={
 			[1]={
 				limit={
@@ -192838,7 +192863,7 @@ return {
 			[1]="stun_threshold_reduction_+%_with_500_or_more_strength"
 		}
 	},
-	[8803]={
+	[8804]={
 		[1]={
 			[1]={
 				limit={
@@ -192854,7 +192879,7 @@ return {
 			[1]="summon_2_totems"
 		}
 	},
-	[8804]={
+	[8805]={
 		[1]={
 			[1]={
 				limit={
@@ -192883,7 +192908,7 @@ return {
 			[1]="summon_arbalist_attack_speed_+%"
 		}
 	},
-	[8805]={
+	[8806]={
 		[1]={
 			[1]={
 				limit={
@@ -192899,7 +192924,7 @@ return {
 			[1]="summon_arbalist_chains_+"
 		}
 	},
-	[8806]={
+	[8807]={
 		[1]={
 			[1]={
 				limit={
@@ -192915,7 +192940,7 @@ return {
 			[1]="summon_arbalist_chance_to_bleed_%"
 		}
 	},
-	[8807]={
+	[8808]={
 		[1]={
 			[1]={
 				limit={
@@ -192931,7 +192956,7 @@ return {
 			[1]="summon_arbalist_chance_to_crush_on_hit_%"
 		}
 	},
-	[8808]={
+	[8809]={
 		[1]={
 			[1]={
 				limit={
@@ -192947,7 +192972,7 @@ return {
 			[1]="summon_arbalist_chance_to_deal_double_damage_%"
 		}
 	},
-	[8809]={
+	[8810]={
 		[1]={
 			[1]={
 				limit={
@@ -192963,7 +192988,7 @@ return {
 			[1]="summon_arbalist_chance_to_ignite_freeze_shock_%"
 		}
 	},
-	[8810]={
+	[8811]={
 		[1]={
 			[1]={
 				limit={
@@ -192979,7 +193004,7 @@ return {
 			[1]="summon_arbalist_chance_to_intimidate_for_4_seconds_on_hit_%"
 		}
 	},
-	[8811]={
+	[8812]={
 		[1]={
 			[1]={
 				limit={
@@ -192995,7 +193020,7 @@ return {
 			[1]="summon_arbalist_chance_to_maim_for_4_seconds_on_hit_%"
 		}
 	},
-	[8812]={
+	[8813]={
 		[1]={
 			[1]={
 				limit={
@@ -193011,7 +193036,7 @@ return {
 			[1]="summon_arbalist_chance_to_poison_%"
 		}
 	},
-	[8813]={
+	[8814]={
 		[1]={
 			[1]={
 				limit={
@@ -193027,7 +193052,7 @@ return {
 			[1]="summon_arbalist_chance_to_unnerve_for_4_seconds_on_hit_%"
 		}
 	},
-	[8814]={
+	[8815]={
 		[1]={
 			[1]={
 				limit={
@@ -193043,7 +193068,7 @@ return {
 			[1]="summon_arbalist_number_of_additional_projectiles"
 		}
 	},
-	[8815]={
+	[8816]={
 		[1]={
 			[1]={
 				limit={
@@ -193059,7 +193084,7 @@ return {
 			[1]="summon_arbalist_number_of_splits"
 		}
 	},
-	[8816]={
+	[8817]={
 		[1]={
 			[1]={
 				limit={
@@ -193075,7 +193100,7 @@ return {
 			[1]="summoned_arbalist_physical_damage_%_to_convert_to_cold"
 		}
 	},
-	[8817]={
+	[8818]={
 		[1]={
 			[1]={
 				limit={
@@ -193091,7 +193116,7 @@ return {
 			[1]="summoned_arbalist_physical_damage_%_to_convert_to_fire"
 		}
 	},
-	[8818]={
+	[8819]={
 		[1]={
 			[1]={
 				limit={
@@ -193107,7 +193132,7 @@ return {
 			[1]="summoned_arbalist_physical_damage_%_to_convert_to_lightning"
 		}
 	},
-	[8819]={
+	[8820]={
 		[1]={
 			[1]={
 				limit={
@@ -193123,7 +193148,7 @@ return {
 			[1]="summoned_arbalist_physical_damage_%_to_gain_as_cold"
 		}
 	},
-	[8820]={
+	[8821]={
 		[1]={
 			[1]={
 				limit={
@@ -193139,7 +193164,7 @@ return {
 			[1]="summoned_arbalist_physical_damage_%_to_gain_as_fire"
 		}
 	},
-	[8821]={
+	[8822]={
 		[1]={
 			[1]={
 				limit={
@@ -193155,7 +193180,7 @@ return {
 			[1]="summoned_arbalist_physical_damage_%_to_gain_as_lightning"
 		}
 	},
-	[8822]={
+	[8823]={
 		[1]={
 			[1]={
 				limit={
@@ -193171,7 +193196,7 @@ return {
 			[1]="summon_arbalist_projectiles_fork"
 		}
 	},
-	[8823]={
+	[8824]={
 		[1]={
 			[1]={
 				limit={
@@ -193187,7 +193212,7 @@ return {
 			[1]="summon_arbalist_targets_to_pierce"
 		}
 	},
-	[8824]={
+	[8825]={
 		[1]={
 			[1]={
 				limit={
@@ -193203,7 +193228,7 @@ return {
 			[1]="summon_arbalist_chance_to_freeze_%"
 		}
 	},
-	[8825]={
+	[8826]={
 		[1]={
 			[1]={
 				limit={
@@ -193219,7 +193244,7 @@ return {
 			[1]="summon_arbalist_chance_to_ignite_%"
 		}
 	},
-	[8826]={
+	[8827]={
 		[1]={
 			[1]={
 				limit={
@@ -193235,7 +193260,7 @@ return {
 			[1]="summon_arbalist_chance_to_shock_%"
 		}
 	},
-	[8827]={
+	[8828]={
 		[1]={
 			[1]={
 				limit={
@@ -193251,7 +193276,7 @@ return {
 			[1]="summon_arbalist_chance_to_inflict_cold_exposure_on_hit_%"
 		}
 	},
-	[8828]={
+	[8829]={
 		[1]={
 			[1]={
 				limit={
@@ -193267,7 +193292,7 @@ return {
 			[1]="summon_arbalist_chance_to_inflict_fire_exposure_on_hit_%"
 		}
 	},
-	[8829]={
+	[8830]={
 		[1]={
 			[1]={
 				limit={
@@ -193283,7 +193308,7 @@ return {
 			[1]="summon_arbalist_chance_to_inflict_lightning_exposure_on_hit_%"
 		}
 	},
-	[8830]={
+	[8831]={
 		[1]={
 			[1]={
 				limit={
@@ -193299,7 +193324,7 @@ return {
 			[1]="summon_raging_spirit_melee_splash_fire_damage_only"
 		}
 	},
-	[8831]={
+	[8832]={
 		[1]={
 			[1]={
 				limit={
@@ -193328,7 +193353,7 @@ return {
 			[1]="summon_reaper_cooldown_speed_+%"
 		}
 	},
-	[8832]={
+	[8833]={
 		[1]={
 			[1]={
 				limit={
@@ -193380,7 +193405,7 @@ return {
 			[1]="summon_skeletons_additional_warrior_skeleton_one_twentieth_chance"
 		}
 	},
-	[8833]={
+	[8834]={
 		[1]={
 			[1]={
 				limit={
@@ -193396,7 +193421,7 @@ return {
 			[1]="summon_skeletons_additional_warrior_skeleton_%_chance"
 		}
 	},
-	[8834]={
+	[8835]={
 		[1]={
 			[1]={
 				[1]={
@@ -193429,7 +193454,7 @@ return {
 			[1]="summon_skeletons_cooldown_modifier_ms"
 		}
 	},
-	[8835]={
+	[8836]={
 		[1]={
 			[1]={
 				limit={
@@ -193458,7 +193483,7 @@ return {
 			[1]="summon_skitterbots_area_of_effect_+%"
 		}
 	},
-	[8836]={
+	[8837]={
 		[1]={
 			[1]={
 				limit={
@@ -193487,7 +193512,7 @@ return {
 			[1]="summon_skitterbots_mana_reservation_+%"
 		}
 	},
-	[8837]={
+	[8838]={
 		[1]={
 			[1]={
 				limit={
@@ -193503,7 +193528,7 @@ return {
 			[1]="summoned_phantasms_grant_buff"
 		}
 	},
-	[8838]={
+	[8839]={
 		[1]={
 			[1]={
 				limit={
@@ -193519,7 +193544,7 @@ return {
 			[1]="summoned_phantasms_have_no_duration"
 		}
 	},
-	[8839]={
+	[8840]={
 		[1]={
 			[1]={
 				limit={
@@ -193535,7 +193560,7 @@ return {
 			[1]="summoned_raging_spirits_have_diamond_and_massive_shrine_buff"
 		}
 	},
-	[8840]={
+	[8841]={
 		[1]={
 			[1]={
 				limit={
@@ -193564,7 +193589,7 @@ return {
 			[1]="summoned_reaper_damage_+%"
 		}
 	},
-	[8841]={
+	[8842]={
 		[1]={
 			[1]={
 				limit={
@@ -193580,7 +193605,7 @@ return {
 			[1]="summoned_reaper_physical_dot_multiplier_+"
 		}
 	},
-	[8842]={
+	[8843]={
 		[1]={
 			[1]={
 				limit={
@@ -193596,7 +193621,7 @@ return {
 			[1]="summoned_skeleton_%_chance_to_wither_for_2_seconds"
 		}
 	},
-	[8843]={
+	[8844]={
 		[1]={
 			[1]={
 				limit={
@@ -193612,7 +193637,7 @@ return {
 			[1]="summoned_skeleton_%_physical_to_chaos"
 		}
 	},
-	[8844]={
+	[8845]={
 		[1]={
 			[1]={
 				limit={
@@ -193637,7 +193662,7 @@ return {
 			[1]="summoned_skeletons_cover_in_ash_on_hit_%"
 		}
 	},
-	[8845]={
+	[8846]={
 		[1]={
 			[1]={
 				[1]={
@@ -193657,7 +193682,7 @@ return {
 			[1]="summoned_skeletons_fire_damage_%_of_maximum_life_taken_per_minute"
 		}
 	},
-	[8846]={
+	[8847]={
 		[1]={
 			[1]={
 				limit={
@@ -193673,7 +193698,7 @@ return {
 			[1]="summoned_skeletons_hits_cant_be_evaded"
 		}
 	},
-	[8847]={
+	[8848]={
 		[1]={
 			[1]={
 				limit={
@@ -193702,7 +193727,7 @@ return {
 			[1]="summoned_skitterbots_cooldown_recovery_+%"
 		}
 	},
-	[8848]={
+	[8849]={
 		[1]={
 			[1]={
 				limit={
@@ -193718,7 +193743,7 @@ return {
 			[1]="summoned_support_ghosts_have_diamond_and_massive_shrine_buff"
 		}
 	},
-	[8849]={
+	[8850]={
 		[1]={
 			[1]={
 				limit={
@@ -193734,7 +193759,7 @@ return {
 			[1]="support_additional_trap_mine_%_chance_for_1_additional_trap_mine"
 		}
 	},
-	[8850]={
+	[8851]={
 		[1]={
 			[1]={
 				limit={
@@ -193763,7 +193788,7 @@ return {
 			[1]="support_anticipation_charge_gain_frequency_+%"
 		}
 	},
-	[8851]={
+	[8852]={
 		[1]={
 			[1]={
 				limit={
@@ -193792,7 +193817,7 @@ return {
 			[1]="support_buffed_heralds_buff_effect_+%_final"
 		}
 	},
-	[8852]={
+	[8853]={
 		[1]={
 			[1]={
 				limit={
@@ -193830,7 +193855,7 @@ return {
 			[1]="support_deadly_heralds_buff_effect_+%_final"
 		}
 	},
-	[8853]={
+	[8854]={
 		[1]={
 			[1]={
 				limit={
@@ -193859,7 +193884,7 @@ return {
 			[1]="support_deadly_heralds_damage_+%_final"
 		}
 	},
-	[8854]={
+	[8855]={
 		[1]={
 			[1]={
 				limit={
@@ -193875,7 +193900,7 @@ return {
 			[1]="support_gem_limit_+"
 		}
 	},
-	[8855]={
+	[8856]={
 		[1]={
 			[1]={
 				limit={
@@ -193900,7 +193925,7 @@ return {
 			[1]="support_hourglass_damage_+%_final"
 		}
 	},
-	[8856]={
+	[8857]={
 		[1]={
 			[1]={
 				limit={
@@ -193916,14 +193941,14 @@ return {
 			[1]="support_jagged_ground_chance_%"
 		}
 	},
-	[8857]={
+	[8858]={
 		[1]={
 		},
 		stats={
 			[1]="support_last_gasp_duration_ms"
 		}
 	},
-	[8858]={
+	[8859]={
 		[1]={
 			[1]={
 				limit={
@@ -193952,7 +193977,7 @@ return {
 			[1]="support_maimed_enemies_physical_damage_taken_+%"
 		}
 	},
-	[8859]={
+	[8860]={
 		[1]={
 			[1]={
 				limit={
@@ -193973,7 +193998,7 @@ return {
 			[2]="global_maximum_added_fire_damage_vs_burning_enemies"
 		}
 	},
-	[8860]={
+	[8861]={
 		[1]={
 			[1]={
 				[1]={
@@ -193993,7 +194018,7 @@ return {
 			[1]="support_mirage_archer_base_duration"
 		}
 	},
-	[8861]={
+	[8862]={
 		[1]={
 			[1]={
 				limit={
@@ -194022,7 +194047,7 @@ return {
 			[1]="support_slashing_damage_+%_final_from_distance"
 		}
 	},
-	[8862]={
+	[8863]={
 		[1]={
 			[1]={
 				limit={
@@ -194038,7 +194063,7 @@ return {
 			[1]="supported_aura_skill_gem_level_+"
 		}
 	},
-	[8863]={
+	[8864]={
 		[1]={
 			[1]={
 				limit={
@@ -194054,7 +194079,7 @@ return {
 			[1]="supported_cold_skill_gem_level_+"
 		}
 	},
-	[8864]={
+	[8865]={
 		[1]={
 			[1]={
 				limit={
@@ -194070,7 +194095,7 @@ return {
 			[1]="supported_elemental_skill_gem_level_+"
 		}
 	},
-	[8865]={
+	[8866]={
 		[1]={
 			[1]={
 				limit={
@@ -194086,7 +194111,7 @@ return {
 			[1]="supported_fire_skill_gem_level_+"
 		}
 	},
-	[8866]={
+	[8867]={
 		[1]={
 			[1]={
 				limit={
@@ -194102,7 +194127,7 @@ return {
 			[1]="supported_lightning_skill_gem_level_+"
 		}
 	},
-	[8867]={
+	[8868]={
 		[1]={
 			[1]={
 				limit={
@@ -194118,7 +194143,7 @@ return {
 			[1]="suppressed_spell_damage_cannot_inflict_elemental_ailments"
 		}
 	},
-	[8868]={
+	[8869]={
 		[1]={
 			[1]={
 				limit={
@@ -194134,7 +194159,7 @@ return {
 			[1]="synthesis_map_adjacent_nodes_global_mod_values_doubled"
 		}
 	},
-	[8869]={
+	[8870]={
 		[1]={
 			[1]={
 				limit={
@@ -194150,7 +194175,7 @@ return {
 			[1]="synthesis_map_global_mod_values_doubled_on_this_node"
 		}
 	},
-	[8870]={
+	[8871]={
 		[1]={
 			[1]={
 				limit={
@@ -194166,7 +194191,7 @@ return {
 			[1]="synthesis_map_global_mod_values_tripled_on_this_node"
 		}
 	},
-	[8871]={
+	[8872]={
 		[1]={
 			[1]={
 				limit={
@@ -194182,7 +194207,7 @@ return {
 			[1]="synthesis_map_memories_do_not_collapse_on_this_node"
 		}
 	},
-	[8872]={
+	[8873]={
 		[1]={
 			[1]={
 				limit={
@@ -194211,7 +194236,7 @@ return {
 			[1]="synthesis_map_monster_slain_experience_+%_on_this_node"
 		}
 	},
-	[8873]={
+	[8874]={
 		[1]={
 			[1]={
 				limit={
@@ -194227,7 +194252,7 @@ return {
 			[1]="synthesis_map_nearby_memories_have_bonus"
 		}
 	},
-	[8874]={
+	[8875]={
 		[1]={
 			[1]={
 				limit={
@@ -194252,7 +194277,7 @@ return {
 			[1]="synthesis_map_node_additional_uses_+"
 		}
 	},
-	[8875]={
+	[8876]={
 		[1]={
 			[1]={
 				limit={
@@ -194268,7 +194293,7 @@ return {
 			[1]="synthesis_map_node_global_mod_values_tripled_if_adjacent_squares_have_memories"
 		}
 	},
-	[8876]={
+	[8877]={
 		[1]={
 			[1]={
 				limit={
@@ -194293,7 +194318,7 @@ return {
 			[1]="synthesis_map_node_grants_additional_global_mod"
 		}
 	},
-	[8877]={
+	[8878]={
 		[1]={
 			[1]={
 				limit={
@@ -194309,7 +194334,7 @@ return {
 			[1]="synthesis_map_node_grants_no_global_mod"
 		}
 	},
-	[8878]={
+	[8879]={
 		[1]={
 			[1]={
 				limit={
@@ -194325,7 +194350,7 @@ return {
 			[1]="synthesis_map_node_guest_monsters_replaced_by_synthesised_monsters"
 		}
 	},
-	[8879]={
+	[8880]={
 		[1]={
 			[1]={
 				limit={
@@ -194341,7 +194366,7 @@ return {
 			[1]="synthesis_map_node_item_quantity_increases_doubled"
 		}
 	},
-	[8880]={
+	[8881]={
 		[1]={
 			[1]={
 				limit={
@@ -194357,7 +194382,7 @@ return {
 			[1]="synthesis_map_node_item_rarity_increases_doubled"
 		}
 	},
-	[8881]={
+	[8882]={
 		[1]={
 			[1]={
 				limit={
@@ -194382,7 +194407,7 @@ return {
 			[1]="synthesis_map_node_level_+"
 		}
 	},
-	[8882]={
+	[8883]={
 		[1]={
 			[1]={
 				limit={
@@ -194398,7 +194423,7 @@ return {
 			[1]="synthesis_map_node_monsters_drop_no_items"
 		}
 	},
-	[8883]={
+	[8884]={
 		[1]={
 			[1]={
 				limit={
@@ -194414,7 +194439,7 @@ return {
 			[1]="synthesis_map_node_pack_size_increases_doubled"
 		}
 	},
-	[8884]={
+	[8885]={
 		[1]={
 			[1]={
 				limit={
@@ -194443,7 +194468,7 @@ return {
 			[1]="tailwind_effect_on_self_+%"
 		}
 	},
-	[8885]={
+	[8886]={
 		[1]={
 			[1]={
 				limit={
@@ -194472,7 +194497,7 @@ return {
 			[1]="tailwind_effect_on_self_+%_per_gale_force"
 		}
 	},
-	[8886]={
+	[8887]={
 		[1]={
 			[1]={
 				limit={
@@ -194488,7 +194513,7 @@ return {
 			[1]="tailwind_if_have_crit_recently"
 		}
 	},
-	[8887]={
+	[8888]={
 		[1]={
 			[1]={
 				limit={
@@ -194504,7 +194529,7 @@ return {
 			[1]="take_X_lightning_damage_when_herald_of_thunder_hits_an_enemy"
 		}
 	},
-	[8888]={
+	[8889]={
 		[1]={
 			[1]={
 				limit={
@@ -194520,7 +194545,7 @@ return {
 			[1]="take_half_area_damage_from_hit_%_chance"
 		}
 	},
-	[8889]={
+	[8890]={
 		[1]={
 			[1]={
 				limit={
@@ -194536,7 +194561,7 @@ return {
 			[1]="take_no_extra_damage_from_critical_strikes_if_cast_enfeeble_in_past_10_seconds"
 		}
 	},
-	[8890]={
+	[8891]={
 		[1]={
 			[1]={
 				[1]={
@@ -194569,7 +194594,7 @@ return {
 			[1]="talisman_implicit_projectiles_pierce_1_additional_target_per_10"
 		}
 	},
-	[8891]={
+	[8892]={
 		[1]={
 			[1]={
 				limit={
@@ -194585,7 +194610,7 @@ return {
 			[1]="taunt_on_projectile_hit_chance_%"
 		}
 	},
-	[8892]={
+	[8893]={
 		[1]={
 			[1]={
 				limit={
@@ -194614,7 +194639,7 @@ return {
 			[1]="taunted_enemies_by_warcry_damage_taken_+%"
 		}
 	},
-	[8893]={
+	[8894]={
 		[1]={
 			[1]={
 				[1]={
@@ -194634,7 +194659,7 @@ return {
 			[1]="tectonic_slam_1%_chance_to_do_charged_slam_per_2_stat_value"
 		}
 	},
-	[8894]={
+	[8895]={
 		[1]={
 			[1]={
 				limit={
@@ -194650,7 +194675,7 @@ return {
 			[1]="tectonic_slam_and_infernal_blow_attack_damage_+%_per_450_physical_damage_reduction_rating"
 		}
 	},
-	[8895]={
+	[8896]={
 		[1]={
 			[1]={
 				limit={
@@ -194666,7 +194691,7 @@ return {
 			[1]="tectonic_slam_and_infernal_blow_attack_damage_+%_per_700_physical_damage_reduction_rating"
 		}
 	},
-	[8896]={
+	[8897]={
 		[1]={
 			[1]={
 				limit={
@@ -194695,7 +194720,7 @@ return {
 			[1]="tectonic_slam_area_of_effect_+%"
 		}
 	},
-	[8897]={
+	[8898]={
 		[1]={
 			[1]={
 				limit={
@@ -194724,7 +194749,7 @@ return {
 			[1]="tectonic_slam_damage_+%"
 		}
 	},
-	[8898]={
+	[8899]={
 		[1]={
 			[1]={
 				limit={
@@ -194740,7 +194765,7 @@ return {
 			[1]="tectonic_slam_%_chance_to_do_charged_slam"
 		}
 	},
-	[8899]={
+	[8900]={
 		[1]={
 			[1]={
 				[1]={
@@ -194760,7 +194785,7 @@ return {
 			[1]="tectonic_slam_side_crack_additional_chance_1%_per_2_stat_value"
 		}
 	},
-	[8900]={
+	[8901]={
 		[1]={
 			[1]={
 				limit={
@@ -194776,7 +194801,7 @@ return {
 			[1]="tectonic_slam_side_crack_additional_chance_%"
 		}
 	},
-	[8901]={
+	[8902]={
 		[1]={
 			[1]={
 				limit={
@@ -194805,7 +194830,7 @@ return {
 			[1]="tempest_shield_buff_effect_+%"
 		}
 	},
-	[8902]={
+	[8903]={
 		[1]={
 			[1]={
 				limit={
@@ -194821,7 +194846,7 @@ return {
 			[1]="temporal_chains_no_reservation"
 		}
 	},
-	[8903]={
+	[8904]={
 		[1]={
 			[1]={
 				limit={
@@ -194837,7 +194862,7 @@ return {
 			[1]="temporal_rift_cooldown_speed_+%"
 		}
 	},
-	[8904]={
+	[8905]={
 		[1]={
 			[1]={
 				limit={
@@ -194853,7 +194878,7 @@ return {
 			[1]="thaumaturgy_rotation_active"
 		}
 	},
-	[8905]={
+	[8906]={
 		[1]={
 			[1]={
 				limit={
@@ -194882,7 +194907,7 @@ return {
 			[1]="thorns_critical_strike_chance_+%"
 		}
 	},
-	[8906]={
+	[8907]={
 		[1]={
 			[1]={
 				limit={
@@ -194911,7 +194936,7 @@ return {
 			[1]="thorns_damage_+%"
 		}
 	},
-	[8907]={
+	[8908]={
 		[1]={
 			[1]={
 				limit={
@@ -194940,7 +194965,7 @@ return {
 			[1]="thorns_damage_+%_if_blocked_recently"
 		}
 	},
-	[8908]={
+	[8909]={
 		[1]={
 			[1]={
 				limit={
@@ -194961,7 +194986,7 @@ return {
 			[2]="thorns_maximum_base_chaos_damage"
 		}
 	},
-	[8909]={
+	[8910]={
 		[1]={
 			[1]={
 				limit={
@@ -194982,7 +195007,7 @@ return {
 			[2]="thorns_maximum_base_cold_damage"
 		}
 	},
-	[8910]={
+	[8911]={
 		[1]={
 			[1]={
 				limit={
@@ -195003,7 +195028,7 @@ return {
 			[2]="thorns_maximum_base_fire_damage"
 		}
 	},
-	[8911]={
+	[8912]={
 		[1]={
 			[1]={
 				limit={
@@ -195024,7 +195049,7 @@ return {
 			[2]="thorns_maximum_base_lightning_damage"
 		}
 	},
-	[8912]={
+	[8913]={
 		[1]={
 			[1]={
 				limit={
@@ -195045,7 +195070,7 @@ return {
 			[2]="thorns_maximum_base_physical_damage"
 		}
 	},
-	[8913]={
+	[8914]={
 		[1]={
 			[1]={
 				limit={
@@ -195061,7 +195086,7 @@ return {
 			[1]="thorns_proc_off_any_hit"
 		}
 	},
-	[8914]={
+	[8915]={
 		[1]={
 			[1]={
 				limit={
@@ -195090,7 +195115,7 @@ return {
 			[1]="threshold_jewel_magma_orb_damage_+%_final"
 		}
 	},
-	[8915]={
+	[8916]={
 		[1]={
 			[1]={
 				limit={
@@ -195119,7 +195144,7 @@ return {
 			[1]="threshold_jewel_magma_orb_damage_+%_final_per_chain"
 		}
 	},
-	[8916]={
+	[8917]={
 		[1]={
 			[1]={
 				limit={
@@ -195148,7 +195173,7 @@ return {
 			[1]="threshold_jewel_molten_strike_damage_projectile_count_+%_final"
 		}
 	},
-	[8917]={
+	[8918]={
 		[1]={
 			[1]={
 				limit={
@@ -195177,7 +195202,7 @@ return {
 			[1]="thrown_shield_secondary_projectile_damage_+%_final"
 		}
 	},
-	[8918]={
+	[8919]={
 		[1]={
 			[1]={
 				limit={
@@ -195193,7 +195218,7 @@ return {
 			[1]="titan_additional_inventory"
 		}
 	},
-	[8919]={
+	[8920]={
 		[1]={
 			[1]={
 				limit={
@@ -195222,7 +195247,7 @@ return {
 			[1]="titan_damage_+%_final_against_heavy_stunned_enemies"
 		}
 	},
-	[8920]={
+	[8921]={
 		[1]={
 			[1]={
 				limit={
@@ -195238,7 +195263,7 @@ return {
 			[1]="titan_expanded_main_inventory"
 		}
 	},
-	[8921]={
+	[8922]={
 		[1]={
 			[1]={
 				limit={
@@ -195267,7 +195292,7 @@ return {
 			[1]="titan_hit_damage_stun_multiplier_+%_final_vs_full_life_enemies"
 		}
 	},
-	[8922]={
+	[8923]={
 		[1]={
 			[1]={
 				limit={
@@ -195296,7 +195321,7 @@ return {
 			[1]="titan_maximum_life_+%_final"
 		}
 	},
-	[8923]={
+	[8924]={
 		[1]={
 			[1]={
 				limit={
@@ -195325,7 +195350,7 @@ return {
 			[1]="tornado_damage_frequency_+%"
 		}
 	},
-	[8924]={
+	[8925]={
 		[1]={
 			[1]={
 				limit={
@@ -195354,7 +195379,7 @@ return {
 			[1]="tornado_damage_+%"
 		}
 	},
-	[8925]={
+	[8926]={
 		[1]={
 			[1]={
 				limit={
@@ -195383,7 +195408,7 @@ return {
 			[1]="tornado_movement_speed_+%"
 		}
 	},
-	[8926]={
+	[8927]={
 		[1]={
 			[1]={
 				limit={
@@ -195412,7 +195437,7 @@ return {
 			[1]="tornado_only_primary_duration_+%"
 		}
 	},
-	[8927]={
+	[8928]={
 		[1]={
 			[1]={
 				limit={
@@ -195441,7 +195466,7 @@ return {
 			[1]="tornado_skill_area_of_effect_+%"
 		}
 	},
-	[8928]={
+	[8929]={
 		[1]={
 			[1]={
 				limit={
@@ -195457,7 +195482,7 @@ return {
 			[1]="total_base_life_regeneration_rate_per_minute_%_granted_to_allies_in_your_presence"
 		}
 	},
-	[8929]={
+	[8930]={
 		[1]={
 			[1]={
 				limit={
@@ -195473,7 +195498,7 @@ return {
 			[1]="totems_action_speed_cannot_be_modified_below_base"
 		}
 	},
-	[8930]={
+	[8931]={
 		[1]={
 			[1]={
 				limit={
@@ -195489,7 +195514,7 @@ return {
 			[1]="totem_chaos_immunity"
 		}
 	},
-	[8931]={
+	[8932]={
 		[1]={
 			[1]={
 				limit={
@@ -195518,7 +195543,7 @@ return {
 			[1]="totem_chaos_resistance_%"
 		}
 	},
-	[8932]={
+	[8933]={
 		[1]={
 			[1]={
 				limit={
@@ -195547,7 +195572,7 @@ return {
 			[1]="totem_damage_+%_if_havent_summoned_totem_in_past_2_seconds"
 		}
 	},
-	[8933]={
+	[8934]={
 		[1]={
 			[1]={
 				limit={
@@ -195576,7 +195601,7 @@ return {
 			[1]="totem_damage_+%_per_10_devotion"
 		}
 	},
-	[8934]={
+	[8935]={
 		[1]={
 			[1]={
 				limit={
@@ -195592,7 +195617,7 @@ return {
 			[1]="totem_hinder_nearby_enemies_when_summoned_with_25%_reduced_movement_speed"
 		}
 	},
-	[8935]={
+	[8936]={
 		[1]={
 			[1]={
 				limit={
@@ -195608,7 +195633,7 @@ return {
 			[1]="totem_maximum_energy_shield"
 		}
 	},
-	[8936]={
+	[8937]={
 		[1]={
 			[1]={
 				limit={
@@ -195637,7 +195662,7 @@ return {
 			[1]="totem_placement_range_+%"
 		}
 	},
-	[8937]={
+	[8938]={
 		[1]={
 			[1]={
 				limit={
@@ -195653,7 +195678,7 @@ return {
 			[1]="totem_skill_gem_level_+"
 		}
 	},
-	[8938]={
+	[8939]={
 		[1]={
 			[1]={
 				limit={
@@ -195682,7 +195707,7 @@ return {
 			[1]="totem_spells_damage_+%"
 		}
 	},
-	[8939]={
+	[8940]={
 		[1]={
 			[1]={
 				limit={
@@ -195698,7 +195723,7 @@ return {
 			[1]="totems_explode_on_death_for_%_life_as_physical"
 		}
 	},
-	[8940]={
+	[8941]={
 		[1]={
 			[1]={
 				limit={
@@ -195727,7 +195752,7 @@ return {
 			[1]="totems_nearby_enemies_damage_taken_+%"
 		}
 	},
-	[8941]={
+	[8942]={
 		[1]={
 			[1]={
 				[1]={
@@ -195747,7 +195772,7 @@ return {
 			[1]="totems_regenerate_%_life_per_minute"
 		}
 	},
-	[8942]={
+	[8943]={
 		[1]={
 			[1]={
 				limit={
@@ -195772,7 +195797,7 @@ return {
 			[1]="totems_taunt_enemies_around_them_for_x_seconds_when_summoned"
 		}
 	},
-	[8943]={
+	[8944]={
 		[1]={
 			[1]={
 				limit={
@@ -195788,7 +195813,7 @@ return {
 			[1]="tower_add_breach_to_X_maps"
 		}
 	},
-	[8944]={
+	[8945]={
 		[1]={
 			[1]={
 				limit={
@@ -195804,7 +195829,7 @@ return {
 			[1]="tower_add_delirium_to_X_maps"
 		}
 	},
-	[8945]={
+	[8946]={
 		[1]={
 			[1]={
 				limit={
@@ -195820,7 +195845,7 @@ return {
 			[1]="tower_add_expedition_to_X_maps"
 		}
 	},
-	[8946]={
+	[8947]={
 		[1]={
 			[1]={
 				limit={
@@ -195836,7 +195861,7 @@ return {
 			[1]="tower_add_irradiated_to_X_maps"
 		}
 	},
-	[8947]={
+	[8948]={
 		[1]={
 			[1]={
 				limit={
@@ -195852,7 +195877,7 @@ return {
 			[1]="tower_add_ritual_to_X_maps"
 		}
 	},
-	[8948]={
+	[8949]={
 		[1]={
 			[1]={
 				limit={
@@ -195881,7 +195906,7 @@ return {
 			[1]="toxic_rain_damage_+%"
 		}
 	},
-	[8949]={
+	[8950]={
 		[1]={
 			[1]={
 				limit={
@@ -195906,7 +195931,7 @@ return {
 			[1]="toxic_rain_num_of_additional_projectiles"
 		}
 	},
-	[8950]={
+	[8951]={
 		[1]={
 			[1]={
 				limit={
@@ -195922,7 +195947,7 @@ return {
 			[1]="toxic_rain_physical_damage_%_to_gain_as_chaos"
 		}
 	},
-	[8951]={
+	[8952]={
 		[1]={
 			[1]={
 				limit={
@@ -195951,7 +195976,7 @@ return {
 			[1]="trap_and_mine_damage_+%_if_armed_for_4_seconds"
 		}
 	},
-	[8952]={
+	[8953]={
 		[1]={
 			[1]={
 				limit={
@@ -195980,7 +196005,7 @@ return {
 			[1]="trap_and_mine_throwing_speed_+%"
 		}
 	},
-	[8953]={
+	[8954]={
 		[1]={
 			[1]={
 				limit={
@@ -196005,7 +196030,7 @@ return {
 			[1]="trap_skill_added_cooldown_count"
 		}
 	},
-	[8954]={
+	[8955]={
 		[1]={
 			[1]={
 				limit={
@@ -196034,7 +196059,7 @@ return {
 			[1]="trap_spread_+%"
 		}
 	},
-	[8955]={
+	[8956]={
 		[1]={
 			[1]={
 				limit={
@@ -196063,7 +196088,7 @@ return {
 			[1]="trap_throwing_speed_+%_per_frenzy_charge"
 		}
 	},
-	[8956]={
+	[8957]={
 		[1]={
 			[1]={
 				limit={
@@ -196079,7 +196104,7 @@ return {
 			[1]="traps_cannot_be_triggered_by_enemies"
 		}
 	},
-	[8957]={
+	[8958]={
 		[1]={
 			[1]={
 				limit={
@@ -196095,7 +196120,7 @@ return {
 			[1]="traps_invulnerable"
 		}
 	},
-	[8958]={
+	[8959]={
 		[1]={
 			[1]={
 				limit={
@@ -196111,7 +196136,7 @@ return {
 			[1]="travel_skills_cannot_be_exerted"
 		}
 	},
-	[8959]={
+	[8960]={
 		[1]={
 			[1]={
 				limit={
@@ -196127,7 +196152,7 @@ return {
 			[1]="travel_skills_poison_reflected_to_self_up_to_5_poisons"
 		}
 	},
-	[8960]={
+	[8961]={
 		[1]={
 			[1]={
 				limit={
@@ -196152,7 +196177,7 @@ return {
 			[1]="treat_enemy_resistances_as_negated_on_elemental_damage_hit_%_chance"
 		}
 	},
-	[8961]={
+	[8962]={
 		[1]={
 			[1]={
 				[1]={
@@ -196185,7 +196210,7 @@ return {
 			[1]="trickster_cannot_take_damage_over_time_for_X_ms_every_10_seconds"
 		}
 	},
-	[8962]={
+	[8963]={
 		[1]={
 			[1]={
 				limit={
@@ -196214,7 +196239,7 @@ return {
 			[1]="trickster_damage_over_time_+%_final"
 		}
 	},
-	[8963]={
+	[8964]={
 		[1]={
 			[1]={
 				limit={
@@ -196230,7 +196255,7 @@ return {
 			[1]="trigger_elemental_storm_on_crit"
 		}
 	},
-	[8964]={
+	[8965]={
 		[1]={
 			[1]={
 				limit={
@@ -196255,7 +196280,7 @@ return {
 			[1]="trigger_skills_refund_half_energy_spent_chance_%"
 		}
 	},
-	[8965]={
+	[8966]={
 		[1]={
 			[1]={
 				limit={
@@ -196271,7 +196296,7 @@ return {
 			[1]="trigger_wild_strike_on_attack_crit"
 		}
 	},
-	[8966]={
+	[8967]={
 		[1]={
 			[1]={
 				limit={
@@ -196300,7 +196325,7 @@ return {
 			[1]="triggerbots_damage_+%_final_with_triggered_spells"
 		}
 	},
-	[8967]={
+	[8968]={
 		[1]={
 			[1]={
 				limit={
@@ -196329,7 +196354,7 @@ return {
 			[1]="triggered_spell_spell_damage_+%"
 		}
 	},
-	[8968]={
+	[8969]={
 		[1]={
 			[1]={
 				limit={
@@ -196345,7 +196370,7 @@ return {
 			[1]="triggers_burning_runes_on_placing_ground_rune"
 		}
 	},
-	[8969]={
+	[8970]={
 		[1]={
 			[1]={
 				limit={
@@ -196361,7 +196386,7 @@ return {
 			[1]="triggers_soulbreaker_on_breaking_enemy_energy_shield"
 		}
 	},
-	[8970]={
+	[8971]={
 		[1]={
 			[1]={
 				limit={
@@ -196390,7 +196415,7 @@ return {
 			[1]="two_handed_melee_area_damage_+%"
 		}
 	},
-	[8971]={
+	[8972]={
 		[1]={
 			[1]={
 				limit={
@@ -196419,7 +196444,7 @@ return {
 			[1]="two_handed_melee_area_of_effect_+%"
 		}
 	},
-	[8972]={
+	[8973]={
 		[1]={
 			[1]={
 				limit={
@@ -196435,7 +196460,7 @@ return {
 			[1]="uber_domain_monster_additional_physical_damage_reduction_%_per_revival"
 		}
 	},
-	[8973]={
+	[8974]={
 		[1]={
 			[1]={
 				limit={
@@ -196451,7 +196476,7 @@ return {
 			[1]="uber_domain_monster_all_resistances_+%_per_revival"
 		}
 	},
-	[8974]={
+	[8975]={
 		[1]={
 			[1]={
 				limit={
@@ -196480,7 +196505,7 @@ return {
 			[1]="uber_domain_monster_attack_and_cast_speed_+%_per_revival"
 		}
 	},
-	[8975]={
+	[8976]={
 		[1]={
 			[1]={
 				limit={
@@ -196496,7 +196521,7 @@ return {
 			[1]="uber_domain_monster_avoid_stun_%_per_revival"
 		}
 	},
-	[8976]={
+	[8977]={
 		[1]={
 			[1]={
 				limit={
@@ -196525,7 +196550,7 @@ return {
 			[1]="uber_domain_monster_critical_strike_chance_+%_per_revival"
 		}
 	},
-	[8977]={
+	[8978]={
 		[1]={
 			[1]={
 				limit={
@@ -196541,7 +196566,7 @@ return {
 			[1]="uber_domain_monster_critical_strike_multiplier_+%_per_revival"
 		}
 	},
-	[8978]={
+	[8979]={
 		[1]={
 			[1]={
 				limit={
@@ -196557,7 +196582,7 @@ return {
 			[1]="uber_domain_monster_deal_double_damage_chance_%_per_revival"
 		}
 	},
-	[8979]={
+	[8980]={
 		[1]={
 			[1]={
 				[1]={
@@ -196577,7 +196602,7 @@ return {
 			[1]="uber_domain_monster_life_regeneration_rate_per_minute_%_per_revival"
 		}
 	},
-	[8980]={
+	[8981]={
 		[1]={
 			[1]={
 				limit={
@@ -196606,7 +196631,7 @@ return {
 			[1]="uber_domain_monster_maximum_life_+%_per_revival"
 		}
 	},
-	[8981]={
+	[8982]={
 		[1]={
 			[1]={
 				limit={
@@ -196635,7 +196660,7 @@ return {
 			[1]="uber_domain_monster_movement_speed_+%_per_revival"
 		}
 	},
-	[8982]={
+	[8983]={
 		[1]={
 			[1]={
 				limit={
@@ -196651,7 +196676,7 @@ return {
 			[1]="uber_domain_monster_overwhelm_%_physical_damage_reduction_per_revival"
 		}
 	},
-	[8983]={
+	[8984]={
 		[1]={
 			[1]={
 				limit={
@@ -196667,7 +196692,7 @@ return {
 			[1]="uber_domain_monster_penetrate_all_resistances_%_per_revival"
 		}
 	},
-	[8984]={
+	[8985]={
 		[1]={
 			[1]={
 				limit={
@@ -196696,7 +196721,7 @@ return {
 			[1]="uber_domain_monster_physical_damage_reduction_rating_+%_per_revival"
 		}
 	},
-	[8985]={
+	[8986]={
 		[1]={
 			[1]={
 				limit={
@@ -196721,7 +196746,7 @@ return {
 			[1]="uber_domain_monster_reward_chance_+%"
 		}
 	},
-	[8986]={
+	[8987]={
 		[1]={
 			[1]={
 				limit={
@@ -196737,7 +196762,7 @@ return {
 			[1]="unaffected_by_bleed_if_cast_vulnerability_in_past_10_seconds"
 		}
 	},
-	[8987]={
+	[8988]={
 		[1]={
 			[1]={
 				limit={
@@ -196753,7 +196778,7 @@ return {
 			[1]="unaffected_by_bleeding_while_affected_by_malevolence"
 		}
 	},
-	[8988]={
+	[8989]={
 		[1]={
 			[1]={
 				limit={
@@ -196769,7 +196794,7 @@ return {
 			[1]="unaffected_by_bleeding_while_leeching"
 		}
 	},
-	[8989]={
+	[8990]={
 		[1]={
 			[1]={
 				limit={
@@ -196785,7 +196810,7 @@ return {
 			[1]="unaffected_by_blind"
 		}
 	},
-	[8990]={
+	[8991]={
 		[1]={
 			[1]={
 				limit={
@@ -196801,7 +196826,7 @@ return {
 			[1]="unaffected_by_burning_ground"
 		}
 	},
-	[8991]={
+	[8992]={
 		[1]={
 			[1]={
 				limit={
@@ -196817,7 +196842,7 @@ return {
 			[1]="unaffected_by_burning_ground_while_affected_by_purity_of_fire"
 		}
 	},
-	[8992]={
+	[8993]={
 		[1]={
 			[1]={
 				limit={
@@ -196833,7 +196858,7 @@ return {
 			[1]="unaffected_by_chill"
 		}
 	},
-	[8993]={
+	[8994]={
 		[1]={
 			[1]={
 				limit={
@@ -196849,7 +196874,7 @@ return {
 			[1]="unaffected_by_chill_during_dodge_roll"
 		}
 	},
-	[8994]={
+	[8995]={
 		[1]={
 			[1]={
 				limit={
@@ -196865,7 +196890,7 @@ return {
 			[1]="unaffected_by_chill_while_channelling"
 		}
 	},
-	[8995]={
+	[8996]={
 		[1]={
 			[1]={
 				limit={
@@ -196881,7 +196906,7 @@ return {
 			[1]="unaffected_by_chill_while_mana_leeching"
 		}
 	},
-	[8996]={
+	[8997]={
 		[1]={
 			[1]={
 				limit={
@@ -196897,7 +196922,7 @@ return {
 			[1]="unaffected_by_chilled_ground"
 		}
 	},
-	[8997]={
+	[8998]={
 		[1]={
 			[1]={
 				limit={
@@ -196913,7 +196938,7 @@ return {
 			[1]="unaffected_by_chilled_ground_while_affected_by_purity_of_ice"
 		}
 	},
-	[8998]={
+	[8999]={
 		[1]={
 			[1]={
 				limit={
@@ -196929,7 +196954,7 @@ return {
 			[1]="unaffected_by_conductivity_while_affected_by_purity_of_lightning"
 		}
 	},
-	[8999]={
+	[9000]={
 		[1]={
 			[1]={
 				limit={
@@ -196945,7 +196970,7 @@ return {
 			[1]="unaffected_by_corrupted_blood_while_leeching"
 		}
 	},
-	[9000]={
+	[9001]={
 		[1]={
 			[1]={
 				limit={
@@ -196961,7 +196986,7 @@ return {
 			[1]="unaffected_by_curses_while_affected_by_zealotry"
 		}
 	},
-	[9001]={
+	[9002]={
 		[1]={
 			[1]={
 				limit={
@@ -196977,7 +197002,7 @@ return {
 			[1]="unaffected_by_desecrated_ground"
 		}
 	},
-	[9002]={
+	[9003]={
 		[1]={
 			[1]={
 				limit={
@@ -196993,7 +197018,7 @@ return {
 			[1]="unaffected_by_elemental_weakness_while_affected_by_purity_of_elements"
 		}
 	},
-	[9003]={
+	[9004]={
 		[1]={
 			[1]={
 				limit={
@@ -197009,7 +197034,7 @@ return {
 			[1]="unaffected_by_enfeeble_while_affected_by_grace"
 		}
 	},
-	[9004]={
+	[9005]={
 		[1]={
 			[1]={
 				limit={
@@ -197025,7 +197050,7 @@ return {
 			[1]="unaffected_by_flammability_while_affected_by_purity_of_fire"
 		}
 	},
-	[9005]={
+	[9006]={
 		[1]={
 			[1]={
 				limit={
@@ -197041,7 +197066,7 @@ return {
 			[1]="unaffected_by_freeze_if_cast_frostbite_in_past_10_seconds"
 		}
 	},
-	[9006]={
+	[9007]={
 		[1]={
 			[1]={
 				limit={
@@ -197057,7 +197082,7 @@ return {
 			[1]="unaffected_by_frostbite_while_affected_by_purity_of_ice"
 		}
 	},
-	[9007]={
+	[9008]={
 		[1]={
 			[1]={
 				limit={
@@ -197073,7 +197098,7 @@ return {
 			[1]="unaffected_by_ignite"
 		}
 	},
-	[9008]={
+	[9009]={
 		[1]={
 			[1]={
 				limit={
@@ -197089,7 +197114,7 @@ return {
 			[1]="unaffected_by_ignite_and_shock_while_max_life_mana_within_500"
 		}
 	},
-	[9009]={
+	[9010]={
 		[1]={
 			[1]={
 				limit={
@@ -197105,7 +197130,7 @@ return {
 			[1]="unaffected_by_ignite_if_cast_flammability_in_past_10_seconds"
 		}
 	},
-	[9010]={
+	[9011]={
 		[1]={
 			[1]={
 				limit={
@@ -197121,7 +197146,7 @@ return {
 			[1]="unaffected_by_poison_while_affected_by_malevolence"
 		}
 	},
-	[9011]={
+	[9012]={
 		[1]={
 			[1]={
 				limit={
@@ -197137,7 +197162,7 @@ return {
 			[1]="unaffected_by_shock"
 		}
 	},
-	[9012]={
+	[9013]={
 		[1]={
 			[1]={
 				limit={
@@ -197153,7 +197178,7 @@ return {
 			[1]="unaffected_by_shock_if_cast_conductivity_in_past_10_seconds"
 		}
 	},
-	[9013]={
+	[9014]={
 		[1]={
 			[1]={
 				limit={
@@ -197169,7 +197194,7 @@ return {
 			[1]="unaffected_by_shock_while_channelling"
 		}
 	},
-	[9014]={
+	[9015]={
 		[1]={
 			[1]={
 				limit={
@@ -197185,7 +197210,7 @@ return {
 			[1]="unaffected_by_shocked_ground"
 		}
 	},
-	[9015]={
+	[9016]={
 		[1]={
 			[1]={
 				limit={
@@ -197201,7 +197226,7 @@ return {
 			[1]="unaffected_by_shocked_ground_while_affected_by_purity_of_lightning"
 		}
 	},
-	[9016]={
+	[9017]={
 		[1]={
 			[1]={
 				limit={
@@ -197217,7 +197242,7 @@ return {
 			[1]="unaffected_by_temporal_chains"
 		}
 	},
-	[9017]={
+	[9018]={
 		[1]={
 			[1]={
 				limit={
@@ -197233,7 +197258,7 @@ return {
 			[1]="unaffected_by_temporal_chains_while_affected_by_haste"
 		}
 	},
-	[9018]={
+	[9019]={
 		[1]={
 			[1]={
 				limit={
@@ -197249,7 +197274,7 @@ return {
 			[1]="unaffected_by_vulnerability_while_affected_by_determination"
 		}
 	},
-	[9019]={
+	[9020]={
 		[1]={
 			[1]={
 				limit={
@@ -197278,7 +197303,7 @@ return {
 			[1]="unarmed_attack_skill_melee_dash_range_+%"
 		}
 	},
-	[9020]={
+	[9021]={
 		[1]={
 			[1]={
 				limit={
@@ -197307,7 +197332,7 @@ return {
 			[1]="unarmed_attack_speed_+%"
 		}
 	},
-	[9021]={
+	[9022]={
 		[1]={
 			[1]={
 				limit={
@@ -197336,7 +197361,7 @@ return {
 			[1]="unattached_sigil_attachment_range_+%_per_second"
 		}
 	},
-	[9022]={
+	[9023]={
 		[1]={
 			[1]={
 				limit={
@@ -197365,7 +197390,7 @@ return {
 			[1]="unbound_ailment_elemental_ailment_buildup_+%_final"
 		}
 	},
-	[9023]={
+	[9024]={
 		[1]={
 			[1]={
 				limit={
@@ -197394,7 +197419,7 @@ return {
 			[1]="unbound_ailment_elemental_ailment_chance_+%_final"
 		}
 	},
-	[9024]={
+	[9025]={
 		[1]={
 			[1]={
 				limit={
@@ -197423,7 +197448,7 @@ return {
 			[1]="undead_minion_reservation_+%"
 		}
 	},
-	[9025]={
+	[9026]={
 		[1]={
 			[1]={
 				limit={
@@ -197439,7 +197464,7 @@ return {
 			[1]="unearth_additional_corpse_level"
 		}
 	},
-	[9026]={
+	[9027]={
 		[1]={
 			[1]={
 				limit={
@@ -197455,7 +197480,7 @@ return {
 			[1]="unique_%_maximum_mana_to_sacrifice_to_party_members_in_your_presence_when_they_cast_a_spell"
 		}
 	},
-	[9027]={
+	[9028]={
 		[1]={
 			[1]={
 				limit={
@@ -197471,7 +197496,7 @@ return {
 			[1]="unique_body_armour_black_doubt_drain_%_mana_to_recover_life_until_full_and_dot_bypasses_es"
 		}
 	},
-	[9028]={
+	[9029]={
 		[1]={
 			[1]={
 				limit={
@@ -197487,7 +197512,7 @@ return {
 			[1]="unique_body_armour_shavronnes_wrappings_damage_cannot_bypass_energy_shield"
 		}
 	},
-	[9029]={
+	[9030]={
 		[1]={
 			[1]={
 				[1]={
@@ -197507,7 +197532,7 @@ return {
 			[1]="unique_cooldown_modifier_ms"
 		}
 	},
-	[9030]={
+	[9031]={
 		[1]={
 			[1]={
 				limit={
@@ -197536,7 +197561,7 @@ return {
 			[1]="unique_crowd_controlled_enemy_damage_taken_-%_final"
 		}
 	},
-	[9031]={
+	[9032]={
 		[1]={
 			[1]={
 				limit={
@@ -197552,7 +197577,7 @@ return {
 			[1]="unique_damage_+%_vs_rare_or_unique_enemy_per_second_ever_in_presence_up_to_max"
 		}
 	},
-	[9032]={
+	[9033]={
 		[1]={
 			[1]={
 				limit={
@@ -197568,7 +197593,7 @@ return {
 			[1]="unique_double_presence_radius"
 		}
 	},
-	[9033]={
+	[9034]={
 		[1]={
 			[1]={
 				limit={
@@ -197584,7 +197609,7 @@ return {
 			[1]="unique_gain_soul_eater"
 		}
 	},
-	[9034]={
+	[9035]={
 		[1]={
 			[1]={
 				limit={
@@ -197609,7 +197634,7 @@ return {
 			[1]="unique_helmet_cast_speed_+%_applies_to_attack_speed_at_%_of_original_value"
 		}
 	},
-	[9035]={
+	[9036]={
 		[1]={
 			[1]={
 				limit={
@@ -197638,7 +197663,7 @@ return {
 			[1]="unique_helmet_damage_+%_final_per_warcry_exerting_action"
 		}
 	},
-	[9036]={
+	[9037]={
 		[1]={
 			[1]={
 				limit={
@@ -197667,7 +197692,7 @@ return {
 			[1]="unique_jewel_flask_charges_gained_+%_final_from_kills"
 		}
 	},
-	[9037]={
+	[9038]={
 		[1]={
 			[1]={
 				limit={
@@ -197696,7 +197721,7 @@ return {
 			[1]="unique_jewel_flask_duration_+%_final"
 		}
 	},
-	[9038]={
+	[9039]={
 		[1]={
 			[1]={
 				[1]={
@@ -197716,7 +197741,7 @@ return {
 			[1]="unique_jewel_grants_notable_hash_1"
 		}
 	},
-	[9039]={
+	[9040]={
 		[1]={
 			[1]={
 				[1]={
@@ -197736,7 +197761,7 @@ return {
 			[1]="unique_jewel_grants_notable_hash_2"
 		}
 	},
-	[9040]={
+	[9041]={
 		[1]={
 			[1]={
 				[1]={
@@ -197756,7 +197781,7 @@ return {
 			[1]="unique_jewel_grants_notable_hash_3"
 		}
 	},
-	[9041]={
+	[9042]={
 		[1]={
 			[1]={
 				[1]={
@@ -197776,7 +197801,7 @@ return {
 			[1]="unique_jewel_grants_notable_hash_part_1"
 		}
 	},
-	[9042]={
+	[9043]={
 		[1]={
 			[1]={
 				[1]={
@@ -197796,7 +197821,7 @@ return {
 			[1]="unique_jewel_grants_notable_hash_part_2"
 		}
 	},
-	[9043]={
+	[9044]={
 		[1]={
 			[1]={
 				limit={
@@ -197825,7 +197850,7 @@ return {
 			[1]="unique_jewel_reserved_blood_maximum_life_+%_final"
 		}
 	},
-	[9044]={
+	[9045]={
 		[1]={
 			[1]={
 				[1]={
@@ -197850,7 +197875,7 @@ return {
 			[2]="unique_jewel_specific_skill_level_+_skill"
 		}
 	},
-	[9045]={
+	[9046]={
 		[1]={
 			[1]={
 				limit={
@@ -197866,7 +197891,7 @@ return {
 			[1]="local_life_loss_%_to_prevent_during_flask_effect_to_lose_over_time"
 		}
 	},
-	[9046]={
+	[9047]={
 		[1]={
 			[1]={
 				limit={
@@ -197882,7 +197907,7 @@ return {
 			[1]="unique_lose_a_power_charge_when_hit"
 		}
 	},
-	[9047]={
+	[9048]={
 		[1]={
 			[1]={
 				limit={
@@ -197898,7 +197923,7 @@ return {
 			[1]="unique_minions_in_presence_gain_and_lose_life_when_you_do"
 		}
 	},
-	[9048]={
+	[9049]={
 		[1]={
 			[1]={
 				limit={
@@ -197927,7 +197952,7 @@ return {
 			[1]="unique_monster_dropped_item_rarity_+%"
 		}
 	},
-	[9049]={
+	[9050]={
 		[1]={
 			[1]={
 				limit={
@@ -197956,7 +197981,7 @@ return {
 			[1]="unique_movement_speed_and_skill_speed_-%_final_per_number_of_times_dodge_rolled_in_past_20_seconds"
 		}
 	},
-	[9050]={
+	[9051]={
 		[1]={
 			[1]={
 				limit={
@@ -197972,7 +197997,7 @@ return {
 			[1]="unique_no_curse_delay"
 		}
 	},
-	[9051]={
+	[9052]={
 		[1]={
 			[1]={
 				limit={
@@ -197988,7 +198013,7 @@ return {
 			[1]="unique_recover_%_maximum_life_on_x_altenator"
 		}
 	},
-	[9052]={
+	[9053]={
 		[1]={
 			[1]={
 				limit={
@@ -198017,7 +198042,7 @@ return {
 			[1]="unique_replica_volkuurs_guidance_ignite_duration_+%_final"
 		}
 	},
-	[9053]={
+	[9054]={
 		[1]={
 			[1]={
 				limit={
@@ -198046,7 +198071,7 @@ return {
 			[1]="unique_soulless_elegance_energy_shield_recharge_rate_+%_final"
 		}
 	},
-	[9054]={
+	[9055]={
 		[1]={
 			[1]={
 				limit={
@@ -198062,7 +198087,7 @@ return {
 			[1]="unique_spirit_reservations_are_halved"
 		}
 	},
-	[9055]={
+	[9056]={
 		[1]={
 			[1]={
 				limit={
@@ -198078,7 +198103,7 @@ return {
 			[1]="unique_sunblast_throw_traps_in_circle_radius"
 		}
 	},
-	[9056]={
+	[9057]={
 		[1]={
 			[1]={
 				limit={
@@ -198094,7 +198119,7 @@ return {
 			[1]="unique_voltaxic_rift_shock_maximum_magnitude_override"
 		}
 	},
-	[9057]={
+	[9058]={
 		[1]={
 			[1]={
 				limit={
@@ -198110,7 +198135,7 @@ return {
 			[1]="unique_you_count_as_on_low_life_while_at_%_of_maximum_mana_or_below"
 		}
 	},
-	[9058]={
+	[9059]={
 		[1]={
 			[1]={
 				limit={
@@ -198126,7 +198151,7 @@ return {
 			[1]="unique_you_count_as_on_low_mana_while_at_%_of_maximum_health_or_below"
 		}
 	},
-	[9059]={
+	[9060]={
 		[1]={
 			[1]={
 				limit={
@@ -198142,7 +198167,7 @@ return {
 			[1]="unnerve_for_4_seconds_on_hit_with_wands"
 		}
 	},
-	[9060]={
+	[9061]={
 		[1]={
 			[1]={
 				[1]={
@@ -198162,7 +198187,7 @@ return {
 			[1]="unnerve_nearby_enemies_on_use_for_ms"
 		}
 	},
-	[9061]={
+	[9062]={
 		[1]={
 			[1]={
 				limit={
@@ -198187,7 +198212,7 @@ return {
 			[1]="utility_flask_charges_recovered_per_3_seconds"
 		}
 	},
-	[9062]={
+	[9063]={
 		[1]={
 			[1]={
 				limit={
@@ -198216,7 +198241,7 @@ return {
 			[1]="utility_flask_cold_damage_taken_+%_final"
 		}
 	},
-	[9063]={
+	[9064]={
 		[1]={
 			[1]={
 				limit={
@@ -198245,7 +198270,7 @@ return {
 			[1]="utility_flask_fire_damage_taken_+%_final"
 		}
 	},
-	[9064]={
+	[9065]={
 		[1]={
 			[1]={
 				limit={
@@ -198274,7 +198299,7 @@ return {
 			[1]="utility_flask_lightning_damage_taken_+%_final"
 		}
 	},
-	[9065]={
+	[9066]={
 		[1]={
 			[1]={
 				limit={
@@ -198290,7 +198315,7 @@ return {
 			[1]="vaal_skill_gem_level_+"
 		}
 	},
-	[9066]={
+	[9067]={
 		[1]={
 			[1]={
 				limit={
@@ -198319,7 +198344,7 @@ return {
 			[1]="vaal_skill_soul_cost_+%"
 		}
 	},
-	[9067]={
+	[9068]={
 		[1]={
 			[1]={
 				limit={
@@ -198335,7 +198360,7 @@ return {
 			[1]="vaal_skill_soul_refund_chance_%"
 		}
 	},
-	[9068]={
+	[9069]={
 		[1]={
 			[1]={
 				limit={
@@ -198364,7 +198389,7 @@ return {
 			[1]="vaal_volcanic_fissure_molten_strike_soul_gain_prevention_+%"
 		}
 	},
-	[9069]={
+	[9070]={
 		[1]={
 			[1]={
 				limit={
@@ -198393,7 +198418,7 @@ return {
 			[1]="vampiric_link_duration_+%"
 		}
 	},
-	[9070]={
+	[9071]={
 		[1]={
 			[1]={
 				limit={
@@ -198409,7 +198434,7 @@ return {
 			[1]="vigilant_and_flicker_strike_active_skill_cooldown_bypass_type_override_to_power_charge"
 		}
 	},
-	[9071]={
+	[9072]={
 		[1]={
 			[1]={
 				limit={
@@ -198438,7 +198463,7 @@ return {
 			[1]="viper_and_pestilent_strike_attack_damage_+%_per_frenzy_charge"
 		}
 	},
-	[9072]={
+	[9073]={
 		[1]={
 			[1]={
 				limit={
@@ -198463,7 +198488,7 @@ return {
 			[1]="viper_strike_chance_to_gain_unholy_might_%_on_hit_per_poison_stack_on_enemy"
 		}
 	},
-	[9073]={
+	[9074]={
 		[1]={
 			[1]={
 				limit={
@@ -198492,7 +198517,7 @@ return {
 			[1]="viper_strike_dual_wield_damage_+%_final"
 		}
 	},
-	[9074]={
+	[9075]={
 		[1]={
 			[1]={
 				limit={
@@ -198517,7 +198542,7 @@ return {
 			[1]="virtual_block_%_damage_taken"
 		}
 	},
-	[9075]={
+	[9076]={
 		[1]={
 			[1]={
 				limit={
@@ -198542,7 +198567,7 @@ return {
 			[1]="virulent_arrow_additional_spores_at_max_stages"
 		}
 	},
-	[9076]={
+	[9077]={
 		[1]={
 			[1]={
 				limit={
@@ -198558,7 +198583,7 @@ return {
 			[1]="virulent_arrow_chance_to_poison_%_per_stage"
 		}
 	},
-	[9077]={
+	[9078]={
 		[1]={
 			[1]={
 				[1]={
@@ -198591,7 +198616,7 @@ return {
 			[1]="vitality_mana_reservation_efficiency_-2%_per_1"
 		}
 	},
-	[9078]={
+	[9079]={
 		[1]={
 			[1]={
 				limit={
@@ -198620,7 +198645,7 @@ return {
 			[1]="vitality_mana_reservation_efficiency_+%"
 		}
 	},
-	[9079]={
+	[9080]={
 		[1]={
 			[1]={
 				limit={
@@ -198636,7 +198661,7 @@ return {
 			[1]="vitality_reserves_no_mana"
 		}
 	},
-	[9080]={
+	[9081]={
 		[1]={
 			[1]={
 				limit={
@@ -198652,7 +198677,7 @@ return {
 			[1]="void_sphere_cooldown_speed_+%"
 		}
 	},
-	[9081]={
+	[9082]={
 		[1]={
 			[1]={
 				limit={
@@ -198668,7 +198693,7 @@ return {
 			[1]="volatile_dead_and_cremation_penetrate_%_fire_resistance_per_100_dexterity"
 		}
 	},
-	[9082]={
+	[9083]={
 		[1]={
 			[1]={
 				limit={
@@ -198693,7 +198718,7 @@ return {
 			[1]="volatile_dead_base_number_of_corpses_to_consume"
 		}
 	},
-	[9083]={
+	[9084]={
 		[1]={
 			[1]={
 				limit={
@@ -198722,7 +198747,7 @@ return {
 			[1]="volatile_dead_cast_speed_+%"
 		}
 	},
-	[9084]={
+	[9085]={
 		[1]={
 			[1]={
 				limit={
@@ -198738,7 +198763,7 @@ return {
 			[1]="volatile_dead_consume_additional_corpse"
 		}
 	},
-	[9085]={
+	[9086]={
 		[1]={
 			[1]={
 				limit={
@@ -198767,7 +198792,7 @@ return {
 			[1]="volatile_dead_damage_+%"
 		}
 	},
-	[9086]={
+	[9087]={
 		[1]={
 			[1]={
 				limit={
@@ -198796,7 +198821,7 @@ return {
 			[1]="volcanic_fissure_damage_+%"
 		}
 	},
-	[9087]={
+	[9088]={
 		[1]={
 			[1]={
 				limit={
@@ -198821,7 +198846,7 @@ return {
 			[1]="volcanic_fissure_number_of_additional_projectiles"
 		}
 	},
-	[9088]={
+	[9089]={
 		[1]={
 			[1]={
 				limit={
@@ -198850,7 +198875,7 @@ return {
 			[1]="volcanic_fissure_speed_+%"
 		}
 	},
-	[9089]={
+	[9090]={
 		[1]={
 			[1]={
 				limit={
@@ -198879,7 +198904,7 @@ return {
 			[1]="voltaxic_burst_damage_+%"
 		}
 	},
-	[9090]={
+	[9091]={
 		[1]={
 			[1]={
 				limit={
@@ -198908,7 +198933,7 @@ return {
 			[1]="voltaxic_burst_damage_+%_per_100ms_duration"
 		}
 	},
-	[9091]={
+	[9092]={
 		[1]={
 			[1]={
 				limit={
@@ -198937,7 +198962,7 @@ return {
 			[1]="voltaxic_burst_skill_area_of_effect_+%"
 		}
 	},
-	[9092]={
+	[9093]={
 		[1]={
 			[1]={
 				[1]={
@@ -198957,7 +198982,7 @@ return {
 			[1]="vortex_active_skill_additional_critical_strike_chance_if_used_through_frostbolt"
 		}
 	},
-	[9093]={
+	[9094]={
 		[1]={
 			[1]={
 				limit={
@@ -198986,7 +199011,7 @@ return {
 			[1]="vortex_area_of_effect_+%_when_cast_on_frostbolt"
 		}
 	},
-	[9094]={
+	[9095]={
 		[1]={
 			[1]={
 				limit={
@@ -199002,7 +199027,7 @@ return {
 			[1]="vulnerability_no_reservation"
 		}
 	},
-	[9095]={
+	[9096]={
 		[1]={
 			[1]={
 				limit={
@@ -199018,7 +199043,7 @@ return {
 			[1]="wand_attacks_fire_an_additional_projectile"
 		}
 	},
-	[9096]={
+	[9097]={
 		[1]={
 			[1]={
 				limit={
@@ -199047,7 +199072,7 @@ return {
 			[1]="wand_damage_+%_if_crit_recently"
 		}
 	},
-	[9097]={
+	[9098]={
 		[1]={
 			[1]={
 				limit={
@@ -199076,7 +199101,7 @@ return {
 			[1]="war_banner_aura_effect_+%"
 		}
 	},
-	[9098]={
+	[9099]={
 		[1]={
 			[1]={
 				limit={
@@ -199105,7 +199130,7 @@ return {
 			[1]="war_banner_mana_reservation_efficiency_+%"
 		}
 	},
-	[9099]={
+	[9100]={
 		[1]={
 			[1]={
 				limit={
@@ -199121,7 +199146,7 @@ return {
 			[1]="warbringer_overbreak_armour"
 		}
 	},
-	[9100]={
+	[9101]={
 		[1]={
 			[1]={
 				limit={
@@ -199137,7 +199162,7 @@ return {
 			[1]="warcries_bypass_cooldown"
 		}
 	},
-	[9101]={
+	[9102]={
 		[1]={
 			[1]={
 				limit={
@@ -199153,7 +199178,7 @@ return {
 			[1]="warcries_debilitate_enemies_for_1_second"
 		}
 	},
-	[9102]={
+	[9103]={
 		[1]={
 			[1]={
 				limit={
@@ -199169,7 +199194,7 @@ return {
 			[1]="warcries_have_minimum_10_power"
 		}
 	},
-	[9103]={
+	[9104]={
 		[1]={
 			[1]={
 				limit={
@@ -199185,7 +199210,7 @@ return {
 			[1]="warcries_knock_back_enemies"
 		}
 	},
-	[9104]={
+	[9105]={
 		[1]={
 			[1]={
 				limit={
@@ -199214,7 +199239,7 @@ return {
 			[1]="warcry_buff_effect_+%"
 		}
 	},
-	[9105]={
+	[9106]={
 		[1]={
 			[1]={
 				limit={
@@ -199230,7 +199255,7 @@ return {
 			[1]="warcry_chance_to_gain_frenzy_power_endurance_charge_%_per_power"
 		}
 	},
-	[9106]={
+	[9107]={
 		[1]={
 			[1]={
 				[1]={
@@ -199250,7 +199275,7 @@ return {
 			[1]="warcry_cooldown_modifier_ms"
 		}
 	},
-	[9107]={
+	[9108]={
 		[1]={
 			[1]={
 				limit={
@@ -199279,7 +199304,7 @@ return {
 			[1]="warcry_damage_+%"
 		}
 	},
-	[9108]={
+	[9109]={
 		[1]={
 			[1]={
 				limit={
@@ -199304,7 +199329,7 @@ return {
 			[1]="warcry_empowers_next_x_melee_attacks"
 		}
 	},
-	[9109]={
+	[9110]={
 		[1]={
 			[1]={
 				limit={
@@ -199333,7 +199358,7 @@ return {
 			[1]="warcry_monster_power_+%"
 		}
 	},
-	[9110]={
+	[9111]={
 		[1]={
 			[1]={
 				limit={
@@ -199362,7 +199387,7 @@ return {
 			[1]="warcry_physical_damage_reduction_rating_+%_per_5_power_for_8_seconds"
 		}
 	},
-	[9111]={
+	[9112]={
 		[1]={
 			[1]={
 				limit={
@@ -199391,7 +199416,7 @@ return {
 			[1]="warcry_skill_area_of_effect_+%"
 		}
 	},
-	[9112]={
+	[9113]={
 		[1]={
 			[1]={
 				limit={
@@ -199407,7 +199432,7 @@ return {
 			[1]="warcry_skills_cooldown_is_4_seconds"
 		}
 	},
-	[9113]={
+	[9114]={
 		[1]={
 			[1]={
 				limit={
@@ -199423,7 +199448,7 @@ return {
 			[1]="water_sphere_cold_lightning_exposure_%"
 		}
 	},
-	[9114]={
+	[9115]={
 		[1]={
 			[1]={
 				limit={
@@ -199452,7 +199477,7 @@ return {
 			[1]="water_sphere_damage_+%"
 		}
 	},
-	[9115]={
+	[9116]={
 		[1]={
 			[1]={
 				limit={
@@ -199481,7 +199506,7 @@ return {
 			[1]="weapon_damage_+%_per_5_str"
 		}
 	},
-	[9116]={
+	[9117]={
 		[1]={
 			[1]={
 				limit={
@@ -199510,7 +199535,7 @@ return {
 			[1]="weapon_swap_speed_+%"
 		}
 	},
-	[9117]={
+	[9118]={
 		[1]={
 			[1]={
 				limit={
@@ -199526,7 +199551,7 @@ return {
 			[1]="when_you_would_consume_power_frenzy_endurance_charges_instead_consume_x_rage"
 		}
 	},
-	[9118]={
+	[9119]={
 		[1]={
 			[1]={
 				limit={
@@ -199551,7 +199576,7 @@ return {
 			[1]="while_curse_is_25%_expired_hinder_enemy_%"
 		}
 	},
-	[9119]={
+	[9120]={
 		[1]={
 			[1]={
 				limit={
@@ -199567,7 +199592,7 @@ return {
 			[1]="while_curse_is_33%_expired_malediction"
 		}
 	},
-	[9120]={
+	[9121]={
 		[1]={
 			[1]={
 				limit={
@@ -199596,7 +199621,7 @@ return {
 			[1]="while_curse_is_50%_expired_curse_effect_+%"
 		}
 	},
-	[9121]={
+	[9122]={
 		[1]={
 			[1]={
 				limit={
@@ -199625,7 +199650,7 @@ return {
 			[1]="while_curse_is_75%_expired_enemy_damage_taken_+%"
 		}
 	},
-	[9122]={
+	[9123]={
 		[1]={
 			[1]={
 				limit={
@@ -199641,7 +199666,7 @@ return {
 			[1]="while_stationary_gain_additional_physical_damage_reduction_%"
 		}
 	},
-	[9123]={
+	[9124]={
 		[1]={
 			[1]={
 				[1]={
@@ -199661,7 +199686,7 @@ return {
 			[1]="while_stationary_gain_life_regeneration_rate_per_minute_%"
 		}
 	},
-	[9124]={
+	[9125]={
 		[1]={
 			[1]={
 				limit={
@@ -199690,7 +199715,7 @@ return {
 			[1]="winter_brand_chill_effect_+%"
 		}
 	},
-	[9125]={
+	[9126]={
 		[1]={
 			[1]={
 				limit={
@@ -199719,7 +199744,7 @@ return {
 			[1]="winter_brand_damage_+%"
 		}
 	},
-	[9126]={
+	[9127]={
 		[1]={
 			[1]={
 				limit={
@@ -199735,7 +199760,7 @@ return {
 			[1]="winter_brand_max_number_of_stages_+"
 		}
 	},
-	[9127]={
+	[9128]={
 		[1]={
 			[1]={
 				limit={
@@ -199751,7 +199776,7 @@ return {
 			[1]="wintertide_and_arcanist_brand_branded_enemy_explode_for_25%_life_as_chaos_on_death_chance_%"
 		}
 	},
-	[9128]={
+	[9129]={
 		[1]={
 			[1]={
 				limit={
@@ -199780,7 +199805,7 @@ return {
 			[1]="witch_passive_maximum_lightning_damage_+%_final"
 		}
 	},
-	[9129]={
+	[9130]={
 		[1]={
 			[1]={
 				limit={
@@ -199809,7 +199834,7 @@ return {
 			[1]="witchhunter_armour_evasion_+%_final"
 		}
 	},
-	[9130]={
+	[9131]={
 		[1]={
 			[1]={
 				limit={
@@ -199825,7 +199850,7 @@ return {
 			[1]="witchhunter_chance_to_explode_enemies_for_100%_of_life_as_physical"
 		}
 	},
-	[9131]={
+	[9132]={
 		[1]={
 			[1]={
 				limit={
@@ -199841,7 +199866,7 @@ return {
 			[1]="witchhunter_up_to_damage_+%_final_against_targets_with_missing_focus"
 		}
 	},
-	[9132]={
+	[9133]={
 		[1]={
 			[1]={
 				limit={
@@ -199857,7 +199882,7 @@ return {
 			[1]="wither_area_of_effect_+%_every_second_while_channelling_up_to_+200%"
 		}
 	},
-	[9133]={
+	[9134]={
 		[1]={
 			[1]={
 				limit={
@@ -199886,7 +199911,7 @@ return {
 			[1]="wither_expire_speed_+%"
 		}
 	},
-	[9134]={
+	[9135]={
 		[1]={
 			[1]={
 				limit={
@@ -199915,7 +199940,7 @@ return {
 			[1]="withered_effect_on_self_+%"
 		}
 	},
-	[9135]={
+	[9136]={
 		[1]={
 			[1]={
 				limit={
@@ -199944,7 +199969,7 @@ return {
 			[1]="withered_effect_+%"
 		}
 	},
-	[9136]={
+	[9137]={
 		[1]={
 			[1]={
 				limit={
@@ -199969,7 +199994,7 @@ return {
 			[1]="withered_on_hit_for_2_seconds_if_enemy_has_5_or_less_withered_chance_%"
 		}
 	},
-	[9137]={
+	[9138]={
 		[1]={
 			[1]={
 				[1]={
@@ -200002,7 +200027,7 @@ return {
 			[1]="wrath_mana_reservation_efficiency_-2%_per_1"
 		}
 	},
-	[9138]={
+	[9139]={
 		[1]={
 			[1]={
 				limit={
@@ -200031,7 +200056,7 @@ return {
 			[1]="wrath_mana_reservation_efficiency_+%"
 		}
 	},
-	[9139]={
+	[9140]={
 		[1]={
 			[1]={
 				limit={
@@ -200047,7 +200072,7 @@ return {
 			[1]="wrath_reserves_no_mana"
 		}
 	},
-	[9140]={
+	[9141]={
 		[1]={
 			[1]={
 				limit={
@@ -200076,7 +200101,7 @@ return {
 			[1]="x%_faster_start_of_sorcery_ward_recovery"
 		}
 	},
-	[9141]={
+	[9142]={
 		[1]={
 			[1]={
 				limit={
@@ -200092,7 +200117,7 @@ return {
 			[1]="you_and_allies_additional_block_%_if_have_attacked_recently"
 		}
 	},
-	[9142]={
+	[9143]={
 		[1]={
 			[1]={
 				limit={
@@ -200108,7 +200133,7 @@ return {
 			[1]="you_and_allies_additional_spell_block_%_if_cast_spell_recently"
 		}
 	},
-	[9143]={
+	[9144]={
 		[1]={
 			[1]={
 				limit={
@@ -200124,7 +200149,7 @@ return {
 			[1]="you_and_allies_in_presence_all_damage_can_ignite_while_not_on_low_infernal_flame"
 		}
 	},
-	[9144]={
+	[9145]={
 		[1]={
 			[1]={
 				limit={
@@ -200140,7 +200165,7 @@ return {
 			[1]="you_and_allies_in_presence_non_skill_base_all_damage_%_to_gain_as_fire_while_on_high_infernal_flame"
 		}
 	},
-	[9145]={
+	[9146]={
 		[1]={
 			[1]={
 				limit={
@@ -200156,7 +200181,7 @@ return {
 			[1]="you_and_nearby_allies_armour_+_if_have_impaled_recently"
 		}
 	},
-	[9146]={
+	[9147]={
 		[1]={
 			[1]={
 				limit={
@@ -200185,7 +200210,7 @@ return {
 			[1]="you_and_nearby_allies_critical_strike_chance_+%"
 		}
 	},
-	[9147]={
+	[9148]={
 		[1]={
 			[1]={
 				limit={
@@ -200201,7 +200226,7 @@ return {
 			[1]="you_and_nearby_allies_critical_strike_multiplier_+"
 		}
 	},
-	[9148]={
+	[9149]={
 		[1]={
 			[1]={
 				[1]={
@@ -200221,7 +200246,7 @@ return {
 			[1]="you_and_nearby_allies_life_regeneration_rate_per_minute_%_if_corpse_consumed_recently"
 		}
 	},
-	[9149]={
+	[9150]={
 		[1]={
 			[1]={
 				[1]={
@@ -200241,7 +200266,7 @@ return {
 			[1]="you_and_nearby_allies_life_regeneration_rate_per_minute_%_if_have_blocked_recently"
 		}
 	},
-	[9150]={
+	[9151]={
 		[1]={
 			[1]={
 				[1]={
@@ -200261,7 +200286,7 @@ return {
 			[1]="you_and_nearby_allies_life_regeneration_rate_per_minute_%_if_you_hit_an_enemy_recently"
 		}
 	},
-	[9151]={
+	[9152]={
 		[1]={
 			[1]={
 				limit={
@@ -200277,7 +200302,7 @@ return {
 			[1]="you_and_nearby_allys_gain_onslaught_for_4_seconds_on_warcry"
 		}
 	},
-	[9152]={
+	[9153]={
 		[1]={
 			[1]={
 				limit={
@@ -200293,7 +200318,7 @@ return {
 			[1]="you_and_nearby_party_members_gain_x_rage_when_you_warcry"
 		}
 	},
-	[9153]={
+	[9154]={
 		[1]={
 			[1]={
 				[1]={
@@ -200313,7 +200338,7 @@ return {
 			[1]="you_and_totem_life_regeneration_rate_per_minute_%_per_active_totem"
 		}
 	},
-	[9154]={
+	[9155]={
 		[1]={
 			[1]={
 				limit={
@@ -200329,7 +200354,7 @@ return {
 			[1]="you_are_cursed_with_conductivity"
 		}
 	},
-	[9155]={
+	[9156]={
 		[1]={
 			[1]={
 				limit={
@@ -200345,7 +200370,7 @@ return {
 			[1]="you_are_cursed_with_despair"
 		}
 	},
-	[9156]={
+	[9157]={
 		[1]={
 			[1]={
 				limit={
@@ -200361,7 +200386,7 @@ return {
 			[1]="you_are_cursed_with_elemental_weakness"
 		}
 	},
-	[9157]={
+	[9158]={
 		[1]={
 			[1]={
 				limit={
@@ -200377,7 +200402,7 @@ return {
 			[1]="you_are_cursed_with_enfeeble"
 		}
 	},
-	[9158]={
+	[9159]={
 		[1]={
 			[1]={
 				limit={
@@ -200393,7 +200418,7 @@ return {
 			[1]="you_are_cursed_with_flammability"
 		}
 	},
-	[9159]={
+	[9160]={
 		[1]={
 			[1]={
 				limit={
@@ -200409,7 +200434,7 @@ return {
 			[1]="you_are_cursed_with_frostbite"
 		}
 	},
-	[9160]={
+	[9161]={
 		[1]={
 			[1]={
 				limit={
@@ -200425,7 +200450,7 @@ return {
 			[1]="you_are_cursed_with_temporal_chains"
 		}
 	},
-	[9161]={
+	[9162]={
 		[1]={
 			[1]={
 				limit={
@@ -200441,7 +200466,7 @@ return {
 			[1]="you_are_cursed_with_vulnerability"
 		}
 	},
-	[9162]={
+	[9163]={
 		[1]={
 			[1]={
 				limit={
@@ -200457,7 +200482,7 @@ return {
 			[1]="you_cannot_be_hindered"
 		}
 	},
-	[9163]={
+	[9164]={
 		[1]={
 			[1]={
 				limit={
@@ -200473,7 +200498,7 @@ return {
 			[1]="you_cannot_have_non_animated_minions"
 		}
 	},
-	[9164]={
+	[9165]={
 		[1]={
 			[1]={
 				limit={
@@ -200489,7 +200514,7 @@ return {
 			[1]="you_cannot_have_non_spectre_minions"
 		}
 	},
-	[9165]={
+	[9166]={
 		[1]={
 			[1]={
 				limit={
@@ -200505,7 +200530,7 @@ return {
 			[1]="you_cannot_inflict_curses"
 		}
 	},
-	[9166]={
+	[9167]={
 		[1]={
 			[1]={
 				limit={
@@ -200521,7 +200546,7 @@ return {
 			[1]="you_count_as_low_life_while_not_on_full_life"
 		}
 	},
-	[9167]={
+	[9168]={
 		[1]={
 			[1]={
 				limit={
@@ -200537,7 +200562,7 @@ return {
 			[1]="you_gain_%_life_when_one_of_your_minions_is_revived"
 		}
 	},
-	[9168]={
+	[9169]={
 		[1]={
 			[1]={
 				limit={
@@ -200553,7 +200578,7 @@ return {
 			[1]="you_have_no_armour_or_energy_shield"
 		}
 	},
-	[9169]={
+	[9170]={
 		[1]={
 			[1]={
 				limit={
@@ -200567,22 +200592,6 @@ return {
 		},
 		stats={
 			[1]="you_have_no_spirit"
-		}
-	},
-	[9170]={
-		[1]={
-			[1]={
-				limit={
-					[1]={
-						[1]="#",
-						[2]="#"
-					}
-				},
-				text="Damaging Ailments you inflict deal Damage {0}% faster while affected by Malevolence"
-			}
-		},
-		stats={
-			[1]="your_ailments_deal_damage_faster_%_while_affected_by_malevolence"
 		}
 	},
 	[9171]={
@@ -200610,6 +200619,22 @@ return {
 						[2]="#"
 					}
 				},
+				text="Damaging Ailments you inflict deal Damage {0}% faster while affected by Malevolence"
+			}
+		},
+		stats={
+			[1]="your_ailments_deal_damage_faster_%_while_affected_by_malevolence"
+		}
+	},
+	[9173]={
+		[1]={
+			[1]={
+				limit={
+					[1]={
+						[1]="#",
+						[2]="#"
+					}
+				},
 				text="Monsters cannot Block your Attacks"
 			}
 		},
@@ -200617,7 +200642,7 @@ return {
 			[1]="your_attacks_cannot_be_blocked"
 		}
 	},
-	[9173]={
+	[9174]={
 		[1]={
 			[1]={
 				limit={
@@ -200633,7 +200658,7 @@ return {
 			[1]="your_auras_except_anger_are_disabled"
 		}
 	},
-	[9174]={
+	[9175]={
 		[1]={
 			[1]={
 				limit={
@@ -200649,7 +200674,7 @@ return {
 			[1]="your_auras_except_clarity_are_disabled"
 		}
 	},
-	[9175]={
+	[9176]={
 		[1]={
 			[1]={
 				limit={
@@ -200665,7 +200690,7 @@ return {
 			[1]="your_auras_except_determination_are_disabled"
 		}
 	},
-	[9176]={
+	[9177]={
 		[1]={
 			[1]={
 				limit={
@@ -200681,7 +200706,7 @@ return {
 			[1]="your_auras_except_discipline_are_disabled"
 		}
 	},
-	[9177]={
+	[9178]={
 		[1]={
 			[1]={
 				limit={
@@ -200697,7 +200722,7 @@ return {
 			[1]="your_auras_except_grace_are_disabled"
 		}
 	},
-	[9178]={
+	[9179]={
 		[1]={
 			[1]={
 				limit={
@@ -200713,7 +200738,7 @@ return {
 			[1]="your_auras_except_haste_are_disabled"
 		}
 	},
-	[9179]={
+	[9180]={
 		[1]={
 			[1]={
 				limit={
@@ -200729,7 +200754,7 @@ return {
 			[1]="your_auras_except_hatred_are_disabled"
 		}
 	},
-	[9180]={
+	[9181]={
 		[1]={
 			[1]={
 				limit={
@@ -200745,7 +200770,7 @@ return {
 			[1]="your_auras_except_malevolence_are_disabled"
 		}
 	},
-	[9181]={
+	[9182]={
 		[1]={
 			[1]={
 				limit={
@@ -200761,7 +200786,7 @@ return {
 			[1]="your_auras_except_precision_are_disabled"
 		}
 	},
-	[9182]={
+	[9183]={
 		[1]={
 			[1]={
 				limit={
@@ -200777,7 +200802,7 @@ return {
 			[1]="your_auras_except_pride_are_disabled"
 		}
 	},
-	[9183]={
+	[9184]={
 		[1]={
 			[1]={
 				limit={
@@ -200793,7 +200818,7 @@ return {
 			[1]="your_auras_except_purity_of_elements_are_disabled"
 		}
 	},
-	[9184]={
+	[9185]={
 		[1]={
 			[1]={
 				limit={
@@ -200809,7 +200834,7 @@ return {
 			[1]="your_auras_except_purity_of_fire_are_disabled"
 		}
 	},
-	[9185]={
+	[9186]={
 		[1]={
 			[1]={
 				limit={
@@ -200825,7 +200850,7 @@ return {
 			[1]="your_auras_except_purity_of_ice_are_disabled"
 		}
 	},
-	[9186]={
+	[9187]={
 		[1]={
 			[1]={
 				limit={
@@ -200841,7 +200866,7 @@ return {
 			[1]="your_auras_except_purity_of_lightning_are_disabled"
 		}
 	},
-	[9187]={
+	[9188]={
 		[1]={
 			[1]={
 				limit={
@@ -200857,7 +200882,7 @@ return {
 			[1]="your_auras_except_vitality_are_disabled"
 		}
 	},
-	[9188]={
+	[9189]={
 		[1]={
 			[1]={
 				limit={
@@ -200873,7 +200898,7 @@ return {
 			[1]="your_auras_except_wrath_are_disabled"
 		}
 	},
-	[9189]={
+	[9190]={
 		[1]={
 			[1]={
 				limit={
@@ -200889,7 +200914,7 @@ return {
 			[1]="your_auras_except_zealotry_are_disabled"
 		}
 	},
-	[9190]={
+	[9191]={
 		[1]={
 			[1]={
 				limit={
@@ -200918,7 +200943,7 @@ return {
 			[1]="your_consecrated_ground_effect_lingers_for_ms_after_leaving_the_area"
 		}
 	},
-	[9191]={
+	[9192]={
 		[1]={
 			[1]={
 				limit={
@@ -200934,7 +200959,7 @@ return {
 			[1]="your_es_takes_%_hit_damage_from_allies_in_presence_before_them"
 		}
 	},
-	[9192]={
+	[9193]={
 		[1]={
 			[1]={
 				limit={
@@ -200959,7 +200984,7 @@ return {
 			[1]="your_marks_transfer_to_nearby_enemies_on_death_%_chance"
 		}
 	},
-	[9193]={
+	[9194]={
 		[1]={
 			[1]={
 				limit={
@@ -200975,7 +201000,7 @@ return {
 			[1]="your_movement_skills_are_disabled"
 		}
 	},
-	[9194]={
+	[9195]={
 		[1]={
 			[1]={
 				[1]={
@@ -201008,7 +201033,7 @@ return {
 			[1]="your_profane_ground_effect_lingers_for_ms_after_leaving_the_area"
 		}
 	},
-	[9195]={
+	[9196]={
 		[1]={
 			[1]={
 				limit={
@@ -201024,7 +201049,7 @@ return {
 			[1]="your_shield_skills_are_disabled"
 		}
 	},
-	[9196]={
+	[9197]={
 		[1]={
 			[1]={
 				limit={
@@ -201040,7 +201065,7 @@ return {
 			[1]="your_spells_are_disabled"
 		}
 	},
-	[9197]={
+	[9198]={
 		[1]={
 			[1]={
 				limit={
@@ -201056,7 +201081,7 @@ return {
 			[1]="your_travel_skills_are_disabled"
 		}
 	},
-	[9198]={
+	[9199]={
 		[1]={
 			[1]={
 				limit={
@@ -201072,7 +201097,7 @@ return {
 			[1]="your_travel_skills_except_dash_are_disabled"
 		}
 	},
-	[9199]={
+	[9200]={
 		[1]={
 			[1]={
 				limit={
@@ -201088,7 +201113,7 @@ return {
 			[1]="all_damage_can_poison_while_affected_by_glorious_madness"
 		}
 	},
-	[9200]={
+	[9201]={
 		[1]={
 			[1]={
 				limit={
@@ -201104,7 +201129,7 @@ return {
 			[1]="chance_to_deal_double_damage_while_affected_by_glorious_madness_%"
 		}
 	},
-	[9201]={
+	[9202]={
 		[1]={
 			[1]={
 				limit={
@@ -201120,7 +201145,7 @@ return {
 			[1]="explode_enemies_for_25%_life_as_chaos_on_kill_while_affected_by_glorious_madness_chance_%"
 		}
 	},
-	[9202]={
+	[9203]={
 		[1]={
 			[1]={
 				limit={
@@ -201136,7 +201161,7 @@ return {
 			[1]="gain_chilling_shocking_igniting_conflux_while_affected_by_glorious_madness"
 		}
 	},
-	[9203]={
+	[9204]={
 		[1]={
 			[1]={
 				[1]={
@@ -201156,7 +201181,7 @@ return {
 			[1]="gain_debilitating_presence_ms_on_kill_vs_rare_or_unique_enemy"
 		}
 	},
-	[9204]={
+	[9205]={
 		[1]={
 			[1]={
 				limit={
@@ -201172,7 +201197,7 @@ return {
 			[1]="immune_to_elemental_status_ailments_while_affected_by_glorious_madness"
 		}
 	},
-	[9205]={
+	[9206]={
 		[1]={
 			[1]={
 				limit={
@@ -201188,7 +201213,7 @@ return {
 			[1]="local_apply_extra_herald_mod_when_synthesised"
 		}
 	},
-	[9206]={
+	[9207]={
 		[1]={
 			[1]={
 				limit={
@@ -201204,7 +201229,7 @@ return {
 			[1]="local_is_alternate_tree_jewel"
 		}
 	},
-	[9207]={
+	[9208]={
 		[1]={
 			[1]={
 				limit={
@@ -201220,7 +201245,7 @@ return {
 			[1]="local_is_survival_jewel"
 		}
 	},
-	[9208]={
+	[9209]={
 		[1]={
 			[1]={
 				[1]={
@@ -201240,7 +201265,7 @@ return {
 			[1]="max_fortification_while_affected_by_glorious_madness_+1_per_4"
 		}
 	},
-	[9209]={
+	[9210]={
 		[1]={
 			[1]={
 				limit={
@@ -201256,7 +201281,7 @@ return {
 			[1]="primordial_jewel_count"
 		}
 	},
-	[9210]={
+	[9211]={
 		[1]={
 			[1]={
 				limit={
@@ -201272,7 +201297,7 @@ return {
 			[1]="armour_+%_per_rage"
 		}
 	},
-	[9211]={
+	[9212]={
 		[1]={
 			[1]={
 				limit={
@@ -201301,7 +201326,7 @@ return {
 			[1]="zealotry_aura_effect_+%"
 		}
 	},
-	[9212]={
+	[9213]={
 		[1]={
 			[1]={
 				[1]={
@@ -201334,7 +201359,7 @@ return {
 			[1]="zealotry_mana_reservation_efficiency_-2%_per_1"
 		}
 	},
-	[9213]={
+	[9214]={
 		[1]={
 			[1]={
 				limit={
@@ -201363,7 +201388,7 @@ return {
 			[1]="zealotry_mana_reservation_efficiency_+%"
 		}
 	},
-	[9214]={
+	[9215]={
 		[1]={
 			[1]={
 				limit={
@@ -201392,7 +201417,7 @@ return {
 			[1]="zealotry_mana_reservation_+%"
 		}
 	},
-	[9215]={
+	[9216]={
 		[1]={
 			[1]={
 				limit={
@@ -201408,7 +201433,7 @@ return {
 			[1]="zealotry_reserves_no_mana"
 		}
 	},
-	[9216]={
+	[9217]={
 		[1]={
 			[1]={
 				limit={
@@ -201424,7 +201449,7 @@ return {
 			[1]="zero_chaos_resistance"
 		}
 	},
-	[9217]={
+	[9218]={
 		[1]={
 			[1]={
 				[1]={
@@ -201444,7 +201469,7 @@ return {
 			[1]="zombie_caustic_cloud_on_death_maximum_life_per_minute_to_deal_as_chaos_damage_%"
 		}
 	},
-	[9218]={
+	[9219]={
 		[1]={
 			[1]={
 				limit={
@@ -201473,7 +201498,7 @@ return {
 			[1]="zombie_physical_damage_+%_final"
 		}
 	},
-	[9219]={
+	[9220]={
 		[1]={
 			[1]={
 				limit={
@@ -201502,7 +201527,7 @@ return {
 			[1]="zombie_slam_area_of_effect_+%"
 		}
 	},
-	[9220]={
+	[9221]={
 		[1]={
 			[1]={
 				limit={
@@ -201518,7 +201543,7 @@ return {
 			[1]="zombie_slam_cooldown_speed_+%"
 		}
 	},
-	[9221]={
+	[9222]={
 		[1]={
 			[1]={
 				limit={
@@ -201534,7 +201559,7 @@ return {
 			[1]="zombie_slam_damage_+%"
 		}
 	},
-	[9222]={
+	[9223]={
 		[1]={
 			[1]={
 				limit={
@@ -201550,7 +201575,7 @@ return {
 			[1]="stun_threshold_+%_per_rage"
 		}
 	},
-	[9223]={
+	[9224]={
 		[1]={
 			[1]={
 				limit={
@@ -201566,7 +201591,7 @@ return {
 			[1]="golems_larger_aggro_radius"
 		}
 	},
-	[9224]={
+	[9225]={
 		[1]={
 			[1]={
 				limit={
@@ -201582,7 +201607,7 @@ return {
 			[1]="minion_larger_aggro_radius"
 		}
 	},
-	[9225]={
+	[9226]={
 		[1]={
 			[1]={
 				limit={
@@ -201603,7 +201628,7 @@ return {
 			[2]="local_unique_jewel_notable_passives_in_radius_instead_grant_spell_damage_+%"
 		}
 	},
-	[9226]={
+	[9227]={
 		[1]={
 			[1]={
 				limit={
@@ -201632,7 +201657,7 @@ return {
 			[1]="local_unique_jewel_notable_passives_in_radius_instead_grant_minion_damage_taken_+%"
 		}
 	},
-	[9227]={
+	[9228]={
 		[1]={
 			[1]={
 				limit={
@@ -201661,7 +201686,7 @@ return {
 			[1]="local_unique_jewel_notable_passives_in_radius_instead_grant_minion_movement_speed_+%"
 		}
 	},
-	[9228]={
+	[9229]={
 		[1]={
 			[1]={
 				limit={
@@ -201682,7 +201707,7 @@ return {
 			[2]="local_unique_jewel_passives_in_radius_give_trap_and_mine_maximum_added_physical_damage"
 		}
 	},
-	[9229]={
+	[9230]={
 		[1]={
 			[1]={
 				limit={
@@ -201698,7 +201723,7 @@ return {
 			[1]="melee_hits_grant_rampage_stacks"
 		}
 	},
-	[9230]={
+	[9231]={
 		[1]={
 			[1]={
 				limit={
@@ -201714,7 +201739,7 @@ return {
 			[1]="player_gain_rampage_stacks"
 		}
 	},
-	[9231]={
+	[9232]={
 		[1]={
 			[1]={
 				limit={
@@ -201730,7 +201755,7 @@ return {
 			[1]="keystone_acrobatics"
 		}
 	},
-	[9232]={
+	[9233]={
 		[1]={
 			[1]={
 				limit={
@@ -201746,7 +201771,7 @@ return {
 			[1]="keystone_alternate_dexterity_bonus"
 		}
 	},
-	[9233]={
+	[9234]={
 		[1]={
 			[1]={
 				limit={
@@ -201762,7 +201787,7 @@ return {
 			[1]="keystone_alternate_intelligence_bonus"
 		}
 	},
-	[9234]={
+	[9235]={
 		[1]={
 			[1]={
 				limit={
@@ -201778,7 +201803,7 @@ return {
 			[1]="keystone_alternate_strength_bonus"
 		}
 	},
-	[9235]={
+	[9236]={
 		[1]={
 			[1]={
 				limit={
@@ -201794,7 +201819,7 @@ return {
 			[1]="keystone_ancestral_bond"
 		}
 	},
-	[9236]={
+	[9237]={
 		[1]={
 			[1]={
 				limit={
@@ -201810,7 +201835,7 @@ return {
 			[1]="keystone_avatar_of_fire"
 		}
 	},
-	[9237]={
+	[9238]={
 		[1]={
 			[1]={
 				limit={
@@ -201826,7 +201851,7 @@ return {
 			[1]="keystone_battlemage"
 		}
 	},
-	[9238]={
+	[9239]={
 		[1]={
 			[1]={
 				limit={
@@ -201842,7 +201867,7 @@ return {
 			[1]="keystone_blood_magic"
 		}
 	},
-	[9239]={
+	[9240]={
 		[1]={
 			[1]={
 				limit={
@@ -201858,7 +201883,7 @@ return {
 			[1]="keystone_bulwark"
 		}
 	},
-	[9240]={
+	[9241]={
 		[1]={
 			[1]={
 				limit={
@@ -201874,7 +201899,7 @@ return {
 			[1]="keystone_call_to_arms"
 		}
 	},
-	[9241]={
+	[9242]={
 		[1]={
 			[1]={
 				limit={
@@ -201890,7 +201915,7 @@ return {
 			[1]="keystone_chaos_inoculation"
 		}
 	},
-	[9242]={
+	[9243]={
 		[1]={
 			[1]={
 				limit={
@@ -201906,7 +201931,7 @@ return {
 			[1]="keystone_charge_cycle"
 		}
 	},
-	[9243]={
+	[9244]={
 		[1]={
 			[1]={
 				limit={
@@ -201922,7 +201947,7 @@ return {
 			[1]="keystone_conduit"
 		}
 	},
-	[9244]={
+	[9245]={
 		[1]={
 			[1]={
 				limit={
@@ -201938,7 +201963,7 @@ return {
 			[1]="keystone_crimson_dance"
 		}
 	},
-	[9245]={
+	[9246]={
 		[1]={
 			[1]={
 				limit={
@@ -201954,7 +201979,7 @@ return {
 			[1]="keystone_dance_with_death"
 		}
 	},
-	[9246]={
+	[9247]={
 		[1]={
 			[1]={
 				limit={
@@ -201970,7 +201995,7 @@ return {
 			[1]="keystone_divine_flesh"
 		}
 	},
-	[9247]={
+	[9248]={
 		[1]={
 			[1]={
 				limit={
@@ -201986,7 +202011,7 @@ return {
 			[1]="keystone_divine_shield"
 		}
 	},
-	[9248]={
+	[9249]={
 		[1]={
 			[1]={
 				limit={
@@ -202002,7 +202027,7 @@ return {
 			[1]="keystone_eldritch_battery"
 		}
 	},
-	[9249]={
+	[9250]={
 		[1]={
 			[1]={
 				limit={
@@ -202018,7 +202043,7 @@ return {
 			[1]="keystone_elemental_equilibrium"
 		}
 	},
-	[9250]={
+	[9251]={
 		[1]={
 			[1]={
 				limit={
@@ -202034,7 +202059,7 @@ return {
 			[1]="keystone_elemental_overload"
 		}
 	},
-	[9251]={
+	[9252]={
 		[1]={
 			[1]={
 				limit={
@@ -202050,7 +202075,7 @@ return {
 			[1]="keystone_emperors_heart"
 		}
 	},
-	[9252]={
+	[9253]={
 		[1]={
 			[1]={
 				limit={
@@ -202066,7 +202091,7 @@ return {
 			[1]="keystone_eternal_youth"
 		}
 	},
-	[9253]={
+	[9254]={
 		[1]={
 			[1]={
 				limit={
@@ -202082,7 +202107,7 @@ return {
 			[1]="keystone_everlasting_sacrifice"
 		}
 	},
-	[9254]={
+	[9255]={
 		[1]={
 			[1]={
 				limit={
@@ -202098,7 +202123,7 @@ return {
 			[1]="keystone_giants_blood"
 		}
 	},
-	[9255]={
+	[9256]={
 		[1]={
 			[1]={
 				limit={
@@ -202114,7 +202139,7 @@ return {
 			[1]="keystone_glancing_blows"
 		}
 	},
-	[9256]={
+	[9257]={
 		[1]={
 			[1]={
 				limit={
@@ -202130,7 +202155,7 @@ return {
 			[1]="keystone_heartstopper"
 		}
 	},
-	[9257]={
+	[9258]={
 		[1]={
 			[1]={
 				limit={
@@ -202146,7 +202171,7 @@ return {
 			[1]="keystone_hex_master"
 		}
 	},
-	[9258]={
+	[9259]={
 		[1]={
 			[1]={
 				limit={
@@ -202162,7 +202187,7 @@ return {
 			[1]="keystone_hollow_palm_technique"
 		}
 	},
-	[9259]={
+	[9260]={
 		[1]={
 			[1]={
 				limit={
@@ -202178,7 +202203,7 @@ return {
 			[1]="keystone_impale"
 		}
 	},
-	[9260]={
+	[9261]={
 		[1]={
 			[1]={
 				limit={
@@ -202194,7 +202219,7 @@ return {
 			[1]="keystone_iron_reflexes"
 		}
 	},
-	[9261]={
+	[9262]={
 		[1]={
 			[1]={
 				limit={
@@ -202210,7 +202235,7 @@ return {
 			[1]="keystone_magebane"
 		}
 	},
-	[9262]={
+	[9263]={
 		[1]={
 			[1]={
 				limit={
@@ -202226,7 +202251,7 @@ return {
 			[1]="keystone_mana_shield"
 		}
 	},
-	[9263]={
+	[9264]={
 		[1]={
 			[1]={
 				limit={
@@ -202242,7 +202267,7 @@ return {
 			[1]="keystone_minion_instability"
 		}
 	},
-	[9264]={
+	[9265]={
 		[1]={
 			[1]={
 				limit={
@@ -202258,7 +202283,7 @@ return {
 			[1]="keystone_oasis"
 		}
 	},
-	[9265]={
+	[9266]={
 		[1]={
 			[1]={
 				limit={
@@ -202274,7 +202299,7 @@ return {
 			[1]="keystone_pain_attunement"
 		}
 	},
-	[9266]={
+	[9267]={
 		[1]={
 			[1]={
 				limit={
@@ -202290,7 +202315,7 @@ return {
 			[1]="keystone_point_blank"
 		}
 	},
-	[9267]={
+	[9268]={
 		[1]={
 			[1]={
 				limit={
@@ -202306,7 +202331,7 @@ return {
 			[1]="keystone_precise_technique"
 		}
 	},
-	[9268]={
+	[9269]={
 		[1]={
 			[1]={
 				limit={
@@ -202322,7 +202347,7 @@ return {
 			[1]="keystone_projectile_evasion"
 		}
 	},
-	[9269]={
+	[9270]={
 		[1]={
 			[1]={
 				limit={
@@ -202338,7 +202363,7 @@ return {
 			[1]="keystone_quiet_might"
 		}
 	},
-	[9270]={
+	[9271]={
 		[1]={
 			[1]={
 				limit={
@@ -202354,7 +202379,7 @@ return {
 			[1]="keystone_runebinder"
 		}
 	},
-	[9271]={
+	[9272]={
 		[1]={
 			[1]={
 				limit={
@@ -202370,7 +202395,7 @@ return {
 			[1]="keystone_sacred_bastion"
 		}
 	},
-	[9272]={
+	[9273]={
 		[1]={
 			[1]={
 				limit={
@@ -202386,7 +202411,7 @@ return {
 			[1]="keystone_secrets_of_suffering"
 		}
 	},
-	[9273]={
+	[9274]={
 		[1]={
 			[1]={
 				limit={
@@ -202402,7 +202427,7 @@ return {
 			[1]="keystone_solipsism"
 		}
 	},
-	[9274]={
+	[9275]={
 		[1]={
 			[1]={
 				limit={
@@ -202418,7 +202443,7 @@ return {
 			[1]="keystone_strong_bowman"
 		}
 	},
-	[9275]={
+	[9276]={
 		[1]={
 			[1]={
 				limit={
@@ -202434,7 +202459,7 @@ return {
 			[1]="keystone_supreme_ego"
 		}
 	},
-	[9276]={
+	[9277]={
 		[1]={
 			[1]={
 				limit={
@@ -202450,7 +202475,7 @@ return {
 			[1]="keystone_unwavering_stance"
 		}
 	},
-	[9277]={
+	[9278]={
 		[1]={
 			[1]={
 				limit={
@@ -202466,7 +202491,7 @@ return {
 			[1]="keystone_vaal_pact"
 		}
 	},
-	[9278]={
+	[9279]={
 		[1]={
 			[1]={
 				limit={
@@ -202482,7 +202507,7 @@ return {
 			[1]="keystone_versatile_combatant"
 		}
 	},
-	[9279]={
+	[9280]={
 		[1]={
 			[1]={
 				limit={
@@ -202498,7 +202523,7 @@ return {
 			[1]="keystone_wind_dancer"
 		}
 	},
-	[9280]={
+	[9281]={
 		[1]={
 			[1]={
 				limit={
@@ -202514,7 +202539,7 @@ return {
 			[1]="keystone_zealots_oath"
 		}
 	},
-	[9281]={
+	[9282]={
 		[1]={
 			[1]={
 				limit={
@@ -202530,7 +202555,7 @@ return {
 			[1]="player_far_shot"
 		}
 	},
-	[9282]={
+	[9283]={
 		[1]={
 			[1]={
 				limit={
@@ -202546,7 +202571,7 @@ return {
 			[1]="resolute_technique"
 		}
 	},
-	[9283]={
+	[9284]={
 		[1]={
 			[1]={
 				limit={
@@ -202562,7 +202587,7 @@ return {
 			[1]="strong_casting"
 		}
 	},
-	[9284]={
+	[9285]={
 		[1]={
 			[1]={
 				limit={
@@ -202578,7 +202603,7 @@ return {
 			[1]="summoned_skeletons_have_avatar_of_fire"
 		}
 	},
-	[9285]={
+	[9286]={
 		[1]={
 			[1]={
 				limit={
@@ -202594,7 +202619,7 @@ return {
 			[1]="attacks_use_life_in_place_of_mana"
 		}
 	},
-	[9286]={
+	[9287]={
 		[1]={
 			[1]={
 				limit={
@@ -202610,7 +202635,7 @@ return {
 			[1]="gain_crimson_dance_if_have_dealt_critical_strike_recently"
 		}
 	},
-	[9287]={
+	[9288]={
 		[1]={
 			[1]={
 				limit={
@@ -202626,7 +202651,7 @@ return {
 			[1]="gain_crimson_dance_while_you_have_cat_stealth"
 		}
 	},
-	[9288]={
+	[9289]={
 		[1]={
 			[1]={
 				limit={
@@ -202642,7 +202667,7 @@ return {
 			[1]="gain_iron_reflexes_while_at_maximum_frenzy_charges"
 		}
 	},
-	[9289]={
+	[9290]={
 		[1]={
 			[1]={
 				limit={
@@ -202658,7 +202683,7 @@ return {
 			[1]="gain_mind_over_matter_while_at_maximum_power_charges"
 		}
 	},
-	[9290]={
+	[9291]={
 		[1]={
 			[1]={
 				limit={
@@ -202674,7 +202699,7 @@ return {
 			[1]="avatar_of_fire_rotation_active"
 		}
 	},
-	[9291]={
+	[9292]={
 		[1]={
 			[1]={
 				limit={
@@ -202690,7 +202715,7 @@ return {
 			[1]="elemental_overload_rotation_active"
 		}
 	},
-	[9292]={
+	[9293]={
 		[1]={
 			[1]={
 				limit={
@@ -202706,7 +202731,7 @@ return {
 			[1]="gain_iron_reflexes_while_stationary"
 		}
 	},
-	[9293]={
+	[9294]={
 		[1]={
 			[1]={
 				limit={
@@ -202722,7 +202747,7 @@ return {
 			[1]="gain_resolute_technique_while_do_not_have_elemental_overload"
 		}
 	},
-	[9294]={
+	[9295]={
 		[1]={
 			[1]={
 				limit={
@@ -202738,7 +202763,7 @@ return {
 			[1]="iron_reflexes_rotation_active"
 		}
 	},
-	[9295]={
+	[9296]={
 		[1]={
 			[1]={
 				limit={
@@ -202754,7 +202779,7 @@ return {
 			[1]="trap_throw_skills_have_blood_magic"
 		}
 	},
-	[9296]={
+	[9297]={
 		[1]={
 			[1]={
 				limit={
@@ -202783,7 +202808,7 @@ return {
 			[1]="physical_damage_+%_while_you_have_resolute_technique"
 		}
 	},
-	[9297]={
+	[9298]={
 		[1]={
 			[1]={
 				limit={
@@ -202812,7 +202837,7 @@ return {
 			[1]="critical_strike_chance_+%_while_you_have_avatar_of_fire"
 		}
 	},
-	[9298]={
+	[9299]={
 		[1]={
 			[1]={
 				limit={
@@ -202828,7 +202853,7 @@ return {
 			[1]="non_skill_physical_damage_%_to_convert_to_fire_while_you_have_avatar_of_fire"
 		}
 	},
-	[9299]={
+	[9300]={
 		[1]={
 			[1]={
 				limit={
@@ -202844,7 +202869,7 @@ return {
 			[1]="unique_bow_arborix_close_range_bow_damage_+%_final_while_have_iron_reflexes"
 		}
 	},
-	[9300]={
+	[9301]={
 		[1]={
 			[1]={
 				limit={
@@ -202860,7 +202885,7 @@ return {
 			[1]="local_chance_to_bleed_%_while_you_do_not_have_avatar_of_fire"
 		}
 	},
-	[9301]={
+	[9302]={
 		[1]={
 			[1]={
 				limit={
@@ -202876,7 +202901,7 @@ return {
 			[1]="armour_while_you_do_not_have_avatar_of_fire"
 		}
 	},
-	[9302]={
+	[9303]={
 		[1]={
 			[1]={
 				limit={
@@ -202905,7 +202930,7 @@ return {
 			[1]="attack_cast_and_movement_speed_+%_while_do_not_have_iron_reflexes"
 		}
 	},
-	[9303]={
+	[9304]={
 		[1]={
 			[1]={
 				limit={
@@ -202921,7 +202946,7 @@ return {
 			[1]="gain_player_far_shot_while_do_not_have_iron_reflexes"
 		}
 	},
-	[9304]={
+	[9305]={
 		[1]={
 			[1]={
 				limit={
@@ -202937,7 +202962,7 @@ return {
 			[1]="blood_footprints_from_item"
 		}
 	},
-	[9305]={
+	[9306]={
 		[1]={
 			[1]={
 				limit={
@@ -202953,7 +202978,7 @@ return {
 			[1]="celestial_footprints_from_item"
 		}
 	},
-	[9306]={
+	[9307]={
 		[1]={
 			[1]={
 				limit={
@@ -202969,7 +202994,7 @@ return {
 			[1]="demigod_footprints_from_item"
 		}
 	},
-	[9307]={
+	[9308]={
 		[1]={
 			[1]={
 				limit={
@@ -202985,7 +203010,7 @@ return {
 			[1]="extra_gore"
 		}
 	},
-	[9308]={
+	[9309]={
 		[1]={
 			[1]={
 				limit={
@@ -203001,7 +203026,7 @@ return {
 			[1]="goat_footprints_from_item"
 		}
 	},
-	[9309]={
+	[9310]={
 		[1]={
 			[1]={
 				limit={
@@ -203021,17 +203046,17 @@ return {
 	["%_chance_to_blind_on_critical_strike_while_you_have_cats_stealth"]=3993,
 	["%_chance_to_cause_bleeding_enemies_to_flee_on_hit"]=3429,
 	["%_chance_to_create_smoke_cloud_on_mine_or_trap_creation"]=3699,
-	["%_chance_to_deal_150%_area_damage_+%_final"]=8183,
-	["%_chance_to_gain_endurance_charge_each_second_while_channelling"]=8184,
+	["%_chance_to_deal_150%_area_damage_+%_final"]=8184,
+	["%_chance_to_gain_endurance_charge_each_second_while_channelling"]=8185,
 	["%_chance_to_gain_endurance_charge_on_trap_triggered_by_an_enemy"]=3239,
 	["%_chance_to_gain_frenzy_charge_on_trap_triggered_by_an_enemy"]=3238,
 	["%_chance_to_gain_power_charge_on_hit_against_enemies_on_full_life"]=3697,
 	["%_chance_to_gain_power_charge_on_mine_detonated_targeting_an_enemy"]=1831,
 	["%_chance_to_gain_power_charge_on_placing_a_totem"]=3682,
 	["%_chance_to_gain_power_charge_on_trap_triggered_by_an_enemy"]=1830,
-	["%_chance_to_gain_random_charge_on_trap_triggered_by_an_enemy"]=8185,
+	["%_chance_to_gain_random_charge_on_trap_triggered_by_an_enemy"]=8186,
 	["%_maximum_life_as_focus"]=1,
-	["%_number_of_raging_spirits_allowed"]=8186,
+	["%_number_of_raging_spirits_allowed"]=8187,
 	["%_of_life_regeneration_applies_to_totems"]=2,
 	["%_physical_damage_bypasses_energy_shield"]=3,
 	["+1_max_charged_attack_stages"]=4,
@@ -203225,7 +203250,7 @@ return {
 	["all_damage_can_freeze"]=4177,
 	["all_damage_can_ignite"]=4178,
 	["all_damage_can_poison"]=4179,
-	["all_damage_can_poison_while_affected_by_glorious_madness"]=9199,
+	["all_damage_can_poison_while_affected_by_glorious_madness"]=9200,
 	["all_damage_can_shock"]=4180,
 	["all_damage_from_you_and_minions_can_ignite_while_not_on_low_infernal_flame"]=4181,
 	["all_damage_taken_%_as_chaos_damage"]=4182,
@@ -203373,7 +203398,7 @@ return {
 	["armour_+%_if_you_havent_been_hit_recently"]=4268,
 	["armour_+%_per_50_str"]=4293,
 	["armour_+%_per_defiance"]=3900,
-	["armour_+%_per_rage"]=9210,
+	["armour_+%_per_rage"]=9211,
 	["armour_+%_per_red_socket_on_main_hand_weapon"]=4295,
 	["armour_+%_per_second_while_stationary_up_to_100"]=4296,
 	["armour_+%_while_bleeding"]=4297,
@@ -203407,7 +203432,7 @@ return {
 	["armour_hellscaping_speed_+%"]=6349,
 	["armour_increased_by_overcapped_fire_resistance"]=4287,
 	["armour_while_stationary"]=3953,
-	["armour_while_you_do_not_have_avatar_of_fire"]=9301,
+	["armour_while_you_do_not_have_avatar_of_fire"]=9302,
 	["arrow_base_number_of_targets_to_pierce"]=1506,
 	["arrow_chains_+"]=1503,
 	["arrow_critical_strike_chance_+%_max_as_distance_travelled_increases"]=4299,
@@ -203493,7 +203518,7 @@ return {
 	["attack_block_%_per_200_fire_hit_damage_taken_recently"]=4348,
 	["attack_block_%_while_at_max_endurance_charges"]=4350,
 	["attack_cast_and_movement_speed_+%_during_onslaught"]=4351,
-	["attack_cast_and_movement_speed_+%_while_do_not_have_iron_reflexes"]=9302,
+	["attack_cast_and_movement_speed_+%_while_do_not_have_iron_reflexes"]=9303,
 	["attack_cast_movement_speed_+%_for_you_and_allies_affected_by_your_auras"]=3691,
 	["attack_cast_movement_speed_+%_if_taken_a_savage_hit_recently"]=4352,
 	["attack_chance_to_blind_on_hit_%_vs_bleeding_enemies"]=4353,
@@ -203684,7 +203709,7 @@ return {
 	["attack_speed_+%_final_per_blitz_charge"]=4399,
 	["attack_speed_+%_for_4_seconds_on_attack"]=3174,
 	["attack_speed_+%_if_cast_a_mark_spell_recently"]=4400,
-	["attack_speed_+%_if_changed_stance_recently"]=8747,
+	["attack_speed_+%_if_changed_stance_recently"]=8748,
 	["attack_speed_+%_if_enemy_hit_with_main_hand_weapon_recently"]=4401,
 	["attack_speed_+%_if_enemy_killed_recently"]=4402,
 	["attack_speed_+%_if_enemy_not_killed_recently"]=3854,
@@ -203739,7 +203764,7 @@ return {
 	["attacks_number_of_additional_projectiles"]=3818,
 	["attacks_number_of_additional_projectiles_when_in_off_hand"]=3819,
 	["attacks_poison_while_at_max_frenzy_charges"]=1747,
-	["attacks_use_life_in_place_of_mana"]=9285,
+	["attacks_use_life_in_place_of_mana"]=9286,
 	["attacks_with_this_weapon_maximum_added_chaos_damage_per_10_of_your_lowest_attribute"]=4429,
 	["attacks_with_this_weapon_maximum_added_cold_damage_per_10_dexterity"]=4430,
 	["attacks_with_this_weapon_minimum_added_chaos_damage_per_10_of_your_lowest_attribute"]=4429,
@@ -203754,7 +203779,7 @@ return {
 	["auras_grant_additional_physical_damage_reduction_%_to_you_and_your_allies"]=3101,
 	["auras_grant_attack_and_cast_speed_+%_to_you_and_your_allies"]=3102,
 	["auras_grant_damage_+%_to_you_and_your_allies"]=3100,
-	["avatar_of_fire_rotation_active"]=9290,
+	["avatar_of_fire_rotation_active"]=9291,
 	["avians_flight_duration_ms_+"]=4433,
 	["avians_might_duration_ms_+"]=4434,
 	["avoid_ailments_%_from_crit"]=4435,
@@ -203975,8 +204000,8 @@ return {
 	["base_main_hand_damage_+%"]=1184,
 	["base_main_hand_maim_on_hit_%"]=4514,
 	["base_mana_cost_+"]=1597,
-	["base_mana_cost_+_with_channelling_skills"]=8592,
-	["base_mana_cost_+_with_non_channelling_skills"]=8594,
+	["base_mana_cost_+_with_channelling_skills"]=8593,
+	["base_mana_cost_+_with_non_channelling_skills"]=8595,
 	["base_mana_cost_-%"]=1591,
 	["base_mana_gained_on_enemy_death"]=993,
 	["base_mana_leech_amount_+%"]=1857,
@@ -204008,7 +204033,7 @@ return {
 	["base_minion_duration_+%"]=4516,
 	["base_movement_velocity_+%"]=852,
 	["base_no_energy_shield_recovery"]=2778,
-	["base_number_of_arbalists"]=8128,
+	["base_number_of_arbalists"]=8129,
 	["base_number_of_champions_of_light_allowed"]=4517,
 	["base_number_of_crossbow_bolts"]=959,
 	["base_number_of_essence_spirits_allowed"]=560,
@@ -204034,7 +204059,7 @@ return {
 	["base_physical_damage_reduction_and_evasion_rating"]=3882,
 	["base_physical_damage_reduction_rating"]=889,
 	["base_poison_duration_+%"]=2829,
-	["base_poison_effect_+%"]=8253,
+	["base_poison_effect_+%"]=8254,
 	["base_projectile_speed_+%"]=901,
 	["base_rage_cost_+%"]=1592,
 	["base_raven_maximum_life_+%"]=1488,
@@ -204291,7 +204316,7 @@ return {
 	["block_spells_chance_%_while_holding_shield"]=4708,
 	["block_while_dual_wielding_%"]=1088,
 	["block_while_dual_wielding_claws_%"]=1089,
-	["blood_footprints_from_item"]=9304,
+	["blood_footprints_from_item"]=9305,
 	["blood_rage_grants_additional_%_chance_to_gain_frenzy_on_kill"]=3729,
 	["blood_rage_grants_additional_attack_speed_+%"]=3728,
 	["blood_sand_armour_mana_reservation_+%"]=4709,
@@ -204439,7 +204464,7 @@ return {
 	["cannot_be_stunned_while_fortified"]=4807,
 	["cannot_be_stunned_while_leeching"]=2867,
 	["cannot_be_stunned_while_using_chaos_skill"]=4808,
-	["cannot_be_stunned_with_25_rage"]=8357,
+	["cannot_be_stunned_with_25_rage"]=8358,
 	["cannot_block_attacks"]=1941,
 	["cannot_block_spells"]=4809,
 	["cannot_block_while_no_energy_shield"]=2416,
@@ -204536,7 +204561,7 @@ return {
 	["caustic_arrow_withered_base_duration_ms"]=3324,
 	["caustic_arrow_withered_on_hit_%"]=3324,
 	["caustic_cloud_on_death_maximum_life_per_minute_to_deal_as_chaos_damage_%"]=3085,
-	["celestial_footprints_from_item"]=9305,
+	["celestial_footprints_from_item"]=9306,
 	["chain_hook_and_shield_charge_attack_speed_+%_per_10_rampage_stacks"]=4858,
 	["chain_strike_cone_radius_+_per_12_rage"]=4859,
 	["chain_strike_cone_radius_+_per_x_rage"]=4860,
@@ -204693,7 +204718,7 @@ return {
 	["chance_to_deal_double_damage_%_while_focused"]=5003,
 	["chance_to_deal_double_damage_+%_if_cast_vulnerability_in_past_10_seconds"]=5004,
 	["chance_to_deal_double_damage_for_3_seconds_on_spell_cast_every_9_seconds"]=4996,
-	["chance_to_deal_double_damage_while_affected_by_glorious_madness_%"]=9200,
+	["chance_to_deal_double_damage_while_affected_by_glorious_madness_%"]=9201,
 	["chance_to_deal_double_damage_while_on_full_life_%"]=5005,
 	["chance_to_deal_triple_damage_%_while_at_least_400_strength"]=5006,
 	["chance_to_defend_with_150%_armour_%_per_5%_missing_energy_shield"]=5007,
@@ -205139,7 +205164,7 @@ return {
 	["critical_strike_chance_+%_when_in_main_hand"]=3805,
 	["critical_strike_chance_+%_while_affected_by_wrath"]=5270,
 	["critical_strike_chance_+%_while_channelling"]=5271,
-	["critical_strike_chance_+%_while_you_have_avatar_of_fire"]=9297,
+	["critical_strike_chance_+%_while_you_have_avatar_of_fire"]=9298,
 	["critical_strike_chance_+%_while_you_have_depleted_physical_aegis"]=5275,
 	["critical_strike_chance_+%_with_at_least_200_int"]=3996,
 	["critical_strike_chance_+%_with_unarmed_attacks"]=5245,
@@ -205564,8 +205589,8 @@ return {
 	["delve_biome_off_path_reward_chests_resonator_chance_+%_final"]=2006,
 	["delve_biome_sulphite_cost_+%_final"]=1992,
 	["delve_boss_life_+%_final_from_biome"]=5500,
-	["demigod_footprints_from_item"]=9306,
-	["demon_minion_reservation_+%"]=8648,
+	["demigod_footprints_from_item"]=9307,
+	["demon_minion_reservation_+%"]=8649,
 	["desecrate_cooldown_speed_+%"]=3510,
 	["desecrate_creates_X_additional_corpses"]=3870,
 	["desecrate_damage_+%"]=3353,
@@ -205866,7 +205891,7 @@ return {
 	["elemental_hit_deals_50%_less_cold_damage"]=5648,
 	["elemental_hit_deals_50%_less_fire_damage"]=5649,
 	["elemental_hit_deals_50%_less_lightning_damage"]=5650,
-	["elemental_overload_rotation_active"]=9291,
+	["elemental_overload_rotation_active"]=9292,
 	["elemental_penetration_%_during_flask_effect"]=3883,
 	["elemental_penetration_%_if_you_have_a_power_charge"]=5651,
 	["elemental_penetration_%_while_chilled"]=5652,
@@ -206125,7 +206150,7 @@ return {
 	["evasion_rating_from_helmet_and_boots_+%"]=5791,
 	["evasion_rating_increased_by_overcapped_cold_resistance"]=5792,
 	["evasion_rating_increased_by_overcapped_lightning_resistance"]=5793,
-	["evasion_rating_plus_in_sand_stance"]=8741,
+	["evasion_rating_plus_in_sand_stance"]=8742,
 	["evasion_rating_while_es_full_+%_final"]=3701,
 	["every_4_seconds_regenerate_%_of_armour_and_evasion_as_life_over_1_second"]=5808,
 	["exerted_attack_knockback_chance_%"]=5809,
@@ -206141,7 +206166,7 @@ return {
 	["explode_enemies_for_10%_life_as_physical_on_kill_chance_%"]=2954,
 	["explode_enemies_for_10%_life_as_physical_on_kill_chance_%_while_using_pride"]=5816,
 	["explode_enemies_for_25%_life_as_chaos_on_kill_chance_%"]=2955,
-	["explode_enemies_for_25%_life_as_chaos_on_kill_while_affected_by_glorious_madness_chance_%"]=9201,
+	["explode_enemies_for_25%_life_as_chaos_on_kill_while_affected_by_glorious_madness_chance_%"]=9202,
 	["explode_enemies_for_500%_life_as_fire_on_kill_%_chance"]=5817,
 	["explode_on_kill_%_chaos_damage_to_deal"]=2953,
 	["explode_on_kill_%_fire_damage_to_deal"]=2393,
@@ -206168,7 +206193,7 @@ return {
 	["extra_damage_taken_from_crit_+%_while_affected_by_determination"]=5832,
 	["extra_damage_taken_from_crit_-%_if_taken_critical_strike_recently"]=2898,
 	["extra_damage_taken_from_crit_while_no_power_charges_+%"]=5833,
-	["extra_gore"]=9307,
+	["extra_gore"]=9308,
 	["extra_target_targeting_distance_+%"]=5834,
 	["eye_of_winter_damage_+%"]=5835,
 	["eye_of_winter_projectile_speed_+%"]=5836,
@@ -206535,13 +206560,13 @@ return {
 	["gain_cannot_be_stunned_aura_for_4_seconds_on_block_radius"]=3433,
 	["gain_challenger_charge_%_chance_on_hitting_rare_or_unique_enemy_in_blood_stance"]=6027,
 	["gain_challenger_charge_%_chance_on_kill_in_sand_stance"]=6028,
-	["gain_chilling_shocking_igniting_conflux_while_affected_by_glorious_madness"]=9202,
+	["gain_chilling_shocking_igniting_conflux_while_affected_by_glorious_madness"]=9203,
 	["gain_convergence_on_hitting_unique_enemy"]=4064,
-	["gain_crimson_dance_if_have_dealt_critical_strike_recently"]=9286,
-	["gain_crimson_dance_while_you_have_cat_stealth"]=9287,
+	["gain_crimson_dance_if_have_dealt_critical_strike_recently"]=9287,
+	["gain_crimson_dance_while_you_have_cat_stealth"]=9288,
 	["gain_critical_strike_chance_%_for_2_seconds_when_you_spend_800_mana"]=6029,
 	["gain_damage_+%_for_4_seconds_if_taken_savage_hit"]=3089,
-	["gain_debilitating_presence_ms_on_kill_vs_rare_or_unique_enemy"]=9203,
+	["gain_debilitating_presence_ms_on_kill_vs_rare_or_unique_enemy"]=9204,
 	["gain_defiance_when_lose_life_to_hit_once_per_x_ms"]=3899,
 	["gain_divine_charge_on_hit_%"]=4018,
 	["gain_divinity_ms_when_reaching_maximum_divine_charges"]=4020,
@@ -206585,8 +206610,8 @@ return {
 	["gain_frenzy_charge_per_enemy_you_crit_%_chance"]=6051,
 	["gain_frenzy_power_endurance_charges_on_vaal_skill_use"]=6053,
 	["gain_guard_flask_charge_when_hit_by_enemy_chance_%"]=6054,
-	["gain_iron_reflexes_while_at_maximum_frenzy_charges"]=9288,
-	["gain_iron_reflexes_while_stationary"]=9292,
+	["gain_iron_reflexes_while_at_maximum_frenzy_charges"]=9289,
+	["gain_iron_reflexes_while_stationary"]=9293,
 	["gain_life_regeneration_%_per_second_for_1_second_if_taken_savage_hit"]=3800,
 	["gain_magic_monster_mods_on_kill_%_chance"]=6055,
 	["gain_max_rage_on_losing_temporal_chains_debuff"]=6056,
@@ -206598,7 +206623,7 @@ return {
 	["gain_maximum_frenzy_charges_on_frenzy_charge_gained_%_chance"]=6061,
 	["gain_maximum_power_charges_on_power_charge_gained_%_chance"]=6062,
 	["gain_maximum_power_charges_on_vaal_skill_use"]=6063,
-	["gain_mind_over_matter_while_at_maximum_power_charges"]=9289,
+	["gain_mind_over_matter_while_at_maximum_power_charges"]=9290,
 	["gain_movement_speed_+%_for_20_seconds_on_kill"]=6064,
 	["gain_no_inherent_bonus_from_dexterity"]=1719,
 	["gain_no_inherent_bonus_from_intelligence"]=1720,
@@ -206632,7 +206657,7 @@ return {
 	["gain_phasing_while_you_have_low_life"]=6083,
 	["gain_phasing_while_you_have_onslaught"]=2199,
 	["gain_physical_damage_immunity_on_rampage_threshold_ms"]=2626,
-	["gain_player_far_shot_while_do_not_have_iron_reflexes"]=9303,
+	["gain_player_far_shot_while_do_not_have_iron_reflexes"]=9304,
 	["gain_power_charge_on_critical_strike_with_wands_%"]=6085,
 	["gain_power_charge_on_curse_cast_%"]=6086,
 	["gain_power_charge_on_hit_%_chance_against_frozen_enemy"]=6087,
@@ -206644,15 +206669,15 @@ return {
 	["gain_power_charge_per_second_if_have_not_lost_power_charge_recently"]=6091,
 	["gain_power_charge_when_throwing_trap_%"]=2610,
 	["gain_power_or_frenzy_charge_for_each_second_channeling"]=6092,
-	["gain_rage_on_hit"]=8358,
-	["gain_rage_on_hitting_rare_unique_enemy_%"]=8355,
-	["gain_rage_on_kill"]=8354,
-	["gain_rage_when_you_use_a_warcry"]=8356,
+	["gain_rage_on_hit"]=8359,
+	["gain_rage_on_hitting_rare_unique_enemy_%"]=8356,
+	["gain_rage_on_kill"]=8355,
+	["gain_rage_when_you_use_a_warcry"]=8357,
 	["gain_rampage_while_at_maximum_endurance_charges"]=2921,
 	["gain_random_charge_on_block"]=6094,
 	["gain_random_charge_per_second_while_stationary"]=6095,
 	["gain_rare_monster_mods_on_kill_ms"]=2497,
-	["gain_resolute_technique_while_do_not_have_elemental_overload"]=9293,
+	["gain_resolute_technique_while_do_not_have_elemental_overload"]=9294,
 	["gain_scorching_sapping_brittle_confluxes_while_two_highest_attributes_equal"]=6096,
 	["gain_shapers_presence_for_10_seconds_on_killing_rare_or_unique_monster"]=6097,
 	["gain_single_conflux_for_3_seconds_every_8_seconds"]=6098,
@@ -206686,7 +206711,7 @@ return {
 	["gain_x_rage_when_taken_crit"]=6113,
 	["gain_x_rage_when_taken_hit"]=6114,
 	["galvanic_arrow_and_storm_rain_skill_repeat_count_if_mined"]=6115,
-	["galvanic_arrow_area_damage_+%"]=8558,
+	["galvanic_arrow_area_damage_+%"]=8559,
 	["galvanic_arrow_projectile_speed_+%"]=6116,
 	["galvanic_field_beam_frequency_+%"]=6117,
 	["galvanic_field_cast_speed_+%"]=6118,
@@ -206748,7 +206773,7 @@ return {
 	["global_maximum_added_cold_damage"]=1238,
 	["global_maximum_added_cold_damage_vs_chilled_or_frozen_enemies"]=6142,
 	["global_maximum_added_fire_damage"]=1232,
-	["global_maximum_added_fire_damage_vs_burning_enemies"]=8859,
+	["global_maximum_added_fire_damage_vs_burning_enemies"]=8860,
 	["global_maximum_added_fire_damage_vs_ignited_enemies"]=6143,
 	["global_maximum_added_lightning_damage"]=1246,
 	["global_maximum_added_lightning_damage_vs_ignited_enemies"]=6144,
@@ -206760,7 +206785,7 @@ return {
 	["global_minimum_added_cold_damage"]=1238,
 	["global_minimum_added_cold_damage_vs_chilled_or_frozen_enemies"]=6142,
 	["global_minimum_added_fire_damage"]=1232,
-	["global_minimum_added_fire_damage_vs_burning_enemies"]=8859,
+	["global_minimum_added_fire_damage_vs_burning_enemies"]=8860,
 	["global_minimum_added_fire_damage_vs_ignited_enemies"]=6143,
 	["global_minimum_added_lightning_damage"]=1246,
 	["global_minimum_added_lightning_damage_vs_ignited_enemies"]=6144,
@@ -206773,7 +206798,7 @@ return {
 	["global_weapon_physical_damage_+%_per_red_socket_on_item"]=2406,
 	["glove_implicit_gain_rage_on_attack_hit_cooldown_ms"]=6148,
 	["glows_in_area_with_unique_fish"]=3751,
-	["goat_footprints_from_item"]=9308,
+	["goat_footprints_from_item"]=9309,
 	["gold_+%_from_enemies"]=6149,
 	["golem_attack_and_cast_speed_+%"]=6150,
 	["golem_attack_maximum_added_physical_damage"]=6151,
@@ -206792,7 +206817,7 @@ return {
 	["golem_physical_damage_reduction_rating"]=6158,
 	["golem_scale_+%"]=3327,
 	["golem_skill_cooldown_recovery_+%"]=2979,
-	["golems_larger_aggro_radius"]=9223,
+	["golems_larger_aggro_radius"]=9224,
 	["grace_aura_effect_+%"]=3010,
 	["grace_mana_reservation_+%"]=3668,
 	["grace_mana_reservation_efficiency_+%"]=6160,
@@ -207195,7 +207220,7 @@ return {
 	["immune_to_elemental_ailments_while_on_consecrated_ground_at_devotion_threshold"]=6472,
 	["immune_to_elemental_ailments_while_you_have_arcane_surge"]=6473,
 	["immune_to_elemental_status_ailments_during_flask_effect"]=3845,
-	["immune_to_elemental_status_ailments_while_affected_by_glorious_madness"]=9204,
+	["immune_to_elemental_status_ailments_while_affected_by_glorious_madness"]=9205,
 	["immune_to_exposure"]=6474,
 	["immune_to_exposure_if_cast_elemental_weakness_in_past_10_seconds"]=6475,
 	["immune_to_freeze_and_chill_while_ignited"]=6476,
@@ -207285,7 +207310,7 @@ return {
 	["intimidating_cry_area_of_effect_+%"]=6545,
 	["intimidating_cry_cooldown_speed_+%"]=6546,
 	["intuitive_link_duration_+%"]=6547,
-	["iron_reflexes_rotation_active"]=9294,
+	["iron_reflexes_rotation_active"]=9295,
 	["is_blighted_map"]=6548,
 	["is_hindered"]=3730,
 	["is_petrified"]=3244,
@@ -207317,57 +207342,57 @@ return {
 	["jewellery_hellscaping_speed_+%"]=6350,
 	["jorrhasts_blacksteel_animate_weapon_duration_+%_final"]=2478,
 	["kaoms_primacy_gain_rage_on_attack_crit_cooldown_ms"]=6554,
-	["keystone_acrobatics"]=9231,
-	["keystone_alternate_dexterity_bonus"]=9232,
-	["keystone_alternate_intelligence_bonus"]=9233,
-	["keystone_alternate_strength_bonus"]=9234,
-	["keystone_ancestral_bond"]=9235,
-	["keystone_avatar_of_fire"]=9236,
-	["keystone_battlemage"]=9237,
-	["keystone_blood_magic"]=9238,
-	["keystone_bulwark"]=9239,
-	["keystone_call_to_arms"]=9240,
-	["keystone_chaos_inoculation"]=9241,
-	["keystone_charge_cycle"]=9242,
-	["keystone_conduit"]=9243,
-	["keystone_crimson_dance"]=9244,
-	["keystone_dance_with_death"]=9245,
-	["keystone_divine_flesh"]=9246,
-	["keystone_divine_shield"]=9247,
-	["keystone_eldritch_battery"]=9248,
-	["keystone_elemental_equilibrium"]=9249,
-	["keystone_elemental_overload"]=9250,
-	["keystone_emperors_heart"]=9251,
-	["keystone_eternal_youth"]=9252,
-	["keystone_everlasting_sacrifice"]=9253,
-	["keystone_giants_blood"]=9254,
-	["keystone_glancing_blows"]=9255,
-	["keystone_heartstopper"]=9256,
-	["keystone_hex_master"]=9257,
-	["keystone_hollow_palm_technique"]=9258,
-	["keystone_impale"]=9259,
-	["keystone_iron_reflexes"]=9260,
-	["keystone_magebane"]=9261,
-	["keystone_mana_shield"]=9262,
-	["keystone_minion_instability"]=9263,
-	["keystone_oasis"]=9264,
-	["keystone_pain_attunement"]=9265,
-	["keystone_point_blank"]=9266,
-	["keystone_precise_technique"]=9267,
-	["keystone_projectile_evasion"]=9268,
-	["keystone_quiet_might"]=9269,
-	["keystone_runebinder"]=9270,
-	["keystone_sacred_bastion"]=9271,
-	["keystone_secrets_of_suffering"]=9272,
+	["keystone_acrobatics"]=9232,
+	["keystone_alternate_dexterity_bonus"]=9233,
+	["keystone_alternate_intelligence_bonus"]=9234,
+	["keystone_alternate_strength_bonus"]=9235,
+	["keystone_ancestral_bond"]=9236,
+	["keystone_avatar_of_fire"]=9237,
+	["keystone_battlemage"]=9238,
+	["keystone_blood_magic"]=9239,
+	["keystone_bulwark"]=9240,
+	["keystone_call_to_arms"]=9241,
+	["keystone_chaos_inoculation"]=9242,
+	["keystone_charge_cycle"]=9243,
+	["keystone_conduit"]=9244,
+	["keystone_crimson_dance"]=9245,
+	["keystone_dance_with_death"]=9246,
+	["keystone_divine_flesh"]=9247,
+	["keystone_divine_shield"]=9248,
+	["keystone_eldritch_battery"]=9249,
+	["keystone_elemental_equilibrium"]=9250,
+	["keystone_elemental_overload"]=9251,
+	["keystone_emperors_heart"]=9252,
+	["keystone_eternal_youth"]=9253,
+	["keystone_everlasting_sacrifice"]=9254,
+	["keystone_giants_blood"]=9255,
+	["keystone_glancing_blows"]=9256,
+	["keystone_heartstopper"]=9257,
+	["keystone_hex_master"]=9258,
+	["keystone_hollow_palm_technique"]=9259,
+	["keystone_impale"]=9260,
+	["keystone_iron_reflexes"]=9261,
+	["keystone_magebane"]=9262,
+	["keystone_mana_shield"]=9263,
+	["keystone_minion_instability"]=9264,
+	["keystone_oasis"]=9265,
+	["keystone_pain_attunement"]=9266,
+	["keystone_point_blank"]=9267,
+	["keystone_precise_technique"]=9268,
+	["keystone_projectile_evasion"]=9269,
+	["keystone_quiet_might"]=9270,
+	["keystone_runebinder"]=9271,
+	["keystone_sacred_bastion"]=9272,
+	["keystone_secrets_of_suffering"]=9273,
 	["keystone_shepherd_of_souls"]=6555,
-	["keystone_solipsism"]=9273,
-	["keystone_strong_bowman"]=9274,
-	["keystone_supreme_ego"]=9275,
-	["keystone_unwavering_stance"]=9276,
-	["keystone_vaal_pact"]=9277,
-	["keystone_versatile_combatant"]=9278,
-	["keystone_wind_dancer"]=9279,
-	["keystone_zealots_oath"]=9280,
+	["keystone_solipsism"]=9274,
+	["keystone_strong_bowman"]=9275,
+	["keystone_supreme_ego"]=9276,
+	["keystone_unwavering_stance"]=9277,
+	["keystone_vaal_pact"]=9278,
+	["keystone_versatile_combatant"]=9279,
+	["keystone_wind_dancer"]=9280,
+	["keystone_zealots_oath"]=9281,
 	["kill_enemy_on_hit_if_under_10%_life"]=1735,
 	["kill_enemy_on_hit_if_under_15%_life"]=3834,
 	["kill_enemy_on_hit_if_under_20%_life"]=3835,
@@ -207489,7 +207514,7 @@ return {
 	["life_regeneration_per_minute_if_you_have_at_least_1000_maximum_energy_shield"]=4003,
 	["life_regeneration_per_minute_if_you_have_at_least_1500_maximum_energy_shield"]=4004,
 	["life_regeneration_per_minute_if_you_have_at_least_500_maximum_energy_shield"]=4002,
-	["life_regeneration_per_minute_in_blood_stance"]=8739,
+	["life_regeneration_per_minute_in_blood_stance"]=8740,
 	["life_regeneration_per_minute_per_1%_uncapped_fire_damage_resistance"]=6619,
 	["life_regeneration_per_minute_per_active_buff"]=6620,
 	["life_regeneration_per_minute_per_maximum_energy_shield"]=6621,
@@ -207673,7 +207698,7 @@ return {
 	["local_apply_X_armour_break_on_crit"]=6737,
 	["local_apply_X_armour_break_on_hit"]=6738,
 	["local_apply_X_armour_break_on_stun"]=6739,
-	["local_apply_extra_herald_mod_when_synthesised"]=9205,
+	["local_apply_extra_herald_mod_when_synthesised"]=9206,
 	["local_apply_fire_exposure_on_full_armour_break"]=6740,
 	["local_area_of_effect_+%_per_4%_quality"]=6741,
 	["local_armour_and_energy_shield_+%"]=864,
@@ -207719,7 +207744,7 @@ return {
 	["local_cannot_have_green_sockets"]=75,
 	["local_cannot_have_red_sockets"]=76,
 	["local_chance_bleed_on_hit_%_vs_ignited_enemies"]=4420,
-	["local_chance_to_bleed_%_while_you_do_not_have_avatar_of_fire"]=9300,
+	["local_chance_to_bleed_%_while_you_do_not_have_avatar_of_fire"]=9301,
 	["local_chance_to_bleed_on_crit_50%"]=6756,
 	["local_chance_to_bleed_on_hit_%"]=2180,
 	["local_chance_to_bleed_on_hit_25%"]=2178,
@@ -208446,9 +208471,9 @@ return {
 	["local_intelligence_per_2%_quality"]=6832,
 	["local_intelligence_requirement_+"]=837,
 	["local_intelligence_requirement_+%"]=838,
-	["local_is_alternate_tree_jewel"]=9206,
+	["local_is_alternate_tree_jewel"]=9207,
 	["local_is_max_quality"]=1618,
-	["local_is_survival_jewel"]=9207,
+	["local_is_survival_jewel"]=9208,
 	["local_item_additional_skill_slots"]=80,
 	["local_item_allow_modification_while_corrupted"]=34,
 	["local_item_can_have_x_additional_enchantments"]=36,
@@ -208524,7 +208549,7 @@ return {
 	["local_life_gain_per_target_while_leeching"]=6874,
 	["local_life_leech_from_physical_damage_permyriad"]=985,
 	["local_life_leech_is_instant"]=2234,
-	["local_life_loss_%_to_prevent_during_flask_effect_to_lose_over_time"]=9045,
+	["local_life_loss_%_to_prevent_during_flask_effect_to_lose_over_time"]=9046,
 	["local_lightning_penetration_%"]=3396,
 	["local_lightning_resistance_%_per_2%_quality"]=6875,
 	["local_maim_on_hit"]=3755,
@@ -208847,15 +208872,15 @@ return {
 	["local_unique_jewel_nearby_disconnected_passives_can_be_allocated"]=831,
 	["local_unique_jewel_non_keystone_passive_in_radius_effect_+%"]=6978,
 	["local_unique_jewel_notable_passive_in_radius_does_nothing"]=6979,
-	["local_unique_jewel_notable_passives_in_radius_instead_grant_mana_cost_+%"]=9225,
-	["local_unique_jewel_notable_passives_in_radius_instead_grant_minion_damage_taken_+%"]=9226,
-	["local_unique_jewel_notable_passives_in_radius_instead_grant_minion_movement_speed_+%"]=9227,
-	["local_unique_jewel_notable_passives_in_radius_instead_grant_spell_damage_+%"]=9225,
+	["local_unique_jewel_notable_passives_in_radius_instead_grant_mana_cost_+%"]=9226,
+	["local_unique_jewel_notable_passives_in_radius_instead_grant_minion_damage_taken_+%"]=9227,
+	["local_unique_jewel_notable_passives_in_radius_instead_grant_minion_movement_speed_+%"]=9228,
+	["local_unique_jewel_notable_passives_in_radius_instead_grant_spell_damage_+%"]=9226,
 	["local_unique_jewel_one_additional_maximum_lightning_damage_per_X_dex"]=2793,
 	["local_unique_jewel_passive_jewel_socket_mod_effect_+%_with_corrupted_magic_jewel_socketed"]=6980,
 	["local_unique_jewel_passives_in_radius_applied_to_minions_instead"]=2734,
-	["local_unique_jewel_passives_in_radius_give_trap_and_mine_maximum_added_physical_damage"]=9228,
-	["local_unique_jewel_passives_in_radius_give_trap_and_mine_minimum_added_physical_damage"]=9228,
+	["local_unique_jewel_passives_in_radius_give_trap_and_mine_maximum_added_physical_damage"]=9229,
+	["local_unique_jewel_passives_in_radius_give_trap_and_mine_minimum_added_physical_damage"]=9229,
 	["local_unique_jewel_physical_attack_damage_+1%_per_x_dex_in_radius"]=2810,
 	["local_unique_jewel_physical_attack_damage_+1%_per_x_strength_in_radius"]=2805,
 	["local_unique_jewel_physical_damage_+1%_per_int_in_radius"]=2809,
@@ -209995,7 +210020,7 @@ return {
 	["max_demon_form_stacks"]=7755,
 	["max_endurance_charges"]=1517,
 	["max_fortification_+1_per_5"]=7756,
-	["max_fortification_while_affected_by_glorious_madness_+1_per_4"]=9208,
+	["max_fortification_while_affected_by_glorious_madness_+1_per_4"]=9209,
 	["max_fortification_while_focused_+1_per_5"]=7757,
 	["max_fortification_while_stationary_+1_per_5"]=7758,
 	["max_frenzy_charges"]=1522,
@@ -210118,7 +210143,7 @@ return {
 	["maximum_power_and_endurance_charges_+"]=7797,
 	["maximum_power_and_frenzy_charges_+"]=1528,
 	["maximum_power_charges_+_while_affected_by_discipline"]=7798,
-	["maximum_rage"]=8351,
+	["maximum_rage"]=8352,
 	["maximum_rage_+_while_wielding_axe"]=7799,
 	["maximum_rage_per_equipped_one_handed_sword"]=7800,
 	["maximum_random_movement_velocity_+%_when_hit"]=7801,
@@ -210159,7 +210184,7 @@ return {
 	["melee_fire_damage_+%_while_holding_shield"]=1689,
 	["melee_hit_damage_stun_multiplier_+%"]=7811,
 	["melee_hit_damage_stun_multiplier_+%_final_from_ot"]=7812,
-	["melee_hits_grant_rampage_stacks"]=9229,
+	["melee_hits_grant_rampage_stacks"]=9230,
 	["melee_movement_skill_chance_to_fortify_on_hit_%"]=7813,
 	["melee_physical_damage_+%"]=1685,
 	["melee_physical_damage_+%_per_10_dexterity"]=7814,
@@ -210378,7 +210403,7 @@ return {
 	["minion_grants_rampage_kill_to_parent_on_hitting_rare_or_unique_enemy_%"]=7927,
 	["minion_has_unholy_might"]=7928,
 	["minion_hits_ignore_enemy_elemental_resistances_while_has_energy_shield"]=4035,
-	["minion_larger_aggro_radius"]=9224,
+	["minion_larger_aggro_radius"]=9225,
 	["minion_life_increased_by_overcapped_fire_resistance"]=7929,
 	["minion_life_recovery_rate_+%"]=1481,
 	["minion_life_regeneration_per_minute_per_active_raging_spirit"]=2930,
@@ -210680,7 +210705,7 @@ return {
 	["non_skill_physical_damage_%_to_convert_to_cold_at_devotion_threshold"]=8095,
 	["non_skill_physical_damage_%_to_convert_to_fire_at_devotion_threshold"]=8097,
 	["non_skill_physical_damage_%_to_convert_to_fire_vs_ignited_enemies"]=1876,
-	["non_skill_physical_damage_%_to_convert_to_fire_while_you_have_avatar_of_fire"]=9298,
+	["non_skill_physical_damage_%_to_convert_to_fire_while_you_have_avatar_of_fire"]=9299,
 	["non_skill_physical_damage_%_to_convert_to_lightning_at_devotion_threshold"]=8099,
 	["non_skill_physical_damage_%_to_gain_as_chaos_per_elder_item_equipped"]=8094,
 	["non_skill_physical_damage_%_to_gain_as_chaos_vs_bleeding_enemies"]=3860,
@@ -210703,66 +210728,67 @@ return {
 	["notable_knockback_distance_+%_final_for_blocked_hits"]=8112,
 	["nova_spells_cast_at_target_location"]=8113,
 	["num_additional_skill_slots"]=8114,
+	["num_charm_slots"]=8115,
 	["num_magic_utility_flasks_always_apply"]=4050,
 	["num_of_additional_chains_at_max_frenzy_charges"]=1539,
 	["number_of_additional_arrows"]=961,
 	["number_of_additional_arrows_if_havent_cast_dash_recently"]=1509,
-	["number_of_additional_arrows_while_main_hand_accuracy_is_3000_or_more"]=8115,
-	["number_of_additional_chains_for_projectiles_while_phasing"]=8116,
+	["number_of_additional_arrows_while_main_hand_accuracy_is_3000_or_more"]=8116,
+	["number_of_additional_chains_for_projectiles_while_phasing"]=8117,
 	["number_of_additional_clones"]=2749,
 	["number_of_additional_curses_allowed"]=1867,
 	["number_of_additional_curses_allowed_on_self"]=1869,
-	["number_of_additional_curses_allowed_while_affected_by_malevolence"]=8117,
-	["number_of_additional_curses_allowed_while_at_maximum_power_charges"]=8118,
-	["number_of_additional_ignites_allowed"]=8119,
+	["number_of_additional_curses_allowed_while_affected_by_malevolence"]=8118,
+	["number_of_additional_curses_allowed_while_at_maximum_power_charges"]=8119,
+	["number_of_additional_ignites_allowed"]=8120,
 	["number_of_additional_marks_allowed"]=1868,
 	["number_of_additional_mines_to_place"]=3189,
-	["number_of_additional_mines_to_place_with_at_least_500_dex"]=8120,
-	["number_of_additional_mines_to_place_with_at_least_500_int"]=8121,
-	["number_of_additional_poison_stacks"]=8122,
+	["number_of_additional_mines_to_place_with_at_least_500_dex"]=8121,
+	["number_of_additional_mines_to_place_with_at_least_500_int"]=8122,
+	["number_of_additional_poison_stacks"]=8123,
 	["number_of_additional_projectiles"]=1507,
-	["number_of_additional_projectiles_if_last_movement_skill_was_retreating_throw"]=8123,
-	["number_of_additional_projectiles_if_you_have_been_hit_recently"]=8124,
-	["number_of_additional_projectiles_if_you_have_used_movement_skill_recently"]=8125,
+	["number_of_additional_projectiles_if_last_movement_skill_was_retreating_throw"]=8124,
+	["number_of_additional_projectiles_if_you_have_been_hit_recently"]=8125,
+	["number_of_additional_projectiles_if_you_have_used_movement_skill_recently"]=8126,
 	["number_of_additional_remote_mines_allowed"]=1940,
 	["number_of_additional_shrapnel_ballistae_per_200_strength"]=3040,
 	["number_of_additional_siege_ballistae_per_200_dexterity"]=3041,
 	["number_of_additional_totems_allowed"]=1938,
 	["number_of_additional_totems_allowed_on_kill_for_8_seconds"]=3248,
 	["number_of_additional_traps_allowed"]=1939,
-	["number_of_additional_traps_to_throw"]=8126,
-	["number_of_animated_weapons_allowed"]=8127,
+	["number_of_additional_traps_to_throw"]=8127,
+	["number_of_animated_weapons_allowed"]=8128,
 	["number_of_chains"]=1504,
 	["number_of_crab_charges_lost_when_hit"]=3980,
-	["number_of_endurance_charges_to_gain_every_4_seconds_while_stationary"]=8129,
-	["number_of_golems_allowed_with_3_primordial_jewels"]=8130,
+	["number_of_endurance_charges_to_gain_every_4_seconds_while_stationary"]=8130,
+	["number_of_golems_allowed_with_3_primordial_jewels"]=8131,
 	["number_of_melee_skeletons_to_summon_as_mage_skeletons"]=2900,
-	["number_of_projectiles_+%_final_from_skill"]=8131,
-	["number_of_raging_spirits_is_limited_to_3"]=8132,
-	["number_of_skeletons_allowed_per_2_old"]=8133,
-	["number_of_support_ghosts_is_limited_to_3"]=8134,
+	["number_of_projectiles_+%_final_from_skill"]=8132,
+	["number_of_raging_spirits_is_limited_to_3"]=8133,
+	["number_of_skeletons_allowed_per_2_old"]=8134,
+	["number_of_support_ghosts_is_limited_to_3"]=8135,
 	["number_of_zombies_allowed_+%"]=2283,
-	["number_of_zombies_allowed_+1_per_X_strength"]=8135,
+	["number_of_zombies_allowed_+1_per_X_strength"]=8136,
 	["object_inherent_attack_skills_damage_+%_final_per_frenzy_charge"]=2750,
-	["occultist_chaos_damage_+%_final"]=8136,
-	["occultist_cold_damage_+%_final"]=8137,
+	["occultist_chaos_damage_+%_final"]=8137,
+	["occultist_cold_damage_+%_final"]=8138,
 	["occultist_immune_to_stun_while_has_energy_shield"]=3378,
 	["occultist_stacking_energy_shield_regeneration_rate_per_minute_%_on_kill_for_4_seconds"]=3377,
-	["off_hand_accuracy_equal_to_main_hand_accuracy_while_wielding_sword"]=8138,
-	["off_hand_attack_speed_+%_while_dual_wielding"]=8139,
-	["off_hand_attack_speed_+%_while_wielding_two_weapon_types"]=8140,
+	["off_hand_accuracy_equal_to_main_hand_accuracy_while_wielding_sword"]=8139,
+	["off_hand_attack_speed_+%_while_dual_wielding"]=8140,
+	["off_hand_attack_speed_+%_while_wielding_two_weapon_types"]=8141,
 	["off_hand_base_weapon_attack_duration_ms"]=21,
-	["off_hand_claw_mana_gain_on_hit"]=8141,
-	["off_hand_critical_strike_chance_+_per_10_es_on_shield"]=8142,
-	["off_hand_critical_strike_multiplier_+_per_10_es_on_shield"]=8143,
-	["off_hand_critical_strike_multiplier_+_per_melee_abyss_jewel_up_to_+100"]=8144,
+	["off_hand_claw_mana_gain_on_hit"]=8142,
+	["off_hand_critical_strike_chance_+_per_10_es_on_shield"]=8143,
+	["off_hand_critical_strike_multiplier_+_per_10_es_on_shield"]=8144,
+	["off_hand_critical_strike_multiplier_+_per_melee_abyss_jewel_up_to_+100"]=8145,
 	["off_hand_maximum_attack_distance"]=25,
 	["off_hand_minimum_attack_distance"]=23,
 	["off_hand_quality"]=18,
 	["off_hand_weapon_type"]=10,
-	["offering_area_of_effect_+%"]=8145,
-	["offering_duration_+%"]=8146,
-	["offering_life_+%"]=8147,
+	["offering_area_of_effect_+%"]=8146,
+	["offering_duration_+%"]=8147,
+	["offering_life_+%"]=8148,
 	["offering_spells_effect_+%"]=3687,
 	["offerings_also_buff_you"]=1095,
 	["old_dagger_implicit_critical_strike_chance_+30%"]=1318,
@@ -210770,12 +210796,12 @@ return {
 	["old_dagger_implicit_critical_strike_chance_+50%"]=1320,
 	["old_do_not_use_spell_block_%_from_assumed_block_value"]=1083,
 	["old_do_not_use_spell_block_%_while_on_low_life_from_assumed_block_value"]=1084,
-	["on_cast_lose_all_mana_gain_%_as_maximum_lightning_damage_for_4_seconds"]=8148,
-	["on_casting_banner_recover_%_of_planted_banner_stages"]=8149,
-	["on_kill_effects_occur_twice"]=8150,
-	["on_planting_banner_you_and_nearby_allies_recover_permyriad_maximum_life_per_stage"]=8151,
+	["on_cast_lose_all_mana_gain_%_as_maximum_lightning_damage_for_4_seconds"]=8149,
+	["on_casting_banner_recover_%_of_planted_banner_stages"]=8150,
+	["on_kill_effects_occur_twice"]=8151,
+	["on_planting_banner_you_and_nearby_allies_recover_permyriad_maximum_life_per_stage"]=8152,
 	["on_weapon_global_damage_+%"]=1114,
-	["one_handed_attack_ailment_chance_+%"]=8152,
+	["one_handed_attack_ailment_chance_+%"]=8153,
 	["one_handed_attack_speed_+%"]=2967,
 	["one_handed_melee_accuracy_rating_+%"]=1296,
 	["one_handed_melee_attack_speed_+%"]=1280,
@@ -210792,70 +210818,70 @@ return {
 	["onslaught_on_vaal_skill_use_duration_ms"]=2593,
 	["onslaught_time_granted_on_kill_ms"]=2662,
 	["onslaught_time_granted_on_killing_shocked_enemy_ms"]=2663,
-	["open_nearby_chests_on_cast_chance_%"]=8153,
-	["orb_of_storm_strike_rate_while_channelling_+%"]=8154,
-	["orb_of_storms_cast_speed_+%"]=8155,
+	["open_nearby_chests_on_cast_chance_%"]=8154,
+	["orb_of_storm_strike_rate_while_channelling_+%"]=8155,
+	["orb_of_storms_cast_speed_+%"]=8156,
 	["orb_of_storms_damage_+%"]=3372,
-	["overkill_damage_%_as_physical_to_nearby_enemies"]=8156,
-	["override_block_chance_for_allies_in_your_presence"]=8157,
-	["override_maximum_damage_resistance_%"]=8158,
-	["override_weapon_base_critical_strike_chance"]=8159,
+	["overkill_damage_%_as_physical_to_nearby_enemies"]=8157,
+	["override_block_chance_for_allies_in_your_presence"]=8158,
+	["override_maximum_damage_resistance_%"]=8159,
+	["override_weapon_base_critical_strike_chance"]=8160,
 	["pain_attunement_keystone_critical_strike_multiplier_+%_final"]=1887,
-	["pantheon_abberath_ignite_duration_on_self_+%_final"]=8160,
-	["pantheon_shakari_self_poison_duration_+%_final"]=8161,
+	["pantheon_abberath_ignite_duration_on_self_+%_final"]=8161,
+	["pantheon_shakari_self_poison_duration_+%_final"]=8162,
 	["passive_applies_to_minions"]=2735,
-	["passive_mastery_chaos_damage_+%_final_against_enemies_with_energy_shield"]=8162,
-	["passive_mastery_damage_taken_over_time_+%_final"]=8163,
-	["passive_mastery_exposure_you_inflict_has_minimum_resistance_lower_%"]=8164,
-	["passive_mastery_less_projectile_speed_+%_final"]=8165,
-	["passive_mastery_less_skill_effect_duration_+%_final"]=8166,
-	["passive_mastery_maximum_physical_attack_damage_+%_final_with_daggers"]=8167,
-	["passive_mastery_more_projectile_speed_+%_final"]=8168,
-	["passive_mastery_more_skill_effect_duration_+%_final"]=8169,
-	["passive_mastery_physical_damage_taken_+%_final_while_on_full_energy_shield"]=8170,
-	["passive_mastery_stun_duration_+%_final_with_two_hand_weapon"]=8171,
+	["passive_mastery_chaos_damage_+%_final_against_enemies_with_energy_shield"]=8163,
+	["passive_mastery_damage_taken_over_time_+%_final"]=8164,
+	["passive_mastery_exposure_you_inflict_has_minimum_resistance_lower_%"]=8165,
+	["passive_mastery_less_projectile_speed_+%_final"]=8166,
+	["passive_mastery_less_skill_effect_duration_+%_final"]=8167,
+	["passive_mastery_maximum_physical_attack_damage_+%_final_with_daggers"]=8168,
+	["passive_mastery_more_projectile_speed_+%_final"]=8169,
+	["passive_mastery_more_skill_effect_duration_+%_final"]=8170,
+	["passive_mastery_physical_damage_taken_+%_final_while_on_full_energy_shield"]=8171,
+	["passive_mastery_stun_duration_+%_final_with_two_hand_weapon"]=8172,
 	["passive_notable_ignite_proliferation_radius"]=1908,
-	["passive_tree_damage_taken_+%_final_from_hindered_enemies"]=8172,
-	["passive_tree_mace_damage_+%_final_vs_heavy_stunned_enemies"]=8173,
-	["pathfinder_ascendancy_poison_on_enemies_you_kill_spread_to_enemies_within_x"]=8174,
-	["pathfinder_flask_amount_to_recover_+%_final"]=8175,
-	["pathfinder_flask_life_to_recover_+%_final"]=8176,
+	["passive_tree_damage_taken_+%_final_from_hindered_enemies"]=8173,
+	["passive_tree_mace_damage_+%_final_vs_heavy_stunned_enemies"]=8174,
+	["pathfinder_ascendancy_poison_on_enemies_you_kill_spread_to_enemies_within_x"]=8175,
+	["pathfinder_flask_amount_to_recover_+%_final"]=8176,
+	["pathfinder_flask_life_to_recover_+%_final"]=8177,
 	["pathfinder_physical_damage_%_to_gain_as_chaos_if_charges_consumed_from_amethyst_flask"]=4060,
-	["pathfinder_poison_duration_+%_final"]=8177,
+	["pathfinder_poison_duration_+%_final"]=8178,
 	["pathfinder_skills_consume_x_charges_from_a_bismuth_diamond_or_amethyst_flask"]=4057,
 	["pathfinder_skills_critical_strike_chance_+%_if_charges_consumed_from_diamond_flask"]=4058,
 	["pathfinder_skills_penetrate_elemental_resistances_%_if_charges_consumed_from_bismuth_flask"]=4059,
-	["penance_brand_area_of_effect_+%"]=8178,
-	["penance_brand_cast_speed_+%"]=8179,
-	["penance_brand_damage_+%"]=8180,
+	["penance_brand_area_of_effect_+%"]=8179,
+	["penance_brand_cast_speed_+%"]=8180,
+	["penance_brand_damage_+%"]=8181,
 	["penetrate_elemental_resistance_%_per_15_ascendance"]=1111,
-	["penetrate_elemental_resistance_%_per_abyssal_jewel_affecting_you"]=8181,
+	["penetrate_elemental_resistance_%_per_abyssal_jewel_affecting_you"]=8182,
 	["penetrate_elemental_resistance_per_frenzy_charge_%"]=2664,
-	["perandus_double_number_of_coins_found"]=8182,
-	["perfect_timing_window_ms_+%"]=8187,
-	["permanent_damage_+%_per_second_of_chill"]=8188,
-	["permanent_damage_+%_per_second_of_freeze"]=8189,
+	["perandus_double_number_of_coins_found"]=8183,
+	["perfect_timing_window_ms_+%"]=8188,
+	["permanent_damage_+%_per_second_of_chill"]=8189,
+	["permanent_damage_+%_per_second_of_freeze"]=8190,
 	["permanently_intimidate_enemies_you_hit_on_full_life"]=3873,
-	["permanently_intimidate_enemy_on_block"]=8190,
-	["petrified_blood_mana_reservation_efficiency_+%"]=8192,
-	["petrified_blood_mana_reservation_efficiency_-2%_per_1"]=8191,
-	["petrified_blood_reservation_+%"]=8193,
-	["phantasm_refresh_duration_on_hit_vs_unique_%_chance"]=8194,
+	["permanently_intimidate_enemy_on_block"]=8191,
+	["petrified_blood_mana_reservation_efficiency_+%"]=8193,
+	["petrified_blood_mana_reservation_efficiency_-2%_per_1"]=8192,
+	["petrified_blood_reservation_+%"]=8194,
+	["phantasm_refresh_duration_on_hit_vs_unique_%_chance"]=8195,
 	["phase_on_vaal_skill_use_duration_ms"]=2594,
 	["phase_run_%_chance_to_not_consume_frenzy_charges"]=3651,
-	["phase_run_%_chance_to_not_replace_buff_on_skill_use"]=8195,
+	["phase_run_%_chance_to_not_replace_buff_on_skill_use"]=8196,
 	["phase_run_skill_effect_duration_+%"]=3742,
 	["phase_through_objects"]=2501,
 	["phasing_%_for_3_seconds_on_trap_triggered_by_an_enemy"]=3861,
 	["phasing_for_4_seconds_on_kill_%"]=3107,
-	["phasing_if_blocked_recently"]=8196,
+	["phasing_if_blocked_recently"]=8197,
 	["phasing_on_rampage_threshold_ms"]=2638,
 	["phasing_on_trap_triggered_by_an_enemy_ms"]=3861,
-	["phys_cascade_trap_cooldown_speed_+%"]=8197,
-	["phys_cascade_trap_damage_+%"]=8198,
-	["phys_cascade_trap_duration_+%"]=8199,
-	["phys_cascade_trap_number_of_additional_cascades"]=8200,
-	["physical_and_chaos_damage_taken_+%_final_while_not_unhinged"]=8201,
+	["phys_cascade_trap_cooldown_speed_+%"]=8198,
+	["phys_cascade_trap_damage_+%"]=8199,
+	["phys_cascade_trap_duration_+%"]=8200,
+	["phys_cascade_trap_number_of_additional_cascades"]=8201,
+	["physical_and_chaos_damage_taken_+%_final_while_not_unhinged"]=8202,
 	["physical_attack_damage_+%"]=1124,
 	["physical_attack_damage_+%_while_holding_a_shield"]=1129,
 	["physical_attack_damage_taken_+"]=1919,
@@ -210869,63 +210895,63 @@ return {
 	["physical_damage_%_taken_from_mana_before_life"]=3792,
 	["physical_damage_+%"]=1148,
 	["physical_damage_+%_for_4_seconds_when_you_block_a_unique_enemy_hit"]=3852,
-	["physical_damage_+%_if_skill_costs_life"]=8205,
-	["physical_damage_+%_per_10_rage"]=8206,
-	["physical_damage_+%_per_explicit_map_mod_affecting_area"]=8202,
-	["physical_damage_+%_vs_ignited_enemies"]=8207,
+	["physical_damage_+%_if_skill_costs_life"]=8206,
+	["physical_damage_+%_per_10_rage"]=8207,
+	["physical_damage_+%_per_explicit_map_mod_affecting_area"]=8203,
+	["physical_damage_+%_vs_ignited_enemies"]=8208,
 	["physical_damage_+%_vs_poisoned_enemies"]=2629,
-	["physical_damage_+%_while_affected_by_herald_of_purity"]=8208,
+	["physical_damage_+%_while_affected_by_herald_of_purity"]=8209,
 	["physical_damage_+%_while_at_maximum_frenzy_charges_final"]=3855,
 	["physical_damage_+%_while_frozen"]=2992,
 	["physical_damage_+%_while_life_leeching"]=1138,
-	["physical_damage_+%_while_you_have_resolute_technique"]=9296,
-	["physical_damage_+%_with_axes_swords"]=8209,
-	["physical_damage_+%_with_unholy_might"]=8210,
+	["physical_damage_+%_while_you_have_resolute_technique"]=9297,
+	["physical_damage_+%_with_axes_swords"]=8210,
+	["physical_damage_+%_with_unholy_might"]=8211,
 	["physical_damage_can_chill"]=2556,
 	["physical_damage_can_freeze"]=2557,
 	["physical_damage_can_shock"]=2558,
 	["physical_damage_cannot_poison"]=2566,
-	["physical_damage_from_hits_%_taken_as_random_element"]=8203,
+	["physical_damage_from_hits_%_taken_as_random_element"]=8204,
 	["physical_damage_on_block_+%"]=2874,
 	["physical_damage_over_time_+%"]=1131,
 	["physical_damage_over_time_multiplier_+_with_attacks"]=1161,
 	["physical_damage_over_time_per_10_dexterity_+%"]=3427,
-	["physical_damage_over_time_taken_+%_while_moving"]=8204,
+	["physical_damage_over_time_taken_+%_while_moving"]=8205,
 	["physical_damage_per_endurance_charge_+%"]=1838,
-	["physical_damage_prevented_recouped_as_life_%"]=8211,
-	["physical_damage_reduction_%_at_devotion_threshold"]=8212,
-	["physical_damage_reduction_%_if_only_one_enemy_nearby"]=8220,
+	["physical_damage_prevented_recouped_as_life_%"]=8212,
+	["physical_damage_reduction_%_at_devotion_threshold"]=8213,
+	["physical_damage_reduction_%_if_only_one_enemy_nearby"]=8221,
 	["physical_damage_reduction_%_per_endurance_charge"]=1979,
-	["physical_damage_reduction_%_per_hit_you_have_taken_recently"]=8214,
-	["physical_damage_reduction_%_per_nearby_enemy"]=8222,
-	["physical_damage_reduction_%_while_affected_by_herald_of_purity"]=8216,
+	["physical_damage_reduction_%_per_hit_you_have_taken_recently"]=8215,
+	["physical_damage_reduction_%_per_nearby_enemy"]=8223,
+	["physical_damage_reduction_%_while_affected_by_herald_of_purity"]=8217,
 	["physical_damage_reduction_and_minion_physical_damage_reduction_%"]=3686,
 	["physical_damage_reduction_and_minion_physical_damage_reduction_%_per_raised_zombie"]=3098,
-	["physical_damage_reduction_percent_per_frenzy_charge"]=8213,
-	["physical_damage_reduction_percent_per_power_charge"]=8215,
+	["physical_damage_reduction_percent_per_frenzy_charge"]=8214,
+	["physical_damage_reduction_percent_per_power_charge"]=8216,
 	["physical_damage_reduction_rating_%_while_not_moving"]=3952,
 	["physical_damage_reduction_rating_+%"]=890,
 	["physical_damage_reduction_rating_+%_against_projectiles"]=2160,
-	["physical_damage_reduction_rating_+%_per_endurance_charge"]=8221,
+	["physical_damage_reduction_rating_+%_per_endurance_charge"]=8222,
 	["physical_damage_reduction_rating_+%_while_chilled_or_frozen"]=3226,
 	["physical_damage_reduction_rating_+%_while_not_ignited_frozen_shocked"]=2498,
 	["physical_damage_reduction_rating_+1%_per_X_strength_when_in_off_hand"]=2459,
-	["physical_damage_reduction_rating_during_soul_gain_prevention"]=8217,
-	["physical_damage_reduction_rating_if_you_have_hit_an_enemy_recently"]=8218,
+	["physical_damage_reduction_rating_during_soul_gain_prevention"]=8218,
+	["physical_damage_reduction_rating_if_you_have_hit_an_enemy_recently"]=8219,
 	["physical_damage_reduction_rating_per_5_evasion_on_shield"]=4008,
-	["physical_damage_reduction_rating_per_endurance_charge"]=8219,
+	["physical_damage_reduction_rating_per_endurance_charge"]=8220,
 	["physical_damage_reduction_rating_per_level"]=2442,
 	["physical_damage_reduction_rating_while_frozen"]=2486,
 	["physical_damage_taken_%_as_chaos"]=2150,
 	["physical_damage_taken_%_as_cold"]=2146,
-	["physical_damage_taken_%_as_cold_while_affected_by_purity_of_elements"]=8223,
-	["physical_damage_taken_%_as_cold_while_affected_by_purity_of_ice"]=8224,
+	["physical_damage_taken_%_as_cold_while_affected_by_purity_of_elements"]=8224,
+	["physical_damage_taken_%_as_cold_while_affected_by_purity_of_ice"]=8225,
 	["physical_damage_taken_%_as_fire"]=2145,
-	["physical_damage_taken_%_as_fire_while_affected_by_purity_of_elements"]=8225,
-	["physical_damage_taken_%_as_fire_while_affected_by_purity_of_fire"]=8226,
+	["physical_damage_taken_%_as_fire_while_affected_by_purity_of_elements"]=8226,
+	["physical_damage_taken_%_as_fire_while_affected_by_purity_of_fire"]=8227,
 	["physical_damage_taken_%_as_lightning"]=2147,
-	["physical_damage_taken_%_as_lightning_while_affected_by_purity_of_elements"]=8227,
-	["physical_damage_taken_%_as_lightning_while_affected_by_purity_of_lightning"]=8228,
+	["physical_damage_taken_%_as_lightning_while_affected_by_purity_of_elements"]=8228,
+	["physical_damage_taken_%_as_lightning_while_affected_by_purity_of_lightning"]=8229,
 	["physical_damage_taken_+"]=1920,
 	["physical_damage_taken_+%"]=1926,
 	["physical_damage_taken_+%_while_at_maximum_endurance_charges"]=3856,
@@ -210934,424 +210960,424 @@ return {
 	["physical_damage_taken_+_per_level"]=1921,
 	["physical_damage_taken_+_vs_beasts"]=2601,
 	["physical_damage_taken_on_minion_death"]=2695,
-	["physical_damage_taken_recouped_as_life_%"]=8229,
+	["physical_damage_taken_recouped_as_life_%"]=8230,
 	["physical_damage_to_return_to_melee_attacker"]=906,
 	["physical_damage_to_return_when_hit"]=1898,
 	["physical_damage_while_dual_wielding_+%"]=1181,
-	["physical_damage_with_attack_skills_+%"]=8230,
-	["physical_damage_with_spell_skills_+%"]=8231,
+	["physical_damage_with_attack_skills_+%"]=8231,
+	["physical_damage_with_spell_skills_+%"]=8232,
 	["physical_dot_multiplier_+"]=1160,
-	["physical_dot_multiplier_+_if_crit_recently"]=8232,
-	["physical_dot_multiplier_+_if_spent_life_recently"]=8233,
-	["physical_dot_multiplier_+_while_wielding_axes_swords"]=8234,
-	["physical_hit_and_dot_damage_%_taken_as_chaos"]=8236,
-	["physical_hit_and_dot_damage_%_taken_as_fire"]=8235,
+	["physical_dot_multiplier_+_if_crit_recently"]=8233,
+	["physical_dot_multiplier_+_if_spent_life_recently"]=8234,
+	["physical_dot_multiplier_+_while_wielding_axes_swords"]=8235,
+	["physical_hit_and_dot_damage_%_taken_as_chaos"]=8237,
+	["physical_hit_and_dot_damage_%_taken_as_fire"]=8236,
 	["physical_mace_damage_+%"]=1213,
 	["physical_ranged_attack_damage_taken_+"]=1931,
 	["physical_reflect_damage_taken_+%"]=2397,
-	["physical_reflect_damage_taken_and_minion_physical_reflect_damage_taken_+%"]=8237,
-	["physical_skill_gem_level_+"]=8238,
+	["physical_reflect_damage_taken_and_minion_physical_reflect_damage_taken_+%"]=8238,
+	["physical_skill_gem_level_+"]=8239,
 	["physical_spell_skill_gem_level_+"]=1433,
 	["physical_staff_damage_+%"]=1200,
 	["physical_sword_damage_+%"]=1221,
 	["physical_wand_damage_+%"]=1226,
 	["physical_weapon_damage_+%_per_10_str"]=2241,
 	["piercing_attacks_cause_bleeding"]=3068,
-	["piercing_projectiles_critical_strike_chance_+%"]=8239,
-	["placed_banner_attack_damage_+%"]=8240,
+	["piercing_projectiles_critical_strike_chance_+%"]=8240,
+	["placed_banner_attack_damage_+%"]=8241,
 	["placing_traps_cooldown_recovery_+%"]=3103,
-	["plague_bearer_chaos_damage_taken_+%_while_incubating"]=8241,
-	["plague_bearer_maximum_stored_poison_damage_+%"]=8242,
-	["plague_bearer_movement_speed_+%_while_infecting"]=8243,
-	["plague_bearer_poison_effect_+%_while_infecting"]=8244,
-	["player_can_be_touched_by_tormented_spirits"]=8245,
-	["player_far_shot"]=9281,
-	["player_gain_rampage_stacks"]=9230,
+	["plague_bearer_chaos_damage_taken_+%_while_incubating"]=8242,
+	["plague_bearer_maximum_stored_poison_damage_+%"]=8243,
+	["plague_bearer_movement_speed_+%_while_infecting"]=8244,
+	["plague_bearer_poison_effect_+%_while_infecting"]=8245,
+	["player_can_be_touched_by_tormented_spirits"]=8246,
+	["player_far_shot"]=9282,
+	["player_gain_rampage_stacks"]=9231,
 	["player_is_harbinger_spawn_pack_on_kill_chance"]=110,
 	["poachers_mark_curse_effect_+%"]=3631,
 	["poachers_mark_duration_+%"]=3535,
-	["poison_as_though_dealing_X_damage_on_block"]=8246,
-	["poison_chance_+%"]=8247,
+	["poison_as_though_dealing_X_damage_on_block"]=8247,
+	["poison_chance_+%"]=8248,
 	["poison_cursed_enemies_on_hit"]=3829,
-	["poison_duration_+%_per_poison_applied_recently"]=8248,
-	["poison_duration_+%_per_power_charge"]=8249,
-	["poison_duration_+%_with_over_150_intelligence"]=8250,
-	["poison_effect_+%_per_frenzy_charge"]=8254,
-	["poison_effect_+%_vs_bleeding_enemies"]=8255,
-	["poison_effect_+%_vs_non_poisoned_enemies"]=8251,
-	["poison_effect_+%_while_wielding_claw_or_dagger"]=8256,
-	["poison_effect_+%_with_spells"]=8257,
-	["poison_effect_+100%_final_chance_during_flask_effect"]=8252,
-	["poison_on_critical_strike"]=8258,
+	["poison_duration_+%_per_poison_applied_recently"]=8249,
+	["poison_duration_+%_per_power_charge"]=8250,
+	["poison_duration_+%_with_over_150_intelligence"]=8251,
+	["poison_effect_+%_per_frenzy_charge"]=8255,
+	["poison_effect_+%_vs_bleeding_enemies"]=8256,
+	["poison_effect_+%_vs_non_poisoned_enemies"]=8252,
+	["poison_effect_+%_while_wielding_claw_or_dagger"]=8257,
+	["poison_effect_+%_with_spells"]=8258,
+	["poison_effect_+100%_final_chance_during_flask_effect"]=8253,
+	["poison_on_critical_strike"]=8259,
 	["poison_on_critical_strike_with_bow"]=1315,
 	["poison_on_critical_strike_with_dagger"]=1312,
 	["poison_on_hit_during_flask_effect_%"]=2952,
 	["poison_on_melee_critical_strike_%"]=2455,
 	["poison_on_melee_hit"]=3875,
-	["poison_reflected_to_self"]=8259,
-	["poison_time_passed_+%"]=8260,
-	["poisonous_concoction_damage_+%"]=8261,
-	["poisonous_concoction_flask_charges_consumed_+%"]=8262,
-	["poisonous_concoction_skill_area_of_effect_+%"]=8263,
-	["poisons_you_inflict_can_stack_infintely"]=8264,
-	["portal_alternate_destination_chance_permyriad"]=8265,
+	["poison_reflected_to_self"]=8260,
+	["poison_time_passed_+%"]=8261,
+	["poisonous_concoction_damage_+%"]=8262,
+	["poisonous_concoction_flask_charges_consumed_+%"]=8263,
+	["poisonous_concoction_skill_area_of_effect_+%"]=8264,
+	["poisons_you_inflict_can_stack_infintely"]=8265,
+	["portal_alternate_destination_chance_permyriad"]=8266,
 	["power_charge_duration_+%"]=1841,
-	["power_charge_duration_+%_final"]=8266,
+	["power_charge_duration_+%_final"]=8267,
 	["power_charge_on_block_%_chance"]=3886,
-	["power_charge_on_kill_percent_chance_while_holding_shield"]=8267,
-	["power_charge_on_non_critical_strike_%_chance_with_claws_daggers"]=8268,
-	["power_charge_on_spell_block_%_chance"]=8269,
+	["power_charge_on_kill_percent_chance_while_holding_shield"]=8268,
+	["power_charge_on_non_critical_strike_%_chance_with_claws_daggers"]=8269,
+	["power_charge_on_spell_block_%_chance"]=8270,
 	["power_frenzy_or_endurance_charge_on_kill_%"]=3250,
 	["power_only_conduit"]=1967,
 	["power_siphon_%_chance_to_gain_power_charge_on_kill"]=3600,
 	["power_siphon_attack_speed_+%"]=3491,
 	["power_siphon_damage_+%"]=3303,
-	["power_siphon_number_of_additional_projectiles"]=8270,
+	["power_siphon_number_of_additional_projectiles"]=8271,
 	["precision_aura_effect_+%"]=3012,
-	["precision_mana_reservation_+%"]=8275,
-	["precision_mana_reservation_-50%_final"]=8274,
-	["precision_mana_reservation_efficiency_+%"]=8273,
-	["precision_mana_reservation_efficiency_+100%"]=8272,
-	["precision_mana_reservation_efficiency_-2%_per_1"]=8271,
-	["precision_reserves_no_mana"]=8276,
+	["precision_mana_reservation_+%"]=8276,
+	["precision_mana_reservation_-50%_final"]=8275,
+	["precision_mana_reservation_efficiency_+%"]=8274,
+	["precision_mana_reservation_efficiency_+100%"]=8273,
+	["precision_mana_reservation_efficiency_-2%_per_1"]=8272,
+	["precision_reserves_no_mana"]=8277,
 	["presence_area_+%"]=1016,
 	["prevent_monster_heal"]=1613,
 	["prevent_monster_heal_duration_+%"]=1614,
-	["prevent_projectile_chaining_%_chance"]=8277,
-	["pride_aura_effect_+%"]=8278,
-	["pride_chance_to_deal_double_damage_%"]=8279,
-	["pride_chance_to_impale_with_attacks_%"]=8280,
-	["pride_intimidate_enemy_for_4_seconds_on_hit"]=8281,
-	["pride_mana_reservation_+%"]=8284,
-	["pride_mana_reservation_efficiency_+%"]=8283,
-	["pride_mana_reservation_efficiency_-2%_per_1"]=8282,
-	["pride_physical_damage_+%"]=8285,
-	["pride_reserves_no_mana"]=8286,
-	["pride_your_impaled_debuff_lasts_+_additional_hits"]=8287,
+	["prevent_projectile_chaining_%_chance"]=8278,
+	["pride_aura_effect_+%"]=8279,
+	["pride_chance_to_deal_double_damage_%"]=8280,
+	["pride_chance_to_impale_with_attacks_%"]=8281,
+	["pride_intimidate_enemy_for_4_seconds_on_hit"]=8282,
+	["pride_mana_reservation_+%"]=8285,
+	["pride_mana_reservation_efficiency_+%"]=8284,
+	["pride_mana_reservation_efficiency_-2%_per_1"]=8283,
+	["pride_physical_damage_+%"]=8286,
+	["pride_reserves_no_mana"]=8287,
+	["pride_your_impaled_debuff_lasts_+_additional_hits"]=8288,
 	["primordial_altar_burning_ground_on_death_%"]=7989,
 	["primordial_altar_chilled_ground_on_death_%"]=7990,
-	["primordial_jewel_count"]=9209,
-	["prismatic_rain_beam_frequency_+%"]=8288,
-	["profane_ground_on_crit_chance_%_if_highest_attribute_is_intelligence"]=8289,
-	["projectile_ailment_chance_+%"]=8290,
+	["primordial_jewel_count"]=9210,
+	["prismatic_rain_beam_frequency_+%"]=8289,
+	["profane_ground_on_crit_chance_%_if_highest_attribute_is_intelligence"]=8290,
+	["projectile_ailment_chance_+%"]=8291,
 	["projectile_attack_damage_+%"]=1700,
-	["projectile_attack_damage_+%_during_flask_effect"]=8291,
+	["projectile_attack_damage_+%_during_flask_effect"]=8292,
 	["projectile_attack_damage_+%_per_200_accuracy"]=3947,
 	["projectile_attack_damage_+%_with_at_least_200_dex"]=3995,
-	["projectile_attack_damage_+%_with_claw_or_dagger"]=8292,
-	["projectile_attack_range_+%"]=8293,
+	["projectile_attack_damage_+%_with_claw_or_dagger"]=8293,
+	["projectile_attack_range_+%"]=8294,
 	["projectile_attack_skill_critical_strike_chance_+%"]=3956,
-	["projectile_attack_skill_critical_strike_multiplier_+"]=8294,
+	["projectile_attack_skill_critical_strike_multiplier_+"]=8295,
 	["projectile_attacks_chance_to_bleed_on_hit_%_if_you_have_beast_minion"]=3957,
 	["projectile_attacks_chance_to_maim_on_hit_%_if_you_have_beast_minion"]=3958,
 	["projectile_attacks_chance_to_poison_on_hit_%_if_you_have_beast_minion"]=3959,
 	["projectile_base_number_of_targets_to_pierce"]=1505,
 	["projectile_chain_from_terrain_chance_%"]=1540,
-	["projectile_chance_to_be_able_to_chain_from_terrain_%_per_ranged_abyss_jewel_up_to_20%"]=8295,
-	["projectile_chance_to_chain_1_extra_time_from_terrain_%"]=8296,
-	["projectile_chance_to_piece_vs_enemies_within_3m_distance_of_player"]=8297,
+	["projectile_chance_to_be_able_to_chain_from_terrain_%_per_ranged_abyss_jewel_up_to_20%"]=8296,
+	["projectile_chance_to_chain_1_extra_time_from_terrain_%"]=8297,
+	["projectile_chance_to_piece_vs_enemies_within_3m_distance_of_player"]=8298,
 	["projectile_damage_+%"]=1699,
-	["projectile_damage_+%_in_blood_stance"]=8740,
+	["projectile_damage_+%_in_blood_stance"]=8741,
 	["projectile_damage_+%_max_as_distance_travelled_increases"]=3705,
-	["projectile_damage_+%_max_before_distance_increase"]=8300,
-	["projectile_damage_+%_per_16_dexterity"]=8301,
-	["projectile_damage_+%_per_chain"]=8302,
-	["projectile_damage_+%_per_pierced_enemy"]=8303,
+	["projectile_damage_+%_max_before_distance_increase"]=8301,
+	["projectile_damage_+%_per_16_dexterity"]=8302,
+	["projectile_damage_+%_per_chain"]=8303,
+	["projectile_damage_+%_per_pierced_enemy"]=8304,
 	["projectile_damage_+%_per_power_charge"]=2329,
-	["projectile_damage_+%_per_remaining_chain"]=8304,
-	["projectile_damage_+%_vs_chained_enemy"]=8305,
-	["projectile_damage_+%_vs_enemies_further_than_6m_distance"]=8298,
-	["projectile_damage_+%_vs_enemies_within_2m_distance"]=8299,
-	["projectile_damage_+%_vs_nearby_enemies"]=8306,
+	["projectile_damage_+%_per_remaining_chain"]=8305,
+	["projectile_damage_+%_vs_chained_enemy"]=8306,
+	["projectile_damage_+%_vs_enemies_further_than_6m_distance"]=8299,
+	["projectile_damage_+%_vs_enemies_within_2m_distance"]=8300,
+	["projectile_damage_+%_vs_nearby_enemies"]=8307,
 	["projectile_damage_modifiers_apply_to_skill_dot"]=2378,
 	["projectile_damage_taken_+%"]=2431,
 	["projectile_freeze_chance_%"]=2391,
-	["projectile_hit_damage_stun_multiplier_+%"]=8307,
+	["projectile_hit_damage_stun_multiplier_+%"]=8308,
 	["projectile_ignite_chance_%"]=2390,
-	["projectile_number_to_split"]=8308,
+	["projectile_number_to_split"]=8309,
 	["projectile_return_%_chance"]=2503,
 	["projectile_shock_chance_%"]=2392,
 	["projectile_skill_gem_level_+"]=946,
 	["projectile_speed_+%_per_frenzy_charge"]=2328,
 	["projectile_speed_+%_with_crossbow_skills"]=1511,
-	["projectile_speed_+%_with_daggers"]=8309,
-	["projectile_spell_cooldown_modifier_ms"]=8310,
+	["projectile_speed_+%_with_daggers"]=8310,
+	["projectile_spell_cooldown_modifier_ms"]=8311,
 	["projectile_weakness_curse_effect_+%"]=3632,
 	["projectile_weakness_duration_+%"]=3536,
-	["projectiles_always_pierce_you"]=8311,
+	["projectiles_always_pierce_you"]=8312,
 	["projectiles_fork"]=3222,
-	["projectiles_from_spells_cannot_pierce"]=8312,
-	["projectiles_pierce_1_additional_target_per_10_stat_value"]=8313,
-	["projectiles_pierce_1_additional_target_per_15_stat_value"]=8314,
-	["projectiles_pierce_all_nearby_targets"]=8315,
-	["projectiles_pierce_while_phasing"]=8316,
-	["projectiles_pierce_x_additional_targets_while_you_have_phasing"]=8317,
+	["projectiles_from_spells_cannot_pierce"]=8313,
+	["projectiles_pierce_1_additional_target_per_10_stat_value"]=8314,
+	["projectiles_pierce_1_additional_target_per_15_stat_value"]=8315,
+	["projectiles_pierce_all_nearby_targets"]=8316,
+	["projectiles_pierce_while_phasing"]=8317,
+	["projectiles_pierce_x_additional_targets_while_you_have_phasing"]=8318,
 	["projectiles_return"]=2503,
-	["protective_link_duration_+%"]=8318,
-	["puncture_and_ensnaring_arrow_enemies_explode_on_death_by_attack_for_10%_life_as_physical_damage_chance_%"]=8319,
+	["protective_link_duration_+%"]=8319,
+	["puncture_and_ensnaring_arrow_enemies_explode_on_death_by_attack_for_10%_life_as_physical_damage_chance_%"]=8320,
 	["puncture_damage_+%"]=3292,
 	["puncture_duration_+%"]=3527,
 	["puncture_maim_on_hit_%_chance"]=3594,
 	["punishment_curse_effect_+%"]=3640,
 	["punishment_duration_+%"]=3540,
 	["punishment_ignores_hexproof"]=2300,
-	["punishment_no_reservation"]=8320,
-	["puppet_master_base_duration_ms"]=8321,
-	["purge_damage_+%"]=8322,
-	["purge_duration_+%"]=8323,
-	["purge_expose_resist_%_matching_highest_element_damage"]=8324,
-	["purifying_flame_%_chance_to_create_consecrated_ground_around_you"]=8325,
+	["punishment_no_reservation"]=8321,
+	["puppet_master_base_duration_ms"]=8322,
+	["purge_damage_+%"]=8323,
+	["purge_duration_+%"]=8324,
+	["purge_expose_resist_%_matching_highest_element_damage"]=8325,
+	["purifying_flame_%_chance_to_create_consecrated_ground_around_you"]=8326,
 	["purity_of_elements_aura_effect_+%"]=3004,
 	["purity_of_elements_mana_reservation_+%"]=3663,
-	["purity_of_elements_mana_reservation_efficiency_+%"]=8327,
-	["purity_of_elements_mana_reservation_efficiency_-2%_per_1"]=8326,
-	["purity_of_elements_reserves_no_mana"]=8328,
+	["purity_of_elements_mana_reservation_efficiency_+%"]=8328,
+	["purity_of_elements_mana_reservation_efficiency_-2%_per_1"]=8327,
+	["purity_of_elements_reserves_no_mana"]=8329,
 	["purity_of_fire_aura_effect_+%"]=3005,
 	["purity_of_fire_mana_reservation_+%"]=3664,
-	["purity_of_fire_mana_reservation_efficiency_+%"]=8330,
-	["purity_of_fire_mana_reservation_efficiency_-2%_per_1"]=8329,
-	["purity_of_fire_reserves_no_mana"]=8331,
+	["purity_of_fire_mana_reservation_efficiency_+%"]=8331,
+	["purity_of_fire_mana_reservation_efficiency_-2%_per_1"]=8330,
+	["purity_of_fire_reserves_no_mana"]=8332,
 	["purity_of_ice_aura_effect_+%"]=3006,
 	["purity_of_ice_mana_reservation_+%"]=3660,
-	["purity_of_ice_mana_reservation_efficiency_+%"]=8333,
-	["purity_of_ice_mana_reservation_efficiency_-2%_per_1"]=8332,
-	["purity_of_ice_reserves_no_mana"]=8334,
+	["purity_of_ice_mana_reservation_efficiency_+%"]=8334,
+	["purity_of_ice_mana_reservation_efficiency_-2%_per_1"]=8333,
+	["purity_of_ice_reserves_no_mana"]=8335,
 	["purity_of_lightning_aura_effect_+%"]=3007,
 	["purity_of_lightning_mana_reservation_+%"]=3665,
-	["purity_of_lightning_mana_reservation_efficiency_+%"]=8336,
-	["purity_of_lightning_mana_reservation_efficiency_-2%_per_1"]=8335,
-	["purity_of_lightning_reserves_no_mana"]=8337,
+	["purity_of_lightning_mana_reservation_efficiency_+%"]=8337,
+	["purity_of_lightning_mana_reservation_efficiency_-2%_per_1"]=8336,
+	["purity_of_lightning_reserves_no_mana"]=8338,
 	["quantity_of_items_dropped_by_maimed_enemies_+%"]=3794,
 	["quarterstaff_accuracy_rating_+%"]=1299,
 	["quarterstaff_attack_speed_+%"]=1282,
 	["quarterstaff_critical_strike_chance_+%"]=1327,
 	["quarterstaff_critical_strike_multiplier_+"]=1352,
 	["quarterstaff_damage_+%"]=1201,
-	["quarterstaff_daze_build_up_+%"]=8338,
-	["quarterstaff_hit_damage_freeze_multiplier_+%"]=8339,
-	["quarterstaff_hit_damage_stun_multiplier_+%"]=8340,
-	["quarterstaff_shock_chance_+%"]=8341,
-	["quarterstaff_skills_that_consume_power_charges_count_as_consuming_x_additional_power_charges"]=8342,
-	["quick_dodge_added_cooldown_count"]=8343,
-	["quick_dodge_travel_distance_+%"]=8344,
-	["quick_guard_additional_physical_damage_reduction_%"]=8345,
-	["quicksilver_flasks_apply_to_nearby_allies"]=8346,
+	["quarterstaff_daze_build_up_+%"]=8339,
+	["quarterstaff_hit_damage_freeze_multiplier_+%"]=8340,
+	["quarterstaff_hit_damage_stun_multiplier_+%"]=8341,
+	["quarterstaff_shock_chance_+%"]=8342,
+	["quarterstaff_skills_that_consume_power_charges_count_as_consuming_x_additional_power_charges"]=8343,
+	["quick_dodge_added_cooldown_count"]=8344,
+	["quick_dodge_travel_distance_+%"]=8345,
+	["quick_guard_additional_physical_damage_reduction_%"]=8346,
+	["quicksilver_flasks_apply_to_nearby_allies"]=8347,
 	["quiver_hellscaping_speed_+%"]=6353,
-	["quiver_mod_effect_+%"]=8347,
-	["quiver_projectiles_pierce_1_additional_target"]=8348,
-	["quiver_projectiles_pierce_2_additional_targets"]=8349,
-	["quiver_projectiles_pierce_3_additional_targets"]=8350,
-	["rage_decay_speed_+%"]=8359,
-	["rage_effects_doubled"]=8353,
-	["rage_effects_tripled"]=8352,
-	["rage_grants_spell_damage_instead"]=8360,
-	["rage_loss_delay_ms"]=8361,
-	["rage_slash_sacrifice_rage_%"]=8362,
-	["rage_vortex_area_of_effect_+%"]=8363,
-	["rage_vortex_damage_+%"]=8364,
+	["quiver_mod_effect_+%"]=8348,
+	["quiver_projectiles_pierce_1_additional_target"]=8349,
+	["quiver_projectiles_pierce_2_additional_targets"]=8350,
+	["quiver_projectiles_pierce_3_additional_targets"]=8351,
+	["rage_decay_speed_+%"]=8360,
+	["rage_effects_doubled"]=8354,
+	["rage_effects_tripled"]=8353,
+	["rage_grants_spell_damage_instead"]=8361,
+	["rage_loss_delay_ms"]=8362,
+	["rage_slash_sacrifice_rage_%"]=8363,
+	["rage_vortex_area_of_effect_+%"]=8364,
+	["rage_vortex_damage_+%"]=8365,
 	["raging_spirit_damage_+%"]=3286,
-	["raging_spirits_always_ignite"]=8365,
-	["raging_spirits_refresh_duration_on_hit_vs_unique_%_chance"]=8366,
-	["raging_spirits_refresh_duration_when_they_kill_ignited_enemy"]=8367,
-	["raider_chance_to_evade_attacks_+%_final_during_onslaught"]=8368,
-	["raider_nearby_enemies_accuracy_rating_+%_final_while_phasing"]=8369,
+	["raging_spirits_always_ignite"]=8366,
+	["raging_spirits_refresh_duration_on_hit_vs_unique_%_chance"]=8367,
+	["raging_spirits_refresh_duration_when_they_kill_ignited_enemy"]=8368,
+	["raider_chance_to_evade_attacks_+%_final_during_onslaught"]=8369,
+	["raider_nearby_enemies_accuracy_rating_+%_final_while_phasing"]=8370,
 	["raider_passive_evade_melee_attacks_while_onslaughted_+%_final"]=2946,
 	["raider_passive_evade_projectile_attacks_while_onslaughted_+%_final"]=2947,
-	["rain_of_arrows_additional_sequence_chance_%"]=8370,
+	["rain_of_arrows_additional_sequence_chance_%"]=8371,
 	["rain_of_arrows_attack_speed_+%"]=3485,
 	["rain_of_arrows_damage_+%"]=3285,
 	["rain_of_arrows_radius_+%"]=3442,
-	["rain_of_arrows_rain_of_arrows_additional_sequence_chance_%"]=8371,
+	["rain_of_arrows_rain_of_arrows_additional_sequence_chance_%"]=8372,
 	["raise_spectre_gem_level_+"]=1435,
-	["raise_spectre_mana_cost_+%"]=8372,
-	["raise_zombie_does_not_use_corpses"]=8373,
+	["raise_spectre_mana_cost_+%"]=8373,
+	["raise_zombie_does_not_use_corpses"]=8374,
 	["raise_zombie_gem_level_+"]=1434,
-	["raised_zombie_%_chance_to_taunt"]=8374,
-	["raised_zombies_are_usable_as_corpses_when_alive"]=8375,
-	["raised_zombies_cover_in_ash_on_hit_%"]=8376,
-	["raised_zombies_fire_damage_%_of_maximum_life_taken_per_minute"]=8377,
-	["raised_zombies_have_avatar_of_fire"]=8378,
+	["raised_zombie_%_chance_to_taunt"]=8375,
+	["raised_zombies_are_usable_as_corpses_when_alive"]=8376,
+	["raised_zombies_cover_in_ash_on_hit_%"]=8377,
+	["raised_zombies_fire_damage_%_of_maximum_life_taken_per_minute"]=8378,
+	["raised_zombies_have_avatar_of_fire"]=8379,
 	["rallying_cry_buff_effect_+%"]=3738,
-	["rallying_cry_buff_effect_1%_per_3_stat_value"]=8379,
-	["rallying_cry_buff_effect_1%_per_5_stat_value"]=8380,
+	["rallying_cry_buff_effect_1%_per_3_stat_value"]=8380,
+	["rallying_cry_buff_effect_1%_per_5_stat_value"]=8381,
 	["rallying_cry_duration_+%"]=3548,
-	["rallying_cry_exerts_x_additional_attacks"]=8381,
+	["rallying_cry_exerts_x_additional_attacks"]=8382,
 	["random_curse_on_hit_%"]=2208,
-	["random_curse_on_hit_%_against_uncursed_enemies"]=8382,
-	["random_curse_when_hit_%_ignoring_curse_limit"]=8383,
-	["random_projectile_direction"]=8384,
+	["random_curse_on_hit_%_against_uncursed_enemies"]=8383,
+	["random_curse_when_hit_%_ignoring_curse_limit"]=8384,
+	["random_projectile_direction"]=8385,
 	["randomly_cursed_when_totems_die_curse_level"]=2247,
 	["ranged_weapon_physical_damage_+%"]=1701,
-	["ranger_hidden_ascendancy_non_damaging_elemental_ailment_effect_+%_final"]=8385,
-	["rare_or_unique_monster_dropped_item_rarity_+%"]=8386,
+	["ranger_hidden_ascendancy_non_damaging_elemental_ailment_effect_+%_final"]=8386,
+	["rare_or_unique_monster_dropped_item_rarity_+%"]=8387,
 	["rarity_of_items_dropped_by_maimed_enemies_+%"]=3795,
-	["reap_debuff_deals_fire_damage_instead_of_physical_damage"]=8387,
-	["reapply_enemy_shock_on_consuming_enemy_shock_chance_%"]=8388,
+	["reap_debuff_deals_fire_damage_instead_of_physical_damage"]=8388,
+	["reapply_enemy_shock_on_consuming_enemy_shock_chance_%"]=8389,
 	["reave_attack_speed_per_reave_stack_+%"]=3591,
 	["reave_damage_+%"]=3279,
 	["reave_radius_+%"]=3439,
-	["recall_sigil_target_search_range_+%"]=8389,
-	["receive_bleeding_chance_%_when_hit"]=8390,
-	["receive_bleeding_chance_%_when_hit_by_attack"]=8391,
-	["received_attack_hits_have_impale_chance_%"]=8392,
+	["recall_sigil_target_search_range_+%"]=8390,
+	["receive_bleeding_chance_%_when_hit"]=8391,
+	["receive_bleeding_chance_%_when_hit_by_attack"]=8392,
+	["received_attack_hits_have_impale_chance_%"]=8393,
 	["recharge_flasks_on_crit"]=2635,
-	["recharge_flasks_on_crit_while_affected_by_precision"]=8393,
+	["recharge_flasks_on_crit_while_affected_by_precision"]=8394,
 	["reckoning_cooldown_speed_+%"]=3508,
 	["reckoning_damage_+%"]=3344,
-	["recoup_%_elemental_damage_as_energy_shield"]=8394,
-	["recoup_%_of_damage_taken_by_your_totems_as_life"]=8395,
-	["recoup_effects_apply_over_4_seconds_instead"]=8396,
-	["recoup_life_effects_apply_over_3_seconds_instead"]=8397,
-	["recoup_speed_+%"]=8398,
-	["recover_%_energy_shield_over_1_second_when_you_take_physical_damage_from_enemy_hits"]=8399,
-	["recover_%_energy_shield_when_you_block_spell_damage_while_wielding_a_staff"]=8418,
+	["recoup_%_elemental_damage_as_energy_shield"]=8395,
+	["recoup_%_of_damage_taken_by_your_totems_as_life"]=8396,
+	["recoup_effects_apply_over_4_seconds_instead"]=8397,
+	["recoup_life_effects_apply_over_3_seconds_instead"]=8398,
+	["recoup_speed_+%"]=8399,
+	["recover_%_energy_shield_over_1_second_when_you_take_physical_damage_from_enemy_hits"]=8400,
+	["recover_%_energy_shield_when_you_block_spell_damage_while_wielding_a_staff"]=8419,
 	["recover_%_es_on_kill_per_different_mastery"]=1455,
-	["recover_%_life_on_heavy_stunning_rare_or_unique_enemy"]=8400,
+	["recover_%_life_on_heavy_stunning_rare_or_unique_enemy"]=8401,
 	["recover_%_life_on_kill_per_different_mastery"]=1454,
-	["recover_%_life_per_endurance_charge_consumed"]=8401,
-	["recover_%_life_when_gaining_adrenaline"]=8419,
-	["recover_%_life_when_you_block_attack_damage_while_wielding_a_staff"]=8420,
-	["recover_%_life_when_you_create_an_offering"]=8402,
-	["recover_%_life_when_you_ignite_a_non_ignited_enemy"]=8421,
-	["recover_%_life_when_you_use_a_life_flask_while_on_low_life"]=8422,
+	["recover_%_life_per_endurance_charge_consumed"]=8402,
+	["recover_%_life_when_gaining_adrenaline"]=8420,
+	["recover_%_life_when_you_block_attack_damage_while_wielding_a_staff"]=8421,
+	["recover_%_life_when_you_create_an_offering"]=8403,
+	["recover_%_life_when_you_ignite_a_non_ignited_enemy"]=8422,
+	["recover_%_life_when_you_use_a_life_flask_while_on_low_life"]=8423,
 	["recover_%_mana_on_kill_per_different_mastery"]=1456,
-	["recover_%_mana_when_attached_brand_expires"]=8423,
-	["recover_%_mana_when_you_invoke_a_spell"]=8403,
-	["recover_%_maximum_energy_shield_on_killing_cursed_enemy"]=8404,
+	["recover_%_mana_when_attached_brand_expires"]=8424,
+	["recover_%_mana_when_you_invoke_a_spell"]=8404,
+	["recover_%_maximum_energy_shield_on_killing_cursed_enemy"]=8405,
 	["recover_%_maximum_life_on_enemy_ignited"]=3939,
 	["recover_%_maximum_life_on_flask_use"]=3971,
 	["recover_%_maximum_life_on_kill"]=1467,
-	["recover_%_maximum_life_on_killing_chilled_enemy"]=8424,
-	["recover_%_maximum_life_on_killing_cursed_enemy"]=8405,
-	["recover_%_maximum_life_on_killing_enemy_while_you_have_rage"]=8425,
-	["recover_%_maximum_life_on_killing_poisoned_enemy"]=8426,
+	["recover_%_maximum_life_on_killing_chilled_enemy"]=8425,
+	["recover_%_maximum_life_on_killing_cursed_enemy"]=8406,
+	["recover_%_maximum_life_on_killing_enemy_while_you_have_rage"]=8426,
+	["recover_%_maximum_life_on_killing_poisoned_enemy"]=8427,
 	["recover_%_maximum_life_on_mana_flask_use"]=3972,
 	["recover_%_maximum_life_on_rampage_threshold"]=2624,
-	["recover_%_maximum_life_on_suppressing_spell"]=8406,
+	["recover_%_maximum_life_on_suppressing_spell"]=8407,
 	["recover_%_maximum_life_when_corpse_destroyed_or_consumed"]=2720,
-	["recover_%_maximum_life_when_cursing_non_cursed_enemy"]=8407,
-	["recover_%_maximum_mana_on_charm_use"]=8427,
+	["recover_%_maximum_life_when_cursing_non_cursed_enemy"]=8408,
+	["recover_%_maximum_mana_on_charm_use"]=8428,
 	["recover_%_maximum_mana_on_kill"]=1469,
 	["recover_%_maximum_mana_on_killing_cursed_enemy"]=1470,
-	["recover_%_maximum_mana_when_cursing_non_cursed_enemy"]=8408,
-	["recover_%_maximum_mana_when_enemy_frozen_permyriad"]=8428,
+	["recover_%_maximum_mana_when_cursing_non_cursed_enemy"]=8409,
+	["recover_%_maximum_mana_when_enemy_frozen_permyriad"]=8429,
 	["recover_%_maximum_mana_when_enemy_shocked"]=3793,
 	["recover_%_of_maximum_life_on_block"]=2724,
-	["recover_%_of_maximum_mana_over_1_second_on_guard_skill_use"]=8429,
-	["recover_10%_mana_on_skill_use_%_chance_while_affected_by_clarity"]=8409,
+	["recover_%_of_maximum_mana_over_1_second_on_guard_skill_use"]=8430,
+	["recover_10%_mana_on_skill_use_%_chance_while_affected_by_clarity"]=8410,
 	["recover_10%_of_maximum_mana_on_skill_use_%"]=3117,
-	["recover_1_life_per_x_life_regeneration_per_minute_every_4_seconds"]=8410,
+	["recover_1_life_per_x_life_regeneration_per_minute_every_4_seconds"]=8411,
 	["recover_X_life_on_block"]=1478,
-	["recover_X_life_on_enemy_ignited"]=8411,
-	["recover_X_life_on_suppressing_spell"]=8412,
-	["recover_X_life_when_fortification_expires_per_fortification_lost"]=8413,
-	["recover_X_mana_on_killing_frozen_enemy"]=8414,
-	["recover_energy_shield_%_on_consuming_steel_shard"]=8415,
+	["recover_X_life_on_enemy_ignited"]=8412,
+	["recover_X_life_on_suppressing_spell"]=8413,
+	["recover_X_life_when_fortification_expires_per_fortification_lost"]=8414,
+	["recover_X_mana_on_killing_frozen_enemy"]=8415,
+	["recover_energy_shield_%_on_consuming_steel_shard"]=8416,
 	["recover_energy_shield_%_on_kill"]=1468,
-	["recover_es_as_well_as_life_from_life_regeneration"]=8416,
-	["recover_maximum_life_on_enemy_killed_chance_%"]=8417,
-	["recover_permyriad_life_on_skill_use"]=8430,
-	["recover_permyriad_maximum_life_per_poison_on_enemy_on_kill"]=8431,
-	["recover_x_energy_shield_on_spell_block"]=8432,
-	["recover_x_energy_shield_on_suppressing_spell"]=8433,
-	["reduce_enemy_chaos_resistance_%"]=8434,
+	["recover_es_as_well_as_life_from_life_regeneration"]=8417,
+	["recover_maximum_life_on_enemy_killed_chance_%"]=8418,
+	["recover_permyriad_life_on_skill_use"]=8431,
+	["recover_permyriad_maximum_life_per_poison_on_enemy_on_kill"]=8432,
+	["recover_x_energy_shield_on_spell_block"]=8433,
+	["recover_x_energy_shield_on_suppressing_spell"]=8434,
+	["reduce_enemy_chaos_resistance_%"]=8435,
 	["reduce_enemy_chaos_resistance_with_weapons_%"]=3230,
-	["reduce_enemy_cold_resistance_%_while_affected_by_hatred"]=8435,
+	["reduce_enemy_cold_resistance_%_while_affected_by_hatred"]=8436,
 	["reduce_enemy_cold_resistance_with_weapons_%"]=3227,
 	["reduce_enemy_dodge_%"]=1612,
 	["reduce_enemy_elemental_resistance_%"]=2650,
 	["reduce_enemy_elemental_resistance_with_weapons_%"]=3237,
-	["reduce_enemy_fire_resistance_%_vs_blinded_enemies"]=8436,
-	["reduce_enemy_fire_resistance_%_while_affected_by_anger"]=8437,
+	["reduce_enemy_fire_resistance_%_vs_blinded_enemies"]=8437,
+	["reduce_enemy_fire_resistance_%_while_affected_by_anger"]=8438,
 	["reduce_enemy_fire_resistance_with_weapons_%"]=3228,
-	["reduce_enemy_lightning_resistance_%_while_affected_by_wrath"]=8438,
+	["reduce_enemy_lightning_resistance_%_while_affected_by_wrath"]=8439,
 	["reduce_enemy_lightning_resistance_with_weapons_%"]=3229,
-	["reflect_%_of_physical_damage_prevented"]=8439,
+	["reflect_%_of_physical_damage_prevented"]=8440,
 	["reflect_curses"]=2173,
 	["reflect_damage_taken_+%"]=3885,
-	["reflect_damage_taken_and_minion_reflect_damage_taken_+%"]=8440,
+	["reflect_damage_taken_and_minion_reflect_damage_taken_+%"]=8441,
 	["reflect_hexes_chance_%"]=2174,
-	["reflect_non_damaging_ailments_%_chance"]=8441,
-	["reflect_shocks"]=8442,
-	["reflect_shocks_to_enemies_in_radius"]=8443,
-	["reflected_physical_damage_taken_+%_while_affected_by_determination"]=8444,
-	["refresh_duration_of_shock_chill_ignite_on_enemy_when_cursing_enemy"]=8445,
-	["refresh_endurance_charges_duration_when_hit_chance_%"]=8446,
-	["refresh_ignite_duration_on_critical_strike_chance_%"]=8447,
+	["reflect_non_damaging_ailments_%_chance"]=8442,
+	["reflect_shocks"]=8443,
+	["reflect_shocks_to_enemies_in_radius"]=8444,
+	["reflected_physical_damage_taken_+%_while_affected_by_determination"]=8445,
+	["refresh_duration_of_shock_chill_ignite_on_enemy_when_cursing_enemy"]=8446,
+	["refresh_endurance_charges_duration_when_hit_chance_%"]=8447,
+	["refresh_ignite_duration_on_critical_strike_chance_%"]=8448,
 	["regenerate_%_armour_as_life_over_1_second_on_block"]=2511,
-	["regenerate_%_energy_shield_over_1_second_when_stunned"]=8448,
-	["regenerate_%_life_over_1_second_when_hit_while_affected_by_vitality"]=8449,
-	["regenerate_%_life_over_1_second_when_hit_while_not_unhinged"]=8455,
-	["regenerate_%_life_over_1_second_when_stunned"]=8450,
-	["regenerate_%_maximum_energy_shield_over_2_seconds_on_consuming_corpse"]=8456,
-	["regenerate_%_maximum_mana_over_2_seconds_on_consuming_corpse"]=8457,
-	["regenerate_1_rage_per_x_life_regeneration"]=8451,
-	["regenerate_1_rage_per_x_mana_regeneration"]=8452,
+	["regenerate_%_energy_shield_over_1_second_when_stunned"]=8449,
+	["regenerate_%_life_over_1_second_when_hit_while_affected_by_vitality"]=8450,
+	["regenerate_%_life_over_1_second_when_hit_while_not_unhinged"]=8456,
+	["regenerate_%_life_over_1_second_when_stunned"]=8451,
+	["regenerate_%_maximum_energy_shield_over_2_seconds_on_consuming_corpse"]=8457,
+	["regenerate_%_maximum_mana_over_2_seconds_on_consuming_corpse"]=8458,
+	["regenerate_1_rage_per_x_life_regeneration"]=8452,
+	["regenerate_1_rage_per_x_mana_regeneration"]=8453,
 	["regenerate_X_life_over_1_second_on_cast"]=2510,
-	["regenerate_energy_shield_equal_to_%_evasion_rating_over_1_second_every_4_seconds"]=8453,
-	["regenerate_energy_shield_instead_of_life"]=8454,
-	["regenerate_x_mana_per_minute_while_you_have_arcane_surge"]=8458,
+	["regenerate_energy_shield_equal_to_%_evasion_rating_over_1_second_every_4_seconds"]=8454,
+	["regenerate_energy_shield_instead_of_life"]=8455,
+	["regenerate_x_mana_per_minute_while_you_have_arcane_surge"]=8459,
 	["rejuvenation_totem_%_life_regeneration_added_as_mana_regeneration"]=3623,
 	["rejuvenation_totem_aura_effect_+%"]=3624,
-	["reload_speed_+%"]=8459,
-	["remove_%_of_mana_on_hit"]=8470,
-	["remove_ailments_and_burning_on_gaining_adrenaline"]=8460,
-	["remove_all_damaging_ailments_on_warcry"]=8461,
+	["reload_speed_+%"]=8460,
+	["remove_%_of_mana_on_hit"]=8471,
+	["remove_ailments_and_burning_on_gaining_adrenaline"]=8461,
+	["remove_all_damaging_ailments_on_warcry"]=8462,
 	["remove_bleed_on_flask_use"]=3033,
-	["remove_bleed_on_life_flask_use"]=8462,
-	["remove_bleeding_on_warcry"]=8463,
-	["remove_chill_and_freeze_on_flask_use"]=8464,
+	["remove_bleed_on_life_flask_use"]=8463,
+	["remove_bleeding_on_warcry"]=8464,
+	["remove_chill_and_freeze_on_flask_use"]=8465,
 	["remove_corrupted_blood_when_you_use_a_flask"]=3034,
-	["remove_curse_on_mana_flask_use"]=8465,
-	["remove_damaging_ailments_on_swapping_stance"]=8466,
-	["remove_elemental_ailments_on_curse_cast_%"]=8467,
-	["remove_ignite_and_burning_on_flask_use"]=8468,
-	["remove_maim_and_hinder_on_flask_use"]=8469,
-	["remove_random_ailment_on_flask_use_if_all_equipped_items_are_elder"]=8471,
-	["remove_random_ailment_when_you_warcry"]=8472,
-	["remove_random_charge_on_hit_%"]=8473,
-	["remove_random_elemental_ailment_on_mana_flask_use"]=8474,
-	["remove_random_non_elemental_ailment_on_life_flask_use"]=8475,
-	["remove_shock_on_flask_use"]=8476,
-	["remove_x_curses_after_channelling_for_2_seconds"]=8477,
-	["replica_unique_hyrris_truth_hatred_mana_reservation_+%_final"]=8478,
-	["reservation_efficiency_+%_with_unique_abyss_jewel_socketed"]=8479,
+	["remove_curse_on_mana_flask_use"]=8466,
+	["remove_damaging_ailments_on_swapping_stance"]=8467,
+	["remove_elemental_ailments_on_curse_cast_%"]=8468,
+	["remove_ignite_and_burning_on_flask_use"]=8469,
+	["remove_maim_and_hinder_on_flask_use"]=8470,
+	["remove_random_ailment_on_flask_use_if_all_equipped_items_are_elder"]=8472,
+	["remove_random_ailment_when_you_warcry"]=8473,
+	["remove_random_charge_on_hit_%"]=8474,
+	["remove_random_elemental_ailment_on_mana_flask_use"]=8475,
+	["remove_random_non_elemental_ailment_on_life_flask_use"]=8476,
+	["remove_shock_on_flask_use"]=8477,
+	["remove_x_curses_after_channelling_for_2_seconds"]=8478,
+	["replica_unique_hyrris_truth_hatred_mana_reservation_+%_final"]=8479,
+	["reservation_efficiency_+%_with_unique_abyss_jewel_socketed"]=8480,
 	["reservation_efficiency_-2%_per_1"]=1918,
-	["reserve_life_instead_of_loss_from_damage_for_x_ms"]=8480,
-	["resist_all_%"]=8481,
-	["resist_all_%_for_enemies_you_inflict_spiders_web_upon"]=8482,
+	["reserve_life_instead_of_loss_from_damage_for_x_ms"]=8481,
+	["resist_all_%"]=8482,
+	["resist_all_%_for_enemies_you_inflict_spiders_web_upon"]=8483,
 	["resist_all_elements_%_per_10_levels"]=2444,
 	["resist_all_elements_%_per_endurance_charge"]=1437,
 	["resist_all_elements_%_with_200_or_more_strength"]=3994,
 	["resist_all_elements_+%_while_holding_shield"]=1438,
-	["resolute_technique"]=9282,
-	["restore_energy_shield_and_mana_when_you_focus_%"]=8483,
+	["resolute_technique"]=9283,
+	["restore_energy_shield_and_mana_when_you_focus_%"]=8484,
 	["restore_life_and_mana_on_warcry_%"]=2856,
 	["restore_life_on_warcry_%"]=2857,
-	["returning_projectiles_always_pierce"]=8484,
-	["revive_golems_if_killed_by_enemies_ms"]=8485,
-	["righteous_fire_and_fire_beam_regenerate_x_mana_per_second_while_enemies_are_within"]=8486,
+	["returning_projectiles_always_pierce"]=8485,
+	["revive_golems_if_killed_by_enemies_ms"]=8486,
+	["righteous_fire_and_fire_beam_regenerate_x_mana_per_second_while_enemies_are_within"]=8487,
 	["righteous_fire_damage_+%"]=3309,
 	["righteous_fire_radius_+%"]=3450,
 	["righteous_fire_spell_damage_+%"]=3737,
 	["riposte_cooldown_speed_+%"]=3513,
 	["riposte_damage_+%"]=3356,
-	["rogue_trader_map_rogue_exile_maximum_life_+%_final"]=8487,
-	["rune_blast_teleports_to_detonated_rune_with_100_ms_cooldown"]=8488,
-	["rune_blast_teleports_to_detonated_rune_with_150_ms_cooldown"]=8489,
-	["sabotuer_mines_apply_damage_+%_to_nearby_enemies_up_to_-10%"]=8490,
-	["sabotuer_mines_apply_damage_taken_+%_to_nearby_enemies_up_to_10%"]=8491,
-	["sacrifice_%_life_on_spell_skill"]=8492,
-	["sacrifice_%_maximum_life_to_gain_as_es_on_spell_cast"]=8493,
-	["sanctify_area_of_effect_+%_when_targeting_consecrated_ground"]=8494,
-	["sanctify_consecrated_ground_enemy_damage_taken_+%"]=8495,
-	["sanctify_damage_+%"]=8496,
-	["sap_on_critical_strike_with_lightning_skills"]=8497,
+	["rogue_trader_map_rogue_exile_maximum_life_+%_final"]=8488,
+	["rune_blast_teleports_to_detonated_rune_with_100_ms_cooldown"]=8489,
+	["rune_blast_teleports_to_detonated_rune_with_150_ms_cooldown"]=8490,
+	["sabotuer_mines_apply_damage_+%_to_nearby_enemies_up_to_-10%"]=8491,
+	["sabotuer_mines_apply_damage_taken_+%_to_nearby_enemies_up_to_10%"]=8492,
+	["sacrifice_%_life_on_spell_skill"]=8493,
+	["sacrifice_%_maximum_life_to_gain_as_es_on_spell_cast"]=8494,
+	["sanctify_area_of_effect_+%_when_targeting_consecrated_ground"]=8495,
+	["sanctify_consecrated_ground_enemy_damage_taken_+%"]=8496,
+	["sanctify_damage_+%"]=8497,
+	["sap_on_critical_strike_with_lightning_skills"]=8498,
 	["scion_helmet_skill_maximum_totems_+"]=472,
-	["scorch_effect_+%"]=8498,
-	["scorch_enemies_in_close_range_on_block"]=8499,
-	["scorched_enemies_explode_on_death_for_8%_life_as_fire_degen_chance"]=8500,
-	["scourge_arrow_damage_+%"]=8501,
+	["scorch_effect_+%"]=8499,
+	["scorch_enemies_in_close_range_on_block"]=8500,
+	["scorched_enemies_explode_on_death_for_8%_life_as_fire_degen_chance"]=8501,
+	["scourge_arrow_damage_+%"]=8502,
 	["searing_bond_damage_+%"]=3304,
 	["searing_bond_totem_placement_speed_+%"]=3602,
 	["searing_totem_elemental_resistance_+%"]=3743,
@@ -211365,92 +211391,92 @@ return {
 	["secondary_minimum_base_fire_damage"]=1262,
 	["secondary_minimum_base_lightning_damage"]=1264,
 	["secondary_minimum_base_physical_damage"]=1261,
-	["secondary_skill_effect_duration_+%"]=8502,
-	["seismic_cry_exerted_attack_damage_+%"]=8503,
-	["seismic_cry_minimum_power"]=8504,
+	["secondary_skill_effect_duration_+%"]=8503,
+	["seismic_cry_exerted_attack_damage_+%"]=8504,
+	["seismic_cry_minimum_power"]=8505,
 	["self_bleed_duration_+%"]=1009,
-	["self_chaos_damage_taken_per_minute_while_affected_by_flask"]=8505,
+	["self_chaos_damage_taken_per_minute_while_affected_by_flask"]=8506,
 	["self_chill_duration_-%"]=1581,
-	["self_cold_damage_on_reaching_maximum_power_charges"]=8506,
-	["self_critical_strike_multiplier_+%_while_ignited"]=8507,
+	["self_cold_damage_on_reaching_maximum_power_charges"]=8507,
+	["self_critical_strike_multiplier_+%_while_ignited"]=8508,
 	["self_critical_strike_multiplier_-%_per_endurance_charge"]=1364,
 	["self_curse_duration_+%"]=1871,
-	["self_curse_duration_+%_per_10_devotion"]=8508,
+	["self_curse_duration_+%_per_10_devotion"]=8509,
 	["self_cursed_with_level_x_vulnerability"]=2782,
 	["self_elemental_status_duration_-%"]=1580,
-	["self_elemental_status_duration_-%_per_10_devotion"]=8509,
+	["self_elemental_status_duration_-%_per_10_devotion"]=8510,
 	["self_freeze_duration_-%"]=1582,
 	["self_ignite_duration_-%"]=1583,
 	["self_offering_effect_+%"]=1096,
-	["self_physical_damage_on_movement_skill_use"]=8510,
+	["self_physical_damage_on_movement_skill_use"]=8511,
 	["self_physical_damage_on_skill_use_%_mana_cost"]=1903,
-	["self_physical_damage_on_skill_use_%_max_life_per_warcry_exerting_action"]=8511,
+	["self_physical_damage_on_skill_use_%_max_life_per_warcry_exerting_action"]=8512,
 	["self_poison_duration_+%"]=1014,
 	["self_take_no_extra_damage_from_critical_strikes"]=3902,
-	["self_take_no_extra_damage_from_critical_strikes_if_have_been_crit_recently"]=8512,
-	["self_take_no_extra_damage_from_critical_strikes_if_left_ring_is_magic_item"]=8513,
-	["self_take_no_extra_damage_from_critical_strikes_if_only_one_nearby_enemy"]=8514,
-	["self_take_no_extra_damage_from_critical_strikes_if_there_is_at_most_1_rare_or_unique_enemy_nearby"]=8515,
-	["self_take_no_extra_damage_from_critical_strikes_while_affected_by_elusive"]=8516,
-	["sentinel_minion_cooldown_speed_+%"]=8517,
-	["sentinel_of_purity_damage_+%"]=8518,
-	["serpent_strike_maximum_snakes"]=8519,
+	["self_take_no_extra_damage_from_critical_strikes_if_have_been_crit_recently"]=8513,
+	["self_take_no_extra_damage_from_critical_strikes_if_left_ring_is_magic_item"]=8514,
+	["self_take_no_extra_damage_from_critical_strikes_if_only_one_nearby_enemy"]=8515,
+	["self_take_no_extra_damage_from_critical_strikes_if_there_is_at_most_1_rare_or_unique_enemy_nearby"]=8516,
+	["self_take_no_extra_damage_from_critical_strikes_while_affected_by_elusive"]=8517,
+	["sentinel_minion_cooldown_speed_+%"]=8518,
+	["sentinel_of_purity_damage_+%"]=8519,
+	["serpent_strike_maximum_snakes"]=8520,
 	["shapers_seed_unique_aura_life_regeneration_rate_per_minute_%"]=2668,
 	["shapers_seed_unique_aura_mana_regeneration_rate_+%"]=2673,
-	["share_charges_with_allies_in_your_presence"]=8520,
-	["shatter_has_%_chance_to_cover_in_frost"]=8521,
-	["shatter_on_kill_vs_bleeding_enemies"]=8522,
-	["shatter_on_kill_vs_poisoned_enemies"]=8523,
-	["shattering_steel_%_chance_to_not_consume_ammo"]=8527,
-	["shattering_steel_damage_+%"]=8524,
-	["shattering_steel_fortify_on_hit_close_range"]=8525,
-	["shattering_steel_number_of_additional_projectiles"]=8526,
+	["share_charges_with_allies_in_your_presence"]=8521,
+	["shatter_has_%_chance_to_cover_in_frost"]=8522,
+	["shatter_on_kill_vs_bleeding_enemies"]=8523,
+	["shatter_on_kill_vs_poisoned_enemies"]=8524,
+	["shattering_steel_%_chance_to_not_consume_ammo"]=8528,
+	["shattering_steel_damage_+%"]=8525,
+	["shattering_steel_fortify_on_hit_close_range"]=8526,
+	["shattering_steel_number_of_additional_projectiles"]=8527,
 	["shield_armour_+%"]=1697,
 	["shield_attack_speed_+%"]=1290,
 	["shield_block_%"]=1071,
 	["shield_charge_attack_speed_+%"]=3487,
 	["shield_charge_damage_+%"]=3293,
 	["shield_charge_damage_per_target_hit_+%"]=3713,
-	["shield_crush_and_spectral_shield_throw_cannot_add_physical_damage_per_armour_and_evasion_rating"]=8528,
-	["shield_crush_and_spectral_shield_throw_off_hand_maximum_added_lightning_damage_per_15_energy_shield_on_shield"]=8529,
-	["shield_crush_and_spectral_shield_throw_off_hand_minimum_added_lightning_damage_per_15_energy_shield_on_shield"]=8529,
-	["shield_crush_attack_speed_+%"]=8530,
-	["shield_crush_damage_+%"]=8531,
-	["shield_crush_helmet_enchantment_aoe_+%_final"]=8532,
-	["shield_defences_+%_per_10_devotion"]=8533,
+	["shield_crush_and_spectral_shield_throw_cannot_add_physical_damage_per_armour_and_evasion_rating"]=8529,
+	["shield_crush_and_spectral_shield_throw_off_hand_maximum_added_lightning_damage_per_15_energy_shield_on_shield"]=8530,
+	["shield_crush_and_spectral_shield_throw_off_hand_minimum_added_lightning_damage_per_15_energy_shield_on_shield"]=8530,
+	["shield_crush_attack_speed_+%"]=8531,
+	["shield_crush_damage_+%"]=8532,
+	["shield_crush_helmet_enchantment_aoe_+%_final"]=8533,
+	["shield_defences_+%_per_10_devotion"]=8534,
 	["shield_evasion_rating_+%"]=1695,
 	["shield_maximum_energy_shield_+%"]=1678,
 	["shield_physical_damage_reduction_rating_+%"]=1696,
 	["shield_spell_block_%"]=1072,
-	["shock_and_freeze_apply_elemental_damage_taken_+%"]=8534,
-	["shock_attackers_for_4_seconds_on_block_%_chance"]=8535,
+	["shock_and_freeze_apply_elemental_damage_taken_+%"]=8535,
+	["shock_attackers_for_4_seconds_on_block_%_chance"]=8536,
 	["shock_chance_+%"]=1006,
-	["shock_chance_+%_vs_electrocuted_enemies"]=8536,
+	["shock_chance_+%_vs_electrocuted_enemies"]=8537,
 	["shock_duration_+%"]=1571,
-	["shock_effect_+%"]=8538,
-	["shock_effect_+%_with_critical_strikes"]=8539,
-	["shock_effect_against_cursed_enemies_+%"]=8537,
-	["shock_enemies_in_150cm_radius_on_shock_chance_%"]=8540,
+	["shock_effect_+%"]=8539,
+	["shock_effect_+%_with_critical_strikes"]=8540,
+	["shock_effect_against_cursed_enemies_+%"]=8538,
+	["shock_enemies_in_150cm_radius_on_shock_chance_%"]=8541,
 	["shock_enemies_in_range_X_for_2s_on_killing_shocked_enemy"]=2496,
-	["shock_magnitude_calculated_from_damage"]=8541,
-	["shock_maximum_magnitude_+"]=8543,
-	["shock_maximum_magnitude_is_60%"]=8542,
+	["shock_magnitude_calculated_from_damage"]=8542,
+	["shock_maximum_magnitude_+"]=8544,
+	["shock_maximum_magnitude_is_60%"]=8543,
 	["shock_minimum_damage_taken_increase_%"]=4063,
-	["shock_nearby_enemies_for_x_ms_when_you_focus"]=8545,
-	["shock_nova_and_storm_call_all_damage_can_ignite"]=8546,
+	["shock_nearby_enemies_for_x_ms_when_you_focus"]=8546,
+	["shock_nova_and_storm_call_all_damage_can_ignite"]=8547,
 	["shock_nova_damage_+%"]=3319,
 	["shock_nova_radius_+%"]=3463,
-	["shock_nova_ring_chance_to_shock_+%"]=8547,
+	["shock_nova_ring_chance_to_shock_+%"]=8548,
 	["shock_nova_ring_damage_+%"]=3617,
-	["shock_nova_ring_shocks_as_if_dealing_damage_+%_final"]=8548,
+	["shock_nova_ring_shocks_as_if_dealing_damage_+%_final"]=8549,
 	["shock_prevention_ms_when_shocked"]=2573,
-	["shock_self_for_x_ms_when_you_focus"]=8544,
-	["shocked_chilled_effect_on_self_+%"]=8549,
-	["shocked_effect_on_self_+%"]=8550,
-	["shocked_enemies_explode_for_%_life_as_lightning_damage"]=8551,
+	["shock_self_for_x_ms_when_you_focus"]=8545,
+	["shocked_chilled_effect_on_self_+%"]=8550,
+	["shocked_effect_on_self_+%"]=8551,
+	["shocked_enemies_explode_for_%_life_as_lightning_damage"]=8552,
 	["shocked_for_4_seconds_on_reaching_maximum_power_charges"]=3242,
-	["shocked_ground_base_magnitude_override"]=8552,
-	["shocked_ground_on_death_%"]=8553,
+	["shocked_ground_base_magnitude_override"]=8553,
+	["shocked_ground_on_death_%"]=8554,
 	["shocked_ground_when_hit_%"]=2273,
 	["shocks_reflected_to_self"]=2456,
 	["shockwave_slam_attack_speed_+%"]=3493,
@@ -211461,221 +211487,221 @@ return {
 	["shockwave_totem_damage_+%"]=3320,
 	["shockwave_totem_radius_+%"]=3478,
 	["should_use_alternate_fortify"]=1971,
-	["shrapnel_ballista_num_additional_arrows"]=8554,
-	["shrapnel_ballista_num_pierce"]=8555,
-	["shrapnel_ballista_projectile_speed_+%"]=8556,
-	["shrapnel_ballista_totems_from_this_skill_grant_shrapnel_ballista_attack_speed_-%"]=8557,
+	["shrapnel_ballista_num_additional_arrows"]=8555,
+	["shrapnel_ballista_num_pierce"]=8556,
+	["shrapnel_ballista_projectile_speed_+%"]=8557,
+	["shrapnel_ballista_totems_from_this_skill_grant_shrapnel_ballista_attack_speed_-%"]=8558,
 	["shrapnel_shot_damage_+%"]=3360,
 	["shrapnel_shot_physical_damage_%_to_gain_as_lightning_damage"]=3652,
 	["shrapnel_shot_radius_+%"]=3465,
-	["shrapnel_trap_area_of_effect_+%"]=8559,
-	["shrapnel_trap_damage_+%"]=8560,
-	["shrapnel_trap_number_of_additional_secondary_explosions"]=8561,
+	["shrapnel_trap_area_of_effect_+%"]=8560,
+	["shrapnel_trap_damage_+%"]=8561,
+	["shrapnel_trap_number_of_additional_secondary_explosions"]=8562,
 	["shrine_buff_effect_on_self_+%"]=2494,
 	["shrine_effect_duration_+%"]=2495,
 	["siege_and_shrapnel_ballista_attack_speed_+%_per_maximum_totem"]=3931,
 	["siege_ballista_attack_speed_+%"]=3492,
 	["siege_ballista_damage_+%"]=3373,
 	["siege_ballista_totem_placement_speed_+%"]=3629,
-	["siege_ballista_totems_from_this_skill_grant_siege_ballista_attack_speed_-%"]=8562,
-	["sigil_attached_target_damage_+%"]=8563,
-	["sigil_attached_target_damage_taken_+%"]=8564,
-	["sigil_critical_strike_chance_+%"]=8565,
-	["sigil_critical_strike_multiplier_+"]=8566,
-	["sigil_damage_+%"]=8567,
-	["sigil_damage_+%_per_10_devotion"]=8568,
-	["sigil_duration_+%"]=8569,
-	["sigil_recall_cooldown_speed_+%"]=8570,
-	["sigil_recall_cooldown_speed_+%_per_brand_up_to_40%"]=8571,
-	["sigil_repeat_frequency_+%"]=8572,
-	["sigil_repeat_frequency_+%_if_havent_used_a_brand_skill_recently"]=8573,
-	["sigil_target_search_range_+%"]=8574,
+	["siege_ballista_totems_from_this_skill_grant_siege_ballista_attack_speed_-%"]=8563,
+	["sigil_attached_target_damage_+%"]=8564,
+	["sigil_attached_target_damage_taken_+%"]=8565,
+	["sigil_critical_strike_chance_+%"]=8566,
+	["sigil_critical_strike_multiplier_+"]=8567,
+	["sigil_damage_+%"]=8568,
+	["sigil_damage_+%_per_10_devotion"]=8569,
+	["sigil_duration_+%"]=8570,
+	["sigil_recall_cooldown_speed_+%"]=8571,
+	["sigil_recall_cooldown_speed_+%_per_brand_up_to_40%"]=8572,
+	["sigil_repeat_frequency_+%"]=8573,
+	["sigil_repeat_frequency_+%_if_havent_used_a_brand_skill_recently"]=8574,
+	["sigil_target_search_range_+%"]=8575,
 	["silver_flask_display_onslaught"]=3236,
-	["silver_footprints_from_item"]=9309,
+	["silver_footprints_from_item"]=9310,
 	["siphon_duration_+%"]=3551,
-	["skeletal_chains_area_of_effect_+%"]=8575,
-	["skeletal_chains_cast_speed_+%"]=8576,
+	["skeletal_chains_area_of_effect_+%"]=8576,
+	["skeletal_chains_cast_speed_+%"]=8577,
 	["skeletal_chains_damage_+%"]=3369,
-	["skeleton_attack_speed_+%"]=8577,
-	["skeleton_cast_speed_+%"]=8578,
+	["skeleton_attack_speed_+%"]=8578,
+	["skeleton_cast_speed_+%"]=8579,
 	["skeleton_duration_+%"]=1494,
-	["skeleton_minion_reservation_+%"]=8579,
-	["skeleton_movement_speed_+%"]=8580,
-	["skeletons_and_holy_relics_+%_effect_of_non_damaging_ailments"]=8582,
-	["skeletons_and_holy_relics_convert_%_physical_damage_to_a_random_element"]=8581,
-	["skeletons_are_permanent_minions"]=8583,
+	["skeleton_minion_reservation_+%"]=8580,
+	["skeleton_movement_speed_+%"]=8581,
+	["skeletons_and_holy_relics_+%_effect_of_non_damaging_ailments"]=8583,
+	["skeletons_and_holy_relics_convert_%_physical_damage_to_a_random_element"]=8582,
+	["skeletons_are_permanent_minions"]=8584,
 	["skeletons_damage_+%"]=3294,
 	["skill_area_of_effect_+%_if_enemy_killed_recently"]=3840,
-	["skill_area_of_effect_+%_in_sand_stance"]=8745,
+	["skill_area_of_effect_+%_in_sand_stance"]=8746,
 	["skill_area_of_effect_+%_per_active_mine"]=3109,
 	["skill_area_of_effect_+%_per_power_charge"]=1828,
 	["skill_area_of_effect_+%_per_power_charge_up_to_50%"]=1829,
 	["skill_area_of_effect_+%_while_no_frenzy_charges"]=1751,
 	["skill_area_of_effect_when_unarmed_+%"]=2719,
 	["skill_cooldown_-%"]=1605,
-	["skill_cost_base_life_equal_to_base_mana"]=8584,
+	["skill_cost_base_life_equal_to_base_mana"]=8585,
 	["skill_effect_duration_+%"]=1603,
 	["skill_effect_duration_+%_if_killed_maimed_enemy_recently"]=3842,
 	["skill_effect_duration_+%_per_10_strength"]=1718,
-	["skill_effect_duration_+%_while_affected_by_malevolence"]=8585,
-	["skill_effect_duration_+%_with_bow_skills"]=8586,
-	["skill_effect_duration_+%_with_non_curse_aura_skills"]=8587,
+	["skill_effect_duration_+%_while_affected_by_malevolence"]=8586,
+	["skill_effect_duration_+%_with_bow_skills"]=8587,
+	["skill_effect_duration_+%_with_non_curse_aura_skills"]=8588,
 	["skill_effect_duration_per_100_int"]=2751,
 	["skill_internal_monster_responsiveness_+%"]=1633,
 	["skill_life_cost_+"]=1598,
-	["skill_life_cost_+_with_channelling_skills"]=8588,
-	["skill_life_cost_+_with_non_channelling_skills"]=8589,
+	["skill_life_cost_+_with_channelling_skills"]=8589,
+	["skill_life_cost_+_with_non_channelling_skills"]=8590,
 	["skill_mana_cost_+"]=1599,
 	["skill_mana_cost_+_for_each_equipped_corrupted_item"]=3969,
-	["skill_mana_cost_+_while_affected_by_clarity"]=8590,
-	["skill_mana_cost_+_with_channelling_skills"]=8591,
-	["skill_mana_cost_+_with_non_channelling_skills"]=8593,
-	["skill_mana_cost_+_with_non_channelling_skills_while_affected_by_clarity"]=8595,
+	["skill_mana_cost_+_while_affected_by_clarity"]=8591,
+	["skill_mana_cost_+_with_channelling_skills"]=8592,
+	["skill_mana_cost_+_with_non_channelling_skills"]=8594,
+	["skill_mana_cost_+_with_non_channelling_skills_while_affected_by_clarity"]=8596,
 	["skill_range_+%"]=1634,
 	["skill_repeat_count"]=1601,
 	["skill_speed_+%"]=853,
 	["skill_visual_scale_+%"]=19,
-	["skills_cost_no_mana_while_focused"]=8596,
-	["skills_fire_x_additional_projectiles_for_4_seconds_after_consuming_12_steel_ammo"]=8597,
-	["skills_gain_intensity_every_x_milliseconds_if_gained_intensity_recently"]=8598,
-	["skills_lose_intensity_every_x_milliseconds_if_gained_intensity_recently"]=8599,
-	["skills_supported_by_nightblade_have_elusive_effect_+%"]=8600,
-	["skitterbots_mana_reservation_efficiency_+%"]=8602,
-	["skitterbots_mana_reservation_efficiency_-2%_per_1"]=8601,
-	["slam_aftershock_chance_%"]=8603,
+	["skills_cost_no_mana_while_focused"]=8597,
+	["skills_fire_x_additional_projectiles_for_4_seconds_after_consuming_12_steel_ammo"]=8598,
+	["skills_gain_intensity_every_x_milliseconds_if_gained_intensity_recently"]=8599,
+	["skills_lose_intensity_every_x_milliseconds_if_gained_intensity_recently"]=8600,
+	["skills_supported_by_nightblade_have_elusive_effect_+%"]=8601,
+	["skitterbots_mana_reservation_efficiency_+%"]=8603,
+	["skitterbots_mana_reservation_efficiency_-2%_per_1"]=8602,
+	["slam_aftershock_chance_%"]=8604,
 	["slam_ancestor_totem_damage_+%"]=3764,
 	["slam_ancestor_totem_grant_owner_melee_damage_+%"]=3432,
 	["slam_ancestor_totem_radius_+%"]=3767,
-	["slam_skill_area_of_effect_+%"]=8604,
-	["slams_always_ancestral_slam"]=8605,
+	["slam_skill_area_of_effect_+%"]=8605,
+	["slams_always_ancestral_slam"]=8606,
 	["slash_ancestor_totem_damage_+%"]=3765,
 	["slash_ancestor_totem_elemental_resistance_%"]=2470,
 	["slash_ancestor_totem_grant_owner_physical_damage_added_as_fire_+%"]=3431,
 	["slash_ancestor_totem_radius_+%"]=3766,
-	["slayer_area_of_effect_+%_per_enemy_killed_recently_up_to_50%"]=8606,
+	["slayer_area_of_effect_+%_per_enemy_killed_recently_up_to_50%"]=8607,
 	["slayer_ascendancy_melee_splash_damage_+%_final_for_splash"]=1101,
-	["slayer_critical_strike_multiplier_+_per_nearby_enemy_up_to_100"]=8607,
-	["slayer_damage_+%_final_against_unique_enemies"]=8608,
-	["slayer_damage_+%_final_from_distance"]=8609,
-	["slither_elusive_effect_+%"]=8610,
-	["slither_wither_stacks"]=8611,
-	["slows_have_no_potency_on_you"]=8612,
-	["small_passives_effect_+%"]=8613,
-	["smite_aura_effect_+%"]=8614,
-	["smite_chance_for_lighting_to_strike_extra_target_%"]=8615,
-	["smite_damage_+%"]=8616,
-	["smite_static_strike_killing_blow_consumes_corpse_restore_%_life"]=8617,
-	["smoke_cloud_while_stationary_radius"]=8618,
+	["slayer_critical_strike_multiplier_+_per_nearby_enemy_up_to_100"]=8608,
+	["slayer_damage_+%_final_against_unique_enemies"]=8609,
+	["slayer_damage_+%_final_from_distance"]=8610,
+	["slither_elusive_effect_+%"]=8611,
+	["slither_wither_stacks"]=8612,
+	["slows_have_no_potency_on_you"]=8613,
+	["small_passives_effect_+%"]=8614,
+	["smite_aura_effect_+%"]=8615,
+	["smite_chance_for_lighting_to_strike_extra_target_%"]=8616,
+	["smite_damage_+%"]=8617,
+	["smite_static_strike_killing_blow_consumes_corpse_restore_%_life"]=8618,
+	["smoke_cloud_while_stationary_radius"]=8619,
 	["smoke_mine_base_movement_velocity_+%"]=3733,
 	["smoke_mine_duration_+%"]=3532,
-	["snapping_adder_%_chance_to_retain_projectile_on_release"]=8620,
-	["snapping_adder_damage_+%"]=8619,
-	["snapping_adder_withered_on_hit_for_2_seconds_%_chance"]=8621,
-	["snipe_attack_speed_+%"]=8622,
-	["sorcery_ward_+%_strength"]=8623,
-	["soul_eater_maximum_stacks"]=8624,
+	["snapping_adder_%_chance_to_retain_projectile_on_release"]=8621,
+	["snapping_adder_damage_+%"]=8620,
+	["snapping_adder_withered_on_hit_for_2_seconds_%_chance"]=8622,
+	["snipe_attack_speed_+%"]=8623,
+	["sorcery_ward_+%_strength"]=8624,
+	["soul_eater_maximum_stacks"]=8625,
 	["soul_eater_on_rare_kill_ms"]=3072,
-	["soul_link_duration_+%"]=8625,
-	["soulfeast_number_of_secondary_projectiles"]=8626,
-	["soulrend_applies_hinder_movement_speed_+%"]=8627,
-	["soulrend_damage_+%"]=8628,
-	["soulrend_number_of_additional_projectiles"]=8629,
+	["soul_link_duration_+%"]=8626,
+	["soulfeast_number_of_secondary_projectiles"]=8627,
+	["soulrend_applies_hinder_movement_speed_+%"]=8628,
+	["soulrend_damage_+%"]=8629,
+	["soulrend_number_of_additional_projectiles"]=8630,
 	["spark_damage_+%"]=3280,
 	["spark_num_of_additional_projectiles"]=3575,
-	["spark_number_of_additional_projectiles"]=8630,
+	["spark_number_of_additional_projectiles"]=8631,
 	["spark_projectile_speed_+%"]=3521,
-	["spark_projectiles_nova"]=8631,
-	["spark_skill_effect_duration_+%"]=8632,
-	["spark_totems_from_this_skill_grant_totemified_lightning_tendrils_larger_pulse_interval_-X_to_parent"]=8633,
-	["spawn_defender_with_totem"]=8634,
+	["spark_projectiles_nova"]=8632,
+	["spark_skill_effect_duration_+%"]=8633,
+	["spark_totems_from_this_skill_grant_totemified_lightning_tendrils_larger_pulse_interval_-X_to_parent"]=8634,
+	["spawn_defender_with_totem"]=8635,
 	["spear_accuracy_rating"]=1715,
 	["spear_accuracy_rating_+%"]=1306,
 	["spear_attack_speed_+%"]=1289,
 	["spear_critical_strike_chance_+%"]=1330,
 	["spear_critical_strike_multiplier_+"]=1353,
 	["spear_damage_+%"]=1230,
-	["spectral_helix_damage_+%"]=8635,
-	["spectral_helix_projectile_speed_+%"]=8636,
-	["spectral_helix_rotations_%"]=8637,
-	["spectral_shield_throw_additional_chains"]=8638,
-	["spectral_shield_throw_damage_+%"]=8639,
-	["spectral_shield_throw_num_of_additional_projectiles"]=8640,
-	["spectral_shield_throw_projectile_speed_+%"]=8641,
-	["spectral_shield_throw_secondary_projectiles_pierce"]=8642,
-	["spectral_shield_throw_shard_projectiles_+%_final"]=8643,
-	["spectral_spiral_weapon_base_number_of_bounces"]=8644,
-	["spectral_throw_an_spectral_helix_active_skill_projectile_speed_+%_variation_final"]=8645,
+	["spectral_helix_damage_+%"]=8636,
+	["spectral_helix_projectile_speed_+%"]=8637,
+	["spectral_helix_rotations_%"]=8638,
+	["spectral_shield_throw_additional_chains"]=8639,
+	["spectral_shield_throw_damage_+%"]=8640,
+	["spectral_shield_throw_num_of_additional_projectiles"]=8641,
+	["spectral_shield_throw_projectile_speed_+%"]=8642,
+	["spectral_shield_throw_secondary_projectiles_pierce"]=8643,
+	["spectral_shield_throw_shard_projectiles_+%_final"]=8644,
+	["spectral_spiral_weapon_base_number_of_bounces"]=8645,
+	["spectral_throw_an_spectral_helix_active_skill_projectile_speed_+%_variation_final"]=8646,
 	["spectral_throw_damage_+%"]=3281,
 	["spectral_throw_damage_for_each_enemy_hit_with_spectral_weapon_+%"]=2886,
-	["spectral_throw_gain_vaal_soul_for_vaal_spectral_throw_on_hit_%"]=8646,
+	["spectral_throw_gain_vaal_soul_for_vaal_spectral_throw_on_hit_%"]=8647,
 	["spectral_throw_projectile_deceleration_+%"]=3592,
 	["spectral_throw_projectile_speed_+%"]=3522,
 	["spectre_attack_and_cast_speed_+%"]=3497,
 	["spectre_damage_+%"]=3099,
 	["spectre_elemental_resistances_%"]=3609,
-	["spectre_maximum_life_+"]=8647,
-	["spectre_zombie_skeleton_critical_strike_multiplier_+"]=8649,
-	["spectres_and_zombies_gain_adrenaline_for_X_seconds_when_raised"]=8650,
-	["spectres_critical_strike_chance_+%"]=8651,
-	["spectres_gain_soul_eater_for_20_seconds_on_kill_%_chance"]=8652,
-	["spectres_have_base_duration_ms"]=8653,
-	["spell_additional_critical_strike_chance_permyriad"]=8654,
-	["spell_and_attack_maximum_added_chaos_damage_during_flask_effect"]=8655,
+	["spectre_maximum_life_+"]=8648,
+	["spectre_zombie_skeleton_critical_strike_multiplier_+"]=8650,
+	["spectres_and_zombies_gain_adrenaline_for_X_seconds_when_raised"]=8651,
+	["spectres_critical_strike_chance_+%"]=8652,
+	["spectres_gain_soul_eater_for_20_seconds_on_kill_%_chance"]=8653,
+	["spectres_have_base_duration_ms"]=8654,
+	["spell_additional_critical_strike_chance_permyriad"]=8655,
+	["spell_and_attack_maximum_added_chaos_damage_during_flask_effect"]=8656,
 	["spell_and_attack_maximum_added_cold_damage"]=1242,
 	["spell_and_attack_maximum_added_fire_damage"]=1241,
 	["spell_and_attack_maximum_added_lightning_damage"]=1272,
-	["spell_and_attack_minimum_added_chaos_damage_during_flask_effect"]=8655,
+	["spell_and_attack_minimum_added_chaos_damage_during_flask_effect"]=8656,
 	["spell_and_attack_minimum_added_cold_damage"]=1242,
 	["spell_and_attack_minimum_added_fire_damage"]=1241,
 	["spell_and_attack_minimum_added_lightning_damage"]=1272,
-	["spell_area_damage_+%"]=8656,
-	["spell_area_of_effect_+%"]=8657,
-	["spell_block_%_if_blocked_a_spell_recently"]=8659,
-	["spell_block_%_if_blocked_an_attack_recently"]=8660,
-	["spell_block_%_while_at_max_power_charges"]=8661,
+	["spell_area_damage_+%"]=8657,
+	["spell_area_of_effect_+%"]=8658,
+	["spell_block_%_if_blocked_a_spell_recently"]=8660,
+	["spell_block_%_if_blocked_an_attack_recently"]=8661,
+	["spell_block_%_while_at_max_power_charges"]=8662,
 	["spell_block_%_while_on_low_life"]=1076,
-	["spell_block_chance_%_while_holding_staff_or_shield"]=8658,
+	["spell_block_chance_%_while_holding_staff_or_shield"]=8659,
 	["spell_block_equals_attack_block"]=1085,
 	["spell_block_while_dual_wielding_%"]=1075,
 	["spell_block_with_bow_%"]=1078,
 	["spell_block_with_staff_%"]=1079,
 	["spell_bow_damage_+%"]=1145,
-	["spell_chance_to_deal_double_damage_%"]=8662,
+	["spell_chance_to_deal_double_damage_%"]=8663,
 	["spell_chance_to_shock_frozen_enemies_%"]=2599,
 	["spell_cold_damage_+%"]=1143,
 	["spell_critical_strike_chance_+%"]=951,
-	["spell_critical_strike_chance_+%_if_removed_maximum_number_of_seals"]=8663,
-	["spell_critical_strike_chance_+%_per_100_max_life"]=8664,
-	["spell_critical_strike_chance_+%_per_raised_spectre"]=8665,
+	["spell_critical_strike_chance_+%_if_removed_maximum_number_of_seals"]=8664,
+	["spell_critical_strike_chance_+%_per_100_max_life"]=8665,
+	["spell_critical_strike_chance_+%_per_raised_spectre"]=8666,
 	["spell_critical_strike_chance_+%_while_dual_wielding"]=5272,
 	["spell_critical_strike_chance_+%_while_holding_shield"]=5273,
 	["spell_critical_strike_chance_+%_while_wielding_staff"]=5274,
 	["spell_critical_strike_multiplier_+_while_dual_wielding"]=5298,
 	["spell_critical_strike_multiplier_+_while_holding_shield"]=5299,
 	["spell_critical_strike_multiplier_+_while_wielding_staff"]=5300,
-	["spell_damage_%_suppressed_if_taken_a_savage_hit_recently"]=8666,
-	["spell_damage_%_suppressed_per_hit_suppressed_recently"]=8667,
+	["spell_damage_%_suppressed_if_taken_a_savage_hit_recently"]=8667,
+	["spell_damage_%_suppressed_per_hit_suppressed_recently"]=8668,
 	["spell_damage_%_suppressed_while_on_full_energy_shield"]=1077,
 	["spell_damage_+%"]=878,
-	["spell_damage_+%_during_flask_effect"]=8672,
-	["spell_damage_+%_final_if_you_have_been_stunned_while_casting_recently"]=8668,
+	["spell_damage_+%_during_flask_effect"]=8673,
+	["spell_damage_+%_final_if_you_have_been_stunned_while_casting_recently"]=8669,
 	["spell_damage_+%_for_4_seconds_on_cast"]=3172,
-	["spell_damage_+%_if_have_crit_in_past_8_seconds"]=8673,
-	["spell_damage_+%_if_have_crit_recently"]=8669,
+	["spell_damage_+%_if_have_crit_in_past_8_seconds"]=8674,
+	["spell_damage_+%_if_have_crit_recently"]=8670,
 	["spell_damage_+%_if_other_ring_is_elder_item"]=3964,
-	["spell_damage_+%_if_you_have_blocked_recently"]=8674,
-	["spell_damage_+%_per_100_max_life"]=8675,
-	["spell_damage_+%_per_100_maximum_mana_up_to_60%"]=8676,
+	["spell_damage_+%_if_you_have_blocked_recently"]=8675,
+	["spell_damage_+%_per_100_max_life"]=8676,
+	["spell_damage_+%_per_100_maximum_mana_up_to_60%"]=8677,
 	["spell_damage_+%_per_10_int"]=2421,
-	["spell_damage_+%_per_10_spirit"]=8677,
-	["spell_damage_+%_per_10_strength"]=8678,
-	["spell_damage_+%_per_16_dex"]=8679,
-	["spell_damage_+%_per_16_int"]=8680,
-	["spell_damage_+%_per_16_strength"]=8681,
+	["spell_damage_+%_per_10_spirit"]=8678,
+	["spell_damage_+%_per_10_strength"]=8679,
+	["spell_damage_+%_per_16_dex"]=8680,
+	["spell_damage_+%_per_16_int"]=8681,
+	["spell_damage_+%_per_16_strength"]=8682,
 	["spell_damage_+%_per_200_mana_spent_recently"]=3975,
 	["spell_damage_+%_per_5%_block_chance"]=2420,
-	["spell_damage_+%_per_5%_spell_block_chance"]=8682,
-	["spell_damage_+%_per_500_maximum_mana"]=8670,
+	["spell_damage_+%_per_5%_spell_block_chance"]=8683,
+	["spell_damage_+%_per_500_maximum_mana"]=8671,
 	["spell_damage_+%_per_level"]=2634,
 	["spell_damage_+%_per_power_charge"]=1839,
 	["spell_damage_+%_while_dual_wielding"]=1147,
@@ -211683,17 +211709,17 @@ return {
 	["spell_damage_+%_while_holding_shield"]=1146,
 	["spell_damage_+%_while_no_mana_reserved"]=2745,
 	["spell_damage_+%_while_not_low_mana"]=2746,
-	["spell_damage_+%_while_shocked"]=8683,
-	["spell_damage_+%_while_wielding_melee_weapon"]=8671,
-	["spell_damage_+%_while_you_have_arcane_surge"]=8684,
+	["spell_damage_+%_while_shocked"]=8684,
+	["spell_damage_+%_while_wielding_melee_weapon"]=8672,
+	["spell_damage_+%_while_you_have_arcane_surge"]=8685,
 	["spell_damage_modifiers_apply_to_attack_damage"]=2371,
 	["spell_damage_modifiers_apply_to_skill_dot"]=2377,
 	["spell_damage_taken_+%_from_blinded_enemies"]=2877,
 	["spell_damage_taken_+%_when_on_low_mana"]=2168,
 	["spell_elemental_damage_+%"]=1762,
 	["spell_fire_damage_+%"]=1142,
-	["spell_hits_against_you_inflict_poison_%"]=8685,
-	["spell_impale_on_crit_%_chance"]=8686,
+	["spell_hits_against_you_inflict_poison_%"]=8686,
+	["spell_impale_on_crit_%_chance"]=8687,
 	["spell_maximum_added_chaos_damage"]=1270,
 	["spell_maximum_added_chaos_damage_while_dual_wielding"]=1805,
 	["spell_maximum_added_chaos_damage_while_holding_a_shield"]=1806,
@@ -211719,11 +211745,11 @@ return {
 	["spell_maximum_base_chaos_damage"]=1260,
 	["spell_maximum_base_cold_damage"]=1258,
 	["spell_maximum_base_cold_damage_+_per_10_intelligence"]=1271,
-	["spell_maximum_base_cold_damage_as_%_of_intelligence"]=8687,
+	["spell_maximum_base_cold_damage_as_%_of_intelligence"]=8688,
 	["spell_maximum_base_fire_damage"]=1257,
-	["spell_maximum_base_fire_damage_as_%_of_intelligence"]=8688,
+	["spell_maximum_base_fire_damage_as_%_of_intelligence"]=8689,
 	["spell_maximum_base_lightning_damage"]=1259,
-	["spell_maximum_base_lightning_damage_as_%_of_intelligence"]=8689,
+	["spell_maximum_base_lightning_damage_as_%_of_intelligence"]=8690,
 	["spell_maximum_base_physical_damage"]=1256,
 	["spell_minimum_added_chaos_damage"]=1270,
 	["spell_minimum_added_chaos_damage_while_dual_wielding"]=1805,
@@ -211750,66 +211776,66 @@ return {
 	["spell_minimum_base_chaos_damage"]=1260,
 	["spell_minimum_base_cold_damage"]=1258,
 	["spell_minimum_base_cold_damage_+_per_10_intelligence"]=1271,
-	["spell_minimum_base_cold_damage_as_%_of_intelligence"]=8687,
+	["spell_minimum_base_cold_damage_as_%_of_intelligence"]=8688,
 	["spell_minimum_base_fire_damage"]=1257,
-	["spell_minimum_base_fire_damage_as_%_of_intelligence"]=8688,
+	["spell_minimum_base_fire_damage_as_%_of_intelligence"]=8689,
 	["spell_minimum_base_lightning_damage"]=1259,
-	["spell_minimum_base_lightning_damage_as_%_of_intelligence"]=8689,
+	["spell_minimum_base_lightning_damage_as_%_of_intelligence"]=8690,
 	["spell_minimum_base_physical_damage"]=1256,
 	["spell_physical_damage_+%"]=885,
-	["spell_projectile_skills_fire_X_additional_projectiles_in_a_circle"]=8690,
+	["spell_projectile_skills_fire_X_additional_projectiles_in_a_circle"]=8691,
 	["spell_repeat_count"]=1602,
 	["spell_skill_gem_level_+"]=940,
-	["spell_skill_projectile_speed_+%"]=8691,
-	["spell_skills_always_crit_on_final_repeat"]=8692,
-	["spell_skills_critical_strike_multiplier_+_on_final_repeat"]=8693,
-	["spell_skills_deal_no_damage"]=8694,
-	["spell_skills_fire_2_additional_projectiles_final_chance_%"]=8695,
-	["spell_skills_never_crit_except_on_final_repeat"]=8696,
+	["spell_skill_projectile_speed_+%"]=8692,
+	["spell_skills_always_crit_on_final_repeat"]=8693,
+	["spell_skills_critical_strike_multiplier_+_on_final_repeat"]=8694,
+	["spell_skills_deal_no_damage"]=8695,
+	["spell_skills_fire_2_additional_projectiles_final_chance_%"]=8696,
+	["spell_skills_never_crit_except_on_final_repeat"]=8697,
 	["spell_staff_damage_+%"]=1144,
-	["spell_suppression_chance_%_if_all_equipment_grants_evasion"]=8697,
-	["spell_suppression_chance_%_if_enemy_hit_recently"]=8698,
-	["spell_suppression_chance_%_if_suppressed_spell_recently"]=8712,
+	["spell_suppression_chance_%_if_all_equipment_grants_evasion"]=8698,
+	["spell_suppression_chance_%_if_enemy_hit_recently"]=8699,
+	["spell_suppression_chance_%_if_suppressed_spell_recently"]=8713,
 	["spell_suppression_chance_%_if_taken_spell_damage_recently"]=2891,
-	["spell_suppression_chance_%_per_endurance_charge"]=8699,
-	["spell_suppression_chance_%_per_equipped_dagger"]=8700,
+	["spell_suppression_chance_%_per_endurance_charge"]=8700,
+	["spell_suppression_chance_%_per_equipped_dagger"]=8701,
 	["spell_suppression_chance_%_per_fortification"]=1972,
 	["spell_suppression_chance_%_per_frenzy_charge"]=2242,
-	["spell_suppression_chance_%_per_hit_suppressed_recently"]=8701,
-	["spell_suppression_chance_%_per_power_charge"]=8702,
-	["spell_suppression_chance_%_while_affected_by_grace"]=8703,
-	["spell_suppression_chance_%_while_affected_by_haste"]=8704,
-	["spell_suppression_chance_%_while_channelling"]=8705,
-	["spell_suppression_chance_%_while_holding_shield"]=8706,
-	["spell_suppression_chance_%_while_moving"]=8707,
-	["spell_suppression_chance_%_while_off_hand_empty"]=8708,
-	["spell_suppression_chance_%_while_on_full_energy_shield"]=8713,
-	["spell_suppression_chance_%_while_on_full_life"]=8714,
-	["spell_suppression_chance_%_while_phasing"]=8709,
-	["spell_suppression_chance_is_lucky"]=8710,
-	["spell_suppression_chance_modifiers_apply_to_avoid_all_elemental_ailments_at_%_value"]=8711,
-	["spells_chance_to_hinder_on_hit_%"]=8715,
-	["spells_chance_to_knockback_on_hit_%"]=8716,
-	["spells_chance_to_poison_on_hit_%"]=8717,
-	["spells_cost_life_instead_of_mana_%"]=8718,
+	["spell_suppression_chance_%_per_hit_suppressed_recently"]=8702,
+	["spell_suppression_chance_%_per_power_charge"]=8703,
+	["spell_suppression_chance_%_while_affected_by_grace"]=8704,
+	["spell_suppression_chance_%_while_affected_by_haste"]=8705,
+	["spell_suppression_chance_%_while_channelling"]=8706,
+	["spell_suppression_chance_%_while_holding_shield"]=8707,
+	["spell_suppression_chance_%_while_moving"]=8708,
+	["spell_suppression_chance_%_while_off_hand_empty"]=8709,
+	["spell_suppression_chance_%_while_on_full_energy_shield"]=8714,
+	["spell_suppression_chance_%_while_on_full_life"]=8715,
+	["spell_suppression_chance_%_while_phasing"]=8710,
+	["spell_suppression_chance_is_lucky"]=8711,
+	["spell_suppression_chance_modifiers_apply_to_avoid_all_elemental_ailments_at_%_value"]=8712,
+	["spells_chance_to_hinder_on_hit_%"]=8716,
+	["spells_chance_to_knockback_on_hit_%"]=8717,
+	["spells_chance_to_poison_on_hit_%"]=8718,
+	["spells_cost_life_instead_of_mana_%"]=8719,
 	["spells_have_culling_strike"]=2228,
-	["spells_impale_on_hit_%_chance"]=8719,
+	["spells_impale_on_hit_%_chance"]=8720,
 	["spells_number_of_additional_projectiles"]=3945,
-	["spells_you_cast_gain_%_of_base_main_hand_weapon_damage_as_added_spell_damage"]=8721,
-	["spells_you_cast_gain_%_of_weapon_damage_as_added_spell_damage"]=8720,
-	["spellslinger_cooldown_duration_+%"]=8722,
-	["spellslinger_mana_reservation_+%"]=8725,
-	["spellslinger_mana_reservation_efficiency_+%"]=8724,
-	["spellslinger_mana_reservation_efficiency_-2%_per_1"]=8723,
+	["spells_you_cast_gain_%_of_base_main_hand_weapon_damage_as_added_spell_damage"]=8722,
+	["spells_you_cast_gain_%_of_weapon_damage_as_added_spell_damage"]=8721,
+	["spellslinger_cooldown_duration_+%"]=8723,
+	["spellslinger_mana_reservation_+%"]=8726,
+	["spellslinger_mana_reservation_efficiency_+%"]=8725,
+	["spellslinger_mana_reservation_efficiency_-2%_per_1"]=8724,
 	["spend_energy_shield_for_costs_before_mana"]=2774,
-	["spider_aspect_debuff_duration_+%"]=8726,
-	["spider_aspect_skill_area_of_effect_+%"]=8727,
-	["spider_aspect_web_interval_ms_override"]=8728,
-	["spike_slam_num_spikes"]=8729,
+	["spider_aspect_debuff_duration_+%"]=8727,
+	["spider_aspect_skill_area_of_effect_+%"]=8728,
+	["spider_aspect_web_interval_ms_override"]=8729,
+	["spike_slam_num_spikes"]=8730,
 	["spirit_+%"]=1382,
-	["spirit_+%_per_stackable_unique_jewel"]=8732,
-	["spirit_offering_critical_strike_chance_+%"]=8730,
-	["spirit_offering_critical_strike_multiplier_+"]=8731,
+	["spirit_+%_per_stackable_unique_jewel"]=8733,
+	["spirit_offering_critical_strike_chance_+%"]=8731,
+	["spirit_offering_critical_strike_multiplier_+"]=8732,
 	["spirit_offering_duration_+%"]=3531,
 	["spirit_offering_effect_+%"]=1100,
 	["spirit_offering_physical_damage_%_to_gain_as_chaos"]=3807,
@@ -211817,56 +211843,56 @@ return {
 	["split_arrow_damage_+%"]=3282,
 	["split_arrow_num_of_additional_projectiles"]=3576,
 	["split_arrow_number_of_additional_arrows"]=2821,
-	["split_arrow_projectiles_fire_in_parallel_x_dist"]=8733,
-	["splitting_steel_area_of_effect_+%"]=8735,
-	["splitting_steel_damage_+%"]=8736,
-	["spread_ignite_from_killed_enemies_range"]=8737,
+	["split_arrow_projectiles_fire_in_parallel_x_dist"]=8734,
+	["splitting_steel_area_of_effect_+%"]=8736,
+	["splitting_steel_damage_+%"]=8737,
+	["spread_ignite_from_killed_enemies_range"]=8738,
 	["stacking_damage_+%_on_kill_for_4_seconds"]=3246,
 	["stacking_spell_damage_+%_when_you_or_your_totems_kill_an_enemy_for_2_seconds"]=2961,
 	["staff_accuracy_rating"]=1712,
-	["staff_attack_area_of_effect_+%"]=8738,
+	["staff_attack_area_of_effect_+%"]=8739,
 	["staff_block_%"]=1080,
 	["staff_elemental_damage_+%"]=1821,
 	["staff_stun_duration_+%"]=1579,
-	["stance_skill_cooldown_speed_+%"]=8742,
-	["stance_skill_reservation_+%"]=8744,
-	["stance_skills_mana_reservation_efficiency_+%"]=8743,
-	["stance_swap_cooldown_modifier_ms"]=8746,
-	["start_at_zero_energy_shield"]=8748,
-	["start_energy_shield_recharge_when_you_use_a_mana_flask"]=8749,
-	["static_strike_additional_number_of_beam_targets"]=8750,
+	["stance_skill_cooldown_speed_+%"]=8743,
+	["stance_skill_reservation_+%"]=8745,
+	["stance_skills_mana_reservation_efficiency_+%"]=8744,
+	["stance_swap_cooldown_modifier_ms"]=8747,
+	["start_at_zero_energy_shield"]=8749,
+	["start_energy_shield_recharge_when_you_use_a_mana_flask"]=8750,
+	["static_strike_additional_number_of_beam_targets"]=8751,
 	["static_strike_damage_+%"]=3305,
 	["static_strike_duration_+%"]=3558,
 	["static_strike_radius_+%"]=3446,
 	["status_ailments_removed_at_low_life"]=2971,
-	["status_ailments_you_inflict_duration_+%_while_focused"]=8751,
-	["status_ailments_you_inflict_duration_+%_with_bows"]=8752,
-	["stealth_+%"]=8753,
-	["stealth_+%_if_have_hit_with_claw_recently"]=8754,
+	["status_ailments_you_inflict_duration_+%_while_focused"]=8752,
+	["status_ailments_you_inflict_duration_+%_with_bows"]=8753,
+	["stealth_+%"]=8754,
+	["stealth_+%_if_have_hit_with_claw_recently"]=8755,
 	["steel_ammo_consumed_per_use_with_attacks_that_fire_projectiles"]=4417,
-	["steel_steal_area_of_effect_+%"]=8755,
-	["steel_steal_cast_speed_+%"]=8756,
-	["steel_steal_reflect_damage_+%"]=8757,
-	["steelskin_damage_limit_+%"]=8758,
-	["stibnite_flask_evasion_rating_+%_final"]=8759,
+	["steel_steal_area_of_effect_+%"]=8756,
+	["steel_steal_cast_speed_+%"]=8757,
+	["steel_steal_reflect_damage_+%"]=8758,
+	["steelskin_damage_limit_+%"]=8759,
+	["stibnite_flask_evasion_rating_+%_final"]=8760,
 	["stone_golem_damage_+%"]=3328,
 	["stone_golem_elemental_resistances_%"]=3611,
-	["stone_golem_impale_on_hit_if_same_number_of_summoned_carrion_golems"]=8760,
-	["storm_armageddon_sigils_can_target_reaper_minions"]=8761,
-	["storm_blade_has_local_attack_speed_+%"]=8762,
-	["storm_blade_has_local_lightning_penetration_%"]=8763,
-	["storm_blade_quality_chance_to_shock_%"]=8764,
-	["storm_blade_quality_local_critical_strike_chance_+%"]=8765,
-	["storm_blade_quality_non_skill_lightning_damage_%_to_convert_to_chaos_with_attacks"]=8766,
-	["storm_brand_additional_chain_chance_%"]=8767,
-	["storm_brand_attached_target_lightning_penetration_%"]=8768,
-	["storm_brand_damage_+%"]=8769,
-	["storm_burst_15_%_chance_to_create_additional_orb"]=8770,
-	["storm_burst_additional_object_chance_%"]=8771,
-	["storm_burst_area_of_effect_+%"]=8772,
-	["storm_burst_avoid_interruption_while_casting_%"]=8773,
+	["stone_golem_impale_on_hit_if_same_number_of_summoned_carrion_golems"]=8761,
+	["storm_armageddon_sigils_can_target_reaper_minions"]=8762,
+	["storm_blade_has_local_attack_speed_+%"]=8763,
+	["storm_blade_has_local_lightning_penetration_%"]=8764,
+	["storm_blade_quality_chance_to_shock_%"]=8765,
+	["storm_blade_quality_local_critical_strike_chance_+%"]=8766,
+	["storm_blade_quality_non_skill_lightning_damage_%_to_convert_to_chaos_with_attacks"]=8767,
+	["storm_brand_additional_chain_chance_%"]=8768,
+	["storm_brand_attached_target_lightning_penetration_%"]=8769,
+	["storm_brand_damage_+%"]=8770,
+	["storm_burst_15_%_chance_to_create_additional_orb"]=8771,
+	["storm_burst_additional_object_chance_%"]=8772,
+	["storm_burst_area_of_effect_+%"]=8773,
+	["storm_burst_avoid_interruption_while_casting_%"]=8774,
 	["storm_burst_damage_+%"]=3370,
-	["storm_burst_number_of_additional_projectiles"]=8774,
+	["storm_burst_number_of_additional_projectiles"]=8775,
 	["storm_call_damage_+%"]=3306,
 	["storm_call_duration_+%"]=3559,
 	["storm_call_radius_+%"]=3447,
@@ -211874,127 +211900,127 @@ return {
 	["storm_cloud_charged_damage_+%_final"]=3088,
 	["storm_cloud_critical_strike_chance_+%"]=3571,
 	["storm_cloud_radius_+%"]=3474,
-	["storm_rain_damage_+%"]=8775,
-	["storm_rain_num_additional_arrows"]=8776,
-	["stormbind_skill_area_of_effect_+%"]=8777,
-	["stormbind_skill_damage_+%"]=8778,
-	["stormblast_icicle_pyroclast_mine_aura_effect_+%"]=8779,
-	["stormblast_icicle_pyroclast_mine_base_deal_no_damage"]=8780,
-	["stormweaver_chill_effect_+%_final"]=8781,
-	["stormweaver_shock_duration_+%_final"]=8782,
+	["storm_rain_damage_+%"]=8776,
+	["storm_rain_num_additional_arrows"]=8777,
+	["stormbind_skill_area_of_effect_+%"]=8778,
+	["stormbind_skill_damage_+%"]=8779,
+	["stormblast_icicle_pyroclast_mine_aura_effect_+%"]=8780,
+	["stormblast_icicle_pyroclast_mine_base_deal_no_damage"]=8781,
+	["stormweaver_chill_effect_+%_final"]=8782,
+	["stormweaver_shock_duration_+%_final"]=8783,
 	["strength_+%"]=1106,
-	["strength_applies_to_fish_reel_speed_at_20%_value"]=8783,
-	["strength_can_satisfy_dexterity_and_intelligence_requirements_of_melee_weapons_and_skills"]=8784,
-	["strength_damage_bonus_grants_melee_physical_damage_+3%_per_10_strength_instead"]=8785,
-	["strength_skill_gem_level_+"]=8786,
-	["strike_skills_knockback_on_melee_hit"]=8787,
-	["strong_casting"]=9283,
+	["strength_applies_to_fish_reel_speed_at_20%_value"]=8784,
+	["strength_can_satisfy_dexterity_and_intelligence_requirements_of_melee_weapons_and_skills"]=8785,
+	["strength_damage_bonus_grants_melee_physical_damage_+3%_per_10_strength_instead"]=8786,
+	["strength_skill_gem_level_+"]=8787,
+	["strike_skills_knockback_on_melee_hit"]=8788,
+	["strong_casting"]=9284,
 	["stun_duration_+%"]=1706,
-	["stun_duration_+%_per_15_strength"]=8789,
-	["stun_duration_+%_per_endurance_charge"]=8790,
+	["stun_duration_+%_per_15_strength"]=8790,
+	["stun_duration_+%_per_endurance_charge"]=8791,
 	["stun_duration_+%_vs_enemies_that_are_on_full_life"]=2982,
 	["stun_duration_+%_vs_enemies_that_are_on_low_life"]=2983,
-	["stun_duration_on_critical_strike_+%"]=8788,
+	["stun_duration_on_critical_strike_+%"]=8789,
 	["stun_duration_on_self_+%"]=3797,
-	["stun_nearby_enemies_when_stunned_chance_%"]=8791,
+	["stun_nearby_enemies_when_stunned_chance_%"]=8792,
 	["stun_recovery_+%_per_frenzy_charge"]=1608,
 	["stun_threshold_+"]=1008,
 	["stun_threshold_+%"]=2925,
-	["stun_threshold_+%_during_empowered_attacks"]=8792,
-	["stun_threshold_+%_per_number_of_times_stunned_recently"]=8793,
-	["stun_threshold_+%_per_rage"]=9222,
-	["stun_threshold_+%_when_not_stunned_recently"]=8800,
-	["stun_threshold_+%_when_on_full_life"]=8801,
-	["stun_threshold_+_from_%_base_armour_from_equipment"]=8794,
-	["stun_threshold_+_from_%_maximum_energy_shield"]=8798,
-	["stun_threshold_+_from_lowest_of_base_helmet_evasion_rating_and_armour"]=8795,
-	["stun_threshold_+_per_strength"]=8796,
-	["stun_threshold_based_on_%_energy_shield_instead_of_life"]=8797,
+	["stun_threshold_+%_during_empowered_attacks"]=8793,
+	["stun_threshold_+%_per_number_of_times_stunned_recently"]=8794,
+	["stun_threshold_+%_per_rage"]=9223,
+	["stun_threshold_+%_when_not_stunned_recently"]=8801,
+	["stun_threshold_+%_when_on_full_life"]=8802,
+	["stun_threshold_+_from_%_base_armour_from_equipment"]=8795,
+	["stun_threshold_+_from_%_maximum_energy_shield"]=8799,
+	["stun_threshold_+_from_lowest_of_base_helmet_evasion_rating_and_armour"]=8796,
+	["stun_threshold_+_per_strength"]=8797,
+	["stun_threshold_based_on_%_energy_shield_instead_of_life"]=8798,
 	["stun_threshold_based_on_%_mana_instead_of_life"]=2924,
 	["stun_threshold_based_on_energy_shield_instead_of_life"]=3892,
 	["stun_threshold_reduction_+%_while_using_flask"]=2600,
-	["stun_threshold_reduction_+%_with_500_or_more_strength"]=8802,
+	["stun_threshold_reduction_+%_with_500_or_more_strength"]=8803,
 	["stuns_have_culling_strike"]=1736,
-	["summon_2_totems"]=8803,
-	["summon_arbalist_attack_speed_+%"]=8804,
-	["summon_arbalist_chains_+"]=8805,
-	["summon_arbalist_chance_to_bleed_%"]=8806,
-	["summon_arbalist_chance_to_crush_on_hit_%"]=8807,
-	["summon_arbalist_chance_to_deal_double_damage_%"]=8808,
-	["summon_arbalist_chance_to_freeze_%"]=8824,
-	["summon_arbalist_chance_to_ignite_%"]=8825,
-	["summon_arbalist_chance_to_ignite_freeze_shock_%"]=8809,
-	["summon_arbalist_chance_to_inflict_cold_exposure_on_hit_%"]=8827,
-	["summon_arbalist_chance_to_inflict_fire_exposure_on_hit_%"]=8828,
-	["summon_arbalist_chance_to_inflict_lightning_exposure_on_hit_%"]=8829,
-	["summon_arbalist_chance_to_intimidate_for_4_seconds_on_hit_%"]=8810,
-	["summon_arbalist_chance_to_maim_for_4_seconds_on_hit_%"]=8811,
-	["summon_arbalist_chance_to_poison_%"]=8812,
-	["summon_arbalist_chance_to_shock_%"]=8826,
-	["summon_arbalist_chance_to_unnerve_for_4_seconds_on_hit_%"]=8813,
-	["summon_arbalist_number_of_additional_projectiles"]=8814,
-	["summon_arbalist_number_of_splits"]=8815,
-	["summon_arbalist_projectiles_fork"]=8822,
-	["summon_arbalist_targets_to_pierce"]=8823,
-	["summon_raging_spirit_melee_splash_fire_damage_only"]=8830,
-	["summon_reaper_cooldown_speed_+%"]=8831,
+	["summon_2_totems"]=8804,
+	["summon_arbalist_attack_speed_+%"]=8805,
+	["summon_arbalist_chains_+"]=8806,
+	["summon_arbalist_chance_to_bleed_%"]=8807,
+	["summon_arbalist_chance_to_crush_on_hit_%"]=8808,
+	["summon_arbalist_chance_to_deal_double_damage_%"]=8809,
+	["summon_arbalist_chance_to_freeze_%"]=8825,
+	["summon_arbalist_chance_to_ignite_%"]=8826,
+	["summon_arbalist_chance_to_ignite_freeze_shock_%"]=8810,
+	["summon_arbalist_chance_to_inflict_cold_exposure_on_hit_%"]=8828,
+	["summon_arbalist_chance_to_inflict_fire_exposure_on_hit_%"]=8829,
+	["summon_arbalist_chance_to_inflict_lightning_exposure_on_hit_%"]=8830,
+	["summon_arbalist_chance_to_intimidate_for_4_seconds_on_hit_%"]=8811,
+	["summon_arbalist_chance_to_maim_for_4_seconds_on_hit_%"]=8812,
+	["summon_arbalist_chance_to_poison_%"]=8813,
+	["summon_arbalist_chance_to_shock_%"]=8827,
+	["summon_arbalist_chance_to_unnerve_for_4_seconds_on_hit_%"]=8814,
+	["summon_arbalist_number_of_additional_projectiles"]=8815,
+	["summon_arbalist_number_of_splits"]=8816,
+	["summon_arbalist_projectiles_fork"]=8823,
+	["summon_arbalist_targets_to_pierce"]=8824,
+	["summon_raging_spirit_melee_splash_fire_damage_only"]=8831,
+	["summon_reaper_cooldown_speed_+%"]=8832,
 	["summon_skeleton_gem_level_+"]=1436,
-	["summon_skeletons_additional_warrior_skeleton_%_chance"]=8833,
-	["summon_skeletons_additional_warrior_skeleton_one_twentieth_chance"]=8832,
-	["summon_skeletons_cooldown_modifier_ms"]=8834,
+	["summon_skeletons_additional_warrior_skeleton_%_chance"]=8834,
+	["summon_skeletons_additional_warrior_skeleton_one_twentieth_chance"]=8833,
+	["summon_skeletons_cooldown_modifier_ms"]=8835,
 	["summon_skeletons_num_additional_warrior_skeletons"]=3626,
-	["summon_skitterbots_area_of_effect_+%"]=8835,
-	["summon_skitterbots_mana_reservation_+%"]=8836,
+	["summon_skitterbots_area_of_effect_+%"]=8836,
+	["summon_skitterbots_mana_reservation_+%"]=8837,
 	["summon_totem_cast_speed_+%"]=2274,
-	["summoned_arbalist_physical_damage_%_to_convert_to_cold"]=8816,
-	["summoned_arbalist_physical_damage_%_to_convert_to_fire"]=8817,
-	["summoned_arbalist_physical_damage_%_to_convert_to_lightning"]=8818,
-	["summoned_arbalist_physical_damage_%_to_gain_as_cold"]=8819,
-	["summoned_arbalist_physical_damage_%_to_gain_as_fire"]=8820,
-	["summoned_arbalist_physical_damage_%_to_gain_as_lightning"]=8821,
-	["summoned_phantasms_grant_buff"]=8837,
-	["summoned_phantasms_have_no_duration"]=8838,
+	["summoned_arbalist_physical_damage_%_to_convert_to_cold"]=8817,
+	["summoned_arbalist_physical_damage_%_to_convert_to_fire"]=8818,
+	["summoned_arbalist_physical_damage_%_to_convert_to_lightning"]=8819,
+	["summoned_arbalist_physical_damage_%_to_gain_as_cold"]=8820,
+	["summoned_arbalist_physical_damage_%_to_gain_as_fire"]=8821,
+	["summoned_arbalist_physical_damage_%_to_gain_as_lightning"]=8822,
+	["summoned_phantasms_grant_buff"]=8838,
+	["summoned_phantasms_have_no_duration"]=8839,
 	["summoned_raging_spirit_chance_to_spawn_additional_minion_%"]=3060,
 	["summoned_raging_spirit_duration_+%"]=3059,
-	["summoned_raging_spirits_have_diamond_and_massive_shrine_buff"]=8839,
-	["summoned_reaper_damage_+%"]=8840,
-	["summoned_reaper_physical_dot_multiplier_+"]=8841,
-	["summoned_skeleton_%_chance_to_wither_for_2_seconds"]=8842,
-	["summoned_skeleton_%_physical_to_chaos"]=8843,
+	["summoned_raging_spirits_have_diamond_and_massive_shrine_buff"]=8840,
+	["summoned_reaper_damage_+%"]=8841,
+	["summoned_reaper_physical_dot_multiplier_+"]=8842,
+	["summoned_skeleton_%_chance_to_wither_for_2_seconds"]=8843,
+	["summoned_skeleton_%_physical_to_chaos"]=8844,
 	["summoned_skeleton_warriors_get_weapon_stats_in_main_hand"]=4041,
-	["summoned_skeletons_cover_in_ash_on_hit_%"]=8844,
-	["summoned_skeletons_fire_damage_%_of_maximum_life_taken_per_minute"]=8845,
-	["summoned_skeletons_have_avatar_of_fire"]=9284,
-	["summoned_skeletons_hits_cant_be_evaded"]=8846,
-	["summoned_skitterbots_cooldown_recovery_+%"]=8847,
-	["summoned_support_ghosts_have_diamond_and_massive_shrine_buff"]=8848,
+	["summoned_skeletons_cover_in_ash_on_hit_%"]=8845,
+	["summoned_skeletons_fire_damage_%_of_maximum_life_taken_per_minute"]=8846,
+	["summoned_skeletons_have_avatar_of_fire"]=9285,
+	["summoned_skeletons_hits_cant_be_evaded"]=8847,
+	["summoned_skitterbots_cooldown_recovery_+%"]=8848,
+	["summoned_support_ghosts_have_diamond_and_massive_shrine_buff"]=8849,
 	["sunder_wave_delay_+%"]=3477,
-	["support_additional_trap_mine_%_chance_for_1_additional_trap_mine"]=8849,
-	["support_anticipation_charge_gain_frequency_+%"]=8850,
-	["support_buffed_heralds_buff_effect_+%_final"]=8851,
-	["support_deadly_heralds_buff_effect_+%_final"]=8852,
-	["support_deadly_heralds_damage_+%_final"]=8853,
+	["support_additional_trap_mine_%_chance_for_1_additional_trap_mine"]=8850,
+	["support_anticipation_charge_gain_frequency_+%"]=8851,
+	["support_buffed_heralds_buff_effect_+%_final"]=8852,
+	["support_deadly_heralds_buff_effect_+%_final"]=8853,
+	["support_deadly_heralds_damage_+%_final"]=8854,
 	["support_gem_elemental_damage_+%_final"]=3232,
-	["support_gem_limit_+"]=8854,
+	["support_gem_limit_+"]=8855,
 	["support_gems_socketed_in_amulet_also_support_body_skills"]=194,
 	["support_gems_socketed_in_off_hand_also_support_main_hand_skills"]=195,
-	["support_hourglass_damage_+%_final"]=8855,
-	["support_jagged_ground_chance_%"]=8856,
-	["support_last_gasp_duration_ms"]=8857,
-	["support_maimed_enemies_physical_damage_taken_+%"]=8858,
+	["support_hourglass_damage_+%_final"]=8856,
+	["support_jagged_ground_chance_%"]=8857,
+	["support_last_gasp_duration_ms"]=8858,
+	["support_maimed_enemies_physical_damage_taken_+%"]=8859,
 	["support_minion_maximum_life_+%_final"]=1480,
-	["support_mirage_archer_base_duration"]=8860,
-	["support_slashing_damage_+%_final_from_distance"]=8861,
+	["support_mirage_archer_base_duration"]=8861,
+	["support_slashing_damage_+%_final_from_distance"]=8862,
 	["support_slower_projectiles_damage_+%_final"]=2523,
 	["supported_active_skill_gem_expereince_gained_+%"]=2567,
 	["supported_active_skill_gem_level_+"]=2441,
 	["supported_active_skill_gem_quality_%"]=2500,
-	["supported_aura_skill_gem_level_+"]=8862,
-	["supported_cold_skill_gem_level_+"]=8863,
-	["supported_elemental_skill_gem_level_+"]=8864,
-	["supported_fire_skill_gem_level_+"]=8865,
-	["supported_lightning_skill_gem_level_+"]=8866,
-	["suppressed_spell_damage_cannot_inflict_elemental_ailments"]=8867,
+	["supported_aura_skill_gem_level_+"]=8863,
+	["supported_cold_skill_gem_level_+"]=8864,
+	["supported_elemental_skill_gem_level_+"]=8865,
+	["supported_fire_skill_gem_level_+"]=8866,
+	["supported_lightning_skill_gem_level_+"]=8867,
+	["suppressed_spell_damage_cannot_inflict_elemental_ailments"]=8868,
 	["sweep_add_endurance_charge_on_hit_%"]=3448,
 	["sweep_damage_+%"]=3307,
 	["sweep_knockback_chance_%"]=3603,
@@ -212005,45 +212031,45 @@ return {
 	["sword_critical_strike_chance_+%"]=1325,
 	["sword_critical_strike_multiplier_+"]=1349,
 	["sword_damage_+%"]=1222,
-	["synthesis_map_adjacent_nodes_global_mod_values_doubled"]=8868,
-	["synthesis_map_global_mod_values_doubled_on_this_node"]=8869,
-	["synthesis_map_global_mod_values_tripled_on_this_node"]=8870,
-	["synthesis_map_memories_do_not_collapse_on_this_node"]=8871,
-	["synthesis_map_monster_slain_experience_+%_on_this_node"]=8872,
-	["synthesis_map_nearby_memories_have_bonus"]=8873,
-	["synthesis_map_node_additional_uses_+"]=8874,
-	["synthesis_map_node_global_mod_values_tripled_if_adjacent_squares_have_memories"]=8875,
-	["synthesis_map_node_grants_additional_global_mod"]=8876,
-	["synthesis_map_node_grants_no_global_mod"]=8877,
-	["synthesis_map_node_guest_monsters_replaced_by_synthesised_monsters"]=8878,
-	["synthesis_map_node_item_quantity_increases_doubled"]=8879,
-	["synthesis_map_node_item_rarity_increases_doubled"]=8880,
-	["synthesis_map_node_level_+"]=8881,
-	["synthesis_map_node_monsters_drop_no_items"]=8882,
-	["synthesis_map_node_pack_size_increases_doubled"]=8883,
-	["tailwind_effect_on_self_+%"]=8884,
-	["tailwind_effect_on_self_+%_per_gale_force"]=8885,
-	["tailwind_if_have_crit_recently"]=8886,
-	["take_X_lightning_damage_when_herald_of_thunder_hits_an_enemy"]=8887,
+	["synthesis_map_adjacent_nodes_global_mod_values_doubled"]=8869,
+	["synthesis_map_global_mod_values_doubled_on_this_node"]=8870,
+	["synthesis_map_global_mod_values_tripled_on_this_node"]=8871,
+	["synthesis_map_memories_do_not_collapse_on_this_node"]=8872,
+	["synthesis_map_monster_slain_experience_+%_on_this_node"]=8873,
+	["synthesis_map_nearby_memories_have_bonus"]=8874,
+	["synthesis_map_node_additional_uses_+"]=8875,
+	["synthesis_map_node_global_mod_values_tripled_if_adjacent_squares_have_memories"]=8876,
+	["synthesis_map_node_grants_additional_global_mod"]=8877,
+	["synthesis_map_node_grants_no_global_mod"]=8878,
+	["synthesis_map_node_guest_monsters_replaced_by_synthesised_monsters"]=8879,
+	["synthesis_map_node_item_quantity_increases_doubled"]=8880,
+	["synthesis_map_node_item_rarity_increases_doubled"]=8881,
+	["synthesis_map_node_level_+"]=8882,
+	["synthesis_map_node_monsters_drop_no_items"]=8883,
+	["synthesis_map_node_pack_size_increases_doubled"]=8884,
+	["tailwind_effect_on_self_+%"]=8885,
+	["tailwind_effect_on_self_+%_per_gale_force"]=8886,
+	["tailwind_if_have_crit_recently"]=8887,
+	["take_X_lightning_damage_when_herald_of_thunder_hits_an_enemy"]=8888,
 	["take_chaos_damage_from_ignite_instead"]=2151,
-	["take_half_area_damage_from_hit_%_chance"]=8888,
-	["take_no_extra_damage_from_critical_strikes_if_cast_enfeeble_in_past_10_seconds"]=8889,
-	["talisman_implicit_projectiles_pierce_1_additional_target_per_10"]=8890,
+	["take_half_area_damage_from_hit_%_chance"]=8889,
+	["take_no_extra_damage_from_critical_strikes_if_cast_enfeeble_in_past_10_seconds"]=8890,
+	["talisman_implicit_projectiles_pierce_1_additional_target_per_10"]=8891,
 	["taunt_duration_+%"]=1497,
-	["taunt_on_projectile_hit_chance_%"]=8891,
-	["taunted_enemies_by_warcry_damage_taken_+%"]=8892,
+	["taunt_on_projectile_hit_chance_%"]=8892,
+	["taunted_enemies_by_warcry_damage_taken_+%"]=8893,
 	["taunted_enemies_chance_to_be_stunned_+%"]=2869,
 	["taunted_enemies_damage_+%_final_vs_non_taunt_target"]=3874,
 	["taunted_enemies_damage_taken_+%"]=2870,
-	["tectonic_slam_%_chance_to_do_charged_slam"]=8898,
-	["tectonic_slam_1%_chance_to_do_charged_slam_per_2_stat_value"]=8893,
-	["tectonic_slam_and_infernal_blow_attack_damage_+%_per_450_physical_damage_reduction_rating"]=8894,
-	["tectonic_slam_and_infernal_blow_attack_damage_+%_per_700_physical_damage_reduction_rating"]=8895,
-	["tectonic_slam_area_of_effect_+%"]=8896,
-	["tectonic_slam_damage_+%"]=8897,
-	["tectonic_slam_side_crack_additional_chance_%"]=8900,
-	["tectonic_slam_side_crack_additional_chance_1%_per_2_stat_value"]=8899,
-	["tempest_shield_buff_effect_+%"]=8901,
+	["tectonic_slam_%_chance_to_do_charged_slam"]=8899,
+	["tectonic_slam_1%_chance_to_do_charged_slam_per_2_stat_value"]=8894,
+	["tectonic_slam_and_infernal_blow_attack_damage_+%_per_450_physical_damage_reduction_rating"]=8895,
+	["tectonic_slam_and_infernal_blow_attack_damage_+%_per_700_physical_damage_reduction_rating"]=8896,
+	["tectonic_slam_area_of_effect_+%"]=8897,
+	["tectonic_slam_damage_+%"]=8898,
+	["tectonic_slam_side_crack_additional_chance_%"]=8901,
+	["tectonic_slam_side_crack_additional_chance_1%_per_2_stat_value"]=8900,
+	["tempest_shield_buff_effect_+%"]=8902,
 	["tempest_shield_damage_+%"]=3352,
 	["tempest_shield_num_of_additional_projectiles_in_chain"]=3653,
 	["temporal_chains_curse_effect_+%"]=3633,
@@ -212051,96 +212077,96 @@ return {
 	["temporal_chains_effeciveness_+%"]=1451,
 	["temporal_chains_ignores_hexproof"]=2301,
 	["temporal_chains_mana_reservation_+%"]=3674,
-	["temporal_chains_no_reservation"]=8902,
-	["temporal_rift_cooldown_speed_+%"]=8903,
-	["thaumaturgy_rotation_active"]=8904,
-	["thorns_critical_strike_chance_+%"]=8905,
-	["thorns_damage_+%"]=8906,
-	["thorns_damage_+%_if_blocked_recently"]=8907,
-	["thorns_maximum_base_chaos_damage"]=8908,
-	["thorns_maximum_base_cold_damage"]=8909,
-	["thorns_maximum_base_fire_damage"]=8910,
-	["thorns_maximum_base_lightning_damage"]=8911,
-	["thorns_maximum_base_physical_damage"]=8912,
-	["thorns_minimum_base_chaos_damage"]=8908,
-	["thorns_minimum_base_cold_damage"]=8909,
-	["thorns_minimum_base_fire_damage"]=8910,
-	["thorns_minimum_base_lightning_damage"]=8911,
-	["thorns_minimum_base_physical_damage"]=8912,
-	["thorns_proc_off_any_hit"]=8913,
-	["threshold_jewel_magma_orb_damage_+%_final"]=8914,
-	["threshold_jewel_magma_orb_damage_+%_final_per_chain"]=8915,
-	["threshold_jewel_molten_strike_damage_projectile_count_+%_final"]=8916,
-	["thrown_shield_secondary_projectile_damage_+%_final"]=8917,
-	["titan_additional_inventory"]=8918,
-	["titan_damage_+%_final_against_heavy_stunned_enemies"]=8919,
-	["titan_expanded_main_inventory"]=8920,
-	["titan_hit_damage_stun_multiplier_+%_final_vs_full_life_enemies"]=8921,
-	["titan_maximum_life_+%_final"]=8922,
-	["tornado_damage_+%"]=8924,
-	["tornado_damage_frequency_+%"]=8923,
-	["tornado_movement_speed_+%"]=8925,
-	["tornado_only_primary_duration_+%"]=8926,
+	["temporal_chains_no_reservation"]=8903,
+	["temporal_rift_cooldown_speed_+%"]=8904,
+	["thaumaturgy_rotation_active"]=8905,
+	["thorns_critical_strike_chance_+%"]=8906,
+	["thorns_damage_+%"]=8907,
+	["thorns_damage_+%_if_blocked_recently"]=8908,
+	["thorns_maximum_base_chaos_damage"]=8909,
+	["thorns_maximum_base_cold_damage"]=8910,
+	["thorns_maximum_base_fire_damage"]=8911,
+	["thorns_maximum_base_lightning_damage"]=8912,
+	["thorns_maximum_base_physical_damage"]=8913,
+	["thorns_minimum_base_chaos_damage"]=8909,
+	["thorns_minimum_base_cold_damage"]=8910,
+	["thorns_minimum_base_fire_damage"]=8911,
+	["thorns_minimum_base_lightning_damage"]=8912,
+	["thorns_minimum_base_physical_damage"]=8913,
+	["thorns_proc_off_any_hit"]=8914,
+	["threshold_jewel_magma_orb_damage_+%_final"]=8915,
+	["threshold_jewel_magma_orb_damage_+%_final_per_chain"]=8916,
+	["threshold_jewel_molten_strike_damage_projectile_count_+%_final"]=8917,
+	["thrown_shield_secondary_projectile_damage_+%_final"]=8918,
+	["titan_additional_inventory"]=8919,
+	["titan_damage_+%_final_against_heavy_stunned_enemies"]=8920,
+	["titan_expanded_main_inventory"]=8921,
+	["titan_hit_damage_stun_multiplier_+%_final_vs_full_life_enemies"]=8922,
+	["titan_maximum_life_+%_final"]=8923,
+	["tornado_damage_+%"]=8925,
+	["tornado_damage_frequency_+%"]=8924,
+	["tornado_movement_speed_+%"]=8926,
+	["tornado_only_primary_duration_+%"]=8927,
 	["tornado_shot_critical_strike_chance_+%"]=3570,
 	["tornado_shot_damage_+%"]=3312,
 	["tornado_shot_num_of_secondary_projectiles"]=3578,
-	["tornado_skill_area_of_effect_+%"]=8927,
-	["total_base_life_regeneration_rate_per_minute_%_granted_to_allies_in_your_presence"]=8928,
+	["tornado_skill_area_of_effect_+%"]=8928,
+	["total_base_life_regeneration_rate_per_minute_%_granted_to_allies_in_your_presence"]=8929,
 	["totem_%_maximum_life_inflicted_as_aoe_fire_damage_when_hit"]=3418,
 	["totem_additional_physical_damage_reduction_%"]=2471,
 	["totem_aura_enemy_damage_+%_final"]=3420,
 	["totem_aura_enemy_fire_and_physical_damage_taken_+%"]=3421,
-	["totem_chaos_immunity"]=8930,
-	["totem_chaos_resistance_%"]=8931,
+	["totem_chaos_immunity"]=8931,
+	["totem_chaos_resistance_%"]=8932,
 	["totem_critical_strike_chance_+%"]=1343,
 	["totem_critical_strike_multiplier_+"]=1366,
 	["totem_damage_+%"]=1115,
 	["totem_damage_+%_final_per_active_totem"]=3381,
-	["totem_damage_+%_if_havent_summoned_totem_in_past_2_seconds"]=8932,
-	["totem_damage_+%_per_10_devotion"]=8933,
+	["totem_damage_+%_if_havent_summoned_totem_in_past_2_seconds"]=8933,
+	["totem_damage_+%_per_10_devotion"]=8934,
 	["totem_duration_+%"]=1493,
 	["totem_elemental_resistance_%"]=2469,
 	["totem_energy_shield_+%"]=1491,
 	["totem_fire_immunity"]=1432,
-	["totem_hinder_nearby_enemies_when_summoned_with_25%_reduced_movement_speed"]=8934,
+	["totem_hinder_nearby_enemies_when_summoned_with_25%_reduced_movement_speed"]=8935,
 	["totem_life_+%"]=1489,
 	["totem_mana_+%"]=1490,
-	["totem_maximum_energy_shield"]=8935,
+	["totem_maximum_energy_shield"]=8936,
 	["totem_number_of_additional_projectiles"]=2743,
-	["totem_placement_range_+%"]=8936,
+	["totem_placement_range_+%"]=8937,
 	["totem_range_+%"]=1492,
 	["totem_skill_area_of_effect_+%"]=2277,
 	["totem_skill_attack_speed_+%"]=2276,
 	["totem_skill_cast_speed_+%"]=2275,
-	["totem_skill_gem_level_+"]=8937,
-	["totem_spells_damage_+%"]=8938,
+	["totem_skill_gem_level_+"]=8938,
+	["totem_spells_damage_+%"]=8939,
 	["totemified_skills_taunt_on_hit_%"]=3076,
-	["totems_action_speed_cannot_be_modified_below_base"]=8929,
+	["totems_action_speed_cannot_be_modified_below_base"]=8930,
 	["totems_attack_speed_+%_per_active_totem"]=3816,
 	["totems_cannot_be_stunned"]=2726,
 	["totems_explode_for_%_of_max_life_as_fire_damage_on_low_life"]=2962,
-	["totems_explode_on_death_for_%_life_as_physical"]=8939,
+	["totems_explode_on_death_for_%_life_as_physical"]=8940,
 	["totems_gain_%_of_players_armour"]=2878,
-	["totems_nearby_enemies_damage_taken_+%"]=8940,
-	["totems_regenerate_%_life_per_minute"]=8941,
+	["totems_nearby_enemies_damage_taken_+%"]=8941,
+	["totems_regenerate_%_life_per_minute"]=8942,
 	["totems_resist_all_elements_+%_per_active_totem"]=3799,
 	["totems_spells_cast_speed_+%_per_active_totem"]=3803,
-	["totems_taunt_enemies_around_them_for_x_seconds_when_summoned"]=8942,
-	["tower_add_breach_to_X_maps"]=8943,
-	["tower_add_delirium_to_X_maps"]=8944,
-	["tower_add_expedition_to_X_maps"]=8945,
-	["tower_add_irradiated_to_X_maps"]=8946,
-	["tower_add_ritual_to_X_maps"]=8947,
-	["toxic_rain_damage_+%"]=8948,
-	["toxic_rain_num_of_additional_projectiles"]=8949,
-	["toxic_rain_physical_damage_%_to_gain_as_chaos"]=8950,
+	["totems_taunt_enemies_around_them_for_x_seconds_when_summoned"]=8943,
+	["tower_add_breach_to_X_maps"]=8944,
+	["tower_add_delirium_to_X_maps"]=8945,
+	["tower_add_expedition_to_X_maps"]=8946,
+	["tower_add_irradiated_to_X_maps"]=8947,
+	["tower_add_ritual_to_X_maps"]=8948,
+	["toxic_rain_damage_+%"]=8949,
+	["toxic_rain_num_of_additional_projectiles"]=8950,
+	["toxic_rain_physical_damage_%_to_gain_as_chaos"]=8951,
 	["transfer_hexes_to_X_nearby_enemies_on_kill"]=2607,
 	["trap_%_chance_to_trigger_twice"]=3426,
-	["trap_and_mine_damage_+%_if_armed_for_4_seconds"]=8951,
+	["trap_and_mine_damage_+%_if_armed_for_4_seconds"]=8952,
 	["trap_and_mine_damage_penetrates_%_elemental_resistance"]=2466,
 	["trap_and_mine_maximum_added_physical_damage"]=3425,
 	["trap_and_mine_minimum_added_physical_damage"]=3425,
-	["trap_and_mine_throwing_speed_+%"]=8952,
+	["trap_and_mine_throwing_speed_+%"]=8953,
 	["trap_critical_strike_chance_+%"]=952,
 	["trap_critical_strike_multiplier_+"]=956,
 	["trap_damage_+%"]=879,
@@ -212149,44 +212175,44 @@ return {
 	["trap_damage_penetrates_%_elemental_resistance"]=2464,
 	["trap_duration_+%"]=1627,
 	["trap_or_mine_damage_+%"]=1116,
-	["trap_skill_added_cooldown_count"]=8953,
+	["trap_skill_added_cooldown_count"]=8954,
 	["trap_skill_area_of_effect_+%"]=3121,
 	["trap_skill_gem_level_+"]=948,
-	["trap_spread_+%"]=8954,
-	["trap_throw_skills_have_blood_magic"]=9295,
+	["trap_spread_+%"]=8955,
+	["trap_throw_skills_have_blood_magic"]=9296,
 	["trap_throwing_speed_+%"]=1631,
-	["trap_throwing_speed_+%_per_frenzy_charge"]=8955,
+	["trap_throwing_speed_+%_per_frenzy_charge"]=8956,
 	["trap_trigger_radius_+%"]=1629,
 	["traps_and_mines_%_chance_to_poison"]=3714,
-	["traps_cannot_be_triggered_by_enemies"]=8956,
+	["traps_cannot_be_triggered_by_enemies"]=8957,
 	["traps_do_not_explode_on_timeout"]=2461,
 	["traps_explode_on_timeout"]=2462,
-	["traps_invulnerable"]=8957,
+	["traps_invulnerable"]=8958,
 	["traps_invulnerable_for_duration_ms"]=2467,
 	["travel_skill_cooldown_speed_+%"]=4011,
-	["travel_skills_cannot_be_exerted"]=8958,
+	["travel_skills_cannot_be_exerted"]=8959,
 	["travel_skills_cooldown_speed_+%_per_frenzy_charge"]=4021,
-	["travel_skills_poison_reflected_to_self_up_to_5_poisons"]=8959,
-	["treat_enemy_resistances_as_negated_on_elemental_damage_hit_%_chance"]=8960,
-	["trickster_cannot_take_damage_over_time_for_X_ms_every_10_seconds"]=8961,
+	["travel_skills_poison_reflected_to_self_up_to_5_poisons"]=8960,
+	["treat_enemy_resistances_as_negated_on_elemental_damage_hit_%_chance"]=8961,
+	["trickster_cannot_take_damage_over_time_for_X_ms_every_10_seconds"]=8962,
 	["trickster_damage_+%_final_per_different_mastery"]=1453,
-	["trickster_damage_over_time_+%_final"]=8962,
+	["trickster_damage_over_time_+%_final"]=8963,
 	["trickster_passive_chance_to_evade_attacks_while_not_on_full_energy_shield_+%_final"]=3170,
-	["trigger_elemental_storm_on_crit"]=8963,
-	["trigger_skills_refund_half_energy_spent_chance_%"]=8964,
+	["trigger_elemental_storm_on_crit"]=8964,
+	["trigger_skills_refund_half_energy_spent_chance_%"]=8965,
 	["trigger_socketed_bow_skills_on_spell_cast_while_wielding_a_bow_%"]=629,
 	["trigger_socketed_spell_on_attack_%"]=630,
 	["trigger_socketed_spell_on_skill_use_%"]=632,
 	["trigger_socketed_spells_when_you_focus_%"]=633,
 	["trigger_socketed_warcry_when_endurance_charge_expires_or_consumed_%_chance"]=137,
-	["trigger_wild_strike_on_attack_crit"]=8965,
-	["triggerbots_damage_+%_final_with_triggered_spells"]=8966,
-	["triggered_spell_spell_damage_+%"]=8967,
-	["triggers_burning_runes_on_placing_ground_rune"]=8968,
-	["triggers_soulbreaker_on_breaking_enemy_energy_shield"]=8969,
+	["trigger_wild_strike_on_attack_crit"]=8966,
+	["triggerbots_damage_+%_final_with_triggered_spells"]=8967,
+	["triggered_spell_spell_damage_+%"]=8968,
+	["triggers_burning_runes_on_placing_ground_rune"]=8969,
+	["triggers_soulbreaker_on_breaking_enemy_energy_shield"]=8970,
 	["two_handed_melee_accuracy_rating_+%"]=1297,
-	["two_handed_melee_area_damage_+%"]=8970,
-	["two_handed_melee_area_of_effect_+%"]=8971,
+	["two_handed_melee_area_damage_+%"]=8971,
+	["two_handed_melee_area_of_effect_+%"]=8972,
 	["two_handed_melee_attack_speed_+%"]=1279,
 	["two_handed_melee_cold_damage_+%"]=1194,
 	["two_handed_melee_critical_strike_chance_+%"]=1333,
@@ -212194,106 +212220,106 @@ return {
 	["two_handed_melee_fire_damage_+%"]=1193,
 	["two_handed_melee_physical_damage_+%"]=1191,
 	["two_handed_melee_stun_duration_+%"]=1577,
-	["uber_domain_monster_additional_physical_damage_reduction_%_per_revival"]=8972,
-	["uber_domain_monster_all_resistances_+%_per_revival"]=8973,
-	["uber_domain_monster_attack_and_cast_speed_+%_per_revival"]=8974,
-	["uber_domain_monster_avoid_stun_%_per_revival"]=8975,
-	["uber_domain_monster_critical_strike_chance_+%_per_revival"]=8976,
-	["uber_domain_monster_critical_strike_multiplier_+%_per_revival"]=8977,
-	["uber_domain_monster_deal_double_damage_chance_%_per_revival"]=8978,
-	["uber_domain_monster_life_regeneration_rate_per_minute_%_per_revival"]=8979,
-	["uber_domain_monster_maximum_life_+%_per_revival"]=8980,
-	["uber_domain_monster_movement_speed_+%_per_revival"]=8981,
-	["uber_domain_monster_overwhelm_%_physical_damage_reduction_per_revival"]=8982,
-	["uber_domain_monster_penetrate_all_resistances_%_per_revival"]=8983,
-	["uber_domain_monster_physical_damage_reduction_rating_+%_per_revival"]=8984,
-	["uber_domain_monster_reward_chance_+%"]=8985,
+	["uber_domain_monster_additional_physical_damage_reduction_%_per_revival"]=8973,
+	["uber_domain_monster_all_resistances_+%_per_revival"]=8974,
+	["uber_domain_monster_attack_and_cast_speed_+%_per_revival"]=8975,
+	["uber_domain_monster_avoid_stun_%_per_revival"]=8976,
+	["uber_domain_monster_critical_strike_chance_+%_per_revival"]=8977,
+	["uber_domain_monster_critical_strike_multiplier_+%_per_revival"]=8978,
+	["uber_domain_monster_deal_double_damage_chance_%_per_revival"]=8979,
+	["uber_domain_monster_life_regeneration_rate_per_minute_%_per_revival"]=8980,
+	["uber_domain_monster_maximum_life_+%_per_revival"]=8981,
+	["uber_domain_monster_movement_speed_+%_per_revival"]=8982,
+	["uber_domain_monster_overwhelm_%_physical_damage_reduction_per_revival"]=8983,
+	["uber_domain_monster_penetrate_all_resistances_%_per_revival"]=8984,
+	["uber_domain_monster_physical_damage_reduction_rating_+%_per_revival"]=8985,
+	["uber_domain_monster_reward_chance_+%"]=8986,
 	["ultimatum_wager_type_hash"]=42,
-	["unaffected_by_bleed_if_cast_vulnerability_in_past_10_seconds"]=8986,
-	["unaffected_by_bleeding_while_affected_by_malevolence"]=8987,
-	["unaffected_by_bleeding_while_leeching"]=8988,
-	["unaffected_by_blind"]=8989,
-	["unaffected_by_burning_ground"]=8990,
-	["unaffected_by_burning_ground_while_affected_by_purity_of_fire"]=8991,
-	["unaffected_by_chill"]=8992,
-	["unaffected_by_chill_during_dodge_roll"]=8993,
-	["unaffected_by_chill_while_channelling"]=8994,
-	["unaffected_by_chill_while_mana_leeching"]=8995,
-	["unaffected_by_chilled_ground"]=8996,
-	["unaffected_by_chilled_ground_while_affected_by_purity_of_ice"]=8997,
-	["unaffected_by_conductivity_while_affected_by_purity_of_lightning"]=8998,
-	["unaffected_by_corrupted_blood_while_leeching"]=8999,
+	["unaffected_by_bleed_if_cast_vulnerability_in_past_10_seconds"]=8987,
+	["unaffected_by_bleeding_while_affected_by_malevolence"]=8988,
+	["unaffected_by_bleeding_while_leeching"]=8989,
+	["unaffected_by_blind"]=8990,
+	["unaffected_by_burning_ground"]=8991,
+	["unaffected_by_burning_ground_while_affected_by_purity_of_fire"]=8992,
+	["unaffected_by_chill"]=8993,
+	["unaffected_by_chill_during_dodge_roll"]=8994,
+	["unaffected_by_chill_while_channelling"]=8995,
+	["unaffected_by_chill_while_mana_leeching"]=8996,
+	["unaffected_by_chilled_ground"]=8997,
+	["unaffected_by_chilled_ground_while_affected_by_purity_of_ice"]=8998,
+	["unaffected_by_conductivity_while_affected_by_purity_of_lightning"]=8999,
+	["unaffected_by_corrupted_blood_while_leeching"]=9000,
 	["unaffected_by_curses"]=2175,
-	["unaffected_by_curses_while_affected_by_zealotry"]=9000,
-	["unaffected_by_desecrated_ground"]=9001,
-	["unaffected_by_elemental_weakness_while_affected_by_purity_of_elements"]=9002,
-	["unaffected_by_enfeeble_while_affected_by_grace"]=9003,
-	["unaffected_by_flammability_while_affected_by_purity_of_fire"]=9004,
-	["unaffected_by_freeze_if_cast_frostbite_in_past_10_seconds"]=9005,
-	["unaffected_by_frostbite_while_affected_by_purity_of_ice"]=9006,
-	["unaffected_by_ignite"]=9007,
-	["unaffected_by_ignite_and_shock_while_max_life_mana_within_500"]=9008,
-	["unaffected_by_ignite_if_cast_flammability_in_past_10_seconds"]=9009,
-	["unaffected_by_poison_while_affected_by_malevolence"]=9010,
-	["unaffected_by_shock"]=9011,
-	["unaffected_by_shock_if_cast_conductivity_in_past_10_seconds"]=9012,
-	["unaffected_by_shock_while_channelling"]=9013,
-	["unaffected_by_shocked_ground"]=9014,
-	["unaffected_by_shocked_ground_while_affected_by_purity_of_lightning"]=9015,
-	["unaffected_by_temporal_chains"]=9016,
-	["unaffected_by_temporal_chains_while_affected_by_haste"]=9017,
-	["unaffected_by_vulnerability_while_affected_by_determination"]=9018,
-	["unarmed_attack_skill_melee_dash_range_+%"]=9019,
-	["unarmed_attack_speed_+%"]=9020,
+	["unaffected_by_curses_while_affected_by_zealotry"]=9001,
+	["unaffected_by_desecrated_ground"]=9002,
+	["unaffected_by_elemental_weakness_while_affected_by_purity_of_elements"]=9003,
+	["unaffected_by_enfeeble_while_affected_by_grace"]=9004,
+	["unaffected_by_flammability_while_affected_by_purity_of_fire"]=9005,
+	["unaffected_by_freeze_if_cast_frostbite_in_past_10_seconds"]=9006,
+	["unaffected_by_frostbite_while_affected_by_purity_of_ice"]=9007,
+	["unaffected_by_ignite"]=9008,
+	["unaffected_by_ignite_and_shock_while_max_life_mana_within_500"]=9009,
+	["unaffected_by_ignite_if_cast_flammability_in_past_10_seconds"]=9010,
+	["unaffected_by_poison_while_affected_by_malevolence"]=9011,
+	["unaffected_by_shock"]=9012,
+	["unaffected_by_shock_if_cast_conductivity_in_past_10_seconds"]=9013,
+	["unaffected_by_shock_while_channelling"]=9014,
+	["unaffected_by_shocked_ground"]=9015,
+	["unaffected_by_shocked_ground_while_affected_by_purity_of_lightning"]=9016,
+	["unaffected_by_temporal_chains"]=9017,
+	["unaffected_by_temporal_chains_while_affected_by_haste"]=9018,
+	["unaffected_by_vulnerability_while_affected_by_determination"]=9019,
+	["unarmed_attack_skill_melee_dash_range_+%"]=9020,
+	["unarmed_attack_speed_+%"]=9021,
 	["unarmed_damage_+%_vs_bleeding_enemies"]=3208,
 	["unarmed_melee_attack_speed_+%"]=1291,
 	["unarmed_melee_physical_damage_+%"]=1195,
-	["unattached_sigil_attachment_range_+%_per_second"]=9021,
-	["unbound_ailment_elemental_ailment_buildup_+%_final"]=9022,
-	["unbound_ailment_elemental_ailment_chance_+%_final"]=9023,
-	["undead_minion_reservation_+%"]=9024,
-	["unearth_additional_corpse_level"]=9025,
+	["unattached_sigil_attachment_range_+%_per_second"]=9022,
+	["unbound_ailment_elemental_ailment_buildup_+%_final"]=9023,
+	["unbound_ailment_elemental_ailment_chance_+%_final"]=9024,
+	["undead_minion_reservation_+%"]=9025,
+	["unearth_additional_corpse_level"]=9026,
 	["unholy_might_while_you_have_no_energy_shield"]=2419,
-	["unique_%_maximum_mana_to_sacrifice_to_party_members_in_your_presence_when_they_cast_a_spell"]=9026,
+	["unique_%_maximum_mana_to_sacrifice_to_party_members_in_your_presence_when_they_cast_a_spell"]=9027,
 	["unique_add_power_charge_on_melee_knockback_%"]=2609,
-	["unique_body_armour_black_doubt_drain_%_mana_to_recover_life_until_full_and_dot_bypasses_es"]=9027,
-	["unique_body_armour_shavronnes_wrappings_damage_cannot_bypass_energy_shield"]=9028,
+	["unique_body_armour_black_doubt_drain_%_mana_to_recover_life_until_full_and_dot_bypasses_es"]=9028,
+	["unique_body_armour_shavronnes_wrappings_damage_cannot_bypass_energy_shield"]=9029,
 	["unique_boots_all_damage_inflicts_poison_against_enemies_with_at_least_x_grasping_vines"]=4054,
 	["unique_boots_secondary_ground_ignite_while_moving_base_fire_damage_%_of_life"]=3949,
 	["unique_boots_secondary_ground_shock_while_moving"]=3950,
-	["unique_bow_arborix_close_range_bow_damage_+%_final_while_have_iron_reflexes"]=9299,
+	["unique_bow_arborix_close_range_bow_damage_+%_final_while_have_iron_reflexes"]=9300,
 	["unique_chaos_damage_to_reflect_to_self_on_attack_%_chance"]=2640,
 	["unique_chill_duration_+%_when_in_off_hand"]=2450,
 	["unique_chin_sol_close_range_bow_damage_+%_final"]=2141,
 	["unique_chin_sol_close_range_knockback"]=2142,
 	["unique_cold_damage_ignites"]=2535,
 	["unique_cold_damage_resistance_%_when_green_gem_socketed"]=1445,
-	["unique_cooldown_modifier_ms"]=9029,
+	["unique_cooldown_modifier_ms"]=9030,
 	["unique_critical_strike_chance_+%_final"]=2505,
-	["unique_crowd_controlled_enemy_damage_taken_-%_final"]=9030,
-	["unique_damage_+%_vs_rare_or_unique_enemy_per_second_ever_in_presence_up_to_max"]=9031,
+	["unique_crowd_controlled_enemy_damage_taken_-%_final"]=9031,
+	["unique_damage_+%_vs_rare_or_unique_enemy_per_second_ever_in_presence_up_to_max"]=9032,
 	["unique_dewaths_hide_physical_attack_damage_dealt_-"]=2163,
-	["unique_double_presence_radius"]=9032,
+	["unique_double_presence_radius"]=9033,
 	["unique_facebreaker_unarmed_melee_physical_damage_+%_final"]=2135,
 	["unique_fire_damage_resistance_%_when_red_gem_socketed"]=1441,
 	["unique_fire_damage_shocks"]=2534,
 	["unique_gain_onslaught_when_hit_duration_ms"]=2507,
 	["unique_gain_onslaught_when_hit_duration_ms_per_endurance_charge"]=2522,
 	["unique_gain_power_charge_on_non_crit"]=2576,
-	["unique_gain_soul_eater"]=9033,
-	["unique_helmet_cast_speed_+%_applies_to_attack_speed_at_%_of_original_value"]=9034,
-	["unique_helmet_damage_+%_final_per_warcry_exerting_action"]=9035,
+	["unique_gain_soul_eater"]=9034,
+	["unique_helmet_cast_speed_+%_applies_to_attack_speed_at_%_of_original_value"]=9035,
+	["unique_helmet_damage_+%_final_per_warcry_exerting_action"]=9036,
 	["unique_ignite_chance_%_when_in_main_hand"]=2449,
-	["unique_jewel_flask_charges_gained_+%_final_from_kills"]=9036,
-	["unique_jewel_flask_duration_+%_final"]=9037,
-	["unique_jewel_grants_notable_hash_1"]=9038,
-	["unique_jewel_grants_notable_hash_2"]=9039,
-	["unique_jewel_grants_notable_hash_3"]=9040,
-	["unique_jewel_grants_notable_hash_part_1"]=9041,
-	["unique_jewel_grants_notable_hash_part_2"]=9042,
-	["unique_jewel_reserved_blood_maximum_life_+%_final"]=9043,
-	["unique_jewel_specific_skill_level_+_level"]=9044,
-	["unique_jewel_specific_skill_level_+_skill"]=9044,
+	["unique_jewel_flask_charges_gained_+%_final_from_kills"]=9037,
+	["unique_jewel_flask_duration_+%_final"]=9038,
+	["unique_jewel_grants_notable_hash_1"]=9039,
+	["unique_jewel_grants_notable_hash_2"]=9040,
+	["unique_jewel_grants_notable_hash_3"]=9041,
+	["unique_jewel_grants_notable_hash_part_1"]=9042,
+	["unique_jewel_grants_notable_hash_part_2"]=9043,
+	["unique_jewel_reserved_blood_maximum_life_+%_final"]=9044,
+	["unique_jewel_specific_skill_level_+_level"]=9045,
+	["unique_jewel_specific_skill_level_+_skill"]=9045,
 	["unique_lightning_damage_freezes"]=2536,
 	["unique_lightning_damage_resistance_%_when_blue_gem_socketed"]=1448,
 	["unique_local_maximum_added_chaos_damage_when_in_off_hand"]=1254,
@@ -212303,7 +212329,7 @@ return {
 	["unique_local_minimum_added_cold_damage_when_in_off_hand"]=1240,
 	["unique_local_minimum_added_fire_damage_when_in_main_hand"]=1234,
 	["unique_loris_lantern_golden_light"]=2250,
-	["unique_lose_a_power_charge_when_hit"]=9046,
+	["unique_lose_a_power_charge_when_hit"]=9047,
 	["unique_lose_all_endurance_charges_when_hit"]=2506,
 	["unique_lose_all_power_charges_on_crit"]=2577,
 	["unique_map_boss_class_of_rare_items_to_drop"]=2402,
@@ -212311,130 +212337,130 @@ return {
 	["unique_maximum_chaos_damage_to_reflect_to_self_on_attack"]=2640,
 	["unique_mine_damage_+%_final"]=1118,
 	["unique_minimum_chaos_damage_to_reflect_to_self_on_attack"]=2640,
-	["unique_minions_in_presence_gain_and_lose_life_when_you_do"]=9047,
-	["unique_monster_dropped_item_rarity_+%"]=9048,
-	["unique_movement_speed_and_skill_speed_-%_final_per_number_of_times_dodge_rolled_in_past_20_seconds"]=9049,
+	["unique_minions_in_presence_gain_and_lose_life_when_you_do"]=9048,
+	["unique_monster_dropped_item_rarity_+%"]=9049,
+	["unique_movement_speed_and_skill_speed_-%_final_per_number_of_times_dodge_rolled_in_past_20_seconds"]=9050,
 	["unique_nearby_allies_recover_permyriad_max_life_on_death"]=2660,
-	["unique_no_curse_delay"]=9050,
+	["unique_no_curse_delay"]=9051,
 	["unique_primordial_tether_golem_damage_+%_final"]=3335,
 	["unique_primordial_tether_golem_life_+%_final"]=3718,
 	["unique_quill_rain_damage_+%_final"]=2154,
-	["unique_recover_%_maximum_life_on_x_altenator"]=9051,
-	["unique_replica_volkuurs_guidance_ignite_duration_+%_final"]=9052,
+	["unique_recover_%_maximum_life_on_x_altenator"]=9052,
+	["unique_replica_volkuurs_guidance_ignite_duration_+%_final"]=9053,
 	["unique_ryuslathas_clutches_maximum_physical_attack_damage_+%_final"]=1120,
 	["unique_ryuslathas_clutches_minimum_physical_attack_damage_+%_final"]=1121,
-	["unique_soulless_elegance_energy_shield_recharge_rate_+%_final"]=9053,
-	["unique_spirit_reservations_are_halved"]=9054,
-	["unique_sunblast_throw_traps_in_circle_radius"]=9055,
+	["unique_soulless_elegance_energy_shield_recharge_rate_+%_final"]=9054,
+	["unique_spirit_reservations_are_halved"]=9055,
+	["unique_sunblast_throw_traps_in_circle_radius"]=9056,
 	["unique_volkuurs_clutch_poison_duration_+%_final"]=2830,
 	["unique_voltaxic_rift_shock_as_though_damage_+%_final"]=2598,
-	["unique_voltaxic_rift_shock_maximum_magnitude_override"]=9056,
-	["unique_you_count_as_on_low_life_while_at_%_of_maximum_mana_or_below"]=9057,
-	["unique_you_count_as_on_low_mana_while_at_%_of_maximum_health_or_below"]=9058,
-	["unnerve_for_4_seconds_on_hit_with_wands"]=9059,
-	["unnerve_nearby_enemies_on_use_for_ms"]=9060,
+	["unique_voltaxic_rift_shock_maximum_magnitude_override"]=9057,
+	["unique_you_count_as_on_low_life_while_at_%_of_maximum_mana_or_below"]=9058,
+	["unique_you_count_as_on_low_mana_while_at_%_of_maximum_health_or_below"]=9059,
+	["unnerve_for_4_seconds_on_hit_with_wands"]=9060,
+	["unnerve_nearby_enemies_on_use_for_ms"]=9061,
 	["unveiled_mod_effect_+%"]=69,
-	["utility_flask_charges_recovered_per_3_seconds"]=9061,
-	["utility_flask_cold_damage_taken_+%_final"]=9062,
-	["utility_flask_fire_damage_taken_+%_final"]=9063,
-	["utility_flask_lightning_damage_taken_+%_final"]=9064,
+	["utility_flask_charges_recovered_per_3_seconds"]=9062,
+	["utility_flask_cold_damage_taken_+%_final"]=9063,
+	["utility_flask_fire_damage_taken_+%_final"]=9064,
+	["utility_flask_lightning_damage_taken_+%_final"]=9065,
 	["vaal_attack_rage_cost_instead_of_souls_per_use"]=2376,
 	["vaal_skill_critical_strike_chance_+%"]=2768,
 	["vaal_skill_critical_strike_multiplier_+"]=2769,
 	["vaal_skill_damage_+%"]=2756,
 	["vaal_skill_effect_duration_+%"]=2766,
-	["vaal_skill_gem_level_+"]=9065,
-	["vaal_skill_soul_cost_+%"]=9066,
+	["vaal_skill_gem_level_+"]=9066,
+	["vaal_skill_soul_cost_+%"]=9067,
 	["vaal_skill_soul_gain_preventation_duration_+%"]=2767,
-	["vaal_skill_soul_refund_chance_%"]=9067,
-	["vaal_volcanic_fissure_molten_strike_soul_gain_prevention_+%"]=9068,
-	["vampiric_link_duration_+%"]=9069,
+	["vaal_skill_soul_refund_chance_%"]=9068,
+	["vaal_volcanic_fissure_molten_strike_soul_gain_prevention_+%"]=9069,
+	["vampiric_link_duration_+%"]=9070,
 	["vengeance_cooldown_speed_+%"]=3514,
 	["vengeance_damage_+%"]=3357,
-	["vigilant_and_flicker_strike_active_skill_cooldown_bypass_type_override_to_power_charge"]=9070,
+	["vigilant_and_flicker_strike_active_skill_cooldown_bypass_type_override_to_power_charge"]=9071,
 	["vigilant_strike_applies_to_nearby_allies_for_X_seconds"]=2902,
 	["vigilant_strike_damage_+%"]=3345,
 	["vigilant_strike_fortify_duration_+%"]=3534,
-	["viper_and_pestilent_strike_attack_damage_+%_per_frenzy_charge"]=9071,
-	["viper_strike_chance_to_gain_unholy_might_%_on_hit_per_poison_stack_on_enemy"]=9072,
+	["viper_and_pestilent_strike_attack_damage_+%_per_frenzy_charge"]=9072,
+	["viper_strike_chance_to_gain_unholy_might_%_on_hit_per_poison_stack_on_enemy"]=9073,
 	["viper_strike_critical_strike_chance_+%"]=3567,
 	["viper_strike_damage_+%"]=3287,
-	["viper_strike_dual_wield_damage_+%_final"]=9073,
+	["viper_strike_dual_wield_damage_+%_final"]=9074,
 	["viper_strike_poison_duration_+%"]=3556,
 	["virtual_base_maximum_energy_shield_to_grant_to_you_and_nearby_allies"]=3039,
-	["virtual_block_%_damage_taken"]=9074,
+	["virtual_block_%_damage_taken"]=9075,
 	["virtual_energy_shield_delay_-%"]=3218,
 	["virtual_energy_shield_recharge_rate_+%"]=3220,
 	["virtual_light_radius_+%"]=2197,
 	["virtual_mana_gain_per_target"]=1465,
 	["virtual_minion_damage_+%"]=1681,
 	["virtual_number_of_ranged_animated_weapons_allowed"]=2923,
-	["virulent_arrow_additional_spores_at_max_stages"]=9075,
-	["virulent_arrow_chance_to_poison_%_per_stage"]=9076,
+	["virulent_arrow_additional_spores_at_max_stages"]=9076,
+	["virulent_arrow_chance_to_poison_%_per_stage"]=9077,
 	["vitality_mana_reservation_+%"]=3666,
-	["vitality_mana_reservation_efficiency_+%"]=9078,
-	["vitality_mana_reservation_efficiency_-2%_per_1"]=9077,
-	["vitality_reserves_no_mana"]=9079,
-	["void_sphere_cooldown_speed_+%"]=9080,
-	["volatile_dead_and_cremation_penetrate_%_fire_resistance_per_100_dexterity"]=9081,
-	["volatile_dead_base_number_of_corpses_to_consume"]=9082,
-	["volatile_dead_cast_speed_+%"]=9083,
-	["volatile_dead_consume_additional_corpse"]=9084,
-	["volatile_dead_damage_+%"]=9085,
-	["volcanic_fissure_damage_+%"]=9086,
-	["volcanic_fissure_number_of_additional_projectiles"]=9087,
-	["volcanic_fissure_speed_+%"]=9088,
-	["voltaxic_burst_damage_+%"]=9089,
-	["voltaxic_burst_damage_+%_per_100ms_duration"]=9090,
-	["voltaxic_burst_skill_area_of_effect_+%"]=9091,
-	["vortex_active_skill_additional_critical_strike_chance_if_used_through_frostbolt"]=9092,
-	["vortex_area_of_effect_+%_when_cast_on_frostbolt"]=9093,
+	["vitality_mana_reservation_efficiency_+%"]=9079,
+	["vitality_mana_reservation_efficiency_-2%_per_1"]=9078,
+	["vitality_reserves_no_mana"]=9080,
+	["void_sphere_cooldown_speed_+%"]=9081,
+	["volatile_dead_and_cremation_penetrate_%_fire_resistance_per_100_dexterity"]=9082,
+	["volatile_dead_base_number_of_corpses_to_consume"]=9083,
+	["volatile_dead_cast_speed_+%"]=9084,
+	["volatile_dead_consume_additional_corpse"]=9085,
+	["volatile_dead_damage_+%"]=9086,
+	["volcanic_fissure_damage_+%"]=9087,
+	["volcanic_fissure_number_of_additional_projectiles"]=9088,
+	["volcanic_fissure_speed_+%"]=9089,
+	["voltaxic_burst_damage_+%"]=9090,
+	["voltaxic_burst_damage_+%_per_100ms_duration"]=9091,
+	["voltaxic_burst_skill_area_of_effect_+%"]=9092,
+	["vortex_active_skill_additional_critical_strike_chance_if_used_through_frostbolt"]=9093,
+	["vortex_area_of_effect_+%_when_cast_on_frostbolt"]=9094,
 	["vulnerability_curse_effect_+%"]=3641,
 	["vulnerability_duration_+%"]=3539,
 	["vulnerability_ignores_hexproof"]=2302,
 	["vulnerability_mana_reservation_+%"]=3675,
-	["vulnerability_no_reservation"]=9094,
+	["vulnerability_no_reservation"]=9095,
 	["wand_accuracy_rating"]=1714,
 	["wand_accuracy_rating_+%"]=1305,
 	["wand_attack_speed_+%"]=1288,
-	["wand_attacks_fire_an_additional_projectile"]=9095,
+	["wand_attacks_fire_an_additional_projectile"]=9096,
 	["wand_critical_strike_chance_+%"]=1328,
 	["wand_critical_strike_multiplier_+"]=1350,
 	["wand_damage_+%"]=2615,
-	["wand_damage_+%_if_crit_recently"]=9096,
+	["wand_damage_+%_if_crit_recently"]=9097,
 	["wand_damage_+%_per_power_charge"]=1840,
 	["wand_elemental_damage_+%"]=1820,
-	["war_banner_aura_effect_+%"]=9097,
-	["war_banner_mana_reservation_efficiency_+%"]=9098,
-	["warbringer_overbreak_armour"]=9099,
+	["war_banner_aura_effect_+%"]=9098,
+	["war_banner_mana_reservation_efficiency_+%"]=9099,
+	["warbringer_overbreak_armour"]=9100,
 	["warcries_are_instant"]=3105,
-	["warcries_bypass_cooldown"]=9100,
+	["warcries_bypass_cooldown"]=9101,
 	["warcries_cost_no_mana"]=3756,
-	["warcries_debilitate_enemies_for_1_second"]=9101,
-	["warcries_have_minimum_10_power"]=9102,
-	["warcries_knock_back_enemies"]=9103,
-	["warcry_buff_effect_+%"]=9104,
-	["warcry_chance_to_gain_frenzy_power_endurance_charge_%_per_power"]=9105,
-	["warcry_cooldown_modifier_ms"]=9106,
+	["warcries_debilitate_enemies_for_1_second"]=9102,
+	["warcries_have_minimum_10_power"]=9103,
+	["warcries_knock_back_enemies"]=9104,
+	["warcry_buff_effect_+%"]=9105,
+	["warcry_chance_to_gain_frenzy_power_endurance_charge_%_per_power"]=9106,
+	["warcry_cooldown_modifier_ms"]=9107,
 	["warcry_cooldown_speed_+%"]=2978,
-	["warcry_damage_+%"]=9107,
+	["warcry_damage_+%"]=9108,
 	["warcry_damage_taken_goes_to_mana_%"]=2915,
 	["warcry_duration_+%"]=2858,
-	["warcry_empowers_next_x_melee_attacks"]=9108,
-	["warcry_monster_power_+%"]=9109,
-	["warcry_physical_damage_reduction_rating_+%_per_5_power_for_8_seconds"]=9110,
-	["warcry_skill_area_of_effect_+%"]=9111,
-	["warcry_skills_cooldown_is_4_seconds"]=9112,
+	["warcry_empowers_next_x_melee_attacks"]=9109,
+	["warcry_monster_power_+%"]=9110,
+	["warcry_physical_damage_reduction_rating_+%_per_5_power_for_8_seconds"]=9111,
+	["warcry_skill_area_of_effect_+%"]=9112,
+	["warcry_skills_cooldown_is_4_seconds"]=9113,
 	["warcry_speed_+%"]=2931,
 	["ward_+%"]=1378,
 	["ward_delay_recovery_+%"]=1380,
 	["warlords_mark_curse_effect_+%"]=3642,
 	["warlords_mark_duration_+%"]=3538,
-	["water_sphere_cold_lightning_exposure_%"]=9113,
-	["water_sphere_damage_+%"]=9114,
+	["water_sphere_cold_lightning_exposure_%"]=9114,
+	["water_sphere_damage_+%"]=9115,
 	["weapon_chaos_damage_+%"]=1761,
 	["weapon_cold_damage_+%"]=1759,
-	["weapon_damage_+%_per_5_str"]=9115,
+	["weapon_damage_+%_per_5_str"]=9116,
 	["weapon_elemental_damage_+%"]=1229,
 	["weapon_elemental_damage_+%_per_power_charge"]=2368,
 	["weapon_elemental_damage_+%_while_using_flask"]=2440,
@@ -212442,14 +212468,14 @@ return {
 	["weapon_hellscaping_speed_+%"]=6352,
 	["weapon_lightning_damage_+%"]=1760,
 	["weapon_physical_damage_+%"]=2428,
-	["weapon_swap_speed_+%"]=9116,
-	["when_you_would_consume_power_frenzy_endurance_charges_instead_consume_x_rage"]=9117,
-	["while_curse_is_25%_expired_hinder_enemy_%"]=9118,
-	["while_curse_is_33%_expired_malediction"]=9119,
-	["while_curse_is_50%_expired_curse_effect_+%"]=9120,
-	["while_curse_is_75%_expired_enemy_damage_taken_+%"]=9121,
-	["while_stationary_gain_additional_physical_damage_reduction_%"]=9122,
-	["while_stationary_gain_life_regeneration_rate_per_minute_%"]=9123,
+	["weapon_swap_speed_+%"]=9117,
+	["when_you_would_consume_power_frenzy_endurance_charges_instead_consume_x_rage"]=9118,
+	["while_curse_is_25%_expired_hinder_enemy_%"]=9119,
+	["while_curse_is_33%_expired_malediction"]=9120,
+	["while_curse_is_50%_expired_curse_effect_+%"]=9121,
+	["while_curse_is_75%_expired_enemy_damage_taken_+%"]=9122,
+	["while_stationary_gain_additional_physical_damage_reduction_%"]=9123,
+	["while_stationary_gain_life_regeneration_rate_per_minute_%"]=9124,
 	["while_using_mace_stun_threshold_reduction_+%"]=1367,
 	["while_using_sword_reduce_enemy_block_%"]=1609,
 	["whirling_blades_attack_speed_+%"]=3496,
@@ -212457,113 +212483,113 @@ return {
 	["wild_strike_damage_+%"]=3321,
 	["wild_strike_num_of_additional_projectiles_in_chain"]=3625,
 	["wild_strike_radius_+%"]=3456,
-	["winter_brand_chill_effect_+%"]=9124,
-	["winter_brand_damage_+%"]=9125,
-	["winter_brand_max_number_of_stages_+"]=9126,
-	["wintertide_and_arcanist_brand_branded_enemy_explode_for_25%_life_as_chaos_on_death_chance_%"]=9127,
-	["witch_passive_maximum_lightning_damage_+%_final"]=9128,
-	["witchhunter_armour_evasion_+%_final"]=9129,
-	["witchhunter_chance_to_explode_enemies_for_100%_of_life_as_physical"]=9130,
-	["witchhunter_up_to_damage_+%_final_against_targets_with_missing_focus"]=9131,
+	["winter_brand_chill_effect_+%"]=9125,
+	["winter_brand_damage_+%"]=9126,
+	["winter_brand_max_number_of_stages_+"]=9127,
+	["wintertide_and_arcanist_brand_branded_enemy_explode_for_25%_life_as_chaos_on_death_chance_%"]=9128,
+	["witch_passive_maximum_lightning_damage_+%_final"]=9129,
+	["witchhunter_armour_evasion_+%_final"]=9130,
+	["witchhunter_chance_to_explode_enemies_for_100%_of_life_as_physical"]=9131,
+	["witchhunter_up_to_damage_+%_final_against_targets_with_missing_focus"]=9132,
 	["with_bow_additional_block_%"]=2158,
-	["wither_area_of_effect_+%_every_second_while_channelling_up_to_+200%"]=9132,
+	["wither_area_of_effect_+%_every_second_while_channelling_up_to_+200%"]=9133,
 	["wither_duration_+%"]=3552,
-	["wither_expire_speed_+%"]=9133,
+	["wither_expire_speed_+%"]=9134,
 	["wither_radius_+%"]=3468,
-	["withered_effect_+%"]=9135,
-	["withered_effect_on_self_+%"]=9134,
+	["withered_effect_+%"]=9136,
+	["withered_effect_on_self_+%"]=9135,
 	["withered_on_hit_for_2_seconds_%_chance"]=4025,
-	["withered_on_hit_for_2_seconds_if_enemy_has_5_or_less_withered_chance_%"]=9136,
+	["withered_on_hit_for_2_seconds_if_enemy_has_5_or_less_withered_chance_%"]=9137,
 	["wrath_aura_effect_+%"]=3008,
 	["wrath_mana_reservation_+%"]=3667,
-	["wrath_mana_reservation_efficiency_+%"]=9138,
-	["wrath_mana_reservation_efficiency_-2%_per_1"]=9137,
-	["wrath_reserves_no_mana"]=9139,
-	["x%_faster_start_of_sorcery_ward_recovery"]=9140,
+	["wrath_mana_reservation_efficiency_+%"]=9139,
+	["wrath_mana_reservation_efficiency_-2%_per_1"]=9138,
+	["wrath_reserves_no_mana"]=9140,
+	["x%_faster_start_of_sorcery_ward_recovery"]=9141,
 	["x_to_maximum_life_per_2_intelligence"]=1727,
-	["you_and_allies_additional_block_%_if_have_attacked_recently"]=9141,
-	["you_and_allies_additional_spell_block_%_if_cast_spell_recently"]=9142,
+	["you_and_allies_additional_block_%_if_have_attacked_recently"]=9142,
+	["you_and_allies_additional_spell_block_%_if_cast_spell_recently"]=9143,
 	["you_and_allies_affected_by_your_placed_banners_regenerate_%_life_per_minute_per_stage"]=3695,
-	["you_and_allies_in_presence_all_damage_can_ignite_while_not_on_low_infernal_flame"]=9143,
-	["you_and_allies_in_presence_non_skill_base_all_damage_%_to_gain_as_fire_while_on_high_infernal_flame"]=9144,
+	["you_and_allies_in_presence_all_damage_can_ignite_while_not_on_low_infernal_flame"]=9144,
+	["you_and_allies_in_presence_non_skill_base_all_damage_%_to_gain_as_fire_while_on_high_infernal_flame"]=9145,
 	["you_and_minion_attack_and_cast_speed_+%_for_4_seconds_when_corpse_destroyed"]=3696,
-	["you_and_nearby_allies_armour_+_if_have_impaled_recently"]=9145,
-	["you_and_nearby_allies_critical_strike_chance_+%"]=9146,
-	["you_and_nearby_allies_critical_strike_multiplier_+"]=9147,
-	["you_and_nearby_allies_life_regeneration_rate_per_minute_%_if_corpse_consumed_recently"]=9148,
-	["you_and_nearby_allies_life_regeneration_rate_per_minute_%_if_have_blocked_recently"]=9149,
-	["you_and_nearby_allies_life_regeneration_rate_per_minute_%_if_you_hit_an_enemy_recently"]=9150,
-	["you_and_nearby_allys_gain_onslaught_for_4_seconds_on_warcry"]=9151,
-	["you_and_nearby_party_members_gain_x_rage_when_you_warcry"]=9152,
-	["you_and_totem_life_regeneration_rate_per_minute_%_per_active_totem"]=9153,
+	["you_and_nearby_allies_armour_+_if_have_impaled_recently"]=9146,
+	["you_and_nearby_allies_critical_strike_chance_+%"]=9147,
+	["you_and_nearby_allies_critical_strike_multiplier_+"]=9148,
+	["you_and_nearby_allies_life_regeneration_rate_per_minute_%_if_corpse_consumed_recently"]=9149,
+	["you_and_nearby_allies_life_regeneration_rate_per_minute_%_if_have_blocked_recently"]=9150,
+	["you_and_nearby_allies_life_regeneration_rate_per_minute_%_if_you_hit_an_enemy_recently"]=9151,
+	["you_and_nearby_allys_gain_onslaught_for_4_seconds_on_warcry"]=9152,
+	["you_and_nearby_party_members_gain_x_rage_when_you_warcry"]=9153,
+	["you_and_totem_life_regeneration_rate_per_minute_%_per_active_totem"]=9154,
 	["you_and_your_totems_gain_an_endurance_charge_on_burning_enemy_kill_%"]=2976,
-	["you_are_cursed_with_conductivity"]=9154,
-	["you_are_cursed_with_despair"]=9155,
-	["you_are_cursed_with_elemental_weakness"]=9156,
-	["you_are_cursed_with_enfeeble"]=9157,
-	["you_are_cursed_with_flammability"]=9158,
-	["you_are_cursed_with_frostbite"]=9159,
-	["you_are_cursed_with_temporal_chains"]=9160,
-	["you_are_cursed_with_vulnerability"]=9161,
-	["you_cannot_be_hindered"]=9162,
-	["you_cannot_have_non_animated_minions"]=9163,
+	["you_are_cursed_with_conductivity"]=9155,
+	["you_are_cursed_with_despair"]=9156,
+	["you_are_cursed_with_elemental_weakness"]=9157,
+	["you_are_cursed_with_enfeeble"]=9158,
+	["you_are_cursed_with_flammability"]=9159,
+	["you_are_cursed_with_frostbite"]=9160,
+	["you_are_cursed_with_temporal_chains"]=9161,
+	["you_are_cursed_with_vulnerability"]=9162,
+	["you_cannot_be_hindered"]=9163,
+	["you_cannot_have_non_animated_minions"]=9164,
 	["you_cannot_have_non_golem_minions"]=3326,
-	["you_cannot_have_non_spectre_minions"]=9164,
-	["you_cannot_inflict_curses"]=9165,
+	["you_cannot_have_non_spectre_minions"]=9165,
+	["you_cannot_inflict_curses"]=9166,
 	["you_count_as_full_life_while_affected_by_vulnerability"]=2779,
 	["you_count_as_low_life_while_affected_by_vulnerability"]=2780,
-	["you_count_as_low_life_while_not_on_full_life"]=9166,
-	["you_gain_%_life_when_one_of_your_minions_is_revived"]=9167,
-	["you_have_no_armour_or_energy_shield"]=9168,
-	["you_have_no_spirit"]=9169,
+	["you_count_as_low_life_while_not_on_full_life"]=9167,
+	["you_gain_%_life_when_one_of_your_minions_is_revived"]=9168,
+	["you_have_no_armour_or_energy_shield"]=9169,
+	["you_have_no_spirit"]=9170,
 	["your_aegis_skills_except_primal_are_disabled"]=635,
-	["your_ailments_deal_damage_faster_%_while_affected_by_malevolence"]=9171,
-	["your_attacks_cannot_be_blocked"]=9172,
-	["your_auras_except_anger_are_disabled"]=9173,
-	["your_auras_except_clarity_are_disabled"]=9174,
-	["your_auras_except_determination_are_disabled"]=9175,
-	["your_auras_except_discipline_are_disabled"]=9176,
-	["your_auras_except_grace_are_disabled"]=9177,
-	["your_auras_except_haste_are_disabled"]=9178,
-	["your_auras_except_hatred_are_disabled"]=9179,
-	["your_auras_except_malevolence_are_disabled"]=9180,
-	["your_auras_except_precision_are_disabled"]=9181,
-	["your_auras_except_pride_are_disabled"]=9182,
-	["your_auras_except_purity_of_elements_are_disabled"]=9183,
-	["your_auras_except_purity_of_fire_are_disabled"]=9184,
-	["your_auras_except_purity_of_ice_are_disabled"]=9185,
-	["your_auras_except_purity_of_lightning_are_disabled"]=9186,
-	["your_auras_except_vitality_are_disabled"]=9187,
-	["your_auras_except_wrath_are_disabled"]=9188,
-	["your_auras_except_zealotry_are_disabled"]=9189,
-	["your_consecrated_ground_effect_lingers_for_ms_after_leaving_the_area"]=9190,
+	["your_ailments_deal_damage_faster_%_while_affected_by_malevolence"]=9172,
+	["your_attacks_cannot_be_blocked"]=9173,
+	["your_auras_except_anger_are_disabled"]=9174,
+	["your_auras_except_clarity_are_disabled"]=9175,
+	["your_auras_except_determination_are_disabled"]=9176,
+	["your_auras_except_discipline_are_disabled"]=9177,
+	["your_auras_except_grace_are_disabled"]=9178,
+	["your_auras_except_haste_are_disabled"]=9179,
+	["your_auras_except_hatred_are_disabled"]=9180,
+	["your_auras_except_malevolence_are_disabled"]=9181,
+	["your_auras_except_precision_are_disabled"]=9182,
+	["your_auras_except_pride_are_disabled"]=9183,
+	["your_auras_except_purity_of_elements_are_disabled"]=9184,
+	["your_auras_except_purity_of_fire_are_disabled"]=9185,
+	["your_auras_except_purity_of_ice_are_disabled"]=9186,
+	["your_auras_except_purity_of_lightning_are_disabled"]=9187,
+	["your_auras_except_vitality_are_disabled"]=9188,
+	["your_auras_except_wrath_are_disabled"]=9189,
+	["your_auras_except_zealotry_are_disabled"]=9190,
+	["your_consecrated_ground_effect_lingers_for_ms_after_leaving_the_area"]=9191,
 	["your_consecrated_ground_grants_damage_+%"]=3853,
 	["your_elemental_resistances_do_not_exist"]=2515,
-	["your_es_takes_%_hit_damage_from_allies_in_presence_before_them"]=9191,
-	["your_marks_transfer_to_nearby_enemies_on_death_%_chance"]=9192,
-	["your_movement_skills_are_disabled"]=9193,
-	["your_profane_ground_effect_lingers_for_ms_after_leaving_the_area"]=9194,
-	["your_shield_skills_are_disabled"]=9195,
-	["your_spells_are_disabled"]=9196,
-	["your_travel_skills_are_disabled"]=9197,
-	["your_travel_skills_except_dash_are_disabled"]=9198,
-	["zealotry_aura_effect_+%"]=9211,
-	["zealotry_mana_reservation_+%"]=9214,
-	["zealotry_mana_reservation_efficiency_+%"]=9213,
-	["zealotry_mana_reservation_efficiency_-2%_per_1"]=9212,
-	["zealotry_reserves_no_mana"]=9215,
-	["zero_chaos_resistance"]=9216,
+	["your_es_takes_%_hit_damage_from_allies_in_presence_before_them"]=9192,
+	["your_marks_transfer_to_nearby_enemies_on_death_%_chance"]=9193,
+	["your_movement_skills_are_disabled"]=9194,
+	["your_profane_ground_effect_lingers_for_ms_after_leaving_the_area"]=9195,
+	["your_shield_skills_are_disabled"]=9196,
+	["your_spells_are_disabled"]=9197,
+	["your_travel_skills_are_disabled"]=9198,
+	["your_travel_skills_except_dash_are_disabled"]=9199,
+	["zealotry_aura_effect_+%"]=9212,
+	["zealotry_mana_reservation_+%"]=9215,
+	["zealotry_mana_reservation_efficiency_+%"]=9214,
+	["zealotry_mana_reservation_efficiency_-2%_per_1"]=9213,
+	["zealotry_reserves_no_mana"]=9216,
+	["zero_chaos_resistance"]=9217,
 	["zombie_attack_speed_+%"]=3484,
-	["zombie_caustic_cloud_on_death_maximum_life_per_minute_to_deal_as_chaos_damage_%"]=9217,
+	["zombie_caustic_cloud_on_death_maximum_life_per_minute_to_deal_as_chaos_damage_%"]=9218,
 	["zombie_chaos_elemental_damage_resistance_%"]=2285,
 	["zombie_damage_+%"]=3278,
 	["zombie_elemental_resistances_%"]=3610,
 	["zombie_explode_on_kill_%_fire_damage_to_deal"]=2367,
 	["zombie_maximum_life_+"]=2284,
 	["zombie_physical_damage_+%"]=2366,
-	["zombie_physical_damage_+%_final"]=9218,
+	["zombie_physical_damage_+%_final"]=9219,
 	["zombie_scale_+%"]=2365,
-	["zombie_slam_area_of_effect_+%"]=9219,
-	["zombie_slam_cooldown_speed_+%"]=9220,
-	["zombie_slam_damage_+%"]=9221
+	["zombie_slam_area_of_effect_+%"]=9220,
+	["zombie_slam_cooldown_speed_+%"]=9221,
+	["zombie_slam_damage_+%"]=9222
 }

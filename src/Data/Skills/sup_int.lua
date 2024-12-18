@@ -107,6 +107,25 @@ skills["SupportAstralProjectionPlayer"] = {
 		[1] = { levelRequirement = 0, actorLevel = 1, },
 	},
 }
+skills["SupportBiddingPlayer"] = {
+	name = "Bidding",
+	description = "Supports Minion Skills. Supported Minions deal significantly more damage with their Command Skills.",
+	color = 3,
+	incrementalEffectiveness = 0.054999999701977,
+	support = true,
+	requireSkillTypes = { SkillType.CommandableMinion, SkillType.CommandsMinions, },
+	addSkillTypes = { },
+	excludeSkillTypes = { },
+	statDescriptionScope = "gem_stat_descriptions",
+	constantStats = {
+		{ "support_command_skill_damage_+%_final", 30 },
+	},
+	stats = {
+	},
+	levels = {
+		[1] = { manaMultiplier = 30, levelRequirement = 0, actorLevel = 1, },
+	},
+}
 skills["SupportBitingFrostPlayer"] = {
 	name = "Biting Frost",
 	description = "Supports any skill that Hits enemies, causing them to deal more damage to Frozen enemies but consume their Freeze. Cannot support skills that Consume Freeze.",
@@ -351,7 +370,7 @@ skills["SupportClarityPlayer"] = {
 }
 skills["SupportColdExposurePlayer"] = {
 	name = "Cold Exposure",
-	description = "Supports any skill that Hits enemies, causing it to deal less damage but inflict Cold Exposure when it Critically Hits an enemy.",
+	description = "Supports any skill that Hits enemies, causing it to inflict Cold Exposure when it Critically Hits an enemy.",
 	color = 3,
 	incrementalEffectiveness = 0.054999999701977,
 	support = true,
@@ -361,12 +380,11 @@ skills["SupportColdExposurePlayer"] = {
 	statDescriptionScope = "gem_stat_descriptions",
 	constantStats = {
 		{ "inflict_cold_exposure_for_x_ms_on_cold_crit", 8000 },
-		{ "support_cold_exposure_damage_+%_final", -25 },
 	},
 	stats = {
 	},
 	levels = {
-		[1] = { levelRequirement = 0, actorLevel = 1, },
+		[1] = { manaMultiplier = 20, levelRequirement = 0, actorLevel = 1, },
 	},
 }
 skills["SupportAddedColdDamagePlayer"] = {
@@ -458,17 +476,17 @@ skills["SupportConcentratedEffectPlayer"] = {
 }
 skills["SupportConsideredCastingPlayer"] = {
 	name = "Considered Casting",
-	description = "Supports Spell Skills that Hit Enemies, boosting Damage at the cost of Cast Speed.",
+	description = "Supports Spell Skills that Hit Enemies and you cast yourself, boosting Damage at the cost of Cast Speed.",
 	color = 3,
 	incrementalEffectiveness = 0.054999999701977,
 	support = true,
 	requireSkillTypes = { SkillType.Spell, },
 	addSkillTypes = { },
-	excludeSkillTypes = { SkillType.FixedCastTime, },
+	excludeSkillTypes = { SkillType.FixedCastTime, SkillType.Trapped, SkillType.RemoteMined, SkillType.SummonsTotem, SkillType.UsedByTotem, SkillType.HasReservation, SkillType.ReservationBecomesCost, SkillType.NOT, SkillType.AND, },
 	statDescriptionScope = "gem_stat_descriptions",
 	constantStats = {
-		{ "support_slow_cast_cast_speed_+%_final", -10 },
-		{ "support_slow_cast_spell_damage_+%_final", 25 },
+		{ "support_slow_cast_cast_speed_+%_final", -15 },
+		{ "support_slow_cast_spell_damage_+%_final", 40 },
 	},
 	stats = {
 	},
@@ -584,7 +602,7 @@ skills["SupportDecayingHexPlayer"] = {
 	excludeSkillTypes = { },
 	statDescriptionScope = "gem_stat_descriptions",
 	constantStats = {
-		{ "support_decaying_hex_base_chaos_damage_per_minute_as_%_of_intelligence_for_8_seconds", 1800 },
+		{ "support_decaying_hex_base_chaos_damage_per_minute_as_%_of_intelligence_for_8_seconds", 3600 },
 	},
 	stats = {
 	},
@@ -783,7 +801,7 @@ skills["SupportExecratePlayer"] = {
 	statDescriptionScope = "gem_stat_descriptions",
 	constantStats = {
 		{ "support_hourglass_display_cooldown_time_ms", 8000 },
-		{ "support_ailment_cooldown_ailment_chance_+%_final", 50 },
+		{ "support_ailment_cooldown_ailment_chance_+%_final", 100 },
 	},
 	stats = {
 	},
@@ -1870,8 +1888,6 @@ skills["SupportWildshardsPlayer"] = {
 	statDescriptionScope = "gem_stat_descriptions",
 	constantStats = {
 		{ "spell_skill_%_chance_to_fire_8_additional_projectiles_in_nova", 20 },
-		{ "projectile_spiral_nova_time_ms", 300 },
-		{ "projectile_spiral_nova_angle", 315 },
 	},
 	stats = {
 	},
@@ -1890,7 +1906,7 @@ skills["SupportWitheringTouchPlayer"] = {
 	excludeSkillTypes = { },
 	statDescriptionScope = "gem_stat_descriptions",
 	constantStats = {
-		{ "support_withering_touch_damage_+%_final", -50 },
+		{ "support_withering_touch_damage_+%_final", -25 },
 		{ "support_withered_base_duration_ms", 4000 },
 		{ "withered_on_chaos_damage_hit_chance_%", 100 },
 	},

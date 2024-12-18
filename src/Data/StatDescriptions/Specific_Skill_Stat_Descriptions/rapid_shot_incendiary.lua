@@ -9,6 +9,13 @@ return {
 	},
 	[2]={
 		[1]={
+		},
+		stats={
+			[1]="display_rapid_shot_charge_up_time_ms"
+		}
+	},
+	[3]={
+		[1]={
 			[1]={
 				limit={
 					[1]={
@@ -23,7 +30,7 @@ return {
 			[1]="rapid_shot_all_damage_%_to_gain_as_fire_per_stack"
 		}
 	},
-	[3]={
+	[4]={
 		[1]={
 			[1]={
 				limit={
@@ -39,7 +46,7 @@ return {
 			[1]="rapid_shot_charge_up_time_as_%_of_attack_time"
 		}
 	},
-	[4]={
+	[5]={
 		[1]={
 			[1]={
 				limit={
@@ -68,7 +75,7 @@ return {
 			[1]="rapid_shot_heat_gained_per_minue_while_performing"
 		}
 	},
-	[5]={
+	[6]={
 		[1]={
 			[1]={
 				limit={
@@ -85,9 +92,10 @@ return {
 		}
 	},
 	["base_skill_effect_duration"]=1,
+	["display_rapid_shot_charge_up_time_ms"]=2,
 	parent="skill_stat_descriptions",
-	["rapid_shot_all_damage_%_to_gain_as_fire_per_stack"]=2,
-	["rapid_shot_charge_up_time_as_%_of_attack_time"]=3,
-	["rapid_shot_heat_gained_per_minue_while_performing"]=4,
-	["rapid_shot_next_grenade_all_damage_%_to_gain_as_fire_per_stack"]=5
+	["rapid_shot_all_damage_%_to_gain_as_fire_per_stack"]=3,
+	["rapid_shot_charge_up_time_as_%_of_attack_time"]=4,
+	["rapid_shot_heat_gained_per_minue_while_performing"]=5,
+	["rapid_shot_next_grenade_all_damage_%_to_gain_as_fire_per_stack"]=6
 }

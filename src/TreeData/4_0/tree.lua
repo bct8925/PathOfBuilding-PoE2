@@ -11663,6 +11663,16 @@ return {
 		},
 		[909]={
 			nodes={
+				[1]=34497
+			},
+			orbits={
+				[1]=0
+			},
+			x=7768.26,
+			y=226
+		},
+		[910]={
+			nodes={
 				[1]=33404
 			},
 			orbits={
@@ -11671,7 +11681,7 @@ return {
 			x=7810.1,
 			y=-4823.01
 		},
-		[910]={
+		[911]={
 			nodes={
 				[1]=14724
 			},
@@ -11681,7 +11691,7 @@ return {
 			x=7866.21,
 			y=5340.56
 		},
-		[911]={
+		[912]={
 			nodes={
 				[1]=52361,
 				[2]=57462,
@@ -11699,7 +11709,7 @@ return {
 			x=7868.42,
 			y=-3177.92
 		},
-		[912]={
+		[913]={
 			nodes={
 				[1]=47976
 			},
@@ -11709,7 +11719,7 @@ return {
 			x=7886.46,
 			y=-7151.38
 		},
-		[913]={
+		[914]={
 			nodes={
 				[1]=63830,
 				[2]=44841,
@@ -11731,7 +11741,7 @@ return {
 			x=7891.25,
 			y=8057.48
 		},
-		[914]={
+		[915]={
 			nodes={
 				[1]=48462,
 				[2]=38497,
@@ -11746,7 +11756,7 @@ return {
 			x=7901.35,
 			y=8803.79
 		},
-		[915]={
+		[916]={
 			nodes={
 				[1]=62542,
 				[2]=45713,
@@ -11762,7 +11772,7 @@ return {
 			x=7948.31,
 			y=-4161.35
 		},
-		[916]={
+		[917]={
 			nodes={
 				[1]=32301
 			},
@@ -11772,7 +11782,7 @@ return {
 			x=7952.58,
 			y=5617.65
 		},
-		[917]={
+		[918]={
 			nodes={
 				[1]=59740
 			},
@@ -11782,7 +11792,7 @@ return {
 			x=7993.13,
 			y=2729.64
 		},
-		[918]={
+		[919]={
 			nodes={
 				[1]=34483
 			},
@@ -11792,7 +11802,7 @@ return {
 			x=7994.25,
 			y=-1873.69
 		},
-		[919]={
+		[920]={
 			nodes={
 				[1]=49996
 			},
@@ -11802,7 +11812,7 @@ return {
 			x=7994.25,
 			y=-996.85
 		},
-		[920]={
+		[921]={
 			nodes={
 				[1]=32183
 			},
@@ -11812,7 +11822,7 @@ return {
 			x=7994.25,
 			y=-571.97
 		},
-		[921]={
+		[922]={
 			nodes={
 				[1]=12253
 			},
@@ -11822,7 +11832,7 @@ return {
 			x=7994.25,
 			y=0
 		},
-		[922]={
+		[923]={
 			nodes={
 				[1]=35696
 			},
@@ -11832,7 +11842,7 @@ return {
 			x=7994.25,
 			y=1153.21
 		},
-		[923]={
+		[924]={
 			nodes={
 				[1]=2408
 			},
@@ -11842,7 +11852,7 @@ return {
 			x=7994.25,
 			y=2075.69
 		},
-		[924]={
+		[925]={
 			nodes={
 				[1]=10648,
 				[2]=26400,
@@ -11856,7 +11866,7 @@ return {
 			x=8000.05,
 			y=4152.81
 		},
-		[925]={
+		[926]={
 			nodes={
 				[1]=37813
 			},
@@ -11866,7 +11876,7 @@ return {
 			x=8057.07,
 			y=5171.69
 		},
-		[926]={
+		[927]={
 			nodes={
 				[1]=17146,
 				[2]=57518,
@@ -11882,7 +11892,17 @@ return {
 			x=8107.67,
 			y=3245.63
 		},
-		[927]={
+		[928]={
+			nodes={
+				[1]=16401
+			},
+			orbits={
+				[1]=0
+			},
+			x=8167.23,
+			y=230.47
+		},
+		[929]={
 			nodes={
 				[1]=24786
 			},
@@ -11892,7 +11912,7 @@ return {
 			x=8177.92,
 			y=6850.21
 		},
-		[928]={
+		[930]={
 			nodes={
 				[1]=50277
 			},
@@ -11902,7 +11922,7 @@ return {
 			x=8194.81,
 			y=5525.79
 		},
-		[929]={
+		[931]={
 			nodes={
 				[1]=44932
 			},
@@ -11912,7 +11932,17 @@ return {
 			x=8197.54,
 			y=5351.13
 		},
-		[930]={
+		[932]={
+			nodes={
+				[1]=37113
+			},
+			orbits={
+				[1]=0
+			},
+			x=8246.52,
+			y=446.42
+		},
+		[933]={
 			nodes={
 				[1]=50701
 			},
@@ -11922,17 +11952,7 @@ return {
 			x=8253.92,
 			y=5299.58
 		},
-		[931]={
-			nodes={
-				[1]=34497
-			},
-			orbits={
-				[1]=0
-			},
-			x=8261.54,
-			y=267.3
-		},
-		[932]={
+		[934]={
 			nodes={
 				[1]=24070
 			},
@@ -11942,7 +11962,7 @@ return {
 			x=8357.14,
 			y=1153.21
 		},
-		[933]={
+		[935]={
 			nodes={
 				[1]=12239
 			},
@@ -11952,7 +11972,7 @@ return {
 			x=8374.56,
 			y=-2532.39
 		},
-		[934]={
+		[936]={
 			nodes={
 				[1]=51602,
 				[2]=23305,
@@ -11967,7 +11987,7 @@ return {
 			x=8376,
 			y=1815.57
 		},
-		[935]={
+		[937]={
 			nodes={
 				[1]=5163,
 				[2]=48103,
@@ -11981,7 +12001,7 @@ return {
 			x=8397.3,
 			y=-1209.02
 		},
-		[936]={
+		[938]={
 			nodes={
 				[1]=1599,
 				[2]=35173,
@@ -11998,7 +12018,27 @@ return {
 			x=8401.88,
 			y=-2579.71
 		},
-		[937]={
+		[939]={
+			nodes={
+				[1]=43090
+			},
+			orbits={
+				[1]=0
+			},
+			x=8447.81,
+			y=643.92
+		},
+		[940]={
+			nodes={
+				[1]=44490
+			},
+			orbits={
+				[1]=0
+			},
+			x=8448.58,
+			y=249.7
+		},
+		[941]={
 			nodes={
 				[1]=39881
 			},
@@ -12008,7 +12048,7 @@ return {
 			x=8464.62,
 			y=-2688.36
 		},
-		[938]={
+		[942]={
 			nodes={
 				[1]=7809
 			},
@@ -12018,7 +12058,7 @@ return {
 			x=8464.96,
 			y=-3633.16
 		},
-		[939]={
+		[943]={
 			nodes={
 				[1]=54984
 			},
@@ -12028,7 +12068,7 @@ return {
 			x=8470.97,
 			y=4890.73
 		},
-		[940]={
+		[944]={
 			nodes={
 				[1]=7302,
 				[2]=14516,
@@ -12046,7 +12086,7 @@ return {
 			x=8494.27,
 			y=-7759.19
 		},
-		[941]={
+		[945]={
 			nodes={
 				[1]=61800,
 				[2]=52630,
@@ -12063,7 +12103,7 @@ return {
 			x=8525.13,
 			y=-366.15
 		},
-		[942]={
+		[946]={
 			nodes={
 				[1]=19074,
 				[2]=8560,
@@ -12085,7 +12125,7 @@ return {
 			x=8571.5,
 			y=2408.96
 		},
-		[943]={
+		[947]={
 			nodes={
 				[1]=32672,
 				[2]=23362,
@@ -12102,7 +12142,7 @@ return {
 			x=8602.39,
 			y=-5782.69
 		},
-		[944]={
+		[948]={
 			nodes={
 				[1]=3431,
 				[2]=5305,
@@ -12115,7 +12155,7 @@ return {
 			x=8625.62,
 			y=5993.25
 		},
-		[945]={
+		[949]={
 			nodes={
 				[1]=59538
 			},
@@ -12125,7 +12165,7 @@ return {
 			x=8684.39,
 			y=-6347.76
 		},
-		[946]={
+		[950]={
 			nodes={
 				[1]=58397,
 				[2]=19338,
@@ -12138,7 +12178,7 @@ return {
 			x=8692.14,
 			y=1153.21
 		},
-		[947]={
+		[951]={
 			nodes={
 				[1]=25055,
 				[2]=13799,
@@ -12154,7 +12194,7 @@ return {
 			x=8732.17,
 			y=4438.38
 		},
-		[948]={
+		[952]={
 			nodes={
 				[1]=60483
 			},
@@ -12164,7 +12204,7 @@ return {
 			x=8733.08,
 			y=-3633.16
 		},
-		[949]={
+		[953]={
 			nodes={
 				[1]=32509,
 				[2]=47614,
@@ -12181,7 +12221,7 @@ return {
 			x=8838.29,
 			y=-4730.53
 		},
-		[950]={
+		[954]={
 			nodes={
 				[1]=36071,
 				[2]=38369,
@@ -12208,7 +12248,7 @@ return {
 			x=8847.14,
 			y=7072.15
 		},
-		[951]={
+		[955]={
 			nodes={
 				[1]=18717
 			},
@@ -12218,7 +12258,7 @@ return {
 			x=8862.26,
 			y=-3861.86
 		},
-		[952]={
+		[956]={
 			nodes={
 				[1]=24287
 			},
@@ -12228,7 +12268,7 @@ return {
 			x=8886.25,
 			y=6141.88
 		},
-		[953]={
+		[957]={
 			nodes={
 				[1]=8273
 			},
@@ -12238,7 +12278,7 @@ return {
 			x=8922.01,
 			y=-4178.25
 		},
-		[954]={
+		[958]={
 			nodes={
 				[1]=60210,
 				[2]=6078,
@@ -12255,7 +12295,7 @@ return {
 			x=8940.31,
 			y=-1873.69
 		},
-		[955]={
+		[959]={
 			nodes={
 				[1]=15356
 			},
@@ -12265,7 +12305,7 @@ return {
 			x=8992.39,
 			y=-3633.64
 		},
-		[956]={
+		[960]={
 			nodes={
 				[1]=40990
 			},
@@ -12275,7 +12315,7 @@ return {
 			x=8993.62,
 			y=-3178.16
 		},
-		[957]={
+		[961]={
 			nodes={
 				[1]=1801,
 				[2]=60,
@@ -12290,7 +12330,7 @@ return {
 			x=8997.63,
 			y=435.18
 		},
-		[958]={
+		[962]={
 			nodes={
 				[1]=2334
 			},
@@ -12300,7 +12340,7 @@ return {
 			x=9027.14,
 			y=1153.21
 		},
-		[959]={
+		[963]={
 			nodes={
 				[1]=41017
 			},
@@ -12310,7 +12350,7 @@ return {
 			x=9032.75,
 			y=0
 		},
-		[960]={
+		[964]={
 			nodes={
 				[1]=53150,
 				[2]=17589,
@@ -12330,7 +12370,7 @@ return {
 			x=9064.04,
 			y=-592.96
 		},
-		[961]={
+		[965]={
 			nodes={
 				[1]=22927,
 				[2]=20582,
@@ -12342,7 +12382,7 @@ return {
 			x=9118.25,
 			y=5264.15
 		},
-		[962]={
+		[966]={
 			nodes={
 				[1]=17420
 			},
@@ -12352,7 +12392,7 @@ return {
 			x=9124.17,
 			y=-3861.86
 		},
-		[963]={
+		[967]={
 			nodes={
 				[1]=18815
 			},
@@ -12362,7 +12402,7 @@ return {
 			x=9125.5,
 			y=-3407.73
 		},
-		[964]={
+		[968]={
 			nodes={
 				[1]=14226
 			},
@@ -12372,7 +12412,7 @@ return {
 			x=9136.56,
 			y=6392.19
 		},
-		[965]={
+		[969]={
 			nodes={
 				[1]=25565
 			},
@@ -12382,7 +12422,7 @@ return {
 			x=9152.09,
 			y=-4119.84
 		},
-		[966]={
+		[970]={
 			nodes={
 				[1]=36364
 			},
@@ -12392,7 +12432,7 @@ return {
 			x=9235.75,
 			y=3214.99
 		},
-		[967]={
+		[971]={
 			nodes={
 				[1]=17724
 			},
@@ -12402,7 +12442,7 @@ return {
 			x=9358.95,
 			y=-1050.49
 		},
-		[968]={
+		[972]={
 			nodes={
 				[1]=27422,
 				[2]=2021,
@@ -12419,7 +12459,7 @@ return {
 			x=9410.52,
 			y=3793.92
 		},
-		[969]={
+		[973]={
 			nodes={
 				[1]=61834
 			},
@@ -12429,7 +12469,7 @@ return {
 			x=9512.58,
 			y=-5497.3
 		},
-		[970]={
+		[974]={
 			nodes={
 				[1]=37616,
 				[2]=8644,
@@ -12453,7 +12493,7 @@ return {
 			x=9516.92,
 			y=-7180.28
 		},
-		[971]={
+		[975]={
 			nodes={
 				[1]=60735
 			},
@@ -12463,7 +12503,7 @@ return {
 			x=9527.62,
 			y=5500.5
 		},
-		[972]={
+		[976]={
 			nodes={
 				[1]=63600
 			},
@@ -12473,7 +12513,7 @@ return {
 			x=9543.04,
 			y=2943.23
 		},
-		[973]={
+		[977]={
 			nodes={
 				[1]=10162,
 				[2]=3336,
@@ -12488,7 +12528,7 @@ return {
 			x=9571.39,
 			y=-3977.46
 		},
-		[974]={
+		[978]={
 			nodes={
 				[1]=44891,
 				[2]=55835,
@@ -12503,7 +12543,7 @@ return {
 			x=9590.33,
 			y=-3334.83
 		},
-		[975]={
+		[979]={
 			nodes={
 				[1]=32664
 			},
@@ -12513,7 +12553,7 @@ return {
 			x=9678.35,
 			y=-1026.03
 		},
-		[976]={
+		[980]={
 			nodes={
 				[1]=12116,
 				[2]=52410,
@@ -12530,7 +12570,7 @@ return {
 			x=9689.37,
 			y=5590.69
 		},
-		[977]={
+		[981]={
 			nodes={
 				[1]=38668
 			},
@@ -12540,7 +12580,7 @@ return {
 			x=9690.7,
 			y=-1158.91
 		},
-		[978]={
+		[982]={
 			nodes={
 				[1]=65091,
 				[2]=1841,
@@ -12561,7 +12601,7 @@ return {
 			x=9720.67,
 			y=1153.21
 		},
-		[979]={
+		[983]={
 			nodes={
 				[1]=62998
 			},
@@ -12571,7 +12611,7 @@ return {
 			x=9746.75,
 			y=3123.88
 		},
-		[980]={
+		[984]={
 			nodes={
 				[1]=722
 			},
@@ -12581,7 +12621,7 @@ return {
 			x=9755.52,
 			y=-4566.29
 		},
-		[981]={
+		[985]={
 			nodes={
 				[1]=20105
 			},
@@ -12591,7 +12631,7 @@ return {
 			x=9811.35,
 			y=6600.96
 		},
-		[982]={
+		[986]={
 			nodes={
 				[1]=48116
 			},
@@ -12601,7 +12641,7 @@ return {
 			x=9826.06,
 			y=4319.11
 		},
-		[983]={
+		[987]={
 			nodes={
 				[1]=14262
 			},
@@ -12611,7 +12651,7 @@ return {
 			x=9858.64,
 			y=0
 		},
-		[984]={
+		[988]={
 			nodes={
 				[1]=38342,
 				[2]=21945,
@@ -12625,7 +12665,7 @@ return {
 			x=9860.22,
 			y=-356.79
 		},
-		[985]={
+		[989]={
 			nodes={
 				[1]=65212,
 				[2]=32543,
@@ -12639,7 +12679,7 @@ return {
 			x=9864.06,
 			y=1985.04
 		},
-		[986]={
+		[990]={
 			nodes={
 				[1]=43867,
 				[2]=10423,
@@ -12656,7 +12696,7 @@ return {
 			x=9893.67,
 			y=-2442.76
 		},
-		[987]={
+		[991]={
 			nodes={
 				[1]=20649
 			},
@@ -12666,7 +12706,7 @@ return {
 			x=9935.05,
 			y=2865.41
 		},
-		[988]={
+		[992]={
 			nodes={
 				[1]=5188
 			},
@@ -12676,7 +12716,7 @@ return {
 			x=9958.34,
 			y=-1188.03
 		},
-		[989]={
+		[993]={
 			nodes={
 				[1]=3640,
 				[2]=28963,
@@ -12690,7 +12730,7 @@ return {
 			x=9990.46,
 			y=-1396.81
 		},
-		[990]={
+		[994]={
 			nodes={
 				[1]=49320,
 				[2]=30973
@@ -12701,7 +12741,7 @@ return {
 			x=10091.58,
 			y=-5603.69
 		},
-		[991]={
+		[995]={
 			nodes={
 				[1]=15775
 			},
@@ -12711,7 +12751,7 @@ return {
 			x=10091.7,
 			y=-3334.83
 		},
-		[992]={
+		[996]={
 			nodes={
 				[1]=2582
 			},
@@ -12721,7 +12761,7 @@ return {
 			x=10162.49,
 			y=3097.55
 		},
-		[993]={
+		[997]={
 			nodes={
 				[1]=30808
 			},
@@ -12731,7 +12771,7 @@ return {
 			x=10379,
 			y=-2278.35
 		},
-		[994]={
+		[998]={
 			nodes={
 				[1]=27705
 			},
@@ -12741,7 +12781,7 @@ return {
 			x=10425.2,
 			y=2135.38
 		},
-		[995]={
+		[999]={
 			nodes={
 				[1]=28976
 			},
@@ -12751,7 +12791,7 @@ return {
 			x=10447.67,
 			y=-3334.83
 		},
-		[996]={
+		[1000]={
 			nodes={
 				[1]=41873,
 				[2]=55995,
@@ -12764,7 +12804,7 @@ return {
 			x=10460.25,
 			y=3297.39
 		},
-		[997]={
+		[1001]={
 			nodes={
 				[1]=37484
 			},
@@ -12774,7 +12814,7 @@ return {
 			x=10493.01,
 			y=824.72
 		},
-		[998]={
+		[1002]={
 			nodes={
 				[1]=29959,
 				[2]=60362,
@@ -12789,7 +12829,7 @@ return {
 			x=10518.76,
 			y=-2799.95
 		},
-		[999]={
+		[1003]={
 			nodes={
 				[1]=6030,
 				[2]=2500,
@@ -12808,7 +12848,7 @@ return {
 			x=10572.13,
 			y=-3790.36
 		},
-		[1000]={
+		[1004]={
 			nodes={
 				[1]=632
 			},
@@ -12818,7 +12858,7 @@ return {
 			x=10657.31,
 			y=-5268.96
 		},
-		[1001]={
+		[1005]={
 			nodes={
 				[1]=48773
 			},
@@ -12828,7 +12868,7 @@ return {
 			x=10682.01,
 			y=1152.07
 		},
-		[1002]={
+		[1006]={
 			nodes={
 				[1]=34612,
 				[2]=25992,
@@ -12852,7 +12892,7 @@ return {
 			x=10682.25,
 			y=4548.52
 		},
-		[1003]={
+		[1007]={
 			nodes={
 				[1]=23374
 			},
@@ -12862,7 +12902,7 @@ return {
 			x=10697.51,
 			y=-3334.83
 		},
-		[1004]={
+		[1008]={
 			nodes={
 				[1]=14267
 			},
@@ -12872,7 +12912,7 @@ return {
 			x=10699.04,
 			y=-1058.34
 		},
-		[1005]={
+		[1009]={
 			nodes={
 				[1]=18969
 			},
@@ -12882,7 +12922,7 @@ return {
 			x=10793.45,
 			y=4578.32
 		},
-		[1006]={
+		[1010]={
 			nodes={
 				[1]=52215
 			},
@@ -12892,7 +12932,7 @@ return {
 			x=10794.6,
 			y=-5031.25
 		},
-		[1007]={
+		[1011]={
 			nodes={
 				[1]=3419,
 				[2]=28797,
@@ -12904,7 +12944,7 @@ return {
 			x=10801.88,
 			y=-4373.44
 		},
-		[1008]={
+		[1012]={
 			nodes={
 				[1]=38993
 			},
@@ -12914,7 +12954,7 @@ return {
 			x=10852.75,
 			y=5275.51
 		},
-		[1009]={
+		[1013]={
 			nodes={
 				[1]=19779,
 				[2]=63891,
@@ -12930,7 +12970,7 @@ return {
 			x=10896.21,
 			y=-2373.09
 		},
-		[1010]={
+		[1014]={
 			nodes={
 				[1]=38493,
 				[2]=38537,
@@ -12951,7 +12991,7 @@ return {
 			x=10968.89,
 			y=2679.08
 		},
-		[1011]={
+		[1015]={
 			nodes={
 				[1]=32763
 			},
@@ -12961,7 +13001,7 @@ return {
 			x=10978.46,
 			y=-82.24
 		},
-		[1012]={
+		[1016]={
 			nodes={
 				[1]=56366,
 				[2]=54058,
@@ -12977,7 +13017,7 @@ return {
 			x=11047.97,
 			y=-5335.92
 		},
-		[1013]={
+		[1017]={
 			nodes={
 				[1]=28835,
 				[2]=60480,
@@ -12997,7 +13037,7 @@ return {
 			x=11056,
 			y=1402.07
 		},
-		[1014]={
+		[1018]={
 			nodes={
 				[1]=328
 			},
@@ -13007,7 +13047,7 @@ return {
 			x=11202.42,
 			y=4037.83
 		},
-		[1015]={
+		[1019]={
 			nodes={
 				[1]=326
 			},
@@ -13017,7 +13057,7 @@ return {
 			x=11296.38,
 			y=-597.47
 		},
-		[1016]={
+		[1020]={
 			nodes={
 				[1]=59694
 			},
@@ -13027,7 +13067,7 @@ return {
 			x=11407.17,
 			y=-568.47
 		},
-		[1017]={
+		[1021]={
 			nodes={
 				[1]=2361,
 				[2]=37514,
@@ -13051,7 +13091,7 @@ return {
 			x=11480.37,
 			y=-1062.86
 		},
-		[1018]={
+		[1022]={
 			nodes={
 				[1]=28638
 			},
@@ -13061,7 +13101,7 @@ return {
 			x=11496.38,
 			y=-1142.98
 		},
-		[1019]={
+		[1023]={
 			nodes={
 				[1]=64700
 			},
@@ -13071,7 +13111,7 @@ return {
 			x=11561.67,
 			y=-1587.55
 		},
-		[1020]={
+		[1024]={
 			nodes={
 				[1]=32442
 			},
@@ -13081,7 +13121,7 @@ return {
 			x=11670.93,
 			y=-1552.85
 		},
-		[1025]={
+		[1029]={
 			nodes={
 				[1]=5817
 			},
@@ -13091,7 +13131,7 @@ return {
 			x=13009.629642251,
 			y=6932.8734672763
 		},
-		[1026]={
+		[1030]={
 			nodes={
 				[1]=12033,
 				[2]=42416,
@@ -13114,7 +13154,7 @@ return {
 			x=13098.579642251,
 			y=5944.3334672763
 		},
-		[1027]={
+		[1031]={
 			nodes={
 				[1]=59913
 			},
@@ -13124,7 +13164,7 @@ return {
 			x=13190.399642251,
 			y=6483.1934672763
 		},
-		[1028]={
+		[1032]={
 			nodes={
 				[1]=29871
 			},
@@ -13134,7 +13174,7 @@ return {
 			x=13292.649642251,
 			y=6857.0434672763
 		},
-		[1029]={
+		[1033]={
 			nodes={
 				[1]=8143,
 				[2]=65173,
@@ -13168,7 +13208,7 @@ return {
 			x=12139.499107048,
 			y=-9262.1256081398
 		},
-		[1030]={
+		[1034]={
 			nodes={
 				[1]=59542
 			},
@@ -13178,7 +13218,7 @@ return {
 			x=13556.919642251,
 			y=6311.8334672763
 		},
-		[1031]={
+		[1035]={
 			nodes={
 				[1]=30
 			},
@@ -13188,7 +13228,7 @@ return {
 			x=13575.669642251,
 			y=6781.2034672763
 		},
-		[1032]={
+		[1036]={
 			nodes={
 				[1]=24226
 			},
@@ -13198,7 +13238,7 @@ return {
 			x=13609.639642251,
 			y=5755.9934672763
 		},
-		[1033]={
+		[1037]={
 			nodes={
 				[1]=41875
 			},
@@ -13208,7 +13248,7 @@ return {
 			x=13650.439642251,
 			y=6148.8334672763
 		},
-		[1035]={
+		[1039]={
 			nodes={
 				[1]=23508
 			},
@@ -13218,7 +13258,7 @@ return {
 			x=14002.419642251,
 			y=5266.1034672763
 		},
-		[1036]={
+		[1040]={
 			nodes={
 				[1]=35801
 			},
@@ -13228,7 +13268,7 @@ return {
 			x=14054.309642251,
 			y=5554.4634672763
 		},
-		[1037]={
+		[1041]={
 			nodes={
 				[1]=61991,
 				[2]=24868,
@@ -13245,7 +13285,7 @@ return {
 			x=10780.250111021,
 			y=9161.0894282309
 		},
-		[1038]={
+		[1042]={
 			nodes={
 				[1]=37336
 			},
@@ -13255,7 +13295,7 @@ return {
 			x=14107.379642251,
 			y=5842.6234672763
 		},
-		[1039]={
+		[1043]={
 			nodes={
 				[1]=38004
 			},
@@ -13265,7 +13305,7 @@ return {
 			x=11281.290111021,
 			y=8706.5894282309
 		},
-		[1040]={
+		[1044]={
 			nodes={
 				[1]=9710
 			},
@@ -13275,7 +13315,7 @@ return {
 			x=11281.290111021,
 			y=8827.5894282309
 		},
-		[1041]={
+		[1045]={
 			nodes={
 				[1]=18940
 			},
@@ -13285,7 +13325,7 @@ return {
 			x=11386.090111021,
 			y=8646.0894282309
 		},
-		[1042]={
+		[1046]={
 			nodes={
 				[1]=57141
 			},
@@ -13295,7 +13335,7 @@ return {
 			x=11386.090111021,
 			y=8767.0894282309
 		},
-		[1043]={
+		[1047]={
 			nodes={
 				[1]=49503
 			},
@@ -13305,7 +13345,7 @@ return {
 			x=11386.090111021,
 			y=9294.8694282309
 		},
-		[1044]={
+		[1048]={
 			nodes={
 				[1]=56618
 			},
@@ -13315,7 +13355,7 @@ return {
 			x=11490.880111021,
 			y=8705.1894282309
 		},
-		[1045]={
+		[1049]={
 			nodes={
 				[1]=58379
 			},
@@ -13325,7 +13365,7 @@ return {
 			x=11490.880111021,
 			y=8827.5894282309
 		},
-		[1046]={
+		[1050]={
 			nodes={
 				[1]=13675
 			},
@@ -13335,7 +13375,7 @@ return {
 			x=11591.310111021,
 			y=9294.7994282309
 		},
-		[1047]={
+		[1051]={
 			nodes={
 				[1]=61804
 			},
@@ -13345,7 +13385,7 @@ return {
 			x=11680.880111021,
 			y=8960.5894282309
 		},
-		[1048]={
+		[1052]={
 			nodes={
 				[1]=29074
 			},
@@ -13355,7 +13395,7 @@ return {
 			x=11770.430111021,
 			y=8626.1594282309
 		},
-		[1049]={
+		[1053]={
 			nodes={
 				[1]=14508
 			},
@@ -13365,7 +13405,7 @@ return {
 			x=11782.320111021,
 			y=9294.7994282309
 		},
-		[1050]={
+		[1054]={
 			nodes={
 				[1]=39292
 			},
@@ -13375,7 +13415,7 @@ return {
 			x=11923.410111021,
 			y=9294.7994282309
 		},
-		[1051]={
+		[1055]={
 			nodes={
 				[1]=41619
 			},
@@ -13385,7 +13425,7 @@ return {
 			x=11935.270111021,
 			y=8626.1594282309
 		},
-		[1052]={
+		[1056]={
 			nodes={
 				[1]=16
 			},
@@ -13395,7 +13435,7 @@ return {
 			x=12025.120111021,
 			y=8961.4694282309
 		},
-		[1053]={
+		[1057]={
 			nodes={
 				[1]=40
 			},
@@ -13405,7 +13445,7 @@ return {
 			x=12114.500111021,
 			y=9294.7994282309
 		},
-		[1054]={
+		[1058]={
 			nodes={
 				[1]=18826,
 				[2]=3781,
@@ -13474,7 +13514,7 @@ return {
 					orbit=0
 				}
 			},
-			group=1052,
+			group=1056,
 			icon="Art/2DArt/SkillIcons/passives/PathFinder/PathfinderNode.dds",
 			name="Life Flask Charges",
 			orbit=0,
@@ -13492,7 +13532,7 @@ return {
 					orbit=0
 				}
 			},
-			group=1031,
+			group=1035,
 			icon="Art/2DArt/SkillIcons/passives/DeadEye/DeadeyeTailwind.dds",
 			isNotable=true,
 			name="Gathering Winds",
@@ -13512,7 +13552,7 @@ return {
 					orbit=0
 				}
 			},
-			group=1053,
+			group=1057,
 			icon="Art/2DArt/SkillIcons/passives/PathFinder/PathfinderFlasksConsumeLessCharges.dds",
 			isNotable=true,
 			name="Connected Chemistry",
@@ -13569,7 +13609,7 @@ return {
 					orbit=0
 				}
 			},
-			group=957,
+			group=961,
 			icon="Art/2DArt/SkillIcons/passives/EvasionNode.dds",
 			name="Blind Chance",
 			orbit=2,
@@ -13603,7 +13643,7 @@ return {
 					orbit=-8
 				}
 			},
-			group=1054,
+			group=1058,
 			icon="Art/2DArt/SkillIcons/passives/damage.dds",
 			isAscendancyStart=true,
 			name="Acolyte of Chayula",
@@ -13693,7 +13733,7 @@ return {
 		[178]={
 			connections={
 			},
-			group=1013,
+			group=1017,
 			icon="Art/2DArt/SkillIcons/passives/HeraldBuffEffectNode2.dds",
 			name="Herald Reservation",
 			orbit=5,
@@ -13761,7 +13801,7 @@ return {
 					orbit=0
 				}
 			},
-			group=1015,
+			group=1019,
 			icon="Art/2DArt/SkillIcons/passives/damagestaff.dds",
 			name="Quarterstaff Critical Chance",
 			orbit=0,
@@ -13786,7 +13826,7 @@ return {
 					orbit=0
 				}
 			},
-			group=1014,
+			group=1018,
 			icon="Art/2DArt/SkillIcons/passives/BowDamage.dds",
 			name="Bow Accuracy Rating",
 			orbit=0,
@@ -14022,7 +14062,7 @@ return {
 					orbit=0
 				}
 			},
-			group=1000,
+			group=1004,
 			icon="Art/2DArt/SkillIcons/passives/criticaldaggerint.dds",
 			name="Dagger Speed",
 			orbit=0,
@@ -14036,7 +14076,7 @@ return {
 			ascendancyName="Acolyte of Chayula",
 			connections={
 			},
-			group=1054,
+			group=1058,
 			icon="Art/2DArt/SkillIcons/passives/AcolyteofChayula/AcolyteOfChayulaBreachFlameDoubles.dds",
 			isNotable=true,
 			name="Lucid Dreaming",
@@ -14075,7 +14115,7 @@ return {
 					orbit=0
 				}
 			},
-			group=980,
+			group=984,
 			icon="Art/2DArt/SkillIcons/passives/plusattribute.dds",
 			name="Attribute",
 			options={
@@ -14626,7 +14666,7 @@ return {
 					orbit=7
 				}
 			},
-			group=1054,
+			group=1058,
 			icon="Art/2DArt/SkillIcons/passives/AcolyteofChayula/AcolyteOfChayulaNode.dds",
 			name="Skill Speed",
 			orbit=6,
@@ -14797,7 +14837,7 @@ return {
 					orbit=0
 				}
 			},
-			group=941,
+			group=945,
 			icon="Art/2DArt/SkillIcons/passives/AttackBlindMastery.dds",
 			inactiveIcon="Art/2DArt/SkillIcons/passives/MasteryPassiveIcons/PassiveMasteryAttackInactive.dds",
 			isMastery=true,
@@ -14871,7 +14911,7 @@ return {
 					orbit=6
 				}
 			},
-			group=1037,
+			group=1041,
 			icon="Art/2DArt/SkillIcons/passives/damage.dds",
 			isAscendancyStart=true,
 			name="Pathfinder",
@@ -14905,7 +14945,7 @@ return {
 					orbit=0
 				}
 			},
-			group=936,
+			group=938,
 			icon="Art/2DArt/SkillIcons/passives/PhysicalDamageNode.dds",
 			name="Physical Damage and Critical Chance",
 			orbit=2,
@@ -14948,7 +14988,7 @@ return {
 					orbit=0
 				}
 			},
-			group=999,
+			group=1003,
 			icon="Art/2DArt/SkillIcons/passives/Poison.dds",
 			name="Poison Duration",
 			orbit=3,
@@ -15000,7 +15040,7 @@ return {
 					orbit=3
 				}
 			},
-			group=957,
+			group=961,
 			icon="Art/2DArt/SkillIcons/passives/EvasionNode.dds",
 			name="Blind Chance",
 			orbit=7,
@@ -15080,7 +15120,7 @@ return {
 					orbit=5
 				}
 			},
-			group=978,
+			group=982,
 			icon="Art/2DArt/SkillIcons/passives/evade.dds",
 			name="Evasion",
 			orbit=7,
@@ -15203,7 +15243,7 @@ return {
 					orbit=0
 				}
 			},
-			group=968,
+			group=972,
 			icon="Art/2DArt/SkillIcons/passives/flaskint.dds",
 			isNotable=true,
 			name="Wellspring",
@@ -15277,7 +15317,7 @@ return {
 					orbit=0
 				}
 			},
-			group=1017,
+			group=1021,
 			icon="Art/2DArt/SkillIcons/passives/damagestaff.dds",
 			isNotable=true,
 			name="Martial Artistry",
@@ -15422,7 +15462,7 @@ return {
 					orbit=-6
 				}
 			},
-			group=958,
+			group=962,
 			icon="Art/2DArt/SkillIcons/passives/plusdexterity.dds",
 			name="Dexterity",
 			orbit=0,
@@ -15462,7 +15502,7 @@ return {
 					orbit=0
 				}
 			},
-			group=1017,
+			group=1021,
 			icon="Art/2DArt/SkillIcons/passives/damagestaff.dds",
 			name="Quarterstaff Stun and Knockback",
 			orbit=5,
@@ -15508,7 +15548,7 @@ return {
 					orbit=0
 				}
 			},
-			group=923,
+			group=924,
 			icon="Art/2DArt/SkillIcons/passives/plusattribute.dds",
 			name="Attribute",
 			options={
@@ -15687,7 +15727,7 @@ return {
 					orbit=7
 				}
 			},
-			group=999,
+			group=1003,
 			icon="Art/2DArt/SkillIcons/passives/Poison.dds",
 			name="Poison Chance",
 			orbit=7,
@@ -15745,7 +15785,7 @@ return {
 					orbit=7
 				}
 			},
-			group=915,
+			group=916,
 			icon="Art/2DArt/SkillIcons/passives/flaskdex.dds",
 			name="Flask Charges Gained",
 			orbit=2,
@@ -15790,7 +15830,7 @@ return {
 					orbit=0
 				}
 			},
-			group=992,
+			group=996,
 			icon="Art/2DArt/SkillIcons/passives/plusattribute.dds",
 			name="Attribute",
 			options={
@@ -16047,7 +16087,7 @@ return {
 					orbit=-3
 				}
 			},
-			group=1010,
+			group=1014,
 			icon="Art/2DArt/SkillIcons/passives/criticalstrikechance.dds",
 			name="Attack Critical Damage",
 			orbit=7,
@@ -16401,7 +16441,7 @@ return {
 					orbit=4
 				}
 			},
-			group=978,
+			group=982,
 			icon="Art/2DArt/SkillIcons/passives/evade.dds",
 			name="Evasion",
 			orbit=7,
@@ -16567,7 +16607,7 @@ return {
 					orbit=0
 				}
 			},
-			group=973,
+			group=977,
 			icon="Art/2DArt/SkillIcons/passives/chargeint.dds",
 			name="Critical Damage when consuming a Power Charge",
 			orbit=2,
@@ -16605,7 +16645,7 @@ return {
 					orbit=2
 				}
 			},
-			group=1007,
+			group=1011,
 			icon="Art/2DArt/SkillIcons/passives/criticaldaggerint.dds",
 			name="Dagger Damage",
 			orbit=6,
@@ -16622,7 +16662,7 @@ return {
 					orbit=0
 				}
 			},
-			group=944,
+			group=948,
 			icon="Art/2DArt/SkillIcons/passives/increasedrunspeeddex.dds",
 			name="Skill Speed",
 			orbit=1,
@@ -16876,7 +16916,7 @@ return {
 					orbit=6
 				}
 			},
-			group=989,
+			group=993,
 			icon="Art/2DArt/SkillIcons/passives/DragonStyle.dds",
 			name="Unarmed Damage",
 			orbit=7,
@@ -16918,7 +16958,7 @@ return {
 					orbit=0
 				}
 			},
-			group=949,
+			group=953,
 			icon="Art/2DArt/SkillIcons/passives/auraeffect.dds",
 			isNotable=true,
 			name="Dynamism",
@@ -17054,7 +17094,7 @@ return {
 			ascendancyName="Acolyte of Chayula",
 			connections={
 			},
-			group=1054,
+			group=1058,
 			icon="Art/2DArt/SkillIcons/passives/AcolyteofChayula/AcolyteOfChayulaManaLeechEnergyShield.dds",
 			isNotable=true,
 			name="Consuming Questions",
@@ -17101,7 +17141,7 @@ return {
 					orbit=0
 				}
 			},
-			group=926,
+			group=927,
 			icon="Art/2DArt/SkillIcons/passives/blockstr.dds",
 			name="Block",
 			orbit=2,
@@ -17252,7 +17292,7 @@ return {
 					orbit=0
 				}
 			},
-			group=1026,
+			group=1030,
 			icon="Art/2DArt/SkillIcons/passives/DeadEye/DeadeyeNode.dds",
 			name="Skill Speed",
 			orbit=8,
@@ -17358,7 +17398,7 @@ return {
 					orbit=0
 				}
 			},
-			group=943,
+			group=947,
 			icon="Art/2DArt/SkillIcons/passives/avoidchilling.dds",
 			isNotable=true,
 			name="Icebreaker",
@@ -17881,7 +17921,7 @@ return {
 					orbit=0
 				}
 			},
-			group=1012,
+			group=1016,
 			icon="Art/2DArt/SkillIcons/passives/criticaldaggerint.dds",
 			isNotable=true,
 			name="Coated Knife",
@@ -18096,7 +18136,7 @@ return {
 					orbit=0
 				}
 			},
-			group=1017,
+			group=1021,
 			icon="Art/2DArt/SkillIcons/passives/damagestaff.dds",
 			name="Quarterstaff Speed",
 			orbit=2,
@@ -18198,7 +18238,7 @@ return {
 					orbit=0
 				}
 			},
-			group=970,
+			group=974,
 			icon="Art/2DArt/SkillIcons/passives/trapdamage.dds",
 			name="Trap Throw Speed",
 			orbit=6,
@@ -18470,7 +18510,7 @@ return {
 					orbit=7
 				}
 			},
-			group=1009,
+			group=1013,
 			icon="Art/2DArt/SkillIcons/passives/ChaosDamagenode.dds",
 			name="Chaos Damage",
 			orbit=3,
@@ -18545,7 +18585,7 @@ return {
 			skill=4959,
 			stats={
 				[1]="20% increased Freeze Buildup",
-				[2]="Hits ignore Elemental Resistances of Frozen Enemies"
+				[2]="Hits ignore non-negative Elemental Resistances of Frozen Enemies"
 			}
 		},
 		[4985]={
@@ -18667,7 +18707,7 @@ return {
 					orbit=0
 				}
 			},
-			group=935,
+			group=937,
 			icon="Art/2DArt/SkillIcons/passives/knockback.dds",
 			name="Knockback and Stun Buildup",
 			orbit=2,
@@ -18702,7 +18742,7 @@ return {
 					orbit=2
 				}
 			},
-			group=988,
+			group=992,
 			icon="Art/2DArt/SkillIcons/passives/DragonStyle.dds",
 			name="Unarmed Attack Speed",
 			orbit=0,
@@ -18813,7 +18853,7 @@ return {
 					orbit=0
 				}
 			},
-			group=944,
+			group=948,
 			icon="Art/2DArt/SkillIcons/passives/increasedrunspeeddex.dds",
 			name="Skill Speed",
 			orbit=1,
@@ -19281,7 +19321,7 @@ return {
 			ascendancyName="Deadeye",
 			connections={
 			},
-			group=1025,
+			group=1029,
 			icon="Art/2DArt/SkillIcons/passives/DeadEye/DeadeyeWindward.dds",
 			isNotable=true,
 			name="Wind Ward",
@@ -19456,7 +19496,7 @@ return {
 		[6030]={
 			connections={
 			},
-			group=999,
+			group=1003,
 			icon="Art/2DArt/SkillIcons/passives/Poison.dds",
 			name="Poison Chance",
 			orbit=3,
@@ -19473,7 +19513,7 @@ return {
 					orbit=4
 				}
 			},
-			group=954,
+			group=958,
 			icon="Art/2DArt/SkillIcons/passives/Poison.dds",
 			name="Poison Chance",
 			orbit=3,
@@ -20350,7 +20390,7 @@ return {
 					orbit=0
 				}
 			},
-			group=998,
+			group=1002,
 			icon="Art/2DArt/SkillIcons/passives/criticalstrikechance.dds",
 			name="Critical Damage",
 			orbit=2,
@@ -20460,7 +20500,7 @@ return {
 					orbit=0
 				}
 			},
-			group=1013,
+			group=1017,
 			icon="Art/2DArt/SkillIcons/passives/AltMasteryChannelling.dds",
 			inactiveIcon="Art/2DArt/SkillIcons/passives/MasteryPassiveIcons/PassiveMasteryFortifyInactive.dds",
 			isMastery=true,
@@ -20476,7 +20516,7 @@ return {
 			activeIcon="Art/2DArt/SkillIcons/passives/MasteryPassiveIcons/PassiveMasteryColdActive.dds",
 			connections={
 			},
-			group=974,
+			group=978,
 			icon="Art/2DArt/SkillIcons/passives/MasteryGroupCold.dds",
 			inactiveIcon="Art/2DArt/SkillIcons/passives/MasteryPassiveIcons/PassiveMasteryColdInactive.dds",
 			isMastery=true,
@@ -20668,7 +20708,7 @@ return {
 					orbit=0
 				}
 			},
-			group=940,
+			group=944,
 			icon="Art/2DArt/SkillIcons/passives/areaofeffect.dds",
 			isNotable=true,
 			name="Echoing Pulse",
@@ -20973,7 +21013,7 @@ return {
 					orbit=0
 				}
 			},
-			group=942,
+			group=946,
 			icon="Art/2DArt/SkillIcons/passives/MeleeAoENode.dds",
 			isNotable=true,
 			name="Rapid Strike",
@@ -20998,7 +21038,7 @@ return {
 					orbit=0
 				}
 			},
-			group=1029,
+			group=1033,
 			icon="Art/2DArt/SkillIcons/passives/Invoker/InvokerShockMagnitude.dds",
 			isNotable=true,
 			name="I am the Thunder...",
@@ -21065,7 +21105,7 @@ return {
 					orbit=0
 				}
 			},
-			group=1002,
+			group=1006,
 			icon="Art/2DArt/SkillIcons/passives/BowDamage.dds",
 			isNotable=true,
 			name="Pierce the Heart",
@@ -21270,7 +21310,7 @@ return {
 			activeEffectImage="Art/2DArt/UIImages/InGame/PassiveMastery/MasteryBackgroundGraphic/MasteryLightningPattern",
 			connections={
 			},
-			group=938,
+			group=942,
 			icon="Art/2DArt/SkillIcons/passives/LightningDamagenode.dds",
 			isNotable=true,
 			name="Wild Storm",
@@ -21314,7 +21354,7 @@ return {
 					orbit=2
 				}
 			},
-			group=989,
+			group=993,
 			icon="Art/2DArt/SkillIcons/passives/DragonStyle.dds",
 			name="Unarmed Damage",
 			orbit=3,
@@ -21477,7 +21517,7 @@ return {
 					orbit=4
 				}
 			},
-			group=1029,
+			group=1033,
 			icon="Art/2DArt/SkillIcons/passives/Invoker/InvokerEvasionEnergyShieldGrantsSpirit.dds",
 			isNotable=true,
 			name="Lead me through Grace...",
@@ -21517,7 +21557,7 @@ return {
 		[8157]={
 			connections={
 			},
-			group=1013,
+			group=1017,
 			icon="Art/2DArt/SkillIcons/passives/HeraldBuffEffectNode2.dds",
 			name="Herald Reservation",
 			orbit=2,
@@ -21551,7 +21591,7 @@ return {
 					orbit=0
 				}
 			},
-			group=960,
+			group=964,
 			icon="Art/2DArt/SkillIcons/passives/damage.dds",
 			name="Attack Damage",
 			orbit=2,
@@ -21623,7 +21663,7 @@ return {
 					orbit=0
 				}
 			},
-			group=953,
+			group=957,
 			icon="Art/2DArt/SkillIcons/passives/LightningDamagenode.dds",
 			isNotable=true,
 			name="Endless Circuit",
@@ -21988,7 +22028,7 @@ return {
 					orbit=0
 				}
 			},
-			group=942,
+			group=946,
 			icon="Art/2DArt/SkillIcons/passives/MeleeAoENode.dds",
 			name="Melee Damage",
 			orbit=1,
@@ -22060,7 +22100,7 @@ return {
 					orbit=0
 				}
 			},
-			group=1002,
+			group=1006,
 			icon="Art/2DArt/SkillIcons/passives/BowDamage.dds",
 			name="Bow Damage",
 			orbit=5,
@@ -22189,7 +22229,7 @@ return {
 					orbit=0
 				}
 			},
-			group=970,
+			group=974,
 			icon="Art/2DArt/SkillIcons/passives/trapdamage.dds",
 			name="Trap Damage",
 			orbit=6,
@@ -22512,7 +22552,7 @@ return {
 			activeEffectImage="Art/2DArt/UIImages/InGame/PassiveMastery/MasteryBackgroundGraphic/MasteryProjectilePattern",
 			connections={
 			},
-			group=924,
+			group=925,
 			icon="Art/2DArt/SkillIcons/passives/ChainingProjectiles.dds",
 			isNotable=true,
 			name="Death from Afar",
@@ -22930,7 +22970,7 @@ return {
 					orbit=0
 				}
 			},
-			group=950,
+			group=954,
 			icon="Art/2DArt/SkillIcons/passives/damagesword.dds",
 			isNotable=true,
 			name="Swift Skewering",
@@ -22953,7 +22993,7 @@ return {
 					orbit=0
 				}
 			},
-			group=950,
+			group=954,
 			icon="Art/2DArt/SkillIcons/passives/damagesword.dds",
 			name="Spear Attack Speed",
 			orbit=2,
@@ -23062,7 +23102,7 @@ return {
 					orbit=6
 				}
 			},
-			group=978,
+			group=982,
 			icon="Art/2DArt/SkillIcons/passives/evade.dds",
 			name="Evasion",
 			orbit=7,
@@ -23137,7 +23177,7 @@ return {
 		[9444]={
 			connections={
 			},
-			group=1017,
+			group=1021,
 			icon="Art/2DArt/SkillIcons/passives/damagestaff.dds",
 			isNotable=true,
 			name="One with the Storm",
@@ -23376,7 +23416,7 @@ return {
 					orbit=0
 				}
 			},
-			group=999,
+			group=1003,
 			icon="Art/2DArt/SkillIcons/passives/Poison.dds",
 			name="Poison Duration",
 			orbit=3,
@@ -23394,7 +23434,7 @@ return {
 					orbit=0
 				}
 			},
-			group=1040,
+			group=1044,
 			icon="Art/2DArt/SkillIcons/passives/PathFinder/PathfinderBrewConcoctionBleed.dds",
 			name="Bleeding Concoction",
 			orbit=0,
@@ -23532,7 +23572,7 @@ return {
 					orbit=0
 				}
 			},
-			group=1037,
+			group=1041,
 			icon="Art/2DArt/SkillIcons/passives/PathFinder/PathfinderNode.dds",
 			name="Skill Speed",
 			orbit=9,
@@ -23692,7 +23732,7 @@ return {
 					orbit=0
 				}
 			},
-			group=1029,
+			group=1033,
 			icon="Art/2DArt/SkillIcons/passives/damage.dds",
 			isAscendancyStart=true,
 			name="Master of the Elements",
@@ -24011,7 +24051,7 @@ return {
 			activeIcon="Art/2DArt/SkillIcons/passives/MasteryPassiveIcons/PassiveMasteryChargesActive.dds",
 			connections={
 			},
-			group=973,
+			group=977,
 			icon="Art/2DArt/SkillIcons/passives/EnduranceFrenzyChargeMastery.dds",
 			inactiveIcon="Art/2DArt/SkillIcons/passives/MasteryPassiveIcons/PassiveMasteryChargesInactive.dds",
 			isMastery=true,
@@ -24143,7 +24183,7 @@ return {
 					orbit=0
 				}
 			},
-			group=950,
+			group=954,
 			icon="Art/2DArt/SkillIcons/passives/damagesword.dds",
 			isNotable=true,
 			name="Javelin",
@@ -24427,7 +24467,7 @@ return {
 					orbit=-7
 				}
 			},
-			group=986,
+			group=990,
 			icon="Art/2DArt/SkillIcons/passives/FireDamagenode.dds",
 			isNotable=true,
 			name="Exposed to the Inferno",
@@ -24471,7 +24511,7 @@ return {
 					orbit=3
 				}
 			},
-			group=968,
+			group=972,
 			icon="Art/2DArt/SkillIcons/passives/flaskint.dds",
 			name="Mana Flask Recovery",
 			orbit=4,
@@ -24621,7 +24661,7 @@ return {
 					orbit=0
 				}
 			},
-			group=924,
+			group=925,
 			icon="Art/2DArt/SkillIcons/passives/projectilespeed.dds",
 			name="Projectile Damage",
 			orbit=4,
@@ -25478,7 +25518,7 @@ return {
 					orbit=0
 				}
 			},
-			group=1002,
+			group=1006,
 			icon="Art/2DArt/SkillIcons/passives/BowDamage.dds",
 			isNotable=true,
 			name="Sniper",
@@ -25529,7 +25569,7 @@ return {
 					orbit=0
 				}
 			},
-			group=1017,
+			group=1021,
 			icon="Art/2DArt/SkillIcons/passives/damagestaff.dds",
 			name="Quarterstaff Speed",
 			orbit=0,
@@ -25782,7 +25822,7 @@ return {
 					orbit=0
 				}
 			},
-			group=1054,
+			group=1058,
 			icon="Art/2DArt/SkillIcons/passives/AcolyteofChayula/AcolyteOfChayulaNode.dds",
 			name="Skill Speed",
 			orbit=5,
@@ -26019,7 +26059,7 @@ return {
 			ascendancyName="Deadeye",
 			connections={
 			},
-			group=1026,
+			group=1030,
 			icon="Art/2DArt/SkillIcons/passives/DeadEye/DeadeyeGrantsTwoAdditionalProjectiles.dds",
 			isNotable=true,
 			name="Endless Munitions",
@@ -26041,7 +26081,7 @@ return {
 					orbit=-4
 				}
 			},
-			group=911,
+			group=912,
 			icon="Art/2DArt/SkillIcons/passives/projectilespeed.dds",
 			name="Projectile Damage",
 			orbit=5,
@@ -26062,7 +26102,7 @@ return {
 					orbit=0
 				}
 			},
-			group=976,
+			group=980,
 			icon="Art/2DArt/SkillIcons/passives/Deflection.dds",
 			name="Block and Damage Taken from Blocked Hits",
 			orbit=4,
@@ -26169,7 +26209,7 @@ return {
 					orbit=0
 				}
 			},
-			group=933,
+			group=935,
 			icon="Art/2DArt/SkillIcons/passives/MasteryPhysicalDamage.dds",
 			inactiveIcon="Art/2DArt/SkillIcons/passives/MasteryPassiveIcons/PassiveMasteryPhysicalInactive.dds",
 			isMastery=true,
@@ -26215,9 +26255,13 @@ return {
 				[4]={
 					id=34497,
 					orbit=0
+				},
+				[5]={
+					id=16401,
+					orbit=0
 				}
 			},
-			group=921,
+			group=922,
 			icon="Art/2DArt/SkillIcons/passives/plusattribute.dds",
 			name="Attribute",
 			options={
@@ -26708,7 +26752,7 @@ return {
 			ascendancyName="Invoker",
 			connections={
 			},
-			group=1029,
+			group=1033,
 			icon="Art/2DArt/SkillIcons/passives/Invoker/InvokerGrantsMeditate.dds",
 			isNotable=true,
 			name="Faith is a Choice",
@@ -26873,7 +26917,7 @@ return {
 					orbit=0
 				}
 			},
-			group=1029,
+			group=1033,
 			icon="Art/2DArt/SkillIcons/passives/Invoker/InvokerNode.dds",
 			name="Triggered Spell Damage",
 			orbit=8,
@@ -27270,7 +27314,7 @@ return {
 					orbit=0
 				}
 			},
-			group=1010,
+			group=1014,
 			icon="Art/2DArt/SkillIcons/passives/criticalstrikechance.dds",
 			isNotable=true,
 			name="Heartbreaking",
@@ -27560,7 +27604,7 @@ return {
 					orbit=-2
 				}
 			},
-			group=913,
+			group=914,
 			icon="Art/2DArt/SkillIcons/passives/MarkNode.dds",
 			name="Mark Duration",
 			orbit=2,
@@ -27609,7 +27653,7 @@ return {
 					orbit=0
 				}
 			},
-			group=1046,
+			group=1050,
 			icon="Art/2DArt/SkillIcons/passives/PathFinder/PathfinderPoisonSpreadsNearbyEnemies.dds",
 			isNotable=true,
 			name="Contagious Contamination",
@@ -27652,7 +27696,7 @@ return {
 					orbit=0
 				}
 			},
-			group=943,
+			group=947,
 			icon="Art/2DArt/SkillIcons/passives/avoidchilling.dds",
 			name="Freeze and Chill Resistance",
 			orbit=2,
@@ -27830,7 +27874,7 @@ return {
 					orbit=-3
 				}
 			},
-			group=947,
+			group=951,
 			icon="Art/2DArt/SkillIcons/passives/damage.dds",
 			name="Attack Damage and Slow Effect",
 			orbit=2,
@@ -27984,7 +28028,7 @@ return {
 					orbit=0
 				}
 			},
-			group=950,
+			group=954,
 			icon="Art/2DArt/SkillIcons/passives/damagesword.dds",
 			isNotable=true,
 			name="Precise Point",
@@ -28069,7 +28113,7 @@ return {
 					orbit=0
 				}
 			},
-			group=942,
+			group=946,
 			icon="Art/2DArt/SkillIcons/passives/MeleeAoENode.dds",
 			name="Melee Attack Speed",
 			orbit=2,
@@ -28251,7 +28295,7 @@ return {
 		[14226]={
 			connections={
 			},
-			group=964,
+			group=968,
 			icon="Art/2DArt/SkillIcons/passives/DancewithDeathKeystone.dds",
 			isKeystone=true,
 			name="Dance with Death",
@@ -28308,7 +28352,7 @@ return {
 					orbit=0
 				}
 			},
-			group=983,
+			group=987,
 			icon="Art/2DArt/SkillIcons/passives/plusattribute.dds",
 			name="Attribute",
 			options={
@@ -28351,7 +28395,7 @@ return {
 					orbit=0
 				}
 			},
-			group=1004,
+			group=1008,
 			icon="Art/2DArt/SkillIcons/passives/plusattribute.dds",
 			name="Attribute",
 			options={
@@ -28707,7 +28751,7 @@ return {
 					orbit=0
 				}
 			},
-			group=1049,
+			group=1053,
 			icon="Art/2DArt/SkillIcons/passives/PathFinder/PathfinderNode.dds",
 			name="Poison Effect",
 			orbit=0,
@@ -28737,7 +28781,7 @@ return {
 		[14516]={
 			connections={
 			},
-			group=940,
+			group=944,
 			icon="Art/2DArt/SkillIcons/passives/areaofeffect.dds",
 			name="Spell Area of Effect",
 			orbit=3,
@@ -28754,7 +28798,7 @@ return {
 					orbit=5
 				}
 			},
-			group=978,
+			group=982,
 			icon="Art/2DArt/SkillIcons/passives/evade.dds",
 			name="Evasion",
 			orbit=7,
@@ -29007,7 +29051,7 @@ return {
 					orbit=0
 				}
 			},
-			group=910,
+			group=911,
 			icon="Art/2DArt/SkillIcons/passives/lightningint.dds",
 			name="Shock Duration",
 			orbit=0,
@@ -29388,7 +29432,7 @@ return {
 			activeIcon="Art/2DArt/SkillIcons/passives/MasteryPassiveIcons/PassiveMasteryAttackActive.dds",
 			connections={
 			},
-			group=960,
+			group=964,
 			icon="Art/2DArt/SkillIcons/passives/AttackBlindMastery.dds",
 			inactiveIcon="Art/2DArt/SkillIcons/passives/MasteryPassiveIcons/PassiveMasteryAttackInactive.dds",
 			isMastery=true,
@@ -29444,7 +29488,7 @@ return {
 					orbit=0
 				}
 			},
-			group=955,
+			group=959,
 			icon="Art/2DArt/SkillIcons/passives/LightningDamagenode.dds",
 			name="Lightning Penetration",
 			orbit=0,
@@ -29743,7 +29787,7 @@ return {
 					orbit=0
 				}
 			},
-			group=991,
+			group=995,
 			icon="Art/2DArt/SkillIcons/passives/plusattribute.dds",
 			name="Attribute",
 			options={
@@ -30034,7 +30078,7 @@ return {
 					orbit=0
 				}
 			},
-			group=999,
+			group=1003,
 			icon="Art/2DArt/SkillIcons/passives/Poison.dds",
 			isNotable=true,
 			name="Building Toxins",
@@ -30058,7 +30102,7 @@ return {
 					orbit=0
 				}
 			},
-			group=936,
+			group=938,
 			icon="Art/2DArt/SkillIcons/passives/stun2h.dds",
 			name="Daze Buildup",
 			orbit=7,
@@ -30123,7 +30167,7 @@ return {
 					orbit=7
 				}
 			},
-			group=1029,
+			group=1033,
 			icon="Art/2DArt/SkillIcons/passives/Invoker/InvokerNode.dds",
 			name="Evasion",
 			orbit=8,
@@ -30156,7 +30200,7 @@ return {
 					orbit=0
 				}
 			},
-			group=936,
+			group=938,
 			icon="Art/2DArt/SkillIcons/passives/stun2h.dds",
 			name="Daze Buildup",
 			orbit=2,
@@ -30269,7 +30313,7 @@ return {
 					orbit=-2
 				}
 			},
-			group=915,
+			group=916,
 			icon="Art/2DArt/SkillIcons/passives/flaskdex.dds",
 			name="Flask Charges Used",
 			orbit=2,
@@ -30307,6 +30351,24 @@ return {
 			skill=16367,
 			stats={
 				[1]="10% increased Elemental Damage"
+			}
+		},
+		[16401]={
+			connections={
+				[1]={
+					id=44490,
+					orbit=0
+				}
+			},
+			group=928,
+			icon="Art/2DArt/SkillIcons/passives/LightningDamagenode.dds",
+			name="Lightning Damage and Electrocute Buildup",
+			orbit=0,
+			orbitIndex=0,
+			skill=16401,
+			stats={
+				[1]="8% increased Lightning Damage",
+				[2]="10% increased Electrocute Buildup"
 			}
 		},
 		[16460]={
@@ -31064,7 +31126,7 @@ return {
 					orbit=-4
 				}
 			},
-			group=926,
+			group=927,
 			icon="Art/2DArt/SkillIcons/passives/blockstr.dds",
 			name="Block",
 			orbit=3,
@@ -31230,7 +31292,7 @@ return {
 					orbit=3
 				}
 			},
-			group=1029,
+			group=1033,
 			icon="Art/2DArt/SkillIcons/passives/Invoker/InvokerNode.dds",
 			name="Shock Effect",
 			orbit=6,
@@ -31454,7 +31516,7 @@ return {
 					orbit=0
 				}
 			},
-			group=942,
+			group=946,
 			icon="Art/2DArt/SkillIcons/passives/MeleeAoENode.dds",
 			isNotable=true,
 			name="Reaching Strike",
@@ -31568,7 +31630,7 @@ return {
 					orbit=0
 				}
 			},
-			group=962,
+			group=966,
 			icon="Art/2DArt/SkillIcons/passives/LightningDamagenode.dds",
 			name="Lightning Damage",
 			orbit=0,
@@ -31758,7 +31820,7 @@ return {
 					orbit=-5
 				}
 			},
-			group=960,
+			group=964,
 			icon="Art/2DArt/SkillIcons/passives/damage.dds",
 			name="Attack Damage",
 			orbit=2,
@@ -31868,7 +31930,7 @@ return {
 					orbit=-3
 				}
 			},
-			group=968,
+			group=972,
 			icon="Art/2DArt/SkillIcons/passives/flaskint.dds",
 			name="Mana Flask Charges",
 			orbit=4,
@@ -31946,7 +32008,7 @@ return {
 		[17724]={
 			connections={
 			},
-			group=967,
+			group=971,
 			icon="Art/2DArt/SkillIcons/passives/DragonStyle.dds",
 			name="Unarmed Area",
 			orbit=0,
@@ -32077,7 +32139,7 @@ return {
 					orbit=0
 				}
 			},
-			group=943,
+			group=947,
 			icon="Art/2DArt/SkillIcons/passives/avoidchilling.dds",
 			name="Freeze and Chill Resistance",
 			orbit=2,
@@ -32136,7 +32198,7 @@ return {
 					orbit=0
 				}
 			},
-			group=1054,
+			group=1058,
 			icon="Art/2DArt/SkillIcons/passives/AcolyteofChayula/AcolyteOfChayulaNode.dds",
 			name="Mana Leech",
 			orbit=9,
@@ -32964,7 +33026,7 @@ return {
 					orbit=0
 				}
 			},
-			group=951,
+			group=955,
 			icon="Art/2DArt/SkillIcons/passives/LightningDamagenode.dds",
 			name="Lightning Damage",
 			orbit=0,
@@ -33031,7 +33093,7 @@ return {
 					orbit=0
 				}
 			},
-			group=963,
+			group=967,
 			icon="Art/2DArt/SkillIcons/passives/LightningDamagenode.dds",
 			name="Lightning Penetration",
 			orbit=0,
@@ -33070,7 +33132,7 @@ return {
 					orbit=0
 				}
 			},
-			group=1054,
+			group=1058,
 			icon="Art/2DArt/SkillIcons/passives/AcolyteofChayula/AcolyteOfChayulaManaLeechInstant.dds",
 			isNotable=true,
 			name="Ravenous Doubts",
@@ -33222,7 +33284,7 @@ return {
 					orbit=0
 				}
 			},
-			group=950,
+			group=954,
 			icon="Art/2DArt/SkillIcons/passives/damagesword.dds",
 			name="Spear Damage",
 			orbit=5,
@@ -33309,7 +33371,7 @@ return {
 					orbit=0
 				}
 			},
-			group=1041,
+			group=1045,
 			icon="Art/2DArt/SkillIcons/passives/PathFinder/PathfinderBrewConcoctionCold.dds",
 			name="Shattering Concoction",
 			orbit=0,
@@ -33322,7 +33384,7 @@ return {
 		[18969]={
 			connections={
 			},
-			group=1005,
+			group=1009,
 			icon="Art/2DArt/SkillIcons/passives/BowDamage.dds",
 			name="Bow Speed",
 			orbit=0,
@@ -33420,7 +33482,7 @@ return {
 			activeIcon="Art/2DArt/SkillIcons/passives/MasteryPassiveIcons/PassiveMasteryAttackActive.dds",
 			connections={
 			},
-			group=942,
+			group=946,
 			icon="Art/2DArt/SkillIcons/passives/AttackBlindMastery.dds",
 			inactiveIcon="Art/2DArt/SkillIcons/passives/MasteryPassiveIcons/PassiveMasteryAttackInactive.dds",
 			isMastery=true,
@@ -33703,7 +33765,7 @@ return {
 		[19338]={
 			connections={
 			},
-			group=946,
+			group=950,
 			icon="Art/2DArt/SkillIcons/passives/plusdexterity.dds",
 			name="Dexterity",
 			orbit=3,
@@ -34009,7 +34071,7 @@ return {
 					orbit=0
 				}
 			},
-			group=950,
+			group=954,
 			icon="Art/2DArt/SkillIcons/passives/damagesword.dds",
 			name="Spear Attack Speed",
 			orbit=4,
@@ -34026,7 +34088,7 @@ return {
 					orbit=2
 				}
 			},
-			group=1009,
+			group=1013,
 			icon="Art/2DArt/SkillIcons/passives/ChaosDamagenode.dds",
 			name="Chaos Damage",
 			orbit=2,
@@ -34275,7 +34337,7 @@ return {
 					orbit=0
 				}
 			},
-			group=981,
+			group=985,
 			icon="Art/2DArt/SkillIcons/passives/damagesword.dds",
 			name="Spear Damage",
 			orbit=0,
@@ -34459,7 +34521,7 @@ return {
 					orbit=0
 				}
 			},
-			group=976,
+			group=980,
 			icon="Art/2DArt/SkillIcons/passives/Deflection.dds",
 			isNotable=true,
 			name="Reprisal",
@@ -34504,7 +34566,7 @@ return {
 					orbit=0
 				}
 			},
-			group=1007,
+			group=1011,
 			icon="Art/2DArt/SkillIcons/passives/criticaldaggerint.dds",
 			name="Dagger Speed",
 			orbit=6,
@@ -34538,7 +34600,7 @@ return {
 					orbit=0
 				}
 			},
-			group=961,
+			group=965,
 			icon="Art/2DArt/SkillIcons/passives/Deflection.dds",
 			name="Block",
 			orbit=6,
@@ -34596,7 +34658,7 @@ return {
 					orbit=0
 				}
 			},
-			group=987,
+			group=991,
 			icon="Art/2DArt/SkillIcons/passives/lightningint.dds",
 			name="Electrocute Buildup",
 			orbit=0,
@@ -34775,7 +34837,7 @@ return {
 					orbit=2147483647
 				}
 			},
-			group=974,
+			group=978,
 			icon="Art/2DArt/SkillIcons/passives/ColdDamagenode.dds",
 			name="Cold Penetration",
 			orbit=2,
@@ -34942,12 +35004,12 @@ return {
 			},
 			group=872,
 			icon="Art/2DArt/SkillIcons/passives/CharmNode1.dds",
-			name="Damage while active Charm",
+			name="Charm Activation Chance",
 			orbit=7,
 			orbitIndex=11,
 			skill=21111,
 			stats={
-				[1]="16% increased Damage while you have an active Charm"
+				[1]="10% chance when a Charm is used to use another Charm without consuming Charges"
 			}
 		},
 		[21112]={
@@ -34957,7 +35019,7 @@ return {
 					orbit=0
 				}
 			},
-			group=1002,
+			group=1006,
 			icon="Art/2DArt/SkillIcons/passives/BowDamage.dds",
 			name="Bow Damage",
 			orbit=4,
@@ -35072,7 +35134,7 @@ return {
 					orbit=0
 				}
 			},
-			group=950,
+			group=954,
 			icon="Art/2DArt/SkillIcons/passives/damagesword.dds",
 			name="Spear Damage",
 			orbit=3,
@@ -35162,7 +35224,7 @@ return {
 					orbit=-3
 				}
 			},
-			group=934,
+			group=936,
 			icon="Art/2DArt/SkillIcons/passives/MarkNode.dds",
 			name="Mark Effect and Blind Effect",
 			orbit=2,
@@ -35484,7 +35546,7 @@ return {
 			activeEffectImage="Art/2DArt/UIImages/InGame/PassiveMastery/MasteryBackgroundGraphic/MasteryChargesPattern",
 			connections={
 			},
-			group=996,
+			group=1000,
 			icon="Art/2DArt/SkillIcons/passives/chargedex.dds",
 			isNotable=true,
 			name="Fervour",
@@ -35892,7 +35954,7 @@ return {
 					orbit=0
 				}
 			},
-			group=1002,
+			group=1006,
 			icon="Art/2DArt/SkillIcons/passives/BowDamage.dds",
 			name="Bow Damage",
 			orbit=5,
@@ -36010,7 +36072,7 @@ return {
 					orbit=2
 				}
 			},
-			group=984,
+			group=988,
 			icon="Art/2DArt/SkillIcons/passives/stun2h.dds",
 			name="Damage vs Dazed Enemies",
 			orbit=2,
@@ -36215,7 +36277,7 @@ return {
 					orbit=-7
 				}
 			},
-			group=949,
+			group=953,
 			icon="Art/2DArt/SkillIcons/passives/auraeffect.dds",
 			name="Triggered Spell Damage",
 			orbit=7,
@@ -36812,7 +36874,7 @@ return {
 					orbit=0
 				}
 			},
-			group=961,
+			group=965,
 			icon="Art/2DArt/SkillIcons/passives/Deflection.dds",
 			name="Shield Evasion",
 			orbit=6,
@@ -37023,7 +37085,7 @@ return {
 					orbit=4
 				}
 			},
-			group=1010,
+			group=1014,
 			icon="Art/2DArt/SkillIcons/passives/criticalstrikechance.dds",
 			name="Critical Damage",
 			orbit=7,
@@ -37191,7 +37253,7 @@ return {
 					orbit=0
 				}
 			},
-			group=934,
+			group=936,
 			icon="Art/2DArt/SkillIcons/passives/MarkNode.dds",
 			name="Mark Cast Speed",
 			orbit=2,
@@ -37297,7 +37359,7 @@ return {
 					orbit=0
 				}
 			},
-			group=943,
+			group=947,
 			icon="Art/2DArt/SkillIcons/passives/avoidchilling.dds",
 			isNotable=true,
 			name="Slippery Ice",
@@ -37321,7 +37383,7 @@ return {
 					orbit=0
 				}
 			},
-			group=1003,
+			group=1007,
 			icon="Art/2DArt/SkillIcons/passives/Poison.dds",
 			name="Poison Chance",
 			orbit=0,
@@ -37386,7 +37448,7 @@ return {
 					orbit=9
 				}
 			},
-			group=1029,
+			group=1033,
 			icon="Art/2DArt/SkillIcons/passives/Invoker/InvokerNode.dds",
 			name="Evasion and Energy Shield",
 			orbit=9,
@@ -37478,7 +37540,7 @@ return {
 			ascendancyName="Deadeye",
 			connections={
 			},
-			group=1035,
+			group=1039,
 			icon="Art/2DArt/SkillIcons/passives/DeadEye/DeadeyeFrenzyChargesHaveMoreEffect.dds",
 			isNotable=true,
 			name="Thrilling Chase",
@@ -37544,7 +37606,7 @@ return {
 					orbit=0
 				}
 			},
-			group=1029,
+			group=1033,
 			icon="Art/2DArt/SkillIcons/passives/Invoker/InvokerChillChanceBasedOnDamage.dds",
 			isNotable=true,
 			name="I am the Blizzard...",
@@ -37972,7 +38034,7 @@ return {
 					orbit=0
 				}
 			},
-			group=932,
+			group=934,
 			icon="Art/2DArt/SkillIcons/passives/plusdexterity.dds",
 			name="Dexterity",
 			orbit=0,
@@ -38119,7 +38181,7 @@ return {
 			ascendancyName="Deadeye",
 			connections={
 			},
-			group=1032,
+			group=1036,
 			icon="Art/2DArt/SkillIcons/passives/DeadEye/DeadeyeMoreAccuracy.dds",
 			isNotable=true,
 			name="Eagle Eyes",
@@ -38200,7 +38262,7 @@ return {
 					orbit=0
 				}
 			},
-			group=952,
+			group=956,
 			icon="Art/2DArt/SkillIcons/passives/plusattribute.dds",
 			name="Attribute",
 			options={
@@ -38244,7 +38306,7 @@ return {
 					orbit=2147483647
 				}
 			},
-			group=1026,
+			group=1030,
 			icon="Art/2DArt/SkillIcons/passives/DeadEye/DeadeyeNode.dds",
 			name="Frenzy Charge Duration",
 			orbit=8,
@@ -38413,7 +38475,7 @@ return {
 					orbit=-9
 				}
 			},
-			group=1054,
+			group=1058,
 			icon="Art/2DArt/SkillIcons/passives/AcolyteofChayula/AcolyteOfChayulaNode.dds",
 			name="Chaos Resistance",
 			orbit=8,
@@ -38712,7 +38774,7 @@ return {
 					orbit=0
 				}
 			},
-			group=927,
+			group=929,
 			icon="Art/2DArt/SkillIcons/passives/plusattribute.dds",
 			name="Attribute",
 			options={
@@ -38876,7 +38938,7 @@ return {
 			ascendancyName="Pathfinder",
 			connections={
 			},
-			group=1037,
+			group=1041,
 			icon="Art/2DArt/SkillIcons/passives/PathFinder/PathfinderCannotBeSlowed.dds",
 			isNotable=true,
 			name="Relentless Pursuit",
@@ -39049,7 +39111,7 @@ return {
 			activeIcon="Art/2DArt/SkillIcons/passives/MasteryPassiveIcons/PassiveMasteryFlaskActive.dds",
 			connections={
 			},
-			group=914,
+			group=915,
 			icon="Art/2DArt/SkillIcons/passives/ChannellingAttacksMasterySymbol.dds",
 			inactiveIcon="Art/2DArt/SkillIcons/passives/MasteryPassiveIcons/PassiveMasteryFlaskInactive.dds",
 			isMastery=true,
@@ -39083,7 +39145,7 @@ return {
 					orbit=3
 				}
 			},
-			group=947,
+			group=951,
 			icon="Art/2DArt/SkillIcons/passives/damage.dds",
 			name="Attack Damage and Movement Speed",
 			orbit=2,
@@ -39401,7 +39463,7 @@ return {
 			ascendancyName="Invoker",
 			connections={
 			},
-			group=1029,
+			group=1033,
 			icon="Art/2DArt/SkillIcons/passives/Invoker/InvokerNode.dds",
 			name="Chill Effect",
 			orbit=6,
@@ -39522,7 +39584,7 @@ return {
 			activeIcon="Art/2DArt/SkillIcons/passives/MasteryPassiveIcons/PassiveMasteryShieldActive.dds",
 			connections={
 			},
-			group=976,
+			group=980,
 			icon="Art/2DArt/SkillIcons/passives/MasteryGroupShield.dds",
 			inactiveIcon="Art/2DArt/SkillIcons/passives/MasteryPassiveIcons/PassiveMasteryShieldInactive.dds",
 			isMastery=true,
@@ -39587,7 +39649,7 @@ return {
 					orbit=0
 				}
 			},
-			group=965,
+			group=969,
 			icon="Art/2DArt/SkillIcons/passives/LightningDamagenode.dds",
 			name="Lightning Damage",
 			orbit=2,
@@ -39604,7 +39666,7 @@ return {
 					orbit=0
 				}
 			},
-			group=1002,
+			group=1006,
 			icon="Art/2DArt/SkillIcons/passives/BowDamage.dds",
 			name="Bow Critical Damage",
 			orbit=6,
@@ -39744,7 +39806,7 @@ return {
 					orbit=0
 				}
 			},
-			group=940,
+			group=944,
 			icon="Art/2DArt/SkillIcons/passives/castspeed.dds",
 			name="Cast Speed",
 			orbit=7,
@@ -39780,7 +39842,7 @@ return {
 					orbit=0
 				}
 			},
-			group=1054,
+			group=1058,
 			icon="Art/2DArt/SkillIcons/passives/AcolyteofChayula/AcolyteOfChayulaNode.dds",
 			name="Darkness",
 			orbit=9,
@@ -39794,7 +39856,7 @@ return {
 			ascendancyName="Acolyte of Chayula",
 			connections={
 			},
-			group=1054,
+			group=1058,
 			icon="Art/2DArt/SkillIcons/passives/AcolyteofChayula/AcolyteOfChayulaExtraChaosDamage.dds",
 			isNotable=true,
 			name="Reality Rending",
@@ -39850,7 +39912,7 @@ return {
 			activeIcon="Art/2DArt/SkillIcons/passives/MasteryPassiveIcons/PassiveMasteryFlaskActive.dds",
 			connections={
 			},
-			group=968,
+			group=972,
 			icon="Art/2DArt/SkillIcons/passives/MasteryFlasks.dds",
 			inactiveIcon="Art/2DArt/SkillIcons/passives/MasteryPassiveIcons/PassiveMasteryFlaskInactive.dds",
 			isMastery=true,
@@ -39869,7 +39931,7 @@ return {
 					orbit=0
 				}
 			},
-			group=1054,
+			group=1058,
 			icon="Art/2DArt/SkillIcons/passives/AcolyteofChayula/AcolyteOfChayulaNode.dds",
 			name="Darkness",
 			orbit=8,
@@ -39938,7 +40000,7 @@ return {
 		[25992]={
 			connections={
 			},
-			group=1002,
+			group=1006,
 			icon="Art/2DArt/SkillIcons/passives/BowDamage.dds",
 			name="Bow Accuracy Rating",
 			orbit=6,
@@ -40018,7 +40080,7 @@ return {
 					orbit=7
 				}
 			},
-			group=911,
+			group=912,
 			icon="Art/2DArt/SkillIcons/passives/projectilespeed.dds",
 			isNotable=true,
 			name="Kite Runner",
@@ -40298,7 +40360,7 @@ return {
 					orbit=0
 				}
 			},
-			group=924,
+			group=925,
 			icon="Art/2DArt/SkillIcons/passives/projectilespeed.dds",
 			name="Projectile Damage",
 			orbit=7,
@@ -40694,7 +40756,7 @@ return {
 					orbit=0
 				}
 			},
-			group=935,
+			group=937,
 			icon="Art/2DArt/SkillIcons/passives/knockback.dds",
 			name="Knockback and Stun Buildup",
 			orbit=2,
@@ -40852,7 +40914,7 @@ return {
 					orbit=0
 				}
 			},
-			group=940,
+			group=944,
 			icon="Art/2DArt/SkillIcons/passives/castspeed.dds",
 			name="Cast Speed",
 			orbit=3,
@@ -41366,7 +41428,7 @@ return {
 					orbit=0
 				}
 			},
-			group=970,
+			group=974,
 			icon="Art/2DArt/SkillIcons/passives/trapdamage.dds",
 			isNotable=true,
 			name="Destructive Apparatus",
@@ -41407,7 +41469,7 @@ return {
 					orbit=0
 				}
 			},
-			group=968,
+			group=972,
 			icon="Art/2DArt/SkillIcons/passives/flaskint.dds",
 			name="Mana Flask Recovery",
 			orbit=0,
@@ -41638,7 +41700,7 @@ return {
 					orbit=0
 				}
 			},
-			group=1029,
+			group=1033,
 			icon="Art/2DArt/SkillIcons/passives/Invoker/InvokerNode.dds",
 			name="Energy Shield Recharge Rate",
 			orbit=8,
@@ -41690,7 +41752,7 @@ return {
 					orbit=0
 				}
 			},
-			group=994,
+			group=998,
 			icon="Art/2DArt/SkillIcons/passives/plusattribute.dds",
 			name="Attribute",
 			options={
@@ -41795,7 +41857,7 @@ return {
 					orbit=0
 				}
 			},
-			group=970,
+			group=974,
 			icon="Art/2DArt/SkillIcons/passives/trapdamage.dds",
 			name="Trap Critical Chance",
 			orbit=4,
@@ -41964,7 +42026,7 @@ return {
 					orbit=0
 				}
 			},
-			group=1013,
+			group=1017,
 			icon="Art/2DArt/SkillIcons/passives/HeraldBuffEffectNode2.dds",
 			isNotable=true,
 			name="Coming Calamity",
@@ -42057,7 +42119,7 @@ return {
 					orbit=-7
 				}
 			},
-			group=986,
+			group=990,
 			icon="Art/2DArt/SkillIcons/passives/FireDamagenode.dds",
 			name="Fire Penetration",
 			orbit=2,
@@ -42179,7 +42241,7 @@ return {
 					orbit=2
 				}
 			},
-			group=913,
+			group=914,
 			icon="Art/2DArt/SkillIcons/passives/MarkNode.dds",
 			name="Mark Effect",
 			orbit=0,
@@ -42376,7 +42438,7 @@ return {
 					orbit=-3
 				}
 			},
-			group=941,
+			group=945,
 			icon="Art/2DArt/SkillIcons/passives/damage.dds",
 			name="Damage vs Full Life",
 			orbit=7,
@@ -42700,7 +42762,7 @@ return {
 					orbit=0
 				}
 			},
-			group=1018,
+			group=1022,
 			icon="Art/2DArt/SkillIcons/passives/StaffMasterySymbol.dds",
 			inactiveIcon="Art/2DArt/SkillIcons/passives/MasteryPassiveIcons/PassiveMasteryProjectileInactive.dds",
 			isMastery=true,
@@ -42772,7 +42834,7 @@ return {
 					orbit=0
 				}
 			},
-			group=1007,
+			group=1011,
 			icon="Art/2DArt/SkillIcons/passives/criticaldaggerint.dds",
 			name="Dagger Speed",
 			orbit=6,
@@ -42795,12 +42857,12 @@ return {
 			},
 			group=881,
 			icon="Art/2DArt/SkillIcons/passives/CharmNode1.dds",
-			name="Damage while active Charm",
+			name="Charm Activation Chance",
 			orbit=7,
 			orbitIndex=23,
 			skill=28823,
 			stats={
-				[1]="16% increased Damage while you have an active Charm"
+				[1]="10% chance when a Charm is used to use another Charm without consuming Charges"
 			}
 		},
 		[28835]={
@@ -42819,7 +42881,7 @@ return {
 					orbit=0
 				}
 			},
-			group=1013,
+			group=1017,
 			icon="Art/2DArt/SkillIcons/passives/HeraldBuffEffectNode2.dds",
 			name="Herald Damage",
 			orbit=0,
@@ -42947,7 +43009,7 @@ return {
 					orbit=4
 				}
 			},
-			group=989,
+			group=993,
 			icon="Art/2DArt/SkillIcons/passives/DragonStyle.dds",
 			isNotable=true,
 			name="Way of the Wind",
@@ -42999,7 +43061,7 @@ return {
 					orbit=0
 				}
 			},
-			group=995,
+			group=999,
 			icon="Art/2DArt/SkillIcons/passives/Poison.dds",
 			name="Poison Duration",
 			orbit=0,
@@ -43170,7 +43232,7 @@ return {
 			ascendancyName="Pathfinder",
 			connections={
 			},
-			group=1048,
+			group=1052,
 			icon="Art/2DArt/SkillIcons/passives/PathFinder/PathfinderEnemiesMultiplePoisons.dds",
 			isNotable=true,
 			name="Overwhelming Toxicity",
@@ -43190,7 +43252,7 @@ return {
 					orbit=2
 				}
 			},
-			group=1029,
+			group=1033,
 			icon="Art/2DArt/SkillIcons/passives/Invoker/InvokerNode.dds",
 			name="Elemental Damage",
 			orbit=4,
@@ -43313,7 +43375,7 @@ return {
 					orbit=0
 				}
 			},
-			group=961,
+			group=965,
 			icon="Art/2DArt/SkillIcons/passives/Deflection.dds",
 			name="Shield Evasion",
 			orbit=6,
@@ -43544,7 +43606,7 @@ return {
 		[29458]={
 			connections={
 			},
-			group=999,
+			group=1003,
 			icon="Art/2DArt/SkillIcons/passives/Poison.dds",
 			name="Poison Damage",
 			orbit=7,
@@ -43692,7 +43754,7 @@ return {
 					orbit=0
 				}
 			},
-			group=941,
+			group=945,
 			icon="Art/2DArt/SkillIcons/passives/damage.dds",
 			isNotable=true,
 			name="First Approach",
@@ -43910,7 +43972,7 @@ return {
 					orbit=0
 				}
 			},
-			group=1028,
+			group=1032,
 			icon="Art/2DArt/SkillIcons/passives/DeadEye/DeadeyeNode.dds",
 			name="Skill Speed",
 			orbit=0,
@@ -43948,7 +44010,7 @@ return {
 					orbit=-3
 				}
 			},
-			group=998,
+			group=1002,
 			icon="Art/2DArt/SkillIcons/passives/criticalstrikechance.dds",
 			name="Critical Damage",
 			orbit=2,
@@ -44613,7 +44675,7 @@ return {
 		[30615]={
 			connections={
 			},
-			group=973,
+			group=977,
 			icon="Art/2DArt/SkillIcons/passives/chargeint.dds",
 			name="Critical Damage when consuming a Power Charge",
 			orbit=2,
@@ -44795,7 +44857,7 @@ return {
 					orbit=0
 				}
 			},
-			group=993,
+			group=997,
 			icon="Art/2DArt/SkillIcons/passives/plusattribute.dds",
 			name="Attribute",
 			options={
@@ -44971,7 +45033,7 @@ return {
 					orbit=0
 				}
 			},
-			group=990,
+			group=994,
 			icon="Art/2DArt/SkillIcons/passives/criticaldaggerint.dds",
 			name="Dagger Critical Chance",
 			orbit=6,
@@ -45100,7 +45162,7 @@ return {
 					orbit=0
 				}
 			},
-			group=1002,
+			group=1006,
 			icon="Art/2DArt/SkillIcons/passives/BowDamage.dds",
 			name="Bow Speed",
 			orbit=2,
@@ -45114,7 +45176,7 @@ return {
 			ascendancyName="Acolyte of Chayula",
 			connections={
 			},
-			group=1054,
+			group=1058,
 			icon="Art/2DArt/SkillIcons/passives/AcolyteofChayula/AcolyteOfChayulaExtraChaosDamagePerDarkness.dds",
 			isNotable=true,
 			name="Grasp of the Void",
@@ -45282,7 +45344,7 @@ return {
 					orbit=0
 				}
 			},
-			group=942,
+			group=946,
 			icon="Art/2DArt/SkillIcons/passives/MeleeAoENode.dds",
 			name="Melee Damage",
 			orbit=2,
@@ -45319,7 +45381,7 @@ return {
 					orbit=0
 				}
 			},
-			group=936,
+			group=938,
 			icon="Art/2DArt/SkillIcons/passives/PhysicalDamageNode.dds",
 			name="Physical",
 			orbit=3,
@@ -45435,7 +45497,7 @@ return {
 					orbit=4
 				}
 			},
-			group=926,
+			group=927,
 			icon="Art/2DArt/SkillIcons/passives/blockstr.dds",
 			name="Block",
 			orbit=3,
@@ -45562,7 +45624,7 @@ return {
 					orbit=0
 				}
 			},
-			group=1017,
+			group=1021,
 			icon="Art/2DArt/SkillIcons/passives/damagestaff.dds",
 			name="Quarterstaff Critical Chance",
 			orbit=5,
@@ -45651,7 +45713,7 @@ return {
 		[31647]={
 			connections={
 			},
-			group=946,
+			group=950,
 			icon="Art/2DArt/SkillIcons/passives/plusdexterity.dds",
 			name="Dexterity",
 			orbit=3,
@@ -46239,7 +46301,7 @@ return {
 					orbit=7
 				}
 			},
-			group=920,
+			group=921,
 			icon="Art/2DArt/SkillIcons/passives/plusattribute.dds",
 			name="Attribute",
 			options={
@@ -46423,7 +46485,7 @@ return {
 					orbit=0
 				}
 			},
-			group=916,
+			group=917,
 			icon="Art/2DArt/SkillIcons/passives/lightningint.dds",
 			isNotable=true,
 			name="Frazzled",
@@ -46591,7 +46653,7 @@ return {
 					orbit=0
 				}
 			},
-			group=1020,
+			group=1024,
 			icon="Art/2DArt/SkillIcons/passives/damagestaff.dds",
 			name="Quarterstaff Stun and Knockback",
 			orbit=0,
@@ -46679,7 +46741,7 @@ return {
 			activeIcon="Art/2DArt/SkillIcons/passives/MasteryPassiveIcons/PassiveMasteryCasterActive.dds",
 			connections={
 			},
-			group=949,
+			group=953,
 			icon="Art/2DArt/SkillIcons/passives/AreaofEffectSpellsMastery.dds",
 			inactiveIcon="Art/2DArt/SkillIcons/passives/MasteryPassiveIcons/PassiveMasteryCasterInactive.dds",
 			isMastery=true,
@@ -46727,7 +46789,7 @@ return {
 		[32543]={
 			connections={
 			},
-			group=985,
+			group=989,
 			icon="Art/2DArt/SkillIcons/passives/ReducedSkillEffectDurationNode.dds",
 			isNotable=true,
 			name="Unhindered",
@@ -46850,7 +46912,7 @@ return {
 					orbit=-3
 				}
 			},
-			group=975,
+			group=979,
 			icon="Art/2DArt/SkillIcons/passives/DragonStyle.dds",
 			isNotable=true,
 			name="Flurry",
@@ -46875,7 +46937,7 @@ return {
 					orbit=0
 				}
 			},
-			group=943,
+			group=947,
 			icon="Art/2DArt/SkillIcons/passives/avoidchilling.dds",
 			name="Freeze and Chill Resistance",
 			orbit=3,
@@ -47032,7 +47094,7 @@ return {
 		[32763]={
 			connections={
 			},
-			group=1011,
+			group=1015,
 			icon="Art/2DArt/SkillIcons/passives/MasteryBlank.dds",
 			isJewelSocket=true,
 			name="[Jewel] Socket",
@@ -47050,7 +47112,7 @@ return {
 					orbit=0
 				}
 			},
-			group=1054,
+			group=1058,
 			icon="Art/2DArt/SkillIcons/passives/AcolyteofChayula/AcolyteOfChayulaNode.dds",
 			name="Darkness",
 			orbit=9,
@@ -47249,7 +47311,7 @@ return {
 		[33093]={
 			connections={
 			},
-			group=940,
+			group=944,
 			icon="Art/2DArt/SkillIcons/passives/castspeed.dds",
 			isNotable=true,
 			name="Effervescent",
@@ -47285,7 +47347,7 @@ return {
 			},
 			skill=33099,
 			stats={
-				[1]="25% chance when a Charm is used to use another Charm without consuming Charges"
+				[1]="+1 Charm Slot"
 			}
 		},
 		[33112]={
@@ -47695,7 +47757,7 @@ return {
 					orbit=0
 				}
 			},
-			group=909,
+			group=910,
 			icon="Art/2DArt/SkillIcons/passives/EternalYouth.dds",
 			isKeystone=true,
 			name="Eternal Youth",
@@ -47902,7 +47964,7 @@ return {
 					orbit=-2
 				}
 			},
-			group=911,
+			group=912,
 			icon="Art/2DArt/SkillIcons/passives/projectilespeed.dds",
 			name="Projectile Speed",
 			orbit=2,
@@ -47989,7 +48051,7 @@ return {
 					orbit=0
 				}
 			},
-			group=1037,
+			group=1041,
 			icon="Art/2DArt/SkillIcons/passives/PathFinder/PathfinderNode.dds",
 			name="Skill Speed",
 			orbit=9,
@@ -48224,7 +48286,7 @@ return {
 					orbit=0
 				}
 			},
-			group=970,
+			group=974,
 			icon="Art/2DArt/SkillIcons/passives/trapdamage.dds",
 			name="Trap Critical Chance",
 			orbit=4,
@@ -48824,7 +48886,7 @@ return {
 		[34316]={
 			connections={
 			},
-			group=1017,
+			group=1021,
 			icon="Art/2DArt/SkillIcons/passives/damagestaff.dds",
 			isNotable=true,
 			name="One with the River",
@@ -48934,7 +48996,7 @@ return {
 			activeIcon="Art/2DArt/SkillIcons/passives/MasteryPassiveIcons/PassiveMasteryBlindActive.dds",
 			connections={
 			},
-			group=957,
+			group=961,
 			icon="Art/2DArt/SkillIcons/passives/MasteryGroupEvasion.dds",
 			inactiveIcon="Art/2DArt/SkillIcons/passives/MasteryPassiveIcons/PassiveMasteryBlindInactive.dds",
 			isMastery=true,
@@ -48985,7 +49047,7 @@ return {
 					orbit=0
 				}
 			},
-			group=970,
+			group=974,
 			icon="Art/2DArt/SkillIcons/passives/trapdamage.dds",
 			name="Trap Critical Chance",
 			orbit=4,
@@ -49041,7 +49103,7 @@ return {
 					orbit=0
 				}
 			},
-			group=918,
+			group=919,
 			icon="Art/2DArt/SkillIcons/passives/MasteryBlank.dds",
 			isJewelSocket=true,
 			name="[Jewel] Socket",
@@ -49095,7 +49157,7 @@ return {
 		[34497]={
 			connections={
 			},
-			group=931,
+			group=909,
 			icon="Art/2DArt/SkillIcons/passives/HeartstopperKeystone.dds",
 			isKeystone=true,
 			name="Heartstopper",
@@ -49193,7 +49255,7 @@ return {
 					orbit=0
 				}
 			},
-			group=1002,
+			group=1006,
 			icon="Art/2DArt/SkillIcons/passives/BowDamage.dds",
 			name="Bow Damage",
 			orbit=5,
@@ -49301,7 +49363,7 @@ return {
 			ascendancyName="Acolyte of Chayula",
 			connections={
 			},
-			group=1054,
+			group=1058,
 			icon="Art/2DArt/SkillIcons/passives/AcolyteofChayula/AcolyteOfChayulaDarknessProtectsLonger.dds",
 			isNotable=true,
 			name="Inner Silence",
@@ -49405,7 +49467,7 @@ return {
 					orbit=0
 				}
 			},
-			group=970,
+			group=974,
 			icon="Art/2DArt/SkillIcons/passives/trapdamage.dds",
 			name="Trap Damage",
 			orbit=6,
@@ -49490,7 +49552,7 @@ return {
 		[35043]={
 			connections={
 			},
-			group=976,
+			group=980,
 			icon="Art/2DArt/SkillIcons/passives/Deflection.dds",
 			name="Shield Evasion",
 			orbit=4,
@@ -49573,7 +49635,7 @@ return {
 					orbit=0
 				}
 			},
-			group=936,
+			group=938,
 			icon="Art/2DArt/SkillIcons/passives/PhysicalDamageNode.dds",
 			name="Physical Damage and Critical Chance",
 			orbit=7,
@@ -49595,7 +49657,7 @@ return {
 					orbit=0
 				}
 			},
-			group=950,
+			group=954,
 			icon="Art/2DArt/SkillIcons/passives/damagesword.dds",
 			name="Spear Critical Chance",
 			orbit=3,
@@ -49920,7 +49982,7 @@ return {
 					orbit=-3
 				}
 			},
-			group=934,
+			group=936,
 			icon="Art/2DArt/SkillIcons/passives/MarkNode.dds",
 			name="Mark Cast Speed",
 			orbit=2,
@@ -50099,7 +50161,7 @@ return {
 					orbit=0
 				}
 			},
-			group=922,
+			group=923,
 			icon="Art/2DArt/SkillIcons/passives/plusattribute.dds",
 			name="Attribute",
 			options={
@@ -50187,7 +50249,7 @@ return {
 					orbit=0
 				}
 			},
-			group=1012,
+			group=1016,
 			icon="Art/2DArt/SkillIcons/passives/criticaldaggerint.dds",
 			name="Dagger Critical Damage",
 			orbit=2,
@@ -50239,7 +50301,7 @@ return {
 					orbit=0
 				}
 			},
-			group=1036,
+			group=1040,
 			icon="Art/2DArt/SkillIcons/passives/DeadEye/DeadeyeNode.dds",
 			name="Frenzy Charge Duration",
 			orbit=0,
@@ -50578,7 +50640,7 @@ return {
 		[35985]={
 			connections={
 			},
-			group=942,
+			group=946,
 			icon="Art/2DArt/SkillIcons/passives/MeleeAoENode.dds",
 			name="Melee Damage",
 			orbit=6,
@@ -50686,7 +50748,7 @@ return {
 			activeIcon="Art/2DArt/SkillIcons/passives/MasteryPassiveIcons/PassiveMasteryShieldActive.dds",
 			connections={
 			},
-			group=950,
+			group=954,
 			icon="Art/2DArt/SkillIcons/passives/ImpaleMasterySymbol.dds",
 			inactiveIcon="Art/2DArt/SkillIcons/passives/MasteryPassiveIcons/PassiveMasteryShieldInactive.dds",
 			isMastery=true,
@@ -50708,7 +50770,7 @@ return {
 					orbit=0
 				}
 			},
-			group=960,
+			group=964,
 			icon="Art/2DArt/SkillIcons/passives/MeleeAoENode.dds",
 			isNotable=true,
 			name="Serrated Edges",
@@ -50808,7 +50870,7 @@ return {
 					orbit=0
 				}
 			},
-			group=973,
+			group=977,
 			icon="Art/2DArt/SkillIcons/passives/chargeint.dds",
 			name="Critical Damage when consuming a Power Charge",
 			orbit=2,
@@ -50978,7 +51040,7 @@ return {
 			activeEffectImage="Art/2DArt/UIImages/InGame/PassiveMastery/MasteryBackgroundGraphic/MasteryLightningPattern",
 			connections={
 			},
-			group=966,
+			group=970,
 			icon="Art/2DArt/SkillIcons/passives/lightningint.dds",
 			isNotable=true,
 			name="Electrocution",
@@ -51180,7 +51242,7 @@ return {
 					orbit=0
 				}
 			},
-			group=947,
+			group=951,
 			icon="Art/2DArt/SkillIcons/passives/damage.dds",
 			name="Attack Damage",
 			orbit=7,
@@ -51368,7 +51430,7 @@ return {
 					orbit=0
 				}
 			},
-			group=1037,
+			group=1041,
 			icon="Art/2DArt/SkillIcons/passives/PathFinder/PathfinderNode.dds",
 			name="Passive Points",
 			orbit=8,
@@ -51393,7 +51455,7 @@ return {
 					orbit=0
 				}
 			},
-			group=950,
+			group=954,
 			icon="Art/2DArt/SkillIcons/passives/damagesword.dds",
 			name="Spear Critical Chance",
 			orbit=0,
@@ -51510,7 +51572,7 @@ return {
 					orbit=0
 				}
 			},
-			group=1054,
+			group=1058,
 			icon="Art/2DArt/SkillIcons/passives/AcolyteofChayula/AcolyteOfChayulaNode.dds",
 			name="Chaos Damage",
 			orbit=6,
@@ -51620,7 +51682,7 @@ return {
 					orbit=5
 				}
 			},
-			group=913,
+			group=914,
 			icon="Art/2DArt/SkillIcons/passives/MarkNode.dds",
 			name="Mark Cast Speed",
 			orbit=2,
@@ -51633,7 +51695,7 @@ return {
 		[36976]={
 			connections={
 			},
-			group=913,
+			group=914,
 			icon="Art/2DArt/SkillIcons/passives/MarkNode.dds",
 			isNotable=true,
 			name="Marked for Death",
@@ -51681,6 +51743,23 @@ return {
 				[1]="10% chance for Enemies you Kill to Explode, dealing 100%",
 				[2]="of their maximum Life as Physical Damage",
 				[3]="Chance is doubled against Undead and Demons"
+			}
+		},
+		[37113]={
+			connections={
+				[1]={
+					id=43090,
+					orbit=0
+				}
+			},
+			group=932,
+			icon="Art/2DArt/SkillIcons/passives/LightningDamagenode.dds",
+			name="Lightning Damage",
+			orbit=0,
+			orbitIndex=0,
+			skill=37113,
+			stats={
+				[1]="10% increased Lightning Damage"
 			}
 		},
 		[37190]={
@@ -51903,7 +51982,7 @@ return {
 					orbit=0
 				}
 			},
-			group=1038,
+			group=1042,
 			icon="Art/2DArt/SkillIcons/passives/DeadEye/DeadeyeFrenzyChargesGeneration.dds",
 			isNotable=true,
 			name="Avidity",
@@ -52037,7 +52116,7 @@ return {
 		[37484]={
 			connections={
 			},
-			group=997,
+			group=1001,
 			icon="Art/2DArt/SkillIcons/passives/KeystoneAcrobatics.dds",
 			isKeystone=true,
 			name="Acrobatics",
@@ -52077,7 +52156,7 @@ return {
 					orbit=0
 				}
 			},
-			group=1017,
+			group=1021,
 			icon="Art/2DArt/SkillIcons/passives/damagestaff.dds",
 			isNotable=true,
 			name="Whirling Assault",
@@ -52145,7 +52224,7 @@ return {
 					orbit=0
 				}
 			},
-			group=960,
+			group=964,
 			icon="Art/2DArt/SkillIcons/passives/ManaLeechThemedNode.dds",
 			name="Mana Leech",
 			orbit=2,
@@ -52245,7 +52324,7 @@ return {
 			activeIcon="Art/2DArt/SkillIcons/passives/MasteryPassiveIcons/PassiveMasteryTrapActive.dds",
 			connections={
 			},
-			group=970,
+			group=974,
 			icon="Art/2DArt/SkillIcons/passives/MasteryTraps.dds",
 			inactiveIcon="Art/2DArt/SkillIcons/passives/MasteryPassiveIcons/PassiveMasteryTrapInactive.dds",
 			isMastery=true,
@@ -52340,7 +52419,7 @@ return {
 					orbit=0
 				}
 			},
-			group=970,
+			group=974,
 			icon="Art/2DArt/SkillIcons/passives/trapdamage.dds",
 			isNotable=true,
 			name="Devestating Devices",
@@ -52401,7 +52480,7 @@ return {
 					orbit=0
 				}
 			},
-			group=960,
+			group=964,
 			icon="Art/2DArt/SkillIcons/passives/ManaLeechThemedNode.dds",
 			isNotable=true,
 			name="Manifold Method",
@@ -52507,7 +52586,7 @@ return {
 					orbit=0
 				}
 			},
-			group=925,
+			group=926,
 			icon="Art/2DArt/SkillIcons/passives/lightningint.dds",
 			name="Shock Duration",
 			orbit=0,
@@ -52556,7 +52635,7 @@ return {
 					orbit=0
 				}
 			},
-			group=940,
+			group=944,
 			icon="Art/2DArt/SkillIcons/passives/damagespells.dds",
 			name="Spell Damage",
 			orbit=4,
@@ -52569,7 +52648,7 @@ return {
 		[37905]={
 			connections={
 			},
-			group=986,
+			group=990,
 			icon="Art/2DArt/SkillIcons/passives/firedamage.dds",
 			name="Fire Penetration",
 			orbit=3,
@@ -52681,7 +52760,7 @@ return {
 					orbit=0
 				}
 			},
-			group=1039,
+			group=1043,
 			icon="Art/2DArt/SkillIcons/passives/PathFinder/PathfinderBrewConcoctionFire.dds",
 			name="Explosive Concoction",
 			orbit=0,
@@ -53083,7 +53162,7 @@ return {
 			activeEffectImage="Art/2DArt/UIImages/InGame/PassiveMastery/MasteryBackgroundGraphic/MasteryStunPattern",
 			connections={
 			},
-			group=984,
+			group=988,
 			icon="Art/2DArt/SkillIcons/passives/stun2h.dds",
 			isNotable=true,
 			name="Stupefy",
@@ -53150,7 +53229,7 @@ return {
 					orbit=0
 				}
 			},
-			group=950,
+			group=954,
 			icon="Art/2DArt/SkillIcons/passives/damagesword.dds",
 			name="Spear Damage",
 			orbit=4,
@@ -53282,7 +53361,7 @@ return {
 					orbit=4
 				}
 			},
-			group=1010,
+			group=1014,
 			icon="Art/2DArt/SkillIcons/passives/criticalstrikechance.dds",
 			name="Critical Damage",
 			orbit=4,
@@ -53299,7 +53378,7 @@ return {
 					orbit=-5
 				}
 			},
-			group=914,
+			group=915,
 			icon="Art/2DArt/SkillIcons/passives/CharmNode1.dds",
 			name="Charm Charges Used",
 			orbit=7,
@@ -53365,7 +53444,7 @@ return {
 					orbit=0
 				}
 			},
-			group=1010,
+			group=1014,
 			icon="Art/2DArt/SkillIcons/passives/criticalstrikechance.dds",
 			isNotable=true,
 			name="Heartstopping",
@@ -53500,7 +53579,7 @@ return {
 			activeEffectImage="Art/2DArt/UIImages/InGame/PassiveMastery/MasteryBackgroundGraphic/MasteryPoisonPattern",
 			connections={
 			},
-			group=999,
+			group=1003,
 			icon="Art/2DArt/SkillIcons/passives/Poison.dds",
 			isNotable=true,
 			name="Escalating Toxins",
@@ -53561,7 +53640,7 @@ return {
 					orbit=2
 				}
 			},
-			group=977,
+			group=981,
 			icon="Art/2DArt/SkillIcons/passives/DragonStyle.dds",
 			name="Unarmed Attack Speed",
 			orbit=0,
@@ -53698,7 +53777,7 @@ return {
 					orbit=5
 				}
 			},
-			group=978,
+			group=982,
 			icon="Art/2DArt/SkillIcons/passives/evade.dds",
 			name="Evasion",
 			orbit=7,
@@ -54138,7 +54217,7 @@ return {
 					orbit=0
 				}
 			},
-			group=1008,
+			group=1012,
 			icon="Art/2DArt/SkillIcons/passives/BowDamage.dds",
 			name="Bow Critical Damage",
 			orbit=0,
@@ -54401,7 +54480,7 @@ return {
 					orbit=0
 				}
 			},
-			group=1050,
+			group=1054,
 			icon="Art/2DArt/SkillIcons/passives/PathFinder/PathfinderNode.dds",
 			name="Flask Charges Gained",
 			orbit=0,
@@ -54460,7 +54539,7 @@ return {
 					orbit=0
 				}
 			},
-			group=1010,
+			group=1014,
 			icon="Art/2DArt/SkillIcons/passives/criticalstrikechance.dds",
 			isNotable=true,
 			name="Struck Through",
@@ -54743,7 +54822,7 @@ return {
 					orbit=0
 				}
 			},
-			group=915,
+			group=916,
 			icon="Art/2DArt/SkillIcons/passives/flaskdex.dds",
 			name="Flask Charges Gained",
 			orbit=2,
@@ -54878,7 +54957,7 @@ return {
 					orbit=0
 				}
 			},
-			group=1026,
+			group=1030,
 			icon="Art/2DArt/SkillIcons/passives/DeadEye/DeadeyeNode.dds",
 			name="Accuracy",
 			orbit=6,
@@ -54958,7 +55037,7 @@ return {
 					orbit=0
 				}
 			},
-			group=937,
+			group=941,
 			icon="Art/2DArt/SkillIcons/passives/PhysicalDamageNode.dds",
 			isNotable=true,
 			name="Staggering Palm",
@@ -55791,7 +55870,7 @@ return {
 			activeEffectImage="Art/2DArt/UIImages/InGame/PassiveMastery/MasteryBackgroundGraphic/MasteryLightningPattern",
 			connections={
 			},
-			group=956,
+			group=960,
 			icon="Art/2DArt/SkillIcons/passives/LightningDamagenode.dds",
 			isNotable=true,
 			name="Exposed to the Storm",
@@ -55835,7 +55914,7 @@ return {
 					orbit=0
 				}
 			},
-			group=959,
+			group=963,
 			icon="Art/2DArt/SkillIcons/passives/plusattribute.dds",
 			name="Attribute",
 			options={
@@ -56010,7 +56089,7 @@ return {
 					orbit=-6
 				}
 			},
-			group=1054,
+			group=1058,
 			icon="Art/2DArt/SkillIcons/passives/AcolyteofChayula/AcolyteOfChayulaReplaceSpiritWithDarkness.dds",
 			isNotable=true,
 			name="Embrace the Darkness",
@@ -56124,7 +56203,7 @@ return {
 			activeIcon="Art/2DArt/SkillIcons/passives/MasteryPassiveIcons/PassiveMasteryEvasionActive.dds",
 			connections={
 			},
-			group=978,
+			group=982,
 			icon="Art/2DArt/SkillIcons/passives/MasteryGroupEvasion.dds",
 			inactiveIcon="Art/2DArt/SkillIcons/passives/MasteryPassiveIcons/PassiveMasteryEvasionInactive.dds",
 			isMastery=true,
@@ -56263,7 +56342,7 @@ return {
 			activeIcon="Art/2DArt/SkillIcons/passives/MasteryPassiveIcons/PassiveMasteryAttackActive.dds",
 			connections={
 			},
-			group=947,
+			group=951,
 			icon="Art/2DArt/SkillIcons/passives/AttackBlindMastery.dds",
 			inactiveIcon="Art/2DArt/SkillIcons/passives/MasteryPassiveIcons/PassiveMasteryAttackInactive.dds",
 			isMastery=true,
@@ -56485,7 +56564,7 @@ return {
 					orbit=0
 				}
 			},
-			group=947,
+			group=951,
 			icon="Art/2DArt/SkillIcons/passives/damage.dds",
 			isNotable=true,
 			name="Maiming Strike",
@@ -56527,7 +56606,7 @@ return {
 			ascendancyName="Pathfinder",
 			connections={
 			},
-			group=1051,
+			group=1055,
 			icon="Art/2DArt/SkillIcons/passives/PathFinder/PathfinderLifeFlasks.dds",
 			isNotable=true,
 			name="Enduring Elixirs",
@@ -56739,7 +56818,7 @@ return {
 					orbit=0
 				}
 			},
-			group=936,
+			group=938,
 			icon="Art/2DArt/SkillIcons/passives/PhysicalDamageNode.dds",
 			isNotable=true,
 			name="Shatter Palm",
@@ -56759,7 +56838,7 @@ return {
 		[41873]={
 			connections={
 			},
-			group=996,
+			group=1000,
 			icon="Art/2DArt/SkillIcons/passives/chargedex.dds",
 			name="Frenzy Charge Duration",
 			orbit=2,
@@ -56777,7 +56856,7 @@ return {
 					orbit=0
 				}
 			},
-			group=1033,
+			group=1037,
 			icon="Art/2DArt/SkillIcons/passives/DeadEye/DeadeyeDealMoreProjectileDamageClose.dds",
 			name="Point Blank",
 			orbit=0,
@@ -56963,7 +57042,7 @@ return {
 					orbit=0
 				}
 			},
-			group=976,
+			group=980,
 			icon="Art/2DArt/SkillIcons/passives/Deflection.dds",
 			isNotable=true,
 			name="Deflection",
@@ -57449,7 +57528,7 @@ return {
 			ascendancyName="Deadeye",
 			connections={
 			},
-			group=1026,
+			group=1030,
 			icon="Art/2DArt/SkillIcons/passives/DeadEye/DeadeyeProjectileDamageChoose.dds",
 			isNotable=true,
 			name="Projectile Proximity Specialisation",
@@ -57733,7 +57812,7 @@ return {
 			activeIcon="Art/2DArt/SkillIcons/passives/MasteryPassiveIcons/PassiveMasteryCriticalActive.dds",
 			connections={
 			},
-			group=998,
+			group=1002,
 			icon="Art/2DArt/SkillIcons/passives/MasteryGroupCrit.dds",
 			inactiveIcon="Art/2DArt/SkillIcons/passives/MasteryPassiveIcons/PassiveMasteryCriticalInactive.dds",
 			isMastery=true,
@@ -57927,7 +58006,7 @@ return {
 					orbit=3
 				}
 			},
-			group=1009,
+			group=1013,
 			icon="Art/2DArt/SkillIcons/passives/ChaosDamagenode.dds",
 			name="Chaos Damage",
 			orbit=3,
@@ -57975,7 +58054,7 @@ return {
 			activeEffectImage="Art/2DArt/UIImages/InGame/PassiveMastery/MasteryBackgroundGraphic/MasteryEvasionPattern",
 			connections={
 			},
-			group=944,
+			group=948,
 			icon="Art/2DArt/SkillIcons/passives/increasedrunspeeddex.dds",
 			isNotable=true,
 			name="Acceleration",
@@ -57990,6 +58069,27 @@ return {
 			stats={
 				[1]="3% increased Movement Speed",
 				[2]="10% increased Skill Speed"
+			}
+		},
+		[43090]={
+			activeEffectImage="Art/2DArt/UIImages/InGame/PassiveMastery/MasteryBackgroundGraphic/MasteryLightningPattern",
+			connections={
+			},
+			group=939,
+			icon="Art/2DArt/SkillIcons/passives/LightningDamagenode.dds",
+			isNotable=true,
+			name="Electrotherapy",
+			orbit=0,
+			orbitIndex=0,
+			recipe={
+				[1]="Suffering",
+				[2]="Ire",
+				[3]="Guilt"
+			},
+			skill=43090,
+			stats={
+				[1]="5% increased Skill Speed",
+				[2]="30% increased Electrocute Buildup"
 			}
 		},
 		[43128]={
@@ -58764,7 +58864,7 @@ return {
 					orbit=2
 				}
 			},
-			group=986,
+			group=990,
 			icon="Art/2DArt/SkillIcons/passives/FireDamagenode.dds",
 			name="Fire Penetration",
 			orbit=7,
@@ -58836,7 +58936,7 @@ return {
 					orbit=0
 				}
 			},
-			group=970,
+			group=974,
 			icon="Art/2DArt/SkillIcons/passives/trapdamage.dds",
 			name="Trap Throw Speed",
 			orbit=6,
@@ -59030,7 +59130,7 @@ return {
 					orbit=0
 				}
 			},
-			group=1002,
+			group=1006,
 			icon="Art/2DArt/SkillIcons/passives/BowDamage.dds",
 			name="Bow Speed",
 			orbit=3,
@@ -59158,7 +59258,7 @@ return {
 					orbit=-3
 				}
 			},
-			group=934,
+			group=936,
 			icon="Art/2DArt/SkillIcons/passives/MarkNode.dds",
 			name="Mark Effect and Blind Chance",
 			orbit=2,
@@ -59365,7 +59465,7 @@ return {
 					orbit=-9
 				}
 			},
-			group=1029,
+			group=1033,
 			icon="Art/2DArt/SkillIcons/passives/Invoker/InvokerNode.dds",
 			name="Critical Chance",
 			orbit=9,
@@ -59559,6 +59659,24 @@ return {
 				[1]="+4% to all Elemental Resistances"
 			}
 		},
+		[44490]={
+			connections={
+				[1]={
+					id=37113,
+					orbit=0
+				}
+			},
+			group=940,
+			icon="Art/2DArt/SkillIcons/passives/LightningDamagenode.dds",
+			name="Lightning Damage and Electrocute Buildup",
+			orbit=0,
+			orbitIndex=0,
+			skill=44490,
+			stats={
+				[1]="8% increased Lightning Damage",
+				[2]="10% increased Electrocute Buildup"
+			}
+		},
 		[44498]={
 			connections={
 				[1]={
@@ -59589,7 +59707,7 @@ return {
 					orbit=0
 				}
 			},
-			group=1017,
+			group=1021,
 			icon="Art/2DArt/SkillIcons/passives/damagestaff.dds",
 			name="Quarterstaff Speed",
 			orbit=2,
@@ -59928,7 +60046,7 @@ return {
 					orbit=5
 				}
 			},
-			group=913,
+			group=914,
 			icon="Art/2DArt/SkillIcons/passives/MarkNode.dds",
 			isNotable=true,
 			name="Marked Agility",
@@ -59980,7 +60098,7 @@ return {
 					orbit=5
 				}
 			},
-			group=978,
+			group=982,
 			icon="Art/2DArt/SkillIcons/passives/evade.dds",
 			name="Evasion",
 			orbit=5,
@@ -60068,7 +60186,7 @@ return {
 					orbit=2
 				}
 			},
-			group=913,
+			group=914,
 			icon="Art/2DArt/SkillIcons/passives/MarkNode.dds",
 			name="Mark Cast Speed",
 			orbit=2,
@@ -60142,7 +60260,7 @@ return {
 					orbit=0
 				}
 			},
-			group=974,
+			group=978,
 			icon="Art/2DArt/SkillIcons/passives/ColdDamagenode.dds",
 			name="Cold Penetration",
 			orbit=2,
@@ -60202,7 +60320,7 @@ return {
 					orbit=0
 				}
 			},
-			group=929,
+			group=931,
 			icon="Art/2DArt/SkillIcons/passives/lightningint.dds",
 			name="Shock Effect",
 			orbit=3,
@@ -60267,7 +60385,7 @@ return {
 					orbit=0
 				}
 			},
-			group=960,
+			group=964,
 			icon="Art/2DArt/SkillIcons/passives/damage.dds",
 			name="Attack Damage",
 			orbit=3,
@@ -60560,7 +60678,7 @@ return {
 					orbit=-4
 				}
 			},
-			group=954,
+			group=958,
 			icon="Art/2DArt/SkillIcons/passives/Poison.dds",
 			name="Poison Duration",
 			orbit=3,
@@ -60710,7 +60828,7 @@ return {
 					orbit=2
 				}
 			},
-			group=913,
+			group=914,
 			icon="Art/2DArt/SkillIcons/passives/MarkNode.dds",
 			name="Mark Duration",
 			orbit=2,
@@ -61046,7 +61164,7 @@ return {
 		[45713]={
 			connections={
 			},
-			group=915,
+			group=916,
 			icon="Art/2DArt/SkillIcons/passives/flaskdex.dds",
 			isNotable=true,
 			name="Savouring",
@@ -61851,7 +61969,7 @@ return {
 			ascendancyName="Pathfinder",
 			connections={
 			},
-			group=1037,
+			group=1041,
 			icon="Art/2DArt/SkillIcons/passives/PathFinder/PathfinderAdditionalPoints.dds",
 			isNotable=true,
 			name="Traveller's Wisdom",
@@ -62399,7 +62517,7 @@ return {
 					orbit=0
 				}
 			},
-			group=1026,
+			group=1030,
 			icon="Art/2DArt/SkillIcons/passives/DeadEye/DeadeyeNode.dds",
 			name="Projectile Speed",
 			orbit=3,
@@ -62521,7 +62639,7 @@ return {
 					orbit=0
 				}
 			},
-			group=1026,
+			group=1030,
 			icon="Art/2DArt/SkillIcons/passives/damage.dds",
 			isAscendancyStart=true,
 			name="Deadeye",
@@ -62941,7 +63059,7 @@ return {
 					orbit=0
 				}
 			},
-			group=1054,
+			group=1058,
 			icon="Art/2DArt/SkillIcons/passives/AcolyteofChayula/AcolyteOfChayulaNode.dds",
 			name="Mana Leech",
 			orbit=9,
@@ -63180,7 +63298,7 @@ return {
 					orbit=-7
 				}
 			},
-			group=949,
+			group=953,
 			icon="Art/2DArt/SkillIcons/passives/auraeffect.dds",
 			name="Triggered Spell Damage",
 			orbit=2,
@@ -63497,7 +63615,7 @@ return {
 					orbit=0
 				}
 			},
-			group=912,
+			group=913,
 			icon="Art/2DArt/SkillIcons/passives/plusattribute.dds",
 			name="Attribute",
 			options={
@@ -63638,7 +63756,7 @@ return {
 					orbit=0
 				}
 			},
-			group=935,
+			group=937,
 			icon="Art/2DArt/SkillIcons/passives/knockback.dds",
 			isNotable=true,
 			name="Forcewave",
@@ -63671,7 +63789,7 @@ return {
 					orbit=0
 				}
 			},
-			group=982,
+			group=986,
 			icon="Art/2DArt/SkillIcons/passives/plusattribute.dds",
 			name="Attribute",
 			options={
@@ -64025,7 +64143,7 @@ return {
 					orbit=5
 				}
 			},
-			group=914,
+			group=915,
 			icon="Art/2DArt/SkillIcons/passives/CharmNode1.dds",
 			name="Charm Effect",
 			orbit=7,
@@ -64075,7 +64193,7 @@ return {
 					orbit=0
 				}
 			},
-			group=942,
+			group=946,
 			icon="Art/2DArt/SkillIcons/passives/MeleeAoENode.dds",
 			name="Melee Attack Speed",
 			orbit=1,
@@ -64673,7 +64791,7 @@ return {
 					orbit=0
 				}
 			},
-			group=1001,
+			group=1005,
 			icon="Art/2DArt/SkillIcons/passives/plusattribute.dds",
 			name="Attribute",
 			options={
@@ -64990,7 +65108,7 @@ return {
 					orbit=0
 				}
 			},
-			group=1026,
+			group=1030,
 			icon="Art/2DArt/SkillIcons/passives/DeadEye/DeadeyeNode.dds",
 			name="Mark Effect",
 			orbit=6,
@@ -65186,7 +65304,7 @@ return {
 					orbit=0
 				}
 			},
-			group=990,
+			group=994,
 			icon="Art/2DArt/SkillIcons/passives/criticaldaggerint.dds",
 			name="Dagger Critical Chance",
 			orbit=6,
@@ -65399,7 +65517,7 @@ return {
 					orbit=0
 				}
 			},
-			group=1043,
+			group=1047,
 			icon="Art/2DArt/SkillIcons/passives/PathFinder/PathfinderNode.dds",
 			name="Mana Flask Charges",
 			orbit=0,
@@ -65935,7 +66053,7 @@ return {
 					orbit=7
 				}
 			},
-			group=919,
+			group=920,
 			icon="Art/2DArt/SkillIcons/passives/plusattribute.dds",
 			name="Attribute",
 			options={
@@ -66021,7 +66139,7 @@ return {
 					orbit=0
 				}
 			},
-			group=1054,
+			group=1058,
 			icon="Art/2DArt/SkillIcons/passives/AcolyteofChayula/AcolyteOfChayulaBreachWalk.dds",
 			isNotable=true,
 			name="Waking Dream",
@@ -66209,7 +66327,7 @@ return {
 					orbit=0
 				}
 			},
-			group=928,
+			group=930,
 			icon="Art/2DArt/SkillIcons/passives/lightningint.dds",
 			name="Shock Effect",
 			orbit=0,
@@ -66323,7 +66441,7 @@ return {
 			activeIcon="Art/2DArt/SkillIcons/passives/MasteryPassiveIcons/PassiveMasteryColdActive.dds",
 			connections={
 			},
-			group=943,
+			group=947,
 			icon="Art/2DArt/SkillIcons/passives/MasteryGroupCold.dds",
 			inactiveIcon="Art/2DArt/SkillIcons/passives/MasteryPassiveIcons/PassiveMasteryColdInactive.dds",
 			isMastery=true,
@@ -66786,7 +66904,7 @@ return {
 					orbit=0
 				}
 			},
-			group=930,
+			group=933,
 			icon="Art/2DArt/SkillIcons/passives/lightningint.dds",
 			name="Shock Effect",
 			orbit=0,
@@ -67595,7 +67713,7 @@ return {
 			activeIcon="Art/2DArt/SkillIcons/passives/MasteryPassiveIcons/PassiveMasteryCriticalActive.dds",
 			connections={
 			},
-			group=1010,
+			group=1014,
 			icon="Art/2DArt/SkillIcons/passives/MasteryGroupCrit.dds",
 			inactiveIcon="Art/2DArt/SkillIcons/passives/MasteryPassiveIcons/PassiveMasteryCriticalInactive.dds",
 			isMastery=true,
@@ -67610,7 +67728,7 @@ return {
 			activeEffectImage="Art/2DArt/UIImages/InGame/PassiveMastery/MasteryBackgroundGraphic/MasteryMarkPattern",
 			connections={
 			},
-			group=934,
+			group=936,
 			icon="Art/2DArt/SkillIcons/passives/MarkNode.dds",
 			isNotable=true,
 			name="Unsight",
@@ -67708,7 +67826,7 @@ return {
 					orbit=0
 				}
 			},
-			group=978,
+			group=982,
 			icon="Art/2DArt/SkillIcons/passives/evade.dds",
 			isNotable=true,
 			name="Enhanced Reflexes",
@@ -68434,7 +68552,7 @@ return {
 					orbit=0
 				}
 			},
-			group=1006,
+			group=1010,
 			icon="Art/2DArt/SkillIcons/passives/criticaldaggerint.dds",
 			name="Dagger Critical Chance",
 			orbit=0,
@@ -68484,7 +68602,7 @@ return {
 					orbit=-2
 				}
 			},
-			group=949,
+			group=953,
 			icon="Art/2DArt/SkillIcons/passives/auraeffect.dds",
 			name="Energy",
 			orbit=2,
@@ -68669,7 +68787,7 @@ return {
 					orbit=0
 				}
 			},
-			group=949,
+			group=953,
 			icon="Art/2DArt/SkillIcons/passives/auraeffect.dds",
 			name="Energy",
 			orbit=2,
@@ -68703,7 +68821,7 @@ return {
 					orbit=7
 				}
 			},
-			group=911,
+			group=912,
 			icon="Art/2DArt/SkillIcons/passives/projectilespeed.dds",
 			name="Projectile Damage",
 			orbit=2,
@@ -68762,7 +68880,7 @@ return {
 					orbit=0
 				}
 			},
-			group=1017,
+			group=1021,
 			icon="Art/2DArt/SkillIcons/passives/damagestaff.dds",
 			name="Quarterstaff Critical Damage",
 			orbit=5,
@@ -68775,7 +68893,7 @@ return {
 		[52410]={
 			connections={
 			},
-			group=976,
+			group=980,
 			icon="Art/2DArt/SkillIcons/passives/Deflection.dds",
 			name="Block and Damage Taken from Blocked Hits",
 			orbit=4,
@@ -68820,7 +68938,7 @@ return {
 			ascendancyName="Invoker",
 			connections={
 			},
-			group=1029,
+			group=1033,
 			icon="Art/2DArt/SkillIcons/passives/Invoker/InvokerWildStrike.dds",
 			isNotable=true,
 			name="...and Scatter Them to the Winds",
@@ -68881,7 +68999,7 @@ return {
 		[52537]={
 			connections={
 			},
-			group=974,
+			group=978,
 			icon="Art/2DArt/SkillIcons/passives/colddamage.dds",
 			name="Cold Penetration",
 			orbit=2,
@@ -68936,7 +69054,7 @@ return {
 					orbit=0
 				}
 			},
-			group=940,
+			group=944,
 			icon="Art/2DArt/SkillIcons/passives/areaofeffect.dds",
 			name="Spell Area of Effect",
 			orbit=7,
@@ -68980,7 +69098,7 @@ return {
 					orbit=0
 				}
 			},
-			group=941,
+			group=945,
 			icon="Art/2DArt/SkillIcons/passives/damage.dds",
 			name="Critical Damage vs Full Life",
 			orbit=7,
@@ -69204,7 +69322,7 @@ return {
 			activeIcon="Art/2DArt/SkillIcons/passives/MasteryPassiveIcons/PassiveMasteryAttackActive.dds",
 			connections={
 			},
-			group=935,
+			group=937,
 			icon="Art/2DArt/SkillIcons/passives/AttackBlindMastery.dds",
 			inactiveIcon="Art/2DArt/SkillIcons/passives/MasteryPassiveIcons/PassiveMasteryAttackInactive.dds",
 			isMastery=true,
@@ -69403,7 +69521,7 @@ return {
 					orbit=0
 				}
 			},
-			group=960,
+			group=964,
 			icon="Art/2DArt/SkillIcons/passives/accuracydex.dds",
 			isNotable=true,
 			name="Sharp Sight",
@@ -69890,7 +70008,7 @@ return {
 					orbit=0
 				}
 			},
-			group=999,
+			group=1003,
 			icon="Art/2DArt/SkillIcons/passives/Poison.dds",
 			name="Poison Damage",
 			orbit=3,
@@ -70067,7 +70185,7 @@ return {
 					orbit=-2
 				}
 			},
-			group=911,
+			group=912,
 			icon="Art/2DArt/SkillIcons/passives/projectilespeed.dds",
 			name="Projectile Damage",
 			orbit=3,
@@ -70420,7 +70538,7 @@ return {
 					orbit=0
 				}
 			},
-			group=1012,
+			group=1016,
 			icon="Art/2DArt/SkillIcons/passives/criticaldaggerint.dds",
 			name="Dagger Critical Damage",
 			orbit=0,
@@ -70610,7 +70728,7 @@ return {
 					orbit=-2
 				}
 			},
-			group=984,
+			group=988,
 			icon="Art/2DArt/SkillIcons/passives/stun2h.dds",
 			name="Daze Buildup",
 			orbit=2,
@@ -71449,7 +71567,7 @@ return {
 					orbit=3
 				}
 			},
-			group=1010,
+			group=1014,
 			icon="Art/2DArt/SkillIcons/passives/criticalstrikechance.dds",
 			name="Attack Critical Chance",
 			orbit=7,
@@ -71466,7 +71584,7 @@ return {
 					orbit=0
 				}
 			},
-			group=939,
+			group=943,
 			icon="Art/2DArt/SkillIcons/passives/plusattribute.dds",
 			name="Attribute",
 			options={
@@ -71899,7 +72017,7 @@ return {
 					orbit=0
 				}
 			},
-			group=913,
+			group=914,
 			icon="Art/2DArt/SkillIcons/passives/MarkMastery.dds",
 			inactiveIcon="Art/2DArt/SkillIcons/passives/MasteryPassiveIcons/PassiveMasteryMarkInactive.dds",
 			isMastery=true,
@@ -72032,7 +72150,7 @@ return {
 					orbit=0
 				}
 			},
-			group=976,
+			group=980,
 			icon="Art/2DArt/SkillIcons/passives/Deflection.dds",
 			name="Block",
 			orbit=4,
@@ -72447,7 +72565,7 @@ return {
 					orbit=-2
 				}
 			},
-			group=1029,
+			group=1033,
 			icon="Art/2DArt/SkillIcons/passives/Invoker/InvokerNode.dds",
 			name="Elemental Damage",
 			orbit=4,
@@ -72464,7 +72582,7 @@ return {
 					orbit=-3
 				}
 			},
-			group=1010,
+			group=1014,
 			icon="Art/2DArt/SkillIcons/passives/criticalstrikechance.dds",
 			name="Critical Chance",
 			orbit=7,
@@ -72528,7 +72646,7 @@ return {
 					orbit=0
 				}
 			},
-			group=950,
+			group=954,
 			icon="Art/2DArt/SkillIcons/passives/damagesword.dds",
 			name="Spear Damage",
 			orbit=4,
@@ -72673,7 +72791,7 @@ return {
 					orbit=0
 				}
 			},
-			group=974,
+			group=978,
 			icon="Art/2DArt/SkillIcons/passives/ColdDamagenode.dds",
 			isNotable=true,
 			name="Exposed to the Cosmos",
@@ -72844,7 +72962,7 @@ return {
 					orbit=0
 				}
 			},
-			group=996,
+			group=1000,
 			icon="Art/2DArt/SkillIcons/passives/chargedex.dds",
 			name="Frenzy Charge Duration",
 			orbit=2,
@@ -73059,7 +73177,7 @@ return {
 					orbit=0
 				}
 			},
-			group=998,
+			group=1002,
 			icon="Art/2DArt/SkillIcons/passives/criticalstrikechance.dds",
 			isNotable=true,
 			name="Throatseeker",
@@ -73166,7 +73284,7 @@ return {
 					orbit=0
 				}
 			},
-			group=1012,
+			group=1016,
 			icon="Art/2DArt/SkillIcons/passives/criticaldaggerint.dds",
 			isNotable=true,
 			name="Silent Shiv",
@@ -73347,7 +73465,7 @@ return {
 					orbit=0
 				}
 			},
-			group=1044,
+			group=1048,
 			icon="Art/2DArt/SkillIcons/passives/PathFinder/PathfinderBrewConcoctionLightning.dds",
 			name="Fulminating Concoction",
 			orbit=0,
@@ -73474,7 +73592,7 @@ return {
 					orbit=0
 				}
 			},
-			group=942,
+			group=946,
 			icon="Art/2DArt/SkillIcons/passives/MeleeAoENode.dds",
 			name="Melee Damage",
 			orbit=3,
@@ -73630,7 +73748,7 @@ return {
 		[56847]={
 			connections={
 			},
-			group=1013,
+			group=1017,
 			icon="Art/2DArt/SkillIcons/passives/HeraldBuffEffectNode2.dds",
 			name="Herald Damage",
 			orbit=7,
@@ -74112,7 +74230,7 @@ return {
 			ascendancyName="Pathfinder",
 			connections={
 			},
-			group=1042,
+			group=1046,
 			icon="Art/2DArt/SkillIcons/passives/PathFinder/PathfinderBrewConcoction.dds",
 			isNotable=true,
 			name="Brew Concoction",
@@ -74152,7 +74270,7 @@ return {
 					orbit=-7
 				}
 			},
-			group=1029,
+			group=1033,
 			icon="Art/2DArt/SkillIcons/passives/Invoker/InvokerNode.dds",
 			name="Critical Chance",
 			orbit=8,
@@ -74353,7 +74471,7 @@ return {
 					orbit=-6
 				}
 			},
-			group=911,
+			group=912,
 			icon="Art/2DArt/SkillIcons/passives/projectilespeed.dds",
 			name="Projectile Speed",
 			orbit=3,
@@ -74455,7 +74573,7 @@ return {
 					orbit=0
 				}
 			},
-			group=926,
+			group=927,
 			icon="Art/2DArt/SkillIcons/passives/blockstr.dds",
 			name="Block",
 			orbit=2,
@@ -74510,7 +74628,7 @@ return {
 					orbit=-3
 				}
 			},
-			group=986,
+			group=990,
 			icon="Art/2DArt/SkillIcons/passives/firedamage.dds",
 			name="Fire Penetration",
 			orbit=2,
@@ -74948,7 +75066,7 @@ return {
 					orbit=0
 				}
 			},
-			group=996,
+			group=1000,
 			icon="Art/2DArt/SkillIcons/passives/chargedex.dds",
 			name="Frenzy Charge Duration",
 			orbit=2,
@@ -75372,7 +75490,7 @@ return {
 					orbit=0
 				}
 			},
-			group=1045,
+			group=1049,
 			icon="Art/2DArt/SkillIcons/passives/PathFinder/PathfinderBrewConcoctionPoison.dds",
 			name="Poisonous Concoction",
 			orbit=0,
@@ -75436,7 +75554,7 @@ return {
 					orbit=0
 				}
 			},
-			group=946,
+			group=950,
 			icon="Art/2DArt/SkillIcons/passives/plusdexterity.dds",
 			isNotable=true,
 			name="Proficiency",
@@ -75459,7 +75577,7 @@ return {
 					orbit=0
 				}
 			},
-			group=957,
+			group=961,
 			icon="Art/2DArt/SkillIcons/passives/EvasionNode.dds",
 			isNotable=true,
 			name="Pocket Sand",
@@ -75882,7 +76000,7 @@ return {
 		[59064]={
 			connections={
 			},
-			group=913,
+			group=914,
 			icon="Art/2DArt/SkillIcons/passives/MarkNode.dds",
 			name="Mark Effect",
 			orbit=3,
@@ -76364,7 +76482,7 @@ return {
 					orbit=0
 				}
 			},
-			group=945,
+			group=949,
 			icon="Art/2DArt/SkillIcons/passives/plusattribute.dds",
 			name="Attribute",
 			options={
@@ -76451,7 +76569,7 @@ return {
 					orbit=0
 				}
 			},
-			group=1030,
+			group=1034,
 			icon="Art/2DArt/SkillIcons/passives/DeadEye/DeadeyeDealMoreProjectileDamageFarAway.dds",
 			name="Far Shot",
 			orbit=0,
@@ -76623,7 +76741,7 @@ return {
 					orbit=0
 				}
 			},
-			group=1016,
+			group=1020,
 			icon="Art/2DArt/SkillIcons/passives/damagestaff.dds",
 			name="Quarterstaff Critical Damage",
 			orbit=0,
@@ -76675,7 +76793,7 @@ return {
 					orbit=0
 				}
 			},
-			group=978,
+			group=982,
 			icon="Art/2DArt/SkillIcons/passives/evade.dds",
 			isNotable=true,
 			name="Beastial Skin",
@@ -76694,7 +76812,7 @@ return {
 		[59740]={
 			connections={
 			},
-			group=917,
+			group=918,
 			icon="Art/2DArt/SkillIcons/passives/MasteryBlank.dds",
 			isJewelSocket=true,
 			name="[Jewel] Socket",
@@ -76708,7 +76826,7 @@ return {
 			ascendancyName="Acolyte of Chayula",
 			connections={
 			},
-			group=1054,
+			group=1058,
 			icon="Art/2DArt/SkillIcons/passives/AcolyteofChayula/AcolyteOfChayulaExtraChaosResistance.dds",
 			isNotable=true,
 			name="Chayula's Gift",
@@ -77051,7 +77169,7 @@ return {
 			ascendancyName="Deadeye",
 			connections={
 			},
-			group=1027,
+			group=1031,
 			icon="Art/2DArt/SkillIcons/passives/DeadEye/DeadeyeMarkEnemiesSpread.dds",
 			isNotable=true,
 			name="Called Shots",
@@ -77262,7 +77380,7 @@ return {
 					orbit=0
 				}
 			},
-			group=954,
+			group=958,
 			icon="Art/2DArt/SkillIcons/passives/MasteryPoison.dds",
 			inactiveIcon="Art/2DArt/SkillIcons/passives/MasteryPassiveIcons/PassiveMasteryPoisonInactive.dds",
 			isMastery=true,
@@ -77394,7 +77512,7 @@ return {
 					orbit=0
 				}
 			},
-			group=998,
+			group=1002,
 			icon="Art/2DArt/SkillIcons/passives/criticalstrikechance.dds",
 			name="Critical Damage",
 			orbit=2,
@@ -77463,7 +77581,7 @@ return {
 		[60480]={
 			connections={
 			},
-			group=1013,
+			group=1017,
 			icon="Art/2DArt/SkillIcons/passives/HeraldBuffEffectNode2.dds",
 			name="Herald Reservation",
 			orbit=2,
@@ -77480,7 +77598,7 @@ return {
 					orbit=0
 				}
 			},
-			group=948,
+			group=952,
 			icon="Art/2DArt/SkillIcons/passives/LightningDamagenode.dds",
 			name="Lightning Damage",
 			orbit=0,
@@ -77569,7 +77687,7 @@ return {
 					orbit=-3
 				}
 			},
-			group=941,
+			group=945,
 			icon="Art/2DArt/SkillIcons/passives/damage.dds",
 			name="Damage vs Full Life",
 			orbit=0,
@@ -77706,7 +77824,7 @@ return {
 					orbit=0
 				}
 			},
-			group=971,
+			group=975,
 			icon="Art/2DArt/SkillIcons/passives/MasteryBlank.dds",
 			isJewelSocket=true,
 			name="[Jewel] Socket",
@@ -77737,7 +77855,7 @@ return {
 			activeEffectImage="Art/2DArt/UIImages/InGame/PassiveMastery/MasteryBackgroundGraphic/MasteryBowPattern",
 			connections={
 			},
-			group=1002,
+			group=1006,
 			icon="Art/2DArt/SkillIcons/passives/BowDamage.dds",
 			isNotable=true,
 			name="Feathered Fletching",
@@ -77777,7 +77895,7 @@ return {
 					orbit=-7
 				}
 			},
-			group=985,
+			group=989,
 			icon="Art/2DArt/SkillIcons/passives/ReducedSkillEffectDurationNode.dds",
 			name="Slow Effect on You",
 			orbit=3,
@@ -77949,7 +78067,7 @@ return {
 					orbit=0
 				}
 			},
-			group=950,
+			group=954,
 			icon="Art/2DArt/SkillIcons/passives/damagesword.dds",
 			isNotable=true,
 			name="Roll and Strike",
@@ -77976,7 +78094,7 @@ return {
 					orbit=0
 				}
 			},
-			group=954,
+			group=958,
 			icon="Art/2DArt/SkillIcons/passives/Poison.dds",
 			name="Poison Duration",
 			orbit=2,
@@ -78495,7 +78613,7 @@ return {
 					orbit=2147483647
 				}
 			},
-			group=1026,
+			group=1030,
 			icon="Art/2DArt/SkillIcons/passives/DeadEye/DeadeyeNode.dds",
 			name="Projectile Speed",
 			orbit=6,
@@ -78715,7 +78833,7 @@ return {
 					orbit=0
 				}
 			},
-			group=1017,
+			group=1021,
 			icon="Art/2DArt/SkillIcons/passives/damagestaff.dds",
 			name="Quarterstaff Freeze and Daze Buildup",
 			orbit=5,
@@ -78756,7 +78874,7 @@ return {
 					orbit=2
 				}
 			},
-			group=984,
+			group=988,
 			icon="Art/2DArt/SkillIcons/passives/stun2h.dds",
 			name="Daze Buildup",
 			orbit=1,
@@ -78824,7 +78942,7 @@ return {
 		[61800]={
 			connections={
 			},
-			group=941,
+			group=945,
 			icon="Art/2DArt/SkillIcons/passives/damage.dds",
 			name="Critical Damage vs Full Life",
 			orbit=7,
@@ -78842,7 +78960,7 @@ return {
 					orbit=0
 				}
 			},
-			group=1047,
+			group=1051,
 			icon="Art/2DArt/SkillIcons/passives/PathFinder/PathfinderNode.dds",
 			name="Poison Effect",
 			orbit=0,
@@ -78863,7 +78981,7 @@ return {
 					orbit=0
 				}
 			},
-			group=969,
+			group=973,
 			icon="Art/2DArt/SkillIcons/passives/MasteryBlank.dds",
 			isJewelSocket=true,
 			name="[Jewel] Socket",
@@ -79133,7 +79251,7 @@ return {
 					orbit=0
 				}
 			},
-			group=1037,
+			group=1041,
 			icon="Art/2DArt/SkillIcons/passives/PathFinder/PathfinderMoreMovemenSpeedUsingSkills.dds",
 			isNotable=true,
 			name="Running Assault",
@@ -79163,7 +79281,7 @@ return {
 		[62001]={
 			connections={
 			},
-			group=1012,
+			group=1016,
 			icon="Art/2DArt/SkillIcons/passives/criticaldaggerint.dds",
 			isNotable=true,
 			name="Backstabbing",
@@ -79599,7 +79717,7 @@ return {
 					orbit=0
 				}
 			},
-			group=970,
+			group=974,
 			icon="Art/2DArt/SkillIcons/passives/trapdamage.dds",
 			name="Trap Damage",
 			orbit=6,
@@ -79709,7 +79827,7 @@ return {
 					orbit=0
 				}
 			},
-			group=915,
+			group=916,
 			icon="Art/2DArt/SkillIcons/passives/flaskdex.dds",
 			name="Flask Charges Gained",
 			orbit=3,
@@ -79953,7 +80071,7 @@ return {
 					orbit=0
 				}
 			},
-			group=914,
+			group=915,
 			icon="Art/2DArt/SkillIcons/passives/CharmNotable1.dds",
 			isNotable=true,
 			name="Woodland Aspect",
@@ -80140,7 +80258,7 @@ return {
 					orbit=0
 				}
 			},
-			group=979,
+			group=983,
 			icon="Art/2DArt/SkillIcons/passives/lightningint.dds",
 			name="Electrocute Buildup",
 			orbit=0,
@@ -80244,7 +80362,7 @@ return {
 			activeEffectImage="Art/2DArt/UIImages/InGame/PassiveMastery/MasteryBackgroundGraphic/MasteryChaosPattern",
 			connections={
 			},
-			group=1009,
+			group=1013,
 			icon="Art/2DArt/SkillIcons/passives/ChaosDamagenode.dds",
 			isNotable=true,
 			name="Dark Entries",
@@ -80378,7 +80496,7 @@ return {
 			ascendancyName="Invoker",
 			connections={
 			},
-			group=1029,
+			group=1033,
 			icon="Art/2DArt/SkillIcons/passives/Invoker/InvokerEnergyDoubled.dds",
 			isNotable=true,
 			name="The Soul Springs Eternal",
@@ -80451,7 +80569,7 @@ return {
 		[63431]={
 			connections={
 			},
-			group=954,
+			group=958,
 			icon="Art/2DArt/SkillIcons/passives/Poison.dds",
 			isNotable=true,
 			name="Leeching Toxins",
@@ -80744,7 +80862,7 @@ return {
 					orbit=0
 				}
 			},
-			group=972,
+			group=976,
 			icon="Art/2DArt/SkillIcons/passives/lightningint.dds",
 			name="Electrocute Buildup",
 			orbit=0,
@@ -80781,7 +80899,7 @@ return {
 					orbit=0
 				}
 			},
-			group=970,
+			group=974,
 			icon="Art/2DArt/SkillIcons/passives/trapdamage.dds",
 			isNotable=true,
 			name="Clever Construction",
@@ -80805,7 +80923,7 @@ return {
 					orbit=-4
 				}
 			},
-			group=1029,
+			group=1033,
 			icon="Art/2DArt/SkillIcons/passives/Invoker/InvokerCriticalStrikesIgnoreResistances.dds",
 			isNotable=true,
 			name="Sunder my Enemies...",
@@ -80936,7 +81054,7 @@ return {
 					orbit=5
 				}
 			},
-			group=913,
+			group=914,
 			icon="Art/2DArt/SkillIcons/passives/MarkNode.dds",
 			isNotable=true,
 			name="Marked for Sickness",
@@ -81043,7 +81161,7 @@ return {
 					orbit=0
 				}
 			},
-			group=1009,
+			group=1013,
 			icon="Art/2DArt/SkillIcons/passives/ChaosDamagenode.dds",
 			name="Chaos Damage",
 			orbit=1,
@@ -81147,7 +81265,7 @@ return {
 			ascendancyName="Invoker",
 			connections={
 			},
-			group=1029,
+			group=1033,
 			icon="Art/2DArt/SkillIcons/passives/Invoker/InvokerUnboundAvatar.dds",
 			isNotable=true,
 			name="...and I Shall Rage",
@@ -81352,7 +81470,7 @@ return {
 		[64295]={
 			connections={
 			},
-			group=970,
+			group=974,
 			icon="Art/2DArt/SkillIcons/passives/trapdamage.dds",
 			name="Trap Critical Chance",
 			orbit=4,
@@ -81434,7 +81552,7 @@ return {
 					orbit=-4
 				}
 			},
-			group=954,
+			group=958,
 			icon="Art/2DArt/SkillIcons/passives/Poison.dds",
 			name="Poison Damage",
 			orbit=3,
@@ -81657,7 +81775,7 @@ return {
 					orbit=0
 				}
 			},
-			group=960,
+			group=964,
 			icon="Art/2DArt/SkillIcons/passives/ManaLeechThemedNode.dds",
 			name="Mana Leech",
 			orbit=2,
@@ -81765,7 +81883,7 @@ return {
 					orbit=7
 				}
 			},
-			group=985,
+			group=989,
 			icon="Art/2DArt/SkillIcons/passives/ReducedSkillEffectDurationNode.dds",
 			name="Slow Effect on You",
 			orbit=3,
@@ -81841,7 +81959,7 @@ return {
 					orbit=0
 				}
 			},
-			group=1019,
+			group=1023,
 			icon="Art/2DArt/SkillIcons/passives/damagestaff.dds",
 			name="Quarterstaff Freeze and Daze Buildup",
 			orbit=0,
@@ -82109,7 +82227,7 @@ return {
 					orbit=6
 				}
 			},
-			group=978,
+			group=982,
 			icon="Art/2DArt/SkillIcons/passives/evade.dds",
 			name="Evasion",
 			orbit=7,
@@ -82165,7 +82283,7 @@ return {
 			ascendancyName="Invoker",
 			connections={
 			},
-			group=1029,
+			group=1033,
 			icon="Art/2DArt/SkillIcons/passives/Invoker/InvokerEvasionGrantsPhysicalDamageReduction.dds",
 			isNotable=true,
 			name="...and Protect me from Harm",
@@ -82254,7 +82372,7 @@ return {
 					orbit=0
 				}
 			},
-			group=973,
+			group=977,
 			icon="Art/2DArt/SkillIcons/passives/chargeint.dds",
 			isNotable=true,
 			name="Overflowing Power",
@@ -82298,7 +82416,7 @@ return {
 					orbit=0
 				}
 			},
-			group=985,
+			group=989,
 			icon="Art/2DArt/SkillIcons/passives/ReducedSkillEffectDurationNode.dds",
 			name="Slow Effect on You",
 			orbit=3,
@@ -82333,7 +82451,7 @@ return {
 					orbit=0
 				}
 			},
-			group=926,
+			group=927,
 			icon="Art/2DArt/SkillIcons/passives/Deflection.dds",
 			isNotable=true,
 			name="Smooth Buckler",
@@ -109532,37 +109650,37 @@ return {
 					Despair={
 						h=13,
 						w=13,
-						x=16,
+						x=13.5,
 						y=0
 					},
 					Disgust={
 						h=13,
 						w=13,
-						x=144,
+						x=121.5,
 						y=0
 					},
 					Envy={
 						h=13,
 						w=13,
-						x=32,
+						x=27,
 						y=0
 					},
 					Fear={
 						h=13,
 						w=13,
-						x=48,
+						x=40.5,
 						y=0
 					},
 					Greed={
 						h=13,
 						w=13,
-						x=64,
+						x=54,
 						y=0
 					},
 					Guilt={
 						h=13,
 						w=13,
-						x=96,
+						x=81,
 						y=0
 					},
 					Ire={
@@ -109574,62 +109692,62 @@ return {
 					Isolation={
 						h=13,
 						w=13,
-						x=128,
+						x=108,
 						y=0
 					},
 					Paranoia={
 						h=13,
 						w=13,
-						x=112,
+						x=94.5,
 						y=0
 					},
 					Suffering={
 						h=13,
 						w=13,
-						x=80,
+						x=67.5,
 						y=0
 					}
 				},
 				filename="oils-0.png",
-				h=16,
-				w=160
+				h=13.5,
+				w=135
 			},
 			[0.2109]={
 				coords={
 					Despair={
 						h=27,
 						w=27,
-						x=32,
+						x=27,
 						y=0
 					},
 					Disgust={
 						h=27,
 						w=27,
-						x=288,
+						x=243,
 						y=0
 					},
 					Envy={
 						h=27,
 						w=27,
-						x=64,
+						x=54,
 						y=0
 					},
 					Fear={
 						h=27,
 						w=27,
-						x=96,
+						x=81,
 						y=0
 					},
 					Greed={
 						h=27,
 						w=27,
-						x=128,
+						x=108,
 						y=0
 					},
 					Guilt={
 						h=27,
 						w=27,
-						x=192,
+						x=162,
 						y=0
 					},
 					Ire={
@@ -109641,62 +109759,62 @@ return {
 					Isolation={
 						h=27,
 						w=27,
-						x=256,
+						x=216,
 						y=0
 					},
 					Paranoia={
 						h=27,
 						w=27,
-						x=224,
+						x=189,
 						y=0
 					},
 					Suffering={
 						h=27,
 						w=27,
-						x=160,
+						x=135,
 						y=0
 					}
 				},
 				filename="oils-1.png",
-				h=32,
-				w=320
+				h=27,
+				w=270
 			},
 			[0.2972]={
 				coords={
 					Despair={
 						h=54,
 						w=54,
-						x=64,
+						x=54,
 						y=0
 					},
 					Disgust={
 						h=54,
 						w=54,
-						x=576,
+						x=486,
 						y=0
 					},
 					Envy={
 						h=54,
 						w=54,
-						x=128,
+						x=108,
 						y=0
 					},
 					Fear={
 						h=54,
 						w=54,
-						x=192,
+						x=162,
 						y=0
 					},
 					Greed={
 						h=54,
 						w=54,
-						x=256,
+						x=216,
 						y=0
 					},
 					Guilt={
 						h=54,
 						w=54,
-						x=384,
+						x=324,
 						y=0
 					},
 					Ire={
@@ -109708,62 +109826,62 @@ return {
 					Isolation={
 						h=54,
 						w=54,
-						x=512,
+						x=432,
 						y=0
 					},
 					Paranoia={
 						h=54,
 						w=54,
-						x=448,
+						x=378,
 						y=0
 					},
 					Suffering={
 						h=54,
 						w=54,
-						x=320,
+						x=270,
 						y=0
 					}
 				},
 				filename="oils-2.png",
-				h=64,
-				w=640
+				h=54,
+				w=540
 			},
 			[0.3835]={
 				coords={
 					Despair={
 						h=108,
 						w=108,
-						x=128,
+						x=108,
 						y=0
 					},
 					Disgust={
 						h=108,
 						w=108,
-						x=0,
-						y=128
+						x=972,
+						y=0
 					},
 					Envy={
 						h=108,
 						w=108,
-						x=256,
+						x=216,
 						y=0
 					},
 					Fear={
 						h=108,
 						w=108,
-						x=384,
+						x=324,
 						y=0
 					},
 					Greed={
 						h=108,
 						w=108,
-						x=512,
+						x=432,
 						y=0
 					},
 					Guilt={
 						h=108,
 						w=108,
-						x=768,
+						x=648,
 						y=0
 					},
 					Ire={
@@ -109775,25 +109893,25 @@ return {
 					Isolation={
 						h=108,
 						w=108,
-						x=1024,
+						x=864,
 						y=0
 					},
 					Paranoia={
 						h=108,
 						w=108,
-						x=896,
+						x=756,
 						y=0
 					},
 					Suffering={
 						h=108,
 						w=108,
-						x=640,
+						x=540,
 						y=0
 					}
 				},
 				filename="oils-3.png",
-				h=256,
-				w=1152
+				h=108,
+				w=1080
 			}
 		},
 		socketActive={

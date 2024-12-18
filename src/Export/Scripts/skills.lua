@@ -181,6 +181,7 @@ local skillTypes = {
 	"IsBlasphemy",
 	"PersistentShowsCastTime",
 	"GeneratesEnergy",
+	"CommandableMinion",
 }
 
 -- This is here to fix name collisions like in the case of Barrage

@@ -2,11 +2,5 @@
 -- Item data (c) Grinding Gear Games
 
 return {
-	[1]={
-		stats={
-			[1]="never_freeze"
-		}
-	},
-	["never_freeze"]=1,
 	parent="skill_stat_descriptions"
 }

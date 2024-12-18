@@ -374,6 +374,7 @@ SkillType = {
 	IsBlasphemy = 191,
 	PersistentShowsCastTime = 192,
 	GeneratesEnergy = 193,
+	CommandableMinion = 194,
 }
 
 GlobalCache = { 
