@@ -8282,13 +8282,6 @@ skills["ShatteringPalmExplosionPlayer"] = {
 	name = "Freezing Explosion",
 	hidden = true,
 	baseEffectiveness = 1.9409999847412,
-	incremeiplier = -10, levelRequirement = 90, statInterpolation = { 3, 3, 1, }, actorLevel = 288.29998779297, cost = { Mana = 515, }, },
-	},
-}
-skills["ShatteringPalmExplosionPlayer"] = {
-	name = "Freezing Explosion",
-	hidden = true,
-	baseEffectiveness = 1.9409999847412,
 	incrementalEffectiveness = 0.034650001674891,
 	damageIncrementalEffectiveness = 0.012719999998808,
 	skillTypes = { [SkillType.Attack] = true, [SkillType.Area] = true, [SkillType.Triggerable] = true, [SkillType.Triggered] = true, [SkillType.Nova] = true, [SkillType.Cold] = true, [SkillType.UseGlobalStats] = true, },
@@ -8297,7 +8290,19 @@ skills["ShatteringPalmExplosionPlayer"] = {
 	},
 	statDescriptionScope = "triggered_freezing_word_explosion",
 	castTime = 1,
-lRequirement = 0, statInterpolation = { 3, 3, }, actorLevel = 1, },
+	baseFlags = {
+	},
+	qualityStats = {
+		Default = {
+			{ "additional_base_critical_strike_chance", 10 },
+		},
+	},
+	stats = {
+		"attack_minimum_added_cold_damage",
+		"attack_maximum_added_cold_damage",
+	},
+	levels = {
+		[1] = { 0.80000001192093, 1.2000000476837, levelRequirement = 0, statInterpolation = { 3, 3, }, actorLevel = 1, },
 		[2] = { 0.80000001192093, 1.2000000476837, levelRequirement = 0, statInterpolation = { 3, 3, }, actorLevel = 3.4519999027252, },
 		[3] = { 0.80000001192093, 1.2000000476837, levelRequirement = 0, statInterpolation = { 3, 3, }, actorLevel = 6.7670001983643, },
 		[4] = { 0.80000001192093, 1.2000000476837, levelRequirement = 0, statInterpolation = { 3, 3, }, actorLevel = 10.307999610901, },
