@@ -6391,7 +6391,7 @@ return {
 		},
 		[17]={
 			list=false,
-			name="",
+			name="DamageEffectiveness",
 			refTo="",
 			type="Int",
 			width=150

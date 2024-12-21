@@ -476,9 +476,9 @@ directiveTable.skill = function(state, args, out)
 				level.extra.soulPreventionDuration = levelRow.SoulGainPreventionDuration / 1000
 			end
 			-- stat based level info
-			--if statRow.DamageEffectiveness ~= 0 then
-			--	level.extra.damageEffectiveness = statRow.DamageEffectiveness / 10000 + 1
-			--end
+			if statRow.DamageEffectiveness ~= 0 then
+				level.extra.damageEffectiveness = statRow.DamageEffectiveness / 10000 + 1
+			end
 			if statRow.AttackCritChance ~= 0 then
 				level.extra.critChance = statRow.AttackCritChance / 100
 			end
