@@ -1636,7 +1636,7 @@ return {
 } },
 } },
 -- misc resources
-{ 1, "Flasks", 3, colorCodes.CRAFTED, {{ defaultCollapsed = false, label = "Flasks", data = {
+{ 1, "Flasks", 3, colorCodes.ENCHANTED, {{ defaultCollapsed = false, label = "Flasks", data = {
 	extra = "+{0:output:FlaskEffect}%, {2:output:FlaskChargeGen}/s",
 	{ label = "Inc. Effect", { format = "{0:mod:1}%", { modName = "FlaskEffect", modType = "INC", actor = "player"}, }, },
 	{ label = "Inc. Duration", { format = "{0:mod:1}%", { modName = "FlaskDuration", modType = "INC" }, }, },
