@@ -1061,7 +1061,7 @@ for _, lines in ipairs(linesFiles) do
 	lines.mask = lines.mask:gsub(".dds", ".png")
 end
 
-gimpbatch.extract_lines_from_image("lines", linesFiles, main.ggpk.oozPath, basePath .. version .. "/", GetRuntimePath() .. "/lua/gimpbatch/extract_lines.scm", generateAssets)
+gimpbatch.extract_lines_from_image("lines_extract", linesFiles, main.ggpk.oozPath, basePath .. version .. "/", GetRuntimePath() .. "/lua/gimpbatch/extract_lines.scm", generateAssets)
 
 printf("generate lines info into assets")
 -- Generate sprites

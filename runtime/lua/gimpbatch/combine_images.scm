@@ -1,7 +1,7 @@
 (define (combine-images-into-sprite-sheet output_path w h saturation coords)
   (let* (
          (sprite-sheet (car (gimp-image-new w h RGB)))
-         (layer (car (gimp-layer-new sprite-sheet w h RGBA-IMAGE "Layer" 100 NORMAL-MODE)))
+         (layer (car (gimp-layer-new sprite-sheet w h RGBA-IMAGE "Layer" 100 LAYER-MODE-NORMAL)))
         )
     (gimp-image-insert-layer sprite-sheet layer 0 0)
 
@@ -41,13 +41,16 @@
             (output-webp (string-append (substring output_path 0 (- (string-length output_path) 4)) ".webp"))
             (final-layer (car (gimp-image-merge-visible-layers sprite-sheet CLIP-TO-IMAGE)))
           )
-      (file-png-save RUN-NONINTERACTIVE sprite-sheet final-layer output_path output_path 0 9 0 1 1 1 1)
-      (file-jpegxl-save RUN-NONINTERACTIVE sprite-sheet final-layer output-jxl output-jxl)
-      ;; (file-webp-save run-mode image drawable filename raw-filename preset lossless quality alpha-quality animation anim-loop minimize-size kf-distance exif iptc xmp delay force-delay)
-      (file-webp-save RUN-NONINTERACTIVE sprite-sheet final-layer output-webp output-webp 0 0 100 100 FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE)
+      
+      ;; (file-png-export run-mode image file options interlaced compression bkgd offs phys time save-transparent optimize-palette format)
+      (file-png-export RUN-NONINTERACTIVE sprite-sheet output_path -1 0 9 1 0 1 1 1 0 "auto")
+
+      ;; (file-jpegxl-export run-mode image file options lossless compression save-bit-depth speed uses-original-profile cmyk save-exif save-xmp)
+      (file-jpegxl-export RUN-NONINTERACTIVE sprite-sheet output-jxl -1 0 1 8 "falcon" 0 0 0 0)
+
+      ;; (file-webp-export run-mode image file options preset lossless quality alpha-quality use-sharp-yuv animation-loop minimize-size keyframe-distance default-delay force-delay animation)
+      (file-webp-export RUN-NONINTERACTIVE sprite-sheet output-webp -1 "default" 0 100 100 0 0 1 50 200 0 0)
     )
-    ; Save the sprite sheet as a PNG
-    ; (file-png-save RUN-NONINTERACTIVE sprite-sheet layer output_path output_path 0 9 1 1 1 1 1 1)
     
     ; Clean up the image object after saving
     (gimp-image-delete sprite-sheet)

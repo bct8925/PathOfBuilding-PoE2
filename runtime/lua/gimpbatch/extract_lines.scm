@@ -2,16 +2,17 @@
     (let*
         (
             ;; Load the images
-            (src-image (car (gimp-file-load RUN-NONINTERACTIVE src-path-image src-path-image)))
-            (mask-image (car (gimp-file-load RUN-NONINTERACTIVE mask-path-image mask-path-image)))
+            (src-image (car (gimp-file-load RUN-NONINTERACTIVE src-path-image)))
+            (mask-image (car (gimp-file-load RUN-NONINTERACTIVE mask-path-image)))
 
             ;; Get the layer
-            (src-layer-id (car (gimp-image-get-active-layer src-image)))
-            (mask-layer-id (car (gimp-image-get-active-layer mask-image)))
+            (src-layer-id (vector-ref (car (gimp-image-get-layers src-image)) 0))
+            (mask-layer-id (vector-ref (car (gimp-image-get-layers mask-image)) 0))
 
             ; get the width and height of the image
-            (width-image (car (gimp-drawable-width src-layer-id)))
-            (height-image (car (gimp-drawable-height src-layer-id)))
+            
+            (width-image (car (gimp-drawable-get-width src-layer-id)))
+            (height-image (car (gimp-drawable-get-height src-layer-id)))
 
             ;; ui stuff
             (ui-src 0)
@@ -87,10 +88,10 @@
 
         (set! new-layer (car (gimp-layer-new new-image width height RGBA-IMAGE "new-layer" 100 LAYER-MODE-NORMAL)))
         (gimp-image-insert-layer new-image new-layer -1 -1)
-        (gimp-edit-copy src-layer-id)
-        (gimp-floating-sel-anchor (car (gimp-edit-paste new-layer TRUE)))
+        (gimp-edit-copy (vector src-layer-id))
+        (gimp-floating-sel-anchor (vector-ref (car (gimp-edit-paste new-layer TRUE)) 0))
         (set! dest (string-append output-path filename  (number->string total) extension))
-        (file-png-save RUN-NONINTERACTIVE new-image new-layer dest dest 0 9 0 1 1 1 1 )
+        (file-png-export RUN-NONINTERACTIVE new-image dest -1 0 9 1 0 1 1 1 0 "auto")
 
         (if (= interactive 1)
             (begin
@@ -102,7 +103,7 @@
         (gimp-image-select-rectangle mask-image CHANNEL-OP-REPLACE 0 0 (+ width x0) (+ height y0))
         (gimp-selection-grow mask-image 4)
         (gimp-context-set-foreground '(0 0 0))
-        (gimp-edit-fill mask-layer-id FILL-FOREGROUND)
+        (gimp-drawable-edit-fill mask-layer-id FILL-FOREGROUND)
 
         (gimp-message "getting the orbits")
         ;; getting orbits
@@ -123,25 +124,25 @@
             (set! new-layer (car (gimp-layer-new new-image width-image height-image RGBA-IMAGE "new-layer" 100 LAYER-MODE-NORMAL)))
             (gimp-image-insert-layer new-image new-layer -1 -1)
             (gimp-selection-none src-image)
-            (gimp-edit-copy src-layer-id)
-            (gimp-floating-sel-anchor (car (gimp-edit-paste new-layer TRUE)))
+            (gimp-edit-copy (vector src-layer-id))
+            (gimp-floating-sel-anchor (vector-ref (car (gimp-edit-paste new-layer TRUE)) 0))
 
             ;; add new mask layer to the new image
             (set! mask-layer (car (gimp-layer-new new-image width-image height-image RGBA-IMAGE "mask" 100 LAYER-MODE-NORMAL)))
             (gimp-context-set-foreground '(255 255 255))
             (gimp-image-insert-layer new-image mask-layer -1 -1)
-            (gimp-edit-fill mask-layer FILL-FOREGROUND)
+            (gimp-drawable-edit-fill mask-layer FILL-FOREGROUND)
 
             ;; select next orbit
             (gimp-image-select-contiguous-color mask-image CHANNEL-OP-REPLACE mask-layer-id (- width-image 2) (+ y 2))
             (set! next-selection (gimp-selection-bounds mask-image))
             (set! next-rect (cdr next-selection))
-            (gimp-edit-copy mask-layer-id)
-            (set! paste-item (car (gimp-edit-paste mask-layer TRUE)))
-            (set! target-position (gimp-drawable-offsets paste-item))
+            (gimp-edit-copy (vector mask-layer-id))
+            (set! paste-item (vector-ref (car (gimp-edit-paste mask-layer TRUE)) 0))
+            (set! target-position (gimp-drawable-get-offsets paste-item))
             (set! offset-x (car target-position))
             (set! offset-y (car (cdr target-position)))
-            (gimp-layer-translate paste-item (- (list-ref next-rect 0) offset-x) (- (list-ref next-rect 1) offset-y))
+            (gimp-item-transform-translate paste-item (- (list-ref next-rect 0) offset-x) (- (list-ref next-rect 1) offset-y))
             (gimp-floating-sel-anchor paste-item)
 
             ;; find the next rectangle
@@ -158,26 +159,26 @@
             (set! next-rect (cdr next-selection))
 
             ;; copy next selection
-            (gimp-edit-copy mask-layer-id)
-            (set! paste-item (car (gimp-edit-paste mask-layer TRUE)))
-            (set! target-position (gimp-drawable-offsets paste-item))
+            (gimp-edit-copy (vector mask-layer-id))
+            (set! paste-item (vector-ref (car (gimp-edit-paste mask-layer TRUE)) 0))
+            (set! target-position (gimp-drawable-get-offsets paste-item))
             (set! offset-x (car target-position))
             (set! offset-y (car (cdr target-position)))
-            (gimp-layer-translate paste-item (- (list-ref next-rect 0) offset-x) (- y offset-y))
+            (gimp-item-transform-translate paste-item (- (list-ref next-rect 0) offset-x) (- y offset-y))
             (gimp-floating-sel-anchor paste-item)
 
             ;; close the image for magic selection
             (gimp-context-set-foreground '(0 0 0))
             (gimp-image-select-rectangle new-image CHANNEL-OP-REPLACE (- width-image 1) 0 width-image height-image)
-            (gimp-edit-fill mask-layer FILL-FOREGROUND)
+            (gimp-drawable-edit-fill mask-layer FILL-FOREGROUND)
 
             (gimp-image-select-rectangle new-image CHANNEL-OP-REPLACE 0 (- height-image 1) width-image height-image)
-            (gimp-edit-fill mask-layer FILL-FOREGROUND)
+            (gimp-drawable-edit-fill mask-layer FILL-FOREGROUND)
 
             ;; fill bottom transparent with black 
             (gimp-image-select-contiguous-color new-image CHANNEL-OP-REPLACE mask-layer (- width-image 2) (- height-image 2))
             (gimp-selection-grow new-image 4)
-            (gimp-edit-fill mask-layer FILL-FOREGROUND)
+            (gimp-drawable-edit-fill mask-layer FILL-FOREGROUND)
 
             (gimp-selection-none new-image)
 
@@ -185,24 +186,24 @@
             (gimp-image-select-color new-image CHANNEL-OP-REPLACE mask-layer '(255 255 255))
             (gimp-selection-grow new-image 4)
             (set! black (cdr (gimp-selection-bounds new-image)))
-            (gimp-edit-copy mask-layer)
-            (set! paste-item (car (gimp-edit-paste mask-layer-id FALSE)))
-            (set! target-position (gimp-drawable-offsets paste-item))
+            (gimp-edit-copy (vector mask-layer))
+            (set! paste-item (vector-ref (car (gimp-edit-paste mask-layer-id FALSE)) 0))
+            (set! target-position (gimp-drawable-get-offsets paste-item))
             (set! offset-x (car target-position))
             (set! offset-y (car (cdr target-position)))
-            (gimp-layer-translate paste-item (- (list-ref black 0) offset-x) (- (list-ref black 1) offset-y))
+            (gimp-item-transform-translate paste-item (- (list-ref black 0) offset-x) (- (list-ref black 1) offset-y))
             (gimp-context-set-foreground '(0 0 0))
-            (gimp-edit-fill paste-item FILL-FOREGROUND)
+            (gimp-drawable-edit-fill paste-item FILL-FOREGROUND)
             (gimp-floating-sel-anchor paste-item)
 
             ;; create the mask
-            (set! real-mask (car (gimp-layer-create-mask new-layer ADD-BLACK-MASK)))
+            (set! real-mask (car (gimp-layer-create-mask new-layer ADD-MASK-BLACK)))
             (gimp-layer-add-mask new-layer real-mask)
 
-            (gimp-edit-copy mask-layer)
-            (gimp-floating-sel-anchor (car (gimp-edit-paste real-mask TRUE)))
+            (gimp-edit-copy (vector mask-layer))
+            (gimp-floating-sel-anchor (vector-ref (car (gimp-edit-paste real-mask TRUE)) 0))
 
-            (gimp-layer-set-visible mask-layer FALSE)
+            (gimp-item-set-visible mask-layer FALSE)
             (set! new-layer (car (gimp-image-merge-visible-layers new-image EXPAND-AS-NECESSARY)))
 
             ;; redefine the new layer
@@ -217,7 +218,7 @@
 
             ;; save the image
             (set! dest (string-append output-path filename  (number->string total) extension))
-            (file-png-save RUN-NONINTERACTIVE new-image new-layer dest dest 0 9 0 1 1 1 1)
+            (file-png-export RUN-NONINTERACTIVE new-image dest -1 0 9 1 0 1 1 1 0 "auto")
 
             (if (= interactive 1)
                 (begin

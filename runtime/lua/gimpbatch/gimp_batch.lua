@@ -88,7 +88,7 @@ function module.combine_images_to_sprite(sheet_name, sheet_data, from_path, to_p
 
 	-- Construct the GIMP batch command
 	local cmd = string.format(
-		'gimp-console-2.10.exe -i -b "(load \\\"%s\\\")" -b "(gimp-quit 0)"',
+		'gimp-console-3.exe --batch-interpreter plug-in-script-fu-eval -i -b "(load \\\"%s\\\")" -b "(gimp-quit 0)"',
 		escape_path(new_script_path)
 	)
 	logFile:write(cmd.."\n")
@@ -144,7 +144,7 @@ function module.extract_lines_from_image(name, info, from_path, to_path, script_
 
 		-- Construct the GIMP batch command
 		local cmd = string.format(
-			'gimp-console-2.10.exe -i -b "(load \\\"%s\\\")" -b "(gimp-quit 0)"',
+			'gimp-console-3.exe --batch-interpreter plug-in-script-fu-eval -i -b "(load \\\"%s\\\")" -b "(gimp-quit 0)"',
 			escape_path(new_script_path)
 		)
 		logFile:write(cmd.."\n")
