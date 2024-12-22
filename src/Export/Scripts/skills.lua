@@ -207,7 +207,6 @@ local weaponClassMap = {
 	["Two Hand Sword"] = "Two Handed Sword",
 	["Two Hand Axe"] = "Two Handed Axe",
 	["Two Hand Mace"] = "Two Handed Mace",
-	["Sceptre"] = "Sceptre",
 	["Unarmed"] = "None",
 }
 

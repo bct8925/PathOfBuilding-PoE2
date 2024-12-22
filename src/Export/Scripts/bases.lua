@@ -392,6 +392,7 @@ local itemTypes = {
 	"fishing",
 	"flail",
 	"mace",
+	"sceptre",
 	"spear",
 	"staff",
 	"sword",
