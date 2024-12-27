@@ -1428,7 +1428,9 @@ function calcs.initEnv(build, mode, override, specEnv)
 						end
 						if gemInstance.gemData then
 							processGrantedEffect(gemInstance.gemData.grantedEffect)
-							processGrantedEffect(gemInstance.gemData.secondaryGrantedEffect)
+							for _, additional in ipairs(gemInstance.gemData.additionalGrantedEffects) do
+								processGrantedEffect(additional)
+							end
 						else
 							processGrantedEffect(gemInstance.grantedEffect)
 						end
