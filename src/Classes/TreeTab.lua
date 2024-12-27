@@ -1800,15 +1800,15 @@ function TreeTabClass:FindTimelessJewel()
 			end
 		end
 	else
-		self.tradeQueryRequests:FetchLeagues("pc", function(leagues, errMsg)
+		self.tradeQueryRequests:FetchLeagues("poe2", function(leagues, errMsg)
 			if errMsg then
 				controls.msg.label = "^1Error fetching league list, default league will be used\n"..errMsg.."^7"
 				return
 			end
 			local tempLeagueTable = { }
 			for _, league in ipairs(leagues) do
-				if league ~= "Standard" and  league ~= "Ruthless" and league ~= "Hardcore" and league ~= "Hardcore Ruthless" then
-					if not (league:find("Hardcore") or league:find("Ruthless")) then
+				if league ~= "Standard" and league ~= "Hardcore" then
+					if not league:find("Hardcore") then
 						-- set the dynamic, base league name to index 1 to sync league shown in dropdown on load with default/old behavior of copy trade url
 						t_insert(tempLeagueTable, league)
 						for _, val in ipairs(self.tradeLeaguesList) do
@@ -1822,8 +1822,6 @@ function TreeTabClass:FindTimelessJewel()
 			end
 			t_insert(self.tradeLeaguesList, "Standard")
 			t_insert(self.tradeLeaguesList, "Hardcore")
-			t_insert(self.tradeLeaguesList, "Ruthless")
-			t_insert(self.tradeLeaguesList, "Hardcore Ruthless")
 			controls.searchTradeLeagueSelect:SetList(self.tradeLeaguesList)
 		end)
 	end
