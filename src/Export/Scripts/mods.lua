@@ -153,6 +153,9 @@ local function writeMods(outName, condFunc)
 					end
 				end
 				out:write('modTags = { ', stats.modTags, ' }, ')
+				if mod.NodeType ~= 3 then
+					out:write('nodeType = ', mod.NodeType, ', ')
+				end
 				out:write('},\n')
 			else
 				print("Mod '"..mod.Id.."' has no stats")
@@ -179,6 +182,11 @@ writeMods("../Data/ModCharm.lua", function(mod)
 end)
 writeMods("../Data/ModJewel.lua", function(mod)
 	return (mod.Domain == 11 and (mod.GenerationType == 1 or mod.GenerationType == 2)) or (mod.Domain == 21 and mod.GenerationType == 3)
+end)
+writeMods("../Data/ModUnique.lua", function(mod)
+	return (mod.Domain == 1 or mod.Domain == 2 or mod.Domain == 11 or mod.Domain == 22) and mod.GenerationType == 3
+	and (mod.Family[1] and mod.Family[1].Id ~= "AuraBonus" or not mod.Family[1])
+	and not mod.Id:match("^Synthesis") and not mod.Id:match("Royale") and not mod.Id:match("Cowards") and not mod.Id:match("Map") and not mod.Id:match("Ultimatum")
 end)
 
 
