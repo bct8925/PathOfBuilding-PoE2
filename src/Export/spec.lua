@@ -10529,15 +10529,6 @@ return {
 	},
 	pantheonsouls={
 	},
-	passiveNodeTypes={
-		[1]={
-			list=false,
-			name="Id",
-			refTo="",
-			type="String",
-			width=150
-		}
-	},
 	passivejewelart={
 		[1]={
 			list=false,
@@ -10721,6 +10712,15 @@ return {
 			refTo="",
 			type="String",
 			width=560
+		}
+	},
+	passivenodetypes={
+		[1]={
+			list=false,
+			name="Id",
+			refTo="",
+			type="String",
+			width=150
 		}
 	},
 	passiveoverridelimits={
