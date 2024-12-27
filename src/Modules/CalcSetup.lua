@@ -229,14 +229,13 @@ function wipeEnv(env, accelerate)
 		-- 1) Jewels and Jewel-Radius related node modifications
 		-- 2) Player items
 		-- 3) Granted Skill from items (e.g., Curse on Hit rings)
-		-- 4) Flasks and Tinctures
+		-- 4) Flasks
 		wipeTable(env.radiusJewelList)
 		wipeTable(env.extraRadiusNodeList)
 		wipeTable(env.player.itemList)
 		wipeTable(env.grantedSkillsItems)
 		wipeTable(env.flasks)
 		wipeTable(env.charms)
-		wipeTable(env.tinctures)
 
 		-- Special / Unique Items that have their own ModDB()
 		if env.aegisModList then
@@ -408,7 +407,6 @@ function calcs.initEnv(build, mode, override, specEnv)
 		env.itemWarnings = { }
 		env.flasks = { }
 		env.charms = { }
-		env.tinctures = { }
 
 		-- tree based
 		env.grantedPassives = { }
@@ -509,7 +507,6 @@ function calcs.initEnv(build, mode, override, specEnv)
 		modDB:NewMod("PerAfflictionAilmentDamage", "BASE", 8, "Base")
 		modDB:NewMod("PerAfflictionNonDamageEffect", "BASE", 8, "Base")
 		modDB:NewMod("PerAbsorptionElementalEnergyShieldRecoup", "BASE", 12, "Base")
-		modDB:NewMod("TinctureLimit", "BASE", 1, "Base")
 		modDB:NewMod("CharmLimit", "BASE", 0, "Base")
 		modDB:NewMod("ManaDegenPercent", "BASE", 1, "Base", { type = "Multiplier", var = "EffectiveManaBurnStacks" })
 		modDB:NewMod("LifeDegenPercent", "BASE", 1, "Base", { type = "Multiplier", var = "WeepingWoundsStacks" })
@@ -822,11 +819,6 @@ function calcs.initEnv(build, mode, override, specEnv)
 					env.charms[item] = true
 				end
 				item = nil
-			elseif item and item.type == "Tincture" then
-				if slot.active then
-					env.tinctures[item] = true
-				end
-				item = nil
 			end
 			local scale = 1
 			if slot.nodeId and item and item.type == "Jewel" and item.jewelData and item.jewelData.jewelIncEffectFromClassStart then
@@ -1046,7 +1038,7 @@ function calcs.initEnv(build, mode, override, specEnv)
 				if item.spiritValue then
 					env.modDB:NewMod("Spirit", "BASE", item.spiritValue, item.title)
 				end
-				if item.type ~= "Jewel" and item.type ~= "Flask" and item.type ~= "Charm" and item.type ~= "Tincture" then
+				if item.type ~= "Jewel" and item.type ~= "Flask" and item.type ~= "Charm" then
 					-- Update item counts
 					local key
 					if item.rarity == "UNIQUE" or item.rarity == "RELIC" then
@@ -1106,13 +1098,6 @@ function calcs.initEnv(build, mode, override, specEnv)
 				env.charms[override.toggleCharm] = nil
 			else
 				env.charms[override.toggleCharm] = true
-			end
-		end
-		if override.toggleTincture then
-			if env.tinctures[override.toggleTincture] then
-				env.tinctures[override.toggleTincture] = nil
-			else
-				env.tinctures[override.toggleTincture] = true
 			end
 		end
 	end

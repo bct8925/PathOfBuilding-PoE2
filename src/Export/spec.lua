@@ -14072,29 +14072,6 @@ return {
 	},
 	tieredmicrotransactionsvisuals={
 	},
-	tinctures={
-		[1]={
-			list=false,
-			name="BaseItemType",
-			refTo="BaseItemTypes",
-			type="Key",
-			width=250
-		},
-		[2]={
-			list=false,
-			name="ManaBurn",
-			refTo="",
-			type="Int",
-			width=100
-		},
-		[3]={
-			list=false,
-			name="CoolDown",
-			refTo="",
-			type="Int",
-			width=100
-		}
-	},
 	tips={
 	},
 	topologies={

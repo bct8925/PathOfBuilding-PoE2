@@ -1775,8 +1775,6 @@ function ItemsTabClass:IsItemValidForSlot(item, slotName, itemSet)
 		end
 	elseif item.type == slotType then
 		return true
-	elseif item.type == "Tincture" and slotType == "Flask" then
-		return true
 	elseif (item.type == "Rune" or item.type == "SoulCore") and slotName:match("Socket") then
 		return true
 	elseif slotName == "Weapon 1" or slotName == "Weapon 1 Swap" or slotName == "Weapon" then
@@ -1829,7 +1827,7 @@ function ItemsTabClass:CraftItem()
 		local raritySel = controls.rarity.selIndex
 		if base.base.flask
 				or (base.base.type == "Jewel" and base.base.subType == "Charm")
-		 		or base.base.type == "Tincture" or base.base.type == "Charm"
+		 		or base.base.type == "Charm"
 		then
 			if raritySel == 3 then
 				raritySel = 2
@@ -2614,19 +2612,6 @@ function ItemsTabClass:AddItemTooltip(tooltip, item, slot, dbMode)
 		for _, modLine in pairs(item.buffModLines) do
 			tooltip:AddLine(16, (modLine.extra and colorCodes.UNSUPPORTED or colorCodes.MAGIC) .. modLine.line)
 		end
-	elseif base.tincture then
-		-- Tincture-specific info
-		local tinctureData = item.tinctureData
-		
-		if item.quality and item.quality > 0 then
-			tooltip:AddLine(16, s_format("^x7F7F7FQuality: "..colorCodes.MAGIC.."+%d%%", item.quality))
-		end
-
-		tooltip:AddLine(16, s_format("^x7F7F7FInflicts Mana Burn every %s%.2f ^x7F7F7FSeconds", main:StatColor(tinctureData.manaBurn, base.tincture.manaBurn), tinctureData.manaBurn))
-		tooltip:AddLine(16, s_format("^x7F7F7F%s%.2f ^x7F7F7FSecond Cooldown When Deactivated", main:StatColor(tinctureData.cooldown, base.tincture.cooldown), tinctureData.cooldown))
-		for _, modLine in pairs(item.buffModLines) do
-			tooltip:AddLine(16, (modLine.extra and colorCodes.UNSUPPORTED or colorCodes.MAGIC) .. modLine.line)
-		end
 	elseif item.type == "Jewel" then
 		-- Jewel-specific info
 		if item.limit then
@@ -2958,42 +2943,6 @@ function ItemsTabClass:AddItemTooltip(tooltip, item, slot, dbMode)
 			header = "^7Deactivating this charm will give you:"
 		else
 			header = "^7Activating this charm will give you:"
-		end
-		self.build:AddStatComparesToTooltip(tooltip, calcBase, output, header)
-	elseif base.tincture then
-		-- Special handling for tinctures
-		local stats = { }
-		local tinctureData = item.tinctureData
-		local modDB = self.build.calcsTab.mainEnv.modDB
-		local output = self.build.calcsTab.mainOutput
-		local effectInc = modDB:Sum("INC", { actor = "player" }, "TinctureEffect")
-
-		if item.rarity == "MAGIC" then
-			effectInc = effectInc + modDB:Sum("INC", { actor = "player" }, "MagicTinctureEffect")
-		end
-		local effectMod = (1 + (tinctureData.effectInc + effectInc) / 100) * (1 + (item.quality or 0) / 100)
-		if effectMod ~= 1 then
-			t_insert(stats, s_format("^8Tincture effect modifier: ^7%+d%%", effectMod * 100 - 100))
-		end
-		t_insert(stats, s_format("^8Mana Burn Inflicted Every Second: ^7%.2f", tinctureData.manaBurn / (1 + modDB:Sum("INC", { actor = "player" }, "TinctureManaBurnRate")/100) / (1 + modDB:Sum("MORE", { actor = "player" }, "TinctureManaBurnRate")/100)))
-		local TincturesNotInflictManaBurn = m_min(modDB:Sum("BASE", nil, "TincturesNotInflictManaBurn"), 100)
-		if TincturesNotInflictManaBurn ~= 0 then
-			t_insert(stats, s_format("^8Chance to not inflict Mana Burn: ^7%d%%", TincturesNotInflictManaBurn))
-		end
-		t_insert(stats, s_format("^8Tincture Cooldown when deactivated: ^7%.2f^8 seconds", tinctureData.cooldown / (1 + modDB:Sum("INC", { actor = "player" }, "TinctureCooldownRecovery")/100)))
-
-		if stats[1] then
-			tooltip:AddLine(14, "^7Effective tincture stats:")
-			for _, stat in ipairs(stats) do
-				tooltip:AddLine(14, stat)
-			end
-		end
-		local output = calcFunc({ toggleTincture = item })
-		local header
-		if self.build.calcsTab.mainEnv.tinctures[item] then
-			header = "^7Deactivating this tincture will give you:"
-		else
-			header = "^7Activating this tincture will give you:"
 		end
 		self.build:AddStatComparesToTooltip(tooltip, calcBase, output, header)
 	else

@@ -350,7 +350,6 @@ function ItemClass:ParseRaw(raw, rarity, highQuality)
 	local importedLevelReq
 	local flaskBuffLines
 	local charmBuffLines
-	local tinctureBuffLines
 	local deferJewelRadiusIndexAssignment
 	local gameModeStage = "FINDIMPLICIT"
 	local foundExplicit, foundImplicit
@@ -361,8 +360,6 @@ function ItemClass:ParseRaw(raw, rarity, highQuality)
 			flaskBuffLines[line] = nil
 		elseif charmBuffLines and charmBuffLines[line] then
 			charmBuffLines[line] = nil
-		elseif tinctureBuffLines and tinctureBuffLines[line] then
-			tinctureBuffLines[line] = nil
 		elseif line == "--------" then
 			self.checkSection = true
 		elseif line == "Mirrored" then
@@ -692,14 +689,6 @@ function ItemClass:ParseRaw(raw, rarity, highQuality)
 								t_insert(self.buffModLines, { line = line, extra = extra, modList = modList or { } })
 							end
 						end
-						if self.base.tincture and self.base.tincture.buff and not tinctureBuffLines then
-							tinctureBuffLines = { }
-							for _, line in ipairs(self.base.tincture.buff) do
-								tinctureBuffLines[line] = true
-								local modList, extra = modLib.parseMod(line)
-								t_insert(self.buffModLines, { line = line, extra = extra, modList = modList or { } })
-							end
-						end
 					end
 					-- Base lines don't need mod parsing, skip it
 					goto continue
@@ -888,7 +877,7 @@ function ItemClass:ParseRaw(raw, rarity, highQuality)
 end
 
 function ItemClass:NormaliseQuality()
-	if self.base and (self.base.armour or self.base.weapon or self.base.flask or self.base.tincture) then
+	if self.base and (self.base.armour or self.base.weapon or self.base.flask) then
 		if not self.quality then
 			self.quality = 0
 		elseif not self.uniqueID and not self.corrupted and not self.mirrored and self.quality < 20 then
@@ -1378,14 +1367,6 @@ function ItemClass:BuildModListForSlotNum(baseList, slotNum)
 		for _, value in ipairs(modList:List(nil, "CharmData")) do
 			charmData[value.key] = value.value
 		end
-	elseif self.base.tincture then
-		local tinctureData = self.tinctureData
-		tinctureData.manaBurn = (self.base.tincture.manaBurn + 0.01) / (1 + calcLocal(modList, "TinctureManaBurnRate", "INC", 0) / 100) / (1 + calcLocal(modList, "TinctureManaBurnRate", "MORE", 0) / 100)
-		tinctureData.cooldown = self.base.tincture.cooldown / (1 + calcLocal(modList, "TinctureCooldownRecovery", "INC", 0) / 100)
-		tinctureData.effectInc = calcLocal(modList, "TinctureEffect", "INC", 0) + calcLocal(modList, "LocalEffect", "INC", 0)
-		for _, value in ipairs(modList:List(nil, "TinctureData")) do
-			tinctureData[value.key] = value.value
-		end
 	elseif self.type == "Jewel" then
 		if self.name:find("Grand Spectrum") then
 			local spectrumMod = modLib.createMod("Multiplier:GrandSpectrum", "BASE", 1, self.name)
@@ -1453,9 +1434,6 @@ function ItemClass:BuildModList()
 		self.buffModList = { }
 	elseif self.base.charm then
 		self.charmData = { }
-		self.buffModList = { }
-	elseif self.base.tincture then
-		self.tinctureData = { }
 		self.buffModList = { }
 	elseif self.type == "Jewel" then
 		self.jewelData = { }

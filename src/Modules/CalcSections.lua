@@ -1681,15 +1681,7 @@ return {
 	{ label = "Inc. Effect", { format = "{0:mod:1}%", { modName = "CharmEffect", modType = "INC", actor = "player"}, }, },
 	{ label = "Inc. Duration", { format = "{0:mod:1}%", { modName = "CharmDuration", modType = "INC" }, }, },
 	{ label = "Charm Limit", { format = "{0:mod:1}", { modName = "CharmLimit", modType = "BASE"}, }, },
-} }, { defaultCollapsed = true, label = "Tinctures", data = {
-	extra = "+{0:output:TinctureEffect}%, {0:output:TinctureLimit}",
-	{ label = "Inc. Effect", { format = "{0:mod:1}%", { modName = "TinctureEffect", modType = "INC", actor = "player"}, }, },
-	{ label = "Tincture Limit", { format = "{0:mod:1}", { modName = "TinctureLimit", modType = "BASE"}, }, },
-	{ label = "ManaBurn inc Rate", { format = "{0:mod:1}%", { modName = "TinctureManaBurnRate", modType = "INC", actor = "player"}, }, },
-	{ label = "ManaBurn more Rate", { format = "{0:mod:1}%", { modName = "TinctureManaBurnRate", modType = "MORE", actor = "player"}, }, },
-	{ label = "% Not Inflict ManaBurn", { format = "{0:mod:1}%", { modName = "TincturesNotInflictManaBurn", modType = "BASE" }, }, },
-	{ label = "Cooldown Recovery", { format = "{0:mod:1}%", { modName = "TinctureCooldownRecovery", modType = "INC", actor = "player"}, }, },
-} }
+} }, 
 } },
 { 1, "Rage", 3, colorCodes.RAGE, {{ defaultCollapsed = true, label = "Rage", data = {
 	extra = "{0:output:Rage} ({1:output:RageEffect})",
