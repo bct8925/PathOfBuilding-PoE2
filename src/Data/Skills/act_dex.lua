@@ -1967,6 +1967,9 @@ skills["SnipePlayer"] = {
 	statDescriptionScope = "channelled_snipe",
 	castTime = 1,
 	baseFlags = {
+		attack = true,
+		projectile = true,
+		area = true,
 	},
 	qualityStats = {
 		Default = {
@@ -2173,7 +2176,7 @@ skills["SpiralVolleyPlayer"] = {
 	castTime = 1,
 	statMap = {
 		["spiral_volley_damage_+%_final_when_frenzy_charges_consumed"] = {
-			mod("Damage", "MORE", nil, 0, 0, { type = "Multiplier", var = "RemovableFrenzyCharge", limit = 1 }),
+			mod("Damage", "MORE", nil, 0, 0, { type = "MultiplierThreshold", var = "RemovableFrenzyCharge", threshold = 1 }),
 		},
 		["spiral_volley_damage_+%_final_per_frenzy_charge_consumed"] = {
 			mod("Damage", "MORE", nil, 0, 0, { type = "Multiplier", var = "RemovableFrenzyCharge" }),
