@@ -233,6 +233,11 @@ local skills, mod, flag, skill = ...
 #mods
 
 #skill SupportMomentumPlayer
+	statMap = {
+		["support_momnetum_damage_+%_final_with_momentum"] = {
+			mod("Damage", "MORE", nil, 0, 0, { type = "Condition", var = "Moved2m" }),
+		},
+	},
 #mods
 
 #skill SupportEmpoweredCullPlayer

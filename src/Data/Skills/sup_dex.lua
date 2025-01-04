@@ -926,6 +926,11 @@ skills["SupportMomentumPlayer"] = {
 	excludeSkillTypes = { SkillType.Triggered, SkillType.Trapped, SkillType.RemoteMined, SkillType.SummonsTotem, },
 	ignoreMinionTypes = true,
 	statDescriptionScope = "gem_stat_descriptions",
+	statMap = {
+		["support_momnetum_damage_+%_final_with_momentum"] = {
+			mod("Damage", "MORE", nil, 0, 0, { type = "Condition", var = "Moved2m" }),
+		},
+	},
 	constantStats = {
 		{ "support_momentum_distance_travelled_to_gain_momentum", 20 },
 		{ "support_momnetum_damage_+%_final_with_momentum", 40 },
