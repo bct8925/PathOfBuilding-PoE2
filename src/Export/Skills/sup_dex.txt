@@ -208,6 +208,11 @@ local skills, mod, flag, skill = ...
 #mods
 
 #skill SupportFarCombatPlayer
+	statMap = {
+		["support_far_combat_attack_damage_+%_final_from_distance"] = {
+			mod("Damage", "MORE", nil, 0, 0, { type = "DistanceRamp", ramp = {{35,0},{70,1}} }),
+		},
+	},
 #mods
 
 #skill SupportMaimPlayer
@@ -217,6 +222,11 @@ local skills, mod, flag, skill = ...
 #mods
 
 #skill SupportFasterAttackPlayer
+	statMap = {
+		["support_faster_attacks_attack_speed_+%_final"] = {
+			mod("Speed", "MORE", nil, ModFlag.Attack),
+		},
+	},
 #mods
 
 #skill SupportMobilityPlayer

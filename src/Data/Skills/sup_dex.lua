@@ -815,6 +815,11 @@ skills["SupportFarCombatPlayer"] = {
 	excludeSkillTypes = { },
 	ignoreMinionTypes = true,
 	statDescriptionScope = "gem_stat_descriptions",
+	statMap = {
+		["support_far_combat_attack_damage_+%_final_from_distance"] = {
+			mod("Damage", "MORE", nil, 0, 0, { type = "DistanceRamp", ramp = {{35,0},{70,1}} }),
+		},
+	},
 	constantStats = {
 		{ "support_far_combat_attack_damage_+%_final_from_distance", 35 },
 	},
@@ -875,6 +880,11 @@ skills["SupportFasterAttackPlayer"] = {
 	addSkillTypes = { },
 	excludeSkillTypes = { SkillType.Herald, },
 	statDescriptionScope = "gem_stat_descriptions",
+	statMap = {
+		["support_faster_attacks_attack_speed_+%_final"] = {
+			mod("Speed", "MORE", nil, ModFlag.Attack),
+		},
+	},
 	constantStats = {
 		{ "support_faster_attacks_attack_speed_+%_final", 25 },
 		{ "support_faster_attacks_damage_+%_final", 0 },
