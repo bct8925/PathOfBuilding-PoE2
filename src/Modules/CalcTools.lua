@@ -184,7 +184,7 @@ function calcLib.buildSkillInstanceStats(skillInstance, grantedEffect)
 							* (1 + grantedEffect.incrementalEffectiveness * (actorLevel - 1)) 
 							* (1 + (grantedEffect.damageIncrementalEffectiveness or 0)) ^ (actorLevel - 1)
 				end
-				statValue = availableEffectiveness * level[index]
+				statValue = round(availableEffectiveness * level[index])
 			elseif level.statInterpolation[index] == 2 then
 				-- Linear interpolation; I'm actually just guessing how this works
 
