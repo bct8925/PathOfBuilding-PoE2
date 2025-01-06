@@ -4,7 +4,6 @@ local itemBases = ...
 
 itemBases["Ashen Staff"] = {
 	type = "Staff",
-	socketLimit = 3,
 	tags = { no_physical_spell_mods = true, no_lightning_spell_mods = true, no_cold_spell_mods = true, no_chaos_spell_mods = true, staff = true, twohand = true, default = true, },
 	implicit = "Grants Skill: Level (1-20) Firebolt",
 	implicitModTypes = { },
@@ -12,7 +11,6 @@ itemBases["Ashen Staff"] = {
 }
 itemBases["Gelid Staff"] = {
 	type = "Staff",
-	socketLimit = 3,
 	tags = { no_fire_spell_mods = true, no_lightning_spell_mods = true, staff = true, no_physical_spell_mods = true, no_chaos_spell_mods = true, twohand = true, default = true, },
 	implicit = "Grants Skill: Level (1-20) Freezing Shards",
 	implicitModTypes = { },
@@ -20,7 +18,6 @@ itemBases["Gelid Staff"] = {
 }
 itemBases["Voltaic Staff"] = {
 	type = "Staff",
-	socketLimit = 3,
 	tags = { no_fire_spell_mods = true, no_physical_spell_mods = true, staff = true, no_chaos_spell_mods = true, no_cold_spell_mods = true, twohand = true, default = true, },
 	implicit = "Grants Skill: Level (1-20) Lightning Bolt",
 	implicitModTypes = { },
@@ -28,7 +25,6 @@ itemBases["Voltaic Staff"] = {
 }
 itemBases["Spriggan Staff"] = {
 	type = "Staff",
-	socketLimit = 3,
 	tags = { default = true, twohand = true, staff = true, },
 	implicit = "Grants Skill: Level (1-20) Firebolt",
 	implicitModTypes = { },
@@ -36,7 +32,6 @@ itemBases["Spriggan Staff"] = {
 }
 itemBases["Pyrophyte Staff"] = {
 	type = "Staff",
-	socketLimit = 3,
 	tags = { no_physical_spell_mods = true, no_lightning_spell_mods = true, no_cold_spell_mods = true, no_chaos_spell_mods = true, staff = true, twohand = true, default = true, },
 	implicit = "Grants Skill: Level (1-20) Living Bomb",
 	implicitModTypes = { },
@@ -44,7 +39,6 @@ itemBases["Pyrophyte Staff"] = {
 }
 itemBases["Chiming Staff"] = {
 	type = "Staff",
-	socketLimit = 3,
 	tags = { default = true, twohand = true, staff = true, },
 	implicit = "Grants Skill: Level (1-20) Sigil of Power",
 	implicitModTypes = { },
@@ -52,7 +46,6 @@ itemBases["Chiming Staff"] = {
 }
 itemBases["Rending Staff"] = {
 	type = "Staff",
-	socketLimit = 3,
 	tags = { no_fire_spell_mods = true, no_lightning_spell_mods = true, staff = true, no_physical_spell_mods = true, no_cold_spell_mods = true, twohand = true, default = true, },
 	implicit = "Grants Skill: Level (1-20) Soulrend",
 	implicitModTypes = { },
@@ -60,7 +53,6 @@ itemBases["Rending Staff"] = {
 }
 itemBases["Reaping Staff"] = {
 	type = "Staff",
-	socketLimit = 3,
 	tags = { no_fire_spell_mods = true, no_lightning_spell_mods = true, staff = true, no_chaos_spell_mods = true, no_cold_spell_mods = true, twohand = true, default = true, },
 	implicit = "Grants Skill: Level (1-20) Reap",
 	implicitModTypes = { },
@@ -68,7 +60,6 @@ itemBases["Reaping Staff"] = {
 }
 itemBases["Icicle Staff"] = {
 	type = "Staff",
-	socketLimit = 3,
 	tags = { no_fire_spell_mods = true, no_lightning_spell_mods = true, staff = true, no_physical_spell_mods = true, no_chaos_spell_mods = true, twohand = true, default = true, },
 	implicit = "Grants Skill: Level (1-20) Firebolt",
 	implicitModTypes = { },
@@ -76,7 +67,6 @@ itemBases["Icicle Staff"] = {
 }
 itemBases["Roaring Staff"] = {
 	type = "Staff",
-	socketLimit = 3,
 	tags = { default = true, twohand = true, staff = true, },
 	implicit = "Grants Skill: Level (1-20) Unleash",
 	implicitModTypes = { },
@@ -84,7 +74,6 @@ itemBases["Roaring Staff"] = {
 }
 itemBases["Paralysing Staff"] = {
 	type = "Staff",
-	socketLimit = 3,
 	tags = { no_fire_spell_mods = true, no_physical_spell_mods = true, staff = true, no_chaos_spell_mods = true, no_cold_spell_mods = true, twohand = true, default = true, },
 	implicit = "Grants Skill: Level (1-20) Shock Nova",
 	implicitModTypes = { },
@@ -92,7 +81,6 @@ itemBases["Paralysing Staff"] = {
 }
 itemBases["Cleric Staff"] = {
 	type = "Staff",
-	socketLimit = 3,
 	tags = { default = true, twohand = true, staff = true, },
 	implicit = "Grants Skill: Level (1-20) Consecrate",
 	implicitModTypes = { },
@@ -100,7 +88,6 @@ itemBases["Cleric Staff"] = {
 }
 itemBases["Dark Staff"] = {
 	type = "Staff",
-	socketLimit = 3,
 	tags = { default = true, twohand = true, staff = true, },
 	implicit = "Grants Skill: Level (1-20) Dark Pact",
 	implicitModTypes = { },

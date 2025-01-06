@@ -5,7 +5,6 @@ local itemBases = ...
 itemBases["Rattling Sceptre"] = {
 	type = "Sceptre",
 	spirit = 100,
-	socketLimit = 0,
 	tags = { default = true, onehand = true, sceptre = true, },
 	implicit = "Grants Skill: Level (1-20) Skeletal Warrior",
 	implicitModTypes = { },
@@ -14,7 +13,6 @@ itemBases["Rattling Sceptre"] = {
 itemBases["Stoic Sceptre"] = {
 	type = "Sceptre",
 	spirit = 100,
-	socketLimit = 0,
 	tags = { default = true, onehand = true, sceptre = true, },
 	implicit = "Grants Skill: Level (1-20) Discipline",
 	implicitModTypes = { },
@@ -23,7 +21,6 @@ itemBases["Stoic Sceptre"] = {
 itemBases["Lupine Sceptre"] = {
 	type = "Sceptre",
 	spirit = 100,
-	socketLimit = 0,
 	tags = { default = true, onehand = true, sceptre = true, },
 	implicit = "Grants Skill: Level (1-20) Skeletal Warrior",
 	implicitModTypes = { },
@@ -32,7 +29,6 @@ itemBases["Lupine Sceptre"] = {
 itemBases["Omen Sceptre"] = {
 	type = "Sceptre",
 	spirit = 100,
-	socketLimit = 0,
 	tags = { default = true, onehand = true, sceptre = true, },
 	implicit = "Grants Skill: Level (1-20) Malice",
 	implicitModTypes = { },
@@ -41,7 +37,6 @@ itemBases["Omen Sceptre"] = {
 itemBases["Ochre Sceptre"] = {
 	type = "Sceptre",
 	spirit = 100,
-	socketLimit = 0,
 	tags = { default = true, onehand = true, sceptre = true, },
 	implicit = "Grants Skill: Level (1-20) Skeletal Warrior",
 	implicitModTypes = { },
@@ -50,7 +45,6 @@ itemBases["Ochre Sceptre"] = {
 itemBases["Shrine Sceptre"] = {
 	type = "Sceptre",
 	spirit = 100,
-	socketLimit = 0,
 	tags = { default = true, onehand = true, sceptre = true, },
 	implicit = "Grants Skill: Level (1-20) Purity of Fire",
 	implicitModTypes = { },
@@ -59,7 +53,6 @@ itemBases["Shrine Sceptre"] = {
 itemBases["Shrine Sceptre"] = {
 	type = "Sceptre",
 	spirit = 100,
-	socketLimit = 0,
 	tags = { default = true, onehand = true, sceptre = true, },
 	implicit = "Grants Skill: Level (1-20) Purity of Ice",
 	implicitModTypes = { },
@@ -68,7 +61,6 @@ itemBases["Shrine Sceptre"] = {
 itemBases["Shrine Sceptre"] = {
 	type = "Sceptre",
 	spirit = 100,
-	socketLimit = 0,
 	tags = { default = true, onehand = true, sceptre = true, },
 	implicit = "Grants Skill: Level (1-20) Purity of Lightning",
 	implicitModTypes = { },
@@ -77,7 +69,6 @@ itemBases["Shrine Sceptre"] = {
 itemBases["Devouring Sceptre"] = {
 	type = "Sceptre",
 	spirit = 100,
-	socketLimit = 0,
 	tags = { default = true, onehand = true, sceptre = true, },
 	implicit = "Grants Skill: Level (1-20) Skeletal Warrior",
 	implicitModTypes = { },
@@ -86,7 +77,6 @@ itemBases["Devouring Sceptre"] = {
 itemBases["Clasped Sceptre"] = {
 	type = "Sceptre",
 	spirit = 100,
-	socketLimit = 0,
 	tags = { default = true, onehand = true, sceptre = true, },
 	implicit = "Grants Skill: Level (1-20) Skeletal Warrior",
 	implicitModTypes = { },
@@ -95,7 +85,6 @@ itemBases["Clasped Sceptre"] = {
 itemBases["Devotional Sceptre"] = {
 	type = "Sceptre",
 	spirit = 100,
-	socketLimit = 0,
 	tags = { default = true, onehand = true, sceptre = true, },
 	implicit = "Grants Skill: Level (1-20) Skeletal Warrior",
 	implicitModTypes = { },
@@ -104,7 +93,6 @@ itemBases["Devotional Sceptre"] = {
 itemBases["Wrath Sceptre"] = {
 	type = "Sceptre",
 	spirit = 100,
-	socketLimit = 0,
 	tags = { default = true, onehand = true, sceptre = true, },
 	implicit = "Grants Skill: Level (1-20) Skeletal Warrior",
 	implicitModTypes = { },
@@ -113,7 +101,6 @@ itemBases["Wrath Sceptre"] = {
 itemBases["Aromatic Sceptre"] = {
 	type = "Sceptre",
 	spirit = 100,
-	socketLimit = 0,
 	tags = { default = true, onehand = true, sceptre = true, },
 	implicit = "Grants Skill: Level (1-20) Skeletal Warrior",
 	implicitModTypes = { },
@@ -122,7 +109,6 @@ itemBases["Aromatic Sceptre"] = {
 itemBases["Pious Sceptre"] = {
 	type = "Sceptre",
 	spirit = 100,
-	socketLimit = 0,
 	tags = { default = true, onehand = true, sceptre = true, },
 	implicit = "Grants Skill: Level (1-20) Skeletal Warrior",
 	implicitModTypes = { },
@@ -131,7 +117,6 @@ itemBases["Pious Sceptre"] = {
 itemBases["Hallowed Sceptre"] = {
 	type = "Sceptre",
 	spirit = 100,
-	socketLimit = 0,
 	tags = { default = true, onehand = true, sceptre = true, },
 	implicit = "Grants Skill: Level (1-20) Skeletal Warrior",
 	implicitModTypes = { },

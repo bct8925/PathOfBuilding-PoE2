@@ -1001,26 +1001,14 @@ function calcs.initEnv(build, mode, override, specEnv)
 							for _, tag in ipairs(mod) do
 								if tag.type == "SocketedIn" then
 									if tag.slotType == "Armour" then
-										if slotName == "Helmet" or slotName == "Body Armour" or slotName == "Gloves" or slotName == "Boots"
-											or parentItem.weaponData and (parentItem.weaponData[2].type == "Shield" or parentItem.weaponData[2].type == "Focus") then
+										if parentItem.base.armour then
 											local modCopy = copyTable(mod)
 											modCopy[1] = nil
 											modLib.setSource(modCopy, item.modSource)
 											env.itemModDB:ScaleAddMod(modCopy, scale)
 										end
 									elseif tag.slotType == "Martial Weapons" then
-										local type = nil
-										local subtype = nil
-										if slotName:match("Weapon") then
-											type = parentItem.weaponData and parentItem.weaponData[1].type
-											subtype = parentItem.weaponData and parentItem.weaponData[1].subType or nil
-										elseif slotName:match("Offhand") then
-											type = parentItem.weaponData and parentItem.weaponData[2].type
-											subtype = parentItem.weaponData and parentItem.weaponData[2].subType or nil
-										end
-										if type and (type == "Dagger" or type == "Bow" or type == "Crossbow" or type == "Spear" or type == "Claw"
-											or type:match("Axe") or type:match("Mace") or type:match("Sword") or type:match("Flail") 
-											or (subtype and subtype == "Warstaff") or type == "Fishing Rod") then
+										if parentItem.base.weapon then
 											env.itemModDB:ScaleAddMod(mod, scale)
 										end
 									end
