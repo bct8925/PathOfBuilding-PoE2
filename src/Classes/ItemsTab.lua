@@ -437,9 +437,7 @@ holding Shift will put it in the second.]])
 	end})
 	self.controls.displayItemQuality = new("LabelControl", {"TOPLEFT",self.controls.displayItemSectionQuality,"TOPRIGHT"}, {-4, 0, 0, 16}, "^7Quality:")
 	self.controls.displayItemQuality.shown = function()
-		return self.displayItem and self.displayItem.quality and (self.displayItem.base.type ~= "Amulet" or self.displayItem.base.type ~= "Belt" or
-			self.displayItem.base.type ~= "Jewel" or self.displayItem.base.type ~= "Quiver" or self.displayItem.base.type ~= "Ring" or
-			self.displayItem.base.type ~= "Rune" or self.displayItem.base.type ~= "SoulCore")
+		return self.displayItem and self.displayItem.quality and self.displayItem.base.quality
 	end
 
 	self.controls.displayItemQualityEdit = new("EditControl", {"LEFT",self.controls.displayItemQuality,"RIGHT"}, {2, 0, 60, 20}, nil, nil, "%D", 2, function(buf)
@@ -448,9 +446,7 @@ holding Shift will put it in the second.]])
 		self:UpdateDisplayItemTooltip()
 	end)
 	self.controls.displayItemQualityEdit.shown = function()
-		return self.displayItem and self.displayItem.quality and (self.displayItem.base.type ~= "Amulet" or self.displayItem.base.type ~= "Belt" or 
-		self.displayItem.base.type ~= "Jewel" or self.displayItem.base.type ~= "Quiver" or self.displayItem.base.type ~= "Ring" or
-		self.displayItem.base.type ~= "Rune" or self.displayItem.base.type ~= "SoulCore")
+		return self.displayItem and self.displayItem.quality and self.displayItem.base.quality
 	end
 
 	-- Section: Catalysts
@@ -1818,11 +1814,10 @@ function ItemsTabClass:CraftItem()
 		item.classRequirementModLines = { }
 		item.implicitModLines = { }
 		item.explicitModLines = { }
-		if base.base.type == "Amulet" or base.base.type == "Belt" or base.base.type == "Charm" or base.base.type == "Jewel" 
-			or base.base.type == "Quiver" or base.base.type == "Ring" or base.base.type == "SoulCore" or base.base.type == "Rune" then
-			item.quality = nil
-		else
+		if base.base.quality then
 			item.quality = 0
+		else
+			item.quality = nil
 		end
 		local raritySel = controls.rarity.selIndex
 		if base.base.flask
@@ -2471,12 +2466,7 @@ function ItemsTabClass:AddItemTooltip(tooltip, item, slot, dbMode)
 	else
 		tooltip:AddLine(20, rarityCode..item.namePrefix..item.baseName:gsub(" %(.+%)","")..item.nameSuffix)
 	end
-	if item.charmLimit then
-		tooltip:AddLine(16, s_format("^x7F7F7FCharm Slots: %d", item.charmLimit))
-	end
-	if item.spiritValue then
-		tooltip:AddLine(16, s_format("^x7F7F7FSpirit: %d", item.spiritValue))
-	end
+
 	tooltip:AddSeparator(10)
 
 	-- Special fields for database items
@@ -2508,13 +2498,22 @@ function ItemsTabClass:AddItemTooltip(tooltip, item, slot, dbMode)
 	local base = item.base
 	local slotNum = slot and slot.slotNum or (IsKeyDown("SHIFT") and 2 or 1)
 	local modList = item.modList or item.slotModList[slotNum]
+
+	tooltip:AddLine(16, s_format("^x7F7F7F%s", base.weapon and self.build.data.weaponTypeInfo[base.type].label or base.type))
+	if item.quality and item.quality > 0 then
+		tooltip:AddLine(16, s_format("^x7F7F7FQuality: "..colorCodes.MAGIC.."+%d%%", item.quality))
+	end
+
+	if item.charmLimit then
+		tooltip:AddLine(16, s_format("^x7F7F7FCharm Slots: "..main:StatColor(item.charmLimit, base.charmLimit).."%d", item.charmLimit))
+	end
+	if item.spiritValue then
+		tooltip:AddLine(16, s_format("^x7F7F7FSpirit: "..main:StatColor(item.spiritValue, base.spirit).."%d", item.spiritValue))
+	end
+
 	if base.weapon then
 		-- Weapon-specific info
 		local weaponData = item.weaponData[slotNum]
-		tooltip:AddLine(16, s_format("^x7F7F7F%s", self.build.data.weaponTypeInfo[base.type].label or base.type))
-		if item.quality > 0 then
-			tooltip:AddLine(16, s_format("^x7F7F7FQuality: "..colorCodes.MAGIC.."+%d%%", item.quality))
-		end
 		local totalDamageTypes = 0
 		if weaponData.PhysicalDPS then
 			tooltip:AddLine(16, s_format("^x7F7F7FPhysical Damage: "..colorCodes.MAGIC.."%d-%d (%.1f DPS)", weaponData.PhysicalMin, weaponData.PhysicalMax, weaponData.PhysicalDPS))
@@ -2547,9 +2546,6 @@ function ItemsTabClass:AddItemTooltip(tooltip, item, slot, dbMode)
 	elseif base.armour then
 		-- Armour-specific info
 		local armourData = item.armourData
-		if item.quality > 0 then
-			tooltip:AddLine(16, s_format("^x7F7F7FQuality: "..colorCodes.MAGIC.."+%d%%", item.quality))
-		end
 		if base.armour.BlockChance and armourData.BlockChance > 0 then
 			tooltip:AddLine(16, s_format("^x7F7F7FChance to Block: %s%d%%", main:StatColor(armourData.BlockChance, base.armour.BlockChance), armourData.BlockChance))
 		end
@@ -2568,9 +2564,6 @@ function ItemsTabClass:AddItemTooltip(tooltip, item, slot, dbMode)
 	elseif base.flask then
 		-- Flask-specific info
 		local flaskData = item.flaskData
-		if item.quality > 0 then
-			tooltip:AddLine(16, s_format("^x7F7F7FQuality: "..colorCodes.MAGIC.."+%d%%", item.quality))
-		end
 		if flaskData.lifeTotal then
 			if flaskData.lifeGradual ~= 0 then
 				tooltip:AddLine(16, s_format("^x7F7F7FRecovers %s%d ^x7F7F7FLife over %s%.1f0 ^x7F7F7FSeconds",
