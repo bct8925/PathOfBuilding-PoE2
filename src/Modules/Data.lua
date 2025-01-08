@@ -18,8 +18,6 @@ local skillTypes = {
 	"act_int",
 	"other",
 	"glove",
-	"minion",
-	"spectre",
 	"sup_str",
 	"sup_dex",
 	"sup_int",
@@ -787,29 +785,33 @@ for skillId, grantedEffect in pairs(data.skills) do
 	grantedEffect.id = skillId
 	grantedEffect.modSource = "Skill:"..skillId
 	-- Add sources for skill mods, and check for global effects
-	for _, list in pairs({grantedEffect.baseMods, grantedEffect.qualityMods, grantedEffect.levelMods}) do
-		for _, mod in pairs(list) do
-			if mod.name then
-				processMod(grantedEffect, mod)
-			else
-				for _, mod in ipairs(mod) do
+	for _, skillPart in pairs(tableConcat({grantedEffect}, grantedEffect.statSets or {})) do
+		for _, list in pairs({skillPart.baseMods, skillPart.qualityMods, skillPart.levelMods}) do
+			for _, mod in pairs(list) do
+				if mod.name then
 					processMod(grantedEffect, mod)
+				else
+					for _, mod in ipairs(mod) do
+						processMod(grantedEffect, mod)
+					end
 				end
 			end
 		end
 	end
 	-- Install stat map metatable
-	grantedEffect.statMap = grantedEffect.statMap or { }
-	setmetatable(grantedEffect.statMap, data.skillStatMapMeta)
-	grantedEffect.statMap._grantedEffect = grantedEffect
-	for _, map in pairs(grantedEffect.statMap) do
-		-- Some mods need different scalars for different stats, but the same value.  Putting them in a group allows this
-		for _, modOrGroup in ipairs(map) do
-			if modOrGroup.name then
-				processMod(grantedEffect, modOrGroup)
-			else
-				for _, mod in ipairs(modOrGroup) do
-					processMod(grantedEffect, mod)
+	for _, statSet in pairs(tableConcat({grantedEffect}, grantedEffect.statSets or {})) do
+		statSet.statMap = statSet.statMap or { }
+		setmetatable(statSet.statMap, data.skillStatMapMeta)
+		statSet.statMap._grantedEffect = grantedEffect
+		for _, map in ipairs(statSet.statMap or {}) do
+			-- Some mods need different scalars for different stats, but the same value.  Putting them in a group allows this
+			for _, modOrGroup in ipairs(map) do
+				if modOrGroup.name then
+					processMod(grantedEffect, modOrGroup)
+				else
+					for _, mod in ipairs(modOrGroup) do
+						processMod(grantedEffect, mod)
+					end
 				end
 			end
 		end
@@ -866,28 +868,6 @@ for gemId, gem in pairs(data.gems) do
 			end
 		end
 	end
-    for _, alt in ipairs{"AltX", "AltY"} do
-        if loc and data.skills[gem.secondaryGrantedEffectId..alt] then
-			data.gemGrantedEffectIdForVaalGemId[gem.secondaryGrantedEffectId..alt] = gemId..alt
-			data.gemVaalGemIdForBaseGemId[gemId..alt] = data.gemVaalGemIdForBaseGemId[gemId]..alt
-            local newGem = { name, gameId, variantId, grantedEffectId, secondaryGrantedEffectId, vaalGem, tags = {}, tagString, reqStr, reqDex, reqInt, naturalMaxLevel }
-			-- Hybrid gems (e.g. Vaal gems) use the display name of the active skill e.g. Vaal Summon Skeletons of Sorcery
-            newGem.name = "Vaal " .. data.skills[gem.secondaryGrantedEffectId..alt].baseTypeName
-            newGem.gameId = gem.gameId
-            newGem.variantId = gem.variantId..alt
-            newGem.grantedEffectId = gem.grantedEffectId
-            newGem.secondaryGrantedEffectId = gem.secondaryGrantedEffectId..alt
-            newGem.vaalGem = gem.vaalGem
-            newGem.tags = copyTable(gem.tags)
-            newGem.tagString = gem.tagString
-            newGem.reqStr = gem.reqStr
-            newGem.reqDex = gem.reqDex
-            newGem.reqInt = gem.reqInt
-            newGem.naturalMaxLevel = gem.naturalMaxLevel
-            setupGem(newGem, gemId..alt)
-            toAddGems[gemId..alt] = newGem
-        end
-    end
 end
 for id, gem in pairs(toAddGems) do
     data.gems[id] = gem

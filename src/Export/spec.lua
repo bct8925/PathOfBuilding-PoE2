@@ -2148,7 +2148,7 @@ return {
 			list=false,
 			name="PassiveSkillsKey",
 			refTo="PassiveSkills",
-			type="ShortKey",
+			type="Key",
 			width=260
 		}
 	},
@@ -5869,7 +5869,7 @@ return {
 		},
 		[2]={
 			list=false,
-			name="",
+			name="Label",
 			refTo="",
 			type="String",
 			width=150
@@ -6317,7 +6317,7 @@ return {
 		},
 		[22]={
 			list=false,
-			name="",
+			name="ActorLevel",
 			refTo="",
 			type="Float",
 			width=100

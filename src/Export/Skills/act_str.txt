@@ -6,369 +6,693 @@
 local skills, mod, flag, skill = ...
 
 #skill AncestralWarriorTotemPlayer
-#flags totem
+#startSets
+#set AncestralWarriorTotemPlayer
+#flags
 #mods
+#skillEnd
 
 #skill SupportAncestralWarriorTotemPlayer
-#flags totem
+#startSets
+#set SupportAncestralWarriorTotemPlayer
+#flags
 #mods
+#skillEnd
 
 #skill ArmourBreakerPlayer
+#startSets
+#set ArmourBreakerPlayer
 #flags
 #mods
+#skillEnd
 
 #skill ArtilleryBallistaPlayer
-#flags
+#startSets
+#set ArtilleryBallistaPlayer
+#flags totem duration
 #mods
+#skillEnd
 
 #skill ArtilleryBallistaProjectilePlayer
-#flags attack area totem projectile duration
+#startSets
+#set ArtilleryBallistaProjectilePlayer
+#flags attack area projectile totem
 #mods
+#set ArtilleryBallistaProjectileExplodePlayer
+#flags attack area projectile totem
+#mods
+#skillEnd
 
 #skill AttritionPlayer
+#startSets
+#set AttritionPlayer
 #flags
 #mods
+#skillEnd
 
 #skill BerserkPlayer
+#startSets
+#set BerserkPlayer
 #flags
 #mods
+#skillEnd
 
 #skill BoneshatterPlayer
+#startSets
+#set BoneshatterPlayer
 #flags
 #mods
+#set BoneshatterShockwavePlayer
+#flags
+#mods
+#skillEnd
 
 #skill MetaCastOnBlockPlayer
+#startSets
+#set MetaCastOnBlockPlayer
 #flags
 #mods
+#skillEnd
 
 #skill SupportMetaCastOnBlockPlayer
+#startSets
+#set SupportMetaCastOnBlockPlayer
 #flags
 #mods
+#skillEnd
 
 #skill MetaCastOnMeleeKillPlayer
+#startSets
+#set MetaCastOnMeleeKillPlayer
 #flags
 #mods
+#skillEnd
 
 #skill SupportMetaCastOnMeleeKillPlayer
+#startSets
+#set SupportMetaCastOnMeleeKillPlayer
 #flags
 #mods
+#skillEnd
 
 #skill MetaCastOnMeleeStunPlayer
+#startSets
+#set MetaCastOnMeleeStunPlayer
 #flags
 #mods
+#skillEnd
 
 #skill SupportMetaCastOnMeleeStunPlayer
+#startSets
+#set SupportMetaCastOnMeleeStunPlayer
 #flags
 #mods
+#skillEnd
 
 #skill ClusterGrenadePlayer
+#startSets
+#set ClusterGrenadePlayer
 #flags attack area projectile duration
 #mods
+#skillEnd
 
 #skill ClusterGrenadeMiniPlayer
+#startSets
+#set ClusterGrenadeMiniPlayer
 #flags attack area projectile duration
 #mods
+#skillEnd
 
 #skill DefianceBannerReservationPlayer
-#flags
-#mods
+#startSets
+#skillEnd
 
 #skill DefianceBannerPlayer
+#startSets
+#set DefianceBannerPlayer
 #flags
 #mods
+#skillEnd
 
 #skill DreadBannerReservationPlayer
-#flags
-#mods
+#startSets
+#skillEnd
 
 #skill DreadBannerPlayer
+#startSets
+#set DreadBannerPlayer
 #flags
 #mods
+#skillEnd
 
 #skill EarthquakePlayer
+#startSets
+#set EarthquakePlayer
 #flags attack melee area duration
-	parts = {
-		{
-			name = "Initial impact",
-		},
-		{
-			name = "Aftershock",
-		},
-	},
 	statMap = {
-		["jagged_ground_effect_+%"] = {
-			mod("Damage", "MORE", nil, 0, 0, { type = "SkillPart", skillPart = 2 }),
-		},
 		["active_skill_base_area_of_effect_radius"] = {
-			skill("radius", nil, { type = "SkillPart", skillPart = 1 }),
-		},
-		["active_skill_base_tertiary_area_of_effect_radius"] = {
-			skill("radius", nil, { type = "SkillPart", skillPart = 2 }),
+			skill("radius", nil),
 		},
 		["skill_jagged_ground_base_duration_ms"] = {
 			skill("duration", nil),
 			div = 1000,
 		},
 	},
-#baseMod skill("showAverage", true, { type = "SkillPart", skillPart = 2 })
 #mods
+#set EarthquakeAftershockPlayer
+#flags attack melee area
+	statMap = {
+		["jagged_ground_effect_+%"] = {
+			mod("Damage", "MORE", nil, 0, 0),
+		},
+		["active_skill_base_tertiary_area_of_effect_radius"] = {
+			skill("radius", nil),
+		},
+	},
+#baseMod skill("showAverage", true)
+#mods
+#skillEnd
 
 #skill EarthshatterPlayer
-#flags attack melee area duration
+#startSets
+#set EarthshatterPlayer
+#flags
 #mods
+#set EarthshatterSpikePlayer
+#flags
+#mods
+#skillEnd
 
 #skill EmergencyReloadPlayer
+#startSets
+#set EmergencyReloadPlayer
 #flags
 #mods
+#skillEnd
 
 #skill ExplosiveGrenadePlayer
+#startSets
+#set ExplosiveGrenadePlayer
 #flags attack area projectile duration
 #mods
+#skillEnd
 
 #skill FlashGrenadePlayer
+#startSets
+#set FlashGrenadePlayer
 #flags attack area projectile duration
 #mods
+#skillEnd
 
 #skill ToxicGrenadePlayer
+#startSets
+#set ToxicGrenadePlayer
 #flags attack area projectile duration
 #mods
+#set ToxicGrenadeCloudPlayer
+#flags attack area projectile duration
+#mods
+#set ToxicGrenadeCloudExplosionPlayer
+#flags attack area projectile
+#mods
+#skillEnd
 
 #skill HammerOfTheGodsPlayer
+#startSets
+#set HammerOfTheGodsPlayer
 #flags
 #mods
+#skillEnd
 
 #skill HeraldOfAshPlayer
+#startSets
+#set HeraldOfAshPlayer
 #flags
 #mods
+#set HeraldOfAshOnKillPlayer
+#flags
+#mods
+#skillEnd
 
 #skill InfernalCryPlayer
+#startSets
+#set InfernalCryPlayer
 #flags
 #mods
+#skillEnd
 
 #skill InfernalCryCorpseExplosionPlayer
+#startSets
+#set InfernalCryCorpseExplosionPlayer
 #flags
 #mods
+#skillEnd
 
 #skill LeapSlamPlayer
+#startSets
+#set LeapSlamPlayer
 #flags
 #mods
+#skillEnd
 
 #skill ArmourPiercingBoltsAmmoPlayer
+#startSets
+#set ArmourPiercingBoltsAmmoPlayer
 #flags
 #mods
+#skillEnd
 
 #skill ArmourPiercingBoltsPlayer
+#startSets
+#set ArmourPiercingBoltsPlayer
 #flags attack projectile
 #mods
+#skillEnd
 
 #skill ExplosiveShotAmmoPlayer
+#startSets
+#set ExplosiveShotAmmoPlayer
 #flags
 #mods
+#skillEnd
 
 #skill ExplosiveShotPlayer
-#flags attack projectile area
+#startSets
+#set ExplosiveShotPlayer
+#flags attack projectile
 #mods
+#set ExplosiveShotExplosionPlayer
+#flags attack projectile area 
+#mods
+#skillEnd
 
 #skill FragmentationRoundsAmmoPlayer
+#startSets
+#set FragmentationRoundsAmmoPlayer
 #flags
 #mods
+#skillEnd
 
 #skill FragmentationRoundsPlayer
+#startSets
+#set FragmentationRoundsPlayer
 #flags attack projectile
 #mods
+#set FragmentationRoundsFreezeShatterPlayer
+#flags
+#mods
+#skillEnd
 
 #skill GalvanicShardsAmmoPlayer
+#startSets
+#set GalvanicShardsAmmoPlayer
 #flags
 #mods
+#skillEnd
 
 #skill GalvanicShardsPlayer
+#startSets
+#set GalvanicShardsPlayer
 #flags attack projectile
 #mods
+#set GalvanicShardsBeamPlayer
+#flags attack projectile
+#mods
+#skillEnd
 
 #skill GlacialBoltAmmoPlayer
+#startSets
+#set GlacialBoltAmmoPlayer
 #flags
 #mods
+#skillEnd
 
 #skill GlacialBoltPlayer
-#flags attack projectile area duration
+#startSets
+#set GlacialBoltPlayer
+#flags attack projectile area
 #mods
+#set GlacialBoltWallPlayer
+#flags attack area duration
+#mods
+#skillEnd
 
 #skill HailstormRoundsAmmoPlayer
+#startSets
+#set HailstormRoundsAmmoPlayer
 #flags
 #mods
+#skillEnd
 
 #skill HailstormRoundsPlayer
+#startSets
+#set HailstormRoundsPlayer
 #flags attack projectile area
 #mods
+#skillEnd
 
 #skill HighVelocityRoundsAmmoPlayer
+#startSets
+#set HighVelocityRoundsAmmoPlayer
 #flags
 #mods
+#skillEnd
 
 #skill HighVelocityRoundsPlayer
-#flags attack projectile
+#startSets
+#set HighVelocityRoundsPlayer
+#flags attack projectile area
 #mods
+#set HighVelocityRoundsArmourBrokenPlayer
+#flags attack projectile area
+#mods
+#skillEnd
 
 #skill IceShardsAmmoPlayer
+#startSets
+#set IceShardsAmmoPlayer
 #flags
 #mods
+#skillEnd
 
 #skill IceShardsPlayer
+#startSets
+#set IceShardsPlayer
 #flags attack projectile area
 #mods
+#set IceShardsShardPlayer
+#flags attack projectile area
+#mods
+#skillEnd
 
 #skill IncendiaryShotAmmoPlayer
+#startSets
+#set IncendiaryShotAmmoPlayer
 #flags
 #mods
+#skillEnd
 
 #skill IncendiaryShotPlayer
+#startSets
+#set IncendiaryShotPlayer
 #flags attack projectile area
 #mods
+#skillEnd
 
 #skill PermafrostBoltsAmmoPlayer
+#startSets
+#set PermafrostBoltsAmmoPlayer
 #flags
 #mods
+#skillEnd
 
 #skill PermafrostBoltsPlayer
+#startSets
+#set PermafrostBoltsPlayer
 #flags attack projectile area
 #mods
+#skillEnd
 
 #skill PlasmaBlastAmmoPlayer
+#startSets
+#set PlasmaBlastAmmoPlayer
 #flags
 #mods
+#skillEnd
 
 #skill PlasmaBlastPlayer
+#startSets
+#set PlasmaBlastPlayer
 #flags attack projectile area
 #mods
+#set PlasmaBlastExplosionPlayer
+#flags attack projectile area
+#mods
+#skillEnd
 
 #skill RapidShotAmmoPlayer
+#startSets
+#set RapidShotAmmoPlayer
 #flags
 #mods
+#skillEnd
 
 #skill RapidShotPlayer
+#startSets
+#set RapidShotPlayer
 #flags attack projectile
 #mods
+#skillEnd
 
 #skill ShockburstRoundsAmmoPlayer
+#startSets
+#set ShockburstRoundsAmmoPlayer
 #flags
 #mods
+#skillEnd
 
 #skill ShockburstRoundsPlayer
+#startSets
+#set ShockburstRoundsPlayer
 #flags attack projectile area
 #mods
+#set ShockburstRoundsExplosionPlayer
+#flags attack projectile area
+#mods
+#skillEnd
 
 #skill SiegeCascadeAmmoPlayer
+#startSets
+#set SiegeCascadeAmmoPlayer
 #flags
 #mods
+#skillEnd
 
 #skill SiegeCascadePlayer
+#startSets
+#set SiegeCascadePlayer
 #flags attack projectile area
 #mods
+#set SiegeCascadeExplodePlayer
+#flags attack projectile area
+#mods
+#skillEnd
 
 #skill StormblastBoltsAmmoPlayer
+#startSets
+#set StormblastBoltsAmmoPlayer
 #flags
 #mods
+#skillEnd
 
 #skill StormblastBoltsPlayer
+#startSets
+#set StormblastBoltsPlayer
 #flags attack projectile
 #mods
+#set StormblastBoltsExplosionPlayer
+#flags attack projectile area
+#mods
+#skillEnd
 
 #skill MagmaBarrierPlayer
+#startSets
+#set MagmaBarrierPlayer
 #flags
 #mods
+#skillEnd
 
 #skill MagmaSprayPlayer
+#startSets
+#set MagmaSprayPlayer
 #flags
 #mods
+#skillEnd
 
 #skill MoltenBlastPlayer
+#startSets
+#set MoltenBlastPlayer
 #flags
 #mods
+#set MoltenBlastSecondaryPlayer
+#flags
+#mods
+#skillEnd
 
 #skill OilGrenadePlayer
+#startSets
+#set OilGrenadePlayer
 #flags attack area projectile duration
 #mods
+#skillEnd
 
 #skill OverwhelmingPresencePlayer
+#startSets
+#set OverwhelmingPresencePlayer
 #flags
 #mods
+#skillEnd
 
 #skill PerfectStrikePlayer
+#startSets
+#set PerfectStrikePlayer
 #flags
 #mods
+#set PerfectStrikeShockwavePlayer
+#flags
+#mods
+#skillEnd
 
 #skill ResonatingShieldPlayer
+#startSets
+#set ResonatingShieldPlayer
 #flags
 #mods
+#skillEnd
 
 #skill RipwireBallistaPlayer
+#startSets
+#set RipwireBallistaPlayer
 #flags
 #mods
+#skillEnd
 
 #skill RipwireBallistaProjectilePlayer
+#startSets
+#set RipwireBallistaProjectilePlayer
 #flags attack projectile duration totem
 #mods
+#skillEnd
 
 #skill RollingSlamPlayer
+#startSets
+#set RollingSlamPlayer
 #flags
 #mods
+#set RollingSlamFirstSlamPlayer
+#flags
+#mods
+#set RollingSlamSecondSlamPlayer
+#flags
+#mods
+#skillEnd
 
 #skill ScavengedPlatingPlayer
+#startSets
+#set ScavengedPlatingPlayer
 #flags
 #mods
+#skillEnd
 
 #skill SeismicCryPlayer
+#startSets
+#set SeismicCryPlayer
 #flags
 #mods
+#skillEnd
 
 #skill ShardScavengerPlayer
+#startSets
+#set ShardScavengerPlayer
 #flags
 #mods
+#skillEnd
 
 #skill ShieldChargePlayer
+#startSets
+#set ShieldChargePlayer
 #flags
 #mods
+#set ShieldChargeFinalConePlayer
+#flags
+#mods
+#skillEnd
 
 #skill ShieldWallPlayer
+#startSets
+#set ShieldWallPlayer
 #flags
 #mods
+#skillEnd
 
 #skill ShockwaveTotemPlayer
+#startSets
+#set ShockwaveTotemPlayer
 #flags
 #mods
+#skillEnd
 
 #skill ShockwaveTotemQuakePlayer
+#startSets
+#set ShockwaveTotemQuakePlayer
 #flags
 #mods
+#set ShockwaveTotemJaggedQuakePlayer
+#flags
+#mods
+#skillEnd
 
 #skill StampedePlayer
+#startSets
+#set StampedePlayer
 #flags
 #mods
+#set StampedeSlamPlayer
+#flags
+#mods
+#set StampedeEruptionPlayer
+#flags
+#mods
+#skillEnd
 
 #skill SunderPlayer
+#startSets
+#set SunderPlayer
 #flags
 #mods
+#set SunderShockwavePlayer
+#flags
+#mods
+#skillEnd
 
 #skill SuperchargedSlamPlayer
+#startSets
+#set SuperchargedSlamPlayer
 #flags
 #mods
+#set SuperchargedSlamAftershockPlayer
+#flags
+#mods
+#skillEnd
 
 #skill TimeOfNeedPlayer
+#startSets
+#set TimeOfNeedPlayer
 #flags
 #mods
+#skillEnd
 
 #skill VolcanicFissurePlayer
+#startSets
+#set VolcanicFissurePlayer
 #flags
 #mods
+#skillEnd
 
 #skill ShockGrenadePlayer
+#startSets
+#set ShockGrenadePlayer
 #flags attack area projectile duration
 #mods
+#skillEnd
 
 #skill WarBannerReservationPlayer
-#flags
-#mods
+#startSets
+#skillEnd
 
 #skill WarBannerPlayer
+#startSets
+#set WarBannerPlayer
 #flags
 #mods
+#skillEnd

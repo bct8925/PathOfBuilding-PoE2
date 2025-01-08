@@ -7,90 +7,188 @@ local skills, mod, flag, skill = ...
 
 
 #skill AlchemistsBoonPlayer
+#startSets
+#set AlchemistsBoonPlayer
 #flags
 #mods
+#skillEnd
 
 #skill BarragePlayer
+#startSets
+#set BarragePlayer
 #flags
 #mods
+#skillEnd
 
 #skill CombatFrenzyPlayer
+#startSets
+#set CombatFrenzyPlayer
 #flags
 #mods
+#skillEnd
 
 #skill DetonatingArrowPlayer
-#flags
+#startSets
+#set DetonatingArrowPlayer
+#flags attack projectile
 #mods
+#set DetonatingArrowExplosionPlayer
+#flags area
+#mods
+#skillEnd
 
 #skill ElectrocutingArrowPlayer
+#startSets
+#set ElectrocutingArrowPlayer
 #flags
 #mods
+#skillEnd
 
 #skill EscapeShotPlayer
+#startSets
+#set EscapeShotPlayer
 #flags attack projectile area
 #mods
+#skillEnd
 
 #skill FreezingSalvoPlayer
+#startSets
+#set FreezingSalvoPlayer
 #flags
 #mods
+#skillEnd
 
 #skill GasArrowPlayer
+#startSets
+#set GasArrowPlayer
 #flags
 #mods
+#set GasArrowGasDegenPlayer
+#flags
+#mods
+#set GasArrowGasExplosionPlayer
+#flags
+#mods
+#skillEnd
 
 #skill HeraldOfPlaguePlayer
+#startSets
+#set HeraldOfPlaguePlayer
 #flags
 #mods
+#skillEnd
 
 #skill HeraldOfThunderPlayer
+#startSets
+#set HeraldOfThunderPlayer
 #flags
 #mods
+#set HeraldOfThunderOnKillPlayer
+#flags
+#mods
+#skillEnd
 
 #skill IceShotPlayer
+#startSets
+#set IceShotPlayer
 #flags
 #mods
+#set IceShotShardPlayer
+#flags
+#mods
+#skillEnd
 
 #skill LightningArrowPlayer
+#startSets
+#set LightningArrowPlayer
 #flags
 #mods
+#set LightningArrowArcPlayer
+#flags
+#mods
+#skillEnd
 
 #skill LightningRodPlayer
+#startSets
+#set LightningRodPlayer
 #flags
 #mods
+#skillEnd
 
 #skill MagneticSalvoPlayer
+#startSets
+#set MagneticSalvoPlayer
 #flags
 #mods
+#set MagneticSalvoEmpoweredPlayer
+#flags
+#mods
+#skillEnd
 
 #skill PlagueBearerPlayer
+#startSets
+#set PlagueBearerPlayer
 #flags
 #mods
+#skillEnd
 
 #skill PlagueBearerNovaPlayer
+#startSets
+#set PlagueBearerNovaPlayer
 #flags
 #mods
+#skillEnd
 
 #skill PoisonBurstArrowPlayer
+#startSets
+#set PoisonBurstArrowPlayer
 #flags
 #mods
+#set PoisonBurstArrowCloudPlayer
+#flags
+#mods
+#skillEnd
 
 #skill RainOfArrowsPlayer
+#startSets
+#set RainOfArrowsPlayer
 #flags attack projectile area
 #mods
+#skillEnd
 
 #skill ShockchainArrowPlayer
+#startSets
+#set ShockchainArrowPlayer
 #flags
 #mods
+#set ShockchainArrowBeamPlayer
+#flags
+#mods
+#set ShockchainArrowExplosionPlayer
+#flags
+#mods
+#skillEnd
 
 #skill SnipePlayer
+#startSets
+#set SnipePlayer
+#flags attack projectile
+#mods
+#set SnipeExplosionPlayer
 #flags attack projectile area
 #mods
+#skillEnd
 
 #skill SnipersMarkPlayer
+#startSets
+#set SnipersMarkPlayer
 #flags
 #mods
+#skillEnd
 
 #skill SpiralVolleyPlayer
+#startSets
+#set SpiralVolleyPlayer
 #flags attack projectile
 	statMap = {
 		["spiral_volley_damage_+%_final_when_frenzy_charges_consumed"] = {
@@ -104,35 +202,69 @@ local skills, mod, flag, skill = ...
 		},
 	},
 #mods
+#skillEnd
 
 #skill StormcallerArrowPlayer
+#startSets
+#set StormcallerArrowPlayer
 #flags
 #mods
+#set StormcallerArrowBoltPlayer
+#flags
+#mods
+#skillEnd
 
 #skill TornadoShotPlayer
+#startSets
+#set TornadoShotPlayer
 #flags
 #mods
+#set TornadoShotNovaPlayer
+#flags
+#mods
+#skillEnd
 
 #skill ToxicGrowthPlayer
+#startSets
+#set ToxicGrowthPlayer
 #flags attack projectile area duration
 #mods
+#skillEnd
 
 #skill VineArrowPlayer
+#startSets
+#set VineArrowPlayer
 #flags
 #mods
+#set VineArrowFlowerPlayer
+#flags
+#mods
+#skillEnd
 
 #skill VoltaicMarkPlayer
+#startSets
+#set VoltaicMarkPlayer
 #flags
 #mods
+#skillEnd
 
 #skill TriggeredVoltaicMarkNovaPlayer
+#startSets
+#set TriggeredVoltaicMarkNovaPlayer
 #flags
 #mods
+#skillEnd
 
 #skill WindDancerPlayer
+#startSets
+#set WindDancerPlayer
 #flags
 #mods
+#skillEnd
 
 #skill TriggeredWindDancerPlayer
+#startSets
+#set TriggeredWindDancerPlayer
 #flags
 #mods
+#skillEnd

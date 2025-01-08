@@ -48,42 +48,49 @@ local function mergeLevelMod(modList, mod, value)
 	end
 end
 
--- Merge skill modifiers with given mod list
-function calcs.mergeSkillInstanceMods(env, modList, skillEffect, extraStats)
+-- Merge skill effect modifiers with given mod list
+-- If a stat set is provided, only merge modifiers from that statset
+function calcs.mergeSkillInstanceMods(env, modList, skillEffect, statSet, extraStats)
 	calcLib.validateGemLevel(skillEffect)
-	local grantedEffect = skillEffect.grantedEffect	
-	local stats = calcLib.buildSkillInstanceStats(skillEffect, grantedEffect)
-	if extraStats and extraStats[1] then
-		for _, stat in pairs(extraStats) do
-			stats[stat.key] = (stats[stat.key] or 0) + stat.value
-		end
+	-- Verify that statSet provided is from skillEffect
+	if statSet and not isValueInArray(skillEffect.grantedEffect.statSets, statSet) then
+		return
 	end
-	for stat, statValue in pairs(stats) do
-		local map = grantedEffect.statMap[stat]
-		if map then
-			-- Some mods need different scalars for different stats, but the same value.  Putting them in a group allows this
-			for _, modOrGroup in ipairs(map) do
-				-- Found a mod, since all mods have names
-				if modOrGroup.name then
-					mergeLevelMod(modList, modOrGroup, map.value or statValue * (map.mult or 1) / (map.div or 1) + (map.base or 0))
-				else
-					for _, mod in ipairs(modOrGroup) do
-						mergeLevelMod(modList, mod, modOrGroup.value or statValue * (modOrGroup.mult or 1) / (modOrGroup.div or 1) + (modOrGroup.base or 0))
+	local grantedEffect = skillEffect.grantedEffect	
+	for _, statSet in ipairs(statSet and {statSet} or grantedEffect.statSets) do 
+		local stats = calcLib.buildSkillInstanceStats(skillEffect, grantedEffect, statSet)
+		if extraStats and extraStats[1] then
+			for _, stat in pairs(extraStats) do
+				stats[stat.key] = (stats[stat.key] or 0) + stat.value
+			end
+		end
+		for stat, statValue in pairs(stats) do
+			local map = statSet.statMap[stat]
+			if map then
+				-- Some mods need different scalars for different stats, but the same value.  Putting them in a group allows this
+				for _, modOrGroup in ipairs(map) do
+					-- Found a mod, since all mods have names
+					if modOrGroup.name then
+						mergeLevelMod(modList, modOrGroup, map.value or statValue * (map.mult or 1) / (map.div or 1) + (map.base or 0))
+					else
+						for _, mod in ipairs(modOrGroup) do
+							mergeLevelMod(modList, mod, modOrGroup.value or statValue * (modOrGroup.mult or 1) / (modOrGroup.div or 1) + (modOrGroup.base or 0))
+						end
 					end
 				end
 			end
 		end
+		modList:AddList(statSet.baseMods)
 	end
-	modList:AddList(grantedEffect.baseMods)
 end
 
 -- Create an active skill using the given active gem and list of support gems
 -- It will determine the base flag set, and check which of the support gems can support this skill
-function calcs.createActiveSkill(activeEffect, supportList, actor, socketGroup, summonSkill)
+function calcs.createActiveSkill(activeEffect, supportList, env, socketGroup, summonSkill)
 	local activeSkill = {
 		activeEffect = activeEffect,
 		supportList = supportList,
-		actor = actor,
+		actor = env.player,
 		summonSkill = summonSkill,
 		socketGroup = socketGroup,
 		skillData = { },
@@ -99,8 +106,22 @@ function calcs.createActiveSkill(activeEffect, supportList, actor, socketGroup, 
 	end
 
 	-- Initialise skill flag set ('attack', 'projectile', etc)
-	local skillFlags = copyTable(activeGrantedEffect.baseFlags)
-	activeSkill.skillFlags = skillFlags
+	local skillFlags
+	if env.mode == "CALCS" then 
+		if activeEffect.srcInstance.statSetCalcs.statSet then
+			skillFlags = copyTable(activeEffect.srcInstance.statSetCalcs.statSet.baseFlags)
+		else
+			skillFlags = copyTable(activeEffect.grantedEffect.statSets[1].baseFlags)
+		end
+		activeEffect.srcInstance.statSetCalcs.skillFlags = skillFlags
+	else 
+		if activeEffect.srcInstance.statSetMain.statSet then
+			skillFlags = copyTable(activeEffect.srcInstance.statSetMain.statSet.baseFlags)
+		else
+			skillFlags = copyTable(activeEffect.grantedEffect.statSets[1].baseFlags)
+		end
+		activeEffect.srcInstance.statSetMain.skillFlags = skillFlags
+	end
 	skillFlags.hit = skillFlags.hit or activeSkill.skillTypes[SkillType.Attack] or activeSkill.skillTypes[SkillType.Damage] or activeSkill.skillTypes[SkillType.Projectile]
 
 	-- Process support skills
@@ -145,7 +166,8 @@ function calcs.createActiveSkill(activeEffect, supportList, actor, socketGroup, 
 			if supportEffect.grantedEffect.addFlags and not summonSkill then
 				-- Support skill adds flags to supported skills (eg. Remote Mine adds 'mine')
 				for k in pairs(supportEffect.grantedEffect.addFlags) do
-					skillFlags[k] = true
+					mainSkillFlags[k] = true
+					calcsSkillFlags[k] = true
 				end
 			end
 		end
@@ -160,11 +182,10 @@ function calcs.copyActiveSkill(env, mode, skill)
 		grantedEffect = skill.activeEffect.grantedEffect,
 		level = skill.activeEffect.srcInstance.level,
 		quality = skill.activeEffect.srcInstance.quality,
-		qualityId = skill.activeEffect.srcInstance.qualityId,
 		srcInstance = skill.activeEffect.srcInstance,
 		gemData = skill.activeEffect.srcInstance.gemData,
 	}
-	local newSkill = calcs.createActiveSkill(activeEffect, skill.supportList, skill.actor, skill.socketGroup, skill.summonSkill)
+	local newSkill = calcs.createActiveSkill(activeEffect, skill.supportList, env, skill.socketGroup, skill.summonSkill)
 	local newEnv, _, _, _ = calcs.initEnv(env.build, mode, env.override)
 	calcs.buildActiveSkillModList(newEnv, newSkill)
 	newSkill.skillModList = new("ModList", newSkill.baseSkillModList)
@@ -215,9 +236,16 @@ end
 -- Build list of modifiers for given active skill
 function calcs.buildActiveSkillModList(env, activeSkill)
 	local skillTypes = activeSkill.skillTypes
-	local skillFlags = activeSkill.skillFlags
 	local activeEffect = activeSkill.activeEffect
 	local activeGrantedEffect = activeEffect.grantedEffect
+	local activeStatSet, skillFlags
+	if env.mode == "CALCS" then
+		activeStatSet = activeEffect.srcInstance.statSetCalcs.statSet
+		skillFlags = activeEffect.srcInstance.statSetCalcs.skillFlags
+	else
+		activeStatSet = activeEffect.srcInstance.statSetMain.statSet
+		skillFlags = activeEffect.srcInstance.statSetMain.skillFlags
+	end
 	local effectiveRange = 0
 
 	-- Set mode flags
@@ -518,32 +546,34 @@ function calcs.buildActiveSkillModList(env, activeSkill)
 
 	-- Add active gem modifiers
 	activeEffect.actorLevel = activeSkill.actor.minionData and activeSkill.actor.level
-	calcs.mergeSkillInstanceMods(env, skillModList, activeEffect, skillModList:List(activeSkill.skillCfg, "ExtraSkillStat"))
+	calcs.mergeSkillInstanceMods(env, skillModList, activeEffect, activeStatSet, skillModList:List(activeSkill.skillCfg, "ExtraSkillStat"))
 	activeEffect.grantedEffectLevel = activeGrantedEffect.levels[activeEffect.level]
 
 	-- Add extra modifiers from granted effect level
-	local level = activeEffect.grantedEffectLevel
-	activeSkill.skillData.CritChance = level.critChance
-	if level.damageMultiplier then
-		skillModList:NewMod("Damage", "MORE", level.damageMultiplier, activeEffect.grantedEffect.modSource, ModFlag.Attack)
+	local effectLevel = activeEffect.grantedEffectLevel
+	local setLevel = activeStatSet.levels[activeEffect.level] 
+	-- THIS PROBABLY NEEDS TO BE FIXED TO INHERIT CRIT CHANCE SOMEHOW
+	activeSkill.skillData.CritChance = setLevel and setLevel.critChance or 0 
+	if effectLevel.damageMultiplier then
+		skillModList:NewMod("Damage", "MORE", effectLevel.damageMultiplier, activeEffect.grantedEffect.modSource, ModFlag.Attack)
 	end
-	if level.attackTime then
-		activeSkill.skillData.attackTime = level.attackTime
+	if effectLevel.attackTime then
+		activeSkill.skillData.attackTime = effectLevel.attackTime
 	end
-	if level.attackSpeedMultiplier then
-		skillModList:NewMod("Speed", "MORE", level.attackSpeedMultiplier, activeEffect.grantedEffect.modSource, ModFlag.Attack)
+	if effectLevel.attackSpeedMultiplier then
+		skillModList:NewMod("Speed", "MORE", effectLevel.attackSpeedMultiplier, activeEffect.grantedEffect.modSource, ModFlag.Attack)
 	end
-	if level.cooldown then
-		activeSkill.skillData.cooldown = level.cooldown
+	if effectLevel.cooldown then
+		activeSkill.skillData.cooldown = effectLevel.cooldown
 	end
-	if level.storedUses then
-		activeSkill.skillData.storedUses = level.storedUses
+	if effectLevel.storedUses then
+		activeSkill.skillData.storedUses = effectLevel.storedUses
 	end
-	if level.soulPreventionDuration then
-		activeSkill.skillData.soulPreventionDuration = level.soulPreventionDuration
+	if effectLevel.soulPreventionDuration then
+		activeSkill.skillData.soulPreventionDuration = effectLevel.soulPreventionDuration
 	end
-	if level.PvPDamageMultiplier then
-		skillModList:NewMod("PvpDamageMultiplier", "MORE", level.PvPDamageMultiplier, activeEffect.grantedEffect.modSource)
+	if effectLevel.PvPDamageMultiplier then
+		skillModList:NewMod("PvpDamageMultiplier", "MORE", effectLevel.PvPDamageMultiplier, activeEffect.grantedEffect.modSource)
 	end
 	
 	-- Add extra modifiers from other sources
