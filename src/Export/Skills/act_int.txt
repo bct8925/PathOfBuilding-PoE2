@@ -541,7 +541,7 @@ local skills, mod, flag, skill = ...
 #mods
 
 #skill StormWavePlayer
-#flags
+#flags attack melee area
 #mods
 
 #skill TempestBellPlayer

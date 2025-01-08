@@ -1596,10 +1596,16 @@ skills["MeleeQuarterstaffPlayer"] = {
 	incrementalEffectiveness = 0.054999999701977,
 	description = "Strike with your Quarterstaff.",
 	skillTypes = { [SkillType.Attack] = true, [SkillType.MeleeSingleTarget] = true, [SkillType.Multistrikeable] = true, [SkillType.Melee] = true, [SkillType.Area] = true, [SkillType.QuarterstaffSkill] = true, },
+	weaponTypes = {
+		["Staff"] = true,
+	},
 	statDescriptionScope = "skill_stat_descriptions",
 	castTime = 1,
 	fromItem = true,
 	baseFlags = {
+		attack = true,
+		melee = true,
+		area = true,
 	},
 	constantStats = {
 		{ "melee_conditional_step_distance", 10 },

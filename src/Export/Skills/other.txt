@@ -96,7 +96,7 @@ local skills, mod, flag, skill = ...
 #mods
 
 #skill MeleeQuarterstaffPlayer
-#flags
+#flags attack melee area
 	fromItem = true,
 #mods
 
