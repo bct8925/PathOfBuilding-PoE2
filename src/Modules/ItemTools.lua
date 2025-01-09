@@ -11,17 +11,28 @@ local m_floor = math.floor
 
 itemLib = { }
 -- Apply a value scalar to the first n of any numbers present
-function itemLib.applyValueScalar(line, valueScalar, numbers, precision)
-	if valueScalar and type(valueScalar) == "number" and valueScalar ~= 1 then
+function itemLib.applyValueScalar(line, valueScalar, baseValueScalar, numbers, precision)
+	if not (valueScalar and type(valueScalar) == "number") then
+		valueScalar = 1
+	end
+	if valueScalar ~= 1 or (baseValueScalar and baseValueScalar ~= 1) then
 		if precision then
 			return line:gsub("(%d+%.?%d*)", function(num)
 				local power = 10 ^ precision
-				local numVal = m_floor(tonumber(num) * valueScalar * power) / power
+				local numVal = tonumber(num)
+				if baseValueScalar then
+					numVal = round(numVal * baseValueScalar * power) / power
+				end
+				numVal = m_floor(numVal * valueScalar * power) / power
 				return tostring(numVal)
 			end, numbers)
 		else
 			return line:gsub("(%d+)([^%.])", function(num, suffix)
-				local numVal = m_floor(num * valueScalar + 0.001)
+				local numVal = tonumber(num)
+				if baseValueScalar then
+					numVal = round(num * baseValueScalar)
+				end
+				numVal = m_floor(numVal * valueScalar + 0.001)
 				return tostring(numVal)..suffix
 			end, numbers)
 		end
@@ -42,7 +53,7 @@ local function antonymFunc(num, word)
 end
 
 -- Apply range value (0 to 1) to a modifier that has a range: "(x-x)" or "(x-x) to (x-x)"
-function itemLib.applyRange(line, range, valueScalar)
+function itemLib.applyRange(line, range, valueScalar, baseValueScalar)
 	local precisionSame = true
 	-- Create a line with ranges removed to check if the mod is a high precision mod.
 	local testLine = not line:find("-", 1, true) and line or
@@ -58,7 +69,7 @@ function itemLib.applyRange(line, range, valueScalar)
 		end)
 		:gsub("%-(%d+%%) (%a+)", antonymFunc)
 
-	if precisionSame and (not valueScalar or valueScalar == 1) then
+	if precisionSame and (not valueScalar or valueScalar == 1) and (not baseValueScalar or baseValueScalar == 1)then
 		return testLine
 	end
 
@@ -93,11 +104,11 @@ function itemLib.applyRange(line, range, valueScalar)
 		numbers = 1
 	end
 
-	return itemLib.applyValueScalar(line, valueScalar, numbers, precision)
+	return itemLib.applyValueScalar(line, valueScalar, baseValueScalar, numbers, precision)
 end
 
 function itemLib.formatModLine(modLine, dbMode)
-	local line = (not dbMode and modLine.range and itemLib.applyRange(modLine.line, modLine.range, modLine.valueScalar)) or modLine.line
+	local line = (not dbMode and modLine.range and itemLib.applyRange(modLine.line, modLine.range, modLine.valueScalar, modLine.corruptedRange)) or modLine.line
 	if line:match("^%+?0%%? ") or (line:match(" %+?0%%? ") and not line:match("0 to [1-9]")) or line:match(" 0%-0 ") or line:match(" 0 to 0 ") then -- Hack to hide 0-value modifiers
 		return
 	end

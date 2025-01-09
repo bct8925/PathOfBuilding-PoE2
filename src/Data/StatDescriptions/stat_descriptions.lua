@@ -888,6 +888,10 @@ return {
 				text="Can have a second Instilled Modifier"
 			},
 			[2]={
+				[1]={
+					k="canonical_line",
+					v=true
+				},
 				limit={
 					[1]={
 						[1]=2,
@@ -1887,6 +1891,10 @@ return {
 				text="Has 1 Abyssal Socket"
 			},
 			[2]={
+				[1]={
+					k="canonical_line",
+					v=true
+				},
 				limit={
 					[1]={
 						[1]=2,
@@ -2058,6 +2066,10 @@ return {
 				text="Has 1 White Socket"
 			},
 			[2]={
+				[1]={
+					k="canonical_line",
+					v=true
+				},
 				limit={
 					[1]={
 						[1]=2,
@@ -2270,6 +2282,10 @@ return {
 				text="Area contains an additional Strongbox"
 			},
 			[2]={
+				[1]={
+					k="canonical_line",
+					v=true
+				},
 				limit={
 					[1]={
 						[1]=2,
@@ -2558,12 +2574,12 @@ return {
 			},
 			[4]={
 				[1]={
-					k="canonical_line",
-					v="canonical"
+					k="canonical_stat",
+					v=1
 				},
 				[2]={
-					k="_stat",
-					v=1
+					k="canonical_line",
+					v=true
 				},
 				limit={
 					[1]={
@@ -7626,6 +7642,10 @@ return {
 					k="divide_by_one_hundred",
 					v=1
 				},
+				[2]={
+					k="canonical_line",
+					v=true
+				},
 				limit={
 					[1]={
 						[1]="#",
@@ -8156,6 +8176,10 @@ return {
 				[1]={
 					k="negate",
 					v=1
+				},
+				[2]={
+					k="canonical_line",
+					v=true
 				},
 				limit={
 					[1]={
@@ -10497,12 +10521,12 @@ return {
 			},
 			[2]={
 				[1]={
-					k="canonical_line",
-					v="canonical"
+					k="canonical_stat",
+					v=2
 				},
 				[2]={
-					k="_stat",
-					v=2
+					k="canonical_line",
+					v=true
 				},
 				limit={
 					[1]={
@@ -14436,6 +14460,10 @@ return {
 					k="negate",
 					v=1
 				},
+				[2]={
+					k="canonical_line",
+					v=true
+				},
 				limit={
 					[1]={
 						[1]="#",
@@ -14601,6 +14629,10 @@ return {
 					k="negate",
 					v=1
 				},
+				[2]={
+					k="canonical_line",
+					v=true
+				},
 				limit={
 					[1]={
 						[1]="#",
@@ -14629,6 +14661,10 @@ return {
 				[1]={
 					k="negate",
 					v=1
+				},
+				[2]={
+					k="canonical_line",
+					v=true
 				},
 				limit={
 					[1]={
@@ -15276,6 +15312,10 @@ return {
 					k="negate",
 					v=1
 				},
+				[2]={
+					k="canonical_line",
+					v=true
+				},
 				limit={
 					[1]={
 						[1]="#",
@@ -15304,6 +15344,10 @@ return {
 				[1]={
 					k="negate",
 					v=1
+				},
+				[2]={
+					k="canonical_line",
+					v=true
 				},
 				limit={
 					[1]={
@@ -15536,6 +15580,10 @@ return {
 				[1]={
 					k="negate",
 					v=1
+				},
+				[2]={
+					k="canonical_line",
+					v=true
 				},
 				limit={
 					[1]={
@@ -16036,6 +16084,10 @@ return {
 				text="No Physical Damage"
 			},
 			[4]={
+				[1]={
+					k="canonical_line",
+					v=true
+				},
 				limit={
 					[1]={
 						[1]=1,
@@ -18704,6 +18756,10 @@ return {
 				text="Bow Attacks fire an additional Arrow"
 			},
 			[2]={
+				[1]={
+					k="canonical_line",
+					v=true
+				},
 				limit={
 					[1]={
 						[1]=2,
@@ -19429,6 +19485,10 @@ return {
 					k="negate",
 					v=1
 				},
+				[2]={
+					k="canonical_line",
+					v=true
+				},
 				limit={
 					[1]={
 						[1]="#",
@@ -19671,12 +19731,12 @@ return {
 			},
 			[3]={
 				[1]={
-					k="canonical_line",
-					v="canonical"
+					k="canonical_stat",
+					v=1
 				},
 				[2]={
-					k="_stat",
-					v=1
+					k="canonical_line",
+					v=true
 				},
 				limit={
 					[1]={
@@ -20091,6 +20151,10 @@ return {
 	[1019]={
 		[1]={
 			[1]={
+				[1]={
+					k="canonical_line",
+					v=true
+				},
 				limit={
 					[1]={
 						[1]=1,
@@ -21642,6 +21706,10 @@ return {
 				text="Chance to Block Spell Damage is Lucky"
 			},
 			[2]={
+				[1]={
+					k="canonical_line",
+					v=true
+				},
 				limit={
 					[1]={
 						[1]="#",
@@ -21722,6 +21790,10 @@ return {
 	[1092]={
 		[1]={
 			[1]={
+				[1]={
+					k="canonical_line",
+					v=true
+				},
 				limit={
 					[1]={
 						[1]=1,
@@ -22372,6 +22444,10 @@ return {
 					k="negate",
 					v=1
 				},
+				[2]={
+					k="canonical_line",
+					v=true
+				},
 				limit={
 					[1]={
 						[1]="#",
@@ -22458,6 +22534,10 @@ return {
 				[1]={
 					k="negate",
 					v=1
+				},
+				[2]={
+					k="canonical_line",
+					v=true
 				},
 				limit={
 					[1]={
@@ -30570,6 +30650,10 @@ return {
 					k="negate",
 					v=1
 				},
+				[2]={
+					k="canonical_line",
+					v=true
+				},
 				limit={
 					[1]={
 						[1]="#",
@@ -30598,6 +30682,10 @@ return {
 				[1]={
 					k="negate",
 					v=1
+				},
+				[2]={
+					k="canonical_line",
+					v=true
 				},
 				limit={
 					[1]={
@@ -31941,6 +32029,10 @@ return {
 				text="Projectiles Pierce an additional Target"
 			},
 			[2]={
+				[1]={
+					k="canonical_line",
+					v=true
+				},
 				limit={
 					[1]={
 						[1]=2,
@@ -33850,6 +33942,10 @@ return {
 					k="negate",
 					v=1
 				},
+				[2]={
+					k="canonical_line",
+					v=true
+				},
 				limit={
 					[1]={
 						[1]="#",
@@ -35128,6 +35224,10 @@ return {
 				[1]={
 					k="negate",
 					v=1
+				},
+				[2]={
+					k="canonical_line",
+					v=true
 				},
 				limit={
 					[1]={
@@ -36993,6 +37093,10 @@ return {
 					k="negate",
 					v=1
 				},
+				[2]={
+					k="canonical_line",
+					v=true
+				},
 				limit={
 					[1]={
 						[1]="#",
@@ -37079,6 +37183,10 @@ return {
 				[1]={
 					k="negate",
 					v=1
+				},
+				[2]={
+					k="canonical_line",
+					v=true
 				},
 				limit={
 					[1]={
@@ -37344,12 +37452,12 @@ return {
 			},
 			[3]={
 				[1]={
-					k="canonical_line",
-					v="canonical"
+					k="canonical_stat",
+					v=1
 				},
 				[2]={
-					k="_stat",
-					v=1
+					k="canonical_line",
+					v=true
 				},
 				limit={
 					[1]={
@@ -39727,6 +39835,10 @@ return {
 				text="You can apply an additional Curse"
 			},
 			[3]={
+				[1]={
+					k="canonical_line",
+					v=true
+				},
 				limit={
 					[1]={
 						[1]=2,
@@ -39761,6 +39873,10 @@ return {
 				text="You can apply an additional Mark"
 			},
 			[3]={
+				[1]={
+					k="canonical_line",
+					v=true
+				},
 				limit={
 					[1]={
 						[1]=2,
@@ -39814,6 +39930,10 @@ return {
 				[1]={
 					k="negate",
 					v=1
+				},
+				[2]={
+					k="canonical_line",
+					v=true
 				},
 				limit={
 					[1]={
@@ -40017,6 +40137,10 @@ return {
 					k="negate",
 					v=1
 				},
+				[2]={
+					k="canonical_line",
+					v=true
+				},
 				limit={
 					[1]={
 						[1]="#",
@@ -40045,6 +40169,10 @@ return {
 				[1]={
 					k="negate",
 					v=1
+				},
+				[2]={
+					k="canonical_line",
+					v=true
 				},
 				limit={
 					[1]={
@@ -40865,6 +40993,10 @@ return {
 					k="negate_and_double",
 					v=1
 				},
+				[2]={
+					k="canonical_line",
+					v=true
+				},
 				limit={
 					[1]={
 						[1]="#",
@@ -40897,6 +41029,10 @@ return {
 				[1]={
 					k="negate_and_double",
 					v=1
+				},
+				[2]={
+					k="canonical_line",
+					v=true
 				},
 				limit={
 					[1]={
@@ -41020,6 +41156,10 @@ return {
 					k="negate",
 					v=1
 				},
+				[2]={
+					k="canonical_line",
+					v=true
+				},
 				limit={
 					[1]={
 						[1]="#",
@@ -41136,6 +41276,10 @@ return {
 					k="negate",
 					v=1
 				},
+				[2]={
+					k="canonical_line",
+					v=true
+				},
 				limit={
 					[1]={
 						[1]="#",
@@ -41193,6 +41337,10 @@ return {
 				[1]={
 					k="negate",
 					v=1
+				},
+				[2]={
+					k="canonical_line",
+					v=true
 				},
 				limit={
 					[1]={
@@ -44022,6 +44170,10 @@ return {
 	[2077]={
 		[1]={
 			[1]={
+				[1]={
+					k="canonical_line",
+					v=true
+				},
 				limit={
 					[1]={
 						[1]="#",
@@ -44047,6 +44199,10 @@ return {
 				text="{0:+d}% Monster Life Leech Resistance"
 			},
 			[2]={
+				[1]={
+					k="canonical_line",
+					v=true
+				},
 				limit={
 					[1]={
 						[1]=100,
@@ -44788,6 +44944,10 @@ return {
 				[1]={
 					k="negate",
 					v=1
+				},
+				[2]={
+					k="canonical_line",
+					v=true
 				},
 				limit={
 					[1]={
@@ -46138,6 +46298,10 @@ return {
 				text="Attacks cause Bleeding"
 			},
 			[4]={
+				[1]={
+					k="canonical_line",
+					v=true
+				},
 				limit={
 					[1]={
 						[1]="#",
@@ -47499,6 +47663,10 @@ return {
 				text="Damage of Enemies Hitting you is Lucky while you are on Low Life"
 			},
 			[2]={
+				[1]={
+					k="canonical_line",
+					v=true
+				},
 				limit={
 					[1]={
 						[1]="#",
@@ -48047,6 +48215,10 @@ return {
 				text="Reflects {0} Physical Damage to Attackers on Block"
 			},
 			[2]={
+				[1]={
+					k="canonical_line",
+					v=true
+				},
 				limit={
 					[1]={
 						[1]=0,
@@ -48114,6 +48286,10 @@ return {
 				[1]={
 					k="negate",
 					v=1
+				},
+				[2]={
+					k="canonical_line",
+					v=true
 				},
 				limit={
 					[1]={
@@ -50370,6 +50546,10 @@ return {
 					k="negate",
 					v=1
 				},
+				[2]={
+					k="canonical_line",
+					v=true
+				},
 				limit={
 					[1]={
 						[1]="#",
@@ -50398,6 +50578,10 @@ return {
 				[1]={
 					k="negate",
 					v=1
+				},
+				[2]={
+					k="canonical_line",
+					v=true
 				},
 				limit={
 					[1]={
@@ -50428,6 +50612,10 @@ return {
 					k="negate",
 					v=1
 				},
+				[2]={
+					k="canonical_line",
+					v=true
+				},
 				limit={
 					[1]={
 						[1]="#",
@@ -50456,6 +50644,10 @@ return {
 				[1]={
 					k="negate",
 					v=1
+				},
+				[2]={
+					k="canonical_line",
+					v=true
 				},
 				limit={
 					[1]={
@@ -51120,6 +51312,10 @@ return {
 					k="negate",
 					v=1
 				},
+				[2]={
+					k="canonical_line",
+					v=true
+				},
 				limit={
 					[1]={
 						[1]="#",
@@ -51645,12 +51841,12 @@ return {
 					v=1
 				},
 				[2]={
-					k="canonical_line",
-					v="canonical"
+					k="canonical_stat",
+					v=2
 				},
 				[3]={
-					k="_stat",
-					v=2
+					k="canonical_line",
+					v=true
 				},
 				limit={
 					[1]={
@@ -52087,6 +52283,10 @@ return {
 				[1]={
 					k="negate",
 					v=1
+				},
+				[2]={
+					k="canonical_line",
+					v=true
 				},
 				limit={
 					[1]={
@@ -52726,8 +52926,12 @@ return {
 			},
 			[2]={
 				[1]={
+					k="negate",
+					v=1
+				},
+				[2]={
 					k="canonical_line",
-					v="negate"
+					v=true
 				},
 				limit={
 					[1]={
@@ -53160,6 +53364,10 @@ return {
 				[1]={
 					k="negate",
 					v=1
+				},
+				[2]={
+					k="canonical_line",
+					v=true
 				},
 				limit={
 					[1]={
@@ -57070,12 +57278,12 @@ return {
 					v=2
 				},
 				[2]={
-					k="canonical_line",
-					v="canonical"
+					k="canonical_stat",
+					v=1
 				},
 				[3]={
-					k="_stat",
-					v=1
+					k="canonical_line",
+					v=true
 				},
 				limit={
 					[1]={
@@ -58364,6 +58572,10 @@ return {
 					k="negate",
 					v=1
 				},
+				[2]={
+					k="canonical_line",
+					v=true
+				},
 				limit={
 					[1]={
 						[1]="#",
@@ -58470,6 +58682,10 @@ return {
 				text="Damage of Enemies Hitting you is Lucky while you are Cursed with Vulnerability"
 			},
 			[2]={
+				[1]={
+					k="canonical_line",
+					v=true
+				},
 				limit={
 					[1]={
 						[1]="#",
@@ -59438,6 +59654,10 @@ return {
 					k="negate",
 					v=1
 				},
+				[2]={
+					k="canonical_line",
+					v=true
+				},
 				limit={
 					[1]={
 						[1]="#",
@@ -59544,6 +59764,10 @@ return {
 				[1]={
 					k="negate",
 					v=1
+				},
+				[2]={
+					k="canonical_line",
+					v=true
 				},
 				limit={
 					[1]={
@@ -60614,6 +60838,10 @@ return {
 					k="negate",
 					v=1
 				},
+				[2]={
+					k="canonical_line",
+					v=true
+				},
 				limit={
 					[1]={
 						[1]="#",
@@ -60831,6 +61059,10 @@ return {
 				[1]={
 					k="negate",
 					v=1
+				},
+				[2]={
+					k="canonical_line",
+					v=true
 				},
 				limit={
 					[1]={
@@ -64173,6 +64405,10 @@ return {
 					k="negate",
 					v=1
 				},
+				[2]={
+					k="canonical_line",
+					v=true
+				},
 				limit={
 					[1]={
 						[1]="#",
@@ -64201,6 +64437,10 @@ return {
 				[1]={
 					k="negate",
 					v=1
+				},
+				[2]={
+					k="canonical_line",
+					v=true
 				},
 				limit={
 					[1]={
@@ -64483,6 +64723,10 @@ return {
 					k="negate",
 					v=1
 				},
+				[2]={
+					k="canonical_line",
+					v=true
+				},
 				limit={
 					[1]={
 						[1]="#",
@@ -64511,6 +64755,10 @@ return {
 				[1]={
 					k="negate",
 					v=1
+				},
+				[2]={
+					k="canonical_line",
+					v=true
 				},
 				limit={
 					[1]={
@@ -64864,6 +65112,10 @@ return {
 				[1]={
 					k="negate",
 					v=1
+				},
+				[2]={
+					k="canonical_line",
+					v=true
 				},
 				limit={
 					[1]={
@@ -65986,6 +66238,10 @@ return {
 				text="Flasks gain a Charge every 3 seconds"
 			},
 			[2]={
+				[1]={
+					k="canonical_line",
+					v=true
+				},
 				limit={
 					[1]={
 						[1]="#",
@@ -68332,6 +68588,10 @@ return {
 				[1]={
 					k="negate",
 					v=1
+				},
+				[2]={
+					k="canonical_line",
+					v=true
 				},
 				limit={
 					[1]={
@@ -71203,6 +71463,10 @@ return {
 					k="negate",
 					v=1
 				},
+				[2]={
+					k="canonical_line",
+					v=true
+				},
 				limit={
 					[1]={
 						[1]="#",
@@ -71434,6 +71698,10 @@ return {
 				[1]={
 					k="negate",
 					v=1
+				},
+				[2]={
+					k="canonical_line",
+					v=true
 				},
 				limit={
 					[1]={
@@ -76220,6 +76488,10 @@ return {
 					k="negate",
 					v=1
 				},
+				[2]={
+					k="canonical_line",
+					v=true
+				},
 				limit={
 					[1]={
 						[1]="#",
@@ -77235,6 +77507,10 @@ return {
 					k="negate",
 					v=1
 				},
+				[2]={
+					k="canonical_line",
+					v=true
+				},
 				limit={
 					[1]={
 						[1]="#",
@@ -77380,6 +77656,10 @@ return {
 					k="negate",
 					v=1
 				},
+				[2]={
+					k="canonical_line",
+					v=true
+				},
 				limit={
 					[1]={
 						[1]="#",
@@ -77437,6 +77717,10 @@ return {
 				[1]={
 					k="negate",
 					v=1
+				},
+				[2]={
+					k="canonical_line",
+					v=true
 				},
 				limit={
 					[1]={
@@ -78168,6 +78452,10 @@ return {
 				text="Glacial Hammer Always Freezes"
 			},
 			[2]={
+				[1]={
+					k="canonical_line",
+					v=true
+				},
 				limit={
 					[1]={
 						[1]=1,
@@ -78251,6 +78539,10 @@ return {
 					k="negate",
 					v=1
 				},
+				[2]={
+					k="canonical_line",
+					v=true
+				},
 				limit={
 					[1]={
 						[1]="#",
@@ -78321,6 +78613,10 @@ return {
 				text="Arc Always Shocks"
 			},
 			[2]={
+				[1]={
+					k="canonical_line",
+					v=true
+				},
 				limit={
 					[1]={
 						[1]=1,
@@ -79728,6 +80024,10 @@ return {
 					k="negate",
 					v=1
 				},
+				[2]={
+					k="canonical_line",
+					v=true
+				},
 				limit={
 					[1]={
 						[1]="#",
@@ -79756,6 +80056,10 @@ return {
 				[1]={
 					k="negate",
 					v=1
+				},
+				[2]={
+					k="canonical_line",
+					v=true
 				},
 				limit={
 					[1]={
@@ -79786,6 +80090,10 @@ return {
 					k="negate",
 					v=1
 				},
+				[2]={
+					k="canonical_line",
+					v=true
+				},
 				limit={
 					[1]={
 						[1]="#",
@@ -79814,6 +80122,10 @@ return {
 				[1]={
 					k="negate",
 					v=1
+				},
+				[2]={
+					k="canonical_line",
+					v=true
 				},
 				limit={
 					[1]={
@@ -79844,6 +80156,10 @@ return {
 					k="negate",
 					v=1
 				},
+				[2]={
+					k="canonical_line",
+					v=true
+				},
 				limit={
 					[1]={
 						[1]="#",
@@ -79872,6 +80188,10 @@ return {
 				[1]={
 					k="negate",
 					v=1
+				},
+				[2]={
+					k="canonical_line",
+					v=true
 				},
 				limit={
 					[1]={
@@ -79902,6 +80222,10 @@ return {
 					k="negate",
 					v=1
 				},
+				[2]={
+					k="canonical_line",
+					v=true
+				},
 				limit={
 					[1]={
 						[1]="#",
@@ -79930,6 +80254,10 @@ return {
 				[1]={
 					k="negate",
 					v=1
+				},
+				[2]={
+					k="canonical_line",
+					v=true
 				},
 				limit={
 					[1]={
@@ -79960,6 +80288,10 @@ return {
 					k="negate",
 					v=1
 				},
+				[2]={
+					k="canonical_line",
+					v=true
+				},
 				limit={
 					[1]={
 						[1]="#",
@@ -79988,6 +80320,10 @@ return {
 				[1]={
 					k="negate",
 					v=1
+				},
+				[2]={
+					k="canonical_line",
+					v=true
 				},
 				limit={
 					[1]={
@@ -80018,6 +80354,10 @@ return {
 					k="negate",
 					v=1
 				},
+				[2]={
+					k="canonical_line",
+					v=true
+				},
 				limit={
 					[1]={
 						[1]="#",
@@ -80046,6 +80386,10 @@ return {
 				[1]={
 					k="negate",
 					v=1
+				},
+				[2]={
+					k="canonical_line",
+					v=true
 				},
 				limit={
 					[1]={
@@ -80076,6 +80420,10 @@ return {
 					k="negate",
 					v=1
 				},
+				[2]={
+					k="canonical_line",
+					v=true
+				},
 				limit={
 					[1]={
 						[1]="#",
@@ -80104,6 +80452,10 @@ return {
 				[1]={
 					k="negate",
 					v=1
+				},
+				[2]={
+					k="canonical_line",
+					v=true
 				},
 				limit={
 					[1]={
@@ -80134,6 +80486,10 @@ return {
 					k="negate",
 					v=1
 				},
+				[2]={
+					k="canonical_line",
+					v=true
+				},
 				limit={
 					[1]={
 						[1]="#",
@@ -80162,6 +80518,10 @@ return {
 				[1]={
 					k="negate",
 					v=1
+				},
+				[2]={
+					k="canonical_line",
+					v=true
 				},
 				limit={
 					[1]={
@@ -80192,6 +80552,10 @@ return {
 					k="negate",
 					v=1
 				},
+				[2]={
+					k="canonical_line",
+					v=true
+				},
 				limit={
 					[1]={
 						[1]="#",
@@ -80220,6 +80584,10 @@ return {
 				[1]={
 					k="negate",
 					v=1
+				},
+				[2]={
+					k="canonical_line",
+					v=true
 				},
 				limit={
 					[1]={
@@ -80250,6 +80618,10 @@ return {
 					k="negate",
 					v=1
 				},
+				[2]={
+					k="canonical_line",
+					v=true
+				},
 				limit={
 					[1]={
 						[1]="#",
@@ -80278,6 +80650,10 @@ return {
 				[1]={
 					k="negate",
 					v=1
+				},
+				[2]={
+					k="canonical_line",
+					v=true
 				},
 				limit={
 					[1]={
@@ -80308,6 +80684,10 @@ return {
 					k="negate",
 					v=1
 				},
+				[2]={
+					k="canonical_line",
+					v=true
+				},
 				limit={
 					[1]={
 						[1]="#",
@@ -80336,6 +80716,10 @@ return {
 				[1]={
 					k="negate",
 					v=1
+				},
+				[2]={
+					k="canonical_line",
+					v=true
 				},
 				limit={
 					[1]={
@@ -81353,6 +81737,10 @@ return {
 				[1]={
 					k="negate",
 					v=1
+				},
+				[2]={
+					k="canonical_line",
+					v=true
 				},
 				limit={
 					[1]={
@@ -82755,6 +83143,10 @@ return {
 				text="Frostbolt Always Freezes"
 			},
 			[2]={
+				[1]={
+					k="canonical_line",
+					v=true
+				},
 				limit={
 					[1]={
 						[1]=1,
@@ -83450,6 +83842,10 @@ return {
 				[1]={
 					k="negate",
 					v=1
+				},
+				[2]={
+					k="canonical_line",
+					v=true
 				},
 				limit={
 					[1]={
@@ -84700,12 +85096,12 @@ return {
 					v=2
 				},
 				[2]={
-					k="canonical_line",
-					v="canonical"
+					k="canonical_stat",
+					v=1
 				},
 				[3]={
-					k="_stat",
-					v=1
+					k="canonical_line",
+					v=true
 				},
 				limit={
 					[1]={
@@ -85261,6 +85657,10 @@ return {
 					k="negate",
 					v=1
 				},
+				[2]={
+					k="canonical_line",
+					v=true
+				},
 				limit={
 					[1]={
 						[1]="#",
@@ -85642,6 +86042,10 @@ return {
 					k="negate",
 					v=1
 				},
+				[2]={
+					k="canonical_line",
+					v=true
+				},
 				limit={
 					[1]={
 						[1]="#",
@@ -85670,6 +86074,10 @@ return {
 				[1]={
 					k="negate",
 					v=1
+				},
+				[2]={
+					k="canonical_line",
+					v=true
 				},
 				limit={
 					[1]={
@@ -86415,6 +86823,10 @@ return {
 				text="{0:+d}% Monster Energy Shield Leech Resistance"
 			},
 			[2]={
+				[1]={
+					k="canonical_line",
+					v=true
+				},
 				limit={
 					[1]={
 						[1]=100,
@@ -86796,6 +87208,10 @@ return {
 				[1]={
 					k="negate",
 					v=1
+				},
+				[2]={
+					k="canonical_line",
+					v=true
 				},
 				limit={
 					[1]={
@@ -89235,6 +89651,10 @@ return {
 				text="Adds 1 Passive Skill"
 			},
 			[2]={
+				[1]={
+					k="canonical_line",
+					v=true
+				},
 				limit={
 					[1]={
 						[1]="#",
@@ -89706,6 +90126,10 @@ return {
 				[1]={
 					k="negate",
 					v=1
+				},
+				[2]={
+					k="canonical_line",
+					v=true
 				},
 				limit={
 					[1]={
@@ -91944,6 +92368,10 @@ return {
 					k="negate_and_double",
 					v=1
 				},
+				[2]={
+					k="canonical_line",
+					v=true
+				},
 				limit={
 					[1]={
 						[1]="#",
@@ -92491,6 +92919,10 @@ return {
 				[1]={
 					k="negate_and_double",
 					v=1
+				},
+				[2]={
+					k="canonical_line",
+					v=true
 				},
 				limit={
 					[1]={
@@ -96124,6 +96556,10 @@ return {
 					k="negate",
 					v=1
 				},
+				[2]={
+					k="canonical_line",
+					v=true
+				},
 				limit={
 					[1]={
 						[1]="#",
@@ -97664,6 +98100,10 @@ return {
 				text="{0}% chance to avoid Maim"
 			},
 			[2]={
+				[1]={
+					k="canonical_line",
+					v=true
+				},
 				limit={
 					[1]={
 						[1]=100,
@@ -97952,6 +98392,10 @@ return {
 				[1]={
 					k="negate_and_double",
 					v=1
+				},
+				[2]={
+					k="canonical_line",
+					v=true
 				},
 				limit={
 					[1]={
@@ -98251,6 +98695,10 @@ return {
 				text="Chance to Block Attack Damage is Lucky"
 			},
 			[2]={
+				[1]={
+					k="canonical_line",
+					v=true
+				},
 				limit={
 					[1]={
 						[1]="#",
@@ -99304,6 +99752,10 @@ return {
 					k="negate",
 					v=1
 				},
+				[2]={
+					k="canonical_line",
+					v=true
+				},
 				limit={
 					[1]={
 						[1]="#",
@@ -99824,6 +100276,10 @@ return {
 				[1]={
 					k="negate",
 					v=1
+				},
+				[2]={
+					k="canonical_line",
+					v=true
 				},
 				limit={
 					[1]={
@@ -103817,6 +104273,10 @@ return {
 					k="negate",
 					v=1
 				},
+				[2]={
+					k="canonical_line",
+					v=true
+				},
 				limit={
 					[1]={
 						[1]="#",
@@ -103849,6 +104309,10 @@ return {
 				[1]={
 					k="negate_and_double",
 					v=1
+				},
+				[2]={
+					k="canonical_line",
+					v=true
 				},
 				limit={
 					[1]={
@@ -111389,6 +111853,10 @@ return {
 					k="negate",
 					v=1
 				},
+				[2]={
+					k="canonical_line",
+					v=true
+				},
 				limit={
 					[1]={
 						[1]="#",
@@ -112003,6 +112471,10 @@ return {
 				[1]={
 					k="negate_and_double",
 					v=1
+				},
+				[2]={
+					k="canonical_line",
+					v=true
 				},
 				limit={
 					[1]={
@@ -116551,6 +117023,10 @@ return {
 					k="negate_and_double",
 					v=1
 				},
+				[2]={
+					k="canonical_line",
+					v=true
+				},
 				limit={
 					[1]={
 						[1]="#",
@@ -116608,6 +117084,10 @@ return {
 				[1]={
 					k="negate",
 					v=1
+				},
+				[2]={
+					k="canonical_line",
+					v=true
 				},
 				limit={
 					[1]={
@@ -116724,6 +117204,10 @@ return {
 				[1]={
 					k="negate",
 					v=1
+				},
+				[2]={
+					k="canonical_line",
+					v=true
 				},
 				limit={
 					[1]={
@@ -117649,6 +118133,10 @@ return {
 				[1]={
 					k="negate",
 					v=1
+				},
+				[2]={
+					k="canonical_line",
+					v=true
 				},
 				limit={
 					[1]={
@@ -120265,6 +120753,10 @@ return {
 					k="negate",
 					v=1
 				},
+				[2]={
+					k="canonical_line",
+					v=true
+				},
 				limit={
 					[1]={
 						[1]="#",
@@ -120641,6 +121133,10 @@ return {
 					k="negate",
 					v=1
 				},
+				[2]={
+					k="canonical_line",
+					v=true
+				},
 				limit={
 					[1]={
 						[1]="#",
@@ -120733,6 +121229,10 @@ return {
 				[1]={
 					k="negate",
 					v=1
+				},
+				[2]={
+					k="canonical_line",
+					v=true
 				},
 				limit={
 					[1]={
@@ -120885,6 +121385,10 @@ return {
 				[1]={
 					k="negate_and_double",
 					v=1
+				},
+				[2]={
+					k="canonical_line",
+					v=true
 				},
 				limit={
 					[1]={
@@ -121180,6 +121684,10 @@ return {
 				[1]={
 					k="negate_and_double",
 					v=1
+				},
+				[2]={
+					k="canonical_line",
+					v=true
 				},
 				limit={
 					[1]={
@@ -123549,6 +124057,10 @@ return {
 					k="negate",
 					v=1
 				},
+				[2]={
+					k="canonical_line",
+					v=true
+				},
 				limit={
 					[1]={
 						[1]="#",
@@ -123638,6 +124150,10 @@ return {
 				[1]={
 					k="negate",
 					v=1
+				},
+				[2]={
+					k="canonical_line",
+					v=true
 				},
 				limit={
 					[1]={
@@ -123783,6 +124299,10 @@ return {
 				[1]={
 					k="negate",
 					v=1
+				},
+				[2]={
+					k="canonical_line",
+					v=true
 				},
 				limit={
 					[1]={
@@ -124011,6 +124531,10 @@ return {
 					k="negate",
 					v=1
 				},
+				[2]={
+					k="canonical_line",
+					v=true
+				},
 				limit={
 					[1]={
 						[1]="#",
@@ -124039,6 +124563,10 @@ return {
 				[1]={
 					k="negate",
 					v=1
+				},
+				[2]={
+					k="canonical_line",
+					v=true
 				},
 				limit={
 					[1]={
@@ -125549,6 +126077,10 @@ return {
 					k="negate",
 					v=1
 				},
+				[2]={
+					k="canonical_line",
+					v=true
+				},
 				limit={
 					[1]={
 						[1]="#",
@@ -125574,6 +126106,10 @@ return {
 				text="Damage of Enemies Hitting you is Lucky while you have a Magic Ring Equipped"
 			},
 			[2]={
+				[1]={
+					k="canonical_line",
+					v=true
+				},
 				limit={
 					[1]={
 						[1]="#",
@@ -125599,6 +126135,10 @@ return {
 				text="Damage of Enemies Hitting you is Lucky while you are on Full Life"
 			},
 			[2]={
+				[1]={
+					k="canonical_line",
+					v=true
+				},
 				limit={
 					[1]={
 						[1]="#",
@@ -125627,6 +126167,10 @@ return {
 				[1]={
 					k="negate",
 					v=1
+				},
+				[2]={
+					k="canonical_line",
+					v=true
 				},
 				limit={
 					[1]={
@@ -128005,6 +128549,10 @@ return {
 					k="negate",
 					v=1
 				},
+				[2]={
+					k="canonical_line",
+					v=true
+				},
 				limit={
 					[1]={
 						[1]="#",
@@ -128033,6 +128581,10 @@ return {
 				[1]={
 					k="negate",
 					v=1
+				},
+				[2]={
+					k="canonical_line",
+					v=true
 				},
 				limit={
 					[1]={
@@ -130503,6 +131055,10 @@ return {
 				[1]={
 					k="negate_and_double",
 					v=1
+				},
+				[2]={
+					k="canonical_line",
+					v=true
 				},
 				limit={
 					[1]={
@@ -135034,6 +135590,10 @@ return {
 					k="negate_and_double",
 					v=1
 				},
+				[2]={
+					k="canonical_line",
+					v=true
+				},
 				limit={
 					[1]={
 						[1]="#",
@@ -135108,6 +135668,10 @@ return {
 					k="negate",
 					v=1
 				},
+				[2]={
+					k="canonical_line",
+					v=true
+				},
 				limit={
 					[1]={
 						[1]="#",
@@ -135152,6 +135716,10 @@ return {
 				[1]={
 					k="milliseconds_to_seconds",
 					v=1
+				},
+				[2]={
+					k="canonical_line",
+					v=true
 				},
 				limit={
 					[1]={
@@ -135887,6 +136455,10 @@ return {
 					k="negate_and_double",
 					v=1
 				},
+				[2]={
+					k="canonical_line",
+					v=true
+				},
 				limit={
 					[1]={
 						[1]="#",
@@ -135964,6 +136536,10 @@ return {
 				[1]={
 					k="negate_and_double",
 					v=1
+				},
+				[2]={
+					k="canonical_line",
+					v=true
 				},
 				limit={
 					[1]={
@@ -139660,6 +140236,10 @@ return {
 					k="negate_and_double",
 					v=1
 				},
+				[2]={
+					k="canonical_line",
+					v=true
+				},
 				limit={
 					[1]={
 						[1]="#",
@@ -139717,6 +140297,10 @@ return {
 				[1]={
 					k="negate",
 					v=1
+				},
+				[2]={
+					k="canonical_line",
+					v=true
 				},
 				limit={
 					[1]={
@@ -139779,6 +140363,10 @@ return {
 				[1]={
 					k="negate_and_double",
 					v=1
+				},
+				[2]={
+					k="canonical_line",
+					v=true
 				},
 				limit={
 					[1]={
@@ -139870,6 +140458,10 @@ return {
 				[1]={
 					k="negate_and_double",
 					v=1
+				},
+				[2]={
+					k="canonical_line",
+					v=true
 				},
 				limit={
 					[1]={
@@ -140007,6 +140599,10 @@ return {
 					k="negate_and_double",
 					v=1
 				},
+				[2]={
+					k="canonical_line",
+					v=true
+				},
 				limit={
 					[1]={
 						[1]="#",
@@ -140064,6 +140660,10 @@ return {
 				[1]={
 					k="negate",
 					v=1
+				},
+				[2]={
+					k="canonical_line",
+					v=true
 				},
 				limit={
 					[1]={
@@ -140152,6 +140752,10 @@ return {
 					k="negate_and_double",
 					v=1
 				},
+				[2]={
+					k="canonical_line",
+					v=true
+				},
 				limit={
 					[1]={
 						[1]="#",
@@ -140238,6 +140842,10 @@ return {
 				[1]={
 					k="negate_and_double",
 					v=1
+				},
+				[2]={
+					k="canonical_line",
+					v=true
 				},
 				limit={
 					[1]={
@@ -141365,6 +141973,10 @@ return {
 					k="negate",
 					v=1
 				},
+				[2]={
+					k="canonical_line",
+					v=true
+				},
 				limit={
 					[1]={
 						[1]="#",
@@ -141573,6 +142185,10 @@ return {
 				[1]={
 					k="negate",
 					v=1
+				},
+				[2]={
+					k="canonical_line",
+					v=true
 				},
 				limit={
 					[1]={
@@ -141818,6 +142434,10 @@ return {
 					k="negate",
 					v=1
 				},
+				[2]={
+					k="canonical_line",
+					v=true
+				},
 				limit={
 					[1]={
 						[1]="#",
@@ -141908,6 +142528,10 @@ return {
 					k="negate",
 					v=1
 				},
+				[2]={
+					k="canonical_line",
+					v=true
+				},
 				limit={
 					[1]={
 						[1]="#",
@@ -141993,6 +142617,10 @@ return {
 				[1]={
 					k="negate",
 					v=1
+				},
+				[2]={
+					k="canonical_line",
+					v=true
 				},
 				limit={
 					[1]={
@@ -147798,6 +148426,10 @@ return {
 					k="negate",
 					v=1
 				},
+				[2]={
+					k="canonical_line",
+					v=true
+				},
 				limit={
 					[1]={
 						[1]="#",
@@ -148885,6 +149517,10 @@ return {
 				[1]={
 					k="negate",
 					v=1
+				},
+				[2]={
+					k="canonical_line",
+					v=true
 				},
 				limit={
 					[1]={
@@ -150176,6 +150812,10 @@ return {
 				text="1 Added Passive Skill is a Jewel Socket"
 			},
 			[2]={
+				[1]={
+					k="canonical_line",
+					v=true
+				},
 				limit={
 					[1]={
 						[1]=2,
@@ -150201,6 +150841,10 @@ return {
 				text="Adds 1 Jewel Socket Passive Skill"
 			},
 			[2]={
+				[1]={
+					k="canonical_line",
+					v=true
+				},
 				limit={
 					[1]={
 						[1]=2,
@@ -152705,6 +153349,10 @@ return {
 				text="Adds 1 Small Passive Skill which grants nothing"
 			},
 			[2]={
+				[1]={
+					k="canonical_line",
+					v=true
+				},
 				limit={
 					[1]={
 						[1]=2,
@@ -154180,6 +154828,10 @@ return {
 					k="negate_and_double",
 					v=1
 				},
+				[2]={
+					k="canonical_line",
+					v=true
+				},
 				limit={
 					[1]={
 						[1]="#",
@@ -155407,6 +156059,10 @@ return {
 					k="negate_and_double",
 					v=1
 				},
+				[2]={
+					k="canonical_line",
+					v=true
+				},
 				limit={
 					[1]={
 						[1]="#",
@@ -155439,6 +156095,10 @@ return {
 				[1]={
 					k="negate_and_double",
 					v=1
+				},
+				[2]={
+					k="canonical_line",
+					v=true
 				},
 				limit={
 					[1]={
@@ -158456,6 +159116,10 @@ return {
 					k="negate",
 					v=1
 				},
+				[2]={
+					k="canonical_line",
+					v=true
+				},
 				limit={
 					[1]={
 						[1]="#",
@@ -158539,6 +159203,10 @@ return {
 				text="Unique Boss drops an additional Currency Item"
 			},
 			[2]={
+				[1]={
+					k="canonical_line",
+					v=true
+				},
 				limit={
 					[1]={
 						[1]="#",
@@ -159652,6 +160320,10 @@ return {
 				text="{0:+d}% chance to contain an Expedition Encounter"
 			},
 			[2]={
+				[1]={
+					k="canonical_line",
+					v=true
+				},
 				limit={
 					[1]={
 						[1]=100,
@@ -160542,6 +161214,10 @@ return {
 				[1]={
 					k="negate",
 					v=1
+				},
+				[2]={
+					k="canonical_line",
+					v=true
 				},
 				limit={
 					[1]={
@@ -162763,6 +163439,10 @@ return {
 					k="negate",
 					v=1
 				},
+				[2]={
+					k="canonical_line",
+					v=true
+				},
 				limit={
 					[1]={
 						[1]="#",
@@ -163476,6 +164156,10 @@ return {
 				[1]={
 					k="negate",
 					v=1
+				},
+				[2]={
+					k="canonical_line",
+					v=true
 				},
 				limit={
 					[1]={
@@ -165049,6 +165733,10 @@ return {
 					k="negate",
 					v=1
 				},
+				[2]={
+					k="canonical_line",
+					v=true
+				},
 				limit={
 					[1]={
 						[1]="#",
@@ -165177,6 +165865,10 @@ return {
 					k="negate",
 					v=1
 				},
+				[2]={
+					k="canonical_line",
+					v=true
+				},
 				limit={
 					[1]={
 						[1]="#",
@@ -165205,6 +165897,10 @@ return {
 				[1]={
 					k="negate",
 					v=1
+				},
+				[2]={
+					k="canonical_line",
+					v=true
 				},
 				limit={
 					[1]={
@@ -165282,6 +165978,10 @@ return {
 				[1]={
 					k="negate",
 					v=1
+				},
+				[2]={
+					k="canonical_line",
+					v=true
 				},
 				limit={
 					[1]={
@@ -165775,6 +166475,10 @@ return {
 					k="negate",
 					v=1
 				},
+				[2]={
+					k="canonical_line",
+					v=true
+				},
 				limit={
 					[1]={
 						[1]="#",
@@ -165803,6 +166507,10 @@ return {
 				[1]={
 					k="negate",
 					v=1
+				},
+				[2]={
+					k="canonical_line",
+					v=true
 				},
 				limit={
 					[1]={
@@ -166102,6 +166810,10 @@ return {
 				[1]={
 					k="negate",
 					v=1
+				},
+				[2]={
+					k="canonical_line",
+					v=true
 				},
 				limit={
 					[1]={
@@ -166519,6 +167231,10 @@ return {
 				[1]={
 					k="negate",
 					v=1
+				},
+				[2]={
+					k="canonical_line",
+					v=true
 				},
 				limit={
 					[1]={
@@ -169919,6 +170635,10 @@ return {
 					k="negate",
 					v=1
 				},
+				[2]={
+					k="canonical_line",
+					v=true
+				},
 				limit={
 					[1]={
 						[1]="#",
@@ -172537,6 +173257,10 @@ return {
 					k="negate",
 					v=1
 				},
+				[2]={
+					k="canonical_line",
+					v=true
+				},
 				limit={
 					[1]={
 						[1]="#",
@@ -174050,6 +174774,10 @@ return {
 					k="negate",
 					v=1
 				},
+				[2]={
+					k="canonical_line",
+					v=true
+				},
 				limit={
 					[1]={
 						[1]="#",
@@ -174123,6 +174851,10 @@ return {
 				[1]={
 					k="negate",
 					v=1
+				},
+				[2]={
+					k="canonical_line",
+					v=true
 				},
 				limit={
 					[1]={
@@ -174598,6 +175330,10 @@ return {
 				[1]={
 					k="negate",
 					v=1
+				},
+				[2]={
+					k="canonical_line",
+					v=true
 				},
 				limit={
 					[1]={
@@ -177595,6 +178331,10 @@ return {
 					k="negate",
 					v=1
 				},
+				[2]={
+					k="canonical_line",
+					v=true
+				},
 				limit={
 					[1]={
 						[1]="#",
@@ -178986,6 +179726,10 @@ return {
 					k="negate",
 					v=1
 				},
+				[2]={
+					k="canonical_line",
+					v=true
+				},
 				limit={
 					[1]={
 						[1]="#",
@@ -179121,6 +179865,10 @@ return {
 				[1]={
 					k="negate",
 					v=1
+				},
+				[2]={
+					k="canonical_line",
+					v=true
 				},
 				limit={
 					[1]={
@@ -179327,6 +180075,10 @@ return {
 					k="negate",
 					v=1
 				},
+				[2]={
+					k="canonical_line",
+					v=true
+				},
 				limit={
 					[1]={
 						[1]="#",
@@ -179437,6 +180189,10 @@ return {
 					k="negate_and_double",
 					v=1
 				},
+				[2]={
+					k="canonical_line",
+					v=true
+				},
 				limit={
 					[1]={
 						[1]="#",
@@ -179494,6 +180250,10 @@ return {
 				[1]={
 					k="negate",
 					v=1
+				},
+				[2]={
+					k="canonical_line",
+					v=true
 				},
 				limit={
 					[1]={
@@ -180421,6 +181181,10 @@ return {
 					k="negate",
 					v=1
 				},
+				[2]={
+					k="canonical_line",
+					v=true
+				},
 				limit={
 					[1]={
 						[1]="#",
@@ -181010,6 +181774,10 @@ return {
 					k="negate",
 					v=1
 				},
+				[2]={
+					k="canonical_line",
+					v=true
+				},
 				limit={
 					[1]={
 						[1]="#",
@@ -181268,6 +182036,10 @@ return {
 					k="negate_and_double",
 					v=1
 				},
+				[2]={
+					k="canonical_line",
+					v=true
+				},
 				limit={
 					[1]={
 						[1]="#",
@@ -181518,6 +182290,10 @@ return {
 					k="negate_and_double",
 					v=1
 				},
+				[2]={
+					k="canonical_line",
+					v=true
+				},
 				limit={
 					[1]={
 						[1]="#",
@@ -181575,6 +182351,10 @@ return {
 				[1]={
 					k="negate",
 					v=1
+				},
+				[2]={
+					k="canonical_line",
+					v=true
 				},
 				limit={
 					[1]={
@@ -182551,6 +183331,10 @@ return {
 					k="negate_and_double",
 					v=1
 				},
+				[2]={
+					k="canonical_line",
+					v=true
+				},
 				limit={
 					[1]={
 						[1]="#",
@@ -182628,6 +183412,10 @@ return {
 				[1]={
 					k="negate_and_double",
 					v=1
+				},
+				[2]={
+					k="canonical_line",
+					v=true
 				},
 				limit={
 					[1]={
@@ -182707,6 +183495,10 @@ return {
 					k="negate_and_double",
 					v=1
 				},
+				[2]={
+					k="canonical_line",
+					v=true
+				},
 				limit={
 					[1]={
 						[1]="#",
@@ -182784,6 +183576,10 @@ return {
 				[1]={
 					k="negate_and_double",
 					v=1
+				},
+				[2]={
+					k="canonical_line",
+					v=true
 				},
 				limit={
 					[1]={
@@ -183594,6 +184390,10 @@ return {
 				[1]={
 					k="negate",
 					v=1
+				},
+				[2]={
+					k="canonical_line",
+					v=true
 				},
 				limit={
 					[1]={
@@ -184829,6 +185629,10 @@ return {
 					k="negate",
 					v=1
 				},
+				[2]={
+					k="canonical_line",
+					v=true
+				},
 				limit={
 					[1]={
 						[1]="#",
@@ -184914,6 +185718,10 @@ return {
 				[1]={
 					k="negate",
 					v=1
+				},
+				[2]={
+					k="canonical_line",
+					v=true
 				},
 				limit={
 					[1]={
@@ -187101,6 +187909,10 @@ return {
 					k="negate",
 					v=1
 				},
+				[2]={
+					k="canonical_line",
+					v=true
+				},
 				limit={
 					[1]={
 						[1]="#",
@@ -187900,6 +188712,10 @@ return {
 					k="negate",
 					v=1
 				},
+				[2]={
+					k="canonical_line",
+					v=true
+				},
 				limit={
 					[1]={
 						[1]="#",
@@ -188350,6 +189166,10 @@ return {
 				[1]={
 					k="negate_and_double",
 					v=1
+				},
+				[2]={
+					k="canonical_line",
+					v=true
 				},
 				limit={
 					[1]={
@@ -188963,6 +189783,10 @@ return {
 					k="negate",
 					v=1
 				},
+				[2]={
+					k="canonical_line",
+					v=true
+				},
 				limit={
 					[1]={
 						[1]="#",
@@ -189086,6 +189910,10 @@ return {
 				[1]={
 					k="negate",
 					v=1
+				},
+				[2]={
+					k="canonical_line",
+					v=true
 				},
 				limit={
 					[1]={
@@ -189464,6 +190292,10 @@ return {
 				[1]={
 					k="negate",
 					v=1
+				},
+				[2]={
+					k="canonical_line",
+					v=true
 				},
 				limit={
 					[1]={
@@ -191058,6 +191890,10 @@ return {
 					k="negate_and_double",
 					v=1
 				},
+				[2]={
+					k="canonical_line",
+					v=true
+				},
 				limit={
 					[1]={
 						[1]="#",
@@ -191115,6 +191951,10 @@ return {
 				[1]={
 					k="negate",
 					v=1
+				},
+				[2]={
+					k="canonical_line",
+					v=true
 				},
 				limit={
 					[1]={
@@ -193546,6 +194386,10 @@ return {
 				[1]={
 					k="negate",
 					v=1
+				},
+				[2]={
+					k="canonical_line",
+					v=true
 				},
 				limit={
 					[1]={
@@ -197514,6 +198358,10 @@ return {
 					k="negate",
 					v=1
 				},
+				[2]={
+					k="canonical_line",
+					v=true
+				},
 				limit={
 					[1]={
 						[1]="#",
@@ -198410,6 +199258,10 @@ return {
 					k="negate",
 					v=1
 				},
+				[2]={
+					k="canonical_line",
+					v=true
+				},
 				limit={
 					[1]={
 						[1]="#",
@@ -198681,6 +199533,10 @@ return {
 				[1]={
 					k="negate_and_double",
 					v=1
+				},
+				[2]={
+					k="canonical_line",
+					v=true
 				},
 				limit={
 					[1]={
@@ -200093,6 +200949,10 @@ return {
 					k="negate_and_double",
 					v=1
 				},
+				[2]={
+					k="canonical_line",
+					v=true
+				},
 				limit={
 					[1]={
 						[1]="#",
@@ -201425,6 +202285,10 @@ return {
 					k="negate_and_double",
 					v=1
 				},
+				[2]={
+					k="canonical_line",
+					v=true
+				},
 				limit={
 					[1]={
 						[1]="#",
@@ -201482,6 +202346,10 @@ return {
 				[1]={
 					k="negate",
 					v=1
+				},
+				[2]={
+					k="canonical_line",
+					v=true
 				},
 				limit={
 					[1]={

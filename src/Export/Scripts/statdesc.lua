@@ -53,7 +53,7 @@ local function processStatFile(name, changeOutLocation)
 					if text and table_only then
 						text = text:gsub('@', ' ')
 					end
-					local desc = { text = escapeGGGString(text), limit = { } }
+					local desc = { text = escapeGGGString(text):gsub("\\([^nb])", "\\n%1"), limit = { } }
 					for statLimit in statLimits:gmatch("[!%d%-#|]+") do
 						local limit = { }
 						
@@ -76,12 +76,19 @@ local function processStatFile(name, changeOutLocation)
 						end
 						table.insert(desc.limit, limit)
 					end
-					for k, v in special:gmatch("([%w%%_]+) (%w+)") do
+					for k, v in special:gmatch("([%w%%_]+) (%d+)") do
 						table.insert(desc, {
 							k = k,
 							v = tonumber(v) or v,
 						})
 						nk[k] = v
+					end
+					if special:match("canonical_line") then
+						table.insert(desc, {
+							k = "canonical_line",
+							v = true,
+						})
+						nk["canonical_line"] = true
 					end
 					table.insert(curLang, desc)
 				end

@@ -8697,6 +8697,10 @@ return {
 					k="negate",
 					v=1
 				},
+				[2]={
+					k="canonical_line",
+					v=true
+				},
 				limit={
 					[1]={
 						[1]="#",
@@ -17568,6 +17572,10 @@ return {
 					k="negate",
 					v=1
 				},
+				[2]={
+					k="canonical_line",
+					v=true
+				},
 				limit={
 					[1]={
 						[1]="#",
@@ -20063,6 +20071,10 @@ return {
 				[1]={
 					k="negate",
 					v=1
+				},
+				[2]={
+					k="canonical_line",
+					v=true
 				},
 				limit={
 					[1]={

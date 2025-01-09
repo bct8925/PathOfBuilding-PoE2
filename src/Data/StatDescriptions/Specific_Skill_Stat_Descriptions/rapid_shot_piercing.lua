@@ -14,6 +14,10 @@ return {
 				text="Bolts Pierce {0} Target"
 			},
 			[2]={
+				[1]={
+					k="canonical_line",
+					v=true
+				},
 				limit={
 					[1]={
 						[1]=2,

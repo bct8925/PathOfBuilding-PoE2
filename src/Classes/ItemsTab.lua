@@ -2210,6 +2210,8 @@ function ItemsTabClass:CorruptDisplayItem() -- todo implement vaal orb new outco
 	local controls = { } 
 	local enchantList = { }
 	local enchantNum = 1
+	local explicitNum = 0
+	local corruptedRanges = {}
 	local currentModType = "Corrupted"
 	local sourceList = { "Corrupted" }
 	if self.displayItem.base.type == "Helmet" then
@@ -2283,11 +2285,90 @@ function ItemsTabClass:CorruptDisplayItem() -- todo implement vaal orb new outco
 				t_insert( item.enchantModLines, i, enchant)
 			end
 		end
+		for i = 1, explicitNum do
+			if corruptedRanges[i] ~= 1 then item.explicitModLines[i].corruptedRange = corruptedRanges[i] end
+		end
 		item:BuildAndParseRaw()
 		return item
 	end
-		controls.sourceLabel = new("LabelControl", {"TOPRIGHT",nil,"TOPLEFT"}, {95, 20, 0, 16}, "^7Source:")
-		controls.source = new("DropDownControl", {"TOPLEFT",nil,"TOPLEFT"}, {100, 20, 150, 18}, sourceList, function(index, value)
+	if self.displayItem.rarity == "UNIQUE" then
+		local item = new("Item", self.displayItem:BuildRaw())
+		explicitNum = #item.explicitModLines
+		local textLines = 0
+		for i, mod in ipairs(item.explicitModLines) do
+			local label = ""
+			controls["rollRangeValue"..i] = new("LabelControl", {"TOPRIGHT",nil,"TOPRIGHT"}, {-10, 10 + i * 20 + 16 * textLines, 200, 16}, "^71.00")
+			controls["rollRangeSlider"..i] = new("SliderControl", { "RIGHT", controls["rollRangeValue"..i], "LEFT" }, {-5, 0, 80, 18}, function(val)
+				corruptedRanges[i] = 0.78+round(0.44*val, 2) -- 0.78-1.22
+				controls["rollRangeValue"..i].label = "^7"..string.format("%.2f", corruptedRanges[i])
+				local label = ""
+				for i, line in ipairs(main:WrapString("^7"..itemLib.applyRange(mod.line, mod.range or main.defaultItemAffixQuality, mod.valueScalar or 1, corruptedRanges[i]),16,370)) do
+					if i == 1 then
+						label = line
+					else
+						label = label.."\n"..line
+					end
+				end
+				controls["rollRangeLabel"..i].label = label
+			end)
+			corruptedRanges[i] = mod.corruptedRange or 1
+			controls["rollRangeSlider"..i].val = ((corruptedRanges[i])-0.78)/0.44
+			controls["rollRangeValue"..i].label = "^7"..string.format("%.2f", corruptedRanges[i])
+			for i, line in ipairs(main:WrapString("^7"..itemLib.applyRange(mod.line, mod.range or main.defaultItemAffixQuality, mod.valueScalar or 1, corruptedRanges[i]),16,370)) do
+				if i == 1 then
+					label = line
+				else
+					textLines = textLines + 1
+					label = label.."\n"..line
+				end
+			end
+			controls["rollRangeLabel"..i] = new("LabelControl", {"RIGHT", controls["rollRangeSlider"..i], "LEFT"}, {-5, 0 , 200, 16}, label)
+			-- hide them by default as they are a secondary window
+			controls["rollRangeLabel"..i].shown = false
+			controls["rollRangeSlider"..i].shown = false
+			controls["rollRangeValue"..i].shown = false
+		end
+	end
+	controls.enchants = new("ButtonControl", nil, {-235, 5, 80, 20}, "Enchants", function()
+		for i = 1, enchantNum do
+			controls["enchant"..i].shown = true
+			controls["enchant"..i.."Label"].shown = true
+		end
+		for i = 1, explicitNum do
+			controls["rollRangeLabel"..i].shown = false
+			controls["rollRangeSlider"..i].shown = false
+			controls["rollRangeValue"..i].shown = false
+		end
+		controls.source.shown = true
+		controls.sourceLabel.shown = true
+		main.popups[1].height = 103 + 18 * enchantNum
+		controls.close.y = 73 + 18 * enchantNum
+		controls.save.y = 73 + 18 * enchantNum
+	end)
+	controls.enchants.shown = function ()
+		return self.displayItem.rarity == "UNIQUE"
+	end
+	controls.rolls = new("ButtonControl", nil, {-150, 5, 80, 20}, "Roll Ranges", function()
+		for i = 1, 8 do
+			controls["enchant"..i].shown = false
+			controls["enchant"..i.."Label"].shown = false
+		end
+		for i = 1, explicitNum do
+			controls["rollRangeLabel"..i].shown = true
+			controls["rollRangeSlider"..i].shown = true
+			controls["rollRangeValue"..i].shown = true
+		end
+		controls.source.shown = false
+		controls.sourceLabel.shown = false
+		main.popups[1].height = 103 + 18 * explicitNum
+		controls.close.y = 73 + 18 * explicitNum
+		controls.save.y = 73 + 18 * explicitNum
+	end)
+	controls.rolls.shown = function ()
+		return self.displayItem.rarity == "UNIQUE"
+	end
+	controls.sourceLabel = new("LabelControl", {"TOPRIGHT",nil,"TOPLEFT"}, {95, 30, 0, 16}, "^7Source:")
+	controls.source = new("DropDownControl", {"TOPLEFT",nil,"TOPLEFT"}, {100, 30, 150, 18}, sourceList, function(index, value)
 		if value == "Corrupted" then
 			currentModType = "Corrupted"
 			enchantNum = 1
@@ -2317,14 +2398,13 @@ function ItemsTabClass:CorruptDisplayItem() -- todo implement vaal orb new outco
 			end
 			controls["enchant"..i]:SetSel(1)
 		end
-
-		main.popups[1].height = 93 + 18 * enchantNum
-		controls.close.y = 63 + 18 * enchantNum
-		controls.save.y = 63 + 18 * enchantNum
+		main.popups[1].height = 103 + 18 * enchantNum
+		controls.close.y = 73 + 18 * enchantNum
+		controls.save.y = 73 + 18 * enchantNum
 	end)
 	for i = 1, 8 do
 		if i == 1 then
-			controls.enchant1Label = new("LabelControl", {"TOPRIGHT",nil,"TOPLEFT"}, {95, 45, 0, 16}, function()
+			controls.enchant1Label = new("LabelControl", {"TOPRIGHT",nil,"TOPLEFT"}, {95, 55, 0, 16}, function()
 				if enchantNum == 1 then -- update label so reduant 1 doesn't appear in case of 1 enchant.
 					return "^7Enchant:"
 				else
@@ -2332,9 +2412,9 @@ function ItemsTabClass:CorruptDisplayItem() -- todo implement vaal orb new outco
 				end
 			end)
 		else
-			controls["enchant"..i.."Label"] = new("LabelControl", {"TOPRIGHT",nil,"TOPLEFT"}, {95, 25 + i * 20 , 0, 16}, "^7Enchant #"..i..":")
+			controls["enchant"..i.."Label"] = new("LabelControl", {"TOPRIGHT",nil,"TOPLEFT"}, {95, 35 + i * 20 , 0, 16}, "^7Enchant #"..i..":")
 		end
-		controls["enchant"..i] = new("DropDownControl", {"TOPLEFT",nil,"TOPLEFT"}, {100, 25 + i * 20, 440, 18}, nil, function()
+		controls["enchant"..i] = new("DropDownControl", {"TOPLEFT",nil,"TOPLEFT"}, {100, 35 + i * 20, 440, 18}, nil, function()
 			for i = 1, enchantNum do
 				local others = { }
 				for j = 1, enchantNum do
@@ -2372,7 +2452,7 @@ function ItemsTabClass:CorruptDisplayItem() -- todo implement vaal orb new outco
 			buildList(controls["enchant"..i], others,  currentModType)
 		end
 	end
-	controls.save = new("ButtonControl", nil, {-45, 59 + enchantNum * 20, 80, 20}, "Corrupted", function()
+	controls.save = new("ButtonControl", nil, {-45, 69 + enchantNum * 20, 80, 20}, "Corrupted", function()
 		self:SetDisplayItem(corruptItem())
 		main:ClosePopup()
 	end)
@@ -2380,10 +2460,10 @@ function ItemsTabClass:CorruptDisplayItem() -- todo implement vaal orb new outco
 		tooltip:Clear()
 		self:AddItemTooltip(tooltip, corruptItem(), nil, true)
 	end	
-	controls.close = new("ButtonControl", nil, {45, 59 + enchantNum * 20, 80, 20}, "Cancel", function()
+	controls.close = new("ButtonControl", nil, {45, 69 + enchantNum * 20, 80, 20}, "Cancel", function()
 		main:ClosePopup()
 	end)
-	main:OpenPopup(560, 89 + enchantNum * 20, "Corrupted Item", controls)
+	main:OpenPopup(560, 99 + enchantNum * 20, "Corrupted Item", controls)
 end
 
 -- Opens the custom modifier popup
