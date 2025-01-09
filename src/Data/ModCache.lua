@@ -2361,10 +2361,9 @@ c["Energy Shield Recharge starts when you use a Mana Flask"]={nil,"Energy Shield
 c["Energy Shield does not Recharge"]={{[1]={flags=0,keywordFlags=0,name="NoEnergyShieldRecharge",type="FLAG",value=true}},nil}
 c["Energy Shield is increased by Overcapped Cold Resistance"]={nil,"Energy Shield is increased by Overcapped Cold Resistance "}
 c["Energy Shield is increased by Overcapped Cold Resistance Evasion Rating is increased by Overcapped Lightning Resistance"]={nil,"Energy Shield is increased by Overcapped Cold Resistance Evasion Rating is increased by Overcapped Lightning Resistance "}
-c["Equipment and Skill Gems have 25% increased Attribute Requirements"]={nil,"Equipment and Skill Gems have 25% increased Attribute Requirements "}
-c["Equipment and Skill Gems have 25% increased Attribute Requirements You can use two copies of the same Support Gem in different Skills"]={nil,"Equipment and Skill Gems have 25% increased Attribute Requirements You can use two copies of the same Support Gem in different Skills "}
-c["Equipment and Skill Gems have 4% reduced Attribute Requirements"]={nil,"Equipment and Skill Gems have 4% reduced Attribute Requirements "}
-c["Equipment and Skill Gems have 50% reduced Attribute Requirements"]={nil,"Equipment and Skill Gems have 50% reduced Attribute Requirements "}
+c["Equipment and Skill Gems have 25% increased Attribute Requirements"]={{[1]={flags=0,keywordFlags=0,name="GlobalAttributeRequirements",type="INC",value=25}},nil}
+c["Equipment and Skill Gems have 4% reduced Attribute Requirements"]={{[1]={flags=0,keywordFlags=0,name="GlobalAttributeRequirements",type="INC",value=-4}},nil}
+c["Equipment and Skill Gems have 50% reduced Attribute Requirements"]={{[1]={flags=0,keywordFlags=0,name="GlobalAttributeRequirements",type="INC",value=-50}},nil}
 c["Evasion Rating is increased by Overcapped Lightning Resistance"]={nil,"Evasion Rating is increased by Overcapped Lightning Resistance "}
 c["Every 12 seconds, gain 50% more Cast Speed for 4 seconds"]={nil,"Every 12 seconds, gain 50% more Cast Speed for 4 seconds "}
 c["Every 3 seconds during Effect, deal 50% of Mana spent in those seconds as Chaos Damage to Enemies within 3 metres"]={nil,"Every 3 seconds during Effect, deal 50% of Mana spent in those seconds as Chaos Damage to Enemies within 3 metres "}
@@ -2474,7 +2473,7 @@ c["Gain an Endurance Charge when you Heavy Stun a Rare or Unique Enemy"]={nil,"a
 c["Gain an additional Charge when you gain a Charge"]={nil,"an additional Charge when you gain a Charge "}
 c["Giant's Blood"]={{[1]={flags=0,keywordFlags=0,name="Keystone",type="LIST",value="Giant's Blood"}},nil}
 c["Grants 1 Passive Skill Point"]={{[1]={flags=0,keywordFlags=0,name="ExtraPoints",type="BASE",value=1}},nil}
-c["Grants 3 additional Skill Slots"]={{}," additional Skill Slots "}
+c["Grants 3 additional Skill Slots"]={{[1]={[1]={type="Condition",var="{Hand}Attack"},flags=0,keywordFlags=0,name="SkillSlots",type="BASE",value=3}},nil}
 c["Grants 5 Passive Skill Point"]={{[1]={flags=0,keywordFlags=0,name="ExtraPoints",type="BASE",value=5}},nil}
 c["Grants Skill: Ancestral Spirits"]={{[1]={flags=0,keywordFlags=0,name="ExtraSkill",type="LIST",value={level=1,skillId="AncestralSpiritsPlayer"}}},nil}
 c["Grants Skill: Bleeding Concoction"]={{[1]={flags=0,keywordFlags=0,name="ExtraSkill",type="LIST",value={level=1,skillId="BleedingConcoctionPlayer"}}},nil}
@@ -2892,7 +2891,7 @@ c["Sacrifice 20% of Mana and they Leech that Mana"]={{[1]={[1]={includeTransfigu
 c["Share Charges with Allies in your Presence"]={nil,"Share Charges with Allies in your Presence "}
 c["Shocking Hits have a 50% chance to also Shock enemies in a 1.5 metre radius"]={nil,"Shocking Hits have a 50% chance to also Shock enemies in a 1.5 metre radius "}
 c["Shocks you when you reach maximum Power Charges"]={nil,"Shocks you when you reach maximum Power Charges "}
-c["Skill Gems have 30% more Attribute Requirements"]={nil,"Skill Gems have 30% more Attribute Requirements "}
+c["Skill Gems have 30% more Attribute Requirements"]={{[1]={flags=0,keywordFlags=0,name="GlobalGemAttributeRequirements",type="MORE",value=30}},nil}
 c["Skill Mana Costs Converted to Life Costs"]={nil,"Skill Mana Costs Converted to Life Costs "}
 c["Skill Mana Costs Converted to Life Costs Skills gain 1% of Damage as Chaos Damage per 3 Life Cost"]={nil,"Skill Mana Costs Converted to Life Costs Skills gain 1% of Damage as Chaos Damage per 3 Life Cost "}
 c["Skills Supported by Unleash have 10% increased Seal gain frequency"]={{[1]={flags=0,keywordFlags=0,name="SealGainFrequency",type="INC",value=10}},nil}
