@@ -999,11 +999,11 @@ function SkillsTabClass:ProcessSocketGroup(socketGroup)
 		if gemInstance.gemData or gemInstance.grantedEffect then
 			gemInstance.new = nil
 			local grantedEffect = gemInstance.grantedEffect or gemInstance.gemData.grantedEffect
-			if gemInstance.gemData.reqStr >= 50 then
+			if gemInstance.gemData and gemInstance.gemData.reqStr >= 50 then
 				gemInstance.color = colorCodes.STRENGTH
-			elseif gemInstance.gemData.reqInt >= 50 then
+			elseif gemInstance.gemData and gemInstance.gemData.reqInt >= 50 then
 				gemInstance.color = colorCodes.INTELLIGENCE
-			elseif gemInstance.gemData.reqDex >= 50 then
+			elseif gemInstance.gemData and gemInstance.gemData.reqDex >= 50 then
 				gemInstance.color = colorCodes.DEXTERITY
 			else
 				gemInstance.color = colorCodes.NORMAL
