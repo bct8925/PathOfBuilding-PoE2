@@ -1357,8 +1357,19 @@ function calcs.perform(env, skipEHP)
 		local reqMultGem = calcLib.mod(modDB, nil, "GlobalAttributeRequirements", "GlobalGemAttributeRequirements")
 		output.GlobalItemAttributeRequirements = reqMultItem
 		output.GlobalGemAttributeRequirements = reqMultGem
-		local ignoreAttrReq = modDB:Flag(nil, "IgnoreAttributeRequirements")
+		local gemAttributeRequirementsSatisfiedByHighestAttribute = modDB:Flag(nil, "GemAttributeRequirementsSatisfiedByHighestAttribute")
 		local attrTable = {"Str","Dex","Int"}
+		local highestAttributeValue = 0
+		if gemAttributeRequirementsSatisfiedByHighestAttribute then
+			-- find highest attribute
+			for _, attr in ipairs(attrTable) do
+				local checkedAttributeValue = output[attr] or 0
+				if checkedAttributeValue > highestAttributeValue then
+					highestAttributeValue = checkedAttributeValue
+				end
+			end
+		end
+		local ignoreAttrReq = modDB:Flag(nil, "IgnoreAttributeRequirements")
 		for _, attr in ipairs(attrTable) do
 			local breakdownAttr = attr
 			if breakdown then
@@ -1380,13 +1391,13 @@ function calcs.perform(env, skipEHP)
 					elseif reqSource.source == "Gem" then
 						req = m_floor(reqSource[attr] * reqMultGem)
 					end
-					if req > out.val then
+					if req > (gemAttributeRequirementsSatisfiedByHighestAttribute and reqSource.source == "Gem" and highestAttributeValue or out.val) then
 						out.val = req
 						out.source = reqSource
 					end
 					if breakdown then
 						local row = {
-							req = req > output[breakdownAttr] and colorCodes.NEGATIVE..req or req,
+							req = req > (gemAttributeRequirementsSatisfiedByHighestAttribute and reqSource.source == "Gem" and highestAttributeValue or output[breakdownAttr]) and colorCodes.NEGATIVE..req or req,
 							reqNum = req,
 							source = reqSource.source,
 						}
@@ -1407,25 +1418,16 @@ function calcs.perform(env, skipEHP)
 				out.val = 0
 			end
 			output["Req"..attr.."String"] = 0
-			if out.val > (output["Req"..breakdownAttr] or 0) then
-				output["Req"..breakdownAttr.."String"] = out.val
-				output["Req"..breakdownAttr] = out.val
-				output["Req"..breakdownAttr.."Item"] = out.source
+			local checkedAttributeStr = "Req"..breakdownAttr
+			local checkedAttributeValue = output[breakdownAttr] or 0
+			if out.val > (output[checkedAttributeStr] or 0) then
+				output[checkedAttributeStr.."String"] = out.val
+				output[checkedAttributeStr] = out.val
+				output[checkedAttributeStr.."Item"] = out.source
 				if breakdown then
-					output["Req"..breakdownAttr.."String"] = out.val > (output[breakdownAttr] or 0) and colorCodes.NEGATIVE..(out.val) or out.val
+					output[checkedAttributeStr.."String"] = out.val > (gemAttributeRequirementsSatisfiedByHighestAttribute and out.source == "Gem" and highestAttributeValue or checkedAttributeValue) and colorCodes.NEGATIVE..(out.val) or out.val
 				end
 			end
-		end
-		if breakdown and breakdown["ReqOmni"] then
-			table.sort(breakdown["ReqOmni"].rowList, function(a, b)
-				if a.reqNum ~= b.reqNum then
-					return a.reqNum > b.reqNum
-				elseif a.source ~= b.source then
-					return a.source < b.source
-				else
-					return a.sourceName < b.sourceName
-				end
-			end)
 		end
 	end
 
