@@ -44,12 +44,6 @@ local GemSelectClass = newClass("GemSelectControl", "EditControl", function(self
 		self:UpdateGem()
 	end
 	self.costs = data.costs
-	self.reservationMap = {
-		manaReservationFlat = "Mana",
-		manaReservationPercent = "ManaPercent",
-		lifeReservationFlat = "Life",
-		lifeReservationPercent = "LifePercent",
-	}
 end)
 
 function GemSelectClass:CalcOutputWithThisGem(calcFunc, gemData, useFullDPS)
@@ -571,14 +565,8 @@ function GemSelectClass:AddGrantedEffectInfo(gemInstance, grantedEffect, addReq)
 		if grantedEffectLevel.manaMultiplier then
 			self.tooltip:AddLine(16, string.format("^x7F7F7FCost & Reservation Multiplier: ^7%d%%", grantedEffectLevel.manaMultiplier + 100))
 		end
-		local reservation
-		for name, res in pairs(self.reservationMap) do
-			if grantedEffectLevel[name] then
-				reservation = (reservation and (reservation .. ", ") or "") .. self.costs[isValueInArrayPred(self.costs, function(v) return v.Resource == res end)].ResourceString:gsub("{0}", string.format("%d", grantedEffectLevel[name]))
-			end
-		end
-		if reservation then
-			self.tooltip:AddLine(16, "^x7F7F7FReservation Override: ^7"..reservation)
+		if grantedEffectLevel.spiritReservationFlat then
+			self.tooltip:AddLine(16, string.format("^x7F7F7FReservation: ^7%d Spirit", grantedEffectLevel.spiritReservationFlat))
 		end
 		if grantedEffectLevel.cooldown then
 			local string = string.format("^x7F7F7FCooldown Time: ^7%.2f sec", grantedEffectLevel.cooldown)
@@ -588,14 +576,8 @@ function GemSelectClass:AddGrantedEffectInfo(gemInstance, grantedEffect, addReq)
 			self.tooltip:AddLine(16, string)
 		end
 	else
-		local reservation
-		for name, res in pairs(self.reservationMap) do
-			if grantedEffectLevel[name] then
-				reservation = (reservation and (reservation..", ") or "") .. self.costs[isValueInArrayPred(self.costs, function(v) return v.Resource == res end)].ResourceString:gsub("{0}", string.format("%d", grantedEffectLevel[name]))
-			end
-		end
-		if reservation then
-			self.tooltip:AddLine(16, "^x7F7F7FReservation: ^7" .. reservation)
+		if grantedEffectLevel.spiritReservationFlat then
+			self.tooltip:AddLine(16, string.format("^x7F7F7FReservation: ^7%d Spirit", grantedEffectLevel.spiritReservationFlat))
 		end
 		local cost
 		for _, res in ipairs(self.costs) do

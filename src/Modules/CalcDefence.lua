@@ -114,22 +114,28 @@ function calcs.doActorLifeManaSpiritReservation(actor)
 	actor.reserved_LifePercent = modDB:Sum("BASE", nil, "ExtraLifeReserved")
 	actor.reserved_ManaBase = 0
 	actor.reserved_ManaPercent = 0
+	actor.reserved_SpiritBase = 0
+	actor.reserved_SpiritPercent = 0
 	actor.uncancellable_LifeReservation = modDB:Sum("BASE", nil, "ExtraLifeReserved")
 	actor.uncancellable_ManaReservation = modDB:Sum("BASE", nil, "ExtraManaReserved")
+	actor.uncancellable_SpiritReservation = modDB:Sum("BASE", nil, "ExtraSpiritReserved")
 	if breakdown then
 		breakdown.LifeReserved = { reservations = { } }
 		breakdown.ManaReserved = { reservations = { } }
+		breakdown.SpiritReserved = { reservations = { } }
 	end
 	for _, activeSkill in ipairs(actor.activeSkillList) do
 		if (activeSkill.skillTypes[SkillType.HasReservation] or activeSkill.skillData.SupportedByAutoexertion) and not activeSkill.skillTypes[SkillType.ReservationBecomesCost] then
 			local skillModList = activeSkill.skillModList
 			local skillCfg = activeSkill.skillCfg
 			local mult = floor(skillModList:More(skillCfg, "SupportManaMultiplier"), 4)
-			local pool = { ["Mana"] = { }, ["Life"] = { } }
+			local pool = { ["Mana"] = { }, ["Life"] = { }, ["Spirit"] = { } }
 			pool.Mana.baseFlat = activeSkill.skillData.manaReservationFlat or activeSkill.activeEffect.grantedEffectLevel.manaReservationFlat or 0
+			pool.Spirit.baseFlat = activeSkill.skillData.spiritReservationFlat or activeSkill.activeEffect.grantedEffectLevel.spiritReservationFlat or 0
 			if skillModList:Flag(skillCfg, "ManaCostGainAsReservation") and activeSkill.activeEffect.grantedEffectLevel.cost then
-				pool.Mana.baseFlat = skillModList:Sum("BASE", skillCfg, "ManaCostBase") + (activeSkill.activeEffect.grantedEffectLevel.cost.Mana or 0)
+				pool.Spirit.baseFlat = skillModList:Sum("BASE", skillCfg, "ManaCostBase") + (activeSkill.activeEffect.grantedEffectLevel.cost.Mana or 0)
 			end
+			pool.Spirit.basePercent = activeSkill.skillData.spiritReservationPercent or activeSkill.activeEffect.grantedEffectLevel.spiritReservationPercent or 0
 			pool.Mana.basePercent = activeSkill.skillData.manaReservationPercent or activeSkill.activeEffect.grantedEffectLevel.manaReservationPercent or 0
 			pool.Life.baseFlat = activeSkill.skillData.lifeReservationFlat or activeSkill.activeEffect.grantedEffectLevel.lifeReservationFlat or 0
 			if skillModList:Flag(skillCfg, "LifeCostGainAsReservation") and activeSkill.activeEffect.grantedEffectLevel.cost then

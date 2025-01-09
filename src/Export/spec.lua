@@ -6296,7 +6296,7 @@ return {
 		},
 		[19]={
 			list=false,
-			name="Reservation",
+			name="SpiritReservation",
 			refTo="",
 			type="Int",
 			width=150

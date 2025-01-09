@@ -526,7 +526,7 @@ skills["SupportClarityPlayer"] = {
 	addSkillTypes = { },
 	excludeSkillTypes = { },
 	levels = {
-		[1] = { levelRequirement = 0, },
+		[1] = { spiritReservationFlat = 10, levelRequirement = 0, },
 	},
 	statSets = {
 		[1] = {

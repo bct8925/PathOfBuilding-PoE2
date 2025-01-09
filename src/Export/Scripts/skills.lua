@@ -320,6 +320,9 @@ directiveTable.skill = function(state, args, out)
 		for i, cost in ipairs(granted.CostType) do
 			level.cost[cost["Resource"]] = levelRow.CostAmounts[i]
 		end
+		if levelRow.SpiritReservation ~= 0 then
+			level.extra.spiritReservationFlat = levelRow.SpiritReservation
+		end
 		--if levelRow.ManaReservationFlat ~= 0 then
 		--	level.extra.manaReservationFlat = levelRow.ManaReservationFlat
 		--end

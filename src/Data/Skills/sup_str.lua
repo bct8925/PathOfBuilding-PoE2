@@ -317,7 +317,7 @@ skills["SupportCannibalismPlayer"] = {
 	addSkillTypes = { },
 	excludeSkillTypes = { },
 	levels = {
-		[1] = { levelRequirement = 0, },
+		[1] = { spiritReservationFlat = 15, levelRequirement = 0, },
 	},
 	statSets = {
 		[1] = {
@@ -1084,7 +1084,7 @@ skills["SupportHerbalismPlayer"] = {
 	addSkillTypes = { },
 	excludeSkillTypes = { },
 	levels = {
-		[1] = { levelRequirement = 0, },
+		[1] = { spiritReservationFlat = 15, levelRequirement = 0, },
 	},
 	statSets = {
 		[1] = {
@@ -2065,7 +2065,7 @@ skills["SupportVitalityPlayer"] = {
 	addSkillTypes = { },
 	excludeSkillTypes = { },
 	levels = {
-		[1] = { levelRequirement = 0, },
+		[1] = { spiritReservationFlat = 20, levelRequirement = 0, },
 	},
 	statSets = {
 		[1] = {
