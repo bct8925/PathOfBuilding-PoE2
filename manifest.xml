@@ -144,7 +144,6 @@
 	<File name="Data/Bases/shield.lua" part="program" sha1="d9d7511fb7ce19ffce6817918935775fe9dcfaa4" />
 	<File name="Data/Bases/staff.lua" part="program" sha1="ca23f0d162d1dba97c2b8ea4112c277c119b94d2" />
 	<File name="Data/Bases/sword.lua" part="program" sha1="ff5e7559b9657c35b812979aea3562892647d2c1" />
-	<File name="Data/Bases/tincture.lua" part="program" sha1="9c7818795876f50cd8eef377d2316208664432d9" />
 	<File name="Data/Bases/wand.lua" part="program" sha1="571a19b409b8557e88a6e6c29f00273ae1da5217" />
 	<File name="Data/Bosses.lua" part="program" sha1="81591b7eeaeebdf743ae032b8bf41714f2860e70" />
 	<File name="Data/BossSkills.lua" part="program" sha1="04ba9d9cece737a23af6e455b1c88e9a0e98ee5b" />
