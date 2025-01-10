@@ -113,15 +113,9 @@ directiveTable.emit = function(state, args, out)
 			out:write('"',tag.Id, '", ')
 		end
 	out:write('},\n')
+	out:write('\tlife = ', (monsterVariety.LifeMultiplier/100), ',\n')
 	if monsterVariety.Type.BaseDamageIgnoresAttackSpeed then
 		out:write('\tbaseDamageIgnoresAttackSpeed = true,\n')
-	end
-	out:write('\tlife = ', (monsterVariety.LifeMultiplier/100), ',\n')
-	if monsterVariety.Type.AltLife1 then
-		out:write('\tlifeScaling = "AltLife1",\n')
-	end
-	if monsterVariety.Type.AltLife2 then
-		out:write('\tlifeScaling = "AltLife2",\n')
 	end
 	if monsterVariety.Type.EnergyShield ~= 0 then
 		out:write('\tenergyShield = ', (0.4 * monsterVariety.Type.EnergyShield / 100), ',\n')
@@ -132,10 +126,10 @@ directiveTable.emit = function(state, args, out)
 	if monsterVariety.Type.Evasion ~= 0 then
 		out:write('\tevasion = ', monsterVariety.Type.Evasion / 100, ',\n')
 	end
-	out:write('\tfireResist = ', monsterVariety.Type.Resistances.FireMerciless, ',\n')
-	out:write('\tcoldResist = ', monsterVariety.Type.Resistances.ColdMerciless, ',\n')
-	out:write('\tlightningResist = ', monsterVariety.Type.Resistances.LightningMerciless, ',\n')
-	out:write('\tchaosResist = ', monsterVariety.Type.Resistances.ChaosMerciless, ',\n')
+	out:write('\tfireResist = ', monsterVariety.Type.Resistances[1].Fire1[1], ',\n')
+	out:write('\tcoldResist = ', monsterVariety.Type.Resistances[1].Cold1[1], ',\n')
+	out:write('\tlightningResist = ', monsterVariety.Type.Resistances[1].Lightning1[1], ',\n')
+	out:write('\tchaosResist = ', monsterVariety.Type.Resistances[1].Chaos1[1], ',\n')
 	out:write('\tdamage = ', (monsterVariety.DamageMultiplier/100), ',\n')
 	out:write('\tdamageSpread = ', (monsterVariety.Type.DamageSpread / 100), ',\n')
 	out:write('\tattackTime = ', (monsterVariety.AttackDuration/1000), ',\n')
@@ -208,7 +202,8 @@ directiveTable.spectre = function(state, args, out)
 	directiveTable.emit(state, "", out)
 end
 
-for _, name in pairs({"Spectres","Minions"}) do
+--for _, name in pairs({"Spectres","Minions"}) do -- Add back when Spectres are in the game again
+for _, name in pairs({"Minions"}) do
 	processTemplateFile(name, "Minions/", "../Data/", directiveTable)
 end
 

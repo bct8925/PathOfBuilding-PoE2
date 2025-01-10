@@ -5,3 +5,9 @@
 --
 local skills, mod, flag, skill = ...
 
+#skill MinionMeleeStep
+#startSets
+#set MinionMeleeStep
+#flags attack
+#mods
+#skillEnd

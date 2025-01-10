@@ -5,193 +5,54 @@
 --
 local minions, mod = ...
 
-#monster Metadata/Monsters/RaisedZombies/RaisedZombieStandard RaisedZombie
+#monster Metadata/Monsters/Zombies/PlayerSummoned/PlayerSummonedZombie_ RaisedZombie
 #limit ActiveZombieLimit
 #emit
 
-#monster Metadata/Monsters/ChaosElemental/ChaosElementalSummoned SummonedChaosGolem
-#limit ActiveGolemLimit
-#emit
-
-#monster Metadata/Monsters/FireElemental/FireElementalSummoned SummonedFlameGolem
-#limit ActiveGolemLimit
-#emit
-
-#monster Metadata/Monsters/IceElemental/IceElementalSummoned SummonedIceGolem
-#limit ActiveGolemLimit
-#emit
-
-#monster Metadata/Monsters/LightningGolem/LightningGolemSummoned SummonedLightningGolem
-#limit ActiveGolemLimit
-#emit
-
-#monster Metadata/Monsters/RockGolem/RockGolemSummoned SummonedStoneGolem
-#limit ActiveGolemLimit
-#emit
-
-#monster Metadata/Monsters/SummonedSkull/SummonedSkull SummonedRagingSpirit
+#monster Metadata/Monsters/RagingSpirit/RagingSpiritPlayerSummoned SummonedRagingSpirit
 #limit ActiveRagingSpiritLimit
 #emit
 
-#monster Metadata/Monsters/SummonedSkull/SpectralSummonedSkull SummonedEssenceSpirit
-#mod mod("Condition:FullLife", "FLAG", true)
-#emit
-
-#monster Metadata/Monsters/SummonedWolf/SummonedWolf SummonedSpectralWolf
-#limit ActiveWolfLimit
-#emit
-
-#monster Metadata/Monsters/RaisedSkeletons/RaisedSkeletonStandard RaisedSkeleton
+#monster Metadata/Monsters/Skeletons/PlayerSummoned/SkeletonArcherPlayerSummoned RaisedSkeletonSniper
 #limit ActiveSkeletonLimit
 #emit
 
-#monster Metadata/Monsters/RaisedSkeletons/RaisedSkeletonSpellcaster1Army RaisedSkeletonCaster
-#limit ActiveSkeletonLimit
-#skill SkeletonMinionProjectileFire
-#skill SkeletonMinionProjectileLightning
-#emit
-
-#monster Metadata/Monsters/RaisedSkeletons/RaisedSkeletonMelee1Army RaisedSkeletonMeleeVaal
+#monster Metadata/Monsters/Skeletons/PlayerSummoned/SkeletonWarriorPlayerSummoned RaisedSkeletonWarrior
 #limit ActiveSkeletonLimit
 #emit
 
-#monster Metadata/Monsters/RaisedSkeletons/RaisedSkeletonRanged1Army RaisedSkeletonArcherVaal
+#monster Metadata/Monsters/Skeletons/PlayerSummoned/SkeletonBrutePlayerSummoned_ RaisedSkeletonBrute
 #limit ActiveSkeletonLimit
 #emit
 
-#monster Metadata/Monsters/RaisedSkeletons/RaisedSkeletonRanged1Quality RaisedSkeletonArcher
+#monster Metadata/Monsters/Skeletons/PlayerSummoned/SkeletonStormMagePlayerSummoned_ RaisedSkeletonStormMage
 #limit ActiveSkeletonLimit
 #emit
 
-#monster Metadata/Monsters/Clone/MarauderClone Clone
+#monster Metadata/Monsters/Skeletons/PlayerSummoned/SkeletonFrostMagePlayerSummoned RaisedSkeletonFrostMage
+#limit ActiveSkeletonLimit
 #emit
 
-#monster Metadata/Monsters/Clone/MarauderCloneImmobile ArrowClone
+#monster Metadata/Monsters/Skeletons/PlayerSummoned/SkeletonClericPlayerSummoned_ RaisedSkeletonCleric
+#limit ActiveSkeletonLimit
 #emit
 
-#monster Metadata/Monsters/Clone/MarauderCloneImmobileRainOfArrows ArrowCloneRoA
+#monster Metadata/Monsters/Skeletons/PlayerSummoned/SkeletonArsonistPlayerSummoned RaisedSkeletonArsonist
+#limit ActiveSkeletonLimit
 #emit
 
-#monster Metadata/Monsters/Clone/MarauderCloneImmobileElementalShot ArrowCloneEle
+#monster Metadata/Monsters/Skeletons/PlayerSummoned/SkeletonReaverPlayerSummoned RaisedSkeletonReaver
+#limit ActiveSkeletonLimit
 #emit
 
-#monster Metadata/Monsters/SummonedSpider/SummonedSpider SpiderMinion
-#limit ActiveSpiderLimit
+#monster Metadata/Monsters/Hellhound/HellhoundPlayerSummoned SummonedHellhound
+#limit ActiveSkeletonLimit
 #emit
 
-#monster Metadata/Monsters/AnimatedItem/AnimatedWeapon AnimatedWeapon
+#monster Metadata/Monsters/Totems/ancestor_totem/AncestralWarriorSpirit SummonedHellhound
+#limit ActiveSkeletonLimit
 #emit
 
-#monster Metadata/Monsters/AnimatedItem/AnimatedArmour AnimatedArmour
-#mod mod("Speed", "MORE", 10, ModFlag.Attack, 0, { type = "Condition", var = "DualWielding" })
-#mod mod("BlockChance", "BASE", 15, 0, 0, { type = "Condition", var = "DualWielding" })
-#emit
-
-#monster Metadata/Monsters/IcyRagingSpirit/IcyRagingSpirit IcyRagingSpirit
-#emit
-
-#monster Metadata/Monsters/AnimatedItem/UniqueAnimatedWeapon UniqueAnimatedWeapon
-#mod mod("Life", "MORE", 698), -- MonsterUnique2
-#mod mod("Damage", "MORE", 70), -- MonsterUnique5
-#mod mod("Speed", "MORE", 33, ModFlag.Attack), -- MonsterUnique8
-#mod mod("Damage", "MORE", -33, ModFlag.Attack), -- MonsterUnique8
-#mod mod("DamageTaken", "MORE", -95), -- monster_inherent_damage_taken_+%_final : UniqueAnimatedWeapon.ot
-#emit
-
-#monster Metadata/Monsters/SummonedPhantasm/SummonedPhantasm SummonedPhantasm
-#limit ActivePhantasmLimit
-#emit
-
-#monster Metadata/Monsters/SpiderPlated/HeraldOfAgonySpiderPlated HeraldOfAgonySpiderPlated
-#mod mod("Condition:FullLife", "FLAG", true)
-#emit
-
-#monster Metadata/Monsters/Axis/AxisEliteSoldierHeraldOfLight AxisEliteSoldierHeraldOfLight
-#limit ActiveSentinelOfPurityLimit
-#emit
-
-#monster Metadata/Monsters/AnimatedItem/HolyLivingRelic HolyLivingRelic
-#limit ActiveHolyRelicLimit
-#emit
-
-#monster Metadata/Monsters/Axis/AxisEliteSoldierDominatingBlow AxisEliteSoldierDominatingBlow
-#emit
-
-#monster Metadata/Monsters/Axis/AxisEliteSoldierDominatingBlowVaal AxisEliteSoldierDominatingBlowVaal
-#mod mod("Damage", "MORE", 200)
-#mod mod("DamageTaken", "MORE", -70)
-#emit
-
-#monster Metadata/Monsters/TemplarJudge/AbsolutionTemplarJudge AbsolutionTemplarJudge
-#emit
-
-#monster Metadata/Monsters/TemplarJudge/AbsolutionTemplarJudgeVaal AbsolutionTemplarJudgeVaal
-#mod mod("Damage", "MORE", 200)
-#mod mod("DamageTaken", "MORE", -70)
-#emit
-
-#monster Metadata/Monsters/Rhoas/RhoaUniqueSummoned RhoaUniqueSummoned
-#limit ActiveBeastMinionLimit
-#emit
-
-#monster Metadata/Monsters/Snake/SnakeSpitUniqueSummoned SnakeSpitUniqueSummoned
-#limit ActiveBeastMinionLimit
-#emit
-
-#monster Metadata/Monsters/DropBear/DropBearUniqueSummoned DropBearUniqueSummoned
-#limit ActiveBeastMinionLimit
-#emit
-
-#monster Metadata/Monsters/BoneGolem/BoneGolem SummonedCarrionGolem
-#limit ActiveGolemLimit
-#emit
-
-#monster Metadata/Monsters/Skitterbot/SkitterbotCold SkitterbotCold
-#emit
-
-#monster Metadata/Monsters/Skitterbot/SkitterbotLightning SkitterbotLightning
-#emit
-
-#monster Metadata/Monsters/SummonedReaper/SummonedReaper SummonedReaper
-#emit
-
-#monster Metadata/Monsters/LeagueExpedition/Arbalest/SummonedArbalest SummonedArbalists
-#limit ActiveArbalistLimit
-#emit
-
-#monster Metadata/Monsters/Axis/AxisEliteSoldierRadiance GuardianSentinel
-#emit
-
--- This is a fake Minion to apply all 3 auras
-minions["GuardianRelicAll"] = {
-	name = "All Relics",
-	life = 4,
-	energyShield = 0.6,
-	fireResist = 40,
-	coldResist = 40,
-	lightningResist = 40,
-	chaosResist = 20,
-	damage = 1,
-	damageSpread = 0,
-	attackTime = 1,
-	attackRange = 6,
-	accuracy = 1,
-	skillList = {
-		"RelicTeleport",
-		"Anger",
-		"Hatred",
-		"Wrath",
-	},
-	modList = {
-		-- EmergeSpeedHigh [emerge_speed_+% = 0]
-	},
-}
-
-#monster Metadata/Monsters/AnimatedItem/ElementalLivingRelicFire GuardianRelicFire
-#emit
-
-#monster Metadata/Monsters/AnimatedItem/ElementalLivingRelicCold GuardianRelicCold
-#emit
-
-#monster Metadata/Monsters/AnimatedItem/ElementalLivingRelicLightning GuardianRelicLightning
+#monster Metadata/Monsters/SkeletalConstruct/BoneConstructPlayerSummoned UnearthBoneConstruct
+#limit ActiveSkeletonLimit
 #emit

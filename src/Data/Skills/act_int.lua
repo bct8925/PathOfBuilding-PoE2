@@ -12339,6 +12339,9 @@ skills["RaiseZombiePlayer"] = {
 		[39] = { levelRequirement = 90, cost = { Mana = 1226, }, },
 		[40] = { levelRequirement = 90, cost = { Mana = 1388, }, },
 	},
+	minionList = {
+		--"RaisedZombie",
+	},
 	statSets = {
 		[1] = {
 			label = "Minion Info",
@@ -12346,6 +12349,9 @@ skills["RaiseZombiePlayer"] = {
 			incrementalEffectiveness = 0.092720001935959,
 			statDescriptionScope = "raise_zombie",
 			baseFlags = {
+				spell = true,
+				minion = true,
+				permanentMinion = true,
 			},
 			constantStats = {
 				{ "display_minion_monster_type", 1 },

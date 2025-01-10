@@ -751,7 +751,7 @@ directiveTable.skillEnd = function(state, args, out)
 	state.skill = nil
 end
 
-for _, name in pairs({"act_str","act_dex","act_int","other","sup_str","sup_dex","sup_int"}) do
+for _, name in pairs({"act_str","act_dex","act_int","other","minion","sup_str","sup_dex","sup_int"}) do
 	processTemplateFile(name, "Skills/", "../Data/Skills/", directiveTable)
 end
 

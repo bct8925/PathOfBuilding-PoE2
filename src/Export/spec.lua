@@ -9198,224 +9198,224 @@ return {
 		},
 		[2]={
 			list=true,
-			name="FireNormal",
+			name="Fire1",
 			refTo="",
 			type="Int",
-			width=80
+			width=50
 		},
 		[3]={
 			list=true,
-			name="ColdNormal",
+			name="",
 			refTo="",
 			type="Int",
-			width=80
+			width=30
 		},
 		[4]={
 			list=true,
-			name="LightningNormal",
+			name="Fire2",
 			refTo="",
 			type="Int",
-			width=80
+			width=50
 		},
 		[5]={
 			list=true,
-			name="ChaosNormal",
+			name="",
 			refTo="",
 			type="Int",
-			width=80
+			width=30
 		},
 		[6]={
 			list=true,
-			name="FireCruel",
+			name="Fire3",
 			refTo="",
 			type="Int",
-			width=80
+			width=50
 		},
 		[7]={
 			list=true,
-			name="ColdCruel",
+			name="",
 			refTo="",
 			type="Int",
-			width=80
+			width=30
 		},
 		[8]={
 			list=true,
-			name="LightningCruel",
+			name="Fire4",
 			refTo="",
 			type="Int",
 			width=100
 		},
 		[9]={
 			list=true,
-			name="ChaosCruel",
+			name="",
 			refTo="",
 			type="Int",
-			width=90
+			width=100
 		},
 		[10]={
 			list=true,
-			name="FireMerciless",
+			name="Cold1",
 			refTo="",
 			type="Int",
-			width=80
+			width=50
 		},
 		[11]={
 			list=true,
-			name="ColdMerciless",
+			name="",
 			refTo="",
 			type="Int",
-			width=80
+			width=30
 		},
 		[12]={
 			list=true,
-			name="LightningMerciless",
+			name="Cold2",
 			refTo="",
 			type="Int",
-			width=80
+			width=50
 		},
 		[13]={
 			list=true,
-			name="ChaosMerciless",
+			name="",
 			refTo="",
 			type="Int",
-			width=80
+			width=30
 		},
 		[14]={
 			list=true,
-			name="1",
+			name="Cold3",
 			refTo="",
 			type="Int",
 			width=50
 		},
 		[15]={
 			list=true,
-			name="2",
+			name="",
 			refTo="",
 			type="Int",
-			width=50
+			width=30
 		},
 		[16]={
 			list=true,
-			name="3",
+			name="Cold4",
 			refTo="",
 			type="Int",
 			width=100
 		},
 		[17]={
 			list=true,
-			name="4",
+			name="",
 			refTo="",
 			type="Int",
 			width=100
 		},
 		[18]={
 			list=true,
-			name="5",
+			name="Lightning1",
 			refTo="",
 			type="Int",
-			width=50
+			width=60
 		},
 		[19]={
 			list=true,
-			name="6",
+			name="",
 			refTo="",
 			type="Int",
-			width=50
+			width=30
 		},
 		[20]={
 			list=true,
-			name="7",
+			name="Lightning2",
 			refTo="",
 			type="Int",
-			width=50
+			width=60
 		},
 		[21]={
 			list=true,
-			name="8",
+			name="",
 			refTo="",
 			type="Int",
-			width=50
+			width=30
 		},
 		[22]={
 			list=true,
-			name="9",
+			name="Lightning3",
 			refTo="",
 			type="Int",
-			width=50
+			width=60
 		},
 		[23]={
 			list=true,
-			name="10",
+			name="",
 			refTo="",
 			type="Int",
-			width=50
+			width=30
 		},
 		[24]={
 			list=true,
-			name="11",
+			name="Lightning4",
 			refTo="",
 			type="Int",
 			width=100
 		},
 		[25]={
 			list=true,
-			name="12",
+			name="",
 			refTo="",
 			type="Int",
 			width=90
 		},
 		[26]={
 			list=true,
-			name="13",
+			name="Chaos1",
 			refTo="",
 			type="Int",
 			width=50
 		},
 		[27]={
 			list=true,
-			name="14",
+			name="",
 			refTo="",
 			type="Int",
-			width=50
+			width=30
 		},
 		[28]={
 			list=true,
-			name="15",
+			name="Chaos2",
 			refTo="",
 			type="Int",
 			width=50
 		},
 		[29]={
 			list=true,
-			name="16",
+			name="",
 			refTo="",
 			type="Int",
-			width=50
+			width=30
 		},
 		[30]={
 			list=true,
-			name="17",
+			name="Chaos3",
 			refTo="",
 			type="Int",
 			width=50
 		},
 		[31]={
 			list=true,
-			name="18",
+			name="",
 			refTo="",
 			type="Int",
-			width=50
+			width=30
 		},
 		[32]={
 			list=true,
-			name="19",
+			name="Chaos4",
 			refTo="",
 			type="Int",
 			width=100
 		},
 		[33]={
 			list=true,
-			name="20",
+			name="",
 			refTo="",
 			type="Int",
 			width=80
@@ -9472,7 +9472,7 @@ return {
 			name="OTFile",
 			refTo="",
 			type="String",
-			width=150
+			width=550
 		},
 		[3]={
 			list=false,
@@ -9525,7 +9525,7 @@ return {
 		},
 		[10]={
 			list=false,
-			name="AltLife1",
+			name="BaseDamageIgnoresAttackSpeed",
 			refTo="",
 			type="Bool",
 			width=180
@@ -9544,7 +9544,7 @@ return {
 			name="Id",
 			refTo="",
 			type="String",
-			width=450
+			width=510
 		},
 		[2]={
 			list=false,
@@ -10087,31 +10087,31 @@ return {
 		},
 		[79]={
 			list=false,
-			name="AilmentThreshold",
+			name="SinkEffect",
 			refTo="",
-			type="Int",
+			type="String",
 			width=150
 		},
 		[80]={
-			list=false,
-			name="SinkEffect",
-			refTo="",
-			type="Int",
-			width=150
-		},
-		[81]={
 			list=false,
 			name="",
 			refTo="",
 			type="Int",
 			width=50
 		},
-		[82]={
+		[81]={
 			list=false,
 			name="MonsterConditionalEffectPack",
 			refTo="MonsterConditionalEffectPacks",
 			type="Key",
 			width=150
+		},
+		[82]={
+			list=false,
+			name="",
+			refTo="",
+			type="Bool",
+			width=50
 		},
 		[83]={
 			list=false,
@@ -10124,21 +10124,21 @@ return {
 			list=false,
 			name="",
 			refTo="",
-			type="Bool",
+			type="Int",
 			width=50
 		},
 		[85]={
 			list=false,
 			name="",
 			refTo="",
-			type="Int",
+			type="Bool",
 			width=50
 		},
 		[86]={
 			list=false,
 			name="",
 			refTo="",
-			type="Bool",
+			type="Int",
 			width=50
 		},
 		[87]={
@@ -10188,14 +10188,14 @@ return {
 			name="",
 			refTo="",
 			type="Int",
-			width=50
+			width=130
 		},
 		[94]={
 			list=false,
 			name="",
 			refTo="",
 			type="Int",
-			width=130
+			width=50
 		},
 		[95]={
 			list=false,
@@ -10220,37 +10220,37 @@ return {
 		},
 		[98]={
 			list=false,
-			name="",
-			refTo="",
-			type="Int",
-			width=50
-		},
-		[99]={
-			list=false,
 			name="BossHealthBar",
 			refTo="",
 			type="Bool",
 			width=100
 		},
-		[100]={
+		[99]={
 			list=false,
 			name="",
 			refTo="",
 			type="Key",
 			width=50
 		},
-		[101]={
+		[100]={
 			list=false,
 			name="",
 			refTo="",
 			type="Int",
 			width=50
 		},
-		[102]={
+		[101]={
 			list=false,
 			name="",
 			refTo="",
 			type="Bool",
+			width=150
+		},
+		[102]={
+			list=false,
+			name="",
+			refTo="",
+			type="Int",
 			width=150
 		},
 		[103]={
@@ -10278,33 +10278,33 @@ return {
 			list=false,
 			name="",
 			refTo="",
-			type="Int",
+			type="Bool",
 			width=150
 		},
 		[107]={
 			list=false,
 			name="",
 			refTo="",
-			type="Bool",
+			type="Int",
 			width=150
 		},
 		[108]={
 			list=false,
 			name="",
 			refTo="",
-			type="Int",
+			type="Key",
 			width=150
 		},
 		[109]={
 			list=false,
-			name="",
+			name="A",
 			refTo="",
-			type="Key",
+			type="Int",
 			width=150
 		},
 		[110]={
 			list=false,
-			name="A",
+			name="",
 			refTo="",
 			type="Int",
 			width=150
@@ -10320,45 +10320,38 @@ return {
 			list=false,
 			name="",
 			refTo="",
-			type="Int",
+			type="Bool",
 			width=150
 		},
 		[113]={
 			list=false,
 			name="",
 			refTo="",
-			type="Bool",
+			type="Int",
 			width=150
 		},
 		[114]={
 			list=false,
 			name="",
 			refTo="",
-			type="Int",
-			width=150
-		},
-		[115]={
-			list=false,
-			name="",
-			refTo="",
 			type="String",
 			width=380
 		},
-		[116]={
+		[115]={
 			list=false,
 			name="",
 			refTo="",
 			type="Key",
 			width=150
 		},
-		[117]={
+		[116]={
 			list=false,
 			name="",
 			refTo="",
 			type="Int",
 			width=150
 		},
-		[118]={
+		[117]={
 			list=false,
 			name="",
 			refTo="",
@@ -11537,7 +11530,7 @@ return {
 			name="GrantedSkill",
 			refTo="SkillGems",
 			type="Key",
-			width=150
+			width=340
 		},
 		[50]={
 			list=false,

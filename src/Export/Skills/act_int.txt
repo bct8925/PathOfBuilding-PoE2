@@ -773,9 +773,12 @@ local skills, mod, flag, skill = ...
 #skillEnd
 
 #skill RaiseZombiePlayer
+	minionList = {
+		"RaisedZombie",
+	},
 #startSets
 #set RaiseZombiePlayer
-#flags
+#flags spell minion permanentMinion
 #mods
 #skillEnd
 

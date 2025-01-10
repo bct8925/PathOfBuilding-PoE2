@@ -8,1154 +8,326 @@ local minions, mod = ...
 
 minions["RaisedZombie"] = {
 	name = "Raised Zombie",
-	monsterTags = { "animal_claw_weapon", "fast_movement", "flesh_armour", "is_unarmed", "medium_height", "melee", "physical_affinity", "red_blood", "undead", "zombie", },
-	life = 3.75,
-	fireResist = 40,
-	coldResist = 40,
-	lightningResist = 40,
-	chaosResist = 20,
-	damage = 1.65,
-	damageSpread = 0.4,
-	attackTime = 1.17,
-	attackRange = 11,
-	accuracy = 3.4,
+	monsterTags = { "animal_claw_weapon", "flesh_armour", "is_unarmed", "medium_height", "melee", "physical_affinity", "Unarmed_onhit_audio", "undead", "very_slow_movement", "zombie", },
+	life = 0.7,
+	baseDamageIgnoresAttackSpeed = true,
+	fireResist = 0,
+	coldResist = 0,
+	lightningResist = 0,
+	chaosResist = 0,
+	damage = 0.75,
+	damageSpread = 0.3,
+	attackTime = 1.25,
+	attackRange = 9,
+	accuracy = 1,
+	weaponType1 = "One Handed Axe",
 	limit = "ActiveZombieLimit",
 	skillList = {
-		"Melee",
-		"ZombieSlam",
-		"GAZombieCorpseGroundImpact",
-	},
-	modList = {
-		mod("Armour", "INC", 40, 0, 0), -- MonsterImplicitDamageReduction1 [physical_damage_reduction_rating_+% = 40]
-		mod("StunThreshold", "INC", 30, 0, 0), -- RaiseZombieStunThreshold [stun_threshold_+% = 30]
-	},
-}
-
-minions["SummonedChaosGolem"] = {
-	name = "Chaos Golem",
-	monsterTags = { "bludgeoning_weapon", "caster", "chaos_affinity", "construct", "fast_movement", "ghost_blood", "is_unarmed", "large_model", "medium_height", "melee", "not_dex", "physical_affinity", "stone_armour", },
-	life = 6.9,
-	energyShield = 0.2,
-	armour = 0.5,
-	fireResist = 40,
-	coldResist = 40,
-	lightningResist = 40,
-	chaosResist = 60,
-	damage = 2.9,
-	damageSpread = 0.2,
-	attackTime = 1,
-	attackRange = 8,
-	accuracy = 3.4,
-	limit = "ActiveGolemLimit",
-	skillList = {
-		"Melee",
-		"SandstormChaosElementalSummoned",
-		"ChaosElementalCascadeSummoned",
-		"SandstormChaosElementalSummonedEmpowered",
+		"MinionMeleeStep",
 	},
 	modList = {
 		-- MonsterNoDropsOrExperience [monster_no_drops_or_experience = 1]
-		mod("LifeRegenPercent", "BASE", 1, 0, 0), -- SummonedGolemLifeRegeneration [life_regeneration_rate_per_minute_% = 60]
-		-- CannotBeAugmented [cannot_have_azmeri_dust = 1]
-		-- CannotBeAugmented [cant_possess_this = 1]
-		-- CannotBeAugmented [cant_touch_this = 1]
-		-- CannotBeAugmented [cannot_be_tagged_by_sentinel = 1]
-		-- CannotBeAugmented [cannot_be_afflicted = 1]
-		-- CannotBeAugmented [cannot_have_affliction_mods = 1]
-	},
-}
-
-minions["SummonedFlameGolem"] = {
-	name = "Flame Golem",
-	monsterTags = { "bludgeoning_weapon", "caster", "construct", "fast_movement", "fire_affinity", "is_unarmed", "mud_blood", "not_dex", "not_str", "ranged", "small_height", "stone_armour", },
-	life = 5.82,
-	energyShield = 0.4,
-	fireResist = 70,
-	coldResist = 40,
-	lightningResist = 40,
-	chaosResist = 20,
-	damage = 1.5,
-	damageSpread = 0.2,
-	attackTime = 1,
-	attackRange = 6,
-	accuracy = 3.4,
-	damageFixup = 0.22,
-	limit = "ActiveGolemLimit",
-	skillList = {
-		"FireElementalFlameRedSummoned",
-		"FireElementalConeSummoned",
-		"FireElementalMortarSummoned",
-		"FireElementalMeteorSummoned",
-	},
-	modList = {
-		-- MonsterNoDropsOrExperience [monster_no_drops_or_experience = 1]
-		-- MonsterSpeedAndDamageFixupLarge [monster_base_type_attack_cast_speed_+%_and_damage_-%_final = 22]
-		mod("LifeRegenPercent", "BASE", 1, 0, 0), -- SummonedGolemLifeRegeneration [life_regeneration_rate_per_minute_% = 60]
-		-- CannotBeAugmented [cannot_have_azmeri_dust = 1]
-		-- CannotBeAugmented [cant_possess_this = 1]
-		-- CannotBeAugmented [cant_touch_this = 1]
-		-- CannotBeAugmented [cannot_be_tagged_by_sentinel = 1]
-		-- CannotBeAugmented [cannot_be_afflicted = 1]
-		-- CannotBeAugmented [cannot_have_affliction_mods = 1]
-	},
-}
-
-minions["SummonedIceGolem"] = {
-	name = "Ice Golem",
-	monsterTags = { "caster", "cold_affinity", "construct", "fast_movement", "hard_armour", "is_unarmed", "medium_height", "melee", "not_dex", "not_str", "physical_affinity", "ranged", "slashing_weapon", "water", },
-	life = 5.82,
-	energyShield = 0.4,
-	fireResist = 40,
-	coldResist = 70,
-	lightningResist = 40,
-	chaosResist = 20,
-	damage = 3.06,
-	damageSpread = 0.2,
-	attackTime = 0.85,
-	attackRange = 6,
-	accuracy = 3.4,
-	limit = "ActiveGolemLimit",
-	skillList = {
-		"Melee",
-		"IceElementalIceCyclone",
-		"IceElementalSpearSummoned",
-		"IceElementalSpearSummonedDeathNova",
-		"DeathExplodeIceElementalSummoned",
-	},
-	modList = {
-		-- MonsterNoDropsOrExperience [monster_no_drops_or_experience = 1]
-		mod("LifeRegenPercent", "BASE", 1, 0, 0), -- SummonedGolemLifeRegeneration [life_regeneration_rate_per_minute_% = 60]
-		-- CannotBeAugmented [cannot_have_azmeri_dust = 1]
-		-- CannotBeAugmented [cant_possess_this = 1]
-		-- CannotBeAugmented [cant_touch_this = 1]
-		-- CannotBeAugmented [cannot_be_tagged_by_sentinel = 1]
-		-- CannotBeAugmented [cannot_be_afflicted = 1]
-		-- CannotBeAugmented [cannot_have_affliction_mods = 1]
-	},
-}
-
-minions["SummonedLightningGolem"] = {
-	name = "Lightning Golem",
-	monsterTags = { "aura_bearer", "bludgeoning_weapon", "caster", "construct", "fast_movement", "is_unarmed", "large_model", "lightning_affinity", "mud_blood", "not_dex", "not_str", "ranged", "small_height", "stone_armour", },
-	life = 5.82,
-	energyShield = 0.2,
-	fireResist = 40,
-	coldResist = 40,
-	lightningResist = 70,
-	chaosResist = 20,
-	damage = 1.5,
-	damageSpread = 0.2,
-	attackTime = 1.17,
-	attackRange = 8,
-	accuracy = 3.4,
-	damageFixup = 0.22,
-	limit = "ActiveGolemLimit",
-	skillList = {
-		"LightningGolemArcSummoned",
-		"LightningGolemWrath",
-		"MonsterProjectileSpellLightningGolemSummoned",
-	},
-	modList = {
-		-- MonsterNoDropsOrExperience [monster_no_drops_or_experience = 1]
-		-- MonsterSpeedAndDamageFixupLarge [monster_base_type_attack_cast_speed_+%_and_damage_-%_final = 22]
-		mod("LifeRegenPercent", "BASE", 1, 0, 0), -- SummonedGolemLifeRegeneration [life_regeneration_rate_per_minute_% = 60]
-		-- CannotBeAugmented [cannot_have_azmeri_dust = 1]
-		-- CannotBeAugmented [cant_possess_this = 1]
-		-- CannotBeAugmented [cant_touch_this = 1]
-		-- CannotBeAugmented [cannot_be_tagged_by_sentinel = 1]
-		-- CannotBeAugmented [cannot_be_afflicted = 1]
-		-- CannotBeAugmented [cannot_have_affliction_mods = 1]
-	},
-}
-
-minions["SummonedStoneGolem"] = {
-	name = "Stone Golem",
-	monsterTags = { "bludgeoning_weapon", "construct", "fast_movement", "has_one_hand_sword", "has_one_handed_melee", "medium_height", "melee", "mud_blood", "not_int", "physical_affinity", "stone_armour", },
-	life = 7.25,
-	armour = 1,
-	evasion = 0.4,
-	fireResist = 40,
-	coldResist = 40,
-	lightningResist = 40,
-	chaosResist = 20,
-	damage = 2.7,
-	damageSpread = 0.2,
-	attackTime = 1,
-	attackRange = 10,
-	accuracy = 3.4,
-	weaponType1 = "One Handed Sword",
-	limit = "ActiveGolemLimit",
-	skillList = {
-		"Melee",
-		"RockGolemSlam",
-		"RockGolemMinionWhirlingBlades",
-	},
-	modList = {
-		mod("LifeRegenPercent", "BASE", 2, 0, 0), -- SummonedGolemLifeRegenerationStone [life_regeneration_rate_per_minute_% = 120]
 	},
 }
 
 minions["SummonedRagingSpirit"] = {
 	name = "Raging Spirit",
-	monsterTags = { "bone_armour", "construct", "extra_extra_small_height", "fast_movement", "is_unarmed", "melee", "physical_affinity", "skeleton", "undead", },
-	life = 2.16,
-	fireResist = 40,
-	coldResist = 40,
-	lightningResist = 40,
-	chaosResist = 20,
-	damage = 1.02,
+	monsterTags = { "bone_armour", "construct", "extra_extra_small_height", "fast_movement", "is_unarmed", "melee", "physical_affinity", "skeleton", "Unarmed_onhit_audio", "undead", },
+	life = 0.25,
+	baseDamageIgnoresAttackSpeed = true,
+	fireResist = 0,
+	coldResist = 0,
+	lightningResist = 0,
+	chaosResist = 0,
+	damage = 0.7,
 	damageSpread = 0.2,
-	attackTime = 0.57,
-	attackRange = 8,
-	accuracy = 3.4,
+	attackTime = 1,
+	attackRange = 12,
+	accuracy = 1,
 	limit = "ActiveRagingSpiritLimit",
 	skillList = {
-		"SumonRagingSpiritMelee",
-	},
-	modList = {
-		mod("PhysicalDamageConvertToFire", "BASE", 100, 0, 0), -- RagingSpiritConvertPhysToFire [base_physical_damage_%_to_convert_to_fire = 100]
-		mod("PhysicalMin", "BASE", 4, 0, 65536), -- RagingSpiritAddedPhys [attack_minimum_added_physical_damage = 4]
-		mod("PhysicalMax", "BASE", 5, 0, 65536), -- RagingSpiritAddedPhys [attack_maximum_added_physical_damage = 5]
-		-- CannotGainAfflictedMods [cannot_have_affliction_mods = 1]
-		mod("Speed", "MORE", 40, 1, 0), -- MonsterSummonedSkullFastAttack1 [active_skill_attack_speed_+%_final = 40]
-		-- CannotBeAugmented [cannot_have_azmeri_dust = 1]
-		-- CannotBeAugmented [cant_possess_this = 1]
-		-- CannotBeAugmented [cant_touch_this = 1]
-		-- CannotBeAugmented [cannot_be_tagged_by_sentinel = 1]
-		-- CannotBeAugmented [cannot_be_afflicted = 1]
-		-- CannotBeAugmented [cannot_have_affliction_mods = 1]
-	},
-}
-
-minions["SummonedEssenceSpirit"] = {
-	name = "Essence Spirit",
-	monsterTags = { "bone_armour", "construct", "extra_extra_small_height", "fast_movement", "has_claw", "has_one_handed_melee", "melee", "physical_affinity", "skeleton", "undead", },
-	life = 2.25,
-	fireResist = 40,
-	coldResist = 40,
-	lightningResist = 40,
-	chaosResist = 20,
-	damage = 1.28,
-	damageSpread = 0.2,
-	attackTime = 0.57,
-	attackRange = 8,
-	accuracy = 3.4,
-	skillList = {
-		"RagingSpiritMeleeAttack",
-		"SpectralSkullShieldCharge",
+		"MinionMeleeStep",
 	},
 	modList = {
 		mod("Speed", "MORE", 40, 1, 0), -- MonsterSummonedSkullFastAttack1 [active_skill_attack_speed_+%_final = 40]
-		mod("Condition:FullLife", "FLAG", true),
 	},
 }
 
-minions["SummonedSpectralWolf"] = {
-	name = "Spectral Wolf Companion",
-	monsterTags = { "animal_claw_weapon", "beast", "canine_beast", "fast_movement", "ghost", "has_dagger", "has_one_handed_melee", "light_armour", "mammal_beast", "melee", "physical_affinity", "red_blood", "undead", },
-	life = 11,
-	fireResist = 40,
-	coldResist = 40,
-	lightningResist = 40,
-	chaosResist = 20,
-	damage = 6.2,
-	damageSpread = 0.2,
-	attackTime = 1.5,
-	attackRange = 11,
-	accuracy = 3.4,
-	weaponType1 = "Dagger",
-	limit = "ActiveWolfLimit",
-	skillList = {
-		"MeleeAtAnimationSpeed",
-	},
-	modList = {
-		mod("PhysicalDamageLifeLeech", "BASE", 100, 1, 0), -- SummonedWolfLifeLeech [life_leech_from_physical_attack_damage_permyriad = 10000]
-	},
-}
-
-minions["RaisedSkeleton"] = {
-	name = "Summoned Skeleton",
-	monsterTags = { "bone_armour", "bones", "has_one_hand_sword", "has_one_handed_melee", "humanoid", "medium_height", "melee", "physical_affinity", "skeleton", "slashing_weapon", "slow_movement", "undead", },
-	life = 1.05,
-	fireResist = 40,
-	coldResist = 40,
-	lightningResist = 40,
-	chaosResist = 20,
-	damage = 2.45,
-	damageSpread = 0.4,
-	attackTime = 0.8,
-	attackRange = 8,
-	accuracy = 3.4,
-	weaponType1 = "One Handed Sword",
-	weaponType2 = "Shield",
-	limit = "ActiveSkeletonLimit",
-	skillList = {
-		"Melee",
-		"MonsterQuickDodgeRunUnarmed",
-	},
-	modList = {
-		mod("BlockChance", "BASE", 30, 0, 0), -- MonsterAttackBlock30Bypass15 [monster_base_block_% = 30]
-		mod("BlockEffect", "BASE", 15, 0, 0), -- MonsterAttackBlock30Bypass15 [base_block_%_damage_taken = 15]
-		-- SummonSkeletonsSkeletonIsWarrior [summoned_skeleton_is_warrior = 1]
-	},
-}
-
-minions["RaisedSkeletonCaster"] = {
-	name = "Summoned Skeleton Caster",
-	monsterTags = { "bone_armour", "bones", "caster", "cold_affinity", "humanoid", "is_unarmed", "medium_height", "not_dex", "not_str", "ranged", "skeleton", "slashing_weapon", "undead", "very_slow_movement", },
-	life = 1.05,
-	energyShield = 0.4,
-	fireResist = 40,
-	coldResist = 40,
-	lightningResist = 40,
-	chaosResist = 20,
-	damage = 0.98,
+minions["RaisedSkeletonSniper"] = {
+	name = "Skeletal Sniper",
+	monsterTags = { "bone_armour", "bones", "has_bow", "medium_movement", "physical_affinity", "puncturing_weapon", "ranged", "skeleton", "Stab_onhit_audio", "undead", },
+	life = 0.55,
+	baseDamageIgnoresAttackSpeed = true,
+	fireResist = 0,
+	coldResist = 0,
+	lightningResist = 0,
+	chaosResist = 0,
+	damage = 1.15,
 	damageSpread = 0.3,
-	attackTime = 1.07,
-	attackRange = 46,
-	accuracy = 3.4,
-	limit = "ActiveSkeletonLimit",
-	skillList = {
-		"SkeletonMinionProjectileCold",
-		"SkeletonMinionProjectileFire",
-		"SkeletonMinionProjectileLightning",
-	},
-	modList = {
-		-- SummonSkeletonsSkeletonIsMage [summoned_skeleton_is_mage = 1]
-	},
-}
-
-minions["RaisedSkeletonMeleeVaal"] = {
-	name = "Summoned Skeleton Soldier",
-	monsterTags = { "bone_armour", "bones", "has_one_hand_sword", "has_one_handed_melee", "humanoid", "medium_height", "melee", "not_dex", "not_int", "physical_affinity", "skeleton", "slashing_weapon", "slow_movement", "undead", },
-	life = 1.05,
-	armour = 0.25,
-	fireResist = 40,
-	coldResist = 40,
-	lightningResist = 40,
-	chaosResist = 20,
-	damage = 1.37,
-	damageSpread = 0.4,
-	attackTime = 0.8,
-	attackRange = 8,
-	accuracy = 3.4,
-	weaponType1 = "One Handed Sword",
-	weaponType2 = "Shield",
-	limit = "ActiveSkeletonLimit",
-	skillList = {
-		"Melee",
-	},
-	modList = {
-		mod("BlockChance", "BASE", 30, 0, 0), -- MonsterAttackBlock30Bypass15 [monster_base_block_% = 30]
-		mod("BlockEffect", "BASE", 15, 0, 0), -- MonsterAttackBlock30Bypass15 [base_block_%_damage_taken = 15]
-		-- SummonSkeletonsSkeletonIsWarrior [summoned_skeleton_is_warrior = 1]
-	},
-}
-
-minions["RaisedSkeletonArcherVaal"] = {
-	name = "Summoned Skeleton Archer",
-	monsterTags = { "bone_armour", "bones", "has_bow", "humanoid", "medium_height", "not_int", "not_str", "physical_affinity", "puncturing_weapon", "ranged", "skeleton", "undead", "very_slow_movement", },
-	life = 1.05,
-	evasion = 0.25,
-	fireResist = 40,
-	coldResist = 40,
-	lightningResist = 40,
-	chaosResist = 20,
-	damage = 0.98,
-	damageSpread = 0.16,
-	attackTime = 1.33,
-	attackRange = 40,
-	accuracy = 3.4,
-	weaponType1 = "Bow",
-	limit = "ActiveSkeletonLimit",
-	skillList = {
-		"Melee",
-	},
-	modList = {
-	},
-}
-
-minions["RaisedSkeletonArcher"] = {
-	name = "Summoned Skeleton Archer",
-	monsterTags = { "bone_armour", "bones", "has_bow", "humanoid", "not_int", "not_str", "physical_affinity", "puncturing_weapon", "ranged", "skeleton", "undead", "very_slow_movement", },
-	life = 1.05,
-	evasion = 0.25,
-	fireResist = 40,
-	coldResist = 40,
-	lightningResist = 40,
-	chaosResist = 20,
-	damage = 2.25,
-	damageSpread = 0.16,
-	attackTime = 1.33,
-	attackRange = 60,
-	accuracy = 3.4,
-	weaponType1 = "Bow",
-	limit = "ActiveSkeletonLimit",
-	skillList = {
-		"Melee",
-	},
-	modList = {
-	},
-}
-
-minions["Clone"] = {
-	name = "Clone",
-	monsterTags = { "construct", "fast_movement", "flesh_armour", "is_unarmed", "medium_height", "melee", "physical_affinity", "red_blood", "slashing_weapon", },
-	life = 1,
-	fireResist = 40,
-	coldResist = 40,
-	lightningResist = 40,
-	chaosResist = 20,
-	damage = 1,
-	damageSpread = 0,
-	attackTime = 0.83,
-	attackRange = 6,
-	accuracy = 3.4,
-	skillList = {
-		"Melee",
-	},
-	modList = {
-		mod("EnergyShield", "BASE", 10, 0, 0), -- MirrorArrowEnergyShield [base_maximum_energy_shield = 10]
-	},
-}
-
-minions["ArrowClone"] = {
-	name = "Clone",
-	monsterTags = { "construct", "fast_movement", "flesh_armour", "is_unarmed", "medium_height", "melee", "physical_affinity", "red_blood", "slashing_weapon", },
-	life = 1.5,
-	fireResist = 40,
-	coldResist = 40,
-	lightningResist = 40,
-	chaosResist = 20,
-	damage = 1,
-	damageSpread = 0,
-	attackTime = 0.83,
-	attackRange = 6,
-	accuracy = 3.4,
-	skillList = {
-		"BlinkMirrorArrowMelee",
-	},
-	modList = {
-		mod("EnergyShield", "BASE", 10, 0, 0), -- MirrorArrowEnergyShield [base_maximum_energy_shield = 10]
-	},
-}
-
-minions["ArrowCloneRoA"] = {
-	name = "Clone",
-	monsterTags = { "construct", "fast_movement", "flesh_armour", "is_unarmed", "medium_height", "melee", "physical_affinity", "red_blood", "slashing_weapon", },
-	life = 1.5,
-	fireResist = 40,
-	coldResist = 40,
-	lightningResist = 40,
-	chaosResist = 20,
-	damage = 1,
-	damageSpread = 0,
-	attackTime = 0.83,
-	attackRange = 6,
-	accuracy = 3.4,
-	skillList = {
-		"RainOfArrowsCloneShot",
-	},
-	modList = {
-		mod("EnergyShield", "BASE", 10, 0, 0), -- MirrorArrowEnergyShield [base_maximum_energy_shield = 10]
-	},
-}
-
-minions["ArrowCloneEle"] = {
-	name = "Clone",
-	monsterTags = { "construct", "fast_movement", "flesh_armour", "is_unarmed", "medium_height", "melee", "physical_affinity", "red_blood", "slashing_weapon", },
-	life = 1.5,
-	fireResist = 40,
-	coldResist = 40,
-	lightningResist = 40,
-	chaosResist = 20,
-	damage = 1,
-	damageSpread = 0,
-	attackTime = 0.83,
-	attackRange = 6,
-	accuracy = 3.4,
-	skillList = {
-		"ElementalHitCloneShot",
-	},
-	modList = {
-		mod("EnergyShield", "BASE", 10, 0, 0), -- MirrorArrowEnergyShield [base_maximum_energy_shield = 10]
-	},
-}
-
-minions["SpiderMinion"] = {
-	name = "Spider Minion",
-	monsterTags = { "animal_claw_weapon", "beast", "chaos_affinity", "extra_extra_small_height", "ghost_armour", "has_one_hand_sword", "has_one_handed_melee", "spider", "very_fast_movement", },
-	life = 1.8,
-	fireResist = 40,
-	coldResist = 40,
-	lightningResist = 40,
-	chaosResist = 20,
-	damage = 1.76,
-	damageSpread = 0.2,
-	attackTime = 0.96,
-	attackRange = 7,
-	accuracy = 3.4,
-	weaponType1 = "One Handed Sword",
-	limit = "ActiveSpiderLimit",
-	skillList = {
-		"SummonedSpiderViperStrike",
-	},
-	modList = {
-		-- SummonedSpiderPhasing [phase_through_objects = 1]
-		-- SummonedSpiderPhasing [suppress_phasing_visual = 1]
-	},
-}
-
-minions["AnimatedWeapon"] = {
-	name = "Animated Weapon",
-	monsterTags = { "construct", "fast_movement", "ghost_armour", "is_unarmed", "medium_height", "melee", "physical_affinity", },
-	life = 4,
-	fireResist = 40,
-	coldResist = 40,
-	lightningResist = 40,
-	chaosResist = 20,
-	damage = 0,
-	damageSpread = 0,
-	attackTime = 1,
-	attackRange = 6,
-	accuracy = 3.4,
-	skillList = {
-		"Melee",
-	},
-	modList = {
-		-- EmergeSpeedLow [emerge_speed_+% = 100]
-	},
-}
-
-minions["AnimatedArmour"] = {
-	name = "Animated Guardian",
-	monsterTags = { "construct", "extra_extra_small_height", "ghost_armour", "is_unarmed", "medium_movement", "melee", "not_dex", "not_int", "physical_affinity", },
-	life = 5,
-	armour = 0.5,
-	fireResist = 40,
-	coldResist = 40,
-	lightningResist = 40,
-	chaosResist = 20,
-	damage = 0,
-	damageSpread = 0,
-	attackTime = 1,
-	attackRange = 6,
-	accuracy = 3.4,
-	skillList = {
-		"Melee",
-		"AnimateGuardianSmite",
-	},
-	modList = {
-		-- LabyrinthArrowTrapDamageTakenAnimateArmour [damage_taken_+%_from_arrow_traps_final = -90]
-		mod("Speed", "MORE", 10, ModFlag.Attack, 0, { type = "Condition", var = "DualWielding" }),
-		mod("BlockChance", "BASE", 15, 0, 0, { type = "Condition", var = "DualWielding" }),
-	},
-}
-
-minions["IcyRagingSpirit"] = {
-	name = "Grave Spirit",
-	monsterTags = { "bone_armour", "cleaving_weapon", "construct", "extra_extra_small_height", "fast_movement", "is_unarmed", "melee", "physical_affinity", "skeleton", "undead", },
-	life = 3.75,
-	fireResist = 40,
-	coldResist = 40,
-	lightningResist = 40,
-	chaosResist = 20,
-	damage = 2.5,
-	damageSpread = 0.2,
-	attackTime = 0.57,
-	attackRange = 8,
-	accuracy = 3.4,
-	skillList = {
-		"RagingSpiritMeleeAttack",
-	},
-	modList = {
-		mod("PhysicalDamageConvertToCold", "BASE", 50, 0, 0), -- MonsterSummonedElementalCold [base_physical_damage_%_to_convert_to_cold = 50]
-		-- MonsterCannotBeChainedFrom_ [cannot_be_chained_from = 1]
-		mod("Speed", "MORE", 40, 1, 0), -- MonsterSummonedSkullFastAttack1 [active_skill_attack_speed_+%_final = 40]
-	},
-}
-
-minions["UniqueAnimatedWeapon"] = {
-	name = "Dancing Dervish",
-	monsterTags = { "construct", "fast_movement", "ghost_armour", "is_unarmed", "medium_height", "physical_affinity", },
-	life = 5,
-	fireResist = 40,
-	coldResist = 40,
-	lightningResist = 40,
-	chaosResist = 20,
-	damage = 0,
-	damageSpread = 0,
-	attackTime = 1,
-	attackRange = 105,
-	accuracy = 3.4,
-	skillList = {
-		"Melee",
-		"DancingDervishCycloneChannelled",
-	},
-	modList = {
-		mod("Life", "MORE", 698), -- MonsterUnique2,
-		mod("Damage", "MORE", 70), -- MonsterUnique5,
-		mod("Speed", "MORE", 33, ModFlag.Attack), -- MonsterUnique8,
-		mod("Damage", "MORE", -33, ModFlag.Attack), -- MonsterUnique8,
-		mod("DamageTaken", "MORE", -95), -- monster_inherent_damage_taken_+%_final : UniqueAnimatedWeapon.ot,
-	},
-}
-
-minions["SummonedPhantasm"] = {
-	name = "Summoned Phantasm",
-	monsterTags = { "caster", "flesh_armour", "ghost", "is_unarmed", "medium_movement", "melee", "not_dex", "not_str", "physical_affinity", "ranged", "red_blood", "slashing_weapon", "small_height", "undead", },
-	life = 1.58,
-	energyShield = 0.2,
-	fireResist = 40,
-	coldResist = 40,
-	lightningResist = 40,
-	chaosResist = 20,
-	damage = 1.1,
-	damageSpread = 0.2,
-	attackTime = 1.17,
-	attackRange = 6,
-	accuracy = 1,
-	limit = "ActivePhantasmLimit",
-	skillList = {
-		"Melee",
-		"SummonPhantasmFadingProjectile",
-		"SummonPhantasmFadingProjectile2",
-	},
-	modList = {
-	},
-}
-
-minions["HeraldOfAgonySpiderPlated"] = {
-	name = "Agony Crawler",
-	monsterTags = { "animal_claw_weapon", "beast", "flesh_armour", "has_one_hand_sword", "has_one_handed_melee", "insect", "insect_blood", "medium_height", "melee", "physical_affinity", "very_fast_movement", },
-	life = 1.5,
-	fireResist = 0,
-	coldResist = 0,
-	lightningResist = 0,
-	chaosResist = 0,
-	damage = 1.5,
-	damageSpread = 0.2,
-	attackTime = 1.3,
-	attackRange = 12,
-	accuracy = 3.4,
-	weaponType1 = "One Handed Sword",
-	skillList = {
-		"HeraldOfAgonyMinionMortar",
-		"HeraldOfAgonyMinionTailSpike",
-		"HeraldOfAgonyMinionCleave",
-		"Melee",
-	},
-	modList = {
-		mod("PhysicalDamageConvertToChaos", "BASE", 40, 0, 0), -- MonsterConvertToChaosHeraldOfAgony1 [base_physical_damage_%_to_convert_to_chaos = 40]
-		mod("Condition:CannotBeDamaged", "FLAG", 1, 0, 0), -- MonsterCannotBeDamaged [base_cannot_be_damaged = 1]
-		mod("Condition:FullLife", "FLAG", true),
-	},
-}
-
-minions["AxisEliteSoldierHeraldOfLight"] = {
-	name = "Sentinel of Purity",
-	monsterTags = { "bludgeoning_weapon", "fast_movement", "has_staff", "has_two_handed_melee", "human", "humanoid", "medium_height", "melee", "not_dex", "not_int", "physical_affinity", "plate_armour", "red_blood", },
-	life = 3.4,
-	armour = 1,
-	fireResist = 40,
-	coldResist = 40,
-	lightningResist = 40,
-	chaosResist = 20,
-	damage = 3.04,
-	damageSpread = 0.2,
-	attackTime = 0.83,
-	attackRange = 12,
-	accuracy = 3.4,
-	weaponType1 = "Staff",
-	limit = "ActiveSentinelOfPurityLimit",
-	skillList = {
-		"Melee",
-		"HeraldOfLightMinionSlam",
-		"ChampionTeleport",
-		"SentinelHolySlam",
-	},
-	modList = {
-	},
-}
-
-minions["HolyLivingRelic"] = {
-	name = "Holy Relic",
-	monsterTags = { "cannot_be_monolith", "caster", "construct", "extra_extra_small_height", "ghost_armour", "is_unarmed", "medium_movement", "not_dex", "not_str", "physical_affinity", "unusable_corpse", },
-	life = 6,
-	energyShield = 0.6,
-	fireResist = 40,
-	coldResist = 40,
-	lightningResist = 40,
-	chaosResist = 20,
-	damage = 1,
-	damageSpread = 0,
-	attackTime = 1,
-	attackRange = 6,
-	accuracy = 1,
-	limit = "ActiveHolyRelicLimit",
-	skillList = {
-		"RelicTriggeredNova",
-		"RelicTeleport",
-	},
-	modList = {
-		-- EmergeSpeedHigh [emerge_speed_+% = 0]
-	},
-}
-
-minions["AxisEliteSoldierDominatingBlow"] = {
-	name = "Sentinel of Dominance",
-	monsterTags = { "bludgeoning_weapon", "fast_movement", "has_one_hand_mace", "has_one_handed_melee", "human", "humanoid", "medium_height", "melee", "not_dex", "not_int", "physical_affinity", "plate_armour", },
-	life = 4,
-	armour = 1,
-	fireResist = 40,
-	coldResist = 40,
-	lightningResist = 40,
-	chaosResist = 20,
-	damage = 2.8,
-	damageSpread = 0.2,
-	attackTime = 0.83,
-	attackRange = 11,
-	accuracy = 3.4,
-	weaponType1 = "One Handed Mace",
-	weaponType2 = "Shield",
-	skillList = {
-		"Melee",
-		"DominatingBlowMinionCharge",
-		"SentinelHolySlam",
-	},
-	modList = {
-		-- MonsterCastsShieldChargeText [monster_casts_shield_charge_text = 1]
-		mod("BlockChance", "BASE", 40, 0, 0), -- MonsterAttackBlock40Bypass20 [monster_base_block_% = 40]
-		mod("BlockEffect", "BASE", 20, 0, 0), -- MonsterAttackBlock40Bypass20 [base_block_%_damage_taken = 20]
-	},
-}
-
-minions["AxisEliteSoldierDominatingBlowVaal"] = {
-	name = "Ascended Sentinel of Dominance",
-	monsterTags = { "bludgeoning_weapon", "has_one_hand_mace", "has_one_handed_melee", "human", "humanoid", "medium_height", "melee", "not_dex", "not_int", "physical_affinity", "plate_armour", "very_slow_movement", },
-	life = 4,
-	armour = 1,
-	fireResist = 40,
-	coldResist = 40,
-	lightningResist = 40,
-	chaosResist = 20,
-	damage = 2.8,
-	damageSpread = 0.2,
-	attackTime = 0.83,
-	attackRange = 28,
-	accuracy = 3.4,
-	skillList = {
-		"TeleportVaalDomination",
-		"GAVaalDominationTeleportSlam",
-		"VaalDominationSunderMelee",
-		"VaalDominationSunder",
-		"GAVaalDominationLargeSlam",
-		"VaalDominationMelee",
-	},
-	modList = {
-		mod("Damage", "MORE", 200),
-		mod("DamageTaken", "MORE", -70),
-	},
-}
-
-minions["AbsolutionTemplarJudge"] = {
-	name = "Sentinel of Absolution",
-	monsterTags = { "bludgeoning_weapon", "caster", "fast_movement", "flesh_armour", "has_one_hand_mace", "has_one_handed_melee", "human", "humanoid", "melee", "not_dex", "not_str", "physical_affinity", "templar", },
-	life = 4,
-	energyShield = 0.2,
-	fireResist = 40,
-	coldResist = 40,
-	lightningResist = 40,
-	chaosResist = 20,
-	damage = 2.8,
-	damageSpread = 0.2,
-	attackTime = 1.17,
-	attackRange = 9,
-	accuracy = 1,
-	weaponType1 = "One Handed Mace",
-	skillList = {
-		"Melee",
-		"AbsolutionMinion",
-		"AbsolutionMinionEmpowered",
-	},
-	modList = {
-	},
-}
-
-minions["AbsolutionTemplarJudgeVaal"] = {
-	name = "Ascended Sentinel of Absolution",
-	monsterTags = { "bludgeoning_weapon", "caster", "fast_movement", "flesh_armour", "has_one_hand_mace", "has_one_handed_melee", "human", "humanoid", "innocence_story", "melee", "not_dex", "not_str", "physical_affinity", "ranged", "templar", },
-	life = 4,
-	energyShield = 0.2,
-	fireResist = 40,
-	coldResist = 40,
-	lightningResist = 40,
-	chaosResist = 20,
-	damage = 2.8,
-	damageSpread = 0.2,
-	attackTime = 1.17,
-	attackRange = 9,
-	accuracy = 1,
-	skillList = {
-		"AbsolutionMinionVaal",
-		"AbsolutionMinionVaalCascade",
-		"GTVaalAbsolutionLarge",
-		"VaalAbsolutionDelayedBlast",
-		"GSVaalAbsolutionEmerge",
-	},
-	modList = {
-		mod("Damage", "MORE", 200),
-		mod("DamageTaken", "MORE", -70),
-	},
-}
-
-minions["RhoaUniqueSummoned"] = {
-	name = "Summoned Rhoa",
-	monsterTags = { "animal_claw_weapon", "avian_beast", "beast", "fast_movement", "has_claw", "has_one_handed_melee", "large_model", "light_armour", "lightning_affinity", "medium_height", "melee", "not_dex", "not_int", "physical_affinity", "red_blood", },
-	life = 9,
-	armour = 0.25,
-	fireResist = 40,
-	coldResist = 40,
-	lightningResist = 40,
-	chaosResist = 20,
-	damage = 4.28,
-	damageSpread = 0.2,
-	attackTime = 0.93,
-	attackRange = 14,
-	accuracy = 3.4,
-	limit = "ActiveBeastMinionLimit",
-	skillList = {
-		"MeleeAtAnimationSpeedUnique",
-		"SummonedRhoaShieldCharge",
-	},
-	modList = {
-		mod("SkillData", "LIST", { key = "cannotBeEvaded", value = true }, 0, 0), -- MonsterAlwaysHits [global_always_hit = 1]
-		-- MonsterNearbyEnemiesAreIntimidated [is_intimidated = 1]
-		-- MonsterNearbyEnemiesAreIntimidated [local_display_nearby_enemies_are_intimidated = 1]
-	},
-}
-
-minions["SnakeSpitUniqueSummoned"] = {
-	name = "Summoned Cobra",
-	monsterTags = { "beast", "fast_movement", "has_dagger", "has_one_handed_melee", "light_armour", "medium_small_height", "not_int", "not_str", "physical_affinity", "ranged", "red_blood", "reptile_beast", },
-	baseDamageIgnoresAttackSpeed = true,
-	life = 9,
-	evasion = 0.15,
-	fireResist = 40,
-	coldResist = 40,
-	lightningResist = 40,
-	chaosResist = 20,
-	damage = 3.23,
-	damageSpread = 0.2,
-	attackTime = 1.1,
-	attackRange = 9,
-	accuracy = 3.4,
-	limit = "ActiveBeastMinionLimit",
-	skillList = {
-		"SummonedSnakeProjectile",
-	},
-	modList = {
-		mod("SkillData", "LIST", { key = "cannotBeEvaded", value = true }, 0, 0), -- MonsterAlwaysHits [global_always_hit = 1]
-		mod("PhysicalDamageConvertToChaos", "BASE", 30, 0, 0), -- MonsterSnakeChaos [base_physical_damage_%_to_convert_to_chaos = 30]
-	},
-}
-
-minions["DropBearUniqueSummoned"] = {
-	name = "Summoned Ursa",
-	monsterTags = { "animal_claw_weapon", "beast", "extra_small_height", "fast_movement", "has_one_hand_mace", "has_one_handed_melee", "light_armour", "melee", "not_int", "not_str", "physical_affinity", "red_blood", "ursine_beast", },
-	baseDamageIgnoresAttackSpeed = true,
-	life = 9,
-	evasion = 0.5,
-	fireResist = 40,
-	coldResist = 40,
-	lightningResist = 40,
-	chaosResist = 20,
-	damage = 3.53,
-	damageSpread = 0.2,
-	attackTime = 1.1,
-	attackRange = 10,
-	accuracy = 3.4,
-	weaponType1 = "One Handed Mace",
-	limit = "ActiveBeastMinionLimit",
-	skillList = {
-		"MeleeAtAnimationSpeedUnique",
-		"DropBearSummonedGroundSlam",
-		"DropBearSummonedRallyingCry",
-	},
-	modList = {
-		mod("SkillData", "LIST", { key = "cannotBeEvaded", value = true }, 0, 0), -- MonsterAlwaysHits [global_always_hit = 1]
-	},
-}
-
-minions["SummonedCarrionGolem"] = {
-	name = "Carrion Golem",
-	monsterTags = { "bludgeoning_weapon", "construct", "fast_movement", "golem", "is_unarmed", "large_height", "mud_blood", "not_dex", "not_str", "physical_affinity", "stone_armour", },
-	life = 5.82,
-	energyShield = 0.4,
-	fireResist = 40,
-	coldResist = 40,
-	lightningResist = 40,
-	chaosResist = 20,
-	damage = 0.6,
-	damageSpread = 0.2,
-	attackTime = 0.9,
-	attackRange = 13,
-	accuracy = 3.4,
-	limit = "ActiveGolemLimit",
-	skillList = {
-		"BoneGolemMultiAttack",
-		"BoneGolemCascade",
-		"BoneGolemLeapSlam",
-		"EGBoneGolemConsumeCorpse",
-		"BoneGolemCascadeEmpowered",
-	},
-	modList = {
-		-- MonsterNoDropsOrExperience [monster_no_drops_or_experience = 1]
-		mod("LifeRegenPercent", "BASE", 1, 0, 0), -- SummonedGolemLifeRegeneration [life_regeneration_rate_per_minute_% = 60]
-		-- CannotBeAugmented [cannot_have_azmeri_dust = 1]
-		-- CannotBeAugmented [cant_possess_this = 1]
-		-- CannotBeAugmented [cant_touch_this = 1]
-		-- CannotBeAugmented [cannot_be_tagged_by_sentinel = 1]
-		-- CannotBeAugmented [cannot_be_afflicted = 1]
-		-- CannotBeAugmented [cannot_have_affliction_mods = 1]
-	},
-}
-
-minions["SkitterbotCold"] = {
-	name = "Chilling Skitterbot",
-	monsterTags = { "construct", "extra_extra_small_height", "is_unarmed", "non_attacking", "stone_armour", "very_fast_movement", },
-	life = 1,
-	fireResist = 0,
-	coldResist = 0,
-	lightningResist = 0,
-	chaosResist = 0,
-	damage = 1,
-	damageSpread = 0,
-	attackTime = 1,
-	attackRange = 6,
-	accuracy = 1,
-	skillList = {
-		"SkitterbotDetonateMines",
-		"SkitterbotWait",
-	},
-	modList = {
-		-- MonsterNoDropsOrExperience [monster_no_drops_or_experience = 1]
-		-- CannotBeAugmented [cannot_have_azmeri_dust = 1]
-		-- CannotBeAugmented [cant_possess_this = 1]
-		-- CannotBeAugmented [cant_touch_this = 1]
-		-- CannotBeAugmented [cannot_be_tagged_by_sentinel = 1]
-		-- CannotBeAugmented [cannot_be_afflicted = 1]
-		-- CannotBeAugmented [cannot_have_affliction_mods = 1]
-	},
-}
-
-minions["SkitterbotLightning"] = {
-	name = "Shocking Skitterbot",
-	monsterTags = { "construct", "extra_extra_small_height", "is_unarmed", "non_attacking", "stone_armour", "very_fast_movement", },
-	life = 1,
-	fireResist = 0,
-	coldResist = 0,
-	lightningResist = 0,
-	chaosResist = 0,
-	damage = 1,
-	damageSpread = 0,
-	attackTime = 1,
-	attackRange = 6,
-	accuracy = 1,
-	skillList = {
-		"SkitterbotDetonateMines",
-		"SkitterbotWait",
-	},
-	modList = {
-		-- MonsterNoDropsOrExperience [monster_no_drops_or_experience = 1]
-		-- CannotBeAugmented [cannot_have_azmeri_dust = 1]
-		-- CannotBeAugmented [cant_possess_this = 1]
-		-- CannotBeAugmented [cant_touch_this = 1]
-		-- CannotBeAugmented [cannot_be_tagged_by_sentinel = 1]
-		-- CannotBeAugmented [cannot_be_afflicted = 1]
-		-- CannotBeAugmented [cannot_have_affliction_mods = 1]
-	},
-}
-
-minions["SummonedReaper"] = {
-	name = "Reaper",
-	monsterTags = { "bone_armour", "bones", "fast_movement", "has_dual_wield_melee", "has_one_hand_sword", "has_one_handed_melee", "melee", "not_int", "physical_affinity", "skeleton", "slashing_weapon", "undead", },
-	life = 3.74,
-	armour = 0.5,
-	evasion = 1,
-	fireResist = 40,
-	coldResist = 40,
-	lightningResist = 40,
-	chaosResist = 20,
-	damage = 2.4,
-	damageSpread = 0.2,
 	attackTime = 1.5,
-	attackRange = 13,
-	accuracy = 3.4,
-	weaponType1 = "One Handed Sword",
-	weaponType2 = "One Handed Sword",
+	attackRange = 80,
+	accuracy = 1,
+	weaponType1 = "Bow",
+	limit = "ActiveSkeletonLimit",
 	skillList = {
-		"ReaperConsumeMinionForHeal",
-		"ReaperConsumeMinionForBuff",
-		"SummonedReaperMelee",
-		"SummonedReaperDash",
-		"SummonedReaperUltimate",
-		"GASummonReaperUltimateLeftSlash",
-		"GASummonReaperUltimateRightSlash",
-		"EAASummonedReaperComboAttack",
-		"GASummonReaperComboWhirl",
-		"GASummonReaperComboLeftSlash",
-		"GASummonReaperComboRightSlash",
-		"GASummonReaperDashImpactSlash",
-		"GASummonReaperDash",
+		"MinionMeleeBow",
+		"GasShotSkeletonSniperMinion",
 	},
 	modList = {
 		-- MonsterNoDropsOrExperience [monster_no_drops_or_experience = 1]
-		-- CannotBeAugmented [cannot_have_azmeri_dust = 1]
-		-- CannotBeAugmented [cant_possess_this = 1]
-		-- CannotBeAugmented [cant_touch_this = 1]
-		-- CannotBeAugmented [cannot_be_tagged_by_sentinel = 1]
-		-- CannotBeAugmented [cannot_be_afflicted = 1]
-		-- CannotBeAugmented [cannot_have_affliction_mods = 1]
 	},
 }
 
-minions["SummonedArbalists"] = {
-	name = "Summoned Arbalist",
-	monsterTags = { "bone_armour", "bones", "fast_movement", "is_unarmed", "not_int", "physical_affinity", "puncturing_weapon", "skeleton", "undead", },
-	life = 7.41,
+minions["RaisedSkeletonWarrior"] = {
+	name = "Skeletal Warrior",
+	monsterTags = { "1HSword_onhit_audio", "bone_armour", "bones", "fast_movement", "has_one_hand_sword", "has_one_handed_melee", "medium_height", "melee", "not_dex", "not_int", "physical_affinity", "skeleton", "slashing_weapon", "undead", },
+	life = 0.88,
+	baseDamageIgnoresAttackSpeed = true,
+	armour = 0.5,
+	fireResist = 0,
+	coldResist = 0,
+	lightningResist = 0,
+	chaosResist = 0,
+	damage = 0.7,
+	damageSpread = 0.3,
+	attackTime = 1,
+	attackRange = 12,
+	accuracy = 1,
+	weaponType1 = "One Handed Sword",
+	weaponType2 = "Shield",
+	limit = "ActiveSkeletonLimit",
+	skillList = {
+		"MinionMeleeStep",
+	},
+	modList = {
+		-- MonsterNoDropsOrExperience [monster_no_drops_or_experience = 1]
+		mod("BlockChance", "BASE", 30, 0, 0), -- SkeletonWarriorPlayerMinionBlockChance [monster_base_block_% = 30]
+		-- SkeletonWarriorPlayerMinionBlockChance [additional_maximum_block_% = 0]
+	},
+}
+
+minions["RaisedSkeletonBrute"] = {
+	name = "Skeletal Brute",
+	monsterTags = { "2HBluntMetal_onhit_audio", "bone_armour", "bones", "fast_movement", "has_one_hand_sword", "has_one_handed_melee", "medium_height", "melee", "not_dex", "not_int", "physical_affinity", "skeleton", "slashing_weapon", "undead", },
+	life = 1.2,
+	baseDamageIgnoresAttackSpeed = true,
+	armour = 0.7,
+	fireResist = 0,
+	coldResist = 0,
+	lightningResist = 0,
+	chaosResist = 0,
+	damage = 1.85,
+	damageSpread = 0.3,
+	attackTime = 1.75,
+	attackRange = 16,
+	accuracy = 1,
+	weaponType1 = "Two Handed Mace",
+	limit = "ActiveSkeletonLimit",
+	skillList = {
+		"MinionMeleeStep",
+		"BoneshatterBruteMinion",
+	},
+	modList = {
+		-- MonsterNoDropsOrExperience [monster_no_drops_or_experience = 1]
+	},
+}
+
+minions["RaisedSkeletonStormMage"] = {
+	name = "Skeletal Storm Mage",
+	monsterTags = { "bone_armour", "bones", "caster", "is_unarmed", "lightning_affinity", "medium_height", "medium_movement", "not_dex", "not_str", "ranged", "skeleton", "slashing_weapon", "Unarmed_onhit_audio", "undead", },
+	life = 0.53,
+	baseDamageIgnoresAttackSpeed = true,
+	energyShield = 0.06,
+	fireResist = 0,
+	coldResist = 0,
+	lightningResist = 50,
+	chaosResist = 0,
+	damage = 0.65,
+	damageSpread = 0.3,
+	attackTime = 1,
+	attackRange = 80,
+	accuracy = 1,
+	weaponType1 = "Staff",
+	limit = "ActiveSkeletonLimit",
+	skillList = {
+		"ArcSkeletonMageMinion",
+		"DeathStormSkeletonStormMageMinion",
+	},
+	modList = {
+		-- MonsterNoDropsOrExperience [monster_no_drops_or_experience = 1]
+	},
+}
+
+minions["RaisedSkeletonFrostMage"] = {
+	name = "Skeletal Frost Mage",
+	monsterTags = { "bone_armour", "bones", "caster", "cold_affinity", "is_unarmed", "medium_height", "medium_movement", "not_dex", "not_str", "ranged", "skeleton", "slashing_weapon", "Unarmed_onhit_audio", "undead", },
+	life = 0.53,
+	baseDamageIgnoresAttackSpeed = true,
+	energyShield = 0.06,
+	fireResist = 0,
+	coldResist = 50,
+	lightningResist = 0,
+	chaosResist = 0,
+	damage = 0.6,
+	damageSpread = 0.3,
+	attackTime = 1,
+	attackRange = 80,
+	accuracy = 1,
+	weaponType1 = "None",
+	limit = "ActiveSkeletonLimit",
+	skillList = {
+		"FrostBoltSkeletonMageMinion",
+		"IceBombSkeletonMageMinion",
+	},
+	modList = {
+		-- MonsterNoDropsOrExperience [monster_no_drops_or_experience = 1]
+	},
+}
+
+minions["RaisedSkeletonCleric"] = {
+	name = "Skeletal Cleric",
+	monsterTags = { "bone_armour", "bones", "caster", "fire_affinity", "is_unarmed", "medium_height", "medium_movement", "not_dex", "not_str", "ranged", "skeleton", "slashing_weapon", "Unarmed_onhit_audio", "undead", },
+	life = 0.53,
+	baseDamageIgnoresAttackSpeed = true,
+	energyShield = 0.06,
+	fireResist = 0,
+	coldResist = 0,
+	lightningResist = 0,
+	chaosResist = 0,
+	damage = 0.65,
+	damageSpread = 0.3,
+	attackTime = 1,
+	attackRange = 80,
+	accuracy = 1,
+	weaponType1 = "One Handed Mace",
+	limit = "ActiveSkeletonLimit",
+	skillList = {
+		"HealSkeletonClericMinion",
+		"ResurrectSkeletonClericMinion",
+	},
+	modList = {
+		-- MonsterNoDropsOrExperience [monster_no_drops_or_experience = 1]
+	},
+}
+
+minions["RaisedSkeletonArsonist"] = {
+	name = "Skeletal Arsonist",
+	monsterTags = { "bone_armour", "bones", "caster", "fire_affinity", "is_unarmed", "medium_height", "medium_movement", "not_dex", "not_str", "ranged", "skeleton", "slashing_weapon", "Unarmed_onhit_audio", "undead", },
+	life = 0.55,
+	baseDamageIgnoresAttackSpeed = true,
+	energyShield = 0.04,
+	fireResist = 50,
+	coldResist = 0,
+	lightningResist = 0,
+	chaosResist = 0,
+	damage = 0.7,
+	damageSpread = 0.3,
+	attackTime = 1,
+	attackRange = 80,
+	accuracy = 1,
+	weaponType1 = "None",
+	limit = "ActiveSkeletonLimit",
+	skillList = {
+		"FireBombSkeletonMinion",
+		"DestructiveLinkSkeletonBombadierMinion",
+	},
+	modList = {
+		-- MonsterNoDropsOrExperience [monster_no_drops_or_experience = 1]
+	},
+}
+
+minions["RaisedSkeletonReaver"] = {
+	name = "Skeletal Reaver",
+	monsterTags = { "1HAxe_onhit_audio", "bone_armour", "bones", "fast_movement", "has_one_hand_sword", "has_one_handed_melee", "medium_height", "melee", "not_dex", "not_int", "physical_affinity", "skeleton", "slashing_weapon", "undead", },
+	life = 0.7,
+	baseDamageIgnoresAttackSpeed = true,
+	armour = 0.2,
+	fireResist = 0,
+	coldResist = 0,
+	lightningResist = 0,
+	chaosResist = 0,
+	damage = 0.54,
+	damageSpread = 0.3,
+	attackTime = 0.83,
+	attackRange = 14,
+	accuracy = 1,
+	weaponType1 = "One Handed Axe",
+	weaponType2 = "One Handed Axe",
+	limit = "ActiveSkeletonLimit",
+	skillList = {
+		"MinionMeleeStep",
+		"EnrageSkeletonReaverMinion",
+	},
+	modList = {
+		-- MonsterNoDropsOrExperience [monster_no_drops_or_experience = 1]
+	},
+}
+
+minions["SummonedHellhound"] = {
+	name = "Infernal Hound",
+	monsterTags = { "beast", "demon", "medium_movement", "not_int", "red_blood", "Unarmed_onhit_audio", },
+	life = 0.88,
+	baseDamageIgnoresAttackSpeed = true,
 	armour = 0.5,
 	evasion = 0.5,
-	fireResist = 40,
-	coldResist = 40,
-	lightningResist = 40,
-	chaosResist = 20,
-	damage = 4.29,
-	damageSpread = 0.2,
-	attackTime = 1,
-	attackRange = 60,
-	accuracy = 3.4,
-	limit = "ActiveArbalistLimit",
+	fireResist = 50,
+	coldResist = 0,
+	lightningResist = 0,
+	chaosResist = 0,
+	damage = 1.25,
+	damageSpread = 0.3,
+	attackTime = 0.75,
+	attackRange = 10,
+	accuracy = 1,
+	limit = "ActiveSkeletonLimit",
 	skillList = {
-		"MPWExpeditionSummonedArbalestProjectile",
+		"MinionMelee",
 	},
 	modList = {
-		mod("Condition:CannotBeDamaged", "FLAG", 1, 0, 0), -- MonsterCannotBeDamaged [base_cannot_be_damaged = 1]
+		-- MonsterNoDropsOrExperience [monster_no_drops_or_experience = 1]
 	},
 }
 
-minions["GuardianSentinel"] = {
-	name = "Sentinel of Radiance",
-	monsterTags = { "bludgeoning_weapon", "has_one_hand_mace", "has_one_handed_melee", "human", "humanoid", "medium_height", "melee", "not_dex", "not_int", "physical_affinity", "plate_armour", "very_slow_movement", },
-	life = 12,
-	armour = 1,
-	fireResist = 40,
-	coldResist = 40,
-	lightningResist = 40,
-	chaosResist = 20,
-	damage = 20,
-	damageSpread = 0.2,
+minions["SummonedHellhound"] = {
+	name = "Ancestral Warrior Spirit",
+	monsterTags = { "2HBluntMetal_onhit_audio", "flesh_armour", "has_two_hand_sword", "has_two_handed_melee", "medium_height", "non_attacking", "slashing_weapon", "very_fast_movement", },
+	life = 1,
+	fireResist = 0,
+	coldResist = 0,
+	lightningResist = 0,
+	chaosResist = 0,
+	damage = 1,
+	damageSpread = 0,
 	attackTime = 0.83,
-	attackRange = 17,
-	accuracy = 3.4,
+	attackRange = 10,
+	accuracy = 1,
+	weaponType1 = "Two Handed Mace",
+	limit = "ActiveSkeletonLimit",
 	skillList = {
-		"TeleportVaalDomination",
-		"VaalDominationMelee",
 	},
 	modList = {
 	},
 }
 
--- This is a fake Minion to apply all 3 auras
-minions["GuardianRelicAll"] = {
-	name = "All Relics",
-	life = 4,
-	energyShield = 0.6,
-	fireResist = 40,
-	coldResist = 40,
-	lightningResist = 40,
-	chaosResist = 20,
-	damage = 1,
-	damageSpread = 0,
-	attackTime = 1,
-	attackRange = 6,
+minions["UnearthBoneConstruct"] = {
+	name = "Bone Crawler",
+	monsterTags = { "bones", "medium_movement", "MonsterStab_onhit_audio", "skeleton", "undead", },
+	life = 0.35,
+	baseDamageIgnoresAttackSpeed = true,
+	fireResist = 0,
+	coldResist = 0,
+	lightningResist = 0,
+	chaosResist = 0,
+	damage = 0.75,
+	damageSpread = 0.3,
+	attackTime = 1.06,
+	attackRange = 12,
 	accuracy = 1,
+	limit = "ActiveSkeletonLimit",
 	skillList = {
-		"RelicTeleport",
-		"Anger",
-		"Hatred",
-		"Wrath",
+		"MinionMelee",
 	},
 	modList = {
-		-- EmergeSpeedHigh [emerge_speed_+% = 0]
-	},
-}
-
-minions["GuardianRelicFire"] = {
-	name = "Fire Relic",
-	monsterTags = { "cannot_be_monolith", "caster", "construct", "extra_extra_small_height", "ghost_armour", "is_unarmed", "medium_movement", "not_dex", "not_str", "physical_affinity", "unusable_corpse", },
-	life = 4,
-	energyShield = 0.6,
-	fireResist = 40,
-	coldResist = 40,
-	lightningResist = 40,
-	chaosResist = 20,
-	damage = 1,
-	damageSpread = 0,
-	attackTime = 1,
-	attackRange = 6,
-	accuracy = 1,
-	skillList = {
-		"RelicTeleport",
-		"Anger",
-	},
-	modList = {
-		-- EmergeSpeedHigh [emerge_speed_+% = 0]
-	},
-}
-
-minions["GuardianRelicCold"] = {
-	name = "Cold Relic",
-	monsterTags = { "cannot_be_monolith", "caster", "construct", "extra_extra_small_height", "ghost_armour", "is_unarmed", "medium_movement", "not_dex", "not_str", "physical_affinity", "unusable_corpse", },
-	life = 4,
-	energyShield = 0.6,
-	fireResist = 40,
-	coldResist = 40,
-	lightningResist = 40,
-	chaosResist = 20,
-	damage = 1,
-	damageSpread = 0,
-	attackTime = 1,
-	attackRange = 6,
-	accuracy = 1,
-	skillList = {
-		"RelicTeleport",
-		"Hatred",
-	},
-	modList = {
-		-- EmergeSpeedHigh [emerge_speed_+% = 0]
-	},
-}
-
-minions["GuardianRelicLightning"] = {
-	name = "Lightning Relic",
-	monsterTags = { "cannot_be_monolith", "caster", "construct", "extra_extra_small_height", "ghost_armour", "is_unarmed", "medium_movement", "not_dex", "not_str", "physical_affinity", "unusable_corpse", },
-	life = 4,
-	energyShield = 0.6,
-	fireResist = 40,
-	coldResist = 40,
-	lightningResist = 40,
-	chaosResist = 20,
-	damage = 1,
-	damageSpread = 0,
-	attackTime = 1,
-	attackRange = 6,
-	accuracy = 1,
-	skillList = {
-		"RelicTeleport",
-		"Wrath",
-	},
-	modList = {
-		-- EmergeSpeedHigh [emerge_speed_+% = 0]
+		-- MonsterNoDropsOrExperience [monster_no_drops_or_experience = 1]
 	},
 }

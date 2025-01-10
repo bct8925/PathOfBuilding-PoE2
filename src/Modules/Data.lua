@@ -17,7 +17,7 @@ local skillTypes = {
 	"act_dex",
 	"act_int",
 	"other",
-	"glove",
+	"minion",
 	"sup_str",
 	"sup_dex",
 	"sup_int",
