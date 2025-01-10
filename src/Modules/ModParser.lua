@@ -83,7 +83,7 @@ local formList = {
 	["^lose ([%d%.]+)"] = "LOSE",
 	["^lose %+(%d+)%% to"] = "LOSE",
 	["^grants ([%d%.]+)"] = "GRANTS",    -- local
-	["^grants ([%d%.]+) additional"] = "GRANTS",
+	["^grants ([%d%.]+) additional"] = "GRANTS_GLOBAL",
 	["^removes? ([%d%.]+) ?o?f? ?y?o?u?r?"] = "REMOVES", -- local
 	["^(%d+)"] = "BASE",
 	["^([%+%-]?%d+)%% chance"] = "CHANCE",
@@ -2742,6 +2742,7 @@ local specialModList = {
 	["gain maximum life instead of maximum energy shield from equipped armour items"] = { flag("ConvertArmourESToLife") },
 	-- Mercenary - Gemling
 	["attribute requirements of gems can be satisi?fied by your highest attribute"] = { flag("GemAttributeRequirementsSatisfiedByHighestAttribute") },
+	["you can use two copies of the same support gem in different skills"] = { mod("MaxSupportGemCopies", "OVERRIDE", 2) },
 	-- Item local modifiers
 	["has no sockets"] = { flag("NoSockets") },
 	["reflects your other ring"] = {
@@ -5810,6 +5811,10 @@ local function parseMod(line, order)
 		modType = "BASE"
 		modFlag = modFlag
 		modExtraTags = { tag = { type = "Condition", var = "{Hand}Attack" } }
+		modSuffix, line = scan(line, suffixTypes, true)
+	elseif modForm == "GRANTS_GLOBAL" then
+		modType = "BASE"
+		modFlag = modFlag
 		modSuffix, line = scan(line, suffixTypes, true)
 	elseif modForm == "REMOVES" then -- local
 		modValue = -modValue

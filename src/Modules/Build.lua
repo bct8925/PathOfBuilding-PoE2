@@ -1585,7 +1585,17 @@ function buildMode:InsertItemWarnings()
 	end
 	if self.calcsTab.mainEnv.itemWarnings.socketLimitWarning then
 		for _, warning in ipairs(self.calcsTab.mainEnv.itemWarnings.socketLimitWarning) do
-			InsertIfNew(self.controls.warnings.lines, "You have too many gems in your "..warning.." slot")
+			InsertIfNew(self.controls.warnings.lines, "You have too many gems in your "..warning.." socket group")
+		end
+	end
+	if self.calcsTab.mainEnv.itemWarnings.supportGemLimitWarning then
+		for _, warning in ipairs(self.calcsTab.mainEnv.itemWarnings.supportGemLimitWarning) do
+			InsertIfNew(self.controls.warnings.lines, "You have too many "..warning[1].." support gems allocated. Max allowed is "..warning[2].."."..(warning[3] and " Locations: "..table.concat(warning[3], ", ") or ""))
+		end
+	end
+	if self.calcsTab.mainEnv.itemWarnings.gemGroupCountWarning then
+		for _, warning in ipairs(self.calcsTab.mainEnv.itemWarnings.gemGroupCountWarning) do
+			InsertIfNew(self.controls.warnings.lines, "You have too many gem groups allocated. Max allowed is "..warning[1]..". You have "..warning[2].." non-item/non-granted gem groups allocated.")
 		end
 	end
 end
