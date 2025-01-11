@@ -692,7 +692,7 @@ local acts = {
 	[10] = { level = 64, questPoints = 20 },
 	-- Act 10  : Vilenta's Vengeance
 	-- Act 10  : An End to Hunger (+2)
-	[11] = { level = 67, questPoints = 23 },
+	[11] = { level = 67, questPoints = 24 },
 }
 
 local function actExtra(act, extra)
