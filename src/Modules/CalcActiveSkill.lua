@@ -88,11 +88,11 @@ end
 
 -- Create an active skill using the given active gem and list of support gems
 -- It will determine the base flag set, and check which of the support gems can support this skill
-function calcs.createActiveSkill(activeEffect, supportList, env, socketGroup, summonSkill)
+function calcs.createActiveSkill(activeEffect, supportList, env, actor, socketGroup, summonSkill)
 	local activeSkill = {
 		activeEffect = activeEffect,
 		supportList = supportList,
-		actor = env.player,
+		actor = actor,
 		summonSkill = summonSkill,
 		socketGroup = socketGroup,
 		skillData = { },
@@ -187,7 +187,7 @@ function calcs.copyActiveSkill(env, mode, skill)
 		srcInstance = skill.activeEffect.srcInstance,
 		gemData = skill.activeEffect.srcInstance.gemData,
 	}
-	local newSkill = calcs.createActiveSkill(activeEffect, skill.supportList, env, skill.socketGroup, skill.summonSkill)
+	local newSkill = calcs.createActiveSkill(activeEffect, skill.supportList, env, env.player, skill.socketGroup, skill.summonSkill)
 	local newEnv, _, _, _ = calcs.initEnv(env.build, mode, env.override)
 	calcs.buildActiveSkillModList(newEnv, newSkill)
 	newSkill.skillModList = new("ModList", newSkill.baseSkillModList)
@@ -694,7 +694,7 @@ function calcs.buildActiveSkillModList(env, activeSkill)
 			minion.minionData = env.data.minions[minionType]
 			minion.level = activeSkill.skillData.minionLevelIsEnemyLevel and env.enemyLevel or 
 								activeSkill.skillData.minionLevelIsPlayerLevel and (m_min(env.build and env.build.characterLevel or activeSkill.skillData.minionLevel or activeEffect.grantedEffectLevel.levelRequirement, activeSkill.skillData.minionLevelIsPlayerLevel)) or 
-								activeSkill.skillData.minionLevel or activeEffect.grantedEffectLevel.levelRequirement
+								activeSkill.skillData.minionLevel or data.minionLevelTable[activeSkill.activeEffect.level] or 1
 			-- fix minion level between 1 and 100
 			minion.level = m_min(m_max(minion.level,1),100) 
 			minion.itemList = { }
@@ -869,6 +869,18 @@ function calcs.createMinionSkills(env, activeSkill)
 			level = 1,
 			quality = 0,
 		}
+		local minionSkillIndex = activeSkill.activeEffect.srcInstance.skillMinionSkill
+		local minionSkillIndexCalcs = activeSkill.activeEffect.srcInstance.skillMinionSkillCalcs
+		local minionStatSet = activeEffect.grantedEffect.statSets[activeSkill.activeEffect.srcInstance.minionStatSet and activeSkill.activeEffect.srcInstance.minionStatSet[minionSkillIndex] or 1]
+		local minionStatSetCalcs = activeEffect.grantedEffect.statSets[activeSkill.activeEffect.srcInstance.minionStatSetCalcs and activeSkill.activeEffect.srcInstance.minionStatSetCalcs[minionSkillIndexCalcs] or 1]
+		activeEffect.srcInstance = {
+			statSetMain = {
+				statSet = minionStatSet,
+			},
+			statSetCalcs = {
+				statSet = minionStatSetCalcs,
+			}
+		}
 		if #activeEffect.grantedEffect.levels > 1 then
 			for level, levelData in ipairs(activeEffect.grantedEffect.levels) do
 				if levelData.levelRequirement > minion.level then
@@ -878,12 +890,17 @@ function calcs.createMinionSkills(env, activeSkill)
 				end
 			end
 		end
-		local minionSkill = calcs.createActiveSkill(activeEffect, activeSkill.supportList, minion, nil, activeSkill)
+		local minionSkill = calcs.createActiveSkill(activeEffect, activeSkill.supportList, env, minion, nil, activeSkill)
 		calcs.buildActiveSkillModList(env, minionSkill)
-		minionSkill.skillFlags.minion = true
-		minionSkill.skillFlags.minionSkill = true
-		minionSkill.skillFlags.haveMinion = true
-		minionSkill.skillFlags.spectre = activeSkill.skillFlags.spectre
+		local skillFlags
+		if env.mode == "CALCS" then
+			skillFlags = minionSkill.activeEffect.srcInstance.statSetCalcs.skillFlags
+		else 
+			skillFlags = minionSkill.activeEffect.srcInstance.statSetMain.skillFlags
+		end
+		skillFlags.minion = true
+		skillFlags.minionSkill = true
+		skillFlags.haveMinion = true
 		minionSkill.skillData.damageEffectiveness = 1 + (activeSkill.skillData.minionDamageEffectiveness or 0) / 100
 		t_insert(minion.activeSkillList, minionSkill)
 	end

@@ -428,6 +428,7 @@ function buildMode:Init(dbFileName, buildName, buildXML, convertBuild, importLin
 		local mainSocketGroup = self.skillsTab.socketGroupList[self.mainSocketGroup]
 		local srcInstance = mainSocketGroup.displaySkillList[mainSocketGroup.mainActiveSkill].activeEffect.srcInstance
 		srcInstance.statSetMain = srcInstance.statSetMain or { }
+		srcInstance.statSetMain.index = index
 		srcInstance.statSetMain.statSet = value.statSet
 		self.modFlag = true
 		self.buildFlag = true
@@ -502,7 +503,15 @@ function buildMode:Init(dbFileName, buildName, buildXML, convertBuild, importLin
 		self.modFlag = true
 		self.buildFlag = true
 	end)
-	self.controls.statBoxAnchor = new("Control", {"TOPLEFT",self.controls.mainSkillMinionSkill,"BOTTOMLEFT",true}, {0, 2, 0, 0})
+	self.controls.mainSkillMinionSkillStatSet = new("DropDownControl", {"TOPLEFT",self.controls.mainSkillMinionSkill,"BOTTOMLEFT",true}, {0, 2, 200, 16}, nil, function(index, value)
+		local mainSocketGroup = self.skillsTab.socketGroupList[self.mainSocketGroup]
+		local srcInstance = mainSocketGroup.displaySkillList[mainSocketGroup.mainActiveSkill].activeEffect.srcInstance
+		srcInstance.skillMinionSkillStatSetIndexLookup = srcInstance.skillMinionSkillStatSetIndexLookup or { }
+		srcInstance.skillMinionSkillStatSetIndexLookup[srcInstance.skillMinionSkill] = index
+		self.modFlag = true
+		self.buildFlag = true
+	end)
+	self.controls.statBoxAnchor = new("Control", {"TOPLEFT",self.controls.mainSkillMinionSkillStatSet,"BOTTOMLEFT",true}, {0, 2, 0, 0})
 	self.controls.statBox = new("TextListControl", {"TOPLEFT",self.controls.statBoxAnchor,"BOTTOMLEFT"}, {0, 2, 300, 0}, {{x=170,align="RIGHT_X"},{x=174,align="LEFT"}})
 	self.controls.statBox.height = function(control)
 		local x, y = control:GetPos()
@@ -1352,6 +1361,7 @@ function buildMode:RefreshSkillSelectControls(controls, mainGroup, suffix)
 		controls.mainSkillStageCount.shown = false
 		controls.mainSkillMinion.shown = false
 		controls.mainSkillMinionSkill.shown = false
+		controls.mainSkillMinionSkillStatSet.shown = false
 	else
 		local mainSocketGroup = self.skillsTab.socketGroupList[mainGroup]
 		local displaySkillList = mainSocketGroup["displaySkillList"..suffix]
@@ -1372,6 +1382,7 @@ function buildMode:RefreshSkillSelectControls(controls, mainGroup, suffix)
 		controls.mainSkillMinion.shown = false
 		controls.mainSkillMinionLibrary.shown = false
 		controls.mainSkillMinionSkill.shown = false
+		controls.mainSkillMinionSkillStatSet.shown = false
 		if displaySkillList[1] then
 			local activeSkill = displaySkillList[mainActiveSkill]
 			local activeEffect = activeSkill.activeEffect
@@ -1380,6 +1391,7 @@ function buildMode:RefreshSkillSelectControls(controls, mainGroup, suffix)
 				for i, statSet in ipairs(activeEffect.grantedEffect.statSets) do
 					t_insert(controls.statSet.list, { val = i, label = statSet.label, statSet = statSet })
 				end
+				-- controls.statSet.selIndex = activeEffect.srcInstance["statSetMainIndex"..suffix] or 1
 				controls.statSet.enabled = #controls.statSet.list > 1
 				controls.statSet.shown = true
 				if activeEffect.grantedEffect.parts and #activeEffect.grantedEffect.parts > 1 then
@@ -1434,6 +1446,14 @@ function buildMode:RefreshSkillSelectControls(controls, mainGroup, suffix)
 						controls.mainSkillMinionSkill.selIndex = activeEffect.srcInstance["skillMinionSkill"..suffix] or 1
 						controls.mainSkillMinionSkill.shown = true
 						controls.mainSkillMinionSkill.enabled = #controls.mainSkillMinionSkill.list > 1
+						wipeTable(controls.mainSkillMinionSkillStatSet.list)
+						for _, statSet in ipairs(activeSkill.minion.activeSkillList[controls.mainSkillMinionSkill.selIndex].activeEffect.grantedEffect.statSets) do
+							t_insert(controls.mainSkillMinionSkillStatSet.list, statSet.label)
+						end
+						local minionStatSetIndexLookup = activeEffect.srcInstance["skillMinionSkillStatSetIndexLookup"..suffix]
+						controls.mainSkillMinionSkillStatSet.selIndex = minionStatSetIndexLookup and minionStatSetIndexLookup[controls.mainSkillMinionSkill.selIndex] or 1
+						controls.mainSkillMinionSkillStatSet.shown = true
+						controls.mainSkillMinionSkillStatSet.enabled = #controls.mainSkillMinionSkillStatSet.list > 1
 					else
 						t_insert(controls.mainSkillMinion.list, "<No spectres in build>")
 					end
