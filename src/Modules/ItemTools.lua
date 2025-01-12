@@ -260,7 +260,7 @@ function itemLib.applyRange(line, range, valueScalar, baseValueScalar)
 			end
 		end
 		for _, replacement in ipairs(scalableValues) do
-			scalableLine = scalableLine:gsub("#", replacement)
+			scalableLine = scalableLine:gsub("#", replacement, 1)
 		end
 		return scalableLine
 	else -- fallback to old method for determining scalability
