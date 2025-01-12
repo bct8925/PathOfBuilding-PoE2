@@ -1,6 +1,6 @@
 -- Game versions
 ---Default target version for unknown builds and builds created before 3.0.0.
-legacyTargetVersion = "4_0"
+legacyTargetVersion = "3_0"
 ---Default target for new builds and target to convert legacy builds to.
 liveTargetVersion = "4_0"
 
