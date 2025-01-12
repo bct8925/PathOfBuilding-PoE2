@@ -2797,7 +2797,7 @@ local specialModList = {
 	["has no attribute requirements"] = { flag("NoAttributeRequirements") },
 	-- Skill modifiers
 	["([%+%-]%d+)%% to quality of all skills"] = function(num) return { mod("GemProperty", "LIST", { keyword = "grants_active_skill", key = "quality", value = num }) } end,
-	["([%+%-]%d+)%%? to (%a+) of ?([%a%- ]*) skills"] = function(num, _, property, type)
+	["([%+%-]%d+)%%? to (%a+) of all ?([%a%- ]*) skills"] = function(num, _, property, type)
 		if type == "" then type = "all" end
 		return { mod("GemProperty", "LIST", { keyword = type, key = property, value = num }) }
 	end,
@@ -4917,6 +4917,9 @@ local specialModList = {
 		mod("ManaCostAsEnergyShieldCost", "BASE", num),
 	} end,
     ["skills cost life instead of (%d+)%% of mana cost"] = function(num) return {
+        mod("HybridManaAndLifeCost_Life", "BASE", num),
+    } end,
+	["(%d+)%% of skill mana costs converted to life costs"] = function(num) return {
         mod("HybridManaAndLifeCost_Life", "BASE", num),
     } end,
 	["(%d+)%% increased cost of arc and crackling lance"] = function(num) return {
