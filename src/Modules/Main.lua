@@ -1232,7 +1232,7 @@ function main:DrawBackground(viewPort)
 	SetDrawLayer(nil, -100)
 	SetDrawColor(0.5, 0.5, 0.5)
 
-	local bd = self.tree[latestTreeVersion]:GetAssetByName("Background2") or self.tree[latestTreeVersion]:GetAssetByName("Background1")
+	local bd = self.tree[latestTreeVersion]:GetAssetByName("Background2")
 
 	DrawImage(bd.handle, viewPort.x, viewPort.y, viewPort.width, viewPort.height, 0, 0, viewPort.width / 100, viewPort.height / 100)
 
