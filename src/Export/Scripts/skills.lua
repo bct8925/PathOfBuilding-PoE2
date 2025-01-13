@@ -297,6 +297,7 @@ directiveTable.skill = function(state, args, out)
 	end
 	state.noGem = false
 	skill.baseFlags = { }
+	skill.baseConstantStats = { }
 	skill.levels = { }
 	skill.sets = { }
 	skill.setIndex = 1
@@ -307,12 +308,15 @@ directiveTable.skill = function(state, args, out)
 	end
 	local nextGemLevelReqValue = 0
 	local perLevel = dat("GrantedEffectsPerLevel"):GetRowList("GrantedEffect", granted)
+	local grantedEffectStatSet = dat("GrantedEffectStatSets"):GetRow("Id", grantedId)
+	local statsPerLevel = dat("GrantedEffectStatSetsPerLevel"):GetRowList("GrantedEffectStatSets", grantedEffectStatSet)
 	local gemLevelProgression = nil
 	if skillGem and not state.noGem then
 		gemLevelProgression = dat("ItemExperiencePerLevel"):GetRowList("ItemExperienceType", skillGem.GemLevelProgression)
 	end
 	for indx = 1, #perLevel do
 		local levelRow = perLevel[indx]
+		local statRow = statsPerLevel[indx]
 		local level = { extra = { }, cost = { } }
 		level.level = levelRow.Level
 		level.extra.levelRequirement = math.max(gemLevelProgression and gemLevelProgression[indx] and gemLevelProgression[indx].PlayerLevel or 0, nextGemLevelReqValue)
@@ -352,6 +356,9 @@ directiveTable.skill = function(state, args, out)
 		end
 		if levelRow.StoredUses ~= 0 then
 			level.extra.storedUses = levelRow.StoredUses
+		end
+		if statRow and statRow.BaseMultiplier and statRow.BaseMultiplier ~= 0 then
+			level.extra.baseMultiplier = statRow.BaseMultiplier / 10000 + 1
 		end
 		if levelRow.VaalSouls ~= 0 then
 			level.cost.Soul = levelRow.VaalSouls
@@ -534,7 +541,7 @@ directiveTable.set = function(state, args, out)
 		if statRow.OffhandCritChance ~= 0 then
 			level.extra.critChance = statRow.OffhandCritChance / 100
 		end
-		if statRow.BaseMultiplier and statRow.BaseMultiplier ~= 0 then
+		if state.skill.setIndex ~= 1 and statRow.BaseMultiplier and statRow.BaseMultiplier ~= 0 then
 			level.extra.baseMultiplier = statRow.BaseMultiplier / 10000 + 1
 		end
 		level.statInterpolation = statRow.StatInterpolations
@@ -637,6 +644,11 @@ directiveTable.set = function(state, args, out)
 			table.insert(set.constantStats, { stat.Id, grantedEffectStatSet.ConstantStatsValues[i] })
 		end
 	end
+	if state.skill.setIndex == 1 then
+		skill.baseConstantStats = set.constantStats
+	else
+		set.constantStats = tableConcat(set.constantStats, skill.baseConstantStats)
+	end
 
 	-- Emitting statSet data
 	out:write('\t\t['..skill.setIndex..'] = {\n')
@@ -651,7 +663,7 @@ directiveTable.set = function(state, args, out)
 		out:write('\t\t\tdamageIncrementalEffectiveness = ', grantedEffectStatSet.DamageIncrementalEffectiveness, ',\n')
 	end
 	if state.granted.IsSupport then
-		out:write('\tstatDescriptionScope = "gem_stat_descriptions",\n')
+		out:write('\t\t\tstatDescriptionScope = "gem_stat_descriptions",\n')
 	else
 		out:write('\t\t\tstatDescriptionScope = "', state.granted.ActiveSkill.StatDescription:gsub("^Metadata/StatDescriptions/", ""):
 		-- Need to subtract 1 from setIndex because GGG indexes from 0

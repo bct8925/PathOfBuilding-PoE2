@@ -149,7 +149,7 @@ skills["GasShotSkeletonSniperMinion"] = {
 	qualityStats = {
 	},
 	levels = {
-		[1] = { attackSpeedMultiplier = 20, storedUses = 1, cooldown = 8, levelRequirement = 0, },
+		[1] = { attackSpeedMultiplier = 20, storedUses = 1, baseMultiplier = 0.7, cooldown = 8, levelRequirement = 0, },
 	},
 	statSets = {
 		[1] = {
@@ -177,7 +177,7 @@ skills["GasShotSkeletonSniperMinion"] = {
 				"skill_cannot_be_stunned",
 			},
 			levels = {
-				[1] = { baseMultiplier = 0.7, actorLevel = 1, },
+				[1] = { actorLevel = 1, },
 			},
 		},
 		[2] = {
@@ -195,6 +195,9 @@ skills["GasShotSkeletonSniperMinion"] = {
 				{ "base_skill_effect_duration", 8000 },
 				{ "active_skill_ground_effect_area_of_effect_+%_final_per_second", 40 },
 				{ "active_skill_ground_effect_area_of_effect_+%_final_per_second_max", 200 },
+				{ "active_skill_base_area_of_effect_radius", 14 },
+				{ "active_skill_base_secondary_area_of_effect_radius", 20 },
+				{ "command_minion_marker_additional_time_ms", 300 },
 			},
 			stats = {
 				"is_area_damage",
@@ -217,6 +220,9 @@ skills["GasShotSkeletonSniperMinion"] = {
 			},
 			constantStats = {
 				{ "active_skill_base_physical_damage_%_to_convert_to_fire", 100 },
+				{ "active_skill_base_area_of_effect_radius", 14 },
+				{ "active_skill_base_secondary_area_of_effect_radius", 20 },
+				{ "command_minion_marker_additional_time_ms", 300 },
 			},
 			stats = {
 			},
@@ -235,7 +241,7 @@ skills["BoneshatterBruteMinion"] = {
 	qualityStats = {
 	},
 	levels = {
-		[1] = { attackSpeedMultiplier = 20, storedUses = 1, cooldown = 4, levelRequirement = 0, },
+		[1] = { attackSpeedMultiplier = 20, storedUses = 1, baseMultiplier = 0.5, cooldown = 4, levelRequirement = 0, },
 	},
 	statSets = {
 		[1] = {
@@ -256,7 +262,7 @@ skills["BoneshatterBruteMinion"] = {
 				"crushing_blow",
 			},
 			levels = {
-				[1] = { baseMultiplier = 0.5, actorLevel = 1, },
+				[1] = { actorLevel = 1, },
 			},
 		},
 		[2] = {
@@ -272,6 +278,8 @@ skills["BoneshatterBruteMinion"] = {
 			constantStats = {
 				{ "active_skill_base_area_of_effect_radius", 20 },
 				{ "active_skill_damage_+%_final", 300 },
+				{ "melee_range_+", 2 },
+				{ "melee_conditional_step_distance", 3 },
 			},
 			stats = {
 				"is_area_damage",
@@ -414,6 +422,10 @@ skills["FrostBoltSkeletonMageMinion"] = {
 			},
 			constantStats = {
 				{ "active_skill_base_area_of_effect_radius", 8 },
+				{ "monster_projectile_variation", 1064 },
+				{ "base_chance_to_freeze_%", 100 },
+				{ "active_skill_hit_damage_freeze_multiplier_+%_final", 100 },
+				{ "projectile_maximum_duration_override_ms", 180 },
 			},
 			stats = {
 				"is_area_damage",
@@ -581,6 +593,9 @@ skills["FireBombSkeletonMinion"] = {
 			},
 			constantStats = {
 				{ "base_secondary_skill_effect_duration", 0 },
+				{ "base_skill_effect_duration", 2000 },
+				{ "active_skill_base_physical_damage_%_to_convert_to_fire", 70 },
+				{ "active_skill_base_area_of_effect_radius", 16 },
 			},
 			stats = {
 				"base_fire_damage_to_deal_per_minute",
@@ -761,7 +776,7 @@ skills["GAAncestralJadeHulkLeapImpact"] = {
 	qualityStats = {
 	},
 	levels = {
-		[1] = { levelRequirement = 0, },
+		[1] = { baseMultiplier = 1.5, levelRequirement = 0, },
 	},
 	statSets = {
 		[1] = {
@@ -776,7 +791,7 @@ skills["GAAncestralJadeHulkLeapImpact"] = {
 				"is_area_damage",
 			},
 			levels = {
-				[1] = { baseMultiplier = 1.5, actorLevel = 1, },
+				[1] = { actorLevel = 1, },
 			},
 		},
 	}

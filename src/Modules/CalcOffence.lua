@@ -977,6 +977,7 @@ function calcs.offence(env, actor, activeSkill)
 			output.ChainMaxString = "Cannot chain"
 		else
 			output.ChainMax = skillModList:Sum("BASE", skillCfg, "ChainCountMax", not skillFlags.projectile and "BeamChainCountMax" or nil) * skillModList:More(skillCfg, "ChainCountMax", not skillFlags.projectile and "BeamChainCountMax" or nil)
+			output.TerrainChain = m_min(skillModList:Sum("BASE", skillCfg, "TerrainChainChance"), 100)
 			if skillModList:Flag(skillCfg, "AdditionalProjectilesAddChainsInstead") then
 				output.ChainMax = output.ChainMax + m_floor((skillModList:Sum("BASE", skillCfg, "ProjectileCount") - 1) * skillModList:More(skillCfg, "ProjectileCount"))
 			end
@@ -1123,6 +1124,19 @@ function calcs.offence(env, actor, activeSkill)
 		output.MarkEffectMod = calcLib.mod(skillModList, skillCfg, "MarkEffect")
 		if breakdown then
 			breakdown.MarkEffectMod = breakdown.mod(skillModList, skillCfg, "MarkEffect")
+		end
+	end
+	if activeSkill.skillTypes[SkillType.PerfectTiming] then
+		local perfectTimingMod = calcLib.mod(skillModList, skillCfg, "PerfectTiming")
+		local baseTiming = skillModList:Sum("BASE", skillCfg, "PerfectTimingBase")
+		output.PerfectTiming = baseTiming * perfectTimingMod
+		if breakdown then
+			breakdown.PerfectTiming = {
+				s_format("%.3fs ^8(Base Timing)", baseTiming),
+				s_format("x %.2f ^8(effect modifiers)", perfectTimingMod),
+				s_format("\n"),
+				s_format("= %.3fs ^8(Perfect Timing Window)", output.PerfectTiming),
+			}
 		end
 	end
 	if activeSkill.skillTypes[SkillType.Warcry] then
