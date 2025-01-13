@@ -547,7 +547,7 @@ holding Shift will put it in the second.]])
 			end
 
 			self:UpdateDisplayItemTooltip()
-			self:UpdateAffixControls()
+			self:UpdateRuneControls()
 		end)
 		drop.y = function()
 			return i == 1 and 0 or 24
@@ -615,7 +615,7 @@ holding Shift will put it in the second.]])
 		end
 		
 		self.controls["displayItemRune"..i] = drop
-		self.controls["displayItemRuneLabel"..i] = new("LabelControl", {"RIGHT",drop,"LEFT"}, {-4, 0, 0, 14}, "Rune #"..i)
+		self.controls["displayItemRuneLabel"..i] = new("LabelControl", {"RIGHT",drop,"LEFT"}, {-4, 0, 0, 14}, "^7Rune #"..i)
 	end
 
 	-- Section: Affix Selection
@@ -1552,6 +1552,7 @@ function ItemsTabClass:SetDisplayItem(item)
 			self.controls.displayItemCatalystQualityEdit:SetText(0)
 		end
 		self:UpdateCustomControls()
+		self:UpdateRuneControls()
 		self:UpdateDisplayItemRangeLines()
 		if item.clusterJewel and item.crafted then
 			self:UpdateClusterJewelControls()
@@ -1629,6 +1630,27 @@ function ItemsTabClass:UpdateAffixControls()
 	-- The custom affixes may have had their indexes changed, so the custom control UI is also rebuilt so that it will
 	-- reference the correct affix index.
 	self:UpdateCustomControls()
+end
+
+-- build rune mod list for armour and weapons
+local runeArmourModLines = { { name = "None", label = "None" } }
+local runeWeaponModLines = { { name = "None", label = "None" } }
+for i, base in ipairs({unpack(data.itemBaseLists["Rune"]), unpack(data.itemBaseLists["SoulCore"])}) do
+	local weaponLine, armourLine = base.base.implicit:match("Martial Weapons: (.-)\nArmour: (.+)")
+	local name = base.label
+	t_insert(runeArmourModLines, { name = name, label = armourLine})
+	t_insert(runeWeaponModLines, { name = name, label = weaponLine})
+end
+-- Update rune selection controls
+function ItemsTabClass:UpdateRuneControls()
+	local item = self.displayItem
+	for i = 1, item.itemSocketCount do
+		if item.base.armour then
+			self.controls["displayItemRune"..i].list = runeArmourModLines
+		elseif item.base.weapon then
+			self.controls["displayItemRune"..i].list = runeWeaponModLines
+		end
+	end
 end
 
 function ItemsTabClass:UpdateAffixControl(control, item, type, outputTable, outputIndex)
