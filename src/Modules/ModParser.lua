@@ -2348,6 +2348,15 @@ local specialModList = {
 	["exerted attacks deal (%d+)%% more attack damage if a warcry sacrificed rage recently"] = function(num) return { mod("ExertAttackIncrease", "MORE", num, nil, ModFlag.Attack, 0) } end,
 	["deal (%d+)%% less damage"] = function(num) return { mod("Damage", "MORE", -num) } end,
 	["warcries exert twice as many attacks"] = { mod("ExtraExertedAttacks", "MORE", 100) },
+	--Blood Mage
+	["skills gain a base life cost equal to base mana cost"] = { mod("ManaCostAsLifeCost", "BASE", 100) },
+	["gain (%d+)%% of damage as extra physical damage"] = function(num) return {
+		mod("PhysicalDamageGainAsPhysical", "BASE", num),
+		mod("ColdDamageGainAsPhysical", "BASE", num),
+		mod("LightningDamageGainAsPhysical", "BASE", num),
+		mod("FireDamageGainAsPhysical", "BASE", num),
+		mod("ChaosDamageGainAsPhysical", "BASE", num),
+	} end,
 	-- Champion
 	["cannot be stunned while you have fortify"] = { flag("StunImmune", { type = "Condition", var = "Fortified" }) },
 	["cannot be stunned while fortified"] = { flag("StunImmune", { type = "Condition", var = "Fortified" }) },

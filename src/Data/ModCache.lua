@@ -2391,8 +2391,7 @@ c["Gain 10 Mana per Enemy Killed"]={{[1]={flags=0,keywordFlags=0,name="ManaOnKil
 c["Gain 10 Rage when Critically Hit by an Enemy"]={{}," Rage when Critically Hit by an Enemy "}
 c["Gain 10% of Damage as Extra Cold Damage"]={{[1]={flags=0,keywordFlags=0,name="DamageGainAsCold",type="BASE",value=10}},nil}
 c["Gain 10% of Damage as Extra Lightning Damage"]={{[1]={flags=0,keywordFlags=0,name="DamageGainAsLightning",type="BASE",value=10}},nil}
-c["Gain 10% of Damage as Extra Physical Damage"]={{[1]={flags=0,keywordFlags=0,name="Damage",type="BASE",value=10}},"  as Extra Physical Damage "}
-c["Gain 10% of Damage as Extra Physical Damage Elemental Damage also Contributes to Bleeding Magnitude"]={{[1]={flags=0,keywordFlags=0,name="Damage",type="BASE",value=10}},"  as Extra Physical Damage Elemental Damage also Contributes to Bleeding Magnitude "}
+c["Gain 10% of Damage as Extra Physical Damage"]={{[1]={flags=0,keywordFlags=0,name="PhysicalDamageGainAsPhysical",type="BASE",value=10},[2]={flags=0,keywordFlags=0,name="ColdDamageGainAsPhysical",type="BASE",value=10},[3]={flags=0,keywordFlags=0,name="LightningDamageGainAsPhysical",type="BASE",value=10},[4]={flags=0,keywordFlags=0,name="FireDamageGainAsPhysical",type="BASE",value=10},[5]={flags=0,keywordFlags=0,name="ChaosDamageGainAsPhysical",type="BASE",value=10}},nil}
 c["Gain 100% of Maximum Energy Shield as additional Freeze Threshold"]={{[1]={flags=0,keywordFlags=0,name="EnergyShield",type="BASE",value=100}},"  as additional Freeze Threshold "}
 c["Gain 11% of Damage as Extra Chaos Damage"]={{[1]={flags=0,keywordFlags=0,name="DamageGainAsChaos",type="BASE",value=11}},nil}
 c["Gain 12% of Physical Damage as Extra Fire Damage"]={{[1]={flags=0,keywordFlags=0,name="PhysicalDamageGainAsFire",type="BASE",value=12}},nil}
@@ -2811,14 +2810,14 @@ c["Projectiles deal 20% more Hit damage to targets in the first 3.5 metres of th
 c["Projectiles deal 25% increased Damage with Hits against Enemies further than 6m"]={{[1]={flags=1024,keywordFlags=262144,name="Damage",type="INC",value=25}},"   against Enemies further than 6m "}
 c["Projectiles deal 25% increased Damage with Hits against Enemies within 2m"]={{[1]={flags=1024,keywordFlags=262144,name="Damage",type="INC",value=25}},"   against Enemies within 2m "}
 c["Projectiles from Spells cannot Pierce"]={{[1]={flags=2,keywordFlags=0,name="CannotPierce",type="FLAG",value=true}},nil}
-c["Projectiles have 10% chance to Chain an additional time from terrain"]={{}," to Chain an additional time from terrain "}
-c["Projectiles have 15% chance to Chain an additional time from terrain"]={{}," to Chain an additional time from terrain "}
+c["Projectiles have 10% chance to Chain an additional time from terrain"]={{[1]={flags=1024,keywordFlags=0,name="TerrainChainChance",type="BASE",value=10}},nil}
+c["Projectiles have 15% chance to Chain an additional time from terrain"]={{[1]={flags=1024,keywordFlags=0,name="TerrainChainChance",type="BASE",value=15}},nil}
 c["Projectiles have 25% chance for an additional Projectile when Forking"]={{[1]={flags=1024,keywordFlags=0,name="ProjectileCount",type="BASE",value=25}}," for an additional  when Forking "}
 c["Projectiles have 25% increased Critical Hit Chance against Enemies further than 6m"]={{[1]={flags=1024,keywordFlags=0,name="CritChance",type="INC",value=25}},"  against Enemies further than 6m "}
 c["Projectiles have 25% increased Critical Hit Chance against Enemies further than 6m Projectiles deal 25% increased Damage with Hits against Enemies further than 6m"]={{[1]={flags=1024,keywordFlags=262144,name="CritChance",type="INC",value=25}},"  against Enemies further than 6m Projectiles deal 25% increased Damage  against Enemies further than 6m "}
 c["Projectiles have 40% increased Critical Damage Bonus against Enemies within 2m"]={{[1]={flags=1024,keywordFlags=0,name="CritMultiplier",type="INC",value=40}},"  against Enemies within 2m "}
 c["Projectiles have 40% increased Critical Damage Bonus against Enemies within 2m Projectiles deal 25% increased Damage with Hits against Enemies within 2m"]={{[1]={flags=1024,keywordFlags=262144,name="CritMultiplier",type="INC",value=40}},"  against Enemies within 2m Projectiles deal 25% increased Damage  against Enemies within 2m "}
-c["Projectiles have 5% chance to Chain an additional time from terrain"]={{}," to Chain an additional time from terrain "}
+c["Projectiles have 5% chance to Chain an additional time from terrain"]={{[1]={flags=1024,keywordFlags=0,name="TerrainChainChance",type="BASE",value=5}},nil}
 c["Projectiles have 75% chance for an additional Projectile when Forking"]={{[1]={flags=1024,keywordFlags=0,name="ProjectileCount",type="BASE",value=75}}," for an additional  when Forking "}
 c["Quarterstaff Skills that consume Power Charges count as consuming an additional Power Charge"]={nil,"Quarterstaff Skills that consume Power Charges count as consuming an additional Power Charge "}
 c["Recoup Effects instead occur over 4 seconds"]={nil,"Recoup Effects instead occur over 4 seconds "}
@@ -2893,12 +2892,12 @@ c["Skills Supported by Unleash have 25% increased Seal gain frequency"]={{[1]={f
 c["Skills fire an additional Projectile"]={{[1]={flags=0,keywordFlags=0,name="ProjectileCount",type="BASE",value=1}},nil}
 c["Skills gain 1% of Damage as Chaos Damage per 3 Life Cost"]={{[1]={flags=0,keywordFlags=0,name="DamageAsChaos",type="BASE",value=1}},"   per 3 Life Cost "}
 c["Skills gain a Base Life Cost equal to 50% of Base Mana Cost"]={{[1]={flags=0,keywordFlags=0,name="ManaCostAsLifeCost",type="BASE",value=50}},nil}
-c["Skills gain a Base Life Cost equal to Base Mana Cost"]={nil,"a Base Life Cost equal to Base Mana Cost "}
-c["Skills gain a Base Life Cost equal to Base Mana Cost Grants Skill: Life Remnants"]={nil,"a Base Life Cost equal to Base Mana Cost Grants Skill: Life Remnants "}
+c["Skills gain a Base Life Cost equal to Base Mana Cost"]={{[1]={flags=0,keywordFlags=0,name="ManaCostAsLifeCost",type="BASE",value=100}},nil}
 c["Skills have +1 to Limit"]={{}," Limit "}
 c["Skills have -2 seconds to Cooldown"]={{}," seconds to Cooldown "}
 c["Skills have 33% chance to not consume a Cooldown when used"]={{}," to not consume a Cooldown when used "}
-c["Skills have a 150% longer Perfect Timing window"]={nil,"a 150% longer Perfect Timing window "}
+c["Skills have a 125% longer Perfect Timing window"]={{[1]={flags=0,keywordFlags=0,name="PerfectTiming",type="INC",value=125}},nil}
+c["Skills have a 150% longer Perfect Timing window"]={{[1]={flags=0,keywordFlags=0,name="PerfectTiming",type="INC",value=150}},nil}
 c["Skills reserve 50% less Spirit"]={nil,"Skills reserve 50% less Spirit "}
 c["Skills that would Summon a Totem have 20% chance to Summon two Totems instead"]={nil,"Skills that would Summon a Totem have 20% chance to Summon two Totems instead "}
 c["Slam Skills have 12% increased Area of Effect"]={nil,"Slam Skills have 12% increased Area of Effect "}
