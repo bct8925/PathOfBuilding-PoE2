@@ -958,6 +958,12 @@ function ItemsTabClass:Save(xml)
 			end
 			id = id + 1
 		end
+		for _, modLine in ipairs(item.runeModLines) do
+			if modLine.range then
+				t_insert(child, { elem = "ModRange", attrib = { id = tostring(id), range = tostring(modLine.range) } })
+			end
+			id = id + 1
+		end
 		for _, modLine in ipairs(item.implicitModLines) do
 			if modLine.range then
 				t_insert(child, { elem = "ModRange", attrib = { id = tostring(id), range = tostring(modLine.range) } })
@@ -2782,7 +2788,7 @@ function ItemsTabClass:AddItemTooltip(tooltip, item, slot, dbMode)
 		item.requirements.str or 0, item.requirements.dex or 0, item.requirements.int or 0)
 
 	-- Modifiers
-	for _, modList in ipairs{item.enchantModLines, item.implicitModLines, item.explicitModLines} do
+	for _, modList in ipairs{item.enchantModLines, item.runeModLines, item.implicitModLines, item.explicitModLines} do
 		if modList[1] then
 			for _, modLine in ipairs(modList) do
 				if item:CheckModLineVariant(modLine) then

@@ -150,6 +150,13 @@ function ItemDBClass:DoesItemMatchFilters(item)
 					break
 				end
 			end
+			for _, line in pairs(item.runeModLines) do
+				local err, match = PCall(string.matchOrPattern, line.line:lower(), searchStr)
+				if not err and match then
+					found = true
+					break
+				end
+			end
 			for _, line in pairs(item.implicitModLines) do
 				local err, match = PCall(string.matchOrPattern, line.line:lower(), searchStr)
 				if not err and match then

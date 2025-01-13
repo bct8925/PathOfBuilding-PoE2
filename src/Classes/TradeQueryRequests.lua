@@ -385,7 +385,7 @@ function TradeQueryRequestsClass:FetchResultBlock(url, callback)
 					t_insert(rawLines, "{enchant}"	.. escapeGGGString(modLine))
 				end
 				for _, modLine in ipairs(item.runeMods) do
-					t_insert(rawLines, "{enchant}"	.. escapeGGGString(modLine))
+					t_insert(rawLines, "{enchant}{rune}"	.. escapeGGGString(modLine))
 				end
 				for _, modLine in ipairs(item.implicitMods) do
 					t_insert(rawLines, escapeGGGString(modLine))

@@ -332,10 +332,12 @@ function ItemClass:ParseRaw(raw, rarity, highQuality)
 	end
 	self.checkSection = false
 	self.sockets = { }
+	self.runes = { }
 	self.itemSocketCount = 0
 	self.classRequirementModLines = { }
 	self.buffModLines = { }
 	self.enchantModLines = { }
+	self.runeModLines = { }
 	self.implicitModLines = { }
 	self.explicitModLines = { }
 	local implicitLines = 0
@@ -417,6 +419,8 @@ function ItemClass:ParseRaw(raw, rarity, highQuality)
 						end
 					end
 					self.itemSocketCount = #self.sockets
+				elseif specName == "Rune" then
+					t_insert(self.runes, specVal)
 				elseif specName == "Radius" and self.type == "Jewel" then
 					self.jewelRadiusLabel = specVal:match("^[%a ]+")
 					if specVal:match("^%a+") == "Variable" then
@@ -739,11 +743,13 @@ function ItemClass:ParseRaw(raw, rarity, highQuality)
 				end
 
 				local modLines
-				if modLine.enchant then
+				if modLine.rune then
+					modLines = self.runeModLines
+				elseif modLine.enchant then
 					modLines = self.enchantModLines
 				elseif line:find("Requires Class") then
 					modLines = self.classRequirementModLines
-				elseif modLine.implicit or #self.enchantModLines + #self.implicitModLines < implicitLines then
+				elseif modLine.implicit or #self.runeModLines + #self.enchantModLines + #self.implicitModLines < implicitLines then
 					modLines = self.implicitModLines
 				else
 					modLines = self.explicitModLines
@@ -975,6 +981,9 @@ function ItemClass:BuildRaw()
 		if modLine.corruptedRange then
 			line = "{corruptedRange:" .. round(modLine.corruptedRange, 2) .. "}" .. line
 		end
+		if modLine.rune then
+			line = "{rune}" .. line
+		end
 		if modLine.enchant then
 			line = "{enchant}" .. line
 		end
@@ -1035,6 +1044,9 @@ function ItemClass:BuildRaw()
 		end
 		socketString = socketString:gsub(" $", "")
 		t_insert(rawLines, "Sockets: " .. socketString)
+		for i = 1, self.itemSocketCount do
+			t_insert(rawLines, "Rune: None")
+		end
 	end
 	if self.requirements and self.requirements.level then
 		t_insert(rawLines, "LevelReq: " .. self.requirements.level)
@@ -1048,7 +1060,10 @@ function ItemClass:BuildRaw()
 	if self.classRestriction then
 		t_insert(rawLines, "Requires Class " .. self.classRestriction)
 	end
-	t_insert(rawLines, "Implicits: " .. (#self.enchantModLines + #self.implicitModLines))
+	t_insert(rawLines, "Implicits: " .. (#self.runeModLines + #self.enchantModLines + #self.implicitModLines))
+	for _, modLine in ipairs(self.runeModLines) do
+		writeModLine(modLine)
+	end
 	for _, modLine in ipairs(self.enchantModLines) do
 		writeModLine(modLine)
 	end
