@@ -524,8 +524,102 @@ holding Shift will put it in the second.]])
 		self:CraftClusterJewel()
 	end)
 
+	-- Section: Rune Selection
+	self.controls.displayItemSectionRune = new("Control", {"TOPLEFT",self.controls.displayItemSectionClusterJewel,"BOTTOMLEFT"}, {0, 0, 0, function()
+		if not self.displayItem or self.displayItem.itemSocketCount == 0 or not (self.displayItem.base.weapon or self.displayItem.base.armour) then
+			return 0
+		end
+		local h = 6
+		for i = 1, 6 do
+			if self.controls["displayItemRune"..i]:IsShown() then
+				h = h + 24
+			end
+		end
+		return h
+	end})
+	for i = 1, 6 do
+		local prev = self.controls["displayItemRune"..(i-1)] or self.controls.displayItemSectionRune
+		local drop
+		drop = new("DropDownControl", {"TOPLEFT",prev,"TOPLEFT"}, {i==1 and 40 or 0, 0, 418, 20}, nil, function(index, value)
+			local rune = { name = "None" }
+			if value.name then
+				rune.name = value.name
+			end
+
+			self:UpdateDisplayItemTooltip()
+			self:UpdateAffixControls()
+		end)
+		drop.y = function()
+			return i == 1 and 0 or 24
+		end
+		-- drop.tooltipFunc = function(tooltip, mode, index, value)
+		-- 	local modList = value.modList
+		-- 	if not modList or main.popups[1] or mode == "OUT" or (self.selControl and self.selControl ~= drop) then
+		-- 		tooltip:Clear()
+		-- 	elseif tooltip:CheckForUpdate(modList) then
+		-- 		if value.modId or #modList == 1 then
+		-- 			local mod = self.displayItem.affixes[value.modId or modList[1]]
+		-- 			tooltip:AddLine(16, "^7Affix: "..mod.affix)
+		-- 			for _, line in ipairs(mod) do
+		-- 				tooltip:AddLine(14, "^7"..line)
+		-- 			end
+		-- 			if mod.level > 1 then
+		-- 				tooltip:AddLine(16, "Level: "..mod.level)
+		-- 			end
+		-- 			if mod.modTags and #mod.modTags > 0 then
+		-- 				tooltip:AddLine(16, "Tags: "..table.concat(mod.modTags, ', '))
+		-- 			end
+		-- 		else
+		-- 			tooltip:AddLine(16, "^7"..#modList.." Tiers")
+		-- 			local minMod = self.displayItem.affixes[modList[1]]
+		-- 			local maxMod = self.displayItem.affixes[modList[#modList]]
+		-- 			for l, line in ipairs(minMod) do
+		-- 				local minLine = line:gsub("%((%d[%d%.]*)%-(%d[%d%.]*)%)", "%1")
+		-- 				local maxLine = maxMod[l]:gsub("%((%d[%d%.]*)%-(%d[%d%.]*)%)", "%2")
+		-- 				if maxLine == maxMod[l] then
+		-- 					tooltip:AddLine(14, maxLine)
+		-- 				else
+		-- 					local start = 1
+		-- 					tooltip:AddLine(14, minLine:gsub("%d[%d%.]*", function(min)
+		-- 						local s, e, max = maxLine:find("(%d[%d%.]*)", start)
+		-- 						start = e + 1
+		-- 						if min == max then
+		-- 							return min
+		-- 						else
+		-- 							return "("..min.."-"..max..")"
+		-- 						end
+		-- 					end))
+		-- 				end
+		-- 			end
+		-- 			tooltip:AddLine(16, "Level: "..minMod.level.." to "..maxMod.level)
+		-- 			-- Assuming that all mods have the same tags
+		-- 			if maxMod.modTags and #maxMod.modTags > 0 then
+		-- 				tooltip:AddLine(16, "Tags: "..table.concat(maxMod.modTags, ', '))
+		-- 			end
+		-- 		end
+		-- 		local mod = self.displayItem.affixes[value.modId or modList[1]]
+
+		-- 		local mod = { }
+		-- 		if value.modId or #modList == 1 then
+		-- 			mod = self.displayItem.affixes[value.modId or modList[1]]
+		-- 		else
+		-- 			mod = self.displayItem.affixes[modList[1 + round((#modList - 1) * main.defaultItemAffixQuality)]]
+		-- 		end
+				
+		-- 		-- Adding Mod
+		-- 		self:AddModComparisonTooltip(tooltip, mod)
+		-- 	end
+		-- end
+		drop.shown = function()
+			return self.displayItem and i <= self.displayItem.itemSocketCount and (self.displayItem.base.weapon or self.displayItem.base.armour)
+		end
+		
+		self.controls["displayItemRune"..i] = drop
+		self.controls["displayItemRuneLabel"..i] = new("LabelControl", {"RIGHT",drop,"LEFT"}, {-4, 0, 0, 14}, "Rune #"..i)
+	end
+
 	-- Section: Affix Selection
-	self.controls.displayItemSectionAffix = new("Control", {"TOPLEFT",self.controls.displayItemSectionClusterJewel,"BOTTOMLEFT"}, {0, 0, 0, function()
+	self.controls.displayItemSectionAffix = new("Control", {"TOPLEFT",self.controls.displayItemSectionRune,"BOTTOMLEFT"}, {0, 0, 0, function()
 		if not self.displayItem or not self.displayItem.crafted then
 			return 0
 		end
@@ -1817,6 +1911,7 @@ function ItemsTabClass:CraftItem()
 		item.spiritValue = base.spiritValue
 		item.buffModLines = { }
 		item.enchantModLines = { }
+		item.runeModLines = { }
 		item.classRequirementModLines = { }
 		item.implicitModLines = { }
 		item.explicitModLines = { }
