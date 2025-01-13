@@ -1095,7 +1095,7 @@ function calcs.offence(env, actor, activeSkill)
 		end
 	end
 	if activeSkill.skillTypes[SkillType.HasReservation] and not activeSkill.skillTypes[SkillType.ReservationBecomesCost] then
-		for _, pool in ipairs({"Life", "Mana"}) do
+		for _, pool in ipairs({"Spirit"}) do
 			output[pool .. "ReservedMod"] = 0
 			if calcLib.mod(skillModList, skillCfg, "SupportManaMultiplier") > 0 and calcLib.mod(skillModList, skillCfg, pool .. "Reserved", "Reserved") > 0 then
 				output[pool .. "ReservedMod"] = calcLib.mod(skillModList, skillCfg, pool .. "Reserved", "Reserved") * floor(calcLib.mod(skillModList, skillCfg, "SupportManaMultiplier"), 4) / m_max(0, calcLib.mod(skillModList, skillCfg, pool .. "ReservationEfficiency", "ReservationEfficiency"))

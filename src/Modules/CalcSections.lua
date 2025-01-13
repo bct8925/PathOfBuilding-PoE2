@@ -680,7 +680,7 @@ return {
 	}, },
 	{ label = "Spirit Reserve Mod", haveOutput = "SpiritReservedMod", { format = "x {2:output:SpiritReservedMod}",
 		{ breakdown = "SpiritReservedMod" },
-		{ modName = { "SpiritReserved", "Reserved", "SupportManaMultiplier", "SpiritReservationEfficiency", "ReservationEfficiency"  }, cfg = "skill"}
+		{ modName = { "SpiritReserved", "Reserved", "SupportManaMultiplier", "SpiritReservationEfficiency", "ReservationEfficiency", "ExtraSpirit"  }, cfg = "skill"}
 	}, },
 	{ label = "Curse Effect Mod", haveOutput = "CurseEffectMod", { format = "x {2:output:CurseEffectMod}",
 		{ breakdown = "CurseEffectMod" },
