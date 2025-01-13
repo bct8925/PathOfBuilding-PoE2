@@ -1123,7 +1123,7 @@ function calcs.initEnv(build, mode, override, specEnv)
 	end
 
 	-- Merge modifiers for allocated passives
-	env.modDB:AddList(nodesModsList)
+	env.modDB:AddList(calcs.buildModListForNodeList(env, env.allocNodes, true))
 
 	if not override or (override and not override.extraJewelFuncs) then
 		override = override or {}
