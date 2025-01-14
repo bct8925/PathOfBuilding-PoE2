@@ -383,7 +383,11 @@ holding Shift will put it in the second.]])
 	self.controls.displayItemSocketRune.shown = function()
 		return self.displayItem.base.weapon or self.displayItem.base.armour
 	end
-	self.controls.displayItemSocketRuneEdit = new("EditControl", {"LEFT",self.controls.displayItemSocketRune,"RIGHT"}, {2, 0, 60, 20}, nil, nil, "%D", 2, function(buf)
+	self.controls.displayItemSocketRuneEdit = new("EditControl", {"LEFT",self.controls.displayItemSocketRune,"RIGHT"}, {2, 0, 50, 20}, nil, nil, "%D", 1, function(buf)
+		if tonumber(buf) > 6 then
+			self.controls.displayItemSocketRuneEdit:SetText(6)
+			return
+		end
 		self.displayItem.itemSocketCount = tonumber(buf)
 		self.displayItem:UpdateRunes()
 		self:UpdateRuneControls()
