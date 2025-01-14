@@ -54,7 +54,7 @@ local function questModsRewards(source, line, modList)
 end
 
 local function addQuestModsRewardsConfigOptions(configSettings)
-	table.insert(configSettings, { section = "Quest Rewards", col = 1 })
+	table.insert(configSettings, { section = "Quest Rewards", col = 3 })
 
 	for i, quest in ipairs(data.questRewards) do
 		if quest.useConfig == false then
