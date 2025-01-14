@@ -799,46 +799,6 @@ skills["SupportForkPlayer"] = {
 		},
 	}
 }
-skills["SupportFusilladePlayer"] = {
-	name = "SupportFusilladePlayer",
-	hidden = true,
-	color = 2,
-	support = true,
-	requireSkillTypes = { SkillType.Projectile, SkillType.RangedAttack, SkillType.AND, },
-	addSkillTypes = { },
-	excludeSkillTypes = { },
-	levels = {
-		[1] = { levelRequirement = 0, },
-	},
-	weaponTypes = {
-		["Bow"] = true,
-	},
-	statSets = {
-		[1] = {
-			label = "SupportFusilladePlayer",
-			incrementalEffectiveness = 0.054999999701977,
-			statDescriptionScope = "gem_stat_descriptions",
-			statMap = {
-				["skill_can_only_use_bow"] = {
-					-- Display only
-				},
-			},
-			baseFlags = {
-			},
-			constantStats = {
-				{ "number_of_additional_projectiles", 4 },
-			},
-			stats = {
-				"projectiles_rain",
-				"skill_can_only_use_bow",
-				"skill_is_rain_skill",
-			},
-			levels = {
-				[1] = { actorLevel = 1, },
-			},
-		},
-	}
-}
 skills["SupportCooldownReductionPlayer"] = {
 	name = "Ingenuity",
 	description = "Supports skills with Cooldowns, increasing the rate at which those Cooldowns Recover.",

@@ -68,6 +68,7 @@ local skills, mod, flag, skill = ...
 #skillEnd
 
 #skill MetaCastOnBlockPlayer
+fromItem = true,
 #startSets
 #set MetaCastOnBlockPlayer
 #flags
@@ -75,6 +76,7 @@ local skills, mod, flag, skill = ...
 #skillEnd
 
 #skill SupportMetaCastOnBlockPlayer
+fromItem = true,
 #startSets
 #set SupportMetaCastOnBlockPlayer
 #flags
@@ -82,6 +84,7 @@ local skills, mod, flag, skill = ...
 #skillEnd
 
 #skill MetaCastOnMeleeKillPlayer
+fromItem = true,
 #startSets
 #set MetaCastOnMeleeKillPlayer
 #flags
@@ -89,6 +92,7 @@ local skills, mod, flag, skill = ...
 #skillEnd
 
 #skill SupportMetaCastOnMeleeKillPlayer
+fromItem = true,
 #startSets
 #set SupportMetaCastOnMeleeKillPlayer
 #flags
@@ -96,6 +100,7 @@ local skills, mod, flag, skill = ...
 #skillEnd
 
 #skill MetaCastOnMeleeStunPlayer
+fromItem = true,
 #startSets
 #set MetaCastOnMeleeStunPlayer
 #flags
@@ -103,6 +108,7 @@ local skills, mod, flag, skill = ...
 #skillEnd
 
 #skill SupportMetaCastOnMeleeStunPlayer
+fromItem = true,
 #startSets
 #set SupportMetaCastOnMeleeStunPlayer
 #flags

@@ -76,6 +76,7 @@ local skills, mod, flag, skill = ...
 #skillEnd
 
 #skill BoneBlastPlayer
+fromItem = true,
 #startSets
 #set BoneBlastPlayer
 #flags
@@ -124,20 +125,6 @@ statMap = {
 #skill SupportMetaCastOnCritPlayer
 #startSets
 #set SupportMetaCastOnCritPlayer
-#flags
-#mods
-#skillEnd
-
-#skill MetaCastOnDeathPlayer
-#startSets
-#set MetaCastOnDeathPlayer
-#flags
-#mods
-#skillEnd
-
-#skill SupportMetaCastOnDeathPlayer
-#startSets
-#set SupportMetaCastOnDeathPlayer
 #flags
 #mods
 #skillEnd
@@ -213,6 +200,7 @@ statMap = {
 #skillEnd
 
 #skill WeaponGrantedChaosboltPlayer
+fromItem = true,
 #startSets
 #set WeaponGrantedChaosboltPlayer
 #flags
@@ -294,6 +282,7 @@ statMap = {
 #skillEnd
 
 #skill CorpseCloudPlayer
+fromItem = true,
 #startSets
 #set CorpseCloudPlayer
 #flags
@@ -318,6 +307,7 @@ statMap = {
 #skillEnd
 
 #skill DisciplinePlayer
+fromItem = true,
 #startSets
 #set DisciplinePlayer
 #flags
@@ -403,6 +393,7 @@ statMap = {
 #skillEnd
 
 #skill FireboltPlayer
+fromItem = true,
 #startSets
 #set FireboltPlayer
 #flags
@@ -473,6 +464,7 @@ statMap = {
 #skillEnd
 
 #skill FreezingShardsPlayer
+fromItem = true,
 #startSets
 #set FreezingShardsPlayer
 #flags
@@ -528,6 +520,7 @@ statMap = {
 #skillEnd
 
 #skill GalvanicFieldPlayer
+fromItem = true,
 #startSets
 #set GalvanicFieldPlayer
 #flags
@@ -640,6 +633,7 @@ statMap = {
 #skillEnd
 
 #skill LightningBoltPlayer
+fromItem = true,
 #startSets
 #set LightningBoltPlayer
 #flags
@@ -675,6 +669,7 @@ statMap = {
 #skillEnd
 
 #skill LivingBombPlayer
+fromItem = true,
 #startSets
 #set LivingBombPlayer
 #flags
@@ -682,6 +677,7 @@ statMap = {
 #skillEnd
 
 #skill MalicePlayer
+fromItem = true,
 #startSets
 #set MalicePlayer
 #flags
@@ -689,6 +685,7 @@ statMap = {
 #skillEnd
 
 #skill ManaDrainPlayer
+fromItem = true,
 #startSets
 #set ManaDrainPlayer
 #flags
@@ -731,6 +728,7 @@ statMap = {
 #skillEnd
 
 #skill PowerSiphonPlayer
+fromItem = true,
 #startSets
 #set PowerSiphonPlayer
 #flags
@@ -745,6 +743,7 @@ statMap = {
 #skillEnd
 
 #skill PurityOfFirePlayer
+fromItem = true,
 #startSets
 #set PurityOfFirePlayer
 #flags
@@ -752,6 +751,7 @@ statMap = {
 #skillEnd
 
 #skill PurityOfIcePlayer
+fromItem = true,
 #startSets
 #set PurityOfIcePlayer
 #flags
@@ -759,6 +759,7 @@ statMap = {
 #skillEnd
 
 #skill PurityOfLightningPlayer
+fromItem = true,
 #startSets
 #set PurityOfLightningPlayer
 #flags
@@ -766,9 +767,9 @@ statMap = {
 #skillEnd
 
 #skill RagingSpiritsPlayer
-	minionList = {
-		"SummonedRagingSpirit",
-	},
+minionList = {
+	"SummonedRagingSpirit",
+},
 #startSets
 #set RagingSpiritsPlayer
 #flags spell minion permanentMinion
@@ -776,9 +777,9 @@ statMap = {
 #skillEnd
 
 #skill RaiseZombiePlayer
-	minionList = {
-		"RaisedZombie",
-	},
+minionList = {
+	"RaisedZombie",
+},
 #startSets
 #set RaiseZombiePlayer
 #flags spell minion permanentMinion
@@ -795,13 +796,6 @@ statMap = {
 #skill SupportReapersInvocationPlayer
 #startSets
 #set SupportReapersInvocationPlayer
-#flags
-#mods
-#skillEnd
-
-#skill RollingMagmaPlayer
-#startSets
-#set RollingMagmaPlayer
 #flags
 #mods
 #skillEnd
@@ -828,6 +822,7 @@ statMap = {
 #skillEnd
 
 #skill SigilOfPowerPlayer
+fromItem = true,
 #startSets
 #set SigilOfPowerPlayer
 #flags
@@ -845,9 +840,9 @@ statMap = {
 #skillEnd
 
 #skill SummonSkeletalArsonistsPlayer
-	minionList = {
-		"RaisedSkeletonArsonist",
-	},
+minionList = {
+	"RaisedSkeletonArsonist",
+},
 #startSets
 #set SummonSkeletalArsonistsPlayer
 #flags spell minion permanentMinion
@@ -855,9 +850,9 @@ statMap = {
 #skillEnd
 
 #skill SummonSkeletalBrutesPlayer
-	minionList = {
-		"RaisedSkeletonBrute",
-	},
+minionList = {
+	"RaisedSkeletonBrute",
+},
 #startSets
 #set SummonSkeletalBrutesPlayer
 #flags spell minion permanentMinion
@@ -865,9 +860,9 @@ statMap = {
 #skillEnd
 
 #skill SummonSkeletalClericsPlayer
-	minionList = {
-		"RaisedSkeletonCleric",
-	},
+minionList = {
+	"RaisedSkeletonCleric",
+},
 #startSets
 #set SummonSkeletalClericsPlayer
 #flags spell minion permanentMinion
@@ -875,9 +870,9 @@ statMap = {
 #skillEnd
 
 #skill SummonSkeletalFrostMagesPlayer
-	minionList = {
-		"RaisedSkeletonFrostMage",
-	},
+minionList = {
+	"RaisedSkeletonFrostMage",
+},
 #startSets
 #set SummonSkeletalFrostMagesPlayer
 #flags spell minion permanentMinion
@@ -885,9 +880,9 @@ statMap = {
 #skillEnd
 
 #skill SummonSkeletalReaversPlayer
-	minionList = {
-		"RaisedSkeletonReaver",
-	},
+minionList = {
+	"RaisedSkeletonReaver",
+},
 #startSets
 #set SummonSkeletalReaversPlayer
 #flags spell minion permanentMinion
@@ -895,9 +890,9 @@ statMap = {
 #skillEnd
 
 #skill SummonSkeletalSnipersPlayer
-	minionList = {
-		"RaisedSkeletonSniper",
-	},
+minionList = {
+	"RaisedSkeletonSniper",
+},
 #startSets
 #set SummonSkeletalSnipersPlayer
 #flags spell minion permanentMinion
@@ -905,9 +900,9 @@ statMap = {
 #skillEnd
 
 #skill SummonSkeletalStormMagesPlayer
-	minionList = {
-		"RaisedSkeletonStormMage",
-	},
+minionList = {
+	"RaisedSkeletonStormMage",
+},
 #startSets
 #set SummonSkeletalStormMagesPlayer
 #flags spell minion permanentMinion
@@ -915,9 +910,9 @@ statMap = {
 #skillEnd
 
 #skill SummonSkeletalWarriorsPlayer
-	minionList = {
-		"RaisedSkeletonWarrior",
-	},
+minionList = {
+	"RaisedSkeletonWarrior",
+},
 #startSets
 #set SummonSkeletalWarriorsPlayer
 #flags spell minion permanentMinion
@@ -1010,9 +1005,9 @@ statMap = {
 #skillEnd
 
 #skill UnearthPlayer
-	minionList = {
-		"UnearthBoneConstruct",
-	},
+minionList = {
+	"UnearthBoneConstruct",
+},
 #startSets
 #set UnearthPlayer
 #flags spell minion
@@ -1020,6 +1015,7 @@ statMap = {
 #skillEnd
 
 #skill StaffUnleashNextSpellPlayer
+fromItem = true,
 #startSets
 #set StaffUnleashNextSpellPlayer
 #flags
@@ -1034,6 +1030,7 @@ statMap = {
 #skillEnd
 
 #skill VolatileDeadPlayer
+fromItem = true,
 #startSets
 #set VolatileDeadPlayer
 #flags

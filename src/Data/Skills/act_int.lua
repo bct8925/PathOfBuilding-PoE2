@@ -1182,6 +1182,7 @@ skills["BoneBlastPlayer"] = {
 		[39] = { critChance = 14, levelRequirement = 90, },
 		[40] = { critChance = 14, levelRequirement = 90, },
 	},
+			fromItem = true,
 	statSets = {
 		[1] = {
 			label = "Bone Blast",
@@ -1553,14 +1554,14 @@ skills["BonestormPlayer"] = {
 			incrementalEffectiveness = 0.14000000059605,
 			damageIncrementalEffectiveness = 0.0094999996945262,
 			statDescriptionScope = "bone_spike_statset_0",
-				statMap = {
-					["bone_spear_minimum_added_attack_physical_damage_taken"] = {
-						mod("SelfPhysicalMin", "BASE", nil, ModFlag.Attack, 0, { type = "GlobalEffect", effectType = "Debuff", effectName = "Bonestorm", effectCond = "BonestormAddedDamage" }),
-					},
-					["bone_spear_maximum_added_attack_physical_damage_taken"] = {
-						mod("SelfPhysicalMax", "BASE", nil, ModFlag.Attack, 0, { type = "GlobalEffect", effectType = "Debuff", effectName = "Bonestorm", effectCond = "BonestormAddedDamage" }),
-					},
+			statMap = {
+				["bone_spear_minimum_added_attack_physical_damage_taken"] = {
+					mod("SelfPhysicalMin", "BASE", nil, ModFlag.Attack, 0, { type = "GlobalEffect", effectType = "Debuff", effectName = "Bonestorm", effectCond = "BonestormAddedDamage" }),
 				},
+				["bone_spear_maximum_added_attack_physical_damage_taken"] = {
+					mod("SelfPhysicalMax", "BASE", nil, ModFlag.Attack, 0, { type = "GlobalEffect", effectType = "Debuff", effectName = "Bonestorm", effectCond = "BonestormAddedDamage" }),
+				},
+			},
 			baseFlags = {
 			},
 			constantStats = {
@@ -1925,72 +1926,6 @@ skills["SupportMetaCastOnCritPlayer"] = {
 				[38] = { actorLevel = 265.17199707031, },
 				[39] = { actorLevel = 276.62298583984, },
 				[40] = { actorLevel = 288.29998779297, },
-			},
-		},
-	}
-}
-skills["MetaCastOnDeathPlayer"] = {
-	name = "Cast on Death",
-	hidden = true,
-	color = 3,
-	skillTypes = { [SkillType.HasReservation] = true, [SkillType.OngoingSkill] = true, [SkillType.Meta] = true, [SkillType.Persistent] = true, [SkillType.Buff] = true, [SkillType.CanHaveMultipleOngoingSkillInstances] = true, [SkillType.GeneratesEnergy] = true, },
-	castTime = 0,
-	qualityStats = {
-	},
-	levels = {
-		[14] = { spiritReservationFlat = 100, levelRequirement = 58, },
-	},
-	statSets = {
-		[1] = {
-			label = "Cast on Death",
-			incrementalEffectiveness = 0.054999999701977,
-			statDescriptionScope = "skill_stat_descriptions",
-			baseFlags = {
-			},
-			constantStats = {
-				{ "cast_on_death_gain_X_centienergy_on_death", 100 },
-				{ "generic_ongoing_trigger_maximum_energy", 100 },
-			},
-			stats = {
-				"generic_ongoing_trigger_triggers_at_maximum_energy",
-				"display_generic_ongoing_trigger_hide_energy_stats",
-				"base_deal_no_damage",
-			},
-			levels = {
-				[14] = { actorLevel = 58.147998809814, },
-			},
-		},
-	}
-}
-skills["SupportMetaCastOnDeathPlayer"] = {
-	name = "SupportMetaCastOnDeathPlayer",
-	hidden = true,
-	support = true,
-	requireSkillTypes = { SkillType.Spell, SkillType.Triggerable, SkillType.AND, },
-	addSkillTypes = { SkillType.Triggered, SkillType.Cooldown, },
-	excludeSkillTypes = { SkillType.SupportedByHourglass, },
-	isTrigger = true,
-	levels = {
-		[14] = { levelRequirement = 0, },
-	},
-	statSets = {
-		[1] = {
-			label = "SupportMetaCastOnDeathPlayer",
-			incrementalEffectiveness = 0.054999999701977,
-			statDescriptionScope = "gem_stat_descriptions",
-			baseFlags = {
-			},
-			constantStats = {
-				{ "trigger_meta_gem_damage_+%_final", 150 },
-			},
-			stats = {
-				"triggered_by_generic_ongoing_trigger",
-				"generic_ongoing_trigger_triggers_at_maximum_energy",
-				"display_generic_ongoing_trigger_hide_energy_stats",
-				"skill_cannot_generate_energy",
-			},
-			levels = {
-				[14] = { actorLevel = 58.147998809814, },
 			},
 		},
 	}
@@ -3162,6 +3097,7 @@ skills["WeaponGrantedChaosboltPlayer"] = {
 		[39] = { critChance = 7, levelRequirement = 90, },
 		[40] = { critChance = 7, levelRequirement = 90, },
 	},
+			fromItem = true,
 	statSets = {
 		[1] = {
 			label = "Chaos Bolt",
@@ -3405,17 +3341,17 @@ skills["ChargedStaffPlayer"] = {
 			incrementalEffectiveness = 0.072530001401901,
 			damageIncrementalEffectiveness = 0.0049000000581145,
 			statDescriptionScope = "charged_staff",
-				statMap = {
-					["charged_staff_attack_minimum_added_lightning_damage_per_stack"] = {
-						mod("LightningMin", "BASE", nil, 0, 0, { type = "Multiplier", var = "RemovablePowerCharge" }, { type = "GlobalEffect", effectType = "Buff", effectName = "Charged Staff", effectCond = "UsePowerCharges" }),
-					},
-					["charged_staff_attack_maximum_added_lightning_damage_per_stack"] = {
-						mod("LightningMax", "BASE", nil, 0, 0, { type = "Multiplier", var = "RemovablePowerCharge" }, { type = "GlobalEffect", effectType = "Buff", effectName = "Charged Staff", effectCond = "UsePowerCharges" }),
-					},
-					["charged_staff_buff_duration_per_stack_ms"] = {
-						mod("ChargedStaffBuffDuration", "BASE", nil, 0, 0, { type = "Multiplier", var = "RemovablePowerCharge" }, { type = "GlobalEffect", effectType = "Buff", effectName = "Charged Staff", effectCond = "UsePowerCharges" }),
-					},
+			statMap = {
+				["charged_staff_attack_minimum_added_lightning_damage_per_stack"] = {
+					mod("LightningMin", "BASE", nil, 0, 0, { type = "Multiplier", var = "RemovablePowerCharge" }, { type = "GlobalEffect", effectType = "Buff", effectName = "Charged Staff", effectCond = "UsePowerCharges" }),
 				},
+				["charged_staff_attack_maximum_added_lightning_damage_per_stack"] = {
+					mod("LightningMax", "BASE", nil, 0, 0, { type = "Multiplier", var = "RemovablePowerCharge" }, { type = "GlobalEffect", effectType = "Buff", effectName = "Charged Staff", effectCond = "UsePowerCharges" }),
+				},
+				["charged_staff_buff_duration_per_stack_ms"] = {
+					mod("ChargedStaffBuffDuration", "BASE", nil, 0, 0, { type = "Multiplier", var = "RemovablePowerCharge" }, { type = "GlobalEffect", effectType = "Buff", effectName = "Charged Staff", effectCond = "UsePowerCharges" }),
+				},
+			},
 			baseFlags = {
 			},
 			constantStats = {
@@ -4351,6 +4287,7 @@ skills["CorpseCloudPlayer"] = {
 		[39] = { levelRequirement = 90, },
 		[40] = { levelRequirement = 90, },
 	},
+			fromItem = true,
 	statSets = {
 		[1] = {
 			label = "Poison Cloud",
@@ -4777,6 +4714,7 @@ skills["DisciplinePlayer"] = {
 		[39] = { levelRequirement = 90, },
 		[40] = { levelRequirement = 90, },
 	},
+			fromItem = true,
 	statSets = {
 		[1] = {
 			label = "Discipline",
@@ -6231,6 +6169,7 @@ skills["FireboltPlayer"] = {
 		[39] = { critChance = 8, levelRequirement = 90, },
 		[40] = { critChance = 8, levelRequirement = 90, },
 	},
+			fromItem = true,
 	statSets = {
 		[1] = {
 			label = "Projectile",
@@ -6613,14 +6552,14 @@ skills["FlameWallPlayer"] = {
 			incrementalEffectiveness = 0.14000000059605,
 			damageIncrementalEffectiveness = 0.0065000001341105,
 			statDescriptionScope = "firewall",
-	statMap = {
-		["flame_wall_minimum_added_fire_damage"] = {
-			mod("FireMin", "BASE", nil, ModFlag.Projectile, 0, { type = "GlobalEffect", effectType = "Buff", effectName = "Flame Wall", effectCond = "FlameWallAddedDamage" }),
-		},
-		["flame_wall_maximum_added_fire_damage"] = {
-			mod("FireMax", "BASE", nil, ModFlag.Projectile, 0, { type = "GlobalEffect", effectType = "Buff", effectName = "Flame Wall", effectCond = "FlameWallAddedDamage" }),
-		},
-	},
+			statMap = {
+				["flame_wall_minimum_added_fire_damage"] = {
+					mod("FireMin", "BASE", nil, ModFlag.Projectile, 0, { type = "GlobalEffect", effectType = "Buff", effectName = "Flame Wall", effectCond = "FlameWallAddedDamage" }),
+				},
+				["flame_wall_maximum_added_fire_damage"] = {
+					mod("FireMax", "BASE", nil, ModFlag.Projectile, 0, { type = "GlobalEffect", effectType = "Buff", effectName = "Flame Wall", effectCond = "FlameWallAddedDamage" }),
+				},
+			},
 			baseFlags = {
 			},
 			constantStats = {
@@ -7331,6 +7270,7 @@ skills["FreezingShardsPlayer"] = {
 		[39] = { critChance = 11, levelRequirement = 90, },
 		[40] = { critChance = 11, levelRequirement = 90, },
 	},
+			fromItem = true,
 	statSets = {
 		[1] = {
 			label = "Freezing Shards",
@@ -8270,6 +8210,7 @@ skills["GalvanicFieldPlayer"] = {
 		[39] = { critChance = 9, levelRequirement = 90, },
 		[40] = { critChance = 9, levelRequirement = 90, },
 	},
+			fromItem = true,
 	statSets = {
 		[1] = {
 			label = "Galvanic Field",
@@ -10246,6 +10187,7 @@ skills["LightningBoltPlayer"] = {
 		[39] = { critChance = 10, levelRequirement = 90, },
 		[40] = { critChance = 10, levelRequirement = 90, },
 	},
+			fromItem = true,
 	statSets = {
 		[1] = {
 			label = "Lightning Bolt",
@@ -10822,6 +10764,7 @@ skills["LivingBombPlayer"] = {
 		[39] = { critChance = 9, levelRequirement = 90, },
 		[40] = { critChance = 9, levelRequirement = 90, },
 	},
+			fromItem = true,
 	statSets = {
 		[1] = {
 			label = "Living Bomb",
@@ -10943,6 +10886,7 @@ skills["MalicePlayer"] = {
 		[39] = { levelRequirement = 90, },
 		[40] = { levelRequirement = 90, },
 	},
+			fromItem = true,
 	statSets = {
 		[1] = {
 			label = "Malice",
@@ -11055,6 +10999,7 @@ skills["ManaDrainPlayer"] = {
 		[39] = { levelRequirement = 90, },
 		[40] = { levelRequirement = 90, },
 	},
+			fromItem = true,
 	statSets = {
 		[1] = {
 			label = "Mana Drain",
@@ -11775,6 +11720,7 @@ skills["PowerSiphonPlayer"] = {
 		[39] = { critChance = 15, levelRequirement = 90, },
 		[40] = { critChance = 15, levelRequirement = 90, },
 	},
+			fromItem = true,
 	statSets = {
 		[1] = {
 			label = "Power Siphon",
@@ -12013,6 +11959,7 @@ skills["PurityOfFirePlayer"] = {
 		[39] = { manaMultiplier = -100, levelRequirement = 90, },
 		[40] = { manaMultiplier = -100, levelRequirement = 90, },
 	},
+			fromItem = true,
 	statSets = {
 		[1] = {
 			label = "Purity of Fire",
@@ -12124,6 +12071,7 @@ skills["PurityOfIcePlayer"] = {
 		[39] = { manaMultiplier = -100, levelRequirement = 90, },
 		[40] = { manaMultiplier = -100, levelRequirement = 90, },
 	},
+			fromItem = true,
 	statSets = {
 		[1] = {
 			label = "Purity of Ice",
@@ -12235,6 +12183,7 @@ skills["PurityOfLightningPlayer"] = {
 		[39] = { manaMultiplier = -100, levelRequirement = 90, },
 		[40] = { manaMultiplier = -100, levelRequirement = 90, },
 	},
+			fromItem = true,
 	statSets = {
 		[1] = {
 			label = "Purity of Lightning",
@@ -12347,9 +12296,9 @@ skills["RagingSpiritsPlayer"] = {
 		[39] = { spiritReservationFlat = 30, levelRequirement = 90, },
 		[40] = { spiritReservationFlat = 30, levelRequirement = 90, },
 	},
-	minionList = {
-		"SummonedRagingSpirit",
-	},
+			minionList = {
+				"SummonedRagingSpirit",
+			},
 	statSets = {
 		[1] = {
 			label = "Raging Spirits",
@@ -12469,9 +12418,9 @@ skills["RaiseZombiePlayer"] = {
 		[39] = { levelRequirement = 90, cost = { Mana = 1226, }, },
 		[40] = { levelRequirement = 90, cost = { Mana = 1388, }, },
 	},
-	minionList = {
-		"RaisedZombie",
-	},
+			minionList = {
+				"RaisedZombie",
+			},
 	statSets = {
 		[1] = {
 			label = "Minion Info",
@@ -12763,137 +12712,6 @@ skills["SupportReapersInvocationPlayer"] = {
 				[38] = { actorLevel = 265.17199707031, },
 				[39] = { actorLevel = 276.62298583984, },
 				[40] = { actorLevel = 288.29998779297, },
-			},
-		},
-	}
-}
-skills["RollingMagmaPlayer"] = {
-	name = "Rolling Magma",
-	hidden = true,
-	color = 3,
-	description = "Lob a fiery orb that deals area damage as it hits the ground. The skill Chains, bouncing forward to deal damage multiple times. The number of  Chains is refreshed when passing through a Flame Wall.",
-	skillTypes = { [SkillType.Spell] = true, [SkillType.Damage] = true, [SkillType.Area] = true, [SkillType.Trappable] = true, [SkillType.Mineable] = true, [SkillType.Totemable] = true, [SkillType.Triggerable] = true, [SkillType.Fire] = true, [SkillType.Projectile] = true, [SkillType.ProjectilesFromUser] = true, [SkillType.Multicastable] = true, [SkillType.CanRapidFire] = true, [SkillType.AreaSpell] = true, [SkillType.Nonpathing] = true, },
-	castTime = 0.7,
-	qualityStats = {
-		{ "active_skill_damage_+%_final_per_time_chained", 0.2 },
-	},
-	levels = {
-		[1] = { critChance = 7, levelRequirement = 0, cost = { Mana = 5, }, },
-		[2] = { critChance = 7, levelRequirement = 3, cost = { Mana = 6, }, },
-		[3] = { critChance = 7, levelRequirement = 6, cost = { Mana = 7, }, },
-		[4] = { critChance = 7, levelRequirement = 10, cost = { Mana = 8, }, },
-		[5] = { critChance = 7, levelRequirement = 14, cost = { Mana = 9, }, },
-		[6] = { critChance = 7, levelRequirement = 18, cost = { Mana = 10, }, },
-		[7] = { critChance = 7, levelRequirement = 22, cost = { Mana = 12, }, },
-		[8] = { critChance = 7, levelRequirement = 26, cost = { Mana = 14, }, },
-		[9] = { critChance = 7, levelRequirement = 31, cost = { Mana = 15, }, },
-		[10] = { critChance = 7, levelRequirement = 36, cost = { Mana = 17, }, },
-		[11] = { critChance = 7, levelRequirement = 41, cost = { Mana = 20, }, },
-		[12] = { critChance = 7, levelRequirement = 46, cost = { Mana = 23, }, },
-		[13] = { critChance = 7, levelRequirement = 52, cost = { Mana = 26, }, },
-		[14] = { critChance = 7, levelRequirement = 58, cost = { Mana = 29, }, },
-		[15] = { critChance = 7, levelRequirement = 64, cost = { Mana = 33, }, },
-		[16] = { critChance = 7, levelRequirement = 66, cost = { Mana = 37, }, },
-		[17] = { critChance = 7, levelRequirement = 72, cost = { Mana = 42, }, },
-		[18] = { critChance = 7, levelRequirement = 78, cost = { Mana = 48, }, },
-		[19] = { critChance = 7, levelRequirement = 84, cost = { Mana = 54, }, },
-		[20] = { critChance = 7, levelRequirement = 90, cost = { Mana = 62, }, },
-		[21] = { critChance = 7, levelRequirement = 90, cost = { Mana = 70, }, },
-		[22] = { critChance = 7, levelRequirement = 90, cost = { Mana = 79, }, },
-		[23] = { critChance = 7, levelRequirement = 90, cost = { Mana = 89, }, },
-		[24] = { critChance = 7, levelRequirement = 90, cost = { Mana = 101, }, },
-		[25] = { critChance = 7, levelRequirement = 90, cost = { Mana = 115, }, },
-		[26] = { critChance = 7, levelRequirement = 90, cost = { Mana = 130, }, },
-		[27] = { critChance = 7, levelRequirement = 90, cost = { Mana = 147, }, },
-		[28] = { critChance = 7, levelRequirement = 90, cost = { Mana = 166, }, },
-		[29] = { critChance = 7, levelRequirement = 90, cost = { Mana = 188, }, },
-		[30] = { critChance = 7, levelRequirement = 90, cost = { Mana = 213, }, },
-		[31] = { critChance = 7, levelRequirement = 90, cost = { Mana = 241, }, },
-		[32] = { critChance = 7, levelRequirement = 90, cost = { Mana = 273, }, },
-		[33] = { critChance = 7, levelRequirement = 90, cost = { Mana = 309, }, },
-		[34] = { critChance = 7, levelRequirement = 90, cost = { Mana = 350, }, },
-		[35] = { critChance = 7, levelRequirement = 90, cost = { Mana = 396, }, },
-		[36] = { critChance = 7, levelRequirement = 90, cost = { Mana = 448, }, },
-		[37] = { critChance = 7, levelRequirement = 90, cost = { Mana = 508, }, },
-		[38] = { critChance = 7, levelRequirement = 90, cost = { Mana = 574, }, },
-		[39] = { critChance = 7, levelRequirement = 90, cost = { Mana = 650, }, },
-		[40] = { critChance = 7, levelRequirement = 90, cost = { Mana = 736, }, },
-	},
-	statSets = {
-		[1] = {
-			label = "Rolling Magma",
-			baseEffectiveness = 2.5599999427795,
-			incrementalEffectiveness = 0.14000000059605,
-			damageIncrementalEffectiveness = 0.0065000001341105,
-			statDescriptionScope = "fire_mortar",
-			baseFlags = {
-			},
-			constantStats = {
-				{ "movement_speed_+%_final_while_performing_action", -70 },
-				{ "movement_speed_acceleration_+%_per_second_while_performing_action", 160 },
-				{ "movement_speed_while_performing_action_locked_duration_%", 60 },
-				{ "magma_orb_base_bounce_range", 10 },
-				{ "magma_orb_base_projectile_range", 25 },
-				{ "magma_orb_minimum_action_distance", 6 },
-				{ "magma_orb_impact_distance_%", 40 },
-				{ "magma_orb_target_distance_absolute_minimum", 6 },
-				{ "magma_orb_target_distance_absolute_maximum", 50 },
-			},
-			stats = {
-				"spell_minimum_base_fire_damage",
-				"spell_maximum_base_fire_damage",
-				"number_of_chains",
-				"active_skill_base_area_of_effect_radius",
-				"is_area_damage",
-				"base_is_projectile",
-				"display_projectiles_chain_when_impacting_ground",
-				"projectile_uses_contact_position",
-				"projectile_uses_contact_direction",
-				"projectiles_refresh_chains_when_passing_a_flame_wall",
-				"can_perform_skill_while_moving",
-				"should_use_additive_aiming_animation",
-			},
-			levels = {
-				[1] = { 0.89999997615814, 1.2000000476837, 2, 14, statInterpolation = { 3, 3, 1, 1, }, actorLevel = 1, },
-				[2] = { 0.89999997615814, 1.2000000476837, 2, 14, statInterpolation = { 3, 3, 1, 1, }, actorLevel = 3.4519999027252, },
-				[3] = { 0.80000001192093, 1.2000000476837, 2, 14, statInterpolation = { 3, 3, 1, 1, }, actorLevel = 6.7670001983643, },
-				[4] = { 0.80000001192093, 1.2000000476837, 2, 14, statInterpolation = { 3, 3, 1, 1, }, actorLevel = 10.307999610901, },
-				[5] = { 0.80000001192093, 1.2000000476837, 2, 15, statInterpolation = { 3, 3, 1, 1, }, actorLevel = 14.074999809265, },
-				[6] = { 0.80000001192093, 1.2000000476837, 2, 15, statInterpolation = { 3, 3, 1, 1, }, actorLevel = 18.068000793457, },
-				[7] = { 0.80000001192093, 1.2000000476837, 2, 15, statInterpolation = { 3, 3, 1, 1, }, actorLevel = 22.287000656128, },
-				[8] = { 0.80000001192093, 1.2000000476837, 2, 15, statInterpolation = { 3, 3, 1, 1, }, actorLevel = 26.732000350952, },
-				[9] = { 0.80000001192093, 1.2000000476837, 2, 15, statInterpolation = { 3, 3, 1, 1, }, actorLevel = 31.40299987793, },
-				[10] = { 0.80000001192093, 1.2000000476837, 3, 16, statInterpolation = { 3, 3, 1, 1, }, actorLevel = 36.299999237061, },
-				[11] = { 0.80000001192093, 1.2000000476837, 3, 16, statInterpolation = { 3, 3, 1, 1, }, actorLevel = 41.423000335693, },
-				[12] = { 0.80000001192093, 1.2000000476837, 3, 16, statInterpolation = { 3, 3, 1, 1, }, actorLevel = 46.771999359131, },
-				[13] = { 0.80000001192093, 1.2000000476837, 3, 16, statInterpolation = { 3, 3, 1, 1, }, actorLevel = 52.34700012207, },
-				[14] = { 0.80000001192093, 1.2000000476837, 3, 16, statInterpolation = { 3, 3, 1, 1, }, actorLevel = 58.147998809814, },
-				[15] = { 0.80000001192093, 1.2000000476837, 3, 17, statInterpolation = { 3, 3, 1, 1, }, actorLevel = 64.175003051758, },
-				[16] = { 0.80000001192093, 1.2000000476837, 3, 17, statInterpolation = { 3, 3, 1, 1, }, actorLevel = 70.428001403809, },
-				[17] = { 0.80000001192093, 1.2000000476837, 3, 17, statInterpolation = { 3, 3, 1, 1, }, actorLevel = 76.906997680664, },
-				[18] = { 0.80000001192093, 1.2000000476837, 3, 17, statInterpolation = { 3, 3, 1, 1, }, actorLevel = 83.611999511719, },
-				[19] = { 0.80000001192093, 1.2000000476837, 3, 17, statInterpolation = { 3, 3, 1, 1, }, actorLevel = 90.542999267578, },
-				[20] = { 0.80000001192093, 1.2000000476837, 3, 18, statInterpolation = { 3, 3, 1, 1, }, actorLevel = 97.699996948242, },
-				[21] = { 0.80000001192093, 1.2000000476837, 4, 18, statInterpolation = { 3, 3, 1, 1, }, actorLevel = 105.08300018311, },
-				[22] = { 0.80000001192093, 1.2000000476837, 4, 18, statInterpolation = { 3, 3, 1, 1, }, actorLevel = 112.69200134277, },
-				[23] = { 0.80000001192093, 1.2000000476837, 4, 18, statInterpolation = { 3, 3, 1, 1, }, actorLevel = 120.52700042725, },
-				[24] = { 0.80000001192093, 1.2000000476837, 4, 18, statInterpolation = { 3, 3, 1, 1, }, actorLevel = 128.58799743652, },
-				[25] = { 0.80000001192093, 1.2000000476837, 4, 19, statInterpolation = { 3, 3, 1, 1, }, actorLevel = 136.875, },
-				[26] = { 0.80000001192093, 1.2000000476837, 4, 19, statInterpolation = { 3, 3, 1, 1, }, actorLevel = 145.38800048828, },
-				[27] = { 0.80000001192093, 1.2000000476837, 4, 19, statInterpolation = { 3, 3, 1, 1, }, actorLevel = 154.12699890137, },
-				[28] = { 0.80000001192093, 1.2000000476837, 4, 19, statInterpolation = { 3, 3, 1, 1, }, actorLevel = 163.09199523926, },
-				[29] = { 0.80000001192093, 1.2000000476837, 4, 19, statInterpolation = { 3, 3, 1, 1, }, actorLevel = 172.28300476074, },
-				[30] = { 0.80000001192093, 1.2000000476837, 5, 20, statInterpolation = { 3, 3, 1, 1, }, actorLevel = 181.69999694824, },
-				[31] = { 0.80000001192093, 1.2000000476837, 5, 20, statInterpolation = { 3, 3, 1, 1, }, actorLevel = 191.34300231934, },
-				[32] = { 0.80000001192093, 1.2000000476837, 5, 20, statInterpolation = { 3, 3, 1, 1, }, actorLevel = 201.21200561523, },
-				[33] = { 0.80000001192093, 1.2000000476837, 5, 20, statInterpolation = { 3, 3, 1, 1, }, actorLevel = 211.30700683594, },
-				[34] = { 0.80000001192093, 1.2000000476837, 5, 20, statInterpolation = { 3, 3, 1, 1, }, actorLevel = 221.62800598145, },
-				[35] = { 0.80000001192093, 1.2000000476837, 5, 21, statInterpolation = { 3, 3, 1, 1, }, actorLevel = 232.17500305176, },
-				[36] = { 0.80000001192093, 1.2000000476837, 5, 21, statInterpolation = { 3, 3, 1, 1, }, actorLevel = 242.94799804688, },
-				[37] = { 0.80000001192093, 1.2000000476837, 5, 21, statInterpolation = { 3, 3, 1, 1, }, actorLevel = 253.94700622559, },
-				[38] = { 0.80000001192093, 1.2000000476837, 5, 21, statInterpolation = { 3, 3, 1, 1, }, actorLevel = 265.17199707031, },
-				[39] = { 0.80000001192093, 1.2000000476837, 5, 21, statInterpolation = { 3, 3, 1, 1, }, actorLevel = 276.62298583984, },
-				[40] = { 0.80000001192093, 1.2000000476837, 6, 22, statInterpolation = { 3, 3, 1, 1, }, actorLevel = 288.29998779297, },
 			},
 		},
 	}
@@ -13302,6 +13120,7 @@ skills["SigilOfPowerPlayer"] = {
 		[39] = { storedUses = 1, levelRequirement = 90, cooldown = 10, },
 		[40] = { storedUses = 1, levelRequirement = 90, cooldown = 10, },
 	},
+			fromItem = true,
 	statSets = {
 		[1] = {
 			label = "Sigil of Power",
@@ -13603,9 +13422,9 @@ skills["SummonSkeletalArsonistsPlayer"] = {
 		[39] = { spiritReservationFlat = 35, levelRequirement = 90, },
 		[40] = { spiritReservationFlat = 35, levelRequirement = 90, },
 	},
-	minionList = {
-		"RaisedSkeletonArsonist",
-	},
+			minionList = {
+				"RaisedSkeletonArsonist",
+			},
 	statSets = {
 		[1] = {
 			label = "Minion Info",
@@ -13722,9 +13541,9 @@ skills["SummonSkeletalBrutesPlayer"] = {
 		[39] = { spiritReservationFlat = 43, levelRequirement = 90, },
 		[40] = { spiritReservationFlat = 43, levelRequirement = 90, },
 	},
-	minionList = {
-		"RaisedSkeletonBrute",
-	},
+			minionList = {
+				"RaisedSkeletonBrute",
+			},
 	statSets = {
 		[1] = {
 			label = "Minion Info",
@@ -13841,9 +13660,9 @@ skills["SummonSkeletalClericsPlayer"] = {
 		[39] = { spiritReservationFlat = 16, levelRequirement = 90, },
 		[40] = { spiritReservationFlat = 16, levelRequirement = 90, },
 	},
-	minionList = {
-		"RaisedSkeletonCleric",
-	},
+			minionList = {
+				"RaisedSkeletonCleric",
+			},
 	statSets = {
 		[1] = {
 			label = "Minion Info",
@@ -13960,9 +13779,9 @@ skills["SummonSkeletalFrostMagesPlayer"] = {
 		[39] = { spiritReservationFlat = 35, levelRequirement = 90, },
 		[40] = { spiritReservationFlat = 35, levelRequirement = 90, },
 	},
-	minionList = {
-		"RaisedSkeletonFrostMage",
-	},
+			minionList = {
+				"RaisedSkeletonFrostMage",
+			},
 	statSets = {
 		[1] = {
 			label = "Minion Info",
@@ -14079,9 +13898,9 @@ skills["SummonSkeletalReaversPlayer"] = {
 		[39] = { spiritReservationFlat = 26, levelRequirement = 90, },
 		[40] = { spiritReservationFlat = 26, levelRequirement = 90, },
 	},
-	minionList = {
-		"RaisedSkeletonReaver",
-	},
+			minionList = {
+				"RaisedSkeletonReaver",
+			},
 	statSets = {
 		[1] = {
 			label = "Minion Info",
@@ -14199,9 +14018,9 @@ skills["SummonSkeletalSnipersPlayer"] = {
 		[39] = { spiritReservationFlat = 26, levelRequirement = 90, },
 		[40] = { spiritReservationFlat = 26, levelRequirement = 90, },
 	},
-	minionList = {
-		"RaisedSkeletonSniper",
-	},
+			minionList = {
+				"RaisedSkeletonSniper",
+			},
 	statSets = {
 		[1] = {
 			label = "Minion Info",
@@ -14318,9 +14137,9 @@ skills["SummonSkeletalStormMagesPlayer"] = {
 		[39] = { spiritReservationFlat = 35, levelRequirement = 90, },
 		[40] = { spiritReservationFlat = 35, levelRequirement = 90, },
 	},
-	minionList = {
-		"RaisedSkeletonStormMage",
-	},
+			minionList = {
+				"RaisedSkeletonStormMage",
+			},
 	statSets = {
 		[1] = {
 			label = "Minion Info",
@@ -14437,9 +14256,9 @@ skills["SummonSkeletalWarriorsPlayer"] = {
 		[39] = { spiritReservationFlat = 16, levelRequirement = 90, },
 		[40] = { spiritReservationFlat = 16, levelRequirement = 90, },
 	},
-	minionList = {
-		"RaisedSkeletonWarrior",
-	},
+			minionList = {
+				"RaisedSkeletonWarrior",
+			},
 	statSets = {
 		[1] = {
 			label = "Minion Info",
@@ -16096,9 +15915,9 @@ skills["UnearthPlayer"] = {
 		[39] = { critChance = 15, levelRequirement = 90, cost = { Mana = 918, }, },
 		[40] = { critChance = 15, levelRequirement = 90, cost = { Mana = 1039, }, },
 	},
-	minionList = {
-		"UnearthBoneConstruct",
-	},
+			minionList = {
+				"UnearthBoneConstruct",
+			},
 	statSets = {
 		[1] = {
 			label = "Unearth",
@@ -16183,6 +16002,7 @@ skills["StaffUnleashNextSpellPlayer"] = {
 	levels = {
 		[1] = { storedUses = 1, levelRequirement = 0, cooldown = 0.5, },
 	},
+			fromItem = true,
 	statSets = {
 		[1] = {
 			label = "Unleash",
@@ -16378,6 +16198,7 @@ skills["VolatileDeadPlayer"] = {
 		[39] = { critChance = 7, PvPDamageMultiplier = -80, levelRequirement = 90, },
 		[40] = { critChance = 7, PvPDamageMultiplier = -80, levelRequirement = 90, },
 	},
+			fromItem = true,
 	statSets = {
 		[1] = {
 			label = "Volatile Dead",

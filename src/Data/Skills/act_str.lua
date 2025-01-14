@@ -1155,6 +1155,7 @@ skills["MetaCastOnBlockPlayer"] = {
 		[39] = { levelRequirement = 90, },
 		[40] = { levelRequirement = 90, },
 	},
+			fromItem = true,
 	statSets = {
 		[1] = {
 			label = "Cast on Block",
@@ -1267,6 +1268,7 @@ skills["SupportMetaCastOnBlockPlayer"] = {
 		[39] = { levelRequirement = 0, },
 		[40] = { levelRequirement = 0, },
 	},
+			fromItem = true,
 	statSets = {
 		[1] = {
 			label = "SupportMetaCastOnBlockPlayer",
@@ -1339,6 +1341,7 @@ skills["MetaCastOnMeleeKillPlayer"] = {
 	levels = {
 		[8] = { spiritReservationFlat = 60, levelRequirement = 26, },
 	},
+			fromItem = true,
 	statSets = {
 		[1] = {
 			label = "Cast on Melee Kill",
@@ -1371,6 +1374,7 @@ skills["SupportMetaCastOnMeleeKillPlayer"] = {
 	levels = {
 		[8] = { storedUses = 1, levelRequirement = 0, cooldown = 0.2, },
 	},
+			fromItem = true,
 	statSets = {
 		[1] = {
 			label = "SupportMetaCastOnMeleeKillPlayer",
@@ -1405,6 +1409,7 @@ skills["MetaCastOnMeleeStunPlayer"] = {
 	levels = {
 		[8] = { spiritReservationFlat = 60, levelRequirement = 26, },
 	},
+			fromItem = true,
 	statSets = {
 		[1] = {
 			label = "Cast on Melee Stun",
@@ -1438,6 +1443,7 @@ skills["SupportMetaCastOnMeleeStunPlayer"] = {
 	levels = {
 		[8] = { storedUses = 1, levelRequirement = 0, cooldown = 0.2, },
 	},
+			fromItem = true,
 	statSets = {
 		[1] = {
 			label = "SupportMetaCastOnMeleeStunPlayer",
@@ -2126,15 +2132,15 @@ skills["EarthquakePlayer"] = {
 			incrementalEffectiveness = 0.092720001935959,
 			damageIncrementalEffectiveness = 0.023299999535084,
 			statDescriptionScope = "earthquake_statset_0",
-	statMap = {
-		["active_skill_base_area_of_effect_radius"] = {
-			skill("radius", nil),
-		},
-		["skill_jagged_ground_base_duration_ms"] = {
-			skill("duration", nil),
-			div = 1000,
-		},
-	},
+			statMap = {
+				["active_skill_base_area_of_effect_radius"] = {
+					skill("radius", nil),
+				},
+				["skill_jagged_ground_base_duration_ms"] = {
+					skill("duration", nil),
+					div = 1000,
+				},
+			},
 			baseFlags = {
 				attack = true,
 				melee = true,
@@ -2202,14 +2208,14 @@ skills["EarthquakePlayer"] = {
 			label = "Aftershock",
 			incrementalEffectiveness = 0.054999999701977,
 			statDescriptionScope = "earthquake_statset_1",
-	statMap = {
-		["jagged_ground_effect_+%"] = {
-			mod("Damage", "MORE", nil, 0, 0),
-		},
-		["active_skill_base_tertiary_area_of_effect_radius"] = {
-			skill("radius", nil),
-		},
-	},
+			statMap = {
+				["jagged_ground_effect_+%"] = {
+					mod("Damage", "MORE", nil, 0, 0),
+				},
+				["active_skill_base_tertiary_area_of_effect_radius"] = {
+					skill("radius", nil),
+				},
+			},
 			baseFlags = {
 				attack = true,
 				melee = true,

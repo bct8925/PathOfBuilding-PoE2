@@ -439,14 +439,14 @@ skills["SupportAddedChaosDamagePlayer"] = {
 			incrementalEffectiveness = 0.092720001935959,
 			damageIncrementalEffectiveness = 0.039200000464916,
 			statDescriptionScope = "gem_stat_descriptions",
-	statMap = {
-		["support_chaos_support_non_chaos_damage_+%_final"] = {
-			mod("ColdDamage", "MORE", nil),
-			mod("LightningDamage", "MORE", nil),
-			mod("FireDamage", "MORE", nil),
-			mod("PhysicalDamage", "MORE", nil),
-		},
-	},
+			statMap = {
+				["support_chaos_support_non_chaos_damage_+%_final"] = {
+					mod("ColdDamage", "MORE", nil),
+					mod("LightningDamage", "MORE", nil),
+					mod("FireDamage", "MORE", nil),
+					mod("PhysicalDamage", "MORE", nil),
+				},
+			},
 			baseFlags = {
 			},
 			constantStats = {
@@ -598,12 +598,12 @@ skills["SupportAddedColdDamagePlayer"] = {
 			incrementalEffectiveness = 0.092720001935959,
 			damageIncrementalEffectiveness = 0.035900000482798,
 			statDescriptionScope = "gem_stat_descriptions",
-	statMap = {
-		["support_fire_and_lightning_damage_+%_final"] = {
-			mod("FireDamage", "MORE", nil),
-			mod("LightningDamage", "MORE", nil),
-		},
-	},
+			statMap = {
+				["support_fire_and_lightning_damage_+%_final"] = {
+					mod("FireDamage", "MORE", nil),
+					mod("LightningDamage", "MORE", nil),
+				},
+			},
 			baseFlags = {
 			},
 			constantStats = {
@@ -693,14 +693,14 @@ skills["SupportConcentratedEffectPlayer"] = {
 			baseEffectiveness = 0,
 			incrementalEffectiveness = 0.092720001935959,
 			statDescriptionScope = "gem_stat_descriptions",
-	statMap = {
-		["support_concentrated_effect_skill_area_of_effect_+%_final"] = {
-			mod("AreaOfEffect", "MORE", nil),
-		},
-		["support_area_concentrate_area_damage_+%_final"] = {
-			mod("Damage", "MORE", nil, ModFlag.Area),
-		},
-	},
+			statMap = {
+				["support_concentrated_effect_skill_area_of_effect_+%_final"] = {
+					mod("AreaOfEffect", "MORE", nil),
+				},
+				["support_area_concentrate_area_damage_+%_final"] = {
+					mod("Damage", "MORE", nil, ModFlag.Area),
+				},
+			},
 			baseFlags = {
 			},
 			constantStats = {
@@ -1219,36 +1219,6 @@ skills["SupportExecratePlayer"] = {
 		},
 	}
 }
-skills["SupportExpandingGroundPlayer"] = {
-	name = "SupportExpandingGroundPlayer",
-	hidden = true,
-	color = 3,
-	support = true,
-	requireSkillTypes = { },
-	addSkillTypes = { },
-	excludeSkillTypes = { },
-	levels = {
-		[1] = { levelRequirement = 0, },
-	},
-	statSets = {
-		[1] = {
-			label = "SupportExpandingGroundPlayer",
-			incrementalEffectiveness = 0.054999999701977,
-			statDescriptionScope = "gem_stat_descriptions",
-			baseFlags = {
-			},
-			constantStats = {
-				{ "support_ground_effect_area_of_effect_+%_final_per_second", 50 },
-				{ "support_ground_effect_area_of_effect_+%_final_per_second_max", 200 },
-			},
-			stats = {
-			},
-			levels = {
-				[1] = { actorLevel = 1, },
-			},
-		},
-	}
-}
 skills["SupportExpansePlayer"] = {
 	name = "Expanse",
 	description = "Supports any Skill that you use yourself, granting it significantly higher Area of Effect but causing it to gain a long cooldown. Cannot support Skills which already have a cooldown.",
@@ -1570,37 +1540,6 @@ skills["SupportFrostfirePlayer"] = {
 			stats = {
 				"never_freeze",
 				"remove_freeze_on_ignite",
-			},
-			levels = {
-				[1] = { actorLevel = 1, },
-			},
-		},
-	}
-}
-skills["SupportFrozenVortexPlayer"] = {
-	name = "SupportFrozenVortexPlayer",
-	hidden = true,
-	color = 3,
-	support = true,
-	requireSkillTypes = { SkillType.Damage, SkillType.Attack, SkillType.CrossbowAmmoSkill, },
-	addSkillTypes = { SkillType.DamageOverTime, SkillType.Area, SkillType.Duration, },
-	excludeSkillTypes = { },
-	levels = {
-		[1] = { manaMultiplier = 20, levelRequirement = 0, },
-	},
-	statSets = {
-		[1] = {
-			label = "SupportFrozenVortexPlayer",
-			incrementalEffectiveness = 0.092720001935959,
-			statDescriptionScope = "gem_stat_descriptions",
-			baseFlags = {
-			},
-			constantStats = {
-				{ "frozen_overkill_damage_%_dealt_per_second_as_icy_vortex", 30 },
-				{ "base_overkill_icy_vortex_duration_ms", 3000 },
-				{ "base_frozen_vortex_range", 16 },
-			},
-			stats = {
 			},
 			levels = {
 				[1] = { actorLevel = 1, },
@@ -2347,36 +2286,6 @@ skills["SupportRitualisticCursePlayer"] = {
 		},
 	}
 }
-skills["SupportSacrificialLambPlayer"] = {
-	name = "SupportSacrificialLambPlayer",
-	hidden = true,
-	color = 3,
-	support = true,
-	requireSkillTypes = { SkillType.CreatesMinion, },
-	addSkillTypes = { },
-	excludeSkillTypes = { },
-	levels = {
-		[1] = { levelRequirement = 0, },
-	},
-	statSets = {
-		[1] = {
-			label = "SupportSacrificialLambPlayer",
-			incrementalEffectiveness = 0.054999999701977,
-			statDescriptionScope = "gem_stat_descriptions",
-			baseFlags = {
-			},
-			constantStats = {
-				{ "support_sacrificial_lamb_base_radius", 60 },
-			},
-			stats = {
-				"support_sacrificial_lamb",
-			},
-			levels = {
-				[1] = { actorLevel = 1, },
-			},
-		},
-	}
-}
 skills["SupportEnergyShieldOnShockKillPlayer"] = {
 	name = "Shock Siphon",
 	description = "Supports any skill that Hits enemies, causing you to recover Energy Shield when it kills a Shocked enemy.",
@@ -2434,140 +2343,6 @@ skills["SupportManaLeechPlayer"] = {
 			},
 			levels = {
 				[1] = { actorLevel = 1, },
-			},
-		},
-	}
-}
-skills["SupportSoulbreakerPlayer"] = {
-	name = "SupportSoulbreakerPlayer",
-	hidden = true,
-	color = 3,
-	support = true,
-	requireSkillTypes = { },
-	addSkillTypes = { },
-	excludeSkillTypes = { SkillType.Minion, SkillType.Totemable, SkillType.Trappable, SkillType.RemoteMined, },
-	levels = {
-		[1] = { levelRequirement = 0, },
-	},
-	statSets = {
-		[1] = {
-			label = "Support",
-			incrementalEffectiveness = 0.054999999701977,
-			statDescriptionScope = "gem_stat_descriptions",
-			baseFlags = {
-			},
-			stats = {
-				"triggers_soulbreaker_on_breaking_enemy_energy_shield",
-			},
-			levels = {
-				[1] = { actorLevel = 1, },
-			},
-		},
-	}
-}skills["TriggeredSoulbreakerPlayer"] = {
-	name = "Soulbreaker",
-	hidden = true,
-	skillTypes = { [SkillType.Triggerable] = true, [SkillType.Damage] = true, [SkillType.Area] = true, [SkillType.Chaos] = true, [SkillType.SkillGrantedBySupport] = true, },
-	castTime = 1,
-	qualityStats = {
-	},
-	levels = {
-		[1] = { critChance = 11, levelRequirement = 0, },
-		[2] = { levelRequirement = 0, },
-		[3] = { levelRequirement = 0, },
-		[4] = { levelRequirement = 0, },
-		[5] = { levelRequirement = 0, },
-		[6] = { levelRequirement = 0, },
-		[7] = { levelRequirement = 0, },
-		[8] = { levelRequirement = 0, },
-		[9] = { levelRequirement = 0, },
-		[10] = { levelRequirement = 0, },
-		[11] = { levelRequirement = 0, },
-		[12] = { levelRequirement = 0, },
-		[13] = { levelRequirement = 0, },
-		[14] = { levelRequirement = 0, },
-		[15] = { levelRequirement = 0, },
-		[16] = { levelRequirement = 0, },
-		[17] = { levelRequirement = 0, },
-		[18] = { levelRequirement = 0, },
-		[19] = { levelRequirement = 0, },
-		[20] = { levelRequirement = 0, },
-		[21] = { levelRequirement = 0, },
-		[22] = { levelRequirement = 0, },
-		[23] = { levelRequirement = 0, },
-		[24] = { levelRequirement = 0, },
-		[25] = { levelRequirement = 0, },
-		[26] = { levelRequirement = 0, },
-		[27] = { levelRequirement = 0, },
-		[28] = { levelRequirement = 0, },
-		[29] = { levelRequirement = 0, },
-		[30] = { levelRequirement = 0, },
-		[31] = { levelRequirement = 0, },
-		[32] = { levelRequirement = 0, },
-		[33] = { levelRequirement = 0, },
-		[34] = { levelRequirement = 0, },
-		[35] = { levelRequirement = 0, },
-		[36] = { levelRequirement = 0, },
-		[37] = { levelRequirement = 0, },
-		[38] = { levelRequirement = 0, },
-		[39] = { levelRequirement = 0, },
-		[40] = { levelRequirement = 0, },
-	},
-	statSets = {
-		[1] = {
-			label = "Soulbreaker",
-			incrementalEffectiveness = 0.054999999701977,
-			statDescriptionScope = "skill_stat_descriptions",
-			baseFlags = {
-			},
-			constantStats = {
-				{ "triggered_by_soulbreaker_support_%", 100 },
-				{ "active_skill_base_area_of_effect_radius", 20 },
-				{ "support_soulbreaker_%_enemy_energy_shield_dealt_as_chaos_damage", 10 },
-			},
-			stats = {
-			},
-			levels = {
-				[1] = { actorLevel = 1, },
-				[2] = { actorLevel = 3.4519999027252, },
-				[3] = { actorLevel = 6.7670001983643, },
-				[4] = { actorLevel = 10.307999610901, },
-				[5] = { actorLevel = 14.074999809265, },
-				[6] = { actorLevel = 18.068000793457, },
-				[7] = { actorLevel = 22.287000656128, },
-				[8] = { actorLevel = 26.732000350952, },
-				[9] = { actorLevel = 31.40299987793, },
-				[10] = { actorLevel = 36.299999237061, },
-				[11] = { actorLevel = 41.423000335693, },
-				[12] = { actorLevel = 46.771999359131, },
-				[13] = { actorLevel = 52.34700012207, },
-				[14] = { actorLevel = 58.147998809814, },
-				[15] = { actorLevel = 64.175003051758, },
-				[16] = { actorLevel = 70.428001403809, },
-				[17] = { actorLevel = 76.906997680664, },
-				[18] = { actorLevel = 83.611999511719, },
-				[19] = { actorLevel = 90.542999267578, },
-				[20] = { actorLevel = 97.699996948242, },
-				[21] = { actorLevel = 105.08300018311, },
-				[22] = { actorLevel = 112.69200134277, },
-				[23] = { actorLevel = 120.52700042725, },
-				[24] = { actorLevel = 128.58799743652, },
-				[25] = { actorLevel = 136.875, },
-				[26] = { actorLevel = 145.38800048828, },
-				[27] = { actorLevel = 154.12699890137, },
-				[28] = { actorLevel = 163.09199523926, },
-				[29] = { actorLevel = 172.28300476074, },
-				[30] = { actorLevel = 181.69999694824, },
-				[31] = { actorLevel = 191.34300231934, },
-				[32] = { actorLevel = 201.21200561523, },
-				[33] = { actorLevel = 211.30700683594, },
-				[34] = { actorLevel = 221.62800598145, },
-				[35] = { actorLevel = 232.17500305176, },
-				[36] = { actorLevel = 242.94799804688, },
-				[37] = { actorLevel = 253.94700622559, },
-				[38] = { actorLevel = 265.17199707031, },
-				[39] = { actorLevel = 276.62298583984, },
-				[40] = { actorLevel = 288.29998779297, },
 			},
 		},
 	}

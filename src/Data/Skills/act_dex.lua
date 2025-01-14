@@ -3227,17 +3227,17 @@ skills["SpiralVolleyPlayer"] = {
 			label = "Spiral Volley",
 			incrementalEffectiveness = 0.092720001935959,
 			statDescriptionScope = "spiral_volley",
-	statMap = {
-		["spiral_volley_damage_+%_final_when_frenzy_charges_consumed"] = {
-			mod("Damage", "MORE", nil, 0, 0, { type = "MultiplierThreshold", var = "RemovableFrenzyCharge", threshold = 1 }),
-		},
-		["spiral_volley_damage_+%_final_per_frenzy_charge_consumed"] = {
-			mod("Damage", "MORE", nil, 0, 0, { type = "Multiplier", var = "RemovableFrenzyCharge" }),
-		},
-		["spiral_volley_X_chains_per_frenzy_charge_consumed"] = {
-			mod("ChainCountMax", "BASE", nil, 0, 0, { type = "Multiplier", var = "RemovableFrenzyCharge" }),
-		},
-	},
+			statMap = {
+				["spiral_volley_damage_+%_final_when_frenzy_charges_consumed"] = {
+					mod("Damage", "MORE", nil, 0, 0, { type = "MultiplierThreshold", var = "RemovableFrenzyCharge", threshold = 1 }),
+				},
+				["spiral_volley_damage_+%_final_per_frenzy_charge_consumed"] = {
+					mod("Damage", "MORE", nil, 0, 0, { type = "Multiplier", var = "RemovableFrenzyCharge" }),
+				},
+				["spiral_volley_X_chains_per_frenzy_charge_consumed"] = {
+					mod("ChainCountMax", "BASE", nil, 0, 0, { type = "Multiplier", var = "RemovableFrenzyCharge" }),
+				},
+			},
 			baseFlags = {
 				attack = true,
 				projectile = true,

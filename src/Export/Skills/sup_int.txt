@@ -246,12 +246,6 @@ statMap = {
 #mods
 #skillEnd
 
-#skill SupportExpandingGroundPlayer
-#startSets
-#set SupportExpandingGroundPlayer
-#mods
-#skillEnd
-
 #skill SupportExpansePlayer
 #startSets
 #set SupportExpansePlayer
@@ -314,12 +308,6 @@ statMap = {
 #skill SupportFrostfirePlayer
 #startSets
 #set SupportFrostfirePlayer
-#mods
-#skillEnd
-
-#skill SupportFrozenVortexPlayer
-#startSets
-#set SupportFrozenVortexPlayer
 #mods
 #skillEnd
 
@@ -471,12 +459,6 @@ statMap = {
 #mods
 #skillEnd
 
-#skill SupportSacrificialLambPlayer
-#startSets
-#set SupportSacrificialLambPlayer
-#mods
-#skillEnd
-
 #skill SupportEnergyShieldOnShockKillPlayer
 #startSets
 #set SupportEnergyShieldOnShockKillPlayer
@@ -486,17 +468,6 @@ statMap = {
 #skill SupportManaLeechPlayer
 #startSets
 #set SupportManaLeechPlayer
-#mods
-#skillEnd
-
-#skill SupportSoulbreakerPlayer
-#startSets
-#set SupportSoulbreakerPlayer
-#mods
-#skillEnd
-#skill TriggeredSoulbreakerPlayer
-#startSets
-#set TriggeredSoulbreakerPlayer
 #mods
 #skillEnd
 

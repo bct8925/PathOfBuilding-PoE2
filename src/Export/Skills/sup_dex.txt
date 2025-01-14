@@ -215,20 +215,6 @@ statMap = {
 #mods
 #skillEnd
 
-#skill SupportFusilladePlayer
-	weaponTypes = {
-		["Bow"] = true,
-	},
-#startSets
-#set SupportFusilladePlayer
-statMap = {
-	["skill_can_only_use_bow"] = {
-		-- Display only
-	},
-},
-#mods
-#skillEnd
-
 #skill SupportCooldownReductionPlayer
 #startSets
 #set SupportCooldownReductionPlayer
