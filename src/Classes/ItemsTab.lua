@@ -1631,9 +1631,9 @@ end
 -- build rune mod list for armour and weapons
 local runeArmourModLines = { { name = "None", label = "None" } }
 local runeWeaponModLines = { { name = "None", label = "None" } }
-for name, modLines in pairs(data.runeModLines) do
-	t_insert(runeArmourModLines, { name = name, label = modLines.armour})
-	t_insert(runeWeaponModLines, { name = name, label = modLines.weapon})
+for name, modLines in pairs(data.itemMods.Runes) do
+	t_insert(runeArmourModLines, { name = name, label = modLines.armour[1]})
+	t_insert(runeWeaponModLines, { name = name, label = modLines.weapon[1]})
 end
 -- Update rune selection controls
 function ItemsTabClass:UpdateRuneControls()
@@ -2339,7 +2339,7 @@ function ItemsTabClass:CorruptDisplayItem() -- todo implement vaal orb new outco
 			return
 		end
 		enchantList[modType] = {}
-		for modId, mod in pairs(data.corruptions) do
+		for modId, mod in pairs(data.itemMods.Corruption) do
 			if mod.type == modType and self.displayItem:GetModSpawnWeight(mod) > 0 then
 				t_insert(enchantList[modType], mod)
 			end

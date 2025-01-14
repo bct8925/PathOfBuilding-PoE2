@@ -542,6 +542,8 @@ data.itemMods = {
 	Flask = LoadModule("Data/ModFlask"),
 	Charm = LoadModule("Data/ModCharm"),
 	Jewel = LoadModule("Data/ModJewel"),
+	Corruption = LoadModule("Data/ModCorrupted"),
+	Runes = LoadModule("Data/ModRunes")
 }
 data.enchantments = {
 	["Helmet"] = LoadModule("Data/EnchantmentHelmet"),
@@ -552,7 +554,6 @@ data.enchantments = {
 	["Weapon"] = LoadModule("Data/EnchantmentWeapon"),
 	["UtilityFlask"] = LoadModule("Data/EnchantmentFlask"),
 }
-data.corruptions = LoadModule("Data/ModCorrupted")
 
 do
 	data.enchantments["Flask"] = data.enchantments["UtilityFlask"]--["HARVEST"]
@@ -938,17 +939,6 @@ for type, list in pairs(data.itemBaseLists) do
 	end)
 end
 table.sort(data.itemBaseTypeList)
-
--- build rune mod list for armour and weapons
-data.runeModLines = { }
-for i, base in ipairs(data.itemBaseLists["Rune"]) do
-	local weaponLine, armourLine = base.base.implicit:match("Martial Weapons: (.-)\nArmour: (.+)")
-	data.runeModLines[base.label] = { weapon = weaponLine, armour = armourLine }
-end
-for i, base in ipairs(data.itemBaseLists["SoulCore"]) do
-	local weaponLine, armourLine = base.base.implicit:match("Martial Weapons: (.-)\nArmour: (.+)")
-	data.runeModLines[base.label] = { weapon = weaponLine, armour = armourLine }
-end
 
 -- Rare templates
 --data.rares = LoadModule("Data/Rares")

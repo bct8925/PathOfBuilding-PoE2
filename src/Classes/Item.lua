@@ -1095,11 +1095,12 @@ end
 function ItemClass:UpdateRunes()
 	wipeTable(self.runeModLines)
 	for _, name in ipairs(self.runes) do
+		local mods = data.itemMods.Runes[name]
 		if name ~= "None" then
 			if self.base.weapon then 
-				t_insert(self.runeModLines, { line = data.runeModLines[name].weapon, enchant = true, rune = true })
+				t_insert(self.runeModLines, { line = mods.weapon[1], enchant = true, rune = true })
 			elseif self.base.armour then
-				t_insert(self.runeModLines, { line = data.runeModLines[name].armour, enchant = true, rune = true })
+				t_insert(self.runeModLines, { line = mods.armour[1], enchant = true, rune = true })
 			end
 		end
 	end
