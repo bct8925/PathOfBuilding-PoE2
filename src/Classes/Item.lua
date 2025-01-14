@@ -1094,13 +1094,30 @@ end
 -- This doesn't get the mod order correctly.
 function ItemClass:UpdateRunes()
 	wipeTable(self.runeModLines)
+	local statOrder = {}
 	for _, name in ipairs(self.runes) do
-		local mods = data.itemMods.Runes[name]
 		if name ~= "None" then
-			if self.base.weapon then 
-				t_insert(self.runeModLines, { line = mods.weapon[1], enchant = true, rune = true })
-			elseif self.base.armour then
-				t_insert(self.runeModLines, { line = mods.armour[1], enchant = true, rune = true })
+			local mod = self.base.weapon and data.itemMods.Runes[name].weapon or self.base.armour and data.itemMods.Runes[name].armour or { }
+			for i, line in ipairs(mod) do
+				local order = mod.statOrder[i]
+				if statOrder[order] then
+					-- Combine stats
+					local start = 1
+					statOrder[order].line = statOrder[order].line:gsub("%d+", function(num)
+						local s, e, other = line:find("(%d+)", start)
+						start = e + 1
+						return tonumber(num) + tonumber(other)
+					end)
+				else
+					local modLine = { line = line, order = order, rune = true, enchant = true }
+					for l = 1, #self.runeModLines + 1 do
+						if not self.runeModLines[l] or self.runeModLines[l].order > order then
+							t_insert(self.runeModLines, l, modLine)
+							break
+						end
+					end
+					statOrder[order] = modLine
+				end	
 			end
 		end
 	end
