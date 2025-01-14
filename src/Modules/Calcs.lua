@@ -476,7 +476,7 @@ function calcs.buildOutput(build, mode)
 		local specCfg = {
 			source = "Tree"
 		}
-		output["Spec:LifeInc"] = env.modDB:Sum("INC", specCfg, "Life")
+		output["Spec:LifeInc"] = env.modDB:Sum("INC", nil, "Life")
 		output["Spec:ManaInc"] = env.modDB:Sum("INC", specCfg, "Mana")
 		output["Spec:ArmourInc"] = env.modDB:Sum("INC", specCfg, "Armour", "ArmourAndEvasion")
 		output["Spec:EvasionInc"] = env.modDB:Sum("INC", specCfg, "Evasion", "ArmourAndEvasion")
