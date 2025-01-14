@@ -374,9 +374,26 @@ holding Shift will put it in the second.]])
 	self.controls.displayItemAltVariant5.shown = function()
 		return self.displayItem.hasAltVariant5
 	end
+
+	-- Section: Sockets and Links
+	self.controls.displayItemSectionSockets = new("Control", {"TOPLEFT",self.controls.displayItemSectionVariant,"BOTTOMLEFT"}, {0, 0, 0, function()
+		return self.displayItem and (self.displayItem.base.weapon or self.displayItem.base.armour) and 28 or 0
+	end})
+	self.controls.displayItemSocketRune = new("LabelControl", {"TOPLEFT",self.controls.displayItemSectionSockets,"TOPLEFT"}, {0, 0, 36, 20}, "^x7F7F7FS")
+	self.controls.displayItemSocketRune.shown = function()
+		return self.displayItem.base.weapon or self.displayItem.base.armour
+	end
+	self.controls.displayItemSocketRuneEdit = new("EditControl", {"LEFT",self.controls.displayItemSocketRune,"RIGHT"}, {2, 0, 60, 20}, nil, nil, "%D", 2, function(buf)
+		self.displayItem.itemSocketCount = tonumber(buf)
+		self.displayItem:UpdateRunes()
+		self:UpdateRuneControls()
+		self.displayItem:BuildAndParseRaw()
+		self:UpdateDisplayItemTooltip()
+	end)
+	self.controls.displayItemSocketRuneEdit.shown = self.controls.displayItemSocketRune
 	
 	-- Section: Enchant / Anoint / Corrupt
-	self.controls.displayItemSectionEnchant = new("Control", {"TOPLEFT",self.controls.displayItemSectionVariant,"BOTTOMLEFT"}, {0, 0, 0, function()
+	self.controls.displayItemSectionEnchant = new("Control", {"TOPLEFT",self.controls.displayItemSectionSockets,"BOTTOMLEFT"}, {0, 0, 0, function()
 		return (self.controls.displayItemEnchant:IsShown() or self.controls.displayItemEnchant2:IsShown() or self.controls.displayItemAnoint:IsShown() or self.controls.displayItemAnoint2:IsShown() or self.controls.displayItemCorrupt:IsShown() ) and 28 or 0
 	end})
 	self.controls.displayItemEnchant = new("ButtonControl", {"TOPLEFT",self.controls.displayItemSectionEnchant,"TOPLEFT"}, {0, 0, 160, 20}, "Apply Enchantment...", function()
@@ -1539,7 +1556,7 @@ function ItemsTabClass:SetDisplayItem(item)
 		if item.crafted then
 			self:UpdateAffixControls()
 		end
-
+		self.controls.displayItemSocketRuneEdit:SetText(item.itemSocketCount)
 		self.controls.displayItemQualityEdit:SetText(item.quality)
 		self.controls.displayItemCatalyst:SetSel((item.catalyst or 0) + 1)
 		if item.catalystQuality then
@@ -1935,6 +1952,14 @@ function ItemsTabClass:CraftItem()
 			item.quality = 0
 		else
 			item.quality = nil
+		end
+		if self.base and self.base.socketLimit and (self.base.weapon or self.base.armour) then -- must be a martial weapon/armour
+			if #self.sockets == 0 then
+				for i = 1, self.base.socketLimit do
+					t_insert(self.sockets, { group = 0 })
+				end
+				self.itemSocketCount = #self.sockets
+			end
 		end
 		local raritySel = controls.rarity.selIndex
 		if base.base.flask

@@ -844,14 +844,6 @@ function ItemClass:ParseRaw(raw, rarity, highQuality)
 			end
 		end
 	end
-	if self.base and self.base.socketLimit and (self.base.weapon or self.base.armour) then -- must be a martial weapon/armour
-		if #self.sockets == 0 then
-			for i = 1, self.base.socketLimit do
-				t_insert(self.sockets, { group = 0 })
-			end
-			self.itemSocketCount = #self.sockets
-		end
-	end
 	if self.variantList then
 		self.variant = m_min(#self.variantList, self.variant or #self.variantList)
 		if self.hasAltVariant then
@@ -1045,7 +1037,7 @@ function ItemClass:BuildRaw()
 		socketString = socketString:gsub(" $", "")
 		t_insert(rawLines, "Sockets: " .. socketString)
 		for i = 1, self.itemSocketCount do
-			t_insert(rawLines, "Rune: "..self.runes[i] or "None")
+			t_insert(rawLines, "Rune: "..(self.runes[i] or "None"))
 		end
 	end
 	if self.requirements and self.requirements.level then
