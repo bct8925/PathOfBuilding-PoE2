@@ -1045,7 +1045,7 @@ function ItemClass:BuildRaw()
 		socketString = socketString:gsub(" $", "")
 		t_insert(rawLines, "Sockets: " .. socketString)
 		for i = 1, self.itemSocketCount do
-			t_insert(rawLines, "Rune: None")
+			t_insert(rawLines, "Rune: "..self.runes[i] or "None")
 		end
 	end
 	if self.requirements and self.requirements.level then
