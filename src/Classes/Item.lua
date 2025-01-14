@@ -794,6 +794,12 @@ function ItemClass:ParseRaw(raw, rarity, highQuality)
 	if self.baseName and self.title then
 		self.name = self.title .. ", " .. self.baseName:gsub(" %(.+%)","")
 	end
+	-- this will need more advanced logic for jewel sockets in items to work properly but could just be removed as items like this was only introduced during development.
+	if self.base and not (self.base.weapon or self.base.armour) then
+		self.sockets = { }
+		self.itemSocketCount = 0
+		self.runes = { }
+	end
 	if self.base and not self.requirements.level then
 		if importedLevelReq and #self.sockets == 0 then
 			-- Requirements on imported items can only be trusted for items with no sockets
@@ -1029,7 +1035,7 @@ function ItemClass:BuildRaw()
 	if self.quality then
 		t_insert(rawLines, "Quality: " .. self.quality)
 	end
-	if self.itemSocketCount and self.itemSocketCount > 0 then
+	if self.itemSocketCount and self.itemSocketCount > 0 and (self.base.weapon or self.base.armour) then
 		local socketString = ""
 		for _ = 1, self.itemSocketCount do
 			socketString = socketString .. "S "
