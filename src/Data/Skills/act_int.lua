@@ -66,6 +66,8 @@ skills["ArcPlayer"] = {
 			damageIncrementalEffectiveness = 0.0065000001341105,
 			statDescriptionScope = "skill_stat_descriptions",
 			baseFlags = {
+				spell = true,
+				chaining = true,
 			},
 			constantStats = {
 				{ "arc_chain_distance", 35 },
@@ -7220,7 +7222,7 @@ skills["TriggeredFreezingMarkNovaPlayer"] = {
 }
 skills["FreezingShardsPlayer"] = {
 	name = "Freezing Shards",
-	hidden = true,
+	baseTypeName = "Freezing Shards",
 	color = 3,
 	description = "Launches icy Projectiles in a sweeping arc. Multiple Projectiles can hit the same enemy.",
 	skillTypes = { [SkillType.Projectile] = true, [SkillType.ProjectilesFromUser] = true, [SkillType.Spell] = true, [SkillType.Damage] = true, [SkillType.Trappable] = true, [SkillType.Totemable] = true, [SkillType.Mineable] = true, [SkillType.Multicastable] = true, [SkillType.Triggerable] = true, [SkillType.AreaSpell] = true, [SkillType.Invokable] = true, [SkillType.Cold] = true, [SkillType.CanRapidFire] = true, [SkillType.Nonpathing] = true, },
@@ -7270,7 +7272,7 @@ skills["FreezingShardsPlayer"] = {
 		[39] = { critChance = 11, levelRequirement = 90, },
 		[40] = { critChance = 11, levelRequirement = 90, },
 	},
-				fromItem = true,
+			fromItem = true,
 	statSets = {
 		[1] = {
 			label = "Freezing Shards",

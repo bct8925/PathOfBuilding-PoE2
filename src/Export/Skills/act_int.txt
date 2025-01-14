@@ -8,7 +8,7 @@ local skills, mod, flag, skill = ...
 #skill ArcPlayer
 #startSets
 #set ArcPlayer
-#flags
+#flags spell chaining
 #mods
 #skillEnd
 
