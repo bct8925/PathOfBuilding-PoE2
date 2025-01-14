@@ -256,7 +256,6 @@ directiveTable.skill = function(state, args, out)
 	end
 	local skillGem
 	local gemColor
-	local gemTier
 	if gemEffect then
 		for gem in dat("SkillGems"):Rows() do
 			for _, variant in ipairs(gem.GemEffects) do
@@ -269,7 +268,6 @@ directiveTable.skill = function(state, args, out)
 				else
 					gemColor = 4
 				end
-				gemTier = gem.Tier
 				if gemEffect.Id == variant.Id then
 					skillGem = gem
 					local trueGemNameObj = dat("GemEffects"):GetRow("Id", gemEffect.Id)
@@ -285,7 +283,7 @@ directiveTable.skill = function(state, args, out)
 	local skill = { }
 	state.skill = skill
 	state.granted = granted
-	if skillGem and gemTier ~= 0 and not state.noGem then
+	if skillGem and not state.noGem then
 		gems[gemEffect.Id] = true
 		if granted.IsSupport then
 			skill.displayName = fullNameGems[skillGem.BaseItemType.Id] and skillGem.BaseItemType.Name or skillGem.BaseItemType.Name:gsub(" Support", "")

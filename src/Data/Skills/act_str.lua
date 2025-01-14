@@ -1105,7 +1105,7 @@ skills["BoneshatterPlayer"] = {
 }
 skills["MetaCastOnBlockPlayer"] = {
 	name = "Cast on Block",
-	hidden = true,
+	baseTypeName = "Cast on Block",
 	color = 1,
 	description = "While active, gains Energy when you Block and triggers socketed Spells on reaching maximum Energy.",
 	skillTypes = { [SkillType.HasReservation] = true, [SkillType.OngoingSkill] = true, [SkillType.Meta] = true, [SkillType.Persistent] = true, [SkillType.Buff] = true, [SkillType.CanHaveMultipleOngoingSkillInstances] = true, [SkillType.GeneratesEnergy] = true, },
@@ -1331,7 +1331,7 @@ skills["SupportMetaCastOnBlockPlayer"] = {
 }
 skills["MetaCastOnMeleeKillPlayer"] = {
 	name = "Cast on Melee Kill",
-	hidden = true,
+	baseTypeName = "Cast on Melee Kill",
 	color = 1,
 	description = "While active, gains Energy when you kill enemies with Melee Attacks and triggers socketed spells on reaching maximum Energy.",
 	skillTypes = { [SkillType.HasReservation] = true, [SkillType.OngoingSkill] = true, [SkillType.Meta] = true, [SkillType.Persistent] = true, [SkillType.Buff] = true, [SkillType.CanHaveMultipleOngoingSkillInstances] = true, [SkillType.GeneratesEnergy] = true, },
@@ -1399,7 +1399,7 @@ skills["SupportMetaCastOnMeleeKillPlayer"] = {
 }
 skills["MetaCastOnMeleeStunPlayer"] = {
 	name = "Cast on Melee Stun",
-	hidden = true,
+	baseTypeName = "Cast on Melee Stun",
 	color = 1,
 	description = "While active, gains Energy when you Stun enemies with Melee Attacks and triggers socketed spells on reaching maximum Energy.",
 	skillTypes = { [SkillType.HasReservation] = true, [SkillType.OngoingSkill] = true, [SkillType.Meta] = true, [SkillType.Persistent] = true, [SkillType.Buff] = true, [SkillType.CanHaveMultipleOngoingSkillInstances] = true, [SkillType.GeneratesEnergy] = true, },

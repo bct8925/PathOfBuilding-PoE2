@@ -608,7 +608,7 @@ skills["FireBombSkeletonMinion"] = {
 }
 skills["DestructiveLinkSkeletonBombadierMinion"] = {
 	name = "Explosive Demise",
-	hidden = true,
+	baseTypeName = "Explosive Demise",
 	color = 2,
 	description = "Detonates an allied Minion whose current Life is below a threshold, dealing heavy damage to nearby enemies.",
 	skillTypes = { [SkillType.Spell] = true, [SkillType.Cooldown] = true, [SkillType.Area] = true, [SkillType.Fire] = true, [SkillType.Damage] = true, },

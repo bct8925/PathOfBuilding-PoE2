@@ -1132,7 +1132,7 @@ skills["BlinkPlayer"] = {
 }
 skills["BoneBlastPlayer"] = {
 	name = "Bone Blast",
-	hidden = true,
+	baseTypeName = "Bone Blast",
 	color = 3,
 	description = "Conjures a circle of ritual inscriptions that last for a short duration. When the duration ends, spikes of bone erupt from enemies in the area, damaging them and potentially causing Bleeding.",
 	skillTypes = { [SkillType.Spell] = true, [SkillType.Duration] = true, [SkillType.Area] = true, [SkillType.Physical] = true, [SkillType.CanRapidFire] = true, [SkillType.Nonpathing] = true, [SkillType.Damage] = true, [SkillType.Cascadable] = true, [SkillType.CreatesGroundRune] = true, },
@@ -3047,7 +3047,7 @@ skills["SupportMetaCastOnShockPlayer"] = {
 }
 skills["WeaponGrantedChaosboltPlayer"] = {
 	name = "Chaos Bolt",
-	hidden = true,
+	baseTypeName = "Chaos Bolt",
 	color = 3,
 	description = "Fires a burst of Chaos energy at the target.",
 	skillTypes = { [SkillType.Projectile] = true, [SkillType.ProjectilesFromUser] = true, [SkillType.Spell] = true, [SkillType.Damage] = true, [SkillType.Trappable] = true, [SkillType.Totemable] = true, [SkillType.Mineable] = true, [SkillType.Multicastable] = true, [SkillType.Triggerable] = true, [SkillType.Chaos] = true, [SkillType.CanRapidFire] = true, [SkillType.Invokable] = true, [SkillType.Nonpathing] = true, },
@@ -4236,7 +4236,7 @@ skills["DarkEffigyProjectilePlayer"] = {
 }
 skills["CorpseCloudPlayer"] = {
 	name = "Decompose",
-	hidden = true,
+	baseTypeName = "Decompose",
 	color = 3,
 	description = "Consumes a Corpse to create a cloud of flammable Poisonous gas. Any Burning effects or Detonator skills will explode the gas cloud, creating a fiery explosion.",
 	skillTypes = { [SkillType.Spell] = true, [SkillType.Damage] = true, [SkillType.Area] = true, [SkillType.Trappable] = true, [SkillType.Totemable] = true, [SkillType.Mineable] = true, [SkillType.Multicastable] = true, [SkillType.Triggerable] = true, [SkillType.Fire] = true, [SkillType.Cascadable] = true, [SkillType.TargetsDestructibleCorpses] = true, [SkillType.CanRapidFire] = true, [SkillType.AreaSpell] = true, [SkillType.Chaos] = true, [SkillType.Nonpathing] = true, [SkillType.Duration] = true, },
@@ -4664,7 +4664,7 @@ skills["DetonateDeadPlayer"] = {
 }
 skills["DisciplinePlayer"] = {
 	name = "Discipline",
-	hidden = true,
+	baseTypeName = "Discipline",
 	color = 3,
 	description = "Emits an Aura that grants Allies in your Presence additional Total Energy Shield. The Aura does not affect you.",
 	skillTypes = { [SkillType.Buff] = true, [SkillType.HasReservation] = true, [SkillType.Aura] = true, [SkillType.OngoingSkill] = true, [SkillType.Persistent] = true, },
@@ -6119,7 +6119,7 @@ skills["FireballPlayer"] = {
 }
 skills["FireboltPlayer"] = {
 	name = "Firebolt",
-	hidden = true,
+	baseTypeName = "Firebolt",
 	color = 3,
 	description = "Launches a fiery Projectile towards a target. The Projectile explodes on impact, damaging foes in a small area.",
 	skillTypes = { [SkillType.Projectile] = true, [SkillType.ProjectilesFromUser] = true, [SkillType.Spell] = true, [SkillType.Damage] = true, [SkillType.Area] = true, [SkillType.Trappable] = true, [SkillType.Totemable] = true, [SkillType.Mineable] = true, [SkillType.Multicastable] = true, [SkillType.Triggerable] = true, [SkillType.Fire] = true, [SkillType.CanRapidFire] = true, [SkillType.AreaSpell] = true, [SkillType.Invokable] = true, [SkillType.Nonpathing] = true, },
@@ -7270,7 +7270,7 @@ skills["FreezingShardsPlayer"] = {
 		[39] = { critChance = 11, levelRequirement = 90, },
 		[40] = { critChance = 11, levelRequirement = 90, },
 	},
-			fromItem = true,
+				fromItem = true,
 	statSets = {
 		[1] = {
 			label = "Freezing Shards",
@@ -8160,7 +8160,7 @@ skills["FrozenLocusExplodePlayer"] = {
 }
 skills["GalvanicFieldPlayer"] = {
 	name = "Galvanic Field",
-	hidden = true,
+	baseTypeName = "Galvanic Field",
 	color = 3,
 	description = "Grants a Buff that boosts your Shock chance. Shocking an enemy consumes the Buff to attach an Orb of electricity to that enemy. The Orb fires bolts of electricity at nearby enemies until it expires.",
 	skillTypes = { [SkillType.Spell] = true, [SkillType.Damage] = true, [SkillType.Area] = true, [SkillType.Buff] = true, [SkillType.Duration] = true, [SkillType.Lightning] = true, [SkillType.Chains] = true, [SkillType.Orb] = true, [SkillType.Triggerable] = true, [SkillType.Nonpathing] = true, [SkillType.Limit] = true, },
@@ -10137,7 +10137,7 @@ skills["KillingPalmPlayer"] = {
 }
 skills["LightningBoltPlayer"] = {
 	name = "Lightning Bolt",
-	hidden = true,
+	baseTypeName = "Lightning Bolt",
 	color = 3,
 	description = "Call down a Shocking bolt of Lightning to strike enemies in a small area.",
 	skillTypes = { [SkillType.Spell] = true, [SkillType.Damage] = true, [SkillType.Trappable] = true, [SkillType.Totemable] = true, [SkillType.Mineable] = true, [SkillType.Multicastable] = true, [SkillType.Triggerable] = true, [SkillType.Lightning] = true, [SkillType.CanRapidFire] = true, [SkillType.Area] = true, [SkillType.AreaSpell] = true, [SkillType.Cascadable] = true, [SkillType.Nonpathing] = true, },
@@ -10714,7 +10714,7 @@ skills["LingeringIllusionSpawnPlayer"] = {
 }
 skills["LivingBombPlayer"] = {
 	name = "Living Bomb",
-	hidden = true,
+	baseTypeName = "Living Bomb",
 	color = 3,
 	description = "Plant a seed of Fire inside an enemy, which grows over a duration. When the duration expires, the seed explodes, damaging the enemy and all other enemies nearby.",
 	skillTypes = { [SkillType.Spell] = true, [SkillType.Damage] = true, [SkillType.Area] = true, [SkillType.Trappable] = true, [SkillType.Totemable] = true, [SkillType.Mineable] = true, [SkillType.AreaSpell] = true, [SkillType.Limit] = true, [SkillType.Fire] = true, [SkillType.Nonpathing] = true, [SkillType.Duration] = true, },
@@ -10836,7 +10836,7 @@ skills["LivingBombPlayer"] = {
 }
 skills["MalicePlayer"] = {
 	name = "Malice",
-	hidden = true,
+	baseTypeName = "Malice",
 	color = 3,
 	description = "Emits an Aura that continuously inflicts Critical Weakness on enemies in your Presence.",
 	skillTypes = { [SkillType.Buff] = true, [SkillType.HasReservation] = true, [SkillType.Aura] = true, [SkillType.OngoingSkill] = true, [SkillType.Persistent] = true, [SkillType.Duration] = true, },
@@ -10949,7 +10949,7 @@ skills["MalicePlayer"] = {
 }
 skills["ManaDrainPlayer"] = {
 	name = "Mana Drain",
-	hidden = true,
+	baseTypeName = "Mana Drain",
 	color = 3,
 	description = "Siphons power from an enemy, briefly Hindering them and Leeching Mana.",
 	skillTypes = { [SkillType.Spell] = true, [SkillType.Totemable] = true, [SkillType.Trappable] = true, [SkillType.Mineable] = true, [SkillType.Nonpathing] = true, },
@@ -11670,7 +11670,7 @@ skills["PainOfferingPlayer"] = {
 }
 skills["PowerSiphonPlayer"] = {
 	name = "Power Siphon",
-	hidden = true,
+	baseTypeName = "Power Siphon",
 	color = 3,
 	description = "Attempts to rip the lifeforce from an enemy. Enemies within Culling range will be highlighted and instantly killed on Hit, granting a Power Charge. Can only target Enemies in Culling range.",
 	skillTypes = { [SkillType.Spell] = true, [SkillType.Totemable] = true, [SkillType.Trappable] = true, [SkillType.Mineable] = true, [SkillType.Nonpathing] = true, [SkillType.Damage] = true, [SkillType.GeneratesCharges] = true, [SkillType.Physical] = true, },
@@ -11909,7 +11909,7 @@ skills["ProfaneRitualPlayer"] = {
 }
 skills["PurityOfFirePlayer"] = {
 	name = "Purity of Fire",
-	hidden = true,
+	baseTypeName = "Purity of Fire",
 	color = 3,
 	description = "Emits an Aura that boosts the Fire Resistance of Allies in your Presence. The Aura does not affect you.",
 	skillTypes = { [SkillType.Buff] = true, [SkillType.HasReservation] = true, [SkillType.Aura] = true, [SkillType.OngoingSkill] = true, [SkillType.Persistent] = true, [SkillType.Fire] = true, },
@@ -12021,7 +12021,7 @@ skills["PurityOfFirePlayer"] = {
 }
 skills["PurityOfIcePlayer"] = {
 	name = "Purity of Ice",
-	hidden = true,
+	baseTypeName = "Purity of Ice",
 	color = 3,
 	description = "Emits an Aura that boosts the Cold Resistance of Allies in your Presence. The Aura does not affect you.",
 	skillTypes = { [SkillType.Buff] = true, [SkillType.HasReservation] = true, [SkillType.Aura] = true, [SkillType.OngoingSkill] = true, [SkillType.Persistent] = true, [SkillType.Cold] = true, },
@@ -12133,7 +12133,7 @@ skills["PurityOfIcePlayer"] = {
 }
 skills["PurityOfLightningPlayer"] = {
 	name = "Purity of Lightning",
-	hidden = true,
+	baseTypeName = "Purity of Lightning",
 	color = 3,
 	description = "Emits an Aura that boosts the Lightning Resistance of Allies in your Presence. The Aura does not affect you.",
 	skillTypes = { [SkillType.Buff] = true, [SkillType.HasReservation] = true, [SkillType.Aura] = true, [SkillType.OngoingSkill] = true, [SkillType.Persistent] = true, [SkillType.Lightning] = true, },
@@ -13070,7 +13070,7 @@ skills["ShatteringPalmExplosionPlayer"] = {
 }
 skills["SigilOfPowerPlayer"] = {
 	name = "Sigil of Power",
-	hidden = true,
+	baseTypeName = "Sigil of Power",
 	color = 3,
 	description = "Places a Sigil on the ground, providing a powerful Spell Damage Buff to you and Allies while standing in it. The Buff becomes more powerful the more mana you spend while standing in the Sigil.",
 	skillTypes = { [SkillType.Spell] = true, [SkillType.Area] = true, [SkillType.Duration] = true, [SkillType.Trappable] = true, [SkillType.Mineable] = true, [SkillType.Triggerable] = true, [SkillType.AreaSpell] = true, [SkillType.Cooldown] = true, [SkillType.Totemable] = true, [SkillType.Nonpathing] = true, [SkillType.Limit] = true, },
@@ -15991,7 +15991,7 @@ skills["UnearthPlayer"] = {
 }
 skills["StaffUnleashNextSpellPlayer"] = {
 	name = "Unleash",
-	hidden = true,
+	baseTypeName = "Unleash",
 	color = 3,
 	description = "Infuses your staff arcane energy for a short duration, Empowering the next spell you cast to reoccur.",
 	skillTypes = { [SkillType.Spell] = true, [SkillType.Cooldown] = true, [SkillType.Buff] = true, [SkillType.ModifiesNextSkill] = true, [SkillType.Duration] = true, [SkillType.EmpowersOtherSkill] = true, [SkillType.Nonpathing] = true, },
@@ -16148,7 +16148,7 @@ skills["VaultingImpactPlayer"] = {
 }
 skills["VolatileDeadPlayer"] = {
 	name = "Volatile Dead",
-	hidden = true,
+	baseTypeName = "Volatile Dead",
 	color = 3,
 	description = "Consumes a Corpse to create a fireball that seeks out enemies and explodes. ",
 	skillTypes = { [SkillType.Spell] = true, [SkillType.Damage] = true, [SkillType.Area] = true, [SkillType.Trappable] = true, [SkillType.Totemable] = true, [SkillType.Mineable] = true, [SkillType.Multicastable] = true, [SkillType.Triggerable] = true, [SkillType.Fire] = true, [SkillType.Cascadable] = true, [SkillType.CanRapidFire] = true, [SkillType.AreaSpell] = true, [SkillType.Nonpathing] = true, [SkillType.TargetsDestructibleCorpses] = true, },
