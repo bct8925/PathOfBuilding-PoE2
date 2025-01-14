@@ -1948,17 +1948,19 @@ function ItemsTabClass:CraftItem()
 		item.classRequirementModLines = { }
 		item.implicitModLines = { }
 		item.explicitModLines = { }
+		item.sockets = { }
+		item.runes = { }
 		if base.base.quality then
 			item.quality = 0
 		else
 			item.quality = nil
 		end
-		if self.base and self.base.socketLimit and (self.base.weapon or self.base.armour) then -- must be a martial weapon/armour
-			if #self.sockets == 0 then
-				for i = 1, self.base.socketLimit do
-					t_insert(self.sockets, { group = 0 })
+		if base.base.socketLimit and (base.base.weapon or base.base.armour) then -- must be a martial weapon/armour
+			if #item.sockets == 0 then
+				for i = 1, base.base.socketLimit do
+					t_insert(item.sockets, { group = 0 })
 				end
-				self.itemSocketCount = #self.sockets
+				item.itemSocketCount = #item.sockets
 			end
 		end
 		local raritySel = controls.rarity.selIndex
