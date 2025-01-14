@@ -541,13 +541,9 @@ holding Shift will put it in the second.]])
 		local prev = self.controls["displayItemRune"..(i-1)] or self.controls.displayItemSectionRune
 		local drop
 		drop = new("DropDownControl", {"TOPLEFT",prev,"TOPLEFT"}, {i==1 and 40 or 0, 0, 418, 20}, nil, function(index, value)
-			local rune = { name = "None" }
-			if value.name then
-				rune.name = value.name
-			end
-
+			self.displayItem.runes[i] = value.name
+			self.displayItem:UpdateRunes()
 			self:UpdateDisplayItemTooltip()
-			self:UpdateRuneControls()
 		end)
 		drop.y = function()
 			return i == 1 and 0 or 24
@@ -1635,11 +1631,9 @@ end
 -- build rune mod list for armour and weapons
 local runeArmourModLines = { { name = "None", label = "None" } }
 local runeWeaponModLines = { { name = "None", label = "None" } }
-for i, base in ipairs({unpack(data.itemBaseLists["Rune"]), unpack(data.itemBaseLists["SoulCore"])}) do
-	local weaponLine, armourLine = base.base.implicit:match("Martial Weapons: (.-)\nArmour: (.+)")
-	local name = base.label
-	t_insert(runeArmourModLines, { name = name, label = armourLine})
-	t_insert(runeWeaponModLines, { name = name, label = weaponLine})
+for name, modLines in pairs(data.runeModLines) do
+	t_insert(runeArmourModLines, { name = name, label = modLines.armour})
+	t_insert(runeWeaponModLines, { name = name, label = modLines.weapon})
 end
 -- Update rune selection controls
 function ItemsTabClass:UpdateRuneControls()

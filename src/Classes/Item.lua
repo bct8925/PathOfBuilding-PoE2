@@ -1090,6 +1090,22 @@ function ItemClass:BuildAndParseRaw()
 	self:ParseRaw(raw)
 end
 
+-- Rebuild rune modifiers using the item's runes
+-- This doesn't get the mod order correctly.
+function ItemClass:UpdateRunes()
+	wipeTable(self.runeModLines)
+	for _, name in ipairs(self.runes) do
+		if name ~= "None" then
+			if self.base.weapon then 
+				t_insert(self.runeModLines, { line = data.runeModLines[name].weapon, enchant = true, rune = true })
+			elseif self.base.armour then
+				t_insert(self.runeModLines, { line = data.runeModLines[name].armour, enchant = true, rune = true })
+			end
+		end
+	end
+
+end
+
 -- Rebuild explicit modifiers using the item's affixes
 function ItemClass:Craft()
 	-- Save off any custom mods so they can be re-added at the end
