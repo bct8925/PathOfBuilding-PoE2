@@ -332,16 +332,24 @@ function SkillsTabClass:LoadSkill(node, skillSetId)
 		gemInstance.skillMinionItemSetCalcs = tonumber(child.attrib.skillMinionItemSetCalcs)
 		gemInstance.skillMinionSkill = tonumber(child.attrib.skillMinionSkill)
 		gemInstance.skillMinionSkillCalcs = tonumber(child.attrib.skillMinionSkillCalcs)
+		gemInstance.statSet = { }
+		gemInstance.statSetCalcs = { }
+		gemInstance.skillMinionSkillStatSetIndexLookup = { }
+		gemInstance.skillMinionSkillStatSetIndexLookupCalcs = { }
 		for _, child in ipairs(child) do
-			if child.elem == "MinionSkillIndexLookup" then
-				gemInstance.skillMinionSkillStatSetIndexLookup = { }
-				for _, child in ipairs(child) do
-					gemInstance.skillMinionSkillStatSetIndexLookup[tonumber(child.attrib.skillIndex)] = tonumber(child.attrib.statSetIndex)
+			if child.elem == "StatSetIndex" and child.attrib.grantedEffect then 
+				gemInstance.statSet[child.attrib.grantedEffect] = tonumber(child.attrib.index)
+			elseif child.elem == "StatSetCalcsIndex" and child.attrib.grantedEffect then
+				gemInstance.statSetCalcs[child.attrib.grantedEffect] = tonumber(child.attrib.index)
+			elseif child.elem == "MinionSkillIndexLookup" and child.attrib.grantedEffect then
+				gemInstance.skillMinionSkillStatSetIndexLookup[child.attrib.grantedEffect] = { }
+				for _, map in ipairs(child) do
+					gemInstance.skillMinionSkillStatSetIndexLookup[child.attrib.grantedEffect][tonumber(map.attrib.skillIndex)] = tonumber(map.attrib.statSetIndex)
 				end
-			elseif child.elem == "MinionSkillIndexLookupCalcs" then
-				gemInstance.skillMinionSkillStatSetIndexLookupCalcs = { }
-				for _, child in ipairs(child) do
-					gemInstance.skillMinionSkillStatSetIndexLookupCalcs[tonumber(child.attrib.skillIndex)] = tonumber(child.attrib.statSetIndex)
+			elseif child.elem == "MinionSkillIndexLookupCalcs" and child.attrib.grantedEffect then
+				gemInstance.skillMinionSkillStatSetIndexLookupCalcs[child.attrib.grantedEffect] = { }
+				for _, map in ipairs(child) do
+					gemInstance.skillMinionSkillStatSetIndexLookupCalcs[child.attrib.grantedEffect][tonumber(map.attrib.skillIndex)] = tonumber(map.attrib.statSetIndex)
 				end
 			end
 		end
@@ -453,25 +461,39 @@ function SkillsTabClass:Save(xml)
 					skillMinionSkill = gemInstance.skillMinionSkill and tostring(gemInstance.skillMinionSkill),
 					skillMinionSkillCalcs = gemInstance.skillMinionSkillCalcs and tostring(gemInstance.skillMinionSkillCalcs),
 				} }
-				local minionSkillStatSetIndexLookup = { elem = "MinionSkillIndexLookup", attrib = { }}
-				local minionSkillStatSetIndexLookupCalcs = { elem = "MinionSkillIndexLookupCalcs", attrib = { } }
-				if gemInstance.skillMinionSkillStatSetIndexLookup then 
-					for k,v in pairs(gemInstance.skillMinionSkillStatSetIndexLookup or { }) do
-						t_insert(minionSkillStatSetIndexLookup, { elem = "MinionSkillIndexMap",  attrib = {
-							skillIndex = tostring(k),
-							statSetIndex = tostring(v)
-						} } )
+				if gemInstance.statSet then
+					for grantedEffect, index in pairs(gemInstance.statSet) do
+						t_insert(gemInfo, { elem = "StatSetIndex", attrib = { grantedEffect = grantedEffect, index = tostring(index)}})
 					end
-					t_insert(gemInfo, minionSkillStatSetIndexLookup)
+				end
+				if gemInstance.statSetCalcs then
+					for grantedEffect, index in pairs(gemInstance.statSetCalcs) do
+						t_insert(gemInfo, { elem = "StatSetCalcsIndex", attrib = { grantedEffect = grantedEffect, index = tostring(index)}})
+					end
+				end
+				if gemInstance.skillMinionSkillStatSetIndexLookup then 
+					for grantedEffect, map in pairs(gemInstance.skillMinionSkillStatSetIndexLookup) do 
+						local minionSkillStatSetIndexLookup = { elem = "MinionSkillIndexLookup", attrib = { grantedEffect = grantedEffect }}
+						for k,v in pairs(map) do
+							t_insert(minionSkillStatSetIndexLookup, { elem = "MinionSkillIndexMap",  attrib = {
+								skillIndex = tostring(k),
+								statSetIndex = tostring(v)
+							} } )
+						end
+						t_insert(gemInfo, minionSkillStatSetIndexLookup)
+					end
 				end
 				if gemInstance.skillMinionSkillStatSetIndexLookupCalcs then 
-					for k,v in pairs(gemInstance.skillMinionSkillStatSetIndexLookupCalcs or { }) do
-						t_insert(minionSkillStatSetIndexLookupCalcs, { elem = "MinionSkillIndexMap",  attrib = {
-							skillIndex = tostring(k),
-							statSetIndex = tostring(v)
-						} } )
+					for grantedEffect, map in pairs(gemInstance.skillMinionSkillStatSetIndexLookupCalcs) do 
+						local minionSkillStatSetIndexLookupCalcs = { elem = "MinionSkillIndexLookupCalcs", attrib = { grantedEffect = grantedEffect } }
+						for k,v in pairs(map) do
+							t_insert(minionSkillStatSetIndexLookupCalcs, { elem = "MinionSkillIndexMap",  attrib = {
+								skillIndex = tostring(k),
+								statSetIndex = tostring(v)
+							} } )
+						end
+						t_insert(gemInfo, minionSkillStatSetIndexLookupCalcs)
 					end
-					t_insert(gemInfo, minionSkillStatSetIndexLookupCalcs)
 				end
 				t_insert(node, gemInfo)
 			end
