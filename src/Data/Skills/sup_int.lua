@@ -1044,7 +1044,7 @@ skills["SupportElementalDischargePlayer"] = {
 	qualityStats = {
 	},
 	levels = {
-		[1] = { storedUses = 1, levelRequirement = 0, cooldown = 1, },
+		[1] = { critChance = 10, storedUses = 1, levelRequirement = 0, cooldown = 1, },
 	},
 	statSets = {
 		[1] = {
@@ -1066,7 +1066,7 @@ skills["SupportElementalDischargePlayer"] = {
 				"spell_maximum_base_lightning_damage_as_%_of_intelligence",
 			},
 			levels = {
-				[1] = { 35, 55, 30, 50, 1, 80, critChance = 10, statInterpolation = { 1, 1, 1, 1, 1, 1, }, actorLevel = 1, },
+				[1] = { 35, 55, 30, 50, 1, 80, statInterpolation = { 1, 1, 1, 1, 1, 1, }, actorLevel = 1, },
 			},
 		},
 	}
@@ -1220,7 +1220,8 @@ skills["SupportExecratePlayer"] = {
 	}
 }
 skills["SupportExpandingGroundPlayer"] = {
-	name = "Expanding Ground",
+	name = "SupportExpandingGroundPlayer",
+	hidden = true,
 	color = 3,
 	support = true,
 	requireSkillTypes = { },
@@ -1231,7 +1232,7 @@ skills["SupportExpandingGroundPlayer"] = {
 	},
 	statSets = {
 		[1] = {
-			label = "Expanding Ground",
+			label = "SupportExpandingGroundPlayer",
 			incrementalEffectiveness = 0.054999999701977,
 			statDescriptionScope = "gem_stat_descriptions",
 			baseFlags = {
@@ -1374,7 +1375,7 @@ skills["SupportFieryDeathPlayer"] = {
 	qualityStats = {
 	},
 	levels = {
-		[1] = { manaMultiplier = 20, levelRequirement = 0, },
+		[1] = { critChance = 8, levelRequirement = 0, manaMultiplier = 20, },
 	},
 	statSets = {
 		[1] = {
@@ -1391,7 +1392,7 @@ skills["SupportFieryDeathPlayer"] = {
 			stats = {
 			},
 			levels = {
-				[1] = { critChance = 8, actorLevel = 1, },
+				[1] = { actorLevel = 1, },
 			},
 		},
 	}
@@ -1577,8 +1578,8 @@ skills["SupportFrostfirePlayer"] = {
 	}
 }
 skills["SupportFrozenVortexPlayer"] = {
-	name = "Frozen Vortex",
-	description = "Supports any skill that Hits enemies, causing it to create a chilling vortex on Shattering an enemy.",
+	name = "SupportFrozenVortexPlayer",
+	hidden = true,
 	color = 3,
 	support = true,
 	requireSkillTypes = { SkillType.Damage, SkillType.Attack, SkillType.CrossbowAmmoSkill, },
@@ -1589,7 +1590,7 @@ skills["SupportFrozenVortexPlayer"] = {
 	},
 	statSets = {
 		[1] = {
-			label = "Frozen Vortex",
+			label = "SupportFrozenVortexPlayer",
 			incrementalEffectiveness = 0.092720001935959,
 			statDescriptionScope = "gem_stat_descriptions",
 			baseFlags = {
@@ -1877,7 +1878,7 @@ skills["ViciousHexSupportPlayer"] = {
 	qualityStats = {
 	},
 	levels = {
-		[1] = { storedUses = 3, levelRequirement = 0, cooldown = 0.15, },
+		[1] = { critChance = 5, storedUses = 3, levelRequirement = 0, cooldown = 0.15, },
 	},
 	statSets = {
 		[1] = {
@@ -1897,7 +1898,7 @@ skills["ViciousHexSupportPlayer"] = {
 				"is_area_damage",
 			},
 			levels = {
-				[1] = { critChance = 5, actorLevel = 1, },
+				[1] = { actorLevel = 1, },
 			},
 		},
 	}
@@ -2117,7 +2118,7 @@ skills["SupportManaFlarePlayer"] = {
 	qualityStats = {
 	},
 	levels = {
-		[1] = { storedUses = 1, levelRequirement = 0, cooldown = 1, },
+		[1] = { critChance = 7, storedUses = 1, levelRequirement = 0, cooldown = 1, },
 	},
 	statSets = {
 		[1] = {
@@ -2134,7 +2135,7 @@ skills["SupportManaFlarePlayer"] = {
 			stats = {
 			},
 			levels = {
-				[1] = { critChance = 7, actorLevel = 1, },
+				[1] = { actorLevel = 1, },
 			},
 		},
 	}
@@ -2347,8 +2348,8 @@ skills["SupportRitualisticCursePlayer"] = {
 	}
 }
 skills["SupportSacrificialLambPlayer"] = {
-	name = "Sacrificial Lamb",
-	description = "Supports skills which create Minions, causing your skills which can target Minions to prioritise targeting Minions from the Supported Skill.",
+	name = "SupportSacrificialLambPlayer",
+	hidden = true,
 	color = 3,
 	support = true,
 	requireSkillTypes = { SkillType.CreatesMinion, },
@@ -2359,7 +2360,7 @@ skills["SupportSacrificialLambPlayer"] = {
 	},
 	statSets = {
 		[1] = {
-			label = "Sacrificial Lamb",
+			label = "SupportSacrificialLambPlayer",
 			incrementalEffectiveness = 0.054999999701977,
 			statDescriptionScope = "gem_stat_descriptions",
 			baseFlags = {
@@ -2438,8 +2439,8 @@ skills["SupportManaLeechPlayer"] = {
 	}
 }
 skills["SupportSoulbreakerPlayer"] = {
-	name = "Soulbreaker",
-	description = "Supports skills you use yourself, causing them to trigger a Chaos Damage nova when breaking Enemy Energy Shield.",
+	name = "SupportSoulbreakerPlayer",
+	hidden = true,
 	color = 3,
 	support = true,
 	requireSkillTypes = { },
@@ -2471,7 +2472,7 @@ skills["SupportSoulbreakerPlayer"] = {
 	qualityStats = {
 	},
 	levels = {
-		[1] = { levelRequirement = 0, },
+		[1] = { critChance = 11, levelRequirement = 0, },
 		[2] = { levelRequirement = 0, },
 		[3] = { levelRequirement = 0, },
 		[4] = { levelRequirement = 0, },
@@ -2527,7 +2528,7 @@ skills["SupportSoulbreakerPlayer"] = {
 			stats = {
 			},
 			levels = {
-				[1] = { critChance = 11, actorLevel = 1, },
+				[1] = { actorLevel = 1, },
 				[2] = { actorLevel = 3.4519999027252, },
 				[3] = { actorLevel = 6.7670001983643, },
 				[4] = { actorLevel = 10.307999610901, },

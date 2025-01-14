@@ -800,7 +800,8 @@ skills["SupportForkPlayer"] = {
 	}
 }
 skills["SupportFusilladePlayer"] = {
-	name = "Fusillade",
+	name = "SupportFusilladePlayer",
+	hidden = true,
 	color = 2,
 	support = true,
 	requireSkillTypes = { SkillType.Projectile, SkillType.RangedAttack, SkillType.AND, },
@@ -814,7 +815,7 @@ skills["SupportFusilladePlayer"] = {
 	},
 	statSets = {
 		[1] = {
-			label = "Fusillade",
+			label = "SupportFusilladePlayer",
 			incrementalEffectiveness = 0.054999999701977,
 			statDescriptionScope = "gem_stat_descriptions",
 			statMap = {
