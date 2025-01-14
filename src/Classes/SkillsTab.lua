@@ -332,16 +332,24 @@ function SkillsTabClass:LoadSkill(node, skillSetId)
 		gemInstance.skillMinionItemSetCalcs = tonumber(child.attrib.skillMinionItemSetCalcs)
 		gemInstance.skillMinionSkill = tonumber(child.attrib.skillMinionSkill)
 		gemInstance.skillMinionSkillCalcs = tonumber(child.attrib.skillMinionSkillCalcs)
+		gemInstance.statSet = { }
+		gemInstance.statSetCalcs = { }
+		gemInstance.skillMinionSkillStatSetIndexLookup = { }
+		gemInstance.skillMinionSkillStatSetIndexLookupCalcs = { }
 		for _, child in ipairs(child) do
-			if child.elem == "MinionSkillIndexLookup" then
-				gemInstance.skillMinionSkillStatSetIndexLookup = { }
-				for _, child in ipairs(child) do
-					gemInstance.skillMinionSkillStatSetIndexLookup[tonumber(child.attrib.skillIndex)] = tonumber(child.attrib.statSetIndex)
+			if child.elem == "StatSetIndex" and child.attrib.grantedEffect then 
+				gemInstance.statSet[child.attrib.grantedEffect] = tonumber(child.attrib.index)
+			elseif child.elem == "StatSetCalcsIndex" and child.attrib.grantedEffect then
+				gemInstance.statSetCalcs[child.attrib.grantedEffect] = tonumber(child.attrib.index)
+			elseif child.elem == "MinionSkillIndexLookup" and child.attrib.grantedEffect then
+				gemInstance.skillMinionSkillStatSetIndexLookup[child.attrib.grantedEffect] = { }
+				for _, map in ipairs(child) do
+					gemInstance.skillMinionSkillStatSetIndexLookup[child.attrib.grantedEffect][tonumber(map.attrib.skillIndex)] = tonumber(map.attrib.statSetIndex)
 				end
-			elseif child.elem == "MinionSkillIndexLookupCalcs" then
-				gemInstance.skillMinionSkillStatSetIndexLookupCalcs = { }
-				for _, child in ipairs(child) do
-					gemInstance.skillMinionSkillStatSetIndexLookupCalcs[tonumber(child.attrib.skillIndex)] = tonumber(child.attrib.statSetIndex)
+			elseif child.elem == "MinionSkillIndexLookupCalcs" and child.attrib.grantedEffect then
+				gemInstance.skillMinionSkillStatSetIndexLookupCalcs[child.attrib.grantedEffect] = { }
+				for _, map in ipairs(child) do
+					gemInstance.skillMinionSkillStatSetIndexLookupCalcs[child.attrib.grantedEffect][tonumber(map.attrib.skillIndex)] = tonumber(map.attrib.statSetIndex)
 				end
 			end
 		end
@@ -453,25 +461,39 @@ function SkillsTabClass:Save(xml)
 					skillMinionSkill = gemInstance.skillMinionSkill and tostring(gemInstance.skillMinionSkill),
 					skillMinionSkillCalcs = gemInstance.skillMinionSkillCalcs and tostring(gemInstance.skillMinionSkillCalcs),
 				} }
-				local minionSkillStatSetIndexLookup = { elem = "MinionSkillIndexLookup", attrib = { }}
-				local minionSkillStatSetIndexLookupCalcs = { elem = "MinionSkillIndexLookupCalcs", attrib = { } }
-				if gemInstance.skillMinionSkillStatSetIndexLookup then 
-					for k,v in pairs(gemInstance.skillMinionSkillStatSetIndexLookup or { }) do
-						t_insert(minionSkillStatSetIndexLookup, { elem = "MinionSkillIndexMap",  attrib = {
-							skillIndex = tostring(k),
-							statSetIndex = tostring(v)
-						} } )
+				if gemInstance.statSet then
+					for grantedEffect, index in pairs(gemInstance.statSet) do
+						t_insert(gemInfo, { elem = "StatSetIndex", attrib = { grantedEffect = grantedEffect, index = tostring(index)}})
 					end
-					t_insert(gemInfo, minionSkillStatSetIndexLookup)
+				end
+				if gemInstance.statSetCalcs then
+					for grantedEffect, index in pairs(gemInstance.statSetCalcs) do
+						t_insert(gemInfo, { elem = "StatSetCalcsIndex", attrib = { grantedEffect = grantedEffect, index = tostring(index)}})
+					end
+				end
+				if gemInstance.skillMinionSkillStatSetIndexLookup then 
+					for grantedEffect, map in pairs(gemInstance.skillMinionSkillStatSetIndexLookup) do 
+						local minionSkillStatSetIndexLookup = { elem = "MinionSkillIndexLookup", attrib = { grantedEffect = grantedEffect }}
+						for k,v in pairs(map) do
+							t_insert(minionSkillStatSetIndexLookup, { elem = "MinionSkillIndexMap",  attrib = {
+								skillIndex = tostring(k),
+								statSetIndex = tostring(v)
+							} } )
+						end
+						t_insert(gemInfo, minionSkillStatSetIndexLookup)
+					end
 				end
 				if gemInstance.skillMinionSkillStatSetIndexLookupCalcs then 
-					for k,v in pairs(gemInstance.skillMinionSkillStatSetIndexLookupCalcs or { }) do
-						t_insert(minionSkillStatSetIndexLookupCalcs, { elem = "MinionSkillIndexMap",  attrib = {
-							skillIndex = tostring(k),
-							statSetIndex = tostring(v)
-						} } )
+					for grantedEffect, map in pairs(gemInstance.skillMinionSkillStatSetIndexLookupCalcs) do 
+						local minionSkillStatSetIndexLookupCalcs = { elem = "MinionSkillIndexLookupCalcs", attrib = { grantedEffect = grantedEffect } }
+						for k,v in pairs(map) do
+							t_insert(minionSkillStatSetIndexLookupCalcs, { elem = "MinionSkillIndexMap",  attrib = {
+								skillIndex = tostring(k),
+								statSetIndex = tostring(v)
+							} } )
+						end
+						t_insert(gemInfo, minionSkillStatSetIndexLookupCalcs)
 					end
-					t_insert(gemInfo, minionSkillStatSetIndexLookupCalcs)
 				end
 				t_insert(node, gemInfo)
 			end
@@ -1039,12 +1061,12 @@ function SkillsTabClass:ProcessSocketGroup(socketGroup)
 		if gemInstance.gemData or gemInstance.grantedEffect then
 			gemInstance.new = nil
 			local grantedEffect = gemInstance.grantedEffect or gemInstance.gemData.grantedEffect
-			if gemInstance.gemData and gemInstance.gemData.reqStr >= 50 then
+			if grantedEffect.color == 1 then
 				gemInstance.color = colorCodes.STRENGTH
-			elseif gemInstance.gemData and gemInstance.gemData.reqInt >= 50 then
-				gemInstance.color = colorCodes.INTELLIGENCE
-			elseif gemInstance.gemData and gemInstance.gemData.reqDex >= 50 then
+			elseif grantedEffect.color == 2 then
 				gemInstance.color = colorCodes.DEXTERITY
+			elseif grantedEffect.color == 3 then
+				gemInstance.color = colorCodes.INTELLIGENCE
 			else
 				gemInstance.color = colorCodes.NORMAL
 			end
@@ -1055,9 +1077,9 @@ function SkillsTabClass:ProcessSocketGroup(socketGroup)
 			calcLib.validateGemLevel(gemInstance)
 			if gemInstance.gemData then
 				gemInstance.reqLevel = grantedEffect.levels[gemInstance.level].levelRequirement
-				gemInstance.reqStr = calcLib.getGemStatRequirement(gemInstance.reqLevel, grantedEffect.support, gemInstance.gemData.reqStr)
-				gemInstance.reqDex = calcLib.getGemStatRequirement(gemInstance.reqLevel, grantedEffect.support, gemInstance.gemData.reqDex)
-				gemInstance.reqInt = calcLib.getGemStatRequirement(gemInstance.reqLevel, grantedEffect.support, gemInstance.gemData.reqInt)
+				gemInstance.reqStr = calcLib.getGemStatRequirement(gemInstance.reqLevel, gemInstance.gemData.reqStr)
+				gemInstance.reqDex = calcLib.getGemStatRequirement(gemInstance.reqLevel, gemInstance.gemData.reqDex)
+				gemInstance.reqInt = calcLib.getGemStatRequirement(gemInstance.reqLevel, gemInstance.gemData.reqInt)
 			end
 		end
 	end

@@ -58,6 +58,7 @@ function calcs.initModDB(env, modDB)
 	modDB:NewMod("ShockStacksMax", "BASE", 1, "Base")
 	modDB:NewMod("ScorchStacksMax", "BASE", 1, "Base")
 	modDB:NewMod("MovementSpeed", "INC", -30, "Base", { type = "Condition", var = "Maimed" })
+	modDB:NewMod("Evasion", "INC", -15, "Base", { type = "Condition", var = "Maimed" })
 	modDB:NewMod("DamageTaken", "INC", 10, "Base", ModFlag.Attack, { type = "Condition", var = "Intimidated"})
 	modDB:NewMod("DamageTaken", "INC", 10, "Base", ModFlag.Attack, { type = "Condition", var = "Intimidated", neg = true}, { type = "Condition", var = "Party:Intimidated"})
 	modDB:NewMod("DamageTaken", "INC", 10, "Base", ModFlag.Spell, { type = "Condition", var = "Unnerved"})
@@ -1123,7 +1124,7 @@ function calcs.initEnv(build, mode, override, specEnv)
 	end
 
 	-- Merge modifiers for allocated passives
-	env.modDB:AddList(nodesModsList)
+	env.modDB:AddList(calcs.buildModListForNodeList(env, env.allocNodes, true))
 
 	if not override or (override and not override.extraJewelFuncs) then
 		override = override or {}
@@ -1444,11 +1445,10 @@ function calcs.initEnv(build, mode, override, specEnv)
 									srcInstance = gemInstance,
 									gemData = gemInstance.gemData,
 								}
-								if not activeEffect.srcInstance.statSet then
-									activeEffect.srcInstance.statSet = { statSet = grantedEffect.statSets[1] }
-								end
-								if not activeEffect.srcInstance.statSetCalcs then
-									activeEffect.srcInstance.statSetCalcs = { statSet = grantedEffect.statSets[1] }
+								if env.mode == "CALCS" then
+									activeEffect.statSetCalcs = { index = gemInstance.statSetCalcs and gemInstance.statSetCalcs[grantedEffect.id] or 1}
+								else
+									activeEffect.statSet = { index = gemInstance.statSet and gemInstance.statSet[grantedEffect.id] or 1}
 								end
 								if gemInstance.gemData then
 									local playerItems = env.player.itemList
@@ -1613,14 +1613,8 @@ function calcs.initEnv(build, mode, override, specEnv)
 				level = 1,
 				quality = 0,
 				enabled = true,
-				srcInstance = {
-					statSet = {
-						statSet = env.data.skills.MeleeUnarmedPlayer.statSets[1]
-					},
-					statSetCalcs = {
-						statSet = env.data.skills.MeleeUnarmedPlayer.statSets[1]
-					}
-				}
+				statSet = { index = 1},
+				statSetCalcs = { index = 1}
 			}
 			env.player.mainSkill = calcs.createActiveSkill(defaultEffect, { }, env, env.player)
 			t_insert(env.player.activeSkillList, env.player.mainSkill)

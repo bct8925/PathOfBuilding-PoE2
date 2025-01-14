@@ -68,6 +68,7 @@ local skills, mod, flag, skill = ...
 #skillEnd
 
 #skill MetaCastOnBlockPlayer
+fromItem = true,
 #startSets
 #set MetaCastOnBlockPlayer
 #flags
@@ -75,6 +76,7 @@ local skills, mod, flag, skill = ...
 #skillEnd
 
 #skill SupportMetaCastOnBlockPlayer
+fromItem = true,
 #startSets
 #set SupportMetaCastOnBlockPlayer
 #flags
@@ -82,6 +84,7 @@ local skills, mod, flag, skill = ...
 #skillEnd
 
 #skill MetaCastOnMeleeKillPlayer
+fromItem = true,
 #startSets
 #set MetaCastOnMeleeKillPlayer
 #flags
@@ -89,6 +92,7 @@ local skills, mod, flag, skill = ...
 #skillEnd
 
 #skill SupportMetaCastOnMeleeKillPlayer
+fromItem = true,
 #startSets
 #set SupportMetaCastOnMeleeKillPlayer
 #flags
@@ -96,6 +100,7 @@ local skills, mod, flag, skill = ...
 #skillEnd
 
 #skill MetaCastOnMeleeStunPlayer
+fromItem = true,
 #startSets
 #set MetaCastOnMeleeStunPlayer
 #flags
@@ -103,6 +108,7 @@ local skills, mod, flag, skill = ...
 #skillEnd
 
 #skill SupportMetaCastOnMeleeStunPlayer
+fromItem = true,
 #startSets
 #set SupportMetaCastOnMeleeStunPlayer
 #flags
@@ -149,26 +155,26 @@ local skills, mod, flag, skill = ...
 #startSets
 #set EarthquakePlayer
 #flags attack melee area duration
-	statMap = {
-		["active_skill_base_area_of_effect_radius"] = {
-			skill("radius", nil),
-		},
-		["skill_jagged_ground_base_duration_ms"] = {
-			skill("duration", nil),
-			div = 1000,
-		},
+statMap = {
+	["active_skill_base_area_of_effect_radius"] = {
+		skill("radius", nil),
 	},
+	["skill_jagged_ground_base_duration_ms"] = {
+		skill("duration", nil),
+		div = 1000,
+	},
+},
 #mods
 #set EarthquakeAftershockPlayer
 #flags attack melee area
-	statMap = {
-		["jagged_ground_effect_+%"] = {
-			mod("Damage", "MORE", nil, 0, 0),
-		},
-		["active_skill_base_tertiary_area_of_effect_radius"] = {
-			skill("radius", nil),
-		},
+statMap = {
+	["jagged_ground_effect_+%"] = {
+		mod("Damage", "MORE", nil, 0, 0),
 	},
+	["active_skill_base_tertiary_area_of_effect_radius"] = {
+		skill("radius", nil),
+	},
+},
 #baseMod skill("showAverage", true)
 #mods
 #skillEnd

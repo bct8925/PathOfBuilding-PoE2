@@ -688,7 +688,7 @@ function PassiveTreeViewClass:Draw(build, viewPort, inputEvents)
 		end
 
 		-- Draw mastery effect artwork
-		if effect then
+		if effect and not launch.devModeAlt then
 			if node.targetSize and node.targetSize["effect"] then
 				effect.width = node.targetSize["effect"].width
 				effect.height = node.targetSize["effect"].height
@@ -722,12 +722,14 @@ function PassiveTreeViewClass:Draw(build, viewPort, inputEvents)
 				self:DrawAsset(base, scrX, scrY, scale)
 			else
 
-				if  not node.alloc then
+				if not node.alloc and not launch.devModeAlt then
 					self:LessLuminance()
 				end
 
 				self:DrawAsset(base, scrX, scrY, scale)
-				SetDrawColor(1, 1, 1, 1);
+				if not node.alloc and not launch.devModeAlt then
+					SetDrawColor(1, 1, 1, 1);
+				end
 			end
 		end
 
@@ -778,7 +780,7 @@ function PassiveTreeViewClass:Draw(build, viewPort, inputEvents)
 				overlayImage.height = node.targetSize["overlay"].height
 			end
 
-			if not node.alloc and (node.type == "AscendClassStart" or node.type == "ClassStart") then
+			if not node.alloc and (node.type == "AscendClassStart" or node.type == "ClassStart") and not launch.devModeAlt then
 				self:LessLuminance()
 			end
 			self:DrawAsset(overlayImage, scrX, scrY, scale)

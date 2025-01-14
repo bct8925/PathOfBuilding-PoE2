@@ -70,6 +70,27 @@ function buildMode:Init(dbFileName, buildName, buildXML, convertBuild, importLin
 
 	self.abortSave = true
 
+	-- calculate atcs Table based on data.questRewards
+	self.acts = { { level = 1 , questPoints = 0 } }
+	for _, quest in ipairs(data.questRewards) do
+		if not quest.questPoints then
+			goto nextquest
+		end
+		local act = quest.Act + (quest.Type == "Cruel" and 3 or 0) + 1
+		if not self.acts[act] then
+			self.acts[act] = {
+				level = quest.AreaLevel,
+				questPoints = quest.questPoints + self.acts[act - 1].questPoints,
+			}
+		else
+			self.acts[act].questPoints = self.acts[act].questPoints + quest.questPoints
+			self.acts[act].level = m_max(self.acts[act].level, quest.AreaLevel)
+		end
+		:: nextquest ::
+	end
+	self.maxActs = #self.acts
+	self.maxWeaponSets = self.acts[self.maxActs].questPoints
+
 	wipeTable(self.controls)
 
 	local miscTooltip = new("Tooltip")
@@ -428,7 +449,7 @@ function buildMode:Init(dbFileName, buildName, buildXML, convertBuild, importLin
 		local mainSocketGroup = self.skillsTab.socketGroupList[self.mainSocketGroup]
 		local srcInstance = mainSocketGroup.displaySkillList[mainSocketGroup.mainActiveSkill].activeEffect.srcInstance
 		srcInstance.statSet = srcInstance.statSet or { }
-		srcInstance.statSet.index = index
+		srcInstance.statSet[value.grantedEffectId] = index
 		self.modFlag = true
 		self.buildFlag = true
 	end)
@@ -506,7 +527,8 @@ function buildMode:Init(dbFileName, buildName, buildXML, convertBuild, importLin
 		local mainSocketGroup = self.skillsTab.socketGroupList[self.mainSocketGroup]
 		local srcInstance = mainSocketGroup.displaySkillList[mainSocketGroup.mainActiveSkill].activeEffect.srcInstance
 		srcInstance.skillMinionSkillStatSetIndexLookup = srcInstance.skillMinionSkillStatSetIndexLookup or { }
-		srcInstance.skillMinionSkillStatSetIndexLookup[srcInstance.skillMinionSkill] = index
+		srcInstance.skillMinionSkillStatSetIndexLookup[value.grantedEffectId] = srcInstance.skillMinionSkillStatSetIndexLookup[value.grantedEffectId] or { }
+		srcInstance.skillMinionSkillStatSetIndexLookup[value.grantedEffectId][srcInstance.skillMinionSkill] = index
 		self.modFlag = true
 		self.buildFlag = true
 	end)
@@ -796,10 +818,14 @@ end
 function buildMode:EstimatePlayerProgress()
 	local PointsUsed, AscUsed, SecondaryAscUsed, socketsUsed, weaponSet1Used, weaponSet2Used = self.spec:CountAllocNodes()
 	local extra = self.calcsTab.mainOutput and self.calcsTab.mainOutput.ExtraPoints or 0
-	local maxWeaponSets = self.calcsTab.mainOutput and self.calcsTab.mainOutput.WeaponSetPassivePoints or 0
+	local maxWeaponSets = self.maxWeaponSets
 	local extraWeaponSets = self.calcsTab.mainOutput and self.calcsTab.mainOutput.PassivePointsToWeaponSetPoints or 0
-	local usedMax, ascMax, secondaryAscMax = 100 - (maxWeaponSets > 0 and 1 or 0) + extra + maxWeaponSets, 8, 8
-	local level = m_max(1, m_min( 1 + PointsUsed - maxWeaponSets - extra - math.max(weaponSet1Used, weaponSet2Used), 100))
+	local usedMax, ascMax, secondaryAscMax, level, act = 99 + maxWeaponSets + extra, 8, 8, 1, 0
+
+	repeat
+		act = act + 1
+		level = m_min(m_max(PointsUsed + 1 -  self.acts[act].questPoints - extra - m_min(weaponSet1Used, weaponSet2Used), self.acts[act].level), 100)
+	until act == self.maxActs or level <= self.acts[act + 1].level
 	
 	if self.characterLevelAutoMode and self.characterLevel ~= level then
 		self.characterLevel = level
@@ -816,7 +842,8 @@ function buildMode:EstimatePlayerProgress()
 		or level < 90 and "\nLabyrinth: Uber Lab"
 		or ""
 	
-	if PointsUsed > usedMax then InsertIfNew(self.controls.warnings.lines, "You have too many passive points allocated") end
+	local normalPassives = PointsUsed - m_min(weaponSet1Used, weaponSet2Used)
+	if normalPassives > usedMax then InsertIfNew(self.controls.warnings.lines, "You have too many passive points allocated") end
 	if AscUsed > ascMax then InsertIfNew(self.controls.warnings.lines, "You have too many ascendancy points allocated") end
 	if SecondaryAscUsed > secondaryAscMax then InsertIfNew(self.controls.warnings.lines, "You have too many secondary ascendancy points allocated") end
 
@@ -844,17 +871,17 @@ function buildMode:EstimatePlayerProgress()
 		))
 	end
 	
-	self.Act = "Endgame"
+	self.Act = act == self.maxActs and "Endgame" or "Act " .. act
 	
 	return string.format(
-		"%s%3d / %3d %s%2d / %2d %s%2d / %2d   %s%d / %d", 
-		PointsUsed > usedMax and colorCodes.NEGATIVE or "^7", 
-		PointsUsed, usedMax,
+		"%s%3d / %3d %s%2d / %2d %s%2d / %2d   %s%d / %d",
+		normalPassives > usedMax and colorCodes.NEGATIVE or "^7",
+		normalPassives, usedMax,
 		colorCodes.NEGATIVE,
 		weaponSet1Used, maxWeaponSets + extraWeaponSets,
 		colorCodes.POSITIVE,
 		weaponSet2Used, maxWeaponSets + extraWeaponSets,
-		AscUsed > ascMax and colorCodes.NEGATIVE or "^7", 
+		AscUsed > ascMax and colorCodes.NEGATIVE or "^7",
 		AscUsed, ascMax
 		), 
 		string.format(
@@ -948,7 +975,7 @@ function buildMode:Save(xml)
 	end
 	local addedStatNames = { }
 	for index, statData in ipairs(self.displayStats) do
-		if not statData.flag or self.calcsTab.mainEnv.player.mainSkill.activeEffect.srcInstance.statSet.skillFlags[statData.flag] then
+		if not statData.flag or self.calcsTab.mainEnv.player.mainSkill.activeEffect.statSet.skillFlags[statData.flag] then
 			local statName = statData.stat and statData.stat..(statData.childStat or "")
 			if statName and not addedStatNames[statName] then
 				if statData.stat == "SkillDPS" then
@@ -1388,9 +1415,9 @@ function buildMode:RefreshSkillSelectControls(controls, mainGroup, suffix)
 			if activeEffect then
 				wipeTable(controls.statSet.list)
 				for i, statSet in ipairs(activeEffect.grantedEffect.statSets) do
-					t_insert(controls.statSet.list, { val = i, label = statSet.label, statSet = statSet })
+					t_insert(controls.statSet.list, { val = i, label = statSet.label, grantedEffectId = activeEffect.grantedEffect.id })
 				end
-				controls.statSet.selIndex = activeEffect.srcInstance["statSet"..suffix] and activeEffect.srcInstance["statSet"..suffix].index or 1
+				controls.statSet.selIndex = activeEffect.srcInstance["statSet"..suffix] and activeEffect.srcInstance["statSet"..suffix][activeEffect.grantedEffect.id] or 1
 				controls.statSet.enabled = #controls.statSet.list > 1
 				controls.statSet.shown = true
 				if activeEffect.grantedEffect.parts and #activeEffect.grantedEffect.parts > 1 then
@@ -1405,16 +1432,17 @@ function buildMode:RefreshSkillSelectControls(controls, mainGroup, suffix)
 						controls.mainSkillStageCount.buf = tostring(activeEffect.srcInstance["skillStageCount"..suffix] or activeEffect.grantedEffect.parts[controls.mainSkillPart.selIndex].stagesMin or 1)
 					end
 				end
-				
-				if activeSkill.activeEffect.srcInstance.statSet.skillFlags.mine then
+				activeSkill.activeEffect.statSet = activeSkill.activeEffect.statSet or { }
+				activeSkill.activeEffect.statSet.skillFlags = activeSkill.activeEffect.statSet.skillFlags or { }
+				if activeSkill.activeEffect.statSet.skillFlags.mine then
 					controls.mainSkillMineCount.shown = true
 					controls.mainSkillMineCount.buf = tostring(activeEffect.srcInstance["skillMineCount"..suffix] or "")
 				end
-				if activeSkill.activeEffect.srcInstance.statSet.skillFlags.multiStage and not (activeEffect.grantedEffect.parts and #activeEffect.grantedEffect.parts > 1) then
+				if activeSkill.activeEffect.statSet.skillFlags.multiStage and not (activeEffect.grantedEffect.parts and #activeEffect.grantedEffect.parts > 1) then
 					controls.mainSkillStageCount.shown = true
 					controls.mainSkillStageCount.buf = tostring(activeEffect.srcInstance["skillStageCount"..suffix] or activeSkill.skillData.stagesMin or 1)
 				end
-				if not activeSkill.activeEffect.srcInstance.statSet.skillFlags.disable and (activeEffect.grantedEffect.minionList or (activeSkill.minionList and activeSkill.minionList[1])) then
+				if not activeSkill.activeEffect.statSet.skillFlags.disable and (activeEffect.grantedEffect.minionList or (activeSkill.minionList and activeSkill.minionList[1])) then
 					wipeTable(controls.mainSkillMinion.list)
 					if activeEffect.grantedEffect.minionHasItemSet then
 						for _, itemSetId in ipairs(self.itemsTab.itemSetOrderList) do
@@ -1447,10 +1475,10 @@ function buildMode:RefreshSkillSelectControls(controls, mainGroup, suffix)
 						controls.mainSkillMinionSkill.enabled = #controls.mainSkillMinionSkill.list > 1
 						wipeTable(controls.mainSkillMinionSkillStatSet.list)
 						for _, statSet in ipairs(activeSkill.minion.activeSkillList[controls.mainSkillMinionSkill.selIndex].activeEffect.grantedEffect.statSets) do
-							t_insert(controls.mainSkillMinionSkillStatSet.list, statSet.label)
+							t_insert(controls.mainSkillMinionSkillStatSet.list, {label =  statSet.label, grantedEffectId = activeEffect.grantedEffect.id})
 						end
 						local minionStatSetIndexLookup = activeEffect.srcInstance["skillMinionSkillStatSetIndexLookup"..suffix]
-						controls.mainSkillMinionSkillStatSet.selIndex = minionStatSetIndexLookup and minionStatSetIndexLookup[controls.mainSkillMinionSkill.selIndex] or 1
+						controls.mainSkillMinionSkillStatSet.selIndex = minionStatSetIndexLookup and minionStatSetIndexLookup[activeEffect.grantedEffect.id] and minionStatSetIndexLookup[activeEffect.grantedEffect.id][controls.mainSkillMinionSkill.selIndex] or 1
 						controls.mainSkillMinionSkillStatSet.shown = true
 						controls.mainSkillMinionSkillStatSet.enabled = #controls.mainSkillMinionSkillStatSet.list > 1
 					else
@@ -1488,7 +1516,7 @@ end
 function buildMode:AddDisplayStatList(statList, actor)
 	local statBoxList = self.controls.statBox.list
 	for index, statData in ipairs(statList) do
-		if not statData.flag or actor.mainSkill.activeEffect.srcInstance.statSet.skillFlags[statData.flag] then
+		if not statData.flag or actor.mainSkill.activeEffect.statSet.skillFlags[statData.flag] then
 			local labelColor = "^7"
 			if statData.color then
 				labelColor = statData.color
@@ -1647,7 +1675,7 @@ function buildMode:RefreshStatList()
 		t_insert(statBoxList, { height = 10 })
 		t_insert(statBoxList, { height = 18, "^7Player:" })
 	end
-	if self.calcsTab.mainEnv.player.mainSkill.activeEffect.srcInstance.statSet.skillFlags.disable then
+	if self.calcsTab.mainEnv.player.mainSkill.activeEffect.statSet.skillFlags.disable then
 		t_insert(statBoxList, { height = 16, "^7Skill disabled:" })
 		t_insert(statBoxList, { height = 14, align = "CENTER_X", x = 140, self.calcsTab.mainEnv.player.mainSkill.disableReason })
 	end
@@ -1658,7 +1686,7 @@ end
 function buildMode:CompareStatList(tooltip, statList, actor, baseOutput, compareOutput, header, nodeCount)
 	local count = 0
 	for _, statData in ipairs(statList) do
-		if statData.stat and (not statData.flag or actor.mainSkill.activeEffect.srcInstance.statSet.skillFlags[statData.flag]) and not statData.childStat and statData.stat ~= "SkillDPS" then
+		if statData.stat and (not statData.flag or actor.mainSkill.activeEffect.statSet.skillFlags[statData.flag]) and not statData.childStat and statData.stat ~= "SkillDPS" then
 			local statVal1 = compareOutput[statData.stat] or 0
 			local statVal2 = baseOutput[statData.stat] or 0
 			local diff = statVal1 - statVal2

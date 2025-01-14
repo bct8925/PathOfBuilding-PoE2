@@ -20,26 +20,27 @@ local fireHitTaken = {
 local chaosHitTaken = {
 	"DamageTaken", "ChaosDamageTaken", "ChaosResist", "CurseEffectOnSelf"
 }
-local physicalConvert = { 
-	"SkillPhysicalDamageConvertToLightning", "SkillPhysicalDamageConvertToCold", "SkillPhysicalDamageConvertToFire", "SkillPhysicalDamageConvertToChaos", 
-	"PhysicalDamageConvertToLightning", "PhysicalDamageConvertToCold", "PhysicalDamageConvertToFire", "PhysicalDamageConvertToChaos", "NonChaosDamageConvertToChaos", 
-	"PhysicalDamageGainAsLightning", "PhysicalDamageGainAsCold", "PhysicalDamageGainAsFire", "PhysicalDamageGainAsChaos", "NonChaosDamageGainAsChaos" 
-}
-local lightningConvert = {
-	"SkillLightningDamageConvertToCold", "SkillLightningDamageConvertToFire", "SkillLightningDamageConvertToChaos",
-	"LightningDamageConvertToCold", "LightningDamageConvertToFire", "LightningDamageConvertToChaos", "ElementalDamageConvertToChaos", "NonChaosDamageConvertToChaos", 
-	"LightningDamageGainAsCold", "LightningDamageGainAsFire", "LightningDamageGainAsChaos", "ElementalDamageGainAsChaos", "NonChaosDamageGainAsChaos"
-}
-local coldConvert = { 
-	"SkillColdDamageConvertToFire", "SkillColdDamageConvertToChaos",
-	"ColdDamageConvertToFire", "ColdDamageConvertToChaos", "ElementalDamageConvertToChaos", "NonChaosDamageConvertToChaos",
-	"ColdDamageGainAsFire", "ColdDamageGainAsChaos", "ElementalDamageGainAsChaos", "NonChaosDamageGainAsChaos"
-}
-local fireConvert = {
-	"SkillFireDamageConvertToChaos",
-	"FireDamageConvertToChaos", "ElementalDamageConvertToChaos", "NonChaosDamageConvertToChaos", 
-	"FireDamageGainAsChaos", "ElementalDamageGainAsChaos", "NonChaosDamageGainAsChaos"
-}
+
+local function fillConvert(damageType)
+	local convert = {}
+	for _, type in ipairs({ "Physical", "Lightning", "Cold", "Fire", "Chaos" }) do
+		table.insert(convert, "Skill"..damageType.."DamageConvertTo"..type)
+		table.insert(convert, damageType.."DamageConvertTo"..type)
+		table.insert(convert, damageType.."DamageGainAs"..type)
+
+		if type ~= "Chaos" and type ~= "Physical" then
+			table.insert(convert, "ElementalDamageConvertTo"..type)
+			table.insert(convert, "ElementalDamageGainAs"..type)
+		end
+	end
+	return convert
+end
+
+local physicalConvert = fillConvert("Physical")
+local lightningConvert = fillConvert("Lightning")
+local coldConvert = fillConvert("Cold")
+local fireConvert = fillConvert("Fire")
+local chaosConvert = fillConvert("Chaos")
 
 -- format {width, id, group, color, subsection:{default hidden, label, data:{}}}
 return {
@@ -165,6 +166,7 @@ return {
 		},
 		{ format = "{0:output:ChaosMin} to {0:output:ChaosMax}", 
 			{ breakdown = "Chaos" }, 
+			{ label = "Conversions", modType = "BASE", cfg = "skill", modName = chaosConvert }, 
 		},
 	},
 	{ label = "Skill Average Hit", notFlag = "attack", { format = "{1:output:AverageHit}", { breakdown = "AverageHit" }, }, },
@@ -236,6 +238,7 @@ return {
 		},
 		{ format = "{0:output:MainHand.ChaosMin} to {0:output:MainHand.ChaosMax}", 
 			{ breakdown = "MainHand.Chaos" }, 
+			{ label = "Conversions", modType = "BASE", cfg = "weapon1", modName = chaosConvert },
 		},
 	},
 	{ label = "MH Average Hit", bgCol = colorCodes.MAINHANDBG, flag = "weapon1Attack", { format = "{1:output:MainHand.AverageHit}", { breakdown = "MainHand.AverageHit" }, }, },
@@ -307,6 +310,7 @@ return {
 		},
 		{ format = "{0:output:OffHand.ChaosMin} to {0:output:OffHand.ChaosMax}", 
 			{ breakdown = "OffHand.Chaos" },
+			{ label = "Conversions", modType = "BASE", cfg = "weapon2", modName = chaosConvert }, 
 		},
 	},
 	{ label = "OH Average Hit", bgCol = colorCodes.OFFHANDBG, flag = "weapon2Attack", { format = "{1:output:OffHand.AverageHit}", { breakdown = "OffHand.AverageHit" }, }, },
@@ -640,6 +644,7 @@ return {
 	{ label = "Skill Duration", flag = "duration", haveOutput = "Duration", { format = "{3:output:Duration}s", { breakdown = "Duration" }, }, },
 	{ label = "Secondary Duration", flag = "duration", haveOutput = "DurationSecondary", { format = "{3:output:DurationSecondary}s", { breakdown = "DurationSecondary" }, }, },
 	{ label = "Tertiary Duration", flag = "duration", haveOutput = "DurationTertiary", { format = "{3:output:DurationTertiary}s", { breakdown = "DurationTertiary" }, }, },
+	{ label = "Perfect Timing", haveOutput = "PerfectTiming", { format = "{3:output:PerfectTiming}s", { breakdown = "PerfectTiming" }, { modName = "PerfectTiming", cfg = "skill" }}, },
 	{ label = "Aura Duration", haveOutput = "AuraDuration", { format = "{3:output:AuraDuration}s", { breakdown = "AuraDuration" }, }, },
 	{ label = "Reserve Duration", haveOutput = "ReserveDuration", { format = "{3:output:ReserveDuration}s", { breakdown = "ReserveDuration" }, }, },
 	{ label = "Soul Gain Prevent.", haveOutput = "SoulGainPreventionDuration", { format = "{3:output:SoulGainPreventionDuration}s", { breakdown = "SoulGainPreventionDuration" }, }, },
@@ -654,6 +659,7 @@ return {
 	{ label = "Pierce Count", haveOutput = "PierceCount", { format = "{output:PierceCountString}", { modName = { "CannotPierce", "PierceCount", "PierceAllTargets" }, cfg = "skill" }, }, },
 	{ label = "Fork Count", haveOutput = "ForkCountMax", { format = "{output:ForkCountString}", { modName = { "CannotFork", "ForkCountMax" }, cfg = "skill" }, }, },
 	{ label = "Max Chain Count", haveOutput = "ChainMax", { format = "{output:ChainMaxString}", { modName = { "CannotChain", "ChainCountMax", "NoAdditionalChains" }, cfg = "skill" }, }, },
+	{ label = "Terrain Chain", haveOutput = "TerrainChain", { format = "{output:TerrainChain}%", { modName = { "TerrainChainChance", "NoAdditionalChains" }, cfg = "skill" }, }, },
 	{ label = "Split Count", haveOutput = "SplitCountString", { format = "{output:SplitCountString}", 
 		{ label = "Player modifiers", modName = { "CannotSplit", "SplitCount", "AdditionalProjectilesAddSplitsInstead", "AdditionalChainsAddSplitsInstead" }, cfg = "skill" },
 		{ label = "Enemy modifiers", modName = { "SelfSplitCount" }, enemy = true, cfg = "skill" }, 
@@ -678,7 +684,7 @@ return {
 	}, },
 	{ label = "Spirit Reserve Mod", haveOutput = "SpiritReservedMod", { format = "x {2:output:SpiritReservedMod}",
 		{ breakdown = "SpiritReservedMod" },
-		{ modName = { "SpiritReserved", "Reserved", "SupportManaMultiplier", "SpiritReservationEfficiency", "ReservationEfficiency"  }, cfg = "skill"}
+		{ modName = { "SpiritReserved", "Reserved", "SupportManaMultiplier", "SpiritReservationEfficiency", "ReservationEfficiency", "ExtraSpirit"  }, cfg = "skill"}
 	}, },
 	{ label = "Curse Effect Mod", haveOutput = "CurseEffectMod", { format = "x {2:output:CurseEffectMod}",
 		{ breakdown = "CurseEffectMod" },
