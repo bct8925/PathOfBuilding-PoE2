@@ -1091,7 +1091,6 @@ function ItemClass:BuildAndParseRaw()
 end
 
 -- Rebuild rune modifiers using the item's runes
--- This doesn't get the mod order correctly.
 function ItemClass:UpdateRunes()
 	wipeTable(self.runeModLines)
 	local statOrder = {}
