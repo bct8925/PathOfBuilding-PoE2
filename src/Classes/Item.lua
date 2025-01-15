@@ -663,15 +663,6 @@ function ItemClass:ParseRaw(raw, rarity, highQuality)
 						self.affixes = (self.base.subType and data.itemMods[self.base.type..self.base.subType])
 								or data.itemMods[self.base.type]
 								or data.itemMods.Item
-						if self.base.flask then
-							if self.base.utility_flask then
-								self.enchantments = data.enchantments["UtilityFlask"]
-							else
-								self.enchantments = data.enchantments["Flask"]
-							end
-						else
-							self.enchantments = data.enchantments[self.base.type]
-						end
 						self.corruptible = self.base.type ~= "Flask" and self.base.type ~= "Charm" and self.base.type ~= "Rune" and self.base.type ~= "SoulCore"
 						self.clusterJewel = data.clusterJewels and data.clusterJewels.jewels[self.baseName]
 						self.requirements.str = self.base.req.str or 0
@@ -729,17 +720,6 @@ function ItemClass:ParseRaw(raw, rarity, highQuality)
 					self.suffixes.limit = (self.suffixes.limit or 0) + (tonumber(lineLower:match("%+(%d+) suffix modifiers? allowed")) or 0) - (tonumber(lineLower:match("%-(%d+) suffix modifiers? allowed")) or 0)
 				elseif lineLower == "this item can be anointed by cassia" then
 					self.canBeAnointed = true
-				elseif lineLower == "can have a second enchantment modifier" then
-					self.canHaveTwoEnchants = true
-				elseif lineLower == "can have 1 additional enchantment modifiers" then
-					self.canHaveTwoEnchants = true
-				elseif lineLower == "can have 2 additional enchantment modifiers" then
-					self.canHaveTwoEnchants = true
-					self.canHaveThreeEnchants = true
-				elseif lineLower == "can have 3 additional enchantment modifiers" then
-					self.canHaveTwoEnchants = true
-					self.canHaveThreeEnchants = true
-					self.canHaveFourEnchants = true
 				end
 
 				local modLines
