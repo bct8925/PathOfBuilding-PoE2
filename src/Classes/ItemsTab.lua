@@ -1582,12 +1582,18 @@ function ItemsTabClass:UpdateAffixControls()
 end
 
 -- build rune mod list for armour and weapons
-local runeArmourModLines = { { name = "None", label = "None" } }
-local runeWeaponModLines = { { name = "None", label = "None" } }
+local runeArmourModLines = { { name = "None", label = "None", order = -1 } }
+local runeWeaponModLines = { { name = "None", label = "None", order = -1 } }
 for name, modLines in pairs(data.itemMods.Runes) do
-	t_insert(runeArmourModLines, { name = name, label = modLines.armour[1]})
-	t_insert(runeWeaponModLines, { name = name, label = modLines.weapon[1]})
+	t_insert(runeArmourModLines, { name = name, label = modLines.armour[1], order = modLines.armour.statOrder[1]})
+	t_insert(runeWeaponModLines, { name = name, label = modLines.weapon[1], order = modLines.weapon.statOrder[1]})
 end
+table.sort(runeArmourModLines, function(a, b)
+	return a.order < b.order
+end)
+table.sort(runeWeaponModLines, function(a, b)
+	return a.order < b.order
+end)
 -- Update rune selection controls
 function ItemsTabClass:UpdateRuneControls()
 	local item = self.displayItem
