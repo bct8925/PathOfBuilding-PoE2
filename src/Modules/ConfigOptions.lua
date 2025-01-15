@@ -1701,11 +1701,11 @@ Huge sets the radius to 11.
 			modList:NewMod("WarcryPower", "BASE", 20, "Boss")
 			modList:NewMod("Multiplier:EnemyPower", "BASE", 20, "Boss")
 
-			local defaultEleResist = 40
+			local defaultEleResist = 30
 			build.configTab.varControls['enemyLightningResist']:SetPlaceholder(defaultEleResist, true)
 			build.configTab.varControls['enemyColdResist']:SetPlaceholder(defaultEleResist, true)
 			build.configTab.varControls['enemyFireResist']:SetPlaceholder(defaultEleResist, true)
-			build.configTab.varControls['enemyChaosResist']:SetPlaceholder(25, true)
+			build.configTab.varControls['enemyChaosResist']:SetPlaceholder(0, true)
 
 			local defaultLevel = 83
 			build.configTab.varControls['enemyLevel']:SetPlaceholder("", true)
@@ -1740,7 +1740,7 @@ Huge sets the radius to 11.
 			build.configTab.varControls['enemyLightningResist']:SetPlaceholder(defaultEleResist, true)
 			build.configTab.varControls['enemyColdResist']:SetPlaceholder(defaultEleResist, true)
 			build.configTab.varControls['enemyFireResist']:SetPlaceholder(defaultEleResist, true)
-			build.configTab.varControls['enemyChaosResist']:SetPlaceholder(30, true)
+			build.configTab.varControls['enemyChaosResist']:SetPlaceholder(0, true)
 
 			local defaultLevel = 84
 			build.configTab.varControls['enemyLevel']:SetPlaceholder(defaultLevel, true)
@@ -1774,7 +1774,7 @@ Huge sets the radius to 11.
 			build.configTab.varControls['enemyLightningResist']:SetPlaceholder(defaultEleResist, true)
 			build.configTab.varControls['enemyColdResist']:SetPlaceholder(defaultEleResist, true)
 			build.configTab.varControls['enemyFireResist']:SetPlaceholder(defaultEleResist, true)
-			build.configTab.varControls['enemyChaosResist']:SetPlaceholder(30, true)
+			build.configTab.varControls['enemyChaosResist']:SetPlaceholder(0, true)
 
 			local defaultLevel = 85
 			build.configTab.varControls['enemyLevel']:SetPlaceholder(defaultLevel, true)
