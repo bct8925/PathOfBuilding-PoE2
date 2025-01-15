@@ -1097,8 +1097,9 @@ end
 function ItemClass:UpdateRunes()
 	wipeTable(self.runeModLines)
 	local statOrder = {}
-	for _, name in ipairs(self.runes) do
-		if name ~= "None" then
+	for i = 1, self.itemSocketCount do
+		local name = self.runes[i]
+		if name and name ~= "None" then
 			local mod = self.base.weapon and data.itemMods.Runes[name].weapon or self.base.armour and data.itemMods.Runes[name].armour or { }
 			for i, line in ipairs(mod) do
 				local order = mod.statOrder[i]
