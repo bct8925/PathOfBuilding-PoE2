@@ -1549,6 +1549,9 @@ function ItemClass:BuildModList()
 	for _, modLine in ipairs(self.enchantModLines) do
 		processModLine(modLine)
 	end
+	for _, modLine in ipairs(self.runeModLines) do
+		processModLine(modLine)
+	end
 	for _, modLine in ipairs(self.classRequirementModLines) do
 		processModLine(modLine)
 	end
