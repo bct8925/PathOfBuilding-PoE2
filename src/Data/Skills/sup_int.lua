@@ -113,6 +113,11 @@ skills["SupportFasterCastPlayer"] = {
 			baseEffectiveness = 0,
 			incrementalEffectiveness = 0.092720001935959,
 			statDescriptionScope = "gem_stat_descriptions",
+			statMap = {
+				["support_faster_casting_cast_speed_+%_final"] = {
+					mod("Speed", "MORE", nil, ModFlag.Cast),
+				},
+			},
 			baseFlags = {
 			},
 			constantStats = {
@@ -143,6 +148,11 @@ skills["SupportAstralProjectionPlayer"] = {
 			label = "Astral Projection",
 			incrementalEffectiveness = 0.054999999701977,
 			statDescriptionScope = "gem_stat_descriptions",
+			statMap = {
+				["support_astral_projection_aoe_+%_final"] = {
+					mod("AreaOfEffect", "MORE", nil),
+				},
+			},
 			baseFlags = {
 			},
 			constantStats = {
@@ -202,6 +212,11 @@ skills["SupportBitingFrostPlayer"] = {
 			label = "Biting Frost",
 			incrementalEffectiveness = 0.054999999701977,
 			statDescriptionScope = "gem_stat_descriptions",
+			statMap = {
+				["support_active_skill_consume_enemy_freeze_to_gain_damage_+%_final"] = {
+					mod("Damage", "MORE", nil, 0, 0, { type = "ActorCondition", actor = "enemy", var = "Frozen" }),
+				},
+			},
 			baseFlags = {
 			},
 			constantStats = {
@@ -297,7 +312,18 @@ skills["SupportBurningRunesPlayer"] = {
 			label = "Burning Inscription",
 			incrementalEffectiveness = 0.054999999701977,
 			statDescriptionScope = "skill_stat_descriptions",
+			statMap = {
+				["support_burning_runes_base_fire_damage_equal_to_%_maximum_mana"] = {
+					mod("IgniteFireHitDamage", "OVERRIDE", nil, 0, 0, { type = "PercentStat", stat = "Mana", percent = 1 }),
+				},
+			},
 			baseFlags = {
+				duration = true,
+			},
+			baseMods = {
+				mod("EnemyIgniteChance", "BASE", 100),
+				mod("IgniteStacks", "OVERRIDE", 1),
+				flag("NeverCrit"),
 			},
 			constantStats = {
 				{ "triggered_by_burning_runes_support_%", 100 },
@@ -731,6 +757,14 @@ skills["SupportConsideredCastingPlayer"] = {
 			label = "Considered Casting",
 			incrementalEffectiveness = 0.054999999701977,
 			statDescriptionScope = "gem_stat_descriptions",
+			statMap = {
+				["support_slow_cast_cast_speed_+%_final"] = {
+					mod("Speed", "MORE", nil, ModFlag.Cast),
+				},
+				["support_slow_cast_spell_damage_+%_final"] = {
+					mod("Damage", "MORE", nil, bor(ModFlag.Hit, ModFlag.Spell)),
+				},
+			},
 			baseFlags = {
 			},
 			constantStats = {
@@ -908,6 +942,12 @@ skills["SupportDecayingHexPlayer"] = {
 			label = "Decaying Hex",
 			incrementalEffectiveness = 0.054999999701977,
 			statDescriptionScope = "gem_stat_descriptions",
+			statMap = {
+				["support_decaying_hex_base_chaos_damage_per_minute_as_%_of_intelligence_for_8_seconds"] = {
+					skill("decay", nil, { type = "PercentStat", stat = "Int", percent = 1 }),
+					div = 60,
+				},
+			},
 			baseFlags = {
 			},
 			constantStats = {
