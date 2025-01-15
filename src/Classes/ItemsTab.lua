@@ -130,25 +130,6 @@ local ItemsTabClass = newClass("ItemsTab", "UndoHandler", "ControlHost", "Contro
 				swapSlot.socketList[i] = socket
 			end
 		end
-		if slotName == "Weapon 1" or slotName == "Weapon 2" or slotName == "Helmet" or slotName == "Gloves" or slotName == "Body Armour" or slotName == "Boots" or slotName == "Belt" then
-			-- Add Rune / Soul Core Socket slots
-			local maxSocketCount = 3
-			if slotName == "Body Armour" then
-				maxSocketCount = 6
-			end
-			for i = 1, maxSocketCount do
-				local socket = new("ItemSlotControl", {"TOPLEFT",prevSlot,"BOTTOMLEFT"}, 0, 2, self, slotName.." Socket "..i, "Socket #"..i)			
-				addSlot(socket)
-				socket.parentSlot = slot
-				if slotName:match("Weapon") then
-					socket.weaponSet = 1
-					socket.shown = function()
-						return not socket.inactive and not self.activeItemSet.useSecondWeaponSet
-					end
-				end
-				slot.socketList[i] = socket
-			end
-		end
 	end
 
 	-- Passive tree dropdown controls
@@ -374,9 +355,30 @@ holding Shift will put it in the second.]])
 	self.controls.displayItemAltVariant5.shown = function()
 		return self.displayItem.hasAltVariant5
 	end
+
+	-- Section: Sockets and Links
+	self.controls.displayItemSectionSockets = new("Control", {"TOPLEFT",self.controls.displayItemSectionVariant,"BOTTOMLEFT"}, {0, 0, 0, function()
+		return self.displayItem and (self.displayItem.base.weapon or self.displayItem.base.armour) and 28 or 0
+	end})
+	self.controls.displayItemSocketRune = new("LabelControl", {"TOPLEFT",self.controls.displayItemSectionSockets,"TOPLEFT"}, {0, 0, 36, 20}, "^x7F7F7FS")
+	self.controls.displayItemSocketRune.shown = function()
+		return self.displayItem.base.weapon or self.displayItem.base.armour
+	end
+	self.controls.displayItemSocketRuneEdit = new("EditControl", {"LEFT",self.controls.displayItemSocketRune,"RIGHT"}, {2, 0, 50, 20}, nil, nil, "%D", 1, function(buf)
+		if tonumber(buf) > 6 then
+			self.controls.displayItemSocketRuneEdit:SetText(6)
+			return
+		end
+		self.displayItem.itemSocketCount = tonumber(buf)
+		self.displayItem:UpdateRunes()
+		self.displayItem:BuildAndParseRaw()
+		self:UpdateRuneControls()
+		self:UpdateDisplayItemTooltip()
+	end)
+	self.controls.displayItemSocketRuneEdit.shown = self.controls.displayItemSocketRune
 	
 	-- Section: Enchant / Anoint / Corrupt
-	self.controls.displayItemSectionEnchant = new("Control", {"TOPLEFT",self.controls.displayItemSectionVariant,"BOTTOMLEFT"}, {0, 0, 0, function()
+	self.controls.displayItemSectionEnchant = new("Control", {"TOPLEFT",self.controls.displayItemSectionSockets,"BOTTOMLEFT"}, {0, 0, 0, function()
 		return (self.controls.displayItemEnchant:IsShown() or self.controls.displayItemEnchant2:IsShown() or self.controls.displayItemAnoint:IsShown() or self.controls.displayItemAnoint2:IsShown() or self.controls.displayItemCorrupt:IsShown() ) and 28 or 0
 	end})
 	self.controls.displayItemEnchant = new("ButtonControl", {"TOPLEFT",self.controls.displayItemSectionEnchant,"TOPLEFT"}, {0, 0, 160, 20}, "Apply Enchantment...", function()
@@ -524,8 +526,50 @@ holding Shift will put it in the second.]])
 		self:CraftClusterJewel()
 	end)
 
+	-- Section: Rune Selection
+	self.controls.displayItemSectionRune = new("Control", {"TOPLEFT",self.controls.displayItemSectionClusterJewel,"BOTTOMLEFT"}, {0, 0, 0, function()
+		if not self.displayItem or self.displayItem.itemSocketCount == 0 or not (self.displayItem.base.weapon or self.displayItem.base.armour) then
+			return 0
+		end
+		local h = 6
+		for i = 1, 6 do
+			if self.controls["displayItemRune"..i]:IsShown() then
+				h = h + 24
+			end
+		end
+		return h
+	end})
+	for i = 1, 6 do
+		local prev = self.controls["displayItemRune"..(i-1)] or self.controls.displayItemSectionRune
+		local drop
+		drop = new("DropDownControl", {"TOPLEFT",prev,"TOPLEFT"}, {i==1 and 40 or 0, 0, 418, 20}, nil, function(index, value)
+			self.displayItem.runes[i] = value.name
+			self.displayItem:UpdateRunes()
+			self.displayItem:BuildAndParseRaw()
+			self:UpdateDisplayItemTooltip()
+		end)
+		drop.y = function()
+			return i == 1 and 0 or 24
+		end
+		drop.tooltipFunc = function(tooltip, mode, index, value)
+			tooltip:Clear()
+			if value.label ~= "None" then
+				tooltip:AddLine(14, "^7"..value.name)
+				tooltip:AddLine(14, "^7"..data.itemBases[value.name].implicit)
+				-- Adding Comparison
+				self:AddModComparisonTooltip(tooltip, { value.label, type = "Rune" })
+			end
+		end
+		drop.shown = function()
+			return self.displayItem and i <= self.displayItem.itemSocketCount and (self.displayItem.base.weapon or self.displayItem.base.armour)
+		end
+		
+		self.controls["displayItemRune"..i] = drop
+		self.controls["displayItemRuneLabel"..i] = new("LabelControl", {"RIGHT",drop,"LEFT"}, {-4, 0, 0, 14}, "^7Rune #"..i)
+	end
+
 	-- Section: Affix Selection
-	self.controls.displayItemSectionAffix = new("Control", {"TOPLEFT",self.controls.displayItemSectionClusterJewel,"BOTTOMLEFT"}, {0, 0, 0, function()
+	self.controls.displayItemSectionAffix = new("Control", {"TOPLEFT",self.controls.displayItemSectionRune,"BOTTOMLEFT"}, {0, 0, 0, function()
 		if not self.displayItem or not self.displayItem.crafted then
 			return 0
 		end
@@ -953,6 +997,12 @@ function ItemsTabClass:Save(xml)
 		t_insert(child, item.raw)
 		local id = #item.buffModLines + 1
 		for _, modLine in ipairs(item.enchantModLines) do
+			if modLine.range then
+				t_insert(child, { elem = "ModRange", attrib = { id = tostring(id), range = tostring(modLine.range) } })
+			end
+			id = id + 1
+		end
+		for _, modLine in ipairs(item.runeModLines) do
 			if modLine.range then
 				t_insert(child, { elem = "ModRange", attrib = { id = tostring(id), range = tostring(modLine.range) } })
 			end
@@ -1443,7 +1493,7 @@ function ItemsTabClass:SetDisplayItem(item)
 		if item.crafted then
 			self:UpdateAffixControls()
 		end
-
+		self.controls.displayItemSocketRuneEdit:SetText(item.itemSocketCount)
 		self.controls.displayItemQualityEdit:SetText(item.quality)
 		self.controls.displayItemCatalyst:SetSel((item.catalyst or 0) + 1)
 		if item.catalystQuality then
@@ -1452,6 +1502,7 @@ function ItemsTabClass:SetDisplayItem(item)
 			self.controls.displayItemCatalystQualityEdit:SetText(0)
 		end
 		self:UpdateCustomControls()
+		self:UpdateRuneControls()
 		self:UpdateDisplayItemRangeLines()
 		if item.clusterJewel and item.crafted then
 			self:UpdateClusterJewelControls()
@@ -1529,6 +1580,36 @@ function ItemsTabClass:UpdateAffixControls()
 	-- The custom affixes may have had their indexes changed, so the custom control UI is also rebuilt so that it will
 	-- reference the correct affix index.
 	self:UpdateCustomControls()
+end
+
+-- build rune mod list for armour and weapons
+local runeArmourModLines = { { name = "None", label = "None", order = -1 } }
+local runeWeaponModLines = { { name = "None", label = "None", order = -1 } }
+for name, modLines in pairs(data.itemMods.Runes) do
+	t_insert(runeArmourModLines, { name = name, label = modLines.armour[1], order = modLines.armour.statOrder[1]})
+	t_insert(runeWeaponModLines, { name = name, label = modLines.weapon[1], order = modLines.weapon.statOrder[1]})
+end
+table.sort(runeArmourModLines, function(a, b)
+	return a.order < b.order
+end)
+table.sort(runeWeaponModLines, function(a, b)
+	return a.order < b.order
+end)
+-- Update rune selection controls
+function ItemsTabClass:UpdateRuneControls()
+	local item = self.displayItem
+	for i = 1, item.itemSocketCount do
+		if item.base.armour then
+			self.controls["displayItemRune"..i].list = runeArmourModLines
+		elseif item.base.weapon then
+			self.controls["displayItemRune"..i].list = runeWeaponModLines
+		end
+		for j, modLine in ipairs(self.controls["displayItemRune"..i].list) do
+			if item.runes[i] == modLine.name then
+				self.controls["displayItemRune"..i].selIndex = j
+			end
+		end
+	end
 end
 
 function ItemsTabClass:UpdateAffixControl(control, item, type, outputTable, outputIndex)
@@ -1771,8 +1852,6 @@ function ItemsTabClass:IsItemValidForSlot(item, slotName, itemSet)
 		end
 	elseif item.type == slotType then
 		return true
-	elseif (item.type == "Rune" or item.type == "SoulCore") and slotName:match("Socket") then
-		return true
 	elseif slotName == "Weapon 1" or slotName == "Weapon 1 Swap" or slotName == "Weapon" then
 		return item.base.tags.onehand or item.base.tags.twohand
 	elseif slotName == "Weapon 2" or slotName == "Weapon 2 Swap" then
@@ -1811,13 +1890,24 @@ function ItemsTabClass:CraftItem()
 		item.spiritValue = base.spiritValue
 		item.buffModLines = { }
 		item.enchantModLines = { }
+		item.runeModLines = { }
 		item.classRequirementModLines = { }
 		item.implicitModLines = { }
 		item.explicitModLines = { }
+		item.sockets = { }
+		item.runes = { }
 		if base.base.quality then
 			item.quality = 0
 		else
 			item.quality = nil
+		end
+		if base.base.socketLimit and (base.base.weapon or base.base.armour) then -- must be a martial weapon/armour
+			if #item.sockets == 0 then
+				for i = 1, base.base.socketLimit do
+					t_insert(item.sockets, { group = 0 })
+				end
+				item.itemSocketCount = #item.sockets
+			end
 		end
 		local raritySel = controls.rarity.selIndex
 		if base.base.flask
@@ -2223,7 +2313,7 @@ function ItemsTabClass:CorruptDisplayItem() -- todo implement vaal orb new outco
 			return
 		end
 		enchantList[modType] = {}
-		for modId, mod in pairs(data.corruptions) do
+		for modId, mod in pairs(data.itemMods.Corruption) do
 			if mod.type == modType and self.displayItem:GetModSpawnWeight(mod) > 0 then
 				t_insert(enchantList[modType], mod)
 			end
@@ -2797,7 +2887,7 @@ function ItemsTabClass:AddItemTooltip(tooltip, item, slot, dbMode)
 		item.requirements.str or 0, item.requirements.dex or 0, item.requirements.int or 0)
 
 	-- Modifiers
-	for _, modList in ipairs{item.enchantModLines, item.implicitModLines, item.explicitModLines} do
+	for _, modList in ipairs{item.enchantModLines, item.runeModLines, item.implicitModLines, item.explicitModLines} do
 		if modList[1] then
 			for _, modLine in ipairs(modList) do
 				if item:CheckModLineVariant(modLine) then

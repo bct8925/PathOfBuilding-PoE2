@@ -542,6 +542,8 @@ data.itemMods = {
 	Flask = LoadModule("Data/ModFlask"),
 	Charm = LoadModule("Data/ModCharm"),
 	Jewel = LoadModule("Data/ModJewel"),
+	Corruption = LoadModule("Data/ModCorrupted"),
+	Runes = LoadModule("Data/ModRunes")
 }
 data.enchantments = {
 	["Helmet"] = LoadModule("Data/EnchantmentHelmet"),
@@ -552,7 +554,6 @@ data.enchantments = {
 	["Weapon"] = LoadModule("Data/EnchantmentWeapon"),
 	["UtilityFlask"] = LoadModule("Data/EnchantmentFlask"),
 }
-data.corruptions = LoadModule("Data/ModCorrupted")
 
 do
 	data.enchantments["Flask"] = data.enchantments["UtilityFlask"]--["HARVEST"]

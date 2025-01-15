@@ -910,6 +910,7 @@ function ImportTabClass:ImportItem(itemData, slotName)
 		end
 	end
 	item.enchantModLines = { }
+	item.runeModLines = { }
 	item.classRequirementModLines = { }
 	item.implicitModLines = { }
 	item.explicitModLines = { }
@@ -918,6 +919,14 @@ function ImportTabClass:ImportItem(itemData, slotName)
 			for line in line:gmatch("[^\n]+") do
 				local modList, extra = modLib.parseMod(line)
 				t_insert(item.enchantModLines, { line = line, extra = extra, mods = modList or { }, enchant = true })
+			end
+		end
+	end
+	if itemData.runeMods then
+		for _, line in ipairs(itemData.runeMods) do
+			for line in line:gmatch("[^\n]+") do
+				local modList, extra = modLib.parseMod(line)
+				t_insert(item.runeModLines, { line = line, extra = extra, mods = modList or { }, enchant = true, rune = true })
 			end
 		end
 	end

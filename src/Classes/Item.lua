@@ -332,10 +332,12 @@ function ItemClass:ParseRaw(raw, rarity, highQuality)
 	end
 	self.checkSection = false
 	self.sockets = { }
+	self.runes = { }
 	self.itemSocketCount = 0
 	self.classRequirementModLines = { }
 	self.buffModLines = { }
 	self.enchantModLines = { }
+	self.runeModLines = { }
 	self.implicitModLines = { }
 	self.explicitModLines = { }
 	local implicitLines = 0
@@ -417,6 +419,8 @@ function ItemClass:ParseRaw(raw, rarity, highQuality)
 						end
 					end
 					self.itemSocketCount = #self.sockets
+				elseif specName == "Rune" then
+					t_insert(self.runes, specVal)
 				elseif specName == "Radius" and self.type == "Jewel" then
 					self.jewelRadiusLabel = specVal:match("^[%a ]+")
 					if specVal:match("^%a+") == "Variable" then
@@ -739,11 +743,13 @@ function ItemClass:ParseRaw(raw, rarity, highQuality)
 				end
 
 				local modLines
-				if modLine.enchant then
+				if modLine.rune then
+					modLines = self.runeModLines
+				elseif modLine.enchant then
 					modLines = self.enchantModLines
 				elseif line:find("Requires Class") then
 					modLines = self.classRequirementModLines
-				elseif modLine.implicit or #self.enchantModLines + #self.implicitModLines < implicitLines then
+				elseif modLine.implicit or #self.runeModLines + #self.enchantModLines + #self.implicitModLines < implicitLines then
 					modLines = self.implicitModLines
 				else
 					modLines = self.explicitModLines
@@ -788,6 +794,37 @@ function ItemClass:ParseRaw(raw, rarity, highQuality)
 	if self.baseName and self.title then
 		self.name = self.title .. ", " .. self.baseName:gsub(" %(.+%)","")
 	end
+	-- this will need more advanced logic for jewel sockets in items to work properly but could just be removed as items like this was only introduced during development.
+	if self.base then
+		if self.base.weapon or self.base.armour then
+			if #self.runes == 0 then
+				for i, modLine in ipairs(self.runeModLines) do
+					local value
+					local strippedModeLine = modLine.line:gsub("(%d%.?%d*)", function(val)
+						value = val
+						return "#"
+					end)
+					for name, runeMods in pairs(data.itemMods.Runes) do
+						local runeValue
+						local runeStrippedModeLine = (self.base.weapon and runeMods.weapon or runeMods.armour)[1]:gsub("(%d%.?%d*)", function(val)
+							runeValue = val
+							return "#"
+						end)
+						if strippedModeLine == runeStrippedModeLine then
+							for i = 1, round(value/runeValue) do
+								t_insert(self.runes, name)
+							end
+						end
+					end
+				end
+			end
+		else
+			self.sockets = { }
+			self.itemSocketCount = 0
+			self.runes = { }
+		end
+	end
+	
 	if self.base and not self.requirements.level then
 		if importedLevelReq and #self.sockets == 0 then
 			-- Requirements on imported items can only be trusted for items with no sockets
@@ -836,14 +873,6 @@ function ItemClass:ParseRaw(raw, rarity, highQuality)
 					end
 				end
 			end
-		end
-	end
-	if self.base and self.base.socketLimit and (self.base.weapon or self.base.armour) then -- must be a martial weapon/armour
-		if #self.sockets == 0 then
-			for i = 1, self.base.socketLimit do
-				t_insert(self.sockets, { group = 0 })
-			end
-			self.itemSocketCount = #self.sockets
 		end
 	end
 	if self.variantList then
@@ -975,6 +1004,9 @@ function ItemClass:BuildRaw()
 		if modLine.corruptedRange then
 			line = "{corruptedRange:" .. round(modLine.corruptedRange, 2) .. "}" .. line
 		end
+		if modLine.rune then
+			line = "{rune}" .. line
+		end
 		if modLine.enchant then
 			line = "{enchant}" .. line
 		end
@@ -1028,13 +1060,16 @@ function ItemClass:BuildRaw()
 	if self.quality then
 		t_insert(rawLines, "Quality: " .. self.quality)
 	end
-	if self.itemSocketCount and self.itemSocketCount > 0 then
+	if self.itemSocketCount and self.itemSocketCount > 0 and (self.base.weapon or self.base.armour) then
 		local socketString = ""
 		for _ = 1, self.itemSocketCount do
 			socketString = socketString .. "S "
 		end
 		socketString = socketString:gsub(" $", "")
 		t_insert(rawLines, "Sockets: " .. socketString)
+		for i = 1, self.itemSocketCount do
+			t_insert(rawLines, "Rune: "..(self.runes[i] or "None"))
+		end
 	end
 	if self.requirements and self.requirements.level then
 		t_insert(rawLines, "LevelReq: " .. self.requirements.level)
@@ -1048,7 +1083,10 @@ function ItemClass:BuildRaw()
 	if self.classRestriction then
 		t_insert(rawLines, "Requires Class " .. self.classRestriction)
 	end
-	t_insert(rawLines, "Implicits: " .. (#self.enchantModLines + #self.implicitModLines))
+	t_insert(rawLines, "Implicits: " .. (#self.runeModLines + #self.enchantModLines + #self.implicitModLines))
+	for _, modLine in ipairs(self.runeModLines) do
+		writeModLine(modLine)
+	end
 	for _, modLine in ipairs(self.enchantModLines) do
 		writeModLine(modLine)
 	end
@@ -1073,6 +1111,39 @@ end
 function ItemClass:BuildAndParseRaw()
 	local raw = self:BuildRaw()
 	self:ParseRaw(raw)
+end
+
+-- Rebuild rune modifiers using the item's runes
+function ItemClass:UpdateRunes()
+	wipeTable(self.runeModLines)
+	local statOrder = {}
+	for _, name in ipairs(self.runes) do
+		if name ~= "None" then
+			local mod = self.base.weapon and data.itemMods.Runes[name].weapon or self.base.armour and data.itemMods.Runes[name].armour or { }
+			for i, line in ipairs(mod) do
+				local order = mod.statOrder[i]
+				if statOrder[order] then
+					-- Combine stats
+					local start = 1
+					statOrder[order].line = statOrder[order].line:gsub("%d+", function(num)
+						local s, e, other = line:find("(%d+)", start)
+						start = e + 1
+						return tonumber(num) + tonumber(other)
+					end)
+				else
+					local modLine = { line = line, order = order, rune = true, enchant = true }
+					for l = 1, #self.runeModLines + 1 do
+						if not self.runeModLines[l] or self.runeModLines[l].order > order then
+							t_insert(self.runeModLines, l, modLine)
+							break
+						end
+					end
+					statOrder[order] = modLine
+				end	
+			end
+		end
+	end
+
 end
 
 -- Rebuild explicit modifiers using the item's affixes
@@ -1501,6 +1572,9 @@ function ItemClass:BuildModList()
 		end
 	end
 	for _, modLine in ipairs(self.enchantModLines) do
+		processModLine(modLine)
+	end
+	for _, modLine in ipairs(self.runeModLines) do
 		processModLine(modLine)
 	end
 	for _, modLine in ipairs(self.classRequirementModLines) do
