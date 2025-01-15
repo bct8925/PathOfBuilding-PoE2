@@ -550,64 +550,15 @@ holding Shift will put it in the second.]])
 		drop.y = function()
 			return i == 1 and 0 or 24
 		end
-		-- drop.tooltipFunc = function(tooltip, mode, index, value)
-		-- 	local modList = value.modList
-		-- 	if not modList or main.popups[1] or mode == "OUT" or (self.selControl and self.selControl ~= drop) then
-		-- 		tooltip:Clear()
-		-- 	elseif tooltip:CheckForUpdate(modList) then
-		-- 		if value.modId or #modList == 1 then
-		-- 			local mod = self.displayItem.affixes[value.modId or modList[1]]
-		-- 			tooltip:AddLine(16, "^7Affix: "..mod.affix)
-		-- 			for _, line in ipairs(mod) do
-		-- 				tooltip:AddLine(14, "^7"..line)
-		-- 			end
-		-- 			if mod.level > 1 then
-		-- 				tooltip:AddLine(16, "Level: "..mod.level)
-		-- 			end
-		-- 			if mod.modTags and #mod.modTags > 0 then
-		-- 				tooltip:AddLine(16, "Tags: "..table.concat(mod.modTags, ', '))
-		-- 			end
-		-- 		else
-		-- 			tooltip:AddLine(16, "^7"..#modList.." Tiers")
-		-- 			local minMod = self.displayItem.affixes[modList[1]]
-		-- 			local maxMod = self.displayItem.affixes[modList[#modList]]
-		-- 			for l, line in ipairs(minMod) do
-		-- 				local minLine = line:gsub("%((%d[%d%.]*)%-(%d[%d%.]*)%)", "%1")
-		-- 				local maxLine = maxMod[l]:gsub("%((%d[%d%.]*)%-(%d[%d%.]*)%)", "%2")
-		-- 				if maxLine == maxMod[l] then
-		-- 					tooltip:AddLine(14, maxLine)
-		-- 				else
-		-- 					local start = 1
-		-- 					tooltip:AddLine(14, minLine:gsub("%d[%d%.]*", function(min)
-		-- 						local s, e, max = maxLine:find("(%d[%d%.]*)", start)
-		-- 						start = e + 1
-		-- 						if min == max then
-		-- 							return min
-		-- 						else
-		-- 							return "("..min.."-"..max..")"
-		-- 						end
-		-- 					end))
-		-- 				end
-		-- 			end
-		-- 			tooltip:AddLine(16, "Level: "..minMod.level.." to "..maxMod.level)
-		-- 			-- Assuming that all mods have the same tags
-		-- 			if maxMod.modTags and #maxMod.modTags > 0 then
-		-- 				tooltip:AddLine(16, "Tags: "..table.concat(maxMod.modTags, ', '))
-		-- 			end
-		-- 		end
-		-- 		local mod = self.displayItem.affixes[value.modId or modList[1]]
-
-		-- 		local mod = { }
-		-- 		if value.modId or #modList == 1 then
-		-- 			mod = self.displayItem.affixes[value.modId or modList[1]]
-		-- 		else
-		-- 			mod = self.displayItem.affixes[modList[1 + round((#modList - 1) * main.defaultItemAffixQuality)]]
-		-- 		end
-				
-		-- 		-- Adding Mod
-		-- 		self:AddModComparisonTooltip(tooltip, mod)
-		-- 	end
-		-- end
+		drop.tooltipFunc = function(tooltip, mode, index, value)
+			tooltip:Clear()
+			if value.label ~= "None" then
+				tooltip:AddLine(14, "^7"..value.name)
+				tooltip:AddLine(14, "^7"..data.itemBases[value.name].implicit)
+				-- Adding Comparison
+				self:AddModComparisonTooltip(tooltip, { value.label, type = "Rune" })
+			end
+		end
 		drop.shown = function()
 			return self.displayItem and i <= self.displayItem.itemSocketCount and (self.displayItem.base.weapon or self.displayItem.base.armour)
 		end
