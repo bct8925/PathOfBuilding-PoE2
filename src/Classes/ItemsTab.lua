@@ -381,40 +381,13 @@ holding Shift will put it in the second.]])
 	self.controls.displayItemSectionEnchant = new("Control", {"TOPLEFT",self.controls.displayItemSectionSockets,"BOTTOMLEFT"}, {0, 0, 0, function()
 		return (self.controls.displayItemAnoint:IsShown() or self.controls.displayItemAnoint2:IsShown() or self.controls.displayItemCorrupt:IsShown() ) and 28 or 0
 	end})
-	self.controls.displayItemAnoint = new("ButtonControl", {"TOPLEFT",self.controls.displayItemSectionEnchant,"TOPLEFT",true}, {0, 0, 100, 20}, "Anoint...", function()
+	self.controls.displayItemAnoint = new("ButtonControl", {"TOPLEFT",self.controls.displayItemSectionEnchant,"TOPLEFT"}, {0, 0, 100, 20}, "Anoint...", function()
 		self:AnointDisplayItem(1)
 	end)
 	self.controls.displayItemAnoint.shown = function()
 		return self.displayItem and (self.displayItem.base.type == "Amulet" or self.displayItem.canBeAnointed)
 	end
-	self.controls.displayItemAnoint2 = new("ButtonControl", {"TOPLEFT",self.controls.displayItemAnoint,"TOPRIGHT",true}, {8, 0, 100, 20}, "Anoint 2...", function()
-		self:AnointDisplayItem(2)
-	end)
-	self.controls.displayItemAnoint2.shown = function()
-		return self.displayItem and
-			(self.displayItem.base.type == "Amulet" or self.displayItem.canBeAnointed) and
-			self.displayItem.canHaveTwoEnchants and
-			#self.displayItem.enchantModLines > 0
-	end
-	self.controls.displayItemAnoint3 = new("ButtonControl", {"TOPLEFT",self.controls.displayItemAnoint2,"TOPRIGHT",true}, {8, 0, 100, 20}, "Anoint 3...", function()
-		self:AnointDisplayItem(3)
-	end)
-	self.controls.displayItemAnoint3.shown = function()
-		return self.displayItem and
-			(self.displayItem.base.type == "Amulet" or self.displayItem.canBeAnointed) and
-			self.displayItem.canHaveThreeEnchants and
-			#self.displayItem.enchantModLines > 1
-	end
-	self.controls.displayItemAnoint4 = new("ButtonControl", {"TOPLEFT",self.controls.displayItemAnoint3,"TOPRIGHT",true}, {8, 0, 100, 20}, "Anoint 4...", function()
-		self:AnointDisplayItem(4)
-	end)
-	self.controls.displayItemAnoint4.shown = function()
-		return self.displayItem and
-			(self.displayItem.base.type == "Amulet" or self.displayItem.canBeAnointed) and
-			self.displayItem.canHaveFourEnchants and
-			#self.displayItem.enchantModLines > 2
-	end
-	self.controls.displayItemCorrupt = new("ButtonControl", {"TOPLEFT",self.controls.displayItemAnoint4,"TOPRIGHT",true}, {8, 10, 100, 20}, "Corrupt...", function()
+	self.controls.displayItemCorrupt = new("ButtonControl", {"TOPLEFT",self.controls.displayItemAnoint,"TOPRIGHT",true}, {8, 0, 100, 20}, "Corrupt...", function()
 		self:CorruptDisplayItem()
 	end)
 	self.controls.displayItemCorrupt.shown = function()
