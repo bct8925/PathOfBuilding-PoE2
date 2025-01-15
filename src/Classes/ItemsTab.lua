@@ -379,7 +379,7 @@ holding Shift will put it in the second.]])
 	
 	-- Section: Enchant / Anoint / Corrupt
 	self.controls.displayItemSectionEnchant = new("Control", {"TOPLEFT",self.controls.displayItemSectionSockets,"BOTTOMLEFT"}, {0, 0, 0, function()
-		return (self.controls.displayItemAnoint:IsShown() or self.controls.displayItemAnoint2:IsShown() or self.controls.displayItemCorrupt:IsShown() ) and 28 or 0
+		return (self.controls.displayItemAnoint:IsShown() or self.controls.displayItemCorrupt:IsShown() ) and 28 or 0
 	end})
 	self.controls.displayItemAnoint = new("ButtonControl", {"TOPLEFT",self.controls.displayItemSectionEnchant,"TOPLEFT"}, {0, 0, 100, 20}, "Anoint...", function()
 		self:AnointDisplayItem(1)
