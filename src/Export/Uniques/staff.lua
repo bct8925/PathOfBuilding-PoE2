@@ -15,7 +15,7 @@ Dusk Vigil
 Ashen Staff
 Implicits: 2
 Grants Skill: Level (1-20) Firebolt
-Grants Skill: Level (1-20) Ember Fussilade
+Grants Skill: Level (1-20) Ember Fusillade
 UniqueSpellDamageOnWeapon3
 UniqueLifeGainedFromEnemyDeath9
 UniqueManaRegeneration20

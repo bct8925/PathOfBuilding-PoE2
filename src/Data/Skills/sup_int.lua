@@ -762,7 +762,7 @@ skills["SupportConsideredCastingPlayer"] = {
 					mod("Speed", "MORE", nil, ModFlag.Cast),
 				},
 				["support_slow_cast_spell_damage_+%_final"] = {
-					mod("Damage", "MORE", nil, bor(ModFlag.Hit, ModFlag.Spell)),
+					mod("Damage", "MORE", nil, OR64(ModFlag.Hit, ModFlag.Spell)),
 				},
 			},
 			baseFlags = {

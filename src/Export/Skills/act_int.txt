@@ -856,6 +856,14 @@ statMap = {
 #skillEnd
 
 #from item
+#skill ShockNovaPlayer
+#startSets
+#set ShockNovaPlayer
+#flags
+#mods
+#skillEnd
+
+#from item
 #skill SigilOfPowerPlayer
 #startSets
 #set SigilOfPowerPlayer
@@ -950,6 +958,14 @@ statMap = {
 #skill SoulOfferingPlayer
 #startSets
 #set SoulOfferingPlayer
+#flags
+#mods
+#skillEnd
+
+#from item
+#skill SoulrendPlayer
+#startSets
+#set SoulrendPlayer
 #flags
 #mods
 #skillEnd
@@ -1077,6 +1093,14 @@ statMap = {
 #skill GaleStrikePlayer
 #startSets
 #set GaleStrikePlayer
+#flags
+#mods
+#skillEnd
+
+#from item
+#skill WitherPlayer
+#startSets
+#set WitherPlayer
 #flags
 #mods
 #skillEnd

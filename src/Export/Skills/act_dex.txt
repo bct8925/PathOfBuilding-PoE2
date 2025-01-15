@@ -225,6 +225,14 @@ statMap = {
 #mods
 #skillEnd
 
+#from gem
+#skill TornadoPlayer
+#startSets
+#set TornadoPlayer
+#flags
+#mods
+#skillEnd
+
 #skill ToxicGrowthPlayer
 #startSets
 #set ToxicGrowthPlayer

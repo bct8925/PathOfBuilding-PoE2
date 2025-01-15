@@ -189,6 +189,7 @@ c["+3 to Level of all Cold Snap Skills"]={{[1]={flags=0,keywordFlags=0,name="Gem
 c["+3 to Level of all Combat Frenzy Skills"]={{[1]={flags=0,keywordFlags=0,name="GemProperty",type="LIST",value={key="level",keyword="combat frenzy",value=3}}},nil}
 c["+3 to Level of all Comet Skills"]={{[1]={flags=0,keywordFlags=0,name="GemProperty",type="LIST",value={key="level",keyword="comet",value=3}}},nil}
 c["+3 to Level of all Conductivity Skills"]={{[1]={flags=0,keywordFlags=0,name="GemProperty",type="LIST",value={key="level",keyword="conductivity",value=3}}},nil}
+c["+3 to Level of all Consecrate Skills"]={{[1]={flags=0,keywordFlags=0,name="GemProperty",type="LIST",value={key="level",keyword="consecrate",value=3}}},nil}
 c["+3 to Level of all Contagion Skills"]={{[1]={flags=0,keywordFlags=0,name="GemProperty",type="LIST",value={key="level",keyword="contagion",value=3}}},nil}
 c["+3 to Level of all Crossbow Shot Skills"]={{[1]={flags=0,keywordFlags=0,name="GemProperty",type="LIST",value={key="level",keyword="crossbow shot",value=3}}},nil}
 c["+3 to Level of all Dark Effigy Skills"]={{[1]={flags=0,keywordFlags=0,name="GemProperty",type="LIST",value={key="level",keyword="dark effigy",value=3}}},nil}
@@ -218,6 +219,7 @@ c["+3 to Level of all Essence Drain Skills"]={{[1]={flags=0,keywordFlags=0,name=
 c["+3 to Level of all Explosive Concoction Skills"]={{[1]={flags=0,keywordFlags=0,name="GemProperty",type="LIST",value={key="level",keyword="explosive concoction",value=3}}},nil}
 c["+3 to Level of all Explosive Grenade Skills"]={{[1]={flags=0,keywordFlags=0,name="GemProperty",type="LIST",value={key="level",keyword="explosive grenade",value=3}}},nil}
 c["+3 to Level of all Explosive Shot Skills"]={{[1]={flags=0,keywordFlags=0,name="GemProperty",type="LIST",value={key="level",keyword="explosive shot",value=3}}},nil}
+c["+3 to Level of all Exsanguinate Skills"]={{[1]={flags=0,keywordFlags=0,name="GemProperty",type="LIST",value={key="level",keyword="exsanguinate",value=3}}},nil}
 c["+3 to Level of all Eye of Winter Skills"]={{[1]={flags=0,keywordFlags=0,name="GemProperty",type="LIST",value={key="level",keyword="eye of winter",value=3}}},nil}
 c["+3 to Level of all Falling Thunder Skills"]={{[1]={flags=0,keywordFlags=0,name="GemProperty",type="LIST",value={key="level",keyword="falling thunder",value=3}}},nil}
 c["+3 to Level of all Fire Skills"]={{[1]={flags=0,keywordFlags=0,name="GemProperty",type="LIST",value={key="level",keyword="fire",value=3}}},nil}
@@ -304,8 +306,10 @@ c["+3 to Level of all Purity of Lightning Skills"]={{[1]={flags=0,keywordFlags=0
 c["+3 to Level of all Quarterstaff Strike Skills"]={{[1]={flags=0,keywordFlags=0,name="GemProperty",type="LIST",value={key="level",keyword="quarterstaff strike",value=3}}},nil}
 c["+3 to Level of all Raging Spirits Skills"]={{[1]={flags=0,keywordFlags=0,name="GemProperty",type="LIST",value={key="level",keyword="raging spirits",value=3}}},nil}
 c["+3 to Level of all Rain of Arrows Skills"]={{[1]={flags=0,keywordFlags=0,name="GemProperty",type="LIST",value={key="level",keyword="rain of arrows",value=3}}},nil}
+c["+3 to Level of all Raise Shield Skills"]={{[1]={flags=0,keywordFlags=0,name="GemProperty",type="LIST",value={key="level",keyword="raise shield",value=3}}},nil}
 c["+3 to Level of all Raise Zombie Skills"]={{[1]={flags=0,keywordFlags=0,name="GemProperty",type="LIST",value={key="level",keyword="raise zombie",value=3}}},nil}
 c["+3 to Level of all Rapid Shot Skills"]={{[1]={flags=0,keywordFlags=0,name="GemProperty",type="LIST",value={key="level",keyword="rapid shot",value=3}}},nil}
+c["+3 to Level of all Reap Skills"]={{[1]={flags=0,keywordFlags=0,name="GemProperty",type="LIST",value={key="level",keyword="reap",value=3}}},nil}
 c["+3 to Level of all Reaper's Invocation Skills"]={{[1]={flags=0,keywordFlags=0,name="GemProperty",type="LIST",value={key="level",keyword="reaper's invocation",value=3}}},nil}
 c["+3 to Level of all Resonating Shield Skills"]={{[1]={flags=0,keywordFlags=0,name="GemProperty",type="LIST",value={key="level",keyword="resonating shield",value=3}}},nil}
 c["+3 to Level of all Ripwire Ballista Skills"]={{[1]={flags=0,keywordFlags=0,name="GemProperty",type="LIST",value={key="level",keyword="ripwire ballista",value=3}}},nil}
@@ -318,6 +322,7 @@ c["+3 to Level of all Shattering Concoction Skills"]={{[1]={flags=0,keywordFlags
 c["+3 to Level of all Shattering Palm Skills"]={{[1]={flags=0,keywordFlags=0,name="GemProperty",type="LIST",value={key="level",keyword="shattering palm",value=3}}},nil}
 c["+3 to Level of all Shield Charge Skills"]={{[1]={flags=0,keywordFlags=0,name="GemProperty",type="LIST",value={key="level",keyword="shield charge",value=3}}},nil}
 c["+3 to Level of all Shield Wall Skills"]={{[1]={flags=0,keywordFlags=0,name="GemProperty",type="LIST",value={key="level",keyword="shield wall",value=3}}},nil}
+c["+3 to Level of all Shock Nova Skills"]={{[1]={flags=0,keywordFlags=0,name="GemProperty",type="LIST",value={key="level",keyword="shock nova",value=3}}},nil}
 c["+3 to Level of all Shockburst Rounds Skills"]={{[1]={flags=0,keywordFlags=0,name="GemProperty",type="LIST",value={key="level",keyword="shockburst rounds",value=3}}},nil}
 c["+3 to Level of all Shockchain Arrow Skills"]={{[1]={flags=0,keywordFlags=0,name="GemProperty",type="LIST",value={key="level",keyword="shockchain arrow",value=3}}},nil}
 c["+3 to Level of all Shockwave Totem Skills"]={{[1]={flags=0,keywordFlags=0,name="GemProperty",type="LIST",value={key="level",keyword="shockwave totem",value=3}}},nil}
@@ -337,6 +342,7 @@ c["+3 to Level of all Sniper's Mark Skills"]={{[1]={flags=0,keywordFlags=0,name=
 c["+3 to Level of all Solar Orb Skills"]={{[1]={flags=0,keywordFlags=0,name="GemProperty",type="LIST",value={key="level",keyword="solar orb",value=3}}},nil}
 c["+3 to Level of all Sorcery Ward Skills"]={{[1]={flags=0,keywordFlags=0,name="GemProperty",type="LIST",value={key="level",keyword="sorcery ward",value=3}}},nil}
 c["+3 to Level of all Soul Offering Skills"]={{[1]={flags=0,keywordFlags=0,name="GemProperty",type="LIST",value={key="level",keyword="soul offering",value=3}}},nil}
+c["+3 to Level of all Soulrend Skills"]={{[1]={flags=0,keywordFlags=0,name="GemProperty",type="LIST",value={key="level",keyword="soulrend",value=3}}},nil}
 c["+3 to Level of all Spark Skills"]={{[1]={flags=0,keywordFlags=0,name="GemProperty",type="LIST",value={key="level",keyword="spark",value=3}}},nil}
 c["+3 to Level of all Spell Skills"]={{[1]={flags=0,keywordFlags=0,name="GemProperty",type="LIST",value={key="level",keyword="spell",value=3}}},nil}
 c["+3 to Level of all Spiral Volley Skills"]={{[1]={flags=0,keywordFlags=0,name="GemProperty",type="LIST",value={key="level",keyword="spiral volley",value=3}}},nil}
@@ -356,6 +362,7 @@ c["+3 to Level of all Time Freeze Skills"]={{[1]={flags=0,keywordFlags=0,name="G
 c["+3 to Level of all Time Snap Skills"]={{[1]={flags=0,keywordFlags=0,name="GemProperty",type="LIST",value={key="level",keyword="time snap",value=3}}},nil}
 c["+3 to Level of all Time of Need Skills"]={{[1]={flags=0,keywordFlags=0,name="GemProperty",type="LIST",value={key="level",keyword="time of need",value=3}}},nil}
 c["+3 to Level of all Tornado Shot Skills"]={{[1]={flags=0,keywordFlags=0,name="GemProperty",type="LIST",value={key="level",keyword="tornado shot",value=3}}},nil}
+c["+3 to Level of all Tornado Skills"]={{[1]={flags=0,keywordFlags=0,name="GemProperty",type="LIST",value={key="level",keyword="tornado",value=3}}},nil}
 c["+3 to Level of all Toxic Growth Skills"]={{[1]={flags=0,keywordFlags=0,name="GemProperty",type="LIST",value={key="level",keyword="toxic growth",value=3}}},nil}
 c["+3 to Level of all Unbound Avatar Skills"]={{[1]={flags=0,keywordFlags=0,name="GemProperty",type="LIST",value={key="level",keyword="unbound avatar",value=3}}},nil}
 c["+3 to Level of all Unearth Skills"]={{[1]={flags=0,keywordFlags=0,name="GemProperty",type="LIST",value={key="level",keyword="unearth",value=3}}},nil}
@@ -372,6 +379,7 @@ c["+3 to Level of all Wave of Frost Skills"]={{[1]={flags=0,keywordFlags=0,name=
 c["+3 to Level of all Whirling Assault Skills"]={{[1]={flags=0,keywordFlags=0,name="GemProperty",type="LIST",value={key="level",keyword="whirling assault",value=3}}},nil}
 c["+3 to Level of all Wind Blast Skills"]={{[1]={flags=0,keywordFlags=0,name="GemProperty",type="LIST",value={key="level",keyword="wind blast",value=3}}},nil}
 c["+3 to Level of all Wind Dancer Skills"]={{[1]={flags=0,keywordFlags=0,name="GemProperty",type="LIST",value={key="level",keyword="wind dancer",value=3}}},nil}
+c["+3 to Level of all Wither Skills"]={{[1]={flags=0,keywordFlags=0,name="GemProperty",type="LIST",value={key="level",keyword="wither",value=3}}},nil}
 c["+3 to Level of all Withering Presence Skills"]={{[1]={flags=0,keywordFlags=0,name="GemProperty",type="LIST",value={key="level",keyword="withering presence",value=3}}},nil}
 c["+3 to Strength"]={{[1]={flags=0,keywordFlags=0,name="Str",type="BASE",value=3}},nil}
 c["+3 to Stun Threshold per Strength"]={{[1]={flags=0,keywordFlags=0,name="StunThreshold",type="BASE",value=3}},"  per Strength "}
@@ -2389,7 +2397,7 @@ c["Gain 10 Mana per Enemy Killed"]={{[1]={flags=0,keywordFlags=0,name="ManaOnKil
 c["Gain 10 Rage when Critically Hit by an Enemy"]={{}," Rage when Critically Hit by an Enemy "}
 c["Gain 10% of Damage as Extra Cold Damage"]={{[1]={flags=0,keywordFlags=0,name="DamageGainAsCold",type="BASE",value=10}},nil}
 c["Gain 10% of Damage as Extra Lightning Damage"]={{[1]={flags=0,keywordFlags=0,name="DamageGainAsLightning",type="BASE",value=10}},nil}
-c["Gain 10% of Damage as Extra Physical Damage"]={{[1]={flags=0,keywordFlags=0,name="PhysicalDamageGainAsPhysical",type="BASE",value=10},[2]={flags=0,keywordFlags=0,name="ColdDamageGainAsPhysical",type="BASE",value=10},[3]={flags=0,keywordFlags=0,name="LightningDamageGainAsPhysical",type="BASE",value=10},[4]={flags=0,keywordFlags=0,name="FireDamageGainAsPhysical",type="BASE",value=10},[5]={flags=0,keywordFlags=0,name="ChaosDamageGainAsPhysical",type="BASE",value=10}},nil}
+c["Gain 10% of Damage as Extra Physical Damage"]={{[1]={flags=0,keywordFlags=0,name="DamageGainAsPhysical",type="BASE",value=10}},nil}
 c["Gain 100% of Maximum Energy Shield as additional Freeze Threshold"]={{[1]={flags=0,keywordFlags=0,name="EnergyShield",type="BASE",value=100}},"  as additional Freeze Threshold "}
 c["Gain 11% of Damage as Extra Chaos Damage"]={{[1]={flags=0,keywordFlags=0,name="DamageGainAsChaos",type="BASE",value=11}},nil}
 c["Gain 12% of Physical Damage as Extra Fire Damage"]={{[1]={flags=0,keywordFlags=0,name="PhysicalDamageGainAsFire",type="BASE",value=12}},nil}
@@ -2510,20 +2518,7 @@ c["Grants Skill: Level 20 Volatile Dead"]={{[1]={flags=0,keywordFlags=0,name="Ex
 c["Grants Skill: Life Remnants"]={{[1]={flags=0,keywordFlags=0,name="ExtraSkill",type="LIST",value={level=1,skillId="LifeRemnantsPlayer"}}},nil}
 c["Grants Skill: Meditate"]={{[1]={flags=0,keywordFlags=0,name="ExtraSkill",type="LIST",value={level=1,skillId="MeditatePlayer"}}},nil}
 c["Grants Skill: Poisonous Concoction"]={{[1]={flags=0,keywordFlags=0,name="ExtraSkill",type="LIST",value={level=1,skillId="PoisonousConcoctionPlayer"}}},nil}
-c["Grants Skill: Raise Shield"]={nil,nil}
-c["Grants Skill: Raise Shield +20 to Strength"]={nil,"Grants Skill: Raise Shield +20 to Strength "}
-c["Grants Skill: Raise Shield +25% to Fire Resistance"]={nil,"Grants Skill: Raise Shield +25% to Fire Resistance "}
-c["Grants Skill: Raise Shield +5% to Maximum Fire Resistance"]={nil,"Grants Skill: Raise Shield +5% to Maximum Fire Resistance "}
-c["Grants Skill: Raise Shield +60 to maximum Life"]={nil,"Grants Skill: Raise Shield +60 to maximum Life "}
-c["Grants Skill: Raise Shield 10% reduced Movement Speed"]={nil,"Grants Skill: Raise Shield 10% reduced Movement Speed "}
-c["Grants Skill: Raise Shield 100% increased Armour and Energy Shield"]={nil,"Grants Skill: Raise Shield 100% increased Armour and Energy Shield "}
-c["Grants Skill: Raise Shield 40% increased Block chance"]={nil,"Grants Skill: Raise Shield 40% increased Block chance "}
-c["Grants Skill: Raise Shield 50% increased Block chance"]={nil,"Grants Skill: Raise Shield 50% increased Block chance "}
-c["Grants Skill: Raise Shield 60% increased Block chance"]={nil,"Grants Skill: Raise Shield 60% increased Block chance "}
-c["Grants Skill: Raise Shield 666% increased Armour and Energy Shield"]={nil,"Grants Skill: Raise Shield 666% increased Armour and Energy Shield "}
-c["Grants Skill: Raise Shield 80% increased Armour"]={nil,"Grants Skill: Raise Shield 80% increased Armour "}
-c["Grants Skill: Raise Shield 80% increased Block chance"]={nil,"Grants Skill: Raise Shield 80% increased Block chance "}
-c["Grants Skill: Raise Shield Grants Skill: Cast on Block"]={nil,nil}
+c["Grants Skill: Raise Shield"]={{[1]={flags=0,keywordFlags=0,name="ExtraSkill",type="LIST",value={level=1,skillId="ShieldBlockPlayer"}}},nil}
 c["Grants Skill: Shattering Concoction"]={{[1]={flags=0,keywordFlags=0,name="ExtraSkill",type="LIST",value={level=1,skillId="ShatteringConcoctionPlayer"}}},nil}
 c["Grants Skill: Sorcery Ward"]={{[1]={flags=0,keywordFlags=0,name="ExtraSkill",type="LIST",value={level=1,skillId="SorceryWardPlayer"}}},nil}
 c["Grants Skill: Summon Infernal Hound"]={{[1]={flags=0,keywordFlags=0,name="ExtraSkill",type="LIST",value={level=1,skillId="SummonInfernalHoundPlayer"}}},nil}

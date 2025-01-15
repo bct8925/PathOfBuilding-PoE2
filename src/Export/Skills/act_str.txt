@@ -129,6 +129,14 @@ local skills, mod, flag, skill = ...
 #mods
 #skillEnd
 
+#from item
+#skill StaffConsecratePlayer
+#startSets
+#set StaffConsecratePlayer
+#flags
+#mods
+#skillEnd
+
 #skill DefianceBannerReservationPlayer
 #startSets
 #skillEnd
@@ -200,6 +208,14 @@ statMap = {
 #startSets
 #set ExplosiveGrenadePlayer
 #flags attack area projectile duration
+#mods
+#skillEnd
+
+#from item
+#skill ExsanguinatePlayer
+#startSets
+#set ExsanguinatePlayer
+#flags
 #mods
 #skillEnd
 
@@ -545,6 +561,14 @@ statMap = {
 #flags
 #mods
 #set PerfectStrikeShockwavePlayer
+#flags
+#mods
+#skillEnd
+
+#from item
+#skill ReapPlayer
+#startSets
+#set ReapPlayer
 #flags
 #mods
 #skillEnd

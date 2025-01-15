@@ -2626,6 +2626,47 @@ skills["MeleeQuarterstaffPlayer"] = {
 		},
 	}
 }
+skills["ShieldBlockPlayer"] = {
+	name = "Raise Shield",
+	baseTypeName = "Raise Shield",
+	fromItem = true,
+	color = 4,
+	description = "Raise your shield to Block all incoming blockable hits. Blocking too much damage while your shield is raised may stagger you.",
+	skillTypes = { [SkillType.Channel] = true, [SkillType.RequiresShield] = true, [SkillType.Nonpathing] = true, },
+	castTime = 1,
+	qualityStats = {
+	},
+	levels = {
+		[1] = { attackTime = 1000, levelRequirement = 0, },
+	},
+	statSets = {
+		[1] = {
+			label = "Raise Shield",
+			incrementalEffectiveness = 0.054999999701977,
+			statDescriptionScope = "skill_stat_descriptions",
+			baseFlags = {
+			},
+			constantStats = {
+				{ "movement_speed_+%_final_while_performing_action", -70 },
+				{ "movement_speed_acceleration_+%_per_second_while_performing_action", 160 },
+				{ "movement_speed_while_performing_action_locked_duration_%", 60 },
+				{ "channel_skill_end_animation_duration_override_ms", 35 },
+				{ "active_block_light_stun_threshold_+%_final", 50 },
+				{ "base_poise_decay_delay_ms_after_action_end", 2000 },
+				{ "skill_animation_duration_multiplier_override", 4 },
+				{ "base_minimum_channel_time_ms", 250 },
+			},
+			stats = {
+				"can_perform_skill_while_moving",
+				"base_poise_does_not_decay_during_action",
+				"skill_is_not_considered_a_skill",
+			},
+			levels = {
+				[1] = { actorLevel = 1, },
+			},
+		},
+	}
+}
 skills["ShatteringConcoctionPlayer"] = {
 	name = "Shattering Concoction",
 	baseTypeName = "Shattering Concoction",
