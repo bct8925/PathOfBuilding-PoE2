@@ -673,6 +673,7 @@ local modNameList = {
 	["attack critical hit chance"] = { "CritChance", flags = ModFlag.Attack },
 	["critical damage bonus"] = "CritMultiplier",
 	["attack critical damage bonus"] = { "CritMultiplier", flags = ModFlag.Attack },
+	["critical spell damage bonus"] = { "CritMultiplier", flags = ModFlag.Spell },
 	["accuracy"] = "Accuracy",
 	["accuracy rating"] = "Accuracy",
 	["minion accuracy rating"] = { "Accuracy", addToMinion = true },

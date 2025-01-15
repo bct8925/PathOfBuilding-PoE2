@@ -896,8 +896,7 @@ c["15% increased Critical Hit Chance for Attacks"]={{[1]={flags=1,keywordFlags=0
 c["15% increased Critical Hit Chance for Spells"]={{[1]={flags=2,keywordFlags=0,name="CritChance",type="INC",value=15}},nil}
 c["15% increased Critical Hit Chance with Daggers"]={{[1]={flags=524292,keywordFlags=0,name="CritChance",type="INC",value=15}},nil}
 c["15% increased Critical Hit Chance with Flails"]={{[1]={flags=134217732,keywordFlags=0,name="CritChance",type="INC",value=15}},nil}
-c["15% increased Critical Spell Damage Bonus"]={{[1]={flags=2,keywordFlags=0,name="Damage",type="INC",value=15}}," Critical   Bonus "}
-c["15% increased Critical Spell Damage Bonus 15% increased Magnitude of Damaging Ailments you inflict with Critical Hits"]={{[1]={[1]={type="Condition",var="CriticalStrike"},flags=2,keywordFlags=0,name="Damage",type="INC",value=15}}," Critical   Bonus 15% increased Magnitude of Damaging Ailments you inflict  "}
+c["15% increased Critical Spell Damage Bonus"]={{[1]={flags=2,keywordFlags=0,name="CritMultiplier",type="INC",value=15}},nil}
 c["15% increased Crossbow Reload Speed"]={{[1]={flags=67108865,keywordFlags=0,name="ReloadSpeed",type="INC",value=15}},nil}
 c["15% increased Damage for each type of Elemental Ailment on Enemy"]={{[1]={flags=0,keywordFlags=0,name="Damage",type="INC",value=15}},"  for each type of Elemental Ailment on Enemy "}
 c["15% increased Damage if you have Consumed a Corpse Recently"]={{[1]={[1]={type="Condition",var="ConsumedCorpseRecently"},flags=0,keywordFlags=0,name="Damage",type="INC",value=15}},nil}
@@ -1643,6 +1642,7 @@ c["40% increased Critical Hit Chance"]={{[1]={flags=0,keywordFlags=0,name="CritC
 c["40% increased Critical Hit Chance against Enemies that are affected"]={{[1]={flags=0,keywordFlags=0,name="CritChance",type="INC",value=40}},"  against Enemies that are affected "}
 c["40% increased Critical Hit Chance against Enemies that are affected by no Elemental Ailments"]={{[1]={[1]={actor="enemy",neg=true,type="ActorCondition",varList={[1]="Frozen",[2]="Chilled",[3]="Shocked",[4]="Ignited",[5]="Scorched",[6]="Brittle",[7]="Sapped"}},[2]={type="Condition",var="Effective"},flags=0,keywordFlags=0,name="CritChance",type="INC",value=40}},nil}
 c["40% increased Critical Hit Chance for Spells"]={{[1]={flags=2,keywordFlags=0,name="CritChance",type="INC",value=40}},nil}
+c["40% increased Critical Spell Damage Bonus"]={{[1]={flags=2,keywordFlags=0,name="CritMultiplier",type="INC",value=40}},nil}
 c["40% increased Crossbow Reload Speed"]={{[1]={flags=67108865,keywordFlags=0,name="ReloadSpeed",type="INC",value=40}},nil}
 c["40% increased Curse Duration"]={{[1]={flags=0,keywordFlags=2,name="Duration",type="INC",value=40}},nil}
 c["40% increased Damage"]={{[1]={flags=0,keywordFlags=0,name="Damage",type="INC",value=40}},nil}
@@ -1789,8 +1789,7 @@ c["50% increased Critical Damage Bonus during any Flask Effect"]={{[1]={[1]={typ
 c["50% increased Critical Hit Chance"]={{[1]={flags=0,keywordFlags=0,name="CritChance",type="INC",value=50}},nil}
 c["50% increased Critical Hit Chance against Enemies on Full Life"]={{[1]={[1]={actor="enemy",type="ActorCondition",var="FullLife"},flags=0,keywordFlags=0,name="CritChance",type="INC",value=50}},nil}
 c["50% increased Critical Hit Chance for Spells"]={{[1]={flags=2,keywordFlags=0,name="CritChance",type="INC",value=50}},nil}
-c["50% increased Critical Spell Damage Bonus"]={{[1]={flags=2,keywordFlags=0,name="Damage",type="INC",value=50}}," Critical   Bonus "}
-c["50% increased Critical Spell Damage Bonus +17% to Chaos Resistance"]={{[1]={flags=2,keywordFlags=0,name="Damage",type="INC",value=50}}," Critical   Bonus +17% to Chaos Resistance "}
+c["50% increased Critical Spell Damage Bonus"]={{[1]={flags=2,keywordFlags=0,name="CritMultiplier",type="INC",value=50}},nil}
 c["50% increased Damage"]={{[1]={flags=0,keywordFlags=0,name="Damage",type="INC",value=50}},nil}
 c["50% increased Damage with Hits against Frozen Enemies"]={{[1]={[1]={actor="enemy",type="ActorCondition",var="Frozen"},flags=0,keywordFlags=262144,name="Damage",type="INC",value=50}},nil}
 c["50% increased Defences from Equipped Shield"]={{[1]={[1]={slotName="Weapon 2",type="SlotName"},flags=0,keywordFlags=0,name="Defences",type="INC",value=50}},nil}
