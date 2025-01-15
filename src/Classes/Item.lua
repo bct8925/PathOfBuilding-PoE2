@@ -663,15 +663,6 @@ function ItemClass:ParseRaw(raw, rarity, highQuality)
 						self.affixes = (self.base.subType and data.itemMods[self.base.type..self.base.subType])
 								or data.itemMods[self.base.type]
 								or data.itemMods.Item
-						if self.base.flask then
-							if self.base.utility_flask then
-								self.enchantments = data.enchantments["UtilityFlask"]
-							else
-								self.enchantments = data.enchantments["Flask"]
-							end
-						else
-							self.enchantments = data.enchantments[self.base.type]
-						end
 						self.corruptible = self.base.type ~= "Flask" and self.base.type ~= "Charm" and self.base.type ~= "Rune" and self.base.type ~= "SoulCore"
 						self.clusterJewel = data.clusterJewels and data.clusterJewels.jewels[self.baseName]
 						self.requirements.str = self.base.req.str or 0

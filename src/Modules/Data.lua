@@ -520,19 +520,6 @@ data.jewelRadii = {
 
 data.jewelRadius = data.setJewelRadiiGlobally(latestTreeVersion)
 
-data.enchantmentSource = {
-	{ name = "ENKINDLING", label = "Enkindling Orb" },
-	{ name = "INSTILLING", label = "Instilling Orb" },
-	{ name = "RUNESMITH", label = "Runecraft Bench" },
-	{ name = "HEIST", label = "Heist" },
-	{ name = "HARVEST", label = "Harvest" },
-	{ name = "DEDICATION", label = "Dedication to the Goddess" },
-	{ name = "ENDGAME", label = "Eternal Labyrinth" },
-	{ name = "MERCILESS", label = "Merciless Labyrinth" },
-	{ name = "CRUEL", label = "Cruel Labyrinth" },
-	{ name = "NORMAL", label = "Normal Labyrinth" },
-}
-
 -- Stat descriptions
 data.describeStats = LoadModule("Modules/StatDescriber")
 
@@ -545,34 +532,7 @@ data.itemMods = {
 	Corruption = LoadModule("Data/ModCorrupted"),
 	Runes = LoadModule("Data/ModRunes")
 }
-data.enchantments = {
-	["Helmet"] = LoadModule("Data/EnchantmentHelmet"),
-	["Boots"] = LoadModule("Data/EnchantmentBoots"),
-	["Gloves"] = LoadModule("Data/EnchantmentGloves"),
-	["Belt"] = LoadModule("Data/EnchantmentBelt"),
-	["Body Armour"] = LoadModule("Data/EnchantmentBody"),
-	["Weapon"] = LoadModule("Data/EnchantmentWeapon"),
-	["UtilityFlask"] = LoadModule("Data/EnchantmentFlask"),
-}
 
-do
-	data.enchantments["Flask"] = data.enchantments["UtilityFlask"]--["HARVEST"]
-	for baseType, _ in pairs(data.weaponTypeInfo) do
-		data.enchantments[baseType] = { }
-		for enchantmentType, enchantmentList in pairs(data.enchantments["Weapon"]) do
-			if type(enchantmentList[1]) == "string" then
-				data.enchantments[baseType][enchantmentType] = enchantmentList
-			elseif type(enchantmentList[1]) == "table" then
-				data.enchantments[baseType][enchantmentType] = {}
-				for _, enchantment in ipairs(enchantmentList) do
-					if enchantment.types[baseType] then
-						t_insert(data.enchantments[baseType][enchantmentType], table.concat(enchantment, "/"))
-					end
-				end
-			end
-		end
-	end					
-end
 data.costs = LoadModule("Data/Costs")
 do
 	local map = { }
