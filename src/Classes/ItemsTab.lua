@@ -1646,6 +1646,11 @@ function ItemsTabClass:UpdateRuneControls()
 		elseif item.base.weapon then
 			self.controls["displayItemRune"..i].list = runeWeaponModLines
 		end
+		for j, modLine in ipairs(self.controls["displayItemRune"..i].list) do
+			if item.runes[i] == modLine.name then
+				self.controls["displayItemRune"..i].selIndex = j
+			end
+		end
 	end
 end
 
