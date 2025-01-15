@@ -130,25 +130,6 @@ local ItemsTabClass = newClass("ItemsTab", "UndoHandler", "ControlHost", "Contro
 				swapSlot.socketList[i] = socket
 			end
 		end
-		if slotName == "Weapon 1" or slotName == "Weapon 2" or slotName == "Helmet" or slotName == "Gloves" or slotName == "Body Armour" or slotName == "Boots" or slotName == "Belt" then
-			-- Add Rune / Soul Core Socket slots
-			local maxSocketCount = 3
-			if slotName == "Body Armour" then
-				maxSocketCount = 6
-			end
-			for i = 1, maxSocketCount do
-				local socket = new("ItemSlotControl", {"TOPLEFT",prevSlot,"BOTTOMLEFT"}, 0, 2, self, slotName.." Socket "..i, "Socket #"..i)			
-				addSlot(socket)
-				socket.parentSlot = slot
-				if slotName:match("Weapon") then
-					socket.weaponSet = 1
-					socket.shown = function()
-						return not socket.inactive and not self.activeItemSet.useSecondWeaponSet
-					end
-				end
-				slot.socketList[i] = socket
-			end
-		end
 	end
 
 	-- Passive tree dropdown controls
@@ -1907,8 +1888,6 @@ function ItemsTabClass:IsItemValidForSlot(item, slotName, itemSet)
 			return true
 		end
 	elseif item.type == slotType then
-		return true
-	elseif (item.type == "Rune" or item.type == "SoulCore") and slotName:match("Socket") then
 		return true
 	elseif slotName == "Weapon 1" or slotName == "Weapon 1 Swap" or slotName == "Weapon" then
 		return item.base.tags.onehand or item.base.tags.twohand

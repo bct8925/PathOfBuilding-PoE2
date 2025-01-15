@@ -100,17 +100,6 @@ function ItemSlotClass:Populate()
 	if not self.selItemId or not self.itemsTab.items[self.selItemId] or not self.itemsTab:IsItemValidForSlot(self.itemsTab.items[self.selItemId], self.slotName) then
 		self:SetSelItemId(0)
 	end
-
-	-- Update Rune / Soul Core Sockets
-	local socketCount = 0
-	if self.selItemId > 0 then
-		local selItem = self.itemsTab.items[self.selItemId]
-		socketCount = selItem.itemSocketCount or 0
-	end
-	for i, socket in ipairs(self.socketList) do
-		socket.inactive = i > socketCount
-
-	end
 end
 
 function ItemSlotClass:CanReceiveDrag(type, value)

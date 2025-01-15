@@ -1232,9 +1232,6 @@ local preFlagList = {
 	-- While in the presence of...
 	["^while a unique enemy is in your presence, "] = { tag = { type = "ActorCondition", actor = "enemy", var = "RareOrUnique" } },
 	["^while a pinnacle atlas boss is in your presence, "] = { tag = { type = "ActorCondition", actor = "enemy", var = "PinnacleBoss" } },
-	-- Rune and SoulCore related
-	["^armour: "] = { tag = { type = "SocketedIn", slotType = "Armour" } },
-	["^martial weapons: "] = { tag = { type = "SocketedIn", slotType = "Martial Weapons" } },
 }
 
 -- List of modifier tags
@@ -1271,7 +1268,7 @@ local modTagList = {
 	["per (%d+) player levels"] = function(num) return { tag = { type = "Multiplier", var = "Level", div = num } } end,
 	["per defiance"] = { tag = { type = "Multiplier", var = "Defiance" } },
 	["per (%d+)%% (%a+) effect on enemy"] = function(num, _, effectName) return { tag = { type = "Multiplier", var = firstToUpper(effectName) .. "Effect", div = num, actor = "enemy" } } end,
-	["per socketed rune or soul core"] = { tag = { type = "Multiplier", var = "SocketedItemsIn{SlotName}" } },
+	["per socketed rune or soul core"] = { tag = { type = "Multiplier", var = "RunesSocketedIn{SlotName}" } },
 	["per (%d+) (%a+) support gems socketed"] = function(num, _, color) return { tag = { type = "Multiplier", var = firstToUpper(color) .. "SupportGems", div = num } } end,
 	["for each equipped normal item"] = { tag = { type = "Multiplier", var = "NormalItem" } },
 	["for each normal item equipped"] = { tag = { type = "Multiplier", var = "NormalItem" } },

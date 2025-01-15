@@ -25,7 +25,7 @@ c["+10 to Dexterity"]={{[1]={flags=0,keywordFlags=0,name="Dex",type="BASE",value
 c["+10 to Intelligence"]={{[1]={flags=0,keywordFlags=0,name="Int",type="BASE",value=10}},nil}
 c["+10 to Maximum Rage while wielding an Axe"]={{[1]={[1]={type="Condition",var="UsingAxe"},flags=0,keywordFlags=0,name="MaximumRage",type="BASE",value=10}},nil}
 c["+10 to Spirit"]={{[1]={flags=0,keywordFlags=0,name="Spirit",type="BASE",value=10}},nil}
-c["+10 to Spirit per Socketed Rune or Soul Core"]={{[1]={[1]={type="Multiplier",var="SocketedItemsIn{SlotName}"},flags=0,keywordFlags=0,name="Spirit",type="BASE",value=10}},nil}
+c["+10 to Spirit per Socketed Rune or Soul Core"]={{[1]={[1]={type="Multiplier",var="RunesSocketedIn{SlotName}"},flags=0,keywordFlags=0,name="Spirit",type="BASE",value=10}},nil}
 c["+10 to Strength"]={{[1]={flags=0,keywordFlags=0,name="Str",type="BASE",value=10}},nil}
 c["+10 to Strength and Dexterity"]={{[1]={flags=0,keywordFlags=0,name="Str",type="BASE",value=10},[2]={flags=0,keywordFlags=0,name="Dex",type="BASE",value=10},[3]={flags=0,keywordFlags=0,name="StrDex",type="BASE",value=10}},nil}
 c["+10 to all Attributes"]={{[1]={flags=0,keywordFlags=0,name="Str",type="BASE",value=10},[2]={flags=0,keywordFlags=0,name="Dex",type="BASE",value=10},[3]={flags=0,keywordFlags=0,name="Int",type="BASE",value=10},[4]={flags=0,keywordFlags=0,name="All",type="BASE",value=10}},nil}
@@ -40,7 +40,7 @@ c["+10% to Lightning Resistance"]={{[1]={flags=0,keywordFlags=0,name="LightningR
 c["+10% to Maximum Chaos Resistance"]={{[1]={flags=0,keywordFlags=0,name="ChaosResistMax",type="BASE",value=10}},nil}
 c["+10% to Quality of all Skills"]={{[1]={flags=0,keywordFlags=0,name="GemProperty",type="LIST",value={key="quality",keyword="all",value=10}}},nil}
 c["+10% to all Elemental Resistances"]={{[1]={flags=0,keywordFlags=0,name="ElementalResist",type="BASE",value=10}},nil}
-c["+10% to all Elemental Resistances per Socketed Rune or Soul Core"]={{[1]={[1]={type="Multiplier",var="SocketedItemsIn{SlotName}"},flags=0,keywordFlags=0,name="ElementalResist",type="BASE",value=10}},nil}
+c["+10% to all Elemental Resistances per Socketed Rune or Soul Core"]={{[1]={[1]={type="Multiplier",var="RunesSocketedIn{SlotName}"},flags=0,keywordFlags=0,name="ElementalResist",type="BASE",value=10}},nil}
 c["+100 Intelligence Requirement"]={{[1]={flags=0,keywordFlags=0,name="IntRequirement",type="BASE",value=100}},nil}
 c["+100 to Accuracy Rating"]={{[1]={flags=0,keywordFlags=0,name="Accuracy",type="BASE",value=100}},nil}
 c["+100 to Evasion Rating"]={{[1]={flags=0,keywordFlags=0,name="Evasion",type="BASE",value=100}},nil}
@@ -635,7 +635,7 @@ c["10% increased Freeze Buildup"]={{}," Freeze Buildup "}
 c["10% increased Freeze Buildup 8% increased Elemental Damage"]={{[1]={flags=0,keywordFlags=0,name="ElementalDamage",type="INC",value=10}}," Freeze Buildup 8% increased  "}
 c["10% increased Freeze Threshold"]={{}," Freeze Threshold "}
 c["10% increased Global Defences"]={{[1]={[1]={type="Global"},flags=0,keywordFlags=0,name="Defences",type="INC",value=10}},nil}
-c["10% increased Global Defences per Socketed Rune or Soul Core"]={{[1]={[1]={type="Global"},[2]={type="Multiplier",var="SocketedItemsIn{SlotName}"},flags=0,keywordFlags=0,name="Defences",type="INC",value=10}},nil}
+c["10% increased Global Defences per Socketed Rune or Soul Core"]={{[1]={[1]={type="Global"},[2]={type="Multiplier",var="RunesSocketedIn{SlotName}"},flags=0,keywordFlags=0,name="Defences",type="INC",value=10}},nil}
 c["10% increased Intelligence"]={{[1]={flags=0,keywordFlags=0,name="Int",type="INC",value=10}},nil}
 c["10% increased Knockback Distance"]={{[1]={flags=0,keywordFlags=0,name="EnemyKnockbackDistance",type="INC",value=10}},nil}
 c["10% increased Life Recovery from Flasks"]={{[1]={flags=0,keywordFlags=0,name="FlaskLifeRecovery",type="INC",value=10}},nil}
@@ -664,7 +664,7 @@ c["10% increased Poison Duration for each Poison you have inflicted Recently, up
 c["10% increased Projectile Damage"]={{[1]={flags=1024,keywordFlags=0,name="Damage",type="INC",value=10}},nil}
 c["10% increased Projectile Speed"]={{[1]={flags=0,keywordFlags=0,name="ProjectileSpeed",type="INC",value=10}},nil}
 c["10% increased Rarity of Items found"]={{[1]={flags=0,keywordFlags=0,name="LootRarity",type="INC",value=10}},nil}
-c["10% increased Rarity of Items found per Socketed Rune or Soul Core"]={{[1]={[1]={type="Multiplier",var="SocketedItemsIn{SlotName}"},flags=0,keywordFlags=0,name="LootRarity",type="INC",value=10}},nil}
+c["10% increased Rarity of Items found per Socketed Rune or Soul Core"]={{[1]={[1]={type="Multiplier",var="RunesSocketedIn{SlotName}"},flags=0,keywordFlags=0,name="LootRarity",type="INC",value=10}},nil}
 c["10% increased Skill Effect Duration"]={{[1]={flags=0,keywordFlags=0,name="Duration",type="INC",value=10}},nil}
 c["10% increased Skill Speed"]={{[1]={flags=0,keywordFlags=0,name="Speed",type="INC",value=10},[2]={flags=0,keywordFlags=0,name="WarcrySpeed",type="INC",value=10}},nil}
 c["10% increased Spell Damage"]={{[1]={flags=2,keywordFlags=0,name="Damage",type="INC",value=10}},nil}
@@ -1731,7 +1731,7 @@ c["5% increased Attack Speed if you've been Hit Recently"]={{[1]={[1]={type="Con
 c["5% increased Attack Speed with Daggers"]={{[1]={flags=524293,keywordFlags=0,name="Speed",type="INC",value=5}},nil}
 c["5% increased Attack and Cast Speed"]={{[1]={flags=0,keywordFlags=0,name="Speed",type="INC",value=5}},nil}
 c["5% increased Attack and Cast Speed with Lightning Skills"]={{[1]={flags=0,keywordFlags=128,name="Speed",type="INC",value=5}},nil}
-c["5% increased Attributes per Socketed Rune or Soul Core"]={{[1]={[1]={type="Multiplier",var="SocketedItemsIn{SlotName}"},flags=0,keywordFlags=0,name="Str",type="INC",value=5},[2]={[1]={type="Multiplier",var="SocketedItemsIn{SlotName}"},flags=0,keywordFlags=0,name="Dex",type="INC",value=5},[3]={[1]={type="Multiplier",var="SocketedItemsIn{SlotName}"},flags=0,keywordFlags=0,name="Int",type="INC",value=5},[4]={[1]={type="Multiplier",var="SocketedItemsIn{SlotName}"},flags=0,keywordFlags=0,name="All",type="INC",value=5}},nil}
+c["5% increased Attributes per Socketed Rune or Soul Core"]={{[1]={[1]={type="Multiplier",var="RunesSocketedIn{SlotName}"},flags=0,keywordFlags=0,name="Str",type="INC",value=5},[2]={[1]={type="Multiplier",var="RunesSocketedIn{SlotName}"},flags=0,keywordFlags=0,name="Dex",type="INC",value=5},[3]={[1]={type="Multiplier",var="RunesSocketedIn{SlotName}"},flags=0,keywordFlags=0,name="Int",type="INC",value=5},[4]={[1]={type="Multiplier",var="RunesSocketedIn{SlotName}"},flags=0,keywordFlags=0,name="All",type="INC",value=5}},nil}
 c["5% increased Block chance"]={{[1]={flags=0,keywordFlags=0,name="BlockChance",type="INC",value=5}},nil}
 c["5% increased Cast Speed"]={{[1]={flags=16,keywordFlags=0,name="Speed",type="INC",value=5}},nil}
 c["5% increased Chaos Damage"]={{[1]={flags=0,keywordFlags=0,name="ChaosDamage",type="INC",value=5}},nil}
@@ -1744,8 +1744,8 @@ c["5% increased Experience gain"]={{}," Experience gain "}
 c["5% increased Flask Effect Duration"]={{[1]={flags=0,keywordFlags=0,name="FlaskDuration",type="INC",value=5}},nil}
 c["5% increased Magnitude of Ailments you inflict"]={{[1]={flags=0,keywordFlags=6291456,name="AilmentMagnitude",type="INC",value=5}},nil}
 c["5% increased Mana Cost of Skills"]={{[1]={flags=0,keywordFlags=0,name="ManaCost",type="INC",value=5}},nil}
-c["5% increased Maximum Life per Socketed Rune or Soul Core"]={{[1]={[1]={type="Multiplier",var="SocketedItemsIn{SlotName}"},flags=0,keywordFlags=0,name="Life",type="INC",value=5}},nil}
-c["5% increased Maximum Mana per Socketed Rune or Soul Core"]={{[1]={[1]={type="Multiplier",var="SocketedItemsIn{SlotName}"},flags=0,keywordFlags=0,name="Mana",type="INC",value=5}},nil}
+c["5% increased Maximum Life per Socketed Rune or Soul Core"]={{[1]={[1]={type="Multiplier",var="RunesSocketedIn{SlotName}"},flags=0,keywordFlags=0,name="Life",type="INC",value=5}},nil}
+c["5% increased Maximum Mana per Socketed Rune or Soul Core"]={{[1]={[1]={type="Multiplier",var="RunesSocketedIn{SlotName}"},flags=0,keywordFlags=0,name="Mana",type="INC",value=5}},nil}
 c["5% increased Movement Speed if you've Pinned an Enemy Recently"]={{[1]={flags=0,keywordFlags=0,name="MovementSpeed",type="INC",value=5}},"  if you've Pinned an Enemy Recently "}
 c["5% increased Movement Speed per Frenzy Charge"]={{[1]={[1]={type="Multiplier",var="FrenzyCharge"},flags=0,keywordFlags=0,name="MovementSpeed",type="INC",value=5}},nil}
 c["5% increased Rarity of Items found"]={{[1]={flags=0,keywordFlags=0,name="LootRarity",type="INC",value=5}},nil}
