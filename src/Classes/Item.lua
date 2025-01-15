@@ -795,11 +795,36 @@ function ItemClass:ParseRaw(raw, rarity, highQuality)
 		self.name = self.title .. ", " .. self.baseName:gsub(" %(.+%)","")
 	end
 	-- this will need more advanced logic for jewel sockets in items to work properly but could just be removed as items like this was only introduced during development.
-	if self.base and not (self.base.weapon or self.base.armour) then
-		self.sockets = { }
-		self.itemSocketCount = 0
-		self.runes = { }
+	if self.base then
+		if self.base.weapon or self.base.armour then
+			if #self.runes == 0 then
+				for i, modLine in ipairs(self.runeModLines) do
+					local value
+					local strippedModeLine = modLine.line:gsub("(%d%.?%d*)", function(val)
+						value = val
+						return "#"
+					end)
+					for name, runeMods in pairs(data.itemMods.Runes) do
+						local runeValue
+						local runeStrippedModeLine = (self.base.weapon and runeMods.weapon or runeMods.armour)[1]:gsub("(%d%.?%d*)", function(val)
+							runeValue = val
+							return "#"
+						end)
+						if strippedModeLine == runeStrippedModeLine then
+							for i = 1, round(value/runeValue) do
+								t_insert(self.runes, name)
+							end
+						end
+					end
+				end
+			end
+		else
+			self.sockets = { }
+			self.itemSocketCount = 0
+			self.runes = { }
+		end
 	end
+	
 	if self.base and not self.requirements.level then
 		if importedLevelReq and #self.sockets == 0 then
 			-- Requirements on imported items can only be trusted for items with no sockets
