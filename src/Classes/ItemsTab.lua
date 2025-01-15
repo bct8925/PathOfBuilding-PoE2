@@ -370,6 +370,7 @@ holding Shift will put it in the second.]])
 			return
 		end
 		self.displayItem.itemSocketCount = tonumber(buf)
+		self.displayItem:UpdateRunes()
 		self.displayItem:BuildAndParseRaw()
 		self:UpdateRuneControls()
 		self:UpdateDisplayItemTooltip()
@@ -543,6 +544,7 @@ holding Shift will put it in the second.]])
 		local drop
 		drop = new("DropDownControl", {"TOPLEFT",prev,"TOPLEFT"}, {i==1 and 40 or 0, 0, 418, 20}, nil, function(index, value)
 			self.displayItem.runes[i] = value.name
+			self.displayItem:UpdateRunes()
 			self.displayItem:BuildAndParseRaw()
 			self:UpdateDisplayItemTooltip()
 		end)
