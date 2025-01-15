@@ -720,17 +720,6 @@ function ItemClass:ParseRaw(raw, rarity, highQuality)
 					self.suffixes.limit = (self.suffixes.limit or 0) + (tonumber(lineLower:match("%+(%d+) suffix modifiers? allowed")) or 0) - (tonumber(lineLower:match("%-(%d+) suffix modifiers? allowed")) or 0)
 				elseif lineLower == "this item can be anointed by cassia" then
 					self.canBeAnointed = true
-				elseif lineLower == "can have a second enchantment modifier" then
-					self.canHaveTwoEnchants = true
-				elseif lineLower == "can have 1 additional enchantment modifiers" then
-					self.canHaveTwoEnchants = true
-				elseif lineLower == "can have 2 additional enchantment modifiers" then
-					self.canHaveTwoEnchants = true
-					self.canHaveThreeEnchants = true
-				elseif lineLower == "can have 3 additional enchantment modifiers" then
-					self.canHaveTwoEnchants = true
-					self.canHaveThreeEnchants = true
-					self.canHaveFourEnchants = true
 				end
 
 				local modLines
