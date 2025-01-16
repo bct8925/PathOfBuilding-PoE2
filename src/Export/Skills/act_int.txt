@@ -120,6 +120,13 @@ statMap = {
 #mods
 #skillEnd
 
+#skill SupportInvisibleMetaGemSupport
+#startSets
+#set MetaCastOnCritPlayer
+#flags
+#mods
+#skillEnd
+
 #skill MetaCastOnCritPlayer
 #startSets
 #set MetaCastOnCritPlayer
