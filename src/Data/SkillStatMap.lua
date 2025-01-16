@@ -911,6 +911,9 @@ return {
 ["lightning_damage_%_to_add_as_chaos"] = {
 	mod("LightningDamageGainAsChaos", "BASE", nil),
 },
+["non_skill_base_all_damage_%_to_gain_as_chaos"] = {
+	mod("DamageGainAsChaos", "BASE", nil),
+},
 ["non_skill_base_all_damage_%_to_gain_as_lightning_with_attacks"] = {
 	mod("DamageGainAsLightning", "BASE", nil, ModFlag.Attack),
 },
@@ -1098,6 +1101,18 @@ return {
 	flag("CannotShock"),
 	flag("CannotChill"),
 	flag("CannotFreeze"),
+	flag("CannotIgnite"),
+},
+["cannot_inflict_elemental_ailments"] = {
+	flag("CannotShock"),
+	flag("CannotChill"),
+	flag("CannotFreeze"),
+	flag("CannotIgnite"),
+	flag("CannotElectrocute"),
+},
+["active_skill_never_freeze_shock_ignite"] = {
+	flag("CannotFreeze"),
+	flag("CannotShock"),
 	flag("CannotIgnite"),
 },
 ["lightning_damage_cannot_shock"] = {
