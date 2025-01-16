@@ -494,10 +494,6 @@ local configSettings = {
 		modList:NewMod("Multiplier:EnemyAffectedBySiphoningTrap", "BASE", val, "Config")
 		modList:NewMod("Condition:SiphoningTrapSiphoning", "FLAG", true, "Config")
 	end },
-	{ label = "Snipe:", ifSkill = "Snipe" },
-	{ var = "configSnipeStages", type = "count", label = "# of Snipe stages:", ifSkill = "Snipe", tooltip = "Sets the number of stages reached before releasing Snipe.", apply = function(val, modList, enemyModList)
-		modList:NewMod("Multiplier:SnipeStage", "BASE", val, "Config")
-	end },
 	{ label = "Spectral Wolf:", ifSkill = "Summon Spectral Wolf" },
 	{ var = "configSpectralWolfCount", type = "count", label = "# of Active Spectral Wolves:", ifSkill = "Summon Spectral Wolf", tooltip = "Sets the number of active Spectral Wolves.\nThe maximum number of Spectral Wolves is 10.", apply = function(val, modList, enemyModList)
 		modList:NewMod("Multiplier:SpectralWolfCount", "BASE", m_min(val, 10), "Config")
@@ -597,6 +593,10 @@ local configSettings = {
 		elseif val == "Lightning" then
 			modList:NewMod("Condition:WaveOfConvictionLightningExposureActive", "FLAG", true, "Config")
 		end
+	end },
+	{ label = "Wind Dancer:", ifSkill = "Wind Dancer" },
+	{ var = "windDancerStacks", type = "count", label = "# of Wind Dancer Stacks:", ifSkill = "Wind Dancer", apply = function(val, modList, enemyModList)
+		modList:NewMod("Multiplier:WindDancerStacks", "BASE", val, "Config")
 	end },
 	{ var = "multiplierWoCExpiredDuration", type = "count", label = "% Wave of Conviction duration expired:", ifMod = "WaveOfConvictionDurationDotMulti", apply = function(val, modList, enemyModList)
 		modList:NewMod("Multiplier:WoCDurationExpired", "BASE", m_min(val, 100), "Config", { type = "Condition", var = "Effective" })
