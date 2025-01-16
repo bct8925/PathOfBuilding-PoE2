@@ -510,6 +510,10 @@ return {
 	mod("CooldownRecovery", "BASE", nil),
 	div = 1000,
 },
+["support_hourglass_display_cooldown_time_ms"] = {
+	mod("CooldownRecovery", "BASE", nil),
+	div = 1000,
+},
 ["base_cooldown_speed_+%_final"] = {
 	mod("CooldownRecovery", "MORE", nil),
 },
