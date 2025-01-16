@@ -1198,6 +1198,9 @@ skills["BoneBlastPlayer"] = {
 			damageIncrementalEffectiveness = 0.0094999996945262,
 			statDescriptionScope = "bone_blast",
 			baseFlags = {
+				spell = true,
+				duration = true,
+				area = true,
 			},
 			constantStats = {
 				{ "base_skill_effect_duration", 1000 },

@@ -265,8 +265,8 @@ return {
 ["skill_double_hits_when_dual_wielding"] = {
 	skill("doubleHitsWhenDualWielding", true),
 },
-["base_spell_repeat_count"] = {
-	mod("RepeatCount", "BASE", nil, 0, 0, {type = "SkillType", skillType = SkillType.Multicastable }),
+["support_spell_echo_number_of_echo_cascades"] = {
+	mod("RepeatCount", "BASE", nil, 0, 0, {type = "SkillType", skillType = SkillType.Cascadable }),
 },
 ["base_melee_attack_repeat_count"] = {
 	mod("RepeatCount", "BASE", nil, 0, 0, { type = "SkillType", skillType = SkillType.Multistrikeable }),
@@ -420,6 +420,10 @@ return {
 },
 ["base_mana_leech_from_elemental_damage_permyriad"] = {
 	mod("ElementalDamageManaLeech", "BASE", nil),
+	div = 100,
+},
+["base_mana_leech_from_physical_attack_damage_permyriad"] = {
+	mod("PhysicalDamageManaLeech", "BASE", nil, ModFlag.Attack),
 	div = 100,
 },
 ["base_life_leech_from_attack_damage_permyriad"] = {

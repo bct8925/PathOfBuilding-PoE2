@@ -488,6 +488,16 @@ local configSettings = {
 	{ var = "animateWeaponLingeringBlade", type = "check", label = "Are you animating Lingering Blades?", ifSkill = "Animate Weapon", tooltip = "Enables additional damage given to Lingering Blades\nThe exact weapon is unknown but should be similar to Glass Shank", apply = function(val, modList, enemyModList)
 		modList:NewMod("Condition:AnimatingLingeringBlades", "FLAG", true, "Config")
 	end },
+	{ label = "Rising Tempest:", ifSkill = "Rising Tempest" },
+	{ var = "risingTempestLightning", type = "check", label = "Lightning Skill used Recently:", ifSkill = "Rising Tempest", apply = function(val, modList, enemyModList)
+		modList:NewMod("Multiplier:DifferentElementalSkillUsedRecently", "BASE", 1, "Config")
+	end },
+	{ var = "risingTempestCold", type = "check", label = "Cold Skill used Recently:", ifSkill = "Rising Tempest", apply = function(val, modList, enemyModList)
+		modList:NewMod("Multiplier:DifferentElementalSkillUsedRecently", "BASE", 1, "Config")
+	end },
+	{ var = "risingTempestFire", type = "check", label = "Fire Skill used Recently:", ifSkill = "Rising Tempest", apply = function(val, modList, enemyModList)
+		modList:NewMod("Multiplier:DifferentElementalSkillUsedRecently", "BASE", 1, "Config")
+	end },
 	{ label = "Shrapnel Ballista:", ifSkill = "Shrapnel Ballista", includeTransfigured = true },
 	{ var = "ShrapnelBallistaProjectileOverlap", type = "count", label = "# of Shotgunning Projectiles:", tooltip = "Maximum is limited by the number of Projectiles., default of 1, if Arrow nova then default of maximum projectiles", ifSkill = "Shrapnel Ballista", includeTransfigured = true, apply = function(val, modList, enemyModList)
 		modList:NewMod("SkillData", "LIST", { key = "ShrapnelBallistaProjectileOverlap", value = val }, "Config", { type = "SkillName", skillName = "Shrapnel Ballista", includeTransfigured = true })

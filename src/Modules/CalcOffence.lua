@@ -868,7 +868,8 @@ function calcs.offence(env, actor, activeSkill)
 
 	if skillModList:Flag(nil, "HasSeals") and activeSkill.skillTypes[SkillType.CanRapidFire] and not skillModList:Flag(nil, "NoRepeatBonuses") then
 		-- Applies DPS multiplier based on seals count
-		output.SealCooldown = skillModList:Sum("BASE", skillCfg, "SealGainFrequency") / calcLib.mod(skillModList, skillCfg, "SealGainFrequency")
+		local totalCastSpeed = 1 / activeSkill.activeEffect.grantedEffect.castTime * calcLib.mod(skillModList, skillCfg, "Speed")
+		output.SealCooldown =  1 / totalCastSpeed * skillModList:Sum("BASE", skillCfg, "SealGainFrequency") / calcLib.mod(skillModList, skillCfg, "SealGainFrequency") / 100
 		output.SealMax = skillModList:Sum("BASE", skillCfg, "SealCount")
 		output.AverageBurstHits = output.SealMax
 		output.TimeMaxSeals = output.SealCooldown * output.SealMax
@@ -880,9 +881,9 @@ function calcs.offence(env, actor, activeSkill)
 					skillModList:NewMod("CritChance", "INC", mod.value, mod.source, mod.flags, mod.keywordFlags, unpack(mod))
 				end
 				env.player.mainSkill.skillData.dpsMultiplier = (1 + output.SealMax * calcLib.mod(skillModList, skillCfg, "SealRepeatPenalty"))
-				env.player.mainSkill.skillData.hitTimeOverride = m_max(output.TimeMaxSeals, (1 / activeSkill.activeEffect.grantedEffect.castTime * 1.1 * calcLib.mod(skillModList, skillCfg, "Speed") * output.ActionSpeedMod))
+				env.player.mainSkill.skillData.hitTimeOverride = m_max(output.TimeMaxSeals, totalCastSpeed * 1.1)
 			else
-				env.player.mainSkill.skillData.dpsMultiplier = 1 + 1 / output.SealCooldown / (1 / activeSkill.activeEffect.grantedEffect.castTime * 1.1 * calcLib.mod(skillModList, skillCfg, "Speed") * output.ActionSpeedMod) * calcLib.mod(skillModList, skillCfg, "SealRepeatPenalty")
+				env.player.mainSkill.skillData.dpsMultiplier = 1 + 1 / output.SealCooldown / (totalCastSpeed * 1.1) * calcLib.mod(skillModList, skillCfg, "SealRepeatPenalty")
 			end
 		end
 
@@ -890,9 +891,10 @@ function calcs.offence(env, actor, activeSkill)
 			breakdown.SealGainTime = { }
 			breakdown.multiChain(breakdown.SealGainTime, {
 				label = "Gain frequency:",
-				base = { "%.2fs ^8(base gain frequency)", skillModList:Sum("BASE", skillCfg, "SealGainFrequency") },
+				base = { "%.2fs ^8(base cast time)", activeSkill.activeEffect.grantedEffect.castTime },
 				{ "%.2f ^8(increased/reduced gain frequency)", 1 + skillModList:Sum("INC", skillCfg, "SealGainFrequency") / 100 },
-				{ "%.2f ^8(action speed modifier)",  output.ActionSpeedMod },
+				{ "%d%% ^8(of cast time)", skillModList:Sum("BASE", skillCfg, "SealGainFrequency") },
+				{ "%.2f ^8(increased/reduced cast speed)", 1 / calcLib.mod(skillModList, skillCfg, "Speed") },
 				total = s_format("= %.2fs ^8per Seal", output.SealCooldown),
 			})
 		end

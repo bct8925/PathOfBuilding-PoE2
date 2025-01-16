@@ -84,7 +84,7 @@ statMap = {
 #skill BoneBlastPlayer
 #startSets
 #set BoneBlastPlayer
-#flags
+#flags spell duration area
 #mods
 #skillEnd
 

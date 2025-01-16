@@ -22,6 +22,11 @@ skills["SupportAblationPlayer"] = {
 			label = "Ablation",
 			incrementalEffectiveness = 0.054999999701977,
 			statDescriptionScope = "gem_stat_descriptions",
+			statMap = {
+				["support_ablation_offering_skill_damage_+%_final"] = {
+					mod("Damage", "MORE", nil, 0, 0, { type = "SkillType", skillType = SkillType.Offering }),
+				},
+			},
 			baseFlags = {
 			},
 			constantStats = {
@@ -53,6 +58,11 @@ skills["SupportAmbushPlayer"] = {
 			label = "Ambush",
 			incrementalEffectiveness = 0.054999999701977,
 			statDescriptionScope = "gem_stat_descriptions",
+			statMap = {
+				["support_ambush_critical_strike_chance_vs_enemies_on_full_life_+%_final"] = {
+					mod("CritChance", "MORE", nil, 0, 0, { type = "ActorCondition", actor = "enemy", var = "FullLife" }),
+				},
+			},
 			baseFlags = {
 			},
 			constantStats = {
@@ -911,6 +921,14 @@ skills["SupportDanseMacabrePlayer"] = {
 			label = "Danse Macabre",
 			incrementalEffectiveness = 0.054999999701977,
 			statDescriptionScope = "gem_stat_descriptions",
+			statMap = {
+				["support_danse_macabre_offering_skill_damage_+%_final_if_consumed_additional_skeleton"] = {
+					mod("Damage", "MORE", nil, 0, 0, { type = "SkillType", skillType = SkillType.Offering }),
+				},
+				["offering_spells_effect_+%_if_consumed_additional_skeleton"] = {
+					mod("BuffEffect", "INC", nil, 0, 0, { type = "SkillType", skillType = SkillType.Offering }),
+				},
+			},
 			baseFlags = {
 			},
 			constantStats = {
@@ -2353,6 +2371,11 @@ skills["SupportPotentialPlayer"] = {
 			label = "Potential",
 			incrementalEffectiveness = 0.054999999701977,
 			statDescriptionScope = "gem_stat_descriptions",
+			statMap = {
+				["skill_consume_power_charge_to_gain_critical_strike_chance_+%_final"] = {
+					mod("CritChance", "MORE", nil, 0, 0, { type = "Multiplier", var = "RemovablePowerCharge", limit = 1 }),
+				},
+			},
 			baseFlags = {
 			},
 			constantStats = {
@@ -2383,6 +2406,11 @@ skills["SupportTempestuousTempoPlayer"] = {
 			label = "Rising Tempest",
 			incrementalEffectiveness = 0.054999999701977,
 			statDescriptionScope = "gem_stat_descriptions",
+			statMap = {
+				["support_elemental_damage_+%_final_per_different_elemental_skill_used_recently"] = {
+					mod("ElementalDamage", "MORE", nil, 0, 0, { type = "Multiplier", var = "DifferentElementalSkillUsedRecently" }),
+				},
+			},
 			baseFlags = {
 			},
 			constantStats = {
@@ -2444,6 +2472,11 @@ skills["SupportEnergyShieldOnShockKillPlayer"] = {
 			incrementalEffectiveness = 0.012699999846518,
 			damageIncrementalEffectiveness = 0.061500001698732,
 			statDescriptionScope = "gem_stat_descriptions",
+			statMap = {
+				["support_recover_%_maximum_energy_shield_killing_shocked_enemies"] = {
+					mod("EnergyShieldOnKill", "BASE", nil, 0, 0, { type = "PercentStat", stat = "EnergyShield", percent = 1 }, { type = "ActorCondition", actor = "enemy", var = "Shocked" })
+				},
+			},
 			baseFlags = {
 			},
 			constantStats = {
@@ -2503,6 +2536,14 @@ skills["SupportSpellCascadePlayer"] = {
 			label = "Spell Cascade",
 			incrementalEffectiveness = 0.054999999701977,
 			statDescriptionScope = "gem_stat_descriptions",
+			statMap = {
+				["support_spell_cascade_area_of_effect_+%_final"] = {
+					mod("AreaOfEffect", "MORE", nil),
+				},
+				["support_spell_cascade_damage_+%_final"] = {
+					mod("Damage", "MORE", nil),
+				},
+			},
 			baseFlags = {
 			},
 			constantStats = {
@@ -2535,6 +2576,14 @@ skills["SupportSpellEchoPlayer"] = {
 			label = "Spell Echo",
 			incrementalEffectiveness = 0.092720001935959,
 			statDescriptionScope = "gem_stat_descriptions",
+			statMap = {
+				["support_multicast_cast_speed_+%_final"] = {
+					mod("Speed", "MORE", nil, ModFlag.Cast),
+				},
+				["support_spell_echo_area_of_effect_+%_final"] = {
+					mod("AreaOfEffect", "MORE", nil),
+				},
+			},
 			baseFlags = {
 			},
 			constantStats = {
@@ -2624,6 +2673,11 @@ skills["SupportIncreasedCriticalDamagePlayer"] = {
 			baseEffectiveness = 0,
 			incrementalEffectiveness = 0.092720001935959,
 			statDescriptionScope = "gem_stat_descriptions",
+			statMap = {
+				["support_critical_damage_critical_strike_chance_+%_final"] = {
+					mod("CritChance", "MORE", nil),
+				},
+			},
 			baseFlags = {
 			},
 			constantStats = {
@@ -2654,7 +2708,21 @@ skills["SupportUnleashPlayer"] = {
 			label = "Unleash",
 			incrementalEffectiveness = 0.092720001935959,
 			statDescriptionScope = "gem_stat_descriptions",
+			statMap = {
+				["support_anticipation_rapid_fire_count"] = {
+					mod("SealCount", "BASE", nil),
+				},
+				["unleash_support_seal_gain_frequency_as_%_of_total_cast_time"] = {
+					mod("SealGainFrequency", "BASE", nil),
+				},
+				["support_spell_rapid_fire_repeat_use_damage_+%_final"] = {
+					mod("SealRepeatPenalty", "MORE", nil),
+				},
+			},
 			baseFlags = {
+			},
+			baseMods = {
+				flag("HasSeals"),
 			},
 			constantStats = {
 				{ "support_spell_rapid_fire_repeat_use_damage_+%_final", -50 },
@@ -2782,6 +2850,11 @@ skills["SupportWitheringTouchPlayer"] = {
 			label = "Withering Touch",
 			incrementalEffectiveness = 0.092720001935959,
 			statDescriptionScope = "gem_stat_descriptions",
+			statMap = {
+				["support_withering_touch_damage_+%_final"] = {
+					mod("Damage", "MORE", nil),
+				},
+			},
 			baseFlags = {
 			},
 			constantStats = {
