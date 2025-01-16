@@ -119,16 +119,6 @@ local ItemsTabClass = newClass("ItemsTab", "UndoHandler", "ControlHost", "Contro
 			swapSlot.shown = function()
 				return self.activeItemSet.useSecondWeaponSet
 			end
-			for i = 1, 3 do
-				local socket = new("ItemSlotControl", {"TOPLEFT",prevSlot,"BOTTOMLEFT"}, 0, 2, self, slotName.." Swap Socket "..i, "Socket #"..i)
-				addSlot(socket)
-				socket.parentSlot = swapSlot
-				socket.weaponSet = 2
-				socket.shown = function()
-					return not socket.inactive and self.activeItemSet.useSecondWeaponSet
-				end
-				swapSlot.socketList[i] = socket
-			end
 		end
 	end
 
