@@ -6378,21 +6378,21 @@ return {
 			name="IncrementalEffectiveness",
 			refTo="",
 			type="Float",
-			width=100
+			width=130
 		},
 		[8]={
 			list=false,
 			name="DamageIncrementalEffectiveness",
 			refTo="",
 			type="Float",
-			width=100
+			width=200
 		},
 		[9]={
 			list=true,
 			name="RemoveStats",
 			refTo="Stats",
 			type="Key",
-			width=1000
+			width=180
 		},
 		[10]={
 			list=false,

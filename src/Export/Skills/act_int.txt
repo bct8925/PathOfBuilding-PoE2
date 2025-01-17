@@ -621,51 +621,51 @@ end,
 #flags
 #mods
 #set HeraldOfIceOnKillPlayer
-#flags
+#flags attack area
 #mods
 #skillEnd
 
 #skill HexblastPlayer
 #startSets
 #set HexblastPlayer
-#flags
+#flags spell area
 #mods
 #skillEnd
 
 #skill IceNovaPlayer
 #startSets
 #set IceNovaPlayer
-#flags
+#flags spell area
 #mods
 #set IceNovaPlayerOnFrostbolt
-#flags
+#flags spell area
 #mods
 #skillEnd
 
 #skill IceStrikePlayer
 #startSets
 #set IceStrikePlayer
-#flags
+#flags attack area melee
 #mods
 #set IceStrikeThirdAttackPlayer
-#flags
+#flags attack area melee
 #mods
 #skillEnd
 
 #skill IncineratePlayer
 #startSets
 #set IncineratePlayer
-#flags
+#flags spell area duration
 #mods
 #set IncinerateGroundPlayer
-#flags
+#flags spell area duration
 #mods
 #skillEnd
 
 #skill KillingPalmPlayer
 #startSets
 #set KillingPalmPlayer
-#flags
+#flags attack area melee
 #mods
 #skillEnd
 
@@ -673,21 +673,21 @@ end,
 #skill LightningBoltPlayer
 #startSets
 #set LightningBoltPlayer
-#flags
+#flags spell area
 #mods
 #skillEnd
 
 #skill LightningConduitPlayer
 #startSets
 #set LightningConduitPlayer
-#flags
+#flags spell
 #mods
 #skillEnd
 
 #skill LightningWarpPlayer
 #startSets
 #set LightningWarpPlayer
-#flags
+#flags spell area duration
 #mods
 #skillEnd
 
@@ -701,7 +701,7 @@ end,
 #skill LingeringIllusionSpawnPlayer
 #startSets
 #set LingeringIllusionSpawnPlayer
-#flags
+#flags duration
 #mods
 #skillEnd
 
@@ -709,7 +709,7 @@ end,
 #skill LivingBombPlayer
 #startSets
 #set LivingBombPlayer
-#flags
+#flags spell area duration
 #mods
 #skillEnd
 
@@ -717,7 +717,7 @@ end,
 #skill MalicePlayer
 #startSets
 #set MalicePlayer
-#flags
+#flags area
 #mods
 #skillEnd
 
@@ -746,21 +746,21 @@ end,
 #skill MantraOfDestructionPlayer
 #startSets
 #set MantraOfDestructionPlayer
-#flags
+#flags duration
 #mods
 #skillEnd
 
 #skill OrbOfStormsPlayer
 #startSets
 #set OrbOfStormsPlayer
-#flags
+#flags spell chaining
 #mods
 #skillEnd
 
 #skill PainOfferingPlayer
 #startSets
 #set PainOfferingPlayer
-#flags
+#flags minion area
 #mods
 #skillEnd
 
@@ -768,14 +768,14 @@ end,
 #skill PowerSiphonPlayer
 #startSets
 #set PowerSiphonPlayer
-#flags
+#flags spell
 #mods
 #skillEnd
 
 #skill ProfaneRitualPlayer
 #startSets
 #set ProfaneRitualPlayer
-#flags
+#flags spell area
 #mods
 #skillEnd
 
@@ -854,21 +854,21 @@ statMap = {
 #skill SacrificePlayer
 #startSets
 #set SacrificePlayer
-#flags
+#flags minion
 #mods
 #skillEnd
 
 #skill ShatteringPalmPlayer
 #startSets
 #set ShatteringPalmPlayer
-#flags
+#flags attack area melee
 #mods
 #skillEnd
 
 #skill ShatteringPalmExplosionPlayer
 #startSets
 #set TriggeredFreezingWordExplosionPlayer
-#flags
+#flags attack area
 #mods
 #skillEnd
 
@@ -876,7 +876,7 @@ statMap = {
 #skill ShockNovaPlayer
 #startSets
 #set ShockNovaPlayer
-#flags
+#flags spell area
 #mods
 #skillEnd
 
@@ -884,17 +884,17 @@ statMap = {
 #skill SigilOfPowerPlayer
 #startSets
 #set SigilOfPowerPlayer
-#flags
+#flags spell area duration
 #mods
 #skillEnd
 
 #skill SiphoningStrikePlayer
 #startSets
 #set SiphoningStrikePlayer
-#flags
+#flags attack area melee
 #mods
 #set SiphoningStrikePulsePlayer
-#flags
+#flags attack area
 #mods
 #skillEnd
 
@@ -965,17 +965,17 @@ statMap = {
 #skill SolarOrbPlayer
 #startSets
 #set SolarOrbPlayer
-#flags
+#flags spell area duration
 #mods
 #set SolarOrbAuraPlayer
-#flags
+#flags spell area duration
 #mods
 #skillEnd
 
 #skill SoulOfferingPlayer
 #startSets
 #set SoulOfferingPlayer
-#flags
+#flags minion duration
 #mods
 #skillEnd
 
@@ -983,35 +983,35 @@ statMap = {
 #skill SoulrendPlayer
 #startSets
 #set SoulrendPlayer
-#flags
+#flags spell projectile duration
 #mods
 #skillEnd
 
 #skill SparkPlayer
 #startSets
 #set SparkPlayer
-#flags
+#flags spell projectile duration
 #mods
 #skillEnd
 
 #skill StaggeringPalmPlayer
 #startSets
 #set StaggeringPalmPlayer
-#flags
+#flags attack area
 #mods
 #skillEnd
 
 #skill StaggeringPalmProjectilePlayer
 #startSets
 #set StaggeringPalmProjectilePlayer
-#flags
+#flags attack projectile
 #mods
 #skillEnd
 
 #skill StaggeringPalmUnarmedProjectilePlayer
 #startSets
 #set StaggeringPalmUnarmedProjectilePlayer
-#flags
+#flags attack projectile
 #mods
 #skillEnd
 
@@ -1025,13 +1025,13 @@ statMap = {
 #skill TempestBellPlayer
 #startSets
 #set TempestBellPlayer
-#flags
+#flags attack area melee duration
 #mods
 #set TempestBellSlamPlayer
-#flags
+#flags attack area melee
 #mods
 #set TempestBellShockwavePlayer
-#flags
+#flags attack area melee
 #mods
 #skillEnd
 
@@ -1051,7 +1051,7 @@ statMap = {
 #skill TemporalChainsPlayer
 #startSets
 #set TemporalChainsPlayer
-#flags
+#flags area duration
 #mods
 #skillEnd
 
@@ -1074,7 +1074,7 @@ statMap = {
 #skill VaultingImpactPlayer
 #startSets
 #set VaultingImpactPlayer
-#flags
+#flags attack area melee
 #mods
 #skillEnd
 
@@ -1082,35 +1082,35 @@ statMap = {
 #skill VolatileDeadPlayer
 #startSets
 #set VolatileDeadPlayer
-#flags
+#flags spell area
 #mods
 #skillEnd
 
 #skill VulnerabilityPlayer
 #startSets
 #set VulnerabilityPlayer
-#flags
+#flags area duration
 #mods
 #skillEnd
 
 #skill WaveOfFrostPlayer
 #startSets
 #set WaveOfFrostPlayer
-#flags
+#flags attack area melee
 #mods
 #skillEnd
 
 #skill WhirlingAssaultPlayer
 #startSets
 #set WhirlingAssaultPlayer
-#flags
+#flags attack area melee
 #mods
 #skillEnd
 
 #skill GaleStrikePlayer
 #startSets
 #set GaleStrikePlayer
-#flags
+#flags attack area melee
 #mods
 #skillEnd
 
@@ -1118,13 +1118,13 @@ statMap = {
 #skill WitherPlayer
 #startSets
 #set WitherPlayer
-#flags
+#flags spell area duration
 #mods
 #skillEnd
 
 #skill WitheringPresencePlayer
 #startSets
 #set WitheringPresencePlayer
-#flags
+#flags duration
 #mods
 #skillEnd

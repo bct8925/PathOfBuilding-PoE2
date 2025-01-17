@@ -4166,6 +4166,7 @@ skills["DarkEffigyPlayer"] = {
 	color = 3,
 	description = "Raises a Totem that bombards enemies afflicted by Chaos damage over time Debuffs.",
 	skillTypes = { [SkillType.SummonsTotem] = true, [SkillType.Trappable] = true, [SkillType.Mineable] = true, [SkillType.Multicastable] = true, [SkillType.Duration] = true, [SkillType.Nonpathing] = true, [SkillType.Chaos] = true, [SkillType.Limit] = true, },
+	skillTotemId = 24,
 	castTime = 1,
 	qualityStats = {
 		{ "withered_on_hit_for_2_seconds_%_chance", 2.5 },
@@ -9650,6 +9651,8 @@ skills["HeraldOfIcePlayer"] = {
 			incrementalEffectiveness = 0.054999999701977,
 			statDescriptionScope = "herald_of_ice",
 			baseFlags = {
+				attack = true,
+				area = true,
 			},
 			constantStats = {
 				{ "active_skill_base_area_of_effect_radius", 18 },
@@ -9767,6 +9770,8 @@ skills["HexblastPlayer"] = {
 			damageIncrementalEffectiveness = 0.0065000001341105,
 			statDescriptionScope = "hexblast",
 			baseFlags = {
+				spell = true,
+				area = true,
 			},
 			constantStats = {
 				{ "hexblast_maximum_number_of_explosions", 9 },
@@ -9887,6 +9892,8 @@ skills["IceNovaPlayer"] = {
 			damageIncrementalEffectiveness = 0.0065000001341105,
 			statDescriptionScope = "ice_nova",
 			baseFlags = {
+				spell = true,
+				area = true,
 			},
 			constantStats = {
 				{ "generic_knockback_+%_final_at_min_distance", 50 },
@@ -9954,6 +9961,8 @@ skills["IceNovaPlayer"] = {
 			incrementalEffectiveness = 0.054999999701977,
 			statDescriptionScope = "ice_nova",
 			baseFlags = {
+				spell = true,
+				area = true,
 			},
 			constantStats = {
 				{ "active_skill_hit_damage_freeze_multiplier_+%_final", 50 },
@@ -10041,6 +10050,9 @@ skills["IceStrikePlayer"] = {
 			incrementalEffectiveness = 0.092720001935959,
 			statDescriptionScope = "skill_stat_descriptions",
 			baseFlags = {
+				attack = true,
+				area = true,
+				melee = true,
 			},
 			constantStats = {
 				{ "melee_conditional_step_distance", 10 },
@@ -10099,6 +10111,9 @@ skills["IceStrikePlayer"] = {
 			incrementalEffectiveness = 0.092720001935959,
 			statDescriptionScope = "skill_stat_descriptions",
 			baseFlags = {
+				attack = true,
+				area = true,
+				melee = true,
 			},
 			constantStats = {
 				{ "supplementary_stat_container_attack_speed_+%_final", -50 },
@@ -10217,6 +10232,9 @@ skills["IncineratePlayer"] = {
 			damageIncrementalEffectiveness = 0.0065000001341105,
 			statDescriptionScope = "incinerate_player_statset_0",
 			baseFlags = {
+				spell = true,
+				area = true,
+				duration = true,
 			},
 			constantStats = {
 				{ "incinerate_cone_angle", 20 },
@@ -10291,6 +10309,9 @@ skills["IncineratePlayer"] = {
 			incrementalEffectiveness = 0.054999999701977,
 			statDescriptionScope = "incinerate_player_statset_1",
 			baseFlags = {
+				spell = true,
+				area = true,
+				duration = true,
 			},
 			constantStats = {
 				{ "base_skill_effect_duration", 4000 },
@@ -10427,6 +10448,9 @@ skills["KillingPalmPlayer"] = {
 			damageIncrementalEffectiveness = 0.006699999794364,
 			statDescriptionScope = "skill_stat_descriptions",
 			baseFlags = {
+				attack = true,
+				area = true,
+				melee = true,
 			},
 			constantStats = {
 				{ "melee_conditional_step_distance", 10 },
@@ -10549,6 +10573,8 @@ skills["LightningBoltPlayer"] = {
 			damageIncrementalEffectiveness = 0.0065000001341105,
 			statDescriptionScope = "lightning_bolt",
 			baseFlags = {
+				spell = true,
+				area = true,
 			},
 			constantStats = {
 				{ "active_skill_shock_chance_+%_final", 100 },
@@ -10668,6 +10694,7 @@ skills["LightningConduitPlayer"] = {
 			damageIncrementalEffectiveness = 0.0065000001341105,
 			statDescriptionScope = "lightning_conduit",
 			baseFlags = {
+				spell = true,
 			},
 			constantStats = {
 				{ "range_backflip_conditional_distance", 30 },
@@ -10785,6 +10812,9 @@ skills["LightningWarpPlayer"] = {
 			damageIncrementalEffectiveness = 0.0065000001341105,
 			statDescriptionScope = "teleport_ball",
 			baseFlags = {
+				spell = true,
+				area = true,
+				duration = true,
 			},
 			constantStats = {
 				{ "active_skill_base_area_of_effect_radius", 40 },
@@ -11008,6 +11038,7 @@ skills["LingeringIllusionSpawnPlayer"] = {
 			incrementalEffectiveness = 0.054999999701977,
 			statDescriptionScope = "create_illusion",
 			baseFlags = {
+				duration = true,
 			},
 			constantStats = {
 				{ "base_skill_effect_duration", 600 },
@@ -11126,6 +11157,9 @@ skills["LivingBombPlayer"] = {
 			damageIncrementalEffectiveness = 0.0065000001341105,
 			statDescriptionScope = "living_bomb_player",
 			baseFlags = {
+				spell = true,
+				area = true,
+				duration = true,
 			},
 			constantStats = {
 				{ "base_skill_effect_duration", 2500 },
@@ -11246,6 +11280,7 @@ skills["MalicePlayer"] = {
 			incrementalEffectiveness = 0.054999999701977,
 			statDescriptionScope = "aura_crit_against_enemy",
 			baseFlags = {
+				area = true,
 			},
 			constantStats = {
 				{ "base_skill_effect_duration", 4000 },
@@ -11710,6 +11745,7 @@ skills["MantraOfDestructionPlayer"] = {
 			incrementalEffectiveness = 0.054999999701977,
 			statDescriptionScope = "mantra_of_destruction",
 			baseFlags = {
+				duration = true,
 			},
 			constantStats = {
 				{ "active_skill_required_number_of_combo_stacks", 10 },
@@ -11833,6 +11869,8 @@ skills["OrbOfStormsPlayer"] = {
 			damageIncrementalEffectiveness = 0.0065000001341105,
 			statDescriptionScope = "orb_of_storms",
 			baseFlags = {
+				spell = true,
+				chaining = true,
 			},
 			constantStats = {
 				{ "arc_chain_distance", 35 },
@@ -11961,6 +11999,8 @@ skills["PainOfferingPlayer"] = {
 			incrementalEffectiveness = 0.054999999701977,
 			statDescriptionScope = "pain_offering",
 			baseFlags = {
+				minion = true,
+				area = true,
 			},
 			constantStats = {
 				{ "base_skill_effect_duration", 6000 },
@@ -12083,6 +12123,7 @@ skills["PowerSiphonPlayer"] = {
 			damageIncrementalEffectiveness = 0.0094999996945262,
 			statDescriptionScope = "power_siphon",
 			baseFlags = {
+				spell = true,
 			},
 			constantStats = {
 				{ "movement_speed_+%_final_while_performing_action", -70 },
@@ -12202,6 +12243,8 @@ skills["ProfaneRitualPlayer"] = {
 			damageIncrementalEffectiveness = 0.0087000001221895,
 			statDescriptionScope = "ritual_of_power",
 			baseFlags = {
+				spell = true,
+				area = true,
 			},
 			constantStats = {
 				{ "base_skill_effect_duration", 2000 },
@@ -13161,6 +13204,7 @@ skills["SacrificePlayer"] = {
 			incrementalEffectiveness = 0.054999999701977,
 			statDescriptionScope = "harvester",
 			baseFlags = {
+				minion = true,
 			},
 			stats = {
 				"harvester_minion_resummon_speed_+%_final",
@@ -13275,6 +13319,9 @@ skills["ShatteringPalmPlayer"] = {
 			damageIncrementalEffectiveness = 0.006699999794364,
 			statDescriptionScope = "shattering_palm",
 			baseFlags = {
+				attack = true,
+				area = true,
+				melee = true,
 			},
 			constantStats = {
 				{ "melee_conditional_step_distance", 10 },
@@ -13396,6 +13443,8 @@ skills["ShatteringPalmExplosionPlayer"] = {
 			damageIncrementalEffectiveness = 0.012719999998808,
 			statDescriptionScope = "triggered_freezing_word_explosion",
 			baseFlags = {
+				attack = true,
+				area = true,
 			},
 			constantStats = {
 				{ "active_skill_base_area_of_effect_radius", 16 },
@@ -13516,6 +13565,8 @@ skills["ShockNovaPlayer"] = {
 			damageIncrementalEffectiveness = 0.0065000001341105,
 			statDescriptionScope = "skill_stat_descriptions",
 			baseFlags = {
+				spell = true,
+				area = true,
 			},
 			constantStats = {
 				{ "movement_speed_+%_final_while_performing_action", -70 },
@@ -13636,6 +13687,9 @@ skills["SigilOfPowerPlayer"] = {
 			damageIncrementalEffectiveness = 0.0065000001341105,
 			statDescriptionScope = "circle_of_power",
 			baseFlags = {
+				spell = true,
+				area = true,
+				duration = true,
 			},
 			constantStats = {
 				{ "circle_of_power_max_stages", 4 },
@@ -13758,6 +13812,9 @@ skills["SiphoningStrikePlayer"] = {
 			incrementalEffectiveness = 0.054999999701977,
 			statDescriptionScope = "charged_strike",
 			baseFlags = {
+				attack = true,
+				area = true,
+				melee = true,
 			},
 			constantStats = {
 				{ "melee_conditional_step_distance", 10 },
@@ -13820,6 +13877,8 @@ skills["SiphoningStrikePlayer"] = {
 			incrementalEffectiveness = 0.054999999701977,
 			statDescriptionScope = "charged_strike",
 			baseFlags = {
+				attack = true,
+				area = true,
 			},
 			constantStats = {
 				{ "active_skill_base_area_of_effect_radius", 18 },
@@ -14893,6 +14952,9 @@ skills["SolarOrbPlayer"] = {
 			damageIncrementalEffectiveness = 0.0065000001341105,
 			statDescriptionScope = "solar_orb_statset_0",
 			baseFlags = {
+				spell = true,
+				area = true,
+				duration = true,
 			},
 			constantStats = {
 				{ "base_skill_effect_duration", 10000 },
@@ -14960,6 +15022,9 @@ skills["SolarOrbPlayer"] = {
 			damageIncrementalEffectiveness = 0.0065000001341105,
 			statDescriptionScope = "solar_orb_statset_1",
 			baseFlags = {
+				spell = true,
+				area = true,
+				duration = true,
 			},
 			constantStats = {
 				{ "active_skill_base_area_of_effect_radius", 10 },
@@ -15078,6 +15143,8 @@ skills["SoulOfferingPlayer"] = {
 			incrementalEffectiveness = 0.054999999701977,
 			statDescriptionScope = "power_offering",
 			baseFlags = {
+				minion = true,
+				duration = true,
 			},
 			constantStats = {
 				{ "base_number_of_power_offerings_allowed", 1 },
@@ -15197,6 +15264,9 @@ skills["SoulrendPlayer"] = {
 			damageIncrementalEffectiveness = 0.0065000001341105,
 			statDescriptionScope = "soulrend",
 			baseFlags = {
+				spell = true,
+				projectile = true,
+				duration = true,
 			},
 			constantStats = {
 				{ "active_skill_projectile_speed_+%_variation_final", 25 },
@@ -15320,6 +15390,9 @@ skills["SparkPlayer"] = {
 			damageIncrementalEffectiveness = 0.0065000001341105,
 			statDescriptionScope = "spark",
 			baseFlags = {
+				spell = true,
+				projectile = true,
+				duration = true,
 			},
 			constantStats = {
 				{ "base_skill_effect_duration", 2000 },
@@ -15449,6 +15522,8 @@ skills["StaggeringPalmPlayer"] = {
 			damageIncrementalEffectiveness = 0.006699999794364,
 			statDescriptionScope = "wind_palm",
 			baseFlags = {
+				attack = true,
+				area = true,
 			},
 			constantStats = {
 				{ "melee_conditional_step_distance", 10 },
@@ -15569,6 +15644,8 @@ skills["StaggeringPalmProjectilePlayer"] = {
 			incrementalEffectiveness = 0.054999999701977,
 			statDescriptionScope = "skill_stat_descriptions",
 			baseFlags = {
+				attack = true,
+				projectile = true,
 			},
 			constantStats = {
 				{ "base_number_of_projectiles", 1 },
@@ -15687,6 +15764,8 @@ skills["StaggeringPalmUnarmedProjectilePlayer"] = {
 			damageIncrementalEffectiveness = 0.006699999794364,
 			statDescriptionScope = "skill_stat_descriptions",
 			baseFlags = {
+				attack = true,
+				projectile = true,
 			},
 			constantStats = {
 				{ "base_number_of_projectiles", 1 },
@@ -15929,6 +16008,10 @@ skills["TempestBellPlayer"] = {
 			incrementalEffectiveness = 0.054999999701977,
 			statDescriptionScope = "tempest_bell_statset_0",
 			baseFlags = {
+				attack = true,
+				area = true,
+				melee = true,
+				duration = true,
 			},
 			constantStats = {
 				{ "active_skill_required_number_of_combo_stacks", 4 },
@@ -15999,6 +16082,9 @@ skills["TempestBellPlayer"] = {
 			incrementalEffectiveness = 0.054999999701977,
 			statDescriptionScope = "tempest_bell_statset_1",
 			baseFlags = {
+				attack = true,
+				area = true,
+				melee = true,
 			},
 			constantStats = {
 				{ "active_skill_base_area_of_effect_radius", 18 },
@@ -16063,6 +16149,9 @@ skills["TempestBellPlayer"] = {
 			incrementalEffectiveness = 0.054999999701977,
 			statDescriptionScope = "tempest_bell_statset_2",
 			baseFlags = {
+				attack = true,
+				area = true,
+				melee = true,
 			},
 			constantStats = {
 				{ "active_skill_base_area_of_effect_radius", 24 },
@@ -16440,6 +16529,8 @@ skills["TemporalChainsPlayer"] = {
 			incrementalEffectiveness = 0.092720001935959,
 			statDescriptionScope = "temporal_chains",
 			baseFlags = {
+				area = true,
+				duration = true,
 			},
 			constantStats = {
 				{ "curse_delay_duration_ms", 1000 },
@@ -16726,6 +16817,9 @@ skills["VaultingImpactPlayer"] = {
 			incrementalEffectiveness = 0.054999999701977,
 			statDescriptionScope = "vaulting_impact",
 			baseFlags = {
+				attack = true,
+				area = true,
+				melee = true,
 			},
 			constantStats = {
 				{ "added_attack_time_ms", 1000 },
@@ -16845,6 +16939,8 @@ skills["VolatileDeadPlayer"] = {
 			damageIncrementalEffectiveness = 0.0065000001341105,
 			statDescriptionScope = "volatile_dead",
 			baseFlags = {
+				spell = true,
+				area = true,
 			},
 			constantStats = {
 				{ "volatile_dead_base_number_of_corpses_to_consume", 1 },
@@ -16964,6 +17060,8 @@ skills["VulnerabilityPlayer"] = {
 			incrementalEffectiveness = 0.092720001935959,
 			statDescriptionScope = "vulnerability",
 			baseFlags = {
+				area = true,
+				duration = true,
 			},
 			constantStats = {
 				{ "curse_delay_duration_ms", 1000 },
@@ -17084,6 +17182,9 @@ skills["WaveOfFrostPlayer"] = {
 			incrementalEffectiveness = 0.092720001935959,
 			statDescriptionScope = "quarterstaff_frost_burst",
 			baseFlags = {
+				attack = true,
+				area = true,
+				melee = true,
 			},
 			constantStats = {
 				{ "active_skill_base_physical_damage_%_to_convert_to_cold", 80 },
@@ -17200,6 +17301,9 @@ skills["WhirlingAssaultPlayer"] = {
 			incrementalEffectiveness = 0.092720001935959,
 			statDescriptionScope = "skill_stat_descriptions",
 			baseFlags = {
+				attack = true,
+				area = true,
+				melee = true,
 			},
 			constantStats = {
 				{ "added_attack_time_ms", 1400 },
@@ -17319,6 +17423,9 @@ skills["GaleStrikePlayer"] = {
 			incrementalEffectiveness = 0.092720001935959,
 			statDescriptionScope = "gale_strike",
 			baseFlags = {
+				attack = true,
+				area = true,
+				melee = true,
 			},
 			constantStats = {
 				{ "generic_knockback_+%_final_at_min_distance", 200 },
@@ -17441,6 +17548,9 @@ skills["WitherPlayer"] = {
 			incrementalEffectiveness = 0.054999999701977,
 			statDescriptionScope = "skill_stat_descriptions",
 			baseFlags = {
+				spell = true,
+				area = true,
+				duration = true,
 			},
 			constantStats = {
 				{ "chaos_damage_taken_+%", 6 },
@@ -17555,6 +17665,7 @@ skills["WitheringPresencePlayer"] = {
 			incrementalEffectiveness = 0.054999999701977,
 			statDescriptionScope = "withering_presence",
 			baseFlags = {
+				duration = true,
 			},
 			constantStats = {
 				{ "base_skill_effect_duration", 4000 },

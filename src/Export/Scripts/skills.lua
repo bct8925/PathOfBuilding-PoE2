@@ -493,7 +493,7 @@ directiveTable.skill = function(state, args, out)
 			end
 			out:write('\t},\n')
 		end
-		if granted.ActiveSkill.SkillTotem <= 21 then
+		if granted.ActiveSkill.SkillTotem < 25 then
 			out:write('\tskillTotemId = ', granted.ActiveSkill.SkillTotem, ',\n')
 		end
 		out:write('\tcastTime = ', granted.CastTime / 1000, ',\n')

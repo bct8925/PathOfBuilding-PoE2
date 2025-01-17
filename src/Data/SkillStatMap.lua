@@ -728,6 +728,9 @@ return {
 ["chaos_damage_+%"] = {
 	mod("ChaosDamage", "INC", nil),
 },
+["active_skill_chaos_damage_+%_final"] = {
+	mod("ChaosDamage", "MORE", nil),
+},
 ["elemental_damage_+%"] = {
 	mod("ElementalDamage", "INC", nil),
 },
@@ -775,6 +778,9 @@ return {
 },
 ["damage_+%_vs_frozen_enemies"] = {
 	mod("Damage", "INC", nil, ModFlag.Hit, 0, { type = "ActorCondition", actor = "enemy", var = "Frozen" }),
+},
+["active_skill_damage_+%_final_vs_chilled_enemies"] = {
+	mod("Damage", "MORE", nil, ModFlag.Hit, 0, { type = "ActorCondition", actor = "enemy", var = "Chilled" }),
 },
 ["base_reduce_enemy_fire_resistance_%"] = {
 	mod("FirePenetration", "BASE", nil),
@@ -892,6 +898,10 @@ return {
 },
 ["physical_weapon_damage_+%_per_10_str"] = {
 	mod("PhysicalDamage", "INC", nil, ModFlag.Weapon, 0, { type = "PerStat", stat = "Str", div = 10 }),
+},
+["hits_ignore_enemy_monster_physical_damage_reduction"] = {
+	mod("ChanceToIgnoreEnemyPhysicalDamageReduction", "BASE", nil),
+	base = 100,
 },
 -- PvP Damage
 ["support_makes_skill_mine_pvp_damage_+%_final"] = {
@@ -1176,6 +1186,9 @@ return {
 ["ignite_duration_+%"] = {
 	mod("EnemyIgniteDuration", "INC", nil),
 },
+["active_skill_ignite_duration_+%_final"] = {
+	mod("EnemyIgniteDuration", "MORE", nil),
+},
 ["lightning_ailment_duration_+%"] = {
 	mod("EnemyShockDuration", "INC", nil),
 	mod("EnemySapDuration", "INC", nil),
@@ -1233,6 +1246,9 @@ return {
 },
 ["active_skill_ignite_damage_+%_final"] = {
 	mod("Damage", "MORE", nil, 0, KeywordFlag.Ignite),
+},
+["base_ignite_effect_+%"] = {
+	mod("IgniteMagnitude", "INC", nil),
 },
 ["damaging_ailments_deal_damage_+%_faster"] = {
 	mod("BleedFaster", "INC", nil),
@@ -1719,22 +1735,22 @@ return {
 	skill("setOffHandBaseCritChance", nil),
 	value = 5,
 },
-["off_hand_local_minimum_added_physical_damage"] = {
+["off_hand_weapon_minimum_physical_damage"] = {
 	skill("setOffHandPhysicalMin", nil),
 },
-["off_hand_local_maximum_added_physical_damage"] = {
+["off_hand_weapon_maximum_physical_damage"] = {
 	skill("setOffHandPhysicalMax", nil),
 },
-["off_hand_local_minimum_added_cold_damage"] = {
+["off_hand_weapon_minimum_cold_damage"] = {
 	skill("setOffHandColdMin", nil),
 },
-["off_hand_local_maximum_added_cold_damage"] = {
+["off_hand_weapon_maximum_cold_damage"] = {
 	skill("setOffHandColdMax", nil),
 },
-["off_hand_local_minimum_added_fire_damage"] = {
+["off_hand_weapon_minimum_fire_damage"] = {
 	skill("setOffHandFireMin", nil),
 },
-["off_hand_local_maximum_added_fire_damage"] = {
+["off_hand_weapon_maximum_fire_damage"] = {
 	skill("setOffHandFireMax", nil),
 },
 ["off_hand_base_weapon_attack_duration_ms"] = {
@@ -1757,6 +1773,12 @@ return {
 },
 ["off_hand_maximum_added_fire_damage_per_15_shield_armour"] = {
 	mod("FireMax", "BASE", nil, 0, 0, { type = "Condition", var = "OffHandAttack" }, { type = "PerStat", stat = "ArmourOnWeapon 2", div = 15 }),
+},
+["off_hand_minimum_added_physical_damage_per_15_shield_armour"] = {
+	mod("PhysicalMin", "BASE", nil, 0, 0, { type = "Condition", var = "OffHandAttack" }, { type = "PerStat", stat = "ArmourOnWeapon 2", div = 15 }),
+},
+["off_hand_maximum_added_physical_damage_per_15_shield_armour"] = {
+	mod("PhysicalMax", "BASE", nil, 0, 0, { type = "Condition", var = "OffHandAttack" }, { type = "PerStat", stat = "ArmourOnWeapon 2", div = 15 }),
 },
 ["additional_critical_strike_chance_per_10_shield_maximum_energy_shield_permyriad"] = {
 	mod("CritChance", "BASE", nil, 0, 0, { type = "PerStat", stat = "EnergyShieldOnWeapon 2", div = 10, }),

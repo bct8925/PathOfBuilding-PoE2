@@ -601,7 +601,7 @@ function calcs.buildActiveSkillModList(env, activeSkill)
 
 	-- Find totem level
 	if skillFlags.totem then
-		activeSkill.skillData.totemLevel = activeEffect.grantedEffectLevel.levelRequirement
+		activeSkill.skillData.totemLevel = 1 or activeEffect.grantedEffect.levels[activeEffect.level].levelRequirement
 	end
 
 	-- Add active mine multiplier
