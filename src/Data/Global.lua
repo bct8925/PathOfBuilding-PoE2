@@ -142,19 +142,15 @@ end
 
 function NOT64(a)
 	-- Split into high and low 32-bit parts
-	local ah = math.floor(a / 0x100000000)
-	local al = a % 0x100000000
-	
-	-- Perform NOT operation on both parts
-	local high = bit.bnot(ah)
-	local low = bit.bnot(al)
-	
-	-- Since bit.bnot returns signed 32-bit integers, we need to handle negative numbers
-	if high < 0 then high = high + 0x100000000 end
-	if low < 0 then low = low + 0x100000000 end
-	
-	-- Combine the results
-	return high * 0x100000000 + low
+    local ah = math.floor(a / 0x100000000)
+    local al = a % 0x100000000
+    
+    -- Perform NOT operation on both parts
+    local high = bit.bnot(ah)
+    local low = bit.bnot(al)
+    
+    -- Combine the results
+    return high * 0x100000000 + low
 end
 
 ModFlag = { }
