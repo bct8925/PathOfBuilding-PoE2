@@ -1795,8 +1795,8 @@ function buildMode:LoadDB(xmlText, fileName)
 	elseif #dbXML == 0 then
 		main:OpenMessagePopup("Error", "Build file is empty, or error parsing xml.\n\n"..fileName)
 		return true
-	elseif dbXML[1].elem ~= "PathOfBuilding" then
-		launch:ShowErrMsg("^1Error parsing '%s': 'PathOfBuilding' root element missing", fileName)
+	elseif dbXML[1].elem ~= "PathOfBuilding2" then
+		launch:ShowErrMsg("^1Error parsing '%s': 'PathOfBuilding2' root element missing", fileName)
 		return true
 	end
 
@@ -1842,7 +1842,7 @@ function buildMode:LoadDBFile()
 end
 
 function buildMode:SaveDB(fileName)
-	local dbXML = { elem = "PathOfBuilding" }
+	local dbXML = { elem = "PathOfBuilding2" }
 
 	-- Save Build section first
 	do

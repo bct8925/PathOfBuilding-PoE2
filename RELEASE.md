@@ -12,10 +12,10 @@ Releases are done via GitHub actions in order to simplify release note generatio
 
 Steps:
 1. First, update any GGPK files and tree files needed in the dev branch.  This will minimize what you have to update later.
-2. [Navigate to the "Release new version" action](https://github.com/PathOfBuildingCommunity/PathOfBuilding/actions/workflows/release.yml)
+2. [Navigate to the "Release new version" action](https://github.com/PathOfBuildingCommunity/PathOfBuilding-PoE2/actions/workflows/release.yml)
 3. Click "Run workflow" on the right, and fill in the values
     - Run the workflow from the 'dev' branch
-    - Fill in the [most recent tag](https://github.com/PathOfBuildingCommunity/PathOfBuilding/tags)
+    - Fill in the [most recent tag](https://github.com/PathOfBuildingCommunity/PathOfBuilding-PoE2/tags)
     - Choose a new version number (see above)
 4. This will run and create a new branch and PR so you can review the changes, making tweaks to any of the release notes that don't make sense
 5. If you changed any files after the PR was created, you'll have to update [the manifest file](manifest.xml)
@@ -76,7 +76,7 @@ Steps to Generate Timeless Jewel LuTs for PoB:
 	E:\PoB Dev Work\TimelessJewelData\AlternatePassiveAdditions.json
 	E:\PoB Dev Work\TimelessJewelData\AlternatePassiveSkills.json
 	E:\PoB Dev Work\GGG Skill Tree\data.json
-	E:\PoB Dev Work\PathOfBuildingCommunity\src\Data\TimelessJewelData
+	E:\PoB Dev Work\PathOfBuilding-PoE2\src\Data\TimelessJewelData
 6. Choose Compressed
 7. Replace updated Files in \src\Data\TimelessJewelData
 

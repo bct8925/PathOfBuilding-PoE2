@@ -60,11 +60,11 @@ The easiest way to make and test changes is by setting up a development installa
 
 1. Clone the repository using this command:
 
-       git clone -b dev https://github.com/PathOfBuildingCommunity/PathOfBuilding.git
+       git clone -b dev https://github.com/PathOfBuildingCommunity/PathOfBuilding-PoE2.git
 
-2. Go to the actual folder on your computer where you cloned Path of Building. (e.g. C:/XX/GitHub/PathOfBuilding/runtime/)
+2. Go to the actual folder on your computer where you cloned Path of Building. (e.g. C:/XX/GitHub/PathOfBuilding-PoE2/runtime/)
 
-       cd PathOfBuilding
+       cd PathOfBuilding-PoE2
 
 3. Start Path of Building from the repository by running `./runtime/Path{space}of{space}Building.exe`.
 
@@ -107,7 +107,7 @@ Note: If you've configured a remote already, you can skip ahead to step 3.
 
 1. Add a new remote repository and name it `upstream`.
 
-       git remote add upstream https://github.com/PathOfBuildingCommunity/PathOfBuilding.git
+       git remote add upstream https://github.com/PathOfBuildingCommunity/PathOfBuilding-PoE2.git
 2. Verify that adding the remote worked.
 
        git remote -v
