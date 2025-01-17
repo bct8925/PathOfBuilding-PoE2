@@ -261,12 +261,12 @@ end
 
 -- Convert int to 4 bytes string
 function intToBytes(int)
-    return string.char(
-        bit.band(int, 0xFF),
-        bit.band(bit.rshift(int, 8), 0xFF),
-        bit.band(bit.rshift(int, 16), 0xFF),
-        bit.band(bit.rshift(int, 24), 0xFF)
-    )
+	return string.char(
+		bit.band(int, 0xFF),
+		bit.band(bit.rshift(int, 8), 0xFF),
+		bit.band(bit.rshift(int, 16), 0xFF),
+		bit.band(bit.rshift(int, 24), 0xFF)
+	)
 end
 
 do
@@ -627,7 +627,7 @@ function naturalSortCompare(a, b)
 	end
 end
 
--- Rounds a number to the nearest <dec> decimal places
+-- Rounds a number to the nearest <dec> decimal places 2.5->3 and -2.5->-2
 function round(val, dec)
 	if dec then
 		return m_floor(val * 10 ^ dec + 0.5) / 10 ^ dec
@@ -651,56 +651,58 @@ end
 
 -- Symmetric round with precision: Rounds towards zero to <dec> decimal places.
 function roundSymmetric(val, dec)
-    if dec then
-        local factor = 10 ^ dec
-        if val >= 0 then
-            return m_floor(val * factor + 0.5) / factor
-        else
-            return m_ceil(val * factor - 0.5) / factor
-        end
-    else
-        if val >= 0 then
-            return m_floor(val + 0.5)
-        else
-            return m_ceil(val - 0.5)
-        end
-    end
+	if dec then
+		local factor = 10 ^ dec
+		if val >= 0 then
+			return m_floor(val * factor + 0.5) / factor
+		else
+			return m_ceil(val * factor - 0.5) / factor
+		end
+	else
+		if val >= 0 then
+			return m_floor(val + 0.5)
+		else
+			return m_ceil(val - 0.5)
+		end
+	end
+end
+
+-- Use rounding formula for postive numbers always used in corrupted unique roll ranges this is an incorrect way to round numbers.
+function alwaysPositveRound(val, dec)
+	if dec then
+		local factor = 10 ^ dec
+		return m_floor(val * factor + 0.5) / factor
+	else
+		return m_floor(val + 0.5)
+	end
 end
 
 -- Symmetric floor with precision: Rounds down towards zero to <dec> decimal places.
 function floorSymmetric(val, dec)
-    if dec then
-        local factor = 10 ^ dec
-        if val >= 0 then
-            return m_floor(val * factor) / factor
-        else
-            return m_ceil(val * factor) / factor
-        end
-    else
-        if val >= 0 then
-            return m_floor(val)
-        else
-            return m_ceil(val)
-		end
-    end
+	if dec then
+		local factor = 10 ^ dec
+		return select(1, math.modf(val * factor)) / factor
+	else
+		return select(1, math.modf(val))
+	end
 end
 
--- Symmetric ceil with precision: Rounds up towards zero to <dec> decimal places.
+-- Symmetric ceil with precision: Rounds up away from zero to <dec> decimal places.
 function ceilSymmetric(val, dec)
-    if dec then
-        local factor = 10 ^ dec
-        if val >= 0 then
-            return m_ceil(val * factor) / factor
-        else
-            return m_floor(val * factor) / factor
-        end
-    else
-        if val >= 0 then
-            return m_ceil(val)
-        else
-            return m_floor(val)
-        end
-    end
+	if dec then
+		local factor = 10 ^ dec
+		if val >= 0 then
+			return m_ceil(val * factor) / factor
+		else
+			return m_floor(val * factor) / factor
+		end
+	else
+		if val >= 0 then
+			return m_ceil(val)
+		else
+			return m_floor(val)
+		end
+	end
 end
 
 ---@param n number

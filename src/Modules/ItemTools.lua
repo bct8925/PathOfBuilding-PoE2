@@ -44,7 +44,7 @@ end
 -- ifRequired determines whether trailing zeros are displayed or not.
 function itemLib.formatValue(value, baseValueScalar, valueScalar, precision, displayPrecision, ifRequired)
 	value = roundSymmetric(value * precision) -- resolve range to internal value
-	if baseValueScalar and baseValueScalar ~= 1 then value = roundSymmetric(value * baseValueScalar) end -- apply corrupted mult
+	if baseValueScalar and baseValueScalar ~= 1 then value = alwaysPositveRound(value * baseValueScalar) end -- apply corrupted mult
 	if valueScalar and valueScalar ~= 1 then value = floorSymmetric(value * valueScalar) end -- apply modifier magnitude
 	value = value / precision -- convert back to display space
 	if displayPrecision then value = roundSymmetric(value, displayPrecision) end -- presentation
