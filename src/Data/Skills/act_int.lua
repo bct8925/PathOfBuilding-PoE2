@@ -304,6 +304,7 @@ skills["ArcticArmourPlayer"] = {
 			damageIncrementalEffectiveness = 0.0065000001341105,
 			statDescriptionScope = "skill_stat_descriptions",
 			baseFlags = {
+				spell = true,
 			},
 			stats = {
 				"arctic_armour_minimum_added_cold_damage_per_stack",
@@ -416,6 +417,9 @@ skills["BallLightningPlayer"] = {
 			damageIncrementalEffectiveness = 0.0065000001341105,
 			statDescriptionScope = "ball_lightning",
 			baseFlags = {
+				spell = true,
+				area = true,
+				projectile = true,
 			},
 			constantStats = {
 				{ "active_skill_shock_chance_+%_final", 750 },
@@ -757,6 +761,7 @@ skills["BlasphemyPlayer"] = {
 			incrementalEffectiveness = 0.054999999701977,
 			statDescriptionScope = "skill_stat_descriptions",
 			baseFlags = {
+				area = true,
 			},
 			constantStats = {
 				{ "blasphemy_base_spirit_reservation_per_socketed_curse", 60 },
@@ -867,6 +872,7 @@ skills["SupportBlasphemyPlayer"] = {
 			incrementalEffectiveness = 0.092720001935959,
 			statDescriptionScope = "gem_stat_descriptions",
 			baseFlags = {
+				area = true,
 			},
 			stats = {
 				"support_blasphemy_curse_effect_+%_final",
@@ -976,6 +982,7 @@ skills["BlinkReservationPlayer"] = {
 			incrementalEffectiveness = 0.054999999701977,
 			statDescriptionScope = "skill_stat_descriptions",
 			baseFlags = {
+				spell = true,
 			},
 			stats = {
 				"base_deal_no_damage",
@@ -1321,6 +1328,9 @@ skills["BoneCagePlayer"] = {
 			damageIncrementalEffectiveness = 0.0094999996945262,
 			statDescriptionScope = "ring_of_bone",
 			baseFlags = {
+				area = true,
+				duration = true,
+				spell = true,
 			},
 			constantStats = {
 				{ "base_skill_effect_duration", 1600 },
@@ -1447,6 +1457,8 @@ skills["BoneOfferingPlayer"] = {
 			damageIncrementalEffectiveness = 0.0065000001341105,
 			statDescriptionScope = "bone_offering",
 			baseFlags = {
+				area = true,
+				duration = true,
 			},
 			constantStats = {
 				{ "base_skill_effect_duration", 5000 },
@@ -1573,6 +1585,8 @@ skills["BonestormPlayer"] = {
 				},
 			},
 			baseFlags = {
+				spell = true,
+				duration = true,
 			},
 			constantStats = {
 				{ "base_number_of_projectiles", 1 },
@@ -1649,6 +1663,9 @@ skills["BonestormPlayer"] = {
 			damageIncrementalEffectiveness = 0.0094999996945262,
 			statDescriptionScope = "bone_spike_statset_1",
 			baseFlags = {
+				spell = true,
+				duration = true,
+				area = true,
 			},
 			constantStats = {
 				{ "active_skill_base_area_of_effect_radius", 5 },
@@ -3228,6 +3245,8 @@ skills["WeaponGrantedChaosboltPlayer"] = {
 			damageIncrementalEffectiveness = 0.0087000001221895,
 			statDescriptionScope = "skill_stat_descriptions",
 			baseFlags = {
+				spell = true,
+				projectile = true,
 			},
 			constantStats = {
 				{ "monster_projectile_variation", 1109 },
@@ -3475,6 +3494,9 @@ skills["ChargedStaffPlayer"] = {
 				},
 			},
 			baseFlags = {
+				attack = true,
+				area = true,
+				duration = true,
 			},
 			constantStats = {
 				{ "charged_staff_buff_duration_per_stack_ms", 6000 },
@@ -3706,6 +3728,8 @@ skills["ColdSnapPlayer"] = {
 			damageIncrementalEffectiveness = 0.0065000001341105,
 			statDescriptionScope = "shatter",
 			baseFlags = {
+				area = true,
+				spell = true,
 			},
 			constantStats = {
 				{ "active_skill_base_area_of_effect_radius", 7 },
@@ -3826,6 +3850,8 @@ skills["CometPlayer"] = {
 			damageIncrementalEffectiveness = 0.0065000001341105,
 			statDescriptionScope = "skill_stat_descriptions",
 			baseFlags = {
+				area = true,
+				spell = true,
 			},
 			constantStats = {
 				{ "range_backflip_conditional_distance", 30 },
@@ -4070,6 +4096,9 @@ skills["ContagionPlayer"] = {
 			damageIncrementalEffectiveness = 0.0087000001221895,
 			statDescriptionScope = "contagion",
 			baseFlags = {
+				area = true,
+				duration = true,
+				spell = true,
 			},
 			constantStats = {
 				{ "base_skill_effect_duration", 5000 },
@@ -4189,6 +4218,10 @@ skills["DarkEffigyPlayer"] = {
 			incrementalEffectiveness = 0.054999999701977,
 			statDescriptionScope = "skill_stat_descriptions",
 			baseFlags = {
+				area = true,
+				spell = true,
+				totem = true,
+				duration = true,
 			},
 			constantStats = {
 				{ "base_totem_duration", 8000 },
@@ -4307,6 +4340,9 @@ skills["DarkEffigyProjectilePlayer"] = {
 			damageIncrementalEffectiveness = 0.0089999996125698,
 			statDescriptionScope = "dark_effigy_projectile",
 			baseFlags = {
+				spell = true,
+				area = true,
+				projectile = true,
 			},
 			constantStats = {
 				{ "skill_disabled_unless_cloned", 2 },
@@ -4427,6 +4463,9 @@ skills["CorpseCloudPlayer"] = {
 			damageIncrementalEffectiveness = 0.0065000001341105,
 			statDescriptionScope = "corpse_cloud_statset_0",
 			baseFlags = {
+				spell = true,
+				area = true,
+				duration = true,
 			},
 			constantStats = {
 				{ "active_skill_base_area_of_effect_radius", 16 },
@@ -4494,6 +4533,8 @@ skills["CorpseCloudPlayer"] = {
 			damageIncrementalEffectiveness = 0.0065000001341105,
 			statDescriptionScope = "corpse_cloud_statset_1",
 			baseFlags = {
+				spell = true,
+				area = true,
 			},
 			constantStats = {
 				{ "active_skill_base_area_of_effect_radius", 16 },
@@ -4741,6 +4782,8 @@ skills["DetonateDeadPlayer"] = {
 			damageIncrementalEffectiveness = 0.0065000001341105,
 			statDescriptionScope = "detonate_dead",
 			baseFlags = {
+				area = true,
+				spell = true,
 			},
 			constantStats = {
 				{ "active_skill_base_area_of_effect_radius", 26 },
@@ -4972,6 +5015,7 @@ skills["ElementalConfluxPlayer"] = {
 			incrementalEffectiveness = 0.054999999701977,
 			statDescriptionScope = "elemental_conflux",
 			baseFlags = {
+				duration = true,
 			},
 			constantStats = {
 				{ "base_skill_effect_duration", 8000 },
@@ -5309,6 +5353,9 @@ skills["BlazingClusterPlayer"] = {
 			damageIncrementalEffectiveness = 0.0065000001341105,
 			statDescriptionScope = "blazing_cluster_statset_0",
 			baseFlags = {
+				spell = true,
+				duration = true,
+				projectile = true,
 			},
 			constantStats = {
 				{ "base_skill_effect_duration", 1300 },
@@ -5375,6 +5422,8 @@ skills["BlazingClusterPlayer"] = {
 			incrementalEffectiveness = 0.054999999701977,
 			statDescriptionScope = "blazing_cluster_statset_1",
 			baseFlags = {
+				spell = true,
+				area = true,
 			},
 			constantStats = {
 				{ "active_skill_base_area_of_effect_radius", 9 },
@@ -5498,6 +5547,9 @@ skills["EnfeeblePlayer"] = {
 			incrementalEffectiveness = 0.092720001935959,
 			statDescriptionScope = "enfeeble",
 			baseFlags = {
+				area = true,
+				spell = true,
+				duration = true,
 			},
 			constantStats = {
 				{ "curse_delay_duration_ms", 1000 },
@@ -5819,6 +5871,8 @@ skills["EyeOfWinterPlayer"] = {
 			damageIncrementalEffectiveness = 0.0065000001341105,
 			statDescriptionScope = "eye_of_winter_new",
 			baseFlags = {
+				spell = true,
+				projectile = true,
 			},
 			constantStats = {
 				{ "eye_of_winter_base_explosion_shards", 8 },
@@ -5945,6 +5999,9 @@ skills["FallingThunderPlayer"] = {
 			damageIncrementalEffectiveness = 0.0065000001341105,
 			statDescriptionScope = "new_new_lightning_strike",
 			baseFlags = {
+				attack = true,
+				area = true,
+				melee = true,
 			},
 			constantStats = {
 				{ "active_skill_base_physical_damage_%_to_convert_to_lightning", 60 },
@@ -6005,6 +6062,8 @@ skills["FallingThunderPlayer"] = {
 			damageIncrementalEffectiveness = 0.0065000001341105,
 			statDescriptionScope = "new_new_lightning_strike",
 			baseFlags = {
+				attack = true,
+				projectile = true,
 			},
 			constantStats = {
 				{ "active_skill_projectile_speed_+%_variation_final", 50 },
@@ -6094,6 +6153,8 @@ skills["FireballPlayer"] = {
 			damageIncrementalEffectiveness = 0.0065000001341105,
 			statDescriptionScope = "greater_fireball",
 			baseFlags = {
+				spell = true,
+				projectile = true,
 			},
 			constantStats = {
 				{ "movement_speed_+%_final_while_performing_action", -70 },
@@ -6158,6 +6219,8 @@ skills["FireballPlayer"] = {
 			incrementalEffectiveness = 0.054999999701977,
 			statDescriptionScope = "greater_fireball",
 			baseFlags = {
+				spell = true,
+				area = true,
 			},
 			constantStats = {
 				{ "active_skill_base_area_of_effect_radius", 17 },
@@ -6226,6 +6289,8 @@ skills["FireballPlayer"] = {
 			damageIncrementalEffectiveness = 0.0065000001341105,
 			statDescriptionScope = "greater_fireball",
 			baseFlags = {
+				spell = true,
+				projectile = true,
 			},
 			constantStats = {
 				{ "base_number_of_projectiles", 8 },
@@ -6350,6 +6415,8 @@ skills["FireboltPlayer"] = {
 			damageIncrementalEffectiveness = 0.0065000001341105,
 			statDescriptionScope = "fireball",
 			baseFlags = {
+				spell = true,
+				projectile = true,
 			},
 			constantStats = {
 				{ "movement_speed_+%_final_while_performing_action", -70 },
@@ -6415,6 +6482,8 @@ skills["FireboltPlayer"] = {
 			incrementalEffectiveness = 0.054999999701977,
 			statDescriptionScope = "fireball",
 			baseFlags = {
+				spell = true,
+				area = true,
 			},
 			constantStats = {
 				{ "active_skill_base_area_of_effect_radius", 7 },
@@ -6540,6 +6609,9 @@ skills["FirestormPlayer"] = {
 			damageIncrementalEffectiveness = 0.0065000001341105,
 			statDescriptionScope = "fire_storm",
 			baseFlags = {
+				spell = true,
+				area = true,
+				duration = true,
 			},
 			constantStats = {
 				{ "fire_storm_fireball_delay_ms", 100 },
@@ -6610,6 +6682,7 @@ skills["FirestormPlayer"] = {
 			damageIncrementalEffectiveness = 0.0065000001341105,
 			statDescriptionScope = "fire_storm",
 			baseFlags = {
+				spell = true,
 			},
 			constantStats = {
 				{ "active_skill_base_area_of_effect_radius", 18 },
@@ -6864,6 +6937,8 @@ skills["FlameblastPlayer"] = {
 			damageIncrementalEffectiveness = 0.0065000001341105,
 			statDescriptionScope = "skill_stat_descriptions",
 			baseFlags = {
+				spell = true,
+				area = true,
 			},
 			constantStats = {
 				{ "charged_blast_spell_damage_+%_final_per_stack", 200 },
@@ -7118,6 +7193,8 @@ skills["FlickerStrikePlayer"] = {
 			incrementalEffectiveness = 0.092720001935959,
 			statDescriptionScope = "skill_stat_descriptions",
 			baseFlags = {
+				attack = true,
+				melee = true,
 			},
 			constantStats = {
 				{ "flicker_strike_additional_flickers_from_power_charges", 2 },
@@ -7231,6 +7308,9 @@ skills["FreezingMarkPlayer"] = {
 			incrementalEffectiveness = 0.054999999701977,
 			statDescriptionScope = "freezing_mark",
 			baseFlags = {
+				spell = true,
+				area = true,
+				duration = true,
 			},
 			constantStats = {
 				{ "base_skill_effect_duration", 8000 },
@@ -7347,6 +7427,8 @@ skills["TriggeredFreezingMarkNovaPlayer"] = {
 			damageIncrementalEffectiveness = 0.006699999794364,
 			statDescriptionScope = "freezing_mark_nova",
 			baseFlags = {
+				spell = true,
+				area = true,
 			},
 			constantStats = {
 				{ "active_skill_base_area_of_effect_radius", 26 },
@@ -7467,6 +7549,8 @@ skills["FreezingShardsPlayer"] = {
 			damageIncrementalEffectiveness = 0.0065000001341105,
 			statDescriptionScope = "skill_stat_descriptions",
 			baseFlags = {
+				spell = true,
+				projectile = true,
 			},
 			constantStats = {
 				{ "base_number_of_projectiles", 7 },
@@ -7589,6 +7673,9 @@ skills["FrostBombPlayer"] = {
 			damageIncrementalEffectiveness = 0.0065000001341105,
 			statDescriptionScope = "frost_bomb",
 			baseFlags = {
+				spell = true,
+				area = true,
+				duration = true,
 			},
 			constantStats = {
 				{ "active_skill_base_area_of_effect_radius", 17 },
@@ -7714,6 +7801,9 @@ skills["FrostWallPlayer"] = {
 			damageIncrementalEffectiveness = 0.0065000001341105,
 			statDescriptionScope = "frost_wall_new",
 			baseFlags = {
+				spell = true,
+				area = true,
+				duration = true,
 			},
 			constantStats = {
 				{ "wall_expand_delay_ms", 150 },
@@ -7964,6 +8054,10 @@ skills["FrostboltPlayer"] = {
 			damageIncrementalEffectiveness = 0.0065000001341105,
 			statDescriptionScope = "frost_bolt",
 			baseFlags = {
+				spell = true,
+				area = true,
+				duration = true,
+				projectile = true,
 			},
 			constantStats = {
 				{ "base_skill_effect_duration", 4000 },
@@ -8032,6 +8126,8 @@ skills["FrostboltPlayer"] = {
 			damageIncrementalEffectiveness = 0.0065000001341105,
 			statDescriptionScope = "frost_bolt",
 			baseFlags = {
+				spell = true,
+				area = true,
 			},
 			constantStats = {
 				{ "active_skill_base_area_of_effect_radius", 16 },
@@ -8156,6 +8252,7 @@ skills["FrozenLocusPlayer"] = {
 			incrementalEffectiveness = 0.054999999701977,
 			statDescriptionScope = "ice_ambush_statset_0",
 			baseFlags = {
+				duration = true,
 			},
 			constantStats = {
 				{ "base_skill_effect_duration", 6000 },
@@ -8221,6 +8318,8 @@ skills["FrozenLocusPlayer"] = {
 			incrementalEffectiveness = 0.054999999701977,
 			statDescriptionScope = "ice_ambush_statset_1",
 			baseFlags = {
+				area = true,
+				duration = true,
 			},
 			constantStats = {
 				{ "active_skill_base_physical_damage_%_to_convert_to_cold", 100 },
@@ -8305,6 +8404,8 @@ skills["FrozenLocusExplodePlayer"] = {
 			damageIncrementalEffectiveness = 0.012719999998808,
 			statDescriptionScope = "ice_ambush_explode",
 			baseFlags = {
+				attack = true,
+				area = true,
 			},
 			constantStats = {
 				{ "active_skill_base_area_of_effect_radius", 20 },
@@ -8427,6 +8528,9 @@ skills["GalvanicFieldPlayer"] = {
 			damageIncrementalEffectiveness = 0.0065000001341105,
 			statDescriptionScope = "skill_stat_descriptions",
 			baseFlags = {
+				area = true,
+				duration = true,
+				chaining = true,
 			},
 			constantStats = {
 				{ "base_skill_effect_duration", 6000 },
@@ -8826,6 +8930,7 @@ skills["GhostDancePlayer"] = {
 			incrementalEffectiveness = 0.054999999701977,
 			statDescriptionScope = "ghost_dance",
 			baseFlags = {
+				duration = true,
 			},
 			constantStats = {
 				{ "skill_base_ghost_dance_grants_%_evasion_as_energy_shield_when_hit", 5 },
@@ -8941,6 +9046,8 @@ skills["GlacialCascadePlayer"] = {
 			incrementalEffectiveness = 0.054999999701977,
 			statDescriptionScope = "glacial_cascade_attack",
 			baseFlags = {
+				attack = true,
+				area = true,
 			},
 			constantStats = {
 				{ "upheaval_number_of_spikes", 8 },
@@ -9007,6 +9114,8 @@ skills["GlacialCascadePlayer"] = {
 			incrementalEffectiveness = 0.054999999701977,
 			statDescriptionScope = "glacial_cascade_attack",
 			baseFlags = {
+				attack = true,
+				area = true,
 			},
 			constantStats = {
 				{ "glacial_cascade_attack_final_spike_rect_length", 20 },
@@ -9248,6 +9357,9 @@ skills["HandOfChayulaPlayer"] = {
 			damageIncrementalEffectiveness = 0.006699999794364,
 			statDescriptionScope = "hand_of_chayula",
 			baseFlags = {
+				attack = true,
+				melee = true,
+				area = true,
 			},
 			constantStats = {
 				{ "melee_conditional_step_distance", 10 },
