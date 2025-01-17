@@ -1121,6 +1121,25 @@ function calcs.offence(env, actor, activeSkill)
 		if breakdown then
 			breakdown.CurseEffectMod = breakdown.mod(skillModList, skillCfg, "CurseEffect")
 		end
+
+		local curseFrequencyMod = calcLib.mod(skillModList, skillCfg, "CurseFrequency")
+		local curseDelayMod = calcLib.mod(skillModList, skillCfg, "CurseDelay")
+		local delayBase = (skillData.curseDelay or 0) + skillModList:Sum("BASE", skillCfg, "CurseDelay")
+		output.CurseDelay = delayBase / curseFrequencyMod * curseDelayMod
+		output.CurseDelay = m_ceil(output.CurseDelay * data.misc.ServerTickRate) / data.misc.ServerTickRate
+		if breakdown and output.CurseDelay ~= delayBase then
+			breakdown.CurseDelay = {
+				s_format("%.2fs ^8(base)", delayBase),
+			}
+			if curseFrequencyMod ~= 1 then
+				t_insert(breakdown.CurseDelay, s_format("x %.4f ^8(frequency modifier)", curseFrequencyMod))
+			end
+			if curseDelayMod ~= 1 then
+				t_insert(breakdown.CurseDelay, s_format("x %.4f ^8(delay modifier)", curseDelayMod))
+			end
+			t_insert(breakdown.CurseDelay, s_format("rounded up to nearest server tick"))
+			t_insert(breakdown.CurseDelay, s_format("= %.3fs", output.CurseDelay))
+		end
 	end
 	if activeSkill.skillTypes[SkillType.Mark] then
 		output.MarkEffectMod = calcLib.mod(skillModList, skillCfg, "MarkEffect")
@@ -3218,7 +3237,7 @@ function calcs.offence(env, actor, activeSkill)
 						if skillModList:Flag(cfg, isElemental[damageType] and "CannotElePenIgnore" or nil) then
 							effMult = effMult * (1 - resist / 100)
 						elseif useRes then
-							effMult = effMult * (1 - (resist - pen) / 100)
+							effMult = effMult * (1 - (m_max(resist - pen, 0)) / 100)
 						end
 						damageTypeHitMin = damageTypeHitMin * effMult
 						damageTypeHitMax = damageTypeHitMax * effMult
@@ -3229,7 +3248,7 @@ function calcs.offence(env, actor, activeSkill)
 						if pass == 2 and breakdown and (effMult ~= 1 or sourceRes ~= damageType) and skillModList:Flag(cfg, isElemental[damageType] and "CannotElePenIgnore" or nil) then
 							t_insert(breakdown[damageType], s_format("x %.3f ^8(effective DPS modifier)", effMult))
 							breakdown[damageType.."EffMult"] = breakdown.effMult(damageType, resist, 0, takenInc, effMult, takenMore, sourceRes, useRes, invertChance)
-						elseif pass == 2 and breakdown and (effMult ~= 1 or sourceRes ~= damageType) then
+						elseif pass == 2 and breakdown and (effMult ~= 1 or (resist - pen) < 0 or sourceRes ~= damageType) then
 							t_insert(breakdown[damageType], s_format("x %.3f ^8(effective DPS modifier)", effMult))
 							breakdown[damageType.."EffMult"] = breakdown.effMult(damageType, resist, pen, takenInc, effMult, takenMore, sourceRes, useRes, invertChance)
 						end

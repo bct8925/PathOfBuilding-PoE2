@@ -83,7 +83,7 @@ skills["SupportArcaneSurgePlayer"] = {
 	support = true,
 	requireSkillTypes = { SkillType.Spell, },
 	addSkillTypes = { SkillType.Duration, },
-	excludeSkillTypes = { SkillType.Trapped, SkillType.RemoteMined, SkillType.SummonsTotem, SkillType.UsedByTotem, SkillType.HasReservation, SkillType.ReservationBecomesCost, SkillType.NOT, SkillType.AND, },
+	excludeSkillTypes = { SkillType.Trapped, SkillType.RemoteMined, SkillType.SummonsTotem, SkillType.UsedByTotem, SkillType.Triggered, SkillType.HasReservation, SkillType.ReservationBecomesCost, SkillType.NOT, SkillType.AND, },
 	levels = {
 		[1] = { levelRequirement = 0, },
 	},
@@ -271,7 +271,7 @@ skills["SupportBurningRunesPlayer"] = {
 	name = "Burning Inscription",
 	hidden = true,
 	description = "Creates Ignited Ground Igniting Enemies based off a percentage of your Maximum Mana.",
-	skillTypes = { [SkillType.Triggerable] = true, [SkillType.Damage] = true, [SkillType.Area] = true, [SkillType.Fire] = true, [SkillType.SkillGrantedBySupport] = true, },
+	skillTypes = { [SkillType.Triggerable] = true, [SkillType.Triggered] = true, [SkillType.Damage] = true, [SkillType.Area] = true, [SkillType.Fire] = true, [SkillType.SkillGrantedBySupport] = true, },
 	castTime = 1,
 	qualityStats = {
 	},
@@ -758,7 +758,7 @@ skills["SupportConsideredCastingPlayer"] = {
 	support = true,
 	requireSkillTypes = { SkillType.Spell, },
 	addSkillTypes = { },
-	excludeSkillTypes = { SkillType.FixedCastTime, SkillType.Trapped, SkillType.RemoteMined, SkillType.SummonsTotem, SkillType.UsedByTotem, SkillType.HasReservation, SkillType.ReservationBecomesCost, SkillType.NOT, SkillType.AND, },
+	excludeSkillTypes = { SkillType.FixedCastTime, SkillType.Trapped, SkillType.RemoteMined, SkillType.SummonsTotem, SkillType.Triggered, SkillType.UsedByTotem, SkillType.HasReservation, SkillType.ReservationBecomesCost, SkillType.NOT, SkillType.AND, },
 	levels = {
 		[1] = { levelRequirement = 0, },
 	},
@@ -1102,7 +1102,7 @@ skills["SupportElementalDischargePlayer"] = {
 }skills["TriggeredElementalDischargePlayer"] = {
 	name = "Elemental Discharge",
 	hidden = true,
-	skillTypes = { [SkillType.Spell] = true, [SkillType.Damage] = true, [SkillType.SkillGrantedBySupport] = true, [SkillType.Triggerable] = true, [SkillType.Cooldown] = true, },
+	skillTypes = { [SkillType.Spell] = true, [SkillType.Damage] = true, [SkillType.SkillGrantedBySupport] = true, [SkillType.Triggerable] = true, [SkillType.Cooldown] = true, [SkillType.Triggered] = true, },
 	castTime = 1,
 	qualityStats = {
 	},
@@ -1969,14 +1969,17 @@ skills["ViciousHexSupportPlayer"] = {
 			statDescriptionScope = "skill_stat_descriptions",
 			statMap = {
 				["impending_doom_base_added_chaos_damage_%_of_current_mana"] = {
-					mod("ChaosMin", "BASE", nil, 0, 0, { type = "PercentStat", stat = "Mana", percentVar = "DoomBlastManaPercentage" }),
-					mod("ChaosMax", "BASE", nil, 0, 0, { type = "PercentStat", stat = "Mana", percentVar = "DoomBlastManaPercentage" }),
+					mod("ChaosMin", "BASE", nil, 0, 0, { type = "PercentStat", stat = "Mana", percentVar = "CurrentManaPercentage" }),
+					mod("ChaosMax", "BASE", nil, 0, 0, { type = "PercentStat", stat = "Mana", percentVar = "CurrentManaPercentage" }),
 					div = 100,
 				},
 			},
 			baseFlags = {
 				spell = true,
 				area = true,
+			},
+			baseMods = {
+				skill("currentManaPercentage", true),
 			},
 			constantStats = {
 				{ "impending_doom_base_added_chaos_damage_%_of_current_mana", 15 },
@@ -2210,7 +2213,7 @@ skills["SupportManaFlarePlayer"] = {
 }skills["TriggeredManaFlarePlayer"] = {
 	name = "Mana Flare",
 	hidden = true,
-	skillTypes = { [SkillType.Spell] = true, [SkillType.Damage] = true, [SkillType.SkillGrantedBySupport] = true, [SkillType.Triggerable] = true, [SkillType.Cooldown] = true, },
+	skillTypes = { [SkillType.Spell] = true, [SkillType.Damage] = true, [SkillType.SkillGrantedBySupport] = true, [SkillType.Triggerable] = true, [SkillType.Cooldown] = true, [SkillType.Triggered] = true, },
 	castTime = 1,
 	qualityStats = {
 	},
@@ -2222,7 +2225,18 @@ skills["SupportManaFlarePlayer"] = {
 			label = "Mana Flare",
 			incrementalEffectiveness = 0.054999999701977,
 			statDescriptionScope = "skill_stat_descriptions",
+			statMap = {
+				["support_mana_flare_%_of_current_mana_consumed"] = {
+					mod("FireMin", "BASE", nil, 0, 0, { type = "PercentStat", stat = "Mana", percentVar = "CurrentManaPercentage" }),
+					mod("FireMax", "BASE", nil, 0, 0, { type = "PercentStat", stat = "Mana", percentVar = "CurrentManaPercentage" }),
+					div = 100,
+				},
+			},
 			baseFlags = {
+				spell = true,
+			},
+			baseMods = {
+				skill("currentManaPercentage", true),
 			},
 			constantStats = {
 				{ "triggered_by_mana_flare_support_%", 100 },
@@ -2253,6 +2267,12 @@ skills["SupportMinionInstabilityPlayer"] = {
 			label = "Minion Instability",
 			incrementalEffectiveness = 0.054999999701977,
 			statDescriptionScope = "gem_stat_descriptions",
+			statMap = {
+				["explode_on_low_life_%_maximum_life_to_deal"] = {
+					mod("MinionModifier", "LIST", { mod = mod("Multiplier:MinionInstabilityBaseDamage", "BASE", nil) }),
+					mod("ExtraMinionSkill", "LIST", { skillId = "MinionInstability" }),
+				},
+			},
 			baseFlags = {
 			},
 			constantStats = {
@@ -2312,6 +2332,11 @@ skills["SupportMinionPactPlayer"] = {
 			label = "Minion Pact",
 			incrementalEffectiveness = 0.054999999701977,
 			statDescriptionScope = "gem_stat_descriptions",
+			statMap = {
+				["support_minion_pact_damage_+%_final"] = {
+					mod("Damage", "MORE", nil),
+				},
+			},
 			baseFlags = {
 			},
 			constantStats = {

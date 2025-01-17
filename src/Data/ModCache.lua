@@ -575,7 +575,7 @@ c["10% chance to inflict Bleeding on Critical Hit with Attacks"]={{[1]={[1]={typ
 c["10% chance to inflict Bleeding on Hit"]={{[1]={flags=0,keywordFlags=0,name="BleedChance",type="BASE",value=10}},nil}
 c["10% chance to refresh Ignite Duration on Critical Hit"]={{[1]={[1]={type="Condition",var="CriticalStrike"},flags=0,keywordFlags=0,name="EnemyIgniteDuration",type="BASE",value=10}}," to refresh  "}
 c["10% chance when a Charm is used to use another Charm without consuming Charges"]={{[1]={flags=0,keywordFlags=0,name="FlaskCharges",type="BASE",value=10}}," when a Charm is used to use another Charm without consuming  "}
-c["10% faster Curse Activation"]={{}," Curse Activation "}
+c["10% faster Curse Activation"]={{[1]={flags=0,keywordFlags=0,name="CurseFrequency",type="INC",value=10}},nil}
 c["10% increased Accuracy Rating"]={{[1]={flags=0,keywordFlags=0,name="Accuracy",type="INC",value=10}},nil}
 c["10% increased Accuracy Rating while Dual Wielding"]={{[1]={[1]={type="Condition",var="DualWielding"},flags=0,keywordFlags=0,name="Accuracy",type="INC",value=10}},nil}
 c["10% increased Accuracy Rating with Bows"]={{[1]={flags=131076,keywordFlags=0,name="Accuracy",type="INC",value=10}},nil}
@@ -1065,10 +1065,10 @@ c["20% chance for Slam Skills you use yourself to cause Aftershocks"]={{}," for 
 c["20% chance to Aggravate Bleeding on targets you Critically Hit with Attacks"]={{}," to Aggravate Bleeding on targets you Critically Hit  "}
 c["20% chance to Aggravate Bleeding on targets you Hit with Empowered Attacks"]={{}," to Aggravate Bleeding on targets you Hit with Empowered Attacks "}
 c["20% chance to Aggravate Bleeding on targets you Hit with Empowered Attacks Empowered Attacks deal 30% increased Damage"]={{[1]={flags=0,keywordFlags=0,name="Damage",type="BASE",value=20}}," to Aggravate Bleeding on targets you Hit with Empowered Attacks Empowered Attacks deal 30% increased  "}
+c["20% chance to Knock Enemies Back with Hits at Close Range"]={{}," to Knock Enemies Back   "}
 c["20% chance to Poison on Hit"]={{[1]={flags=0,keywordFlags=0,name="PoisonChance",type="BASE",value=20}},nil}
 c["20% chance to gain a Power Charge on Hit"]={nil,"a Power Charge on Hit "}
 c["20% chance to gain a Power Charge on Hit Lose all Power Charges on reaching maximum Power Charges"]={nil,"a Power Charge on Hit Lose all Power Charges on reaching maximum Power Charges "}
-c["20% chance toKnock Enemies Back with Hits at Close Range"]={{}," toKnock Enemies Back   "}
 c["20% faster start of Energy Shield Recharge"]={{[1]={flags=0,keywordFlags=0,name="EnergyShieldRechargeFaster",type="INC",value=20}},nil}
 c["20% increased Accuracy Rating against Rare or Unique Enemies"]={{[1]={flags=0,keywordFlags=0,name="Accuracy",type="INC",value=20}},"  against Rare or Unique Enemies "}
 c["20% increased Accuracy Rating against Rare or Unique Enemies 20% increased chance to inflict Ailments against Rare or Unique Enemies"]={{[1]={flags=0,keywordFlags=0,name="Accuracy",type="INC",value=20}},"  against Rare or Unique Enemies 20% increased chance to inflict Ailments against Rare or Unique Enemies "}
@@ -1114,7 +1114,7 @@ c["20% increased Daze Buildup"]={{}," Daze Buildup "}
 c["20% increased Daze Buildup with Quarterstaves"]={{}," Daze Buildup  "}
 c["20% increased Daze Buildup with Quarterstaves 20% increased Freeze Buildup with Quarterstaves"]={{}," Daze Buildup  20% increased Freeze Buildup with Quarterstaves "}
 c["20% increased Duration of Damaging Ailments on Enemies"]={{[1]={flags=0,keywordFlags=0,name="EnemyIgniteDuration",type="INC",value=20},[2]={flags=0,keywordFlags=0,name="EnemyBleedDuration",type="INC",value=20},[3]={flags=0,keywordFlags=0,name="EnemyPoisonDuration",type="INC",value=20}},nil}
-c["20% increased Effect of Auras from your Skills"]={{[1]={flags=0,keywordFlags=0,name="LocalEffect",type="INC",value=20}},"  of Auras from your Skills "}
+c["20% increased Effect of Auras from your Aura Skills"]={{[1]={flags=0,keywordFlags=0,name="LocalEffect",type="INC",value=20}},"  of Auras from your Aura Skills "}
 c["20% increased Effect of Withered"]={{[1]={flags=0,keywordFlags=0,name="WitherEffect",type="INC",value=20}},nil}
 c["20% increased Elemental Damage with Attacks"]={{[1]={flags=0,keywordFlags=65536,name="ElementalDamage",type="INC",value=20}},nil}
 c["20% increased Endurance Charge Duration"]={{[1]={flags=0,keywordFlags=0,name="EnduranceChargesDuration",type="INC",value=20}},nil}
@@ -1616,8 +1616,7 @@ c["4.6 Life Regeneration per second"]={{[1]={flags=0,keywordFlags=0,name="LifeRe
 c["40% chance to Avoid Chaos Damage from Hits"]={{[1]={flags=0,keywordFlags=0,name="ChaosDamage",type="BASE",value=40}}," to Avoid  from Hits "}
 c["40% chance to Avoid Chaos Damage from Hits Enemies in your Presence are Intimidated"]={{[1]={flags=0,keywordFlags=0,name="ChaosDamage",type="BASE",value=40}}," to Avoid  from Hits Enemies in your Presence are Intimidated "}
 c["40% chance to Avoid Physical Damage from Hits"]={{[1]={flags=0,keywordFlags=0,name="AvoidPhysicalDamageChance",type="BASE",value=40}},nil}
-c["40% faster Curse Activation"]={{}," Curse Activation "}
-c["40% faster Curse Activation Your Curses have 20% increased Effect if 50% of Curse Duration expired"]={{[1]={[1]={actor="enemy",threshold=50,type="MultiplierThreshold",var="CurseExpired"},flags=0,keywordFlags=0,name="LocalEffect",type="INC",value=40}}," Curse Activation Your Curses have 20% increased   "}
+c["40% faster Curse Activation"]={{[1]={flags=0,keywordFlags=0,name="CurseFrequency",type="INC",value=40}},nil}
 c["40% faster start of Energy Shield Recharge"]={{[1]={flags=0,keywordFlags=0,name="EnergyShieldRechargeFaster",type="INC",value=40}},nil}
 c["40% increased Accuracy Rating at Close Range"]={{[1]={[1]={type="Condition",var="AtCloseRange"},flags=0,keywordFlags=0,name="AccuracyVsEnemy",type="INC",value=40}},nil}
 c["40% increased Aftershock Area of Effect"]={{[1]={flags=0,keywordFlags=0,name="AreaOfEffect",type="INC",value=40}}," Aftershock  "}
@@ -1984,7 +1983,7 @@ c["8% increased Critical Hit Chance"]={{[1]={flags=0,keywordFlags=0,name="CritCh
 c["8% increased Critical Hit Chance for Attacks"]={{[1]={flags=1,keywordFlags=0,name="CritChance",type="INC",value=8}},nil}
 c["8% increased Damage for each time you've Warcried Recently"]={{[1]={[1]={type="Multiplier",var="WarcryUsedRecently"},flags=0,keywordFlags=0,name="Damage",type="INC",value=8}},nil}
 c["8% increased Dexterity"]={{[1]={flags=0,keywordFlags=0,name="Dex",type="INC",value=8}},nil}
-c["8% increased Effect of Auras from your Skills"]={{[1]={flags=0,keywordFlags=0,name="LocalEffect",type="INC",value=8}},"  of Auras from your Skills "}
+c["8% increased Effect of Auras from your Aura Skills"]={{[1]={flags=0,keywordFlags=0,name="LocalEffect",type="INC",value=8}},"  of Auras from your Aura Skills "}
 c["8% increased Effect of your Curses"]={{[1]={flags=0,keywordFlags=0,name="CurseEffect",type="INC",value=8}},nil}
 c["8% increased Effect of your Mark Skills"]={{[1]={[1]={skillType=109,type="SkillType"},flags=0,keywordFlags=0,name="LocalEffect",type="INC",value=8}},nil}
 c["8% increased Elemental Damage"]={{[1]={flags=0,keywordFlags=0,name="ElementalDamage",type="INC",value=8}},nil}
@@ -2297,7 +2296,7 @@ c["Dodge Roll avoids all Hits 10% less Movement and Skill Speed per Dodge Roll i
 c["Dodge Roll cannot Avoid Damage"]={nil,"Dodge Roll cannot Avoid Damage "}
 c["Dodge Roll cannot Avoid Damage Take 30% less Damage from Hits while Dodge Rolling"]={nil,"Dodge Roll cannot Avoid Damage Take 30% less Damage from Hits while Dodge Rolling "}
 c["Dodge Roll passes through Enemies"]={nil,"Dodge Roll passes through Enemies "}
-c["Double Activation Delay of Curses"]={nil,"Double Activation Delay of Curses "}
+c["Double Activation Delay of Curses"]={{[1]={flags=0,keywordFlags=0,name="CurseDelay",type="MORE",value=100}},nil}
 c["Double Stun Threshold while Shield is Raised"]={nil,"Double Stun Threshold while Shield is Raised "}
 c["Double the number of your Poisons that targets can be affected by at the same time"]={{[1]={flags=0,keywordFlags=0,name="PoisonCanStack",type="FLAG",value=true},[2]={flags=0,keywordFlags=0,name="PoisonStacks",type="MORE",value=100}},nil}
 c["Drop Ignited Ground while moving, which lasts 8 seconds and Ignites as though dealing Fire Damage equal to 10% of your maximum Life"]={nil,"Drop Ignited Ground while moving, which lasts 8 seconds and Ignites as though dealing Fire Damage equal to 10% of your maximum Life "}
