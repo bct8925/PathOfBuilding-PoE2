@@ -548,7 +548,6 @@
 	<File name="TreeData/4_0/jewelsockets_208_208_BC7.dds.zst" part="tree" sha1="ec025e1e282d6382637d869ea2ad61903f8a385f" />
 	<File name="TreeData/4_0/lines_1436_1436_BC7.dds.zst" part="tree" sha1="f39e159b40fafcc9687e37ce6efaf4c4ed4f5455" />
 	<File name="TreeData/4_0/lines_1940_1940_BC7.dds.zst" part="tree" sha1="8b8d6cf89ca4bda8c0b785f706962d9ab39b9e2b" />
-	<File name="TreeData/4_0/log_lines_extract.txt" part="tree" sha1="12fe729d00c2c7c435dc67fe1968e671911db7d3" />
 	<File name="TreeData/4_0/mastery-active-effect_776_768_BC7.dds.zst" part="tree" sha1="8b9f986fb49df4bbeec38269997e30eaaaef562d" />
 	<File name="TreeData/4_0/oils_108_108_RGBA.dds.zst" part="tree" sha1="abf58ace0c8b9987d7b2d9b79dc047226c970a50" />
 	<File name="TreeData/4_0/orbitactive0.png" part="tree" sha1="c17c7c0682240494614ccc3dd183a0ca9aca2cc4" />
@@ -581,9 +580,6 @@
 	<File name="TreeData/4_0/orbitnormal7.png" part="tree" sha1="8f9bdd89396d66eb098ac6fa5554d051674dbd41" />
 	<File name="TreeData/4_0/orbitnormal8.png" part="tree" sha1="88611a0daf1fb9618f022ab651bb44a82232aab6" />
 	<File name="TreeData/4_0/orbitnormal9.png" part="tree" sha1="a689c028ab279085c65a6d291a124442492dab92" />
-	<File name="TreeData/4_0/script_lines_extract_orbitactive.scm" part="tree" sha1="f19ae136e4bbce7f01d2bf25ccbb6c14b3a8a681" />
-	<File name="TreeData/4_0/script_lines_extract_orbitintemediate.scm" part="tree" sha1="88d189eed9dd793e62e288e20d35fef52a046ccd" />
-	<File name="TreeData/4_0/script_lines_extract_orbitnormal.scm" part="tree" sha1="2fac4f79ca8186af457b8a5427960ef1bfc1e574" />
 	<File name="TreeData/4_0/skills-disabled_64_64_BC1.dds.zst" part="tree" sha1="4f638e1dafbfdce991769c72f46ff963561d7c3b" />
 	<File name="TreeData/4_0/skills-disabled_88_88_BC1.dds.zst" part="tree" sha1="0947e7e4e7c0bd2269e0ba2f2636b6a4fa2ba554" />
 	<File name="TreeData/4_0/skills-disabled_128_128_BC1.dds.zst" part="tree" sha1="6a2d7005ed1f6db59bcd85a617824910304771aa" />
