@@ -522,7 +522,6 @@
 	<File name="TreeData/4_0/ascendancy-background_4000_4000_BC7.dds.zst" part="tree" sha1="3b55cc6cc196eb4e5fc198e59b131d7f0fcb3c06" />
 	<File name="TreeData/4_0/background_348_348_BC7.dds.zst" part="tree" sha1="d0ca1a91ddd57a3d8f37902fdb8a93adf0766967" />
 	<File name="TreeData/4_0/background_1024_1024_BC7.dds.zst" part="tree" sha1="9075f0f0e4db5fedd3ac542cfab37a15de5bcafe" />
-	<File name="TreeData/4_0/export_lines.bat" part="tree" sha1="9f59986bbec1248b0833f6231c80bac57529c3c6" />
 	<File name="TreeData/4_0/group-background_92_92_BC7.dds.zst" part="tree" sha1="715411b1326fcd5a4bddc2e803db945f5e65a838" />
 	<File name="TreeData/4_0/group-background_104_104_BC7.dds.zst" part="tree" sha1="3ece257b4bca23cc2420cec7944d1b72f5b464f2" />
 	<File name="TreeData/4_0/group-background_124_124_BC7.dds.zst" part="tree" sha1="fc01635b062e9924d034422b5db75d666bc8b0b3" />
