@@ -1726,7 +1726,8 @@ function ItemsTabClass:UpdateDisplayItemRangeLines()
 		wipeTable(self.controls.displayItemRangeLine.list)
 		for _, modLine in ipairs(self.displayItem.rangeLineList) do
 			-- primarily for Against the Darkness // a way to cut down on really long modLines, gsub could be updated for others
-			t_insert(self.controls.displayItemRangeLine.list, modLine.line:gsub(" Passive Skills in Radius also grant", ":"))
+			local rangeLine = modLine.line:gsub(" Passive Skills in Radius also grant", ":")
+			t_insert(self.controls.displayItemRangeLine.list, rangeLine)
 		end
 		self.controls.displayItemRangeLine.selIndex = 1
 		self.controls.displayItemRangeSlider.val = self.displayItem.rangeLineList[1].range
