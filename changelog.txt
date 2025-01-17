@@ -8,18 +8,18 @@ It was a lot  of work and there are sure to be an above-average number of bugs a
 changed from PoE1 to PoE2.
 At release of PoE2 Early Access a subset of the PoBCommunity team dug in and got to work carving
 data/memory/assets/their-time like nobody's business in an effort to get this port put together.
-It took us much longer than we anticipated (partially because many of us to this day highly enjoy playing PoE2 and
-coding takes a back seat on some days; partially because it was Holiday Season; and partially b/c GGG did not provide
-us with a Passive Skill Tree and the assets we normally have so we had to go dig them up).
+It took us much longer than we anticipated (partially because many of us - to this day - highly enjoy playing PoE2 
+and coding takes a back seat on some days; partially because it was Holiday Season; and partially because GGG did
+not provide us with a Passive Skill Tree and the assets we normally have, so we had to go dig them up).
 
-Huge thanks to: LocalIdentity, Nostrademous, trompetin17, PJacek, sida-wang, Peechey,
-QuickStick123, deathbeam, Helyos96, zao, Wires77
+Huge thanks to: LocalIdentity, Nostrademous, trompetin17, TPlant, sida-wang, Peechey,
+                QuickStick123, deathbeam, Helyos96, zao, Wires77
 
 In this version we are releasing the following initial features:
-* PoE2 Passive Skill Tree and "most" Ascendancy support (including Weapon Set Skill Points)
+* PoE2 Passive Skill Tree and support for "most" Ascendancies (including Weapon Set Skill Points)
 * Support for Attribute Switching on small passive tree nodes
 * Basic support for most Skills and Supports gems with Stat Sets breakdowns for skills with multiple parts or effects
-* Support for many (possibly all) known unique items (outside of skills granted by items as previously mentioned)
+* Support for many (possibly all) known unique items
 * Re-coded ailment calculations formula
 * Much improved skill tree rendering engine
 * Rune & Soul Core support
@@ -28,21 +28,20 @@ In this version we are releasing the following initial features:
 
 
 
-A quick hit-list of things that ARE NOT SUPPORTED in this initial release:
+A quick hit-list of things that ^1ARE NOT SUPPORTED ^7in this initial release:
 
-* Character Importing (GGG has not yet enabled the API that will allow us to import characters)
+* Character Importing - GGG has not yet enabled the API that will allow us to import characters
 * Meta Skills / Trigger Skills damage calculation - this needs an entire overhaul we didn't have time to do thus far
 * Skill Combos - it is our hope in the future to implement the concepts of "rotations" in a given skill
-(e.g., Tempest Flurry: normal strike -> normal strike -> third strike -> final strike
--- that is the rotation of holding down the skill button in game, each one has slightly different speed, modifiers,
-and damage potential; we plan to enable calculation of the DPS of a "rotation" in the future)
+        i.e. the rotation of holding down the skill button in game, each one has slightly different speed, modifiers,
+        and damage potential
+        (e.g., Tempest Flurry: normal strike -> normal strike -> third strike -> final strike)     
 * Weapon Set Swap combos
-* Full support for Item Crafting (a lot is there, but weights are hidden by GGG now so knowing probability
-of certain events happening needs to be crowd-sourced)
-* Support for all Nodes / Modifiers / Ascendancies (many are supported, but not all - follow the logic of"if a modifier
-on an item, tree node or ascendancy node is 'blue colored' we parse it and hopefully support it, if it's 'red colored'
-we do not."
-* Proper support for Skills granted by Items (we still need to complete the process of fully removing the concept of
-skill gems being tied to item sockets that was in PoE1 to allow for this, we just ran out of time)
+* Support for all Nodes / Modifiers / Ascendancies
+        Many are supported, but not all - if a modifier on an item, tree node or ascendancy node is 'blue coloured' 
+        we parse it - and hopefully support it - if it's 'red coloured' we do not.
+* Proper support for Skills granted by Items
+        We still need to complete the process of fully removing the concept of
+        skill gems being tied to item sockets that was in PoE1 to allow for this, we just ran out of time
 * Map Mods
 * Boss Skills
