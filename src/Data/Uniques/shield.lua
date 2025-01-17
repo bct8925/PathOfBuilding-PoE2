@@ -9,7 +9,7 @@ Implicits: 1
 Grants Skill: Raise Shield
 (60-80)% increased Armour
 +(10-15) to Strength
-30% reduced Stun Threshold
+20% reduced Stun Threshold
 Double Stun Threshold while Shield is Raised
 ]],[[
 Doomgate
@@ -28,7 +28,7 @@ Grants Skill: Raise Shield
 (30-40)% increased Block chance
 (60-100)% increased Armour
 Accuracy Rating is Doubled
-Blocking Damage Poisons the Enemy as though dealing 100 Base Chaos Damage
+Blocking Damage Poisons the Enemy as though dealing 200 Base Chaos Damage
 ]],[[
 The Surrender
 Stone Tower Shield
@@ -89,7 +89,7 @@ Implicits: 1
 Grants Skill: Raise Shield
 +(10-20) to Strength
 +(10-20) to Dexterity
-+(10-20)% to Fire Resistance
++(20-30)% to Fire Resistance
 +(10-20)% to Cold Resistance
 No Movement Speed Penalty while Shield is Raised
 ]],[[
@@ -110,7 +110,7 @@ Implicits: 1
 Grants Skill: Raise Shield
 (30-40)% increased Block chance
 (30-50)% increased Armour and Energy Shield
-+(15-30) to maximum Mana
++(50-70) to maximum Mana
 Damage Blocked is Recouped as Mana
 ]],[[
 Crest of Ardura
@@ -156,7 +156,6 @@ Grants Skill: Raise Shield
 +(15-25)% to Cold Resistance
 +(15-25)% to Lightning Resistance
 You cannot Block
-No Chance to Block
 Modifiers to Maximum Block Chance instead apply to Maximum Resistances
 ]],
 -- Shield: Evasion/Energy Shield

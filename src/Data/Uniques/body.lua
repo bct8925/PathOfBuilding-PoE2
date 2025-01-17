@@ -439,13 +439,13 @@ Variant: All Resistances
 Variant: Attributes
 Sockets: S S S S
 (200-300)% increased Armour, Evasion and Energy Shield
-{variant:1}+10 to Spirit per Socketed Rune or Soul Core
-{variant:2}5% increased Maximum Life per Socketed Rune or Soul Core
-{variant:3}5% increased Maximum Mana per Socketed Rune or Soul Core
+{variant:7}5% increased Attributes per Socketed Rune or Soul Core
 {variant:4}10% increased Global Defences per Socketed Rune or Soul Core
 {variant:5}10% increased Rarity of Items found per Socketed Rune or Soul Core
+{variant:2}5% increased Maximum Life per Socketed Rune or Soul Core
+{variant:3}5% increased Maximum Mana per Socketed Rune or Soul Core
 {variant:6}+10% to all Elemental Resistances per Socketed Rune or Soul Core
-{variant:7}5% increased Attributes per Socketed Rune or Soul Core
+{variant:1}+10 to Spirit per Socketed Rune or Soul Core
 ]],[[
 Skin of the Loyal
 Garment

@@ -64,8 +64,8 @@ Variant: Current
 {variant:2}Adds (4-6) to (8-10) Physical Damage
 {variant:1}Adds (2-3) to (4-5) Fire Damage
 {variant:2}Adds (4-6) to (8-10) Fire Damage
-{variant:2}+(20-30)% to Fire Resistance
 {variant:2}+(10-20) to Strength
+{variant:2}+(20-30)% to Fire Resistance
 Hits Break (30-50) Armour
 Apply Fire Exposure when fully breaking enemy Armour
 ]],

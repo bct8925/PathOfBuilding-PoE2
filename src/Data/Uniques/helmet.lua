@@ -190,34 +190,34 @@ Guarded Helm
 Variant: Pre 0.1.1
 Variant: Current
 {variant:1}+(0-20) to Armour
-{variant:1}+(0-15) to Evasion Rating
-{variant:1}+(0-10) to maximum Energy Shield
-{variant:1}+(0-30) to Accuracy Rating
-{variant:1}+(0-15) to maximum Life
-{variant:1}+(0-10) to maximum Mana
-{variant:1}(0-10)% increased Rarity of Items found
-{variant:1}(0-15)% increased Critical Hit Chance
-{variant:1}+(0-5) to Strength
-{variant:1}+(0-5) to Dexterity
-{variant:1}+(0-5) to Intelligence
-{variant:1}+(0-5)% to Fire Resistance
-{variant:1}+(0-5)% to Cold Resistance
-{variant:1}+(0-5)% to Lightning Resistance
-{variant:1}(0-0.05) Life Regeneration per second
 {variant:2}+(0-40) to Armour
+{variant:1}+(0-15) to Evasion Rating
 {variant:2}+(0-30) to Evasion Rating
+{variant:1}+(0-10) to maximum Energy Shield
 {variant:2}+(0-20) to maximum Energy Shield
+{variant:1}+(0-30) to Accuracy Rating
 {variant:2}+(0-60) to Accuracy Rating
+{variant:1}+(0-15) to maximum Life
 {variant:2}+(0-30) to maximum Life
+{variant:1}+(0-10) to maximum Mana
 {variant:2}+(0-20) to maximum Mana
+{variant:1}(0-10)% increased Rarity of Items found
 {variant:2}(0-20)% increased Rarity of Items found
+{variant:1}(0-15)% increased Critical Hit Chance
 {variant:2}(0-30)% increased Critical Hit Chance
+{variant:1}+(0-5) to Strength
 {variant:2}+(0-10) to Strength
+{variant:1}+(0-5) to Dexterity
 {variant:2}+(0-10) to Dexterity
+{variant:1}+(0-5) to Intelligence
 {variant:2}+(0-10) to Intelligence
+{variant:1}+(0-5)% to Fire Resistance
 {variant:2}+(0-10)% to Fire Resistance
+{variant:1}+(0-5)% to Cold Resistance
 {variant:2}+(0-10)% to Cold Resistance
+{variant:1}+(0-5)% to Lightning Resistance
 {variant:2}+(0-10)% to Lightning Resistance
+{variant:1}(0-0.05) Life Regeneration per second
 {variant:2}(0-6) Life Regeneration per second
 ]],[[
 Greymake

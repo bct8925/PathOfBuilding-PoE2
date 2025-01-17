@@ -10,7 +10,7 @@ Grants Skill: Level (1-20) Skeletal Warrior Minion
 +(20-30) to maximum Mana
 +(5-10) to Intelligence
 (10-30)% increased Mana Regeneration Rate
-Gain 3% of Damage as Chaos Damage per Undead Minion
+Gain 5% of Damage as Chaos Damage per Undead Minion
 ]],[[
 Font of Power
 Omen Sceptre

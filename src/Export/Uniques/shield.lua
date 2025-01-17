@@ -156,7 +156,6 @@ UniqueFireResist6
 UniqueColdResist5
 UniqueLightningResist2
 UniqueCannotBlock1
-UniqueNoBlockChance1
 UniqueMaximumBlockToMaximumResistances1
 ]],
 -- Shield: Evasion/Energy Shield

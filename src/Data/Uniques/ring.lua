@@ -25,7 +25,7 @@ Iron Ring
 Implicits: 1
 {tags:physical,attack}Adds 1 to 4 Physical Damage to Attacks
 {tags:life}(3-6) Life Regeneration per second
-{tags:chaos,attack}Adds (2-3) to (4-5) Chaos Damage to Attacks
+{tags:chaos,attack}Adds (4-6) to (8-10) Chaos Damage to Attacks
 25% chance to Intimidate Enemies for 4 seconds on Hit
 ]],[[
 Blistering Bond
@@ -33,7 +33,7 @@ Ruby Ring
 Implicits: 1
 {tags:fire}+(20-30)% to Fire Resistance
 {tags:life}+(40-60) to maximum Life
-{tags:fire}+(20-30)% to Fire Resistance
+{tags:fire}+(30-40)% to Fire Resistance
 {tags:cold}-(15-10)% to Cold Resistance
 You take Fire Damage instead of Physical Damage from Bleeding
 ]],[[
@@ -41,7 +41,7 @@ The Burrower
 Topaz Ring
 Implicits: 1
 {tags:lightning}+(20-30)% to Lightning Resistance
-{tags:cold}-(15-10)% to Cold Resistance
+{tags:cold}-10% to Cold Resistance
 {tags:lightning}+(20-30)% to Lightning Resistance
 {tags:mana}(25-35)% increased Mana Regeneration Rate
 {tags:lightning}Lightning Damage of Enemies Hitting you is Unlucky
@@ -171,8 +171,8 @@ Requires Level 40
 (10-20)% increased Rarity of Items found
 {tags:attribute}+(10-20) to all Attributes
 Lightning Resistance is unaffected by Area Penalties
-{variant:1}You can only Socket Ruby Jewels in this item
 {variant:2}You can only Socket Emerald Jewels in this item
+{variant:1}You can only Socket Ruby Jewels in this item
 {variant:3}You can only Socket Sapphire Jewels in this item
 ]],[[
 Snakepit

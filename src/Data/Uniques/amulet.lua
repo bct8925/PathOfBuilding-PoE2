@@ -41,8 +41,8 @@ Implicits: 1
 Choir of the Storm
 Jade Amulet
 Implicits: 2
-{tags:attribute}+(10-15) to Dexterity
 Grants Skill: Level (1-20) Lightning Bolt
+{tags:attribute}+(10-15) to Dexterity
 {tags:lightning}+(20-30)% to Lightning Resistance
 Critical Hits Ignore Enemy Monster Lightning Resistance
 Trigger Greater Lightning Bolt Skill on Critical Hit

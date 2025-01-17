@@ -53,7 +53,7 @@ Enemies Frozen by you take 50% increased Damage
 [[
 The Blood Thorn
 Wrapped Quarterstaff
-Adds (3-5) to (9-11) Physical Damage
+Adds (8-12) to (16-18) Physical Damage
 +(10-15) to Strength
 Causes Bleeding on Hit
 (4-5) to (8-10) Physical Thorns damage
@@ -89,7 +89,7 @@ Implicits: 1
 ]],[[
 The Sentry
 Gothic Quarterstaff
-Adds (8-12) to (16-20) Fire Damage
+Adds (25-32) to (40-50) Fire Damage
 +20% to Fire Resistance
 100% increased chance to Ignite
 30% increased Light Radius

@@ -38,8 +38,8 @@ Legionstride
 Rough Greaves
 Variant: Pre 0.1.1
 Variant: Current
-{variant:1}(50-80)% increased Armour
 {variant:2}+(50-70) to Armour
+{variant:1}(50-80)% increased Armour
 {variant:1}+(30-50) to Stun Threshold
 {variant:2}+(50-70) to Stun Threshold
 -10 Physical damage taken from Projectile Attacks
@@ -148,7 +148,6 @@ Variant: Current
 {variant:2}+(30-50) to maximum Energy Shield
 {variant:1}+(5-15) to Strength
 {variant:2}+(10-20) to Strength
-{variant:1}
 {variant:2}+(10-20) to Dexterity
 {variant:1}+(5-15) to Intelligence
 {variant:2}+(10-20) to Intelligence
