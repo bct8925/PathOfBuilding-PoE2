@@ -2136,7 +2136,7 @@ c["Adds 9 to 15 Cold Damage"]={{[1]={flags=0,keywordFlags=0,name="ColdMin",type=
 c["Aggravate Bleeding on Enemies when they Enter your Presence"]={nil,"Aggravate Bleeding on Enemies when they Enter your Presence "}
 c["Aggravate Bleeding on Enemies when they Enter your Presence 100% increased Thorns damage"]={nil,"Aggravate Bleeding on Enemies when they Enter your Presence 100% increased Thorns damage "}
 c["Aggravate Bleeding on targets you Critically Hit with Attacks"]={nil,"Aggravate Bleeding on targets you Critically Hit with Attacks "}
-c["All Damage from Hits Contributes to Chill Magnitude"]={nil,"All Damage from Hits Contributes to Chill Magnitude "}
+c["All Damage from Hits Contributes to Chill Magnitude"]={{[1]={flags=0,keywordFlags=0,name="PhysicalCanChill",type="FLAG",value=true},[2]={flags=0,keywordFlags=0,name="FireCanChill",type="FLAG",value=true},[3]={flags=0,keywordFlags=0,name="LightningCanChill",type="FLAG",value=true},[4]={flags=0,keywordFlags=0,name="ChaosCanChill",type="FLAG",value=true}},nil}
 c["All Damage from Hits Contributes to Poison Magnitude"]={{[1]={flags=0,keywordFlags=0,name="FireCanPoison",type="FLAG",value=true},[2]={flags=0,keywordFlags=0,name="ColdCanPoison",type="FLAG",value=true},[3]={flags=0,keywordFlags=0,name="LightningCanPoison",type="FLAG",value=true}},nil}
 c["All Damage from Hits Contributes to Shock Chance"]={{[1]={flags=0,keywordFlags=0,name="PhysicalCanShock",type="FLAG",value=true},[2]={flags=0,keywordFlags=0,name="FireCanShock",type="FLAG",value=true},[3]={flags=0,keywordFlags=0,name="ColdCanShock",type="FLAG",value=true},[4]={flags=0,keywordFlags=0,name="ChaosCanShock",type="FLAG",value=true}},nil}
 c["All Damage from Hits with this Weapon Contributes to Freeze Buildup"]={nil,"All Damage from Hits with this Weapon Contributes to Freeze Buildup "}
@@ -2976,11 +2976,8 @@ c["Take maximum Life and Energy Shield as Fire Damage when Infernal Flame reache
 c["Take maximum Life and Energy Shield as Fire Damage when Infernal Flame reaches maximum Lose all Infernal Flame on reaching maximum Infernal Flame 10% of Infernal Flame lost per second if none was gained in the past 2 seconds"]={nil,"maximum Life and Energy Shield as Fire Damage when Infernal Flame reaches maximum Lose all Infernal Flame on reaching maximum Infernal Flame 10% of Infernal Flame lost per second if none was gained in the past 2 seconds "}
 c["Take no Extra Damage from Critical Hits"]={{[1]={[1]={effectType="Global",type="GlobalEffect",unscalable=true},flags=0,keywordFlags=0,name="ReduceCritExtraDamage",type="BASE",value=100}},nil}
 c["Targets can be affected by +1 of your Poisons at the same time"]={{[1]={flags=0,keywordFlags=0,name="PoisonCanStack",type="FLAG",value=true},[2]={flags=0,keywordFlags=0,name="PoisonStacks",type="BASE",value=1}},nil}
-c["Targets can be affected by two of your Chills at the same time"]={nil,"Targets can be affected by two of your Chills at the same time "}
-c["Targets can be affected by two of your Chills at the same time Your Chills can Slow targets by up to a maximum of 35%"]={nil,"Targets can be affected by two of your Chills at the same time Your Chills can Slow targets by up to a maximum of 35% "}
-c["Targets can be affected by two of your Chills at the same time Your Chills can Slow targets by up to a maximum of 35% 25% less Magnitude of Chill you inflict"]={nil,"Targets can be affected by two of your Chills at the same time Your Chills can Slow targets by up to a maximum of 35% 25% less Magnitude of Chill you inflict "}
-c["Targets can be affected by two of your Shocks at the same time"]={nil,"Targets can be affected by two of your Shocks at the same time "}
-c["Targets can be affected by two of your Shocks at the same time 50% less Shock Duration"]={nil,"Targets can be affected by two of your Shocks at the same time 50% less Shock Duration "}
+c["Targets can be affected by two of your Chills at the same time"]={{[1]={flags=0,keywordFlags=0,name="ChillCanStack",type="FLAG",value=true},[2]={flags=0,keywordFlags=0,name="ChillStacksMax",type="OVERRIDE",value=2}},nil}
+c["Targets can be affected by two of your Shocks at the same time"]={{[1]={flags=0,keywordFlags=0,name="ShockCanStack",type="FLAG",value=true},[2]={flags=0,keywordFlags=0,name="ShockStacksMax",type="OVERRIDE",value=2}},nil}
 c["The Effect of Chill on you is reversed"]={{[1]={flags=0,keywordFlags=0,name="SelfChillEffectIsReversed",type="FLAG",value=true}},nil}
 c["The most Damaging Poison on Enemies you Kill is Spread to other Enemies within 1.5 metres"]={nil,"The most Damaging Poison on Enemies you Kill is Spread to other Enemies within 1.5 metres "}
 c["This Weapon's Critical Hit Chance is 100%"]={{[1]={flags=0,keywordFlags=0,name="WeaponData",type="LIST",value={key="CritChance",value=100}}},nil}
@@ -3072,8 +3069,7 @@ c["You take 20% of damage from Blocked Hits"]={{[1]={flags=0,keywordFlags=0,name
 c["You take 5% of damage from Blocked Hits"]={{[1]={flags=0,keywordFlags=0,name="BlockEffect",type="BASE",value=5}},nil}
 c["You take 50% of Damage from Blocked Hits"]={{[1]={flags=0,keywordFlags=0,name="BlockEffect",type="BASE",value=50}},nil}
 c["You take Fire Damage instead of Physical Damage from Bleeding"]={nil,"You take Fire Damage instead of Physical Damage from Bleeding "}
-c["Your Chills can Slow targets by up to a maximum of 35%"]={nil,"Your Chills can Slow targets by up to a maximum of 35% "}
-c["Your Chills can Slow targets by up to a maximum of 35% 25% less Magnitude of Chill you inflict"]={nil,"Your Chills can Slow targets by up to a maximum of 35% 25% less Magnitude of Chill you inflict "}
+c["Your Chills can Slow targets by up to a maximum of 35%"]={{[1]={flags=0,keywordFlags=0,name="ChillMax",type="OVERRIDE",value=35}},nil}
 c["Your Critical Damage Bonus is 300%"]={{[1]={flags=0,keywordFlags=0,name="CritMultiplier",type="OVERRIDE",value=300}},nil}
 c["Your Critical Hits do not deal extra Damage"]={{[1]={flags=0,keywordFlags=0,name="NoCritMultiplier",type="FLAG",value=true}},nil}
 c["Your Curses have 20% increased Effect if 50% of Curse Duration expired"]={{[1]={[1]={actor="enemy",threshold=50,type="MultiplierThreshold",var="CurseExpired"},[2]={skillType=79,type="SkillType"},flags=0,keywordFlags=0,name="CurseEffect",type="INC",value=20}},nil}
