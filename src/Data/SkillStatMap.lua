@@ -1052,6 +1052,10 @@ return {
 	mod("BleedChance", "BASE", nil),
 	value = 100,
 },
+["display_fake_attack_hit_bleed"] = {
+	mod("BleedChance", "BASE", nil, ModFlag.Attack),
+	value = 100,
+},
 ["bleed_on_melee_attack_chance_%"] = {
 	mod("BleedChance", "BASE", nil, ModFlag.Melee),
 },
@@ -1080,11 +1084,19 @@ return {
 	mod("PoisonChance", "BASE", nil),
 	value = 100,
 },
+["display_fake_attack_hit_poison"] = {
+	mod("PoisonChance", "BASE", nil, ModFlag.Attack),
+	value = 100,
+},
 ["base_chance_to_ignite_%"] = {
 	mod("EnemyIgniteChance", "BASE", nil),
 },
 ["always_ignite"] = {
 	mod("EnemyIgniteChance", "BASE", nil),
+	value = 100,
+},
+["display_fake_attack_hit_ignite"] = {
+	mod("EnemyIgniteChance", "BASE", nil, ModFlag.Attack),
 	value = 100,
 },
 ["base_chance_to_shock_%"] = {
