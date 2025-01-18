@@ -1245,10 +1245,10 @@ return {
 	mod("ColdDotMultiplier", "BASE", nil),
 },
 ["active_skill_ignite_damage_+%_final"] = {
-	mod("Damage", "MORE", nil, 0, KeywordFlag.Ignite),
+	mod("AilmentMagnitude", "MORE", nil, 0, KeywordFlag.Ignite),
 },
 ["base_ignite_effect_+%"] = {
-	mod("IgniteMagnitude", "INC", nil),
+	mod("AilmentMagnitude", "INC", nil, 0, KeywordFlag.Ignite),
 },
 ["damaging_ailments_deal_damage_+%_faster"] = {
 	mod("BleedFaster", "INC", nil),
