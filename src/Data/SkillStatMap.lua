@@ -1399,7 +1399,7 @@ return {
 	mod("LightningExposureChance", "BASE", nil),
 },
 ["inflict_lightning_exposure_for_x_ms_on_shock"] = {
-	mod("LightningExposureChance", "BASE", 100, ModFlag.Hit, 0, { type = "Condition", var = "Shocked" }),
+	mod("LightningExposureChance", "BASE", 100, ModFlag.Hit, 0, { type = "ActorCondition", actor = "enemy", var = "Shocked"}),
 },
 ["base_inflict_fire_exposure_on_hit_%_chance"] = {
 	mod("FireExposureChance", "BASE", nil),
