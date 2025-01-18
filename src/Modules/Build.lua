@@ -1107,6 +1107,8 @@ function buildMode:OnFrame(inputEvents)
 					self.viewMode = "PARTY"
 				end
 			end
+		elseif event.type == "KeyUp" and event.key == "LEFTBUTTON" and self.controls.pointDisplay:IsMouseInBounds() then
+			self.spec.allocMode = (self.spec.allocMode + 1) % 3
 		end
 	end
 	self:ProcessControlsInput(inputEvents, main.viewPort)
