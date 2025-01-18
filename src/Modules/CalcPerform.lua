@@ -2785,7 +2785,7 @@ function calcs.perform(env, skipEHP)
 			local maxAilment = modDB:Override(nil, ailment.."Max") or 0
 			if not modDB:Override(nil, ailment.."Max") then
 				for _, skill in ipairs(env.player.activeSkillList) do
-						local skillMax = modDB:Override(nil, ailment.."Max") or (ailmentData[ailment].max + skill.baseSkillModList:Sum("BASE", nil, ailment.."Max"))
+					local skillMax = modDB:Override(nil, ailment.."Max") or (ailmentData[ailment].max + skill.baseSkillModList:Sum("BASE", nil, ailment.."Max"))
 					maxAilment = skillMax > maxAilment and skillMax or maxAilment
 				end
 			end
