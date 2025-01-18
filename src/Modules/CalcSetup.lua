@@ -148,17 +148,21 @@ local function addStats(jewel, node, spec)
 end
 
 local function addStatsFromJewelToNode(jewel, node, spec)
-	local itemsTab = spec.build.itemsTab
-	-- 
-	if itemsTab.activeSocketList then
-		for _, nodeId in pairs(itemsTab.activeSocketList) do
-			local _, socketedJewel = itemsTab:GetSocketAndJewelForNodeID(nodeId)
-			if socketedJewel and socketedJewel.title == "Against the Darkness" then
-				return addStats(jewel, node, spec)
+	-- attribute nodes do not count as Small Passives
+	if not node.isAttribute then
+		local itemsTab = spec.build.itemsTab
+		-- if Against the Darkness is socketed, add the stat
+		if itemsTab.activeSocketList then
+			for _, nodeId in pairs(itemsTab.activeSocketList) do
+				local _, socketedJewel = itemsTab:GetSocketAndJewelForNodeID(nodeId)
+				if socketedJewel and socketedJewel.title == "Against the Darkness" then
+					return addStats(jewel, node, spec)
+				end
 			end
+			-- activeSocketList isn't init on Load, need to run once
+		elseif itemsTab.initSockets then
+			return addStats(jewel, node, spec)
 		end
-	elseif itemsTab.initSockets then
-		return addStats(jewel, node, spec)
 	end
 end
 function calcs.buildModListForNode(env, node, incSmallPassiveSkill)
