@@ -247,7 +247,7 @@ function PassiveTreeViewClass:Draw(build, viewPort, inputEvents)
 		end
 	end
 	
-	-- switchAttribute true -> allocating an attribute node, possibly with attribute in path -or- hotswap allocated attribute
+	-- switchAttribute true -> allocating an attribute node, possibly with attribute in path -or- hot-swap allocated attribute
 	-- switchAttribute false -> allocating a non-attribute node, possibly with attribute in path
 	-- we always want to keep track of last used attribute
 	local function processAttributeHotkeys(switchAttribute)
@@ -313,7 +313,7 @@ function PassiveTreeViewClass:Draw(build, viewPort, inputEvents)
 			else
 				-- a way for us to bypass the popup when allocating attribute nodes, last used hotkey + RMB
 				-- RMB + non attribute node logic
-				-- RMB hotswap logic
+				-- RMB hot-swap logic
 				if hotkeyPressed then
 					processAttributeHotkeys(hoverNode.isAttribute)
 				elseif hoverNode.isAttribute then
@@ -544,9 +544,9 @@ function PassiveTreeViewClass:Draw(build, viewPort, inputEvents)
 				local dist = math.sqrt(dx * dx + dy * dy) * (connection.orbit > 0 and 1 or -1)
 
 				if dist < r * 2 then
-					local perp = math.sqrt(r * r - (dist * dist) / 4) * (r > 0 and 1 or -1)
-					local cx = node1.x + dx / 2 + perp * (dy / dist)
-					local cy = node1.y + dy / 2 - perp * (dx / dist)
+					local perpendicular = math.sqrt(r * r - (dist * dist) / 4) * (r > 0 and 1 or -1)
+					local cx = node1.x + dx / 2 + perpendicular * (dy / dist)
+					local cy = node1.y + dy / 2 - perpendicular * (dx / dist)
 					local scx, scy = treeToScreen(cx, cy)
 					
 					local innerSize = r * scale
@@ -1123,7 +1123,7 @@ function PassiveTreeViewClass:AddNodeTooltip(tooltip, node, build)
 		tooltip:AddLine(16, string.format("AllocMode: %d", node.allocMode or 0))
 		tooltip:AddSeparator(14)
 
-		-- add conection info for debugging
+		-- add connection info for debugging
 		for _, connection in ipairs(node.connections) do
 			tooltip:AddLine(16, string.format("^7Connection: %d, Orbit: %d", connection.id, connection.orbit))
 		end
