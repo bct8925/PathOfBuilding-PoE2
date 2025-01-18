@@ -173,7 +173,7 @@ function calcs.buildModListForNode(env, node, incSmallPassiveSkill)
 			local added = false
 			for j, extra in ipairs(mod) do
 				-- if type conditional and start with WeaponSet then update the var to the current weapon set
-				if extra.type == "Condition" and extra.var:match("^WeaponSet") then
+				if extra.type == "Condition" and extra.var and extra.var:match("^WeaponSet") then
 					mod[j].var = "WeaponSet".. node.allocMode
 					added = true
 					break
