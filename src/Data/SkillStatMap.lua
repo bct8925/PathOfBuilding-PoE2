@@ -948,7 +948,7 @@ return {
 	mod("DamageGainAsFire", "BASE", nil, 0, 0, { type = "ActorCondition", actor = "enemy", var = "Burning" }),
 },
 ["support_innervate_buff_grant_%_added_lightning_attack_damage"] = {
-	mod("DamageGainAsLightning", "BASE", nil, ModFlag.Attack, 0, { type = "Condition", var = "KilledShockedLast3Seconds" }),
+	mod("DamageGainAsLightning", "BASE", nil, ModFlag.Attack, 0, { type = "Condition", var = "KilledShockedLast3Seconds" }, { type = "GlobalEffect", effectType = "Buff", effectName = "Innervate" } ),
 },
 ["base_physical_damage_%_to_convert_to_lightning"] = {
 	mod("PhysicalDamageConvertToLightning", "BASE", nil),
