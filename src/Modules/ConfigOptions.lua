@@ -1537,6 +1537,9 @@ Huge sets the radius to 11.
 		enemyModList:NewMod("ChillVal", "BASE", val, "Chill", { type = "Condition", var = "ChilledConfig" })
 		enemyModList:NewMod("DesiredChillVal", "BASE", val, "Chill", { type = "Condition", var = "ChilledConfig", neg = true })
 	end },
+	{ var = "ChillStacks", type = "count", label = "^xADAA47Chill ^7Stacks", ifFlag = "ChillCanStack", ifOption = "conditionEnemyChilled", defaultPlaceholderState = 1, tooltip = "Amount of stacks of ^xADAA47Chill ^7applied to the enemy.", apply = function(val, modList, enemyModList)
+		enemyModList:NewMod("Multiplier:ChillStacks", "BASE", val, "Config", { type = "Condition", var = "Effective" })
+	end },
 	{ var = "conditionEnemyChilledByYourHits", type = "check", ifEnemyCond = "ChilledByYourHits", label = "Is the enemy ^x3F6DB3Chilled ^7by your Hits?", apply = function(val, modList, enemyModList)
 		enemyModList:NewMod("Condition:Chilled", "FLAG", true, "Config", { type = "Condition", var = "Effective" })
 		enemyModList:NewMod("Condition:ChilledByYourHits", "FLAG", true, "Config", { type = "Condition", var = "Effective" })
