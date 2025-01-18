@@ -20,6 +20,10 @@ buildSites.websiteList = {
 		label = "PoeNinja", id = "PoeNinja", matchURL = "poe%.ninja/pob/%w+", regexURL = "poe%.ninja/pob/(%w+)%s*$", downloadURL = "poe.ninja/pob/raw/%1",
 		codeOut = "", postUrl = "https://poe.ninja/pob/api/api_post.php", postFields = "api_paste_code=", linkURL="poe.ninja/pob/%1"
 	},
+	{ 
+		label = "poe2db.tw", id = "PoE2DB", matchURL = "poe2db%.tw/.+", regexURL = "poe2db%.tw/pob/(.+)%s*$", downloadURL = "poe2db.tw/pob/%1/raw", 
+		codeOut = "", postUrl = "https://poe2db.tw/pob/api/gen", postFields = "", linkURL = "poe2db.tw/pob/%1" 
+	},
 	{
 		label = "Pastebin.com", id = "pastebin", matchURL = "pastebin%.com/%w+", regexURL = "pastebin%.com/(%w+)%s*$", downloadURL = "pastebin.com/raw/%1", linkURL = "pastebin.com/%1"
 	},
