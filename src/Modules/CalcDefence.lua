@@ -702,6 +702,15 @@ function calcs.defence(env, actor)
 		end
 	end
 
+	if breakdown then
+		breakdown.Ward = { slots = { } }
+		breakdown.EnergyShield = { slots = { } }
+		breakdown.Armour = { slots = { } }
+		breakdown.Evasion = { slots = { } }
+		breakdown.Life = { slots = { } }
+		breakdown.Mana = { slots = { } }
+		breakdown.Spirit = { slots = { } }
+	end
 	if actor == env.minion then
 		calcs.doActorLifeManaSpirit(env.minion)
 		calcs.doActorLifeManaSpiritReservation(env.minion)
@@ -847,15 +856,6 @@ function calcs.defence(env, actor)
 		local energyShield = 0
 		local armour = 0
 		local evasion = 0
-		if breakdown then
-			breakdown.Ward = { slots = { } }
-			breakdown.EnergyShield = { slots = { } }
-			breakdown.Armour = { slots = { } }
-			breakdown.Evasion = { slots = { } }
-			breakdown.Life = { slots = { } }
-			breakdown.Mana = { slots = { } }
-			breakdown.Spirit = { slots = { } }
-		end
 		local energyShieldBase, armourBase, evasionBase, wardBase
 		local gearWard = 0
 		local gearEnergyShield = 0
