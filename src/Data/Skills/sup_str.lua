@@ -450,7 +450,7 @@ skills["SupportDeepCutsPlayer"] = {
 					mod("Damage", "MORE", nil, ModFlag.Hit),
 				},
 				["support_deep_cuts_bleeding_effect_+%_final"] = {
-					mod("BleedMagnitude", "MORE", nil),
+					mod("AilmentMagnitude", "MORE", nil, 0, KeywordFlag.Bleed),
 				},
 			},
 			baseFlags = {

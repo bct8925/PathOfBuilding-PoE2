@@ -3908,19 +3908,21 @@ function calcs.offence(env, actor, activeSkill)
 		-- Calculates damage to be used in damaging ailment calculations
 		local function calcAilmentSourceDamage(ailment, defaultDamageTypes)
 			local canCrit = not skillModList:Flag(cfg, "AilmentsAreNeverFromCrit")
-			local hitMin, hitMax = 0, 0, 0
-			local critMin, critMax = 0, 0, 0
+			local hitMin, hitMax = 0, 0
+			local critMin, critMax = 0, 0
 			for _, damageType in ipairs(dmgTypeList) do
 				if canDoAilment(ailment, damageType, defaultDamageTypes) then
 					local override = skillModList:Override(cfg, ailment .. damageType .. "HitDamage")
-					hitMin = hitMin + (override or output[damageType.."StoredHitMin"])
-					hitMax = hitMax + (override or output[damageType.."StoredHitMax"])
-					output[ailment .. damageType .. "Min"] = (override or output[damageType.."StoredHitMin"])
-					output[ailment .. damageType .. "Max"] = (override or output[damageType.."StoredHitMin"])
+					local ailmentHitMin = override or output[damageType.."StoredHitMin"] or 0
+					local ailmentHitMax = override or output[damageType.."StoredHitMax"] or 0
+					hitMin = hitMin + ailmentHitMin
+					hitMax = hitMax + ailmentHitMax
+					output[ailment .. damageType .. "Min"] = ailmentHitMin
+					output[ailment .. damageType .. "Max"] = ailmentHitMax
 					if canCrit then
-						local override = skillModList:Override(cfg, ailment .. damageType .. "CritDamage")
-						critMin = critMin + (override or output[damageType.."StoredCritMin"])
-						critMax = critMax + (override or output[damageType.."StoredCritMax"])
+						override = skillModList:Override(cfg, ailment .. damageType .. "CritDamage")
+						critMin = critMin + (override or output[damageType.."StoredCritMin"] or 0)
+						critMax = critMax + (override or output[damageType.."StoredCritMax"] or 0)
 					end
 				end
 			end
