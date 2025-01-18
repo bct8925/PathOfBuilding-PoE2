@@ -138,6 +138,11 @@ statMap = {
 #skill SupportColdExposurePlayer
 #startSets
 #set SupportColdExposurePlayer
+statMap = {
+    ["inflict_cold_exposure_for_x_ms_on_cold_crit"] = {
+        mod("ColdExposureChance", "BASE", nil),
+    },
+},
 #mods
 #skillEnd
 
