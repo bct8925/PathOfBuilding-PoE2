@@ -10582,7 +10582,7 @@ skills["SeismicCryPlayer"] = {
 			statDescriptionScope = "seismic_cry",
 			baseFlags = {
 				warcry = true,
-				attack = true,
+				hit = true,
 				area = true,
 			},
 			constantStats = {
