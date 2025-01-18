@@ -3766,7 +3766,7 @@ function calcs.offence(env, actor, activeSkill)
 
 		-- Calculate chance to inflict secondary dots/status effects
 		cfg.skillCond["CriticalStrike"] = true
-		if not skillFlags.attack or skillModList:Flag(cfg, "CannotBleed") then
+		if not skillFlags.hit or skillModList:Flag(cfg, "CannotBleed") then
 			output.BleedChanceOnCrit = 0
 		else
 			output.BleedChanceOnCrit = m_min(100, skillModList:Sum("BASE", cfg, "BleedChance") + enemyDB:Sum("BASE", nil, "SelfBleedChance"))
@@ -3787,7 +3787,7 @@ function calcs.offence(env, actor, activeSkill)
 			output.KnockbackChanceOnCrit = skillModList:Sum("BASE", cfg, "EnemyKnockbackChance")
 		end
 		cfg.skillCond["CriticalStrike"] = false
-		if not skillFlags.attack or skillModList:Flag(cfg, "CannotBleed") then
+		if not skillFlags.hit or skillModList:Flag(cfg, "CannotBleed") then
 			output.BleedChanceOnHit = 0
 		else
 			output.BleedChanceOnHit = m_min(100, skillModList:Sum("BASE", cfg, "BleedChance") + enemyDB:Sum("BASE", nil, "SelfBleedChance"))
