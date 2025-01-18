@@ -96,49 +96,88 @@ end
 -- NOTE: the LuaJIT bitwise operations we have are not 64-bit
 -- so we need to implement them ourselves. Lua uses 53-bit doubles.
 HIGH_MASK_53 = 0x1FFFFF
-function OR64(a, b)
-    -- Split into high and low 32-bit parts
-    local ah = math.floor(a / 0x100000000)
-    local al = a % 0x100000000
-    local bh = math.floor(b / 0x100000000)
-    local bl = b % 0x100000000
+function OR64(...)
+    local args = {...}
+    if #args < 2 then
+        return args[1] or 0
+    end
     
-    -- Perform OR operation on both parts
-    local high = bit.bor(ah, bh)
-    local low = bit.bor(al, bl)
+    -- Start with first value
+    local result = args[1]
     
-    -- Combine the results
-    return bit.band(high, HIGH_MASK_53) * 0x100000000 + low
+    -- OR with each subsequent value
+    for i = 2, #args do
+        -- Split into high and low 32-bit parts
+        local ah = math.floor(result / 0x100000000)
+        local al = result % 0x100000000
+        local bh = math.floor(args[i] / 0x100000000)
+        local bl = args[i] % 0x100000000
+        
+        -- Perform OR operation on both parts
+        local high = bit.bor(ah, bh)
+        local low = bit.bor(al, bl)
+        
+        -- Combine the results
+        result = bit.band(high, HIGH_MASK_53) * 0x100000000 + low
+    end
+    
+    return result
 end
 
-function AND64(a, b)
-	-- Split into high and low 32-bit parts
-	local ah = math.floor(a / 0x100000000)
-	local al = a % 0x100000000
-	local bh = math.floor(b / 0x100000000)
-	local bl = b % 0x100000000
-	
-	-- Perform AND operation on both parts
-	local high = bit.band(ah, bh)
-	local low = bit.band(al, bl)
-	
-	-- Combine the results
-	return bit.band(high, HIGH_MASK_53) * 0x100000000 + low
+function AND64(...)
+    local args = {...}
+    if #args < 2 then
+        return args[1] or 0
+    end
+    
+    -- Start with first value
+    local result = args[1]
+    
+    -- AND with each subsequent value
+    for i = 2, #args do
+        -- Split into high and low 32-bit parts
+        local ah = math.floor(result / 0x100000000)
+        local al = result % 0x100000000
+        local bh = math.floor(args[i] / 0x100000000)
+        local bl = args[i] % 0x100000000
+        
+        -- Perform AND operation on both parts
+        local high = bit.band(ah, bh)
+        local low = bit.band(al, bl)
+        
+        -- Combine the results
+        result = bit.band(high, HIGH_MASK_53) * 0x100000000 + low
+    end
+    
+    return result
 end
 
-function XOR64(a, b)
-    -- Split into high and low 32-bit parts
-    local ah = math.floor(a / 0x100000000)
-    local al = a % 0x100000000
-    local bh = math.floor(b / 0x100000000)
-    local bl = b % 0x100000000
+function XOR64(...)
+    local args = {...}
+    if #args < 2 then
+        return args[1] or 0
+    end
     
-    -- Perform XOR operation on both parts
-    local high = bit.bxor(ah, bh)
-    local low = bit.bxor(al, bl)
+    -- Start with first value
+    local result = args[1]
     
-    -- Combine the results
-    return bit.band(high, HIGH_MASK_53) * 0x100000000 + low
+    -- XOR with each subsequent value
+    for i = 2, #args do
+        -- Split into high and low 32-bit parts
+        local ah = math.floor(result / 0x100000000)
+        local al = result % 0x100000000
+        local bh = math.floor(args[i] / 0x100000000)
+        local bl = args[i] % 0x100000000
+        
+        -- Perform XOR operation on both parts
+        local high = bit.bxor(ah, bh)
+        local low = bit.bxor(al, bl)
+        
+        -- Combine the results
+        result = bit.band(high, HIGH_MASK_53) * 0x100000000 + low
+    end
+    
+    return result
 end
 
 function NOT64(a)
