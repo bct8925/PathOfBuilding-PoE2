@@ -688,7 +688,7 @@ function PassiveTreeViewClass:Draw(build, viewPort, inputEvents)
 		end
 
 		-- Draw mastery effect artwork
-		if effect and not launch.devModeAlt then
+		if effect and not launch.devModeAlt and not self.showHeatMap then
 			if node.targetSize and node.targetSize["effect"] then
 				effect.width = node.targetSize["effect"].width
 				effect.height = node.targetSize["effect"].height
@@ -722,12 +722,12 @@ function PassiveTreeViewClass:Draw(build, viewPort, inputEvents)
 				self:DrawAsset(base, scrX, scrY, scale)
 			else
 
-				if not node.alloc and not launch.devModeAlt then
+				if not self.showHeatMap and not launch.devModeAlt and not node.alloc then
 					self:LessLuminance()
 				end
 
 				self:DrawAsset(base, scrX, scrY, scale)
-				if not node.alloc and not launch.devModeAlt then
+				if not self.showHeatMap and not launch.devModeAlt and not node.alloc then
 					SetDrawColor(1, 1, 1, 1);
 				end
 			end
@@ -780,11 +780,13 @@ function PassiveTreeViewClass:Draw(build, viewPort, inputEvents)
 				overlayImage.height = node.targetSize["overlay"].height
 			end
 
-			if not node.alloc and (node.type == "AscendClassStart" or node.type == "ClassStart") and not launch.devModeAlt then
+			if not self.showHeatMap and not launch.devModeAlt and not node.alloc and (node.type == "AscendClassStart" or node.type == "ClassStart") then
 				self:LessLuminance()
 			end
 			self:DrawAsset(overlayImage, scrX, scrY, scale)
-			SetDrawColor(1, 1, 1)
+			if not self.showHeatMap and not launch.devModeAlt and not node.alloc and (node.type == "AscendClassStart" or node.type == "ClassStart") then
+				SetDrawColor(1, 1, 1)
+			end
 		end
 		if self.searchStrResults[nodeId] then
 			-- Node matches the search string, show the highlight circle
@@ -959,7 +961,7 @@ function PassiveTreeViewClass:Zoom(level, viewPort)
 end
 
 function PassiveTreeViewClass:Focus(x, y, viewPort, build)
-	self.zoomLevel = 12
+	self.zoomLevel = 20
 	self.zoom = 1.2 ^ self.zoomLevel
 
 	local tree = build.spec.tree
