@@ -316,7 +316,7 @@ Variant: Current
 {variant:2}UniqueCriticalStrikeChance3
 UniqueDexterity2
 UniqueIntelligence6
-Critical Hits Poison the enemy
+UniquePoisonOnCrit1
 ]],[[
 The Hollow Mask
 Hewn Mask

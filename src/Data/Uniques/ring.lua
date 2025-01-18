@@ -36,7 +36,7 @@ Ruby Ring
 Implicits: 1
 {tags:fire}+(20-30)% to Fire Resistance
 {tags:life}+(40-60) to maximum Life
-{tags:fire}+(30-40)% to Fire Resistance
+{tags:fire}+(20-30)% to Fire Resistance
 {tags:cold}-(15-10)% to Cold Resistance
 You take Fire Damage instead of Physical Damage from Bleeding
 ]],[[
