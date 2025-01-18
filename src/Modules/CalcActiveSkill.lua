@@ -445,12 +445,8 @@ function calcs.buildActiveSkillModList(env, activeSkill)
 		end
 	end
 
-	-- Calculate Distance for meleeDistance or projectileDistance (for melee proximity, e.g. Impact)
-	if skillFlags.melee then
-		effectiveRange = env.configInput.meleeDistance
-	else
-		effectiveRange = env.configInput.projectileDistance
-	end
+	-- Calculate distance from enemy
+	effectiveRange = env.configInput.enemyDistance
 
 	-- Build config structure for modifier searches
 	activeSkill.skillCfg = {
