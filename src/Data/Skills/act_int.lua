@@ -192,6 +192,15 @@ skills["ArchmagePlayer"] = {
 			label = "Archmage",
 			incrementalEffectiveness = 0.054999999701977,
 			statDescriptionScope = "archmage",
+			statMap = {
+				["archmage_max_mana_permyriad_to_add_to_non_channelled_spell_mana_cost"] = {
+					mod("ManaCost", "BASE", nil, 0, 0, { type = "GlobalEffect", effectType = "Buff" }, { type = "SkillType", skillType = SkillType.Channel, neg = true }, { type = "SkillType", skillType = SkillType.Spell }, { type = "PercentStat", stat = "Mana", percent = 1 }),
+					div = 100,
+				},
+				["archmage_all_damage_%_to_gain_as_lightning_to_grant_to_non_channelling_spells_per_100_max_mana"] = {
+					mod("DamageGainAsLightning", "BASE", nil, 0, 0, { type = "GlobalEffect", effectType = "Buff" }, { type = "SkillType", skillType = SkillType.Channel, neg = true }, { type = "SkillType", skillType = SkillType.Spell }, { type = "PerStat", stat = "Mana", div = 100 }),
+				},
+			},
 			baseFlags = {
 			},
 			stats = {
