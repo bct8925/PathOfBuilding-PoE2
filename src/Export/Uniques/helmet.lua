@@ -318,6 +318,16 @@ UniqueDexterity2
 UniqueIntelligence6
 UniquePoisonOnCrit1
 ]],[[
+Glimpse of Chaos
+Tribal Mask
+UniqueModifyableWhileCorrupted1
+UniqueIncreasedLife37
+UniqueIncreasedMana33
+UniqueFireResist22
+UniqueColdResist19
+UniqueLightningResist17
+UniqueChaosResistanceIsZero2
+]],[[
 The Hollow Mask
 Hewn Mask
 Variant: Pre 0.1.1

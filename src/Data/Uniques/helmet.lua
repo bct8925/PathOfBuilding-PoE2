@@ -321,6 +321,16 @@ Variant: Current
 +(10-20) to Intelligence
 Critical Hits Poison the enemy
 ]],[[
+Glimpse of Chaos
+Tribal Mask
+Can be modified while Corrupted
++(50-150) to maximum Life
++(50-150) to maximum Mana
++(-30-30)% to Fire Resistance
++(-30-30)% to Cold Resistance
++(-30-30)% to Lightning Resistance
+Chaos Resistance is Zero
+]],[[
 The Hollow Mask
 Hewn Mask
 Variant: Pre 0.1.1
