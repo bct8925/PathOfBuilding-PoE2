@@ -1847,7 +1847,7 @@ skills["SupportDeadlyIgnitesPlayer"] = {
 					mod("Damage", "MORE", nil, ModFlag.Hit),
 				},
 				["support_stronger_ignites_ignite_effect_+%_final"] = {
-					mod("IgniteMagnitude", "MORE", nil),
+					mod("AilmentMagnitude", "MORE", nil, 0, KeywordFlag.Ignite),
 				},
 			},
 			baseFlags = {
