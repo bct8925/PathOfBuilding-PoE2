@@ -202,7 +202,7 @@ c["+3 to Level of all Defiance Banner Skills"]={{[1]={flags=0,keywordFlags=0,nam
 c["+3 to Level of all Demon Form Skills"]={{[1]={flags=0,keywordFlags=0,name="GemProperty",type="LIST",value={key="level",keyword="demon form",value=3}}},nil}
 c["+3 to Level of all Despair Skills"]={{[1]={flags=0,keywordFlags=0,name="GemProperty",type="LIST",value={key="level",keyword="despair",value=3}}},nil}
 c["+3 to Level of all Detonate Dead Skills"]={{[1]={flags=0,keywordFlags=0,name="GemProperty",type="LIST",value={key="level",keyword="detonate dead",value=3}}},nil}
-c["+3 to Level of all Detonate Minion Skills"]={{[1]={flags=0,keywordFlags=0,name="GemProperty",type="LIST",value={key="level",keyword="detonate minion",value=3}}},nil}
+c["+3 to Level of all Detonate Minion Skills"]={{[1]={flags=0,keywordFlags=0,name="GemProperty",type="LIST",value={key="level",keywordList={[1]="detonate",[2]="minion"},value=3}}},nil}
 c["+3 to Level of all Detonating Arrow Skills"]={{[1]={flags=0,keywordFlags=0,name="GemProperty",type="LIST",value={key="level",keyword="detonating arrow",value=3}}},nil}
 c["+3 to Level of all Discipline Skills"]={{[1]={flags=0,keywordFlags=0,name="GemProperty",type="LIST",value={key="level",keyword="discipline",value=3}}},nil}
 c["+3 to Level of all Dread Banner Skills"]={{[1]={flags=0,keywordFlags=0,name="GemProperty",type="LIST",value={key="level",keyword="dread banner",value=3}}},nil}
