@@ -2840,25 +2840,25 @@ local specialModList = {
 	["has no attribute requirements"] = { flag("NoAttributeRequirements") },
 	-- Skill modifiers
 	["([%+%-]%d+)%% to quality of all skills"] = function(num) return { mod("GemProperty", "LIST", { keyword = "grants_active_skill", key = "quality", value = num, keyOfScaledMod = "value"  }) } end,
-	["([%+%-]%d+)%%? to (%a+) of all ?([%a%- ]*) skills"] = function(num, _, property, type)
+	["([%+%-]%d+)%%? to (%a+) of all ?([%a%-' ]*) skills"] = function(num, _, property, type)
 		if type == "" then type = "all" end
-		return { mod("GemProperty", "LIST", { keyword = type, key = property, value = num, keyOfScaledMod = "value"  }) }
+		if gemIdLookup[type] or gemIdLookup["load " .. type] or gemIdLookup[type .. " minion"] then
+			return { mod("GemProperty", "LIST", {keyword = type, key = "level", value = num  }) }
+		end
+		local wordList = {}
+		for tag in type:gmatch("%w+") do
+			table.insert(wordList, tag)
+		end
+		if #wordList == 1 then
+			return { mod("GemProperty", "LIST", { keyword = wordList[1], key = property, value = num }) }
+		end
+		return { mod("GemProperty", "LIST", { keywordList = wordList, key = property, value = num }) }
 	end,
 	["grants level (%d+) snipe skill"] = function(num) return {
 		mod("ExtraSkill", "LIST", { skillId = "Snipe", level = num }),
 		mod("ExtraSupport", "LIST", { skillId = "ChannelledSnipeSupport", level = num }, { type = "SocketedIn", slotName = "{SlotName}" }),
 	} end,
 	-- Global gem modifiers
-	["([%+%-]%d+)%%? to (%a+) of all (.+) skills"] = function(num, _, property, skill)
-		if gemIdLookup[skill] then
-			return { mod("GemProperty", "LIST", {keyword = skill, key = "level", value = num, keyOfScaledMod = "value"  }) }
-		end
-		local wordList = {}
-		for tag in skill:gmatch("%w+") do
-			table.insert(wordList, tag)
-		end
-		return { mod("GemProperty", "LIST", {keywordList = wordList, key = property, value = num, keyOfScaledMod = "value"  }) }
-	end,
 	["gems socketed in red sockets have [%+%-](%d+) to level"] = function(num) return { mod("GemProperty", "LIST", { keyword = "all", key = "level", value = num, keyOfScaledMod = "value"  }, { type = "SocketedIn", slotName = "{SlotName}", socketColor = "R" }) } end,
 	["gems socketed in green sockets have [%+%-](%d+)%% to quality"] = function(num) return { mod("GemProperty", "LIST", { keyword = "all", key = "quality", value = num, keyOfScaledMod = "value"  }, { type = "SocketedIn", slotName = "{SlotName}", socketColor = "G" }) } end,
 	["%+(%d+)%% to fire resistance when socketed with a red gem"] = function(num) return { mod("SocketProperty", "LIST", { value = mod("FireResist", "BASE", num) }, { type = "SocketedIn", slotName = "{SlotName}", keyword = "strength", sockets = {1} }) } end,
