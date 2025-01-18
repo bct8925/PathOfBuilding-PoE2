@@ -125,14 +125,14 @@ local function setRadiusJewelStats(radiusJewel, radiusJewelStats)
 	end
 end
 
-local function addStatsFromJewelToNode(jewel, node, spec)
+local function addStats(jewel, node, spec)
 	-- reset node stats to base or override for attributes
 	if spec.hashOverrides and spec.hashOverrides[node.id] then
 		node.sd = copyTable(spec.hashOverrides[node.id].sd, true)
 	else
 		node.sd = copyTable(spec.tree.nodes[node.id].sd, true)
 	end
-	
+
 	local radiusJewelStats = { }
 	setRadiusJewelStats(jewel, radiusJewelStats)
 	for _, stat in ipairs(radiusJewelStats) do
@@ -142,8 +142,23 @@ local function addStatsFromJewelToNode(jewel, node, spec)
 		end
 	end
 	spec.tree:ProcessStats(node)
+	return node.modList
 end
 
+local function addStatsFromJewelToNode(jewel, node, spec)
+	local itemsTab = spec.build.itemsTab
+	-- 
+	if itemsTab.activeSocketList then
+		for _, nodeId in pairs(itemsTab.activeSocketList) do
+			local _, socketedJewel = itemsTab:GetSocketAndJewelForNodeID(nodeId)
+			if socketedJewel and socketedJewel.title == "Against the Darkness" then
+				return addStats(jewel, node, spec)
+			end
+		end
+	elseif itemsTab.initSockets then
+		return addStats(jewel, node, spec)
+	end
+end
 function calcs.buildModListForNode(env, node, incSmallPassiveSkill)
 	local modList = new("ModList")
 	if node.type == "Keystone" then
@@ -175,7 +190,8 @@ function calcs.buildModListForNode(env, node, incSmallPassiveSkill)
 			if rad.item.title ~= "Against the Darkness" then
 				rad.func(node, modList, rad.data)
 			else
-				addStatsFromJewelToNode(rad, node, env.build.spec)
+				local nodeList = addStatsFromJewelToNode(rad, node, env.build.spec)
+				if nodeList then modList = nodeList end
 			end
 		end
 	end
@@ -198,11 +214,12 @@ function calcs.buildModListForNode(env, node, incSmallPassiveSkill)
 			if rad.item.title ~= "Against the Darkness" then
 				rad.func(node, modList, rad.data)
 			else
-				addStatsFromJewelToNode(rad, node, env.build.spec)
+				local nodeList = addStatsFromJewelToNode(rad, node, env.build.spec)
+				if nodeList then modList = nodeList end
 			end
 		end
 	end
-
+	
 	if modList:Flag(nil, "PassiveSkillHasOtherEffect") then
 		for i, mod in ipairs(modList:List(skillCfg, "NodeModifier")) do
 			if i == 1 then wipeTable(modList) end
