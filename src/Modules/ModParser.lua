@@ -2551,6 +2551,12 @@ local specialModList = {
 		flag("ColdCanShock"),
 		flag("ChaosCanShock"),
 	},
+	["all damage from hits contributes to chill magnitude"] = {
+		flag("PhysicalCanChill"),
+		flag("FireCanChill"),
+		flag("LightningCanChill"),
+		flag("ChaosCanChill"),
+	},
 	["all damage can shock"] = {
 		flag("PhysicalCanShock"),
 		flag("FireCanShock"),
@@ -2783,6 +2789,10 @@ local specialModList = {
 	-- Mercenary - Gemling
 	["attribute requirements of gems can be satisi?fied by your highest attribute"] = { flag("GemAttributeRequirementsSatisfiedByHighestAttribute") },
 	["you can use two copies of the same support gem in different skills"] = { mod("MaxSupportGemCopies", "OVERRIDE", 2) },
+	-- Stormweaver
+	["targets can be affected by two of your shocks at the same time"] = { flag("ShockCanStack"), mod("ShockStacksMax", "OVERRIDE", 2) },
+	["targets can be affected by two of your chills at the same time"] = { flag("ChillCanStack"), mod("ChillStacksMax", "OVERRIDE", 2) },
+	["your chills can slow targets by up to a maximum of (%d+)%%"] = function(num) return { mod("ChillMax", "OVERRIDE", num)} end,
 	-- Item local modifiers
 	["has no sockets"] = { flag("NoSockets") },
 	["reflects your other ring"] = {

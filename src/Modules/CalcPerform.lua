@@ -2708,7 +2708,18 @@ function calcs.perform(env, skipEHP)
 		["Chill"] = {
 			condition = "Chilled",
 			mods = function(num)
-				local mods = { modLib.createMod("ActionSpeed", "INC", -num, "Chill", { type = "Condition", var = "Chilled" }) }
+				local mods = {  }
+
+				if modDB:Flag(nil, "ChillCanStack") then
+					t_insert(mods, modLib.createMod("DamageTaken", "INC", num, "Shock", { type = "Condition", var = "Shocked" }, { type = "Multiplier", var = "ShockStacks", limit = modDB:Override(nil, "ShockStacksMax") or modDB:Sum("BASE", nil, "ShockStacksMax")}))
+					output["CurrentChill"] = num * m_min(enemyDB:Sum("BASE", nil, "Multiplier:ChillStacks"), modDB:Override(nil, "ChillStacksMax") or modDB:Sum("BASE", nil, "ChillStacksMax"))
+					if breakdown then
+						t_insert(mods, modLib.createMod("ActionSpeed", "INC", -num, "Chill Stacks", { type = "Condition", var = "Chilled" }, { type = "Multiplier", var = "ShockStacks", limit = modDB:Override(nil, "ShockStacksMax") or modDB:Sum("BASE", nil, "ShockStacksMax")}))
+					end
+				else 
+					t_insert(mods, modLib.createMod("ActionSpeed", "INC", -num, "Chill", { type = "Condition", var = "Chilled" }))
+				end
+
 				if output.HasBonechill and (hasGuaranteedBonechill or enemyDB:Sum("BASE", nil, "ChillVal") > 0) then
 					t_insert(mods, modLib.createMod("ColdDamageTaken", "INC", num, "Bonechill", { type = "Condition", var = "Chilled" }))
 				end
@@ -2774,7 +2785,7 @@ function calcs.perform(env, skipEHP)
 			local maxAilment = modDB:Override(nil, ailment.."Max") or 0
 			if not modDB:Override(nil, ailment.."Max") then
 				for _, skill in ipairs(env.player.activeSkillList) do
-					local skillMax = modDB:Override(nil, ailment.."Max") or (ailmentData[ailment].max + skill.baseSkillModList:Sum("BASE", nil, ailment.."Max"))
+						local skillMax = modDB:Override(nil, ailment.."Max") or (ailmentData[ailment].max + skill.baseSkillModList:Sum("BASE", nil, ailment.."Max"))
 					maxAilment = skillMax > maxAilment and skillMax or maxAilment
 				end
 			end
