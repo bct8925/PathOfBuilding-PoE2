@@ -1947,7 +1947,7 @@ function PassiveSpecClass:CreateUndoState()
 		secondaryAscendClassId = self.secondaryAscendClassId,
 		hashList = allocNodeIdList,
 		weaponSets = weaponSets,
-		hashOverrides = self.hashOverrides,
+		hashOverrides = copyTable(self.hashOverrides, true),
 		masteryEffects = selections,
 		treeVersion = self.treeVersion
 	}
