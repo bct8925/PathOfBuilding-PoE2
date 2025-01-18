@@ -185,9 +185,13 @@ skills["BleedingConcoctionPlayer"] = {
 			incrementalEffectiveness = 0.14000000059605,
 			damageIncrementalEffectiveness = 0.0065000001341105,
 			statDescriptionScope = "throw_flask_bleed",
+			statMap = {
+				["flask_throw_bleed_effect_+%_final"] = {
+					mod("AilmentMagnitude", "MORE", nil, 0, KeywordFlag.Bleed),
+				},
+			},
 			baseFlags = {
 				attack = true,
-				area = true,
 				projectile = true,
 			},
 			constantStats = {
@@ -1435,9 +1439,14 @@ skills["ExplosiveConcoctionPlayer"] = {
 			incrementalEffectiveness = 0.14000000059605,
 			damageIncrementalEffectiveness = 0.0065000001341105,
 			statDescriptionScope = "throw_flask_fire",
+			statMap = {
+				["flask_throw_fire_exposure_ms"] = {
+					mod("FireExposureChance", "BASE", nil),
+					value = 100,
+				},
+			},
 			baseFlags = {
 				attack = true,
-				area = true,
 				projectile = true,
 				duration = true,
 			},
@@ -1567,9 +1576,14 @@ skills["FulminatingConcoctionPlayer"] = {
 			incrementalEffectiveness = 0.14000000059605,
 			damageIncrementalEffectiveness = 0.0065000001341105,
 			statDescriptionScope = "throw_flask_lightning",
+			statMap = {
+				["flask_throw_lightning_exposure_ms"] = {
+					mod("LightningExposureChance", "BASE", nil),
+					value = 100,
+				},
+			},
 			baseFlags = {
 				attack = true,
-				area = true,
 				projectile = true,
 				duration = true,
 			},
@@ -2394,9 +2408,13 @@ skills["PoisonousConcoctionPlayer"] = {
 			incrementalEffectiveness = 0.14000000059605,
 			damageIncrementalEffectiveness = 0.0065000001341105,
 			statDescriptionScope = "throw_flask_poison",
+			statMap = {
+				["flask_throw_poison_effect_+%_final"] = {
+					mod("AilmentMagnitude", "MORE", nil, 0, KeywordFlag.Poison),
+				},
+			},
 			baseFlags = {
 				attack = true,
-				area = true,
 				projectile = true,
 			},
 			constantStats = {
@@ -2794,9 +2812,14 @@ skills["ShatteringConcoctionPlayer"] = {
 			incrementalEffectiveness = 0.14000000059605,
 			damageIncrementalEffectiveness = 0.0065000001341105,
 			statDescriptionScope = "throw_flask_cold",
+			statMap = {
+				["flask_throw_cold_exposure_ms"] = {
+					mod("ColdExposureChance", "BASE", nil),
+					value = 100,
+				},
+			},
 			baseFlags = {
 				attack = true,
-				area = true,
 				projectile = true,
 				duration = true,
 			},

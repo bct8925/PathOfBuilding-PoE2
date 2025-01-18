@@ -18,7 +18,12 @@ local skills, mod, flag, skill = ...
 #skill BleedingConcoctionPlayer
 #startSets
 #set BleedingConcoctionPlayer
-#flags attack area projectile
+#flags attack projectile
+statMap = {
+	["flask_throw_bleed_effect_+%_final"] = {
+		mod("AilmentMagnitude", "MORE", nil, 0, KeywordFlag.Bleed),
+	},
+},
 #mods
 #skillEnd
 
@@ -92,7 +97,13 @@ local skills, mod, flag, skill = ...
 #skill ExplosiveConcoctionPlayer
 #startSets
 #set ExplosiveConcoctionPlayer
-#flags attack area projectile duration
+#flags attack projectile duration
+statMap = {
+	["flask_throw_fire_exposure_ms"] = {
+		mod("FireExposureChance", "BASE", nil),
+		value = 100,
+	},
+},
 #mods
 #skillEnd
 
@@ -100,7 +111,13 @@ local skills, mod, flag, skill = ...
 #skill FulminatingConcoctionPlayer
 #startSets
 #set FulminatingConcoctionPlayer
-#flags attack area projectile duration
+#flags attack projectile duration
+statMap = {
+	["flask_throw_lightning_exposure_ms"] = {
+		mod("LightningExposureChance", "BASE", nil),
+		value = 100,
+	},
+},
 #mods
 #skillEnd
 
@@ -156,7 +173,12 @@ local skills, mod, flag, skill = ...
 #skill PoisonousConcoctionPlayer
 #startSets
 #set PoisonousConcoctionPlayer
-#flags attack area projectile
+#flags attack projectile
+statMap = {
+	["flask_throw_poison_effect_+%_final"] = {
+		mod("AilmentMagnitude", "MORE", nil, 0, KeywordFlag.Poison),
+	},
+},
 #mods
 #skillEnd
 
@@ -188,7 +210,13 @@ local skills, mod, flag, skill = ...
 #skill ShatteringConcoctionPlayer
 #startSets
 #set ShatteringConcoctionPlayer
-#flags attack area projectile duration
+#flags attack projectile duration
+statMap = {
+	["flask_throw_cold_exposure_ms"] = {
+		mod("ColdExposureChance", "BASE", nil),
+		value = 100,
+	},
+},
 #mods
 #skillEnd
 

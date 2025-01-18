@@ -1052,6 +1052,10 @@ return {
 	mod("BleedChance", "BASE", nil),
 	value = 100,
 },
+["attacks_inflict_bleeding_on_hit"] = {
+	mod("BleedChance", "BASE", nil, ModFlag.Attack),
+	value = 100,
+},
 ["display_fake_attack_hit_bleed"] = {
 	mod("BleedChance", "BASE", nil, ModFlag.Attack),
 	value = 100,
@@ -1090,6 +1094,9 @@ return {
 },
 ["base_chance_to_ignite_%"] = {
 	mod("EnemyIgniteChance", "BASE", nil),
+},
+["active_skill_ignite_chance_+%_final"] = {
+	mod("EnemyIgniteChance", "MORE", nil),
 },
 ["always_ignite"] = {
 	mod("EnemyIgniteChance", "BASE", nil),
@@ -1257,6 +1264,9 @@ return {
 	mod("ColdDotMultiplier", "BASE", nil),
 },
 ["active_skill_ignite_damage_+%_final"] = {
+	mod("AilmentMagnitude", "MORE", nil, 0, KeywordFlag.Ignite),
+},
+["active_skill_ignite_effect_+%_final"] = {
 	mod("AilmentMagnitude", "MORE", nil, 0, KeywordFlag.Ignite),
 },
 ["base_ignite_effect_+%"] = {
@@ -1802,13 +1812,13 @@ return {
 },
 -- Impale
 ["attacks_impale_on_hit_%_chance"] = {
-    mod("ImpaleChance", "BASE", nil, 0, KeywordFlag.Attack)
+	mod("ImpaleChance", "BASE", nil, 0, KeywordFlag.Attack)
 },
 ["impale_on_hit_%_chance"] = {
-    mod("ImpaleChance", "BASE", nil, 0, 0)
+	mod("ImpaleChance", "BASE", nil, 0, 0)
 },
 ["spells_impale_on_hit_%_chance"] = {
-    mod("ImpaleChance", "BASE", nil, 0, KeywordFlag.Spell)
+	mod("ImpaleChance", "BASE", nil, 0, KeywordFlag.Spell)
 },
 ["impale_debuff_effect_+%"] = {
 	mod("ImpaleEffect", "INC", nil)
@@ -1971,8 +1981,8 @@ return {
 	mod("TotemPlacementSpeed", "INC", nil),
 },
 ["totems_regenerate_%_life_per_minute"] = {
-    mod("LifeRegenPercent", "BASE", nil, 0, KeywordFlag.Totem),
-    div = 60,
+	mod("LifeRegenPercent", "BASE", nil, 0, KeywordFlag.Totem),
+	div = 60,
 },
 ["totem_duration_+%"] = {
 	mod("TotemDuration", "INC", nil),
