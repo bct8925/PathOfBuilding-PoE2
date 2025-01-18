@@ -772,7 +772,7 @@ function calcs.initEnv(build, mode, override, specEnv)
 					if item.jewelData then
 						item.jewelData.limitDisabled = nil
 					end
-					if item and item.type == "Jewel" and item.name:match("The Adorned, Crimson Jewel") then
+					if item and item.type == "Jewel" and item.name:match("The Adorned, Diamond") then
 						env.modDB.multipliers["CorruptedMagicJewelEffect"] = item.jewelData.corruptedMagicJewelIncEffect / 100
 					end
 					if item.limit and not env.configInput.ignoreJewelLimits then
