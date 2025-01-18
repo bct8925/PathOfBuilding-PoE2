@@ -1908,6 +1908,9 @@ function ItemsTabClass:CraftItem()
 				implicitIndex = implicitIndex + 1
 			end
 		end
+		if base.base.type == "Jewel" and base.base.subType == "Radius" then
+			item.jewelRadiusLabel = "Small"
+		end
 		item:NormaliseQuality()
 		item:BuildAndParseRaw()
 		return item
