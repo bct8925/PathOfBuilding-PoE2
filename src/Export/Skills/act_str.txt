@@ -621,7 +621,7 @@ end,
 #skill SeismicCryPlayer
 #startSets
 #set SeismicCryPlayer
-#flags warcry attack area
+#flags warcry hit area
 #mods
 #skillEnd
 
