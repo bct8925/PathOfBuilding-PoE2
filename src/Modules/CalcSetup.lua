@@ -1115,15 +1115,6 @@ function calcs.initEnv(build, mode, override, specEnv)
 							env.itemModDB:ScaleAddMod(mod, scale)
 						end
 					end
-				elseif item.type == "Quiver" and items["Weapon 1"] and items["Weapon 1"].name:match("Widowhail") then
-					local widowHailMod=(1 + (items["Weapon 1"].baseModList:Sum("INC", nil, "EffectOfBonusesFromQuiver") or 100) / 100)
-					scale = scale * widowHailMod
-					env.modDB:NewMod("WidowHailMultiplier", "BASE", widowHailMod, "Widowhail")
-					local combinedList = new("ModList")
-					for _, mod in ipairs(srcList) do
-						combinedList:MergeMod(mod)
-					end
-					env.itemModDB:ScaleAddList(combinedList, scale)
 				elseif env.modDB.multipliers["CorruptedMagicJewelEffect"] and item.type == "Jewel" and item.rarity == "MAGIC" and item.corrupted and slot.nodeId and item.base.subType ~= "Charm" then
 					scale = scale + env.modDB.multipliers["CorruptedMagicJewelEffect"]
 					local combinedList = new("ModList")
@@ -1229,6 +1220,16 @@ function calcs.initEnv(build, mode, override, specEnv)
 		end
 		if #override.extraJewelFuncs > 0 then
 			return calcs.initEnv(build, mode, override, specEnv)
+		end
+	end
+
+	if env.player.itemList["Weapon 2"] and env.player.itemList["Weapon 2"].type == "Quiver" then
+		local quiverEffectMod = env.modDB:Sum("INC", nil, "EffectOfBonusesFromQuiver") / 100
+		local modList = env.player.itemList["Weapon 2"].modList
+		for _, mod in ipairs(modList) do
+			local modCopy = copyTable(mod)
+			modCopy.source = "Many Sources:" .. tostring(quiverEffectMod * 100) .. "% Quiver Bonus Effect"
+			modDB:ScaleAddMod(modCopy, quiverEffectMod)
 		end
 	end
 

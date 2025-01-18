@@ -2846,16 +2846,16 @@ local specialModList = {
 	["([%+%-]%d+)%%? to (%a+) of all ?([%a%-' ]*) skills"] = function(num, _, property, type)
 		if type == "" then type = "all" end
 		if gemIdLookup[type] or gemIdLookup["load " .. type] or gemIdLookup[type .. " minion"] then
-			return { mod("GemProperty", "LIST", {keyword = type, key = "level", value = num  }) }
+			return { mod("GemProperty", "LIST", {keyword = type, key = "level", value = num, keyOfScaledMod = "value" }) }
 		end
 		local wordList = {}
 		for tag in type:gmatch("%w+") do
 			table.insert(wordList, tag)
 		end
 		if #wordList == 1 then
-			return { mod("GemProperty", "LIST", { keyword = wordList[1], key = property, value = num }) }
+			return { mod("GemProperty", "LIST", { keyword = wordList[1], key = property, value = num, keyOfScaledMod = "value" }) }
 		end
-		return { mod("GemProperty", "LIST", { keywordList = wordList, key = property, value = num }) }
+		return { mod("GemProperty", "LIST", { keywordList = wordList, key = property, value = num, keyOfScaledMod = "value" }) }
 	end,
 	["grants level (%d+) snipe skill"] = function(num) return {
 		mod("ExtraSkill", "LIST", { skillId = "Snipe", level = num }),
