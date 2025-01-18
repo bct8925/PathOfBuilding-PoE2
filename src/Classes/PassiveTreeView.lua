@@ -89,10 +89,10 @@ function PassiveTreeViewClass:Draw(build, viewPort, inputEvents)
 					-- Dragging won't actually commence unless the cursor moves far enough
 					self.dragX, self.dragY = cursorX, cursorY
 				end
-			elseif mOver then
-				if IsKeyDown("ALT") and event.key == "WHEELDOWN" then
+			elseif IsKeyDown("ALT") and mOver then
+				if event.key == "WHEELDOWN" then
 					spec.allocMode = math.max(0, spec.allocMode - 1)
-				elseif IsKeyDown("ALT") and event.key == "WHEELUP" then
+				elseif event.key == "WHEELUP" then
 					spec.allocMode = math.min(2, spec.allocMode + 1)
 				end
 			elseif event.key == "p" then
