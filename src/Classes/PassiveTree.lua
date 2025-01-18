@@ -506,8 +506,9 @@ function PassiveTreeClass:ProcessNode(node)
 	node.targetSize = self:GetNodeTargetSize(node)
 	node.overlay = self.nodeOverlay[node.type]
 	if node.overlay then
-		node.rsq = node.targetSize.width * node.targetSize.height
-		node.size = node.targetSize.width
+		local size = node.targetSize["overlay"] and node.targetSize["overlay"].width or node.targetSize.width
+		node.rsq = size * size
+		node.size = size
 	end
 
 	-- Derive the true position of the node
