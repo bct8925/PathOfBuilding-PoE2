@@ -273,10 +273,6 @@ local configSettings = {
 	{ var = "stoneGolemEqualsCarrionGolem", type = "check", label = "# Stone Golem = # Carrion Golem:", ifCond = "StoneEqualCarrionGolem", ifSkill = "Summon Carrion Golem", includeTransfigured = true, apply = function(val, modList, enemyModList)
 		modList:NewMod("Condition:StoneEqualCarrionGolem", "FLAG", true, "Config")
 	end },
-	{ label = "Close Combat:", ifSkill = "Close Combat" },
-	{ var = "closeCombatCombatRush", type = "check", label = "Is Combat Rush active?", ifSkill = "Close Combat", tooltip = "Combat Rush grants 20% more Attack Speed to Travel Skills not Supported by Close Combat.",apply = function(val, modList, enemyModList)
-		modList:NewMod("Condition:CombatRushActive", "FLAG", true, "Config")
-	end },
 	{ label = "Cold Snap:", ifSkill = "Cold Snap", includeTransfigured = true },
 	{ var = "ColdSnapBypassCD", type = "check", label = "Bypass CD?", ifSkill = "Cold Snap", includeTransfigured = true, apply = function(val, modList, enemyModList)
 		modList:NewMod("CooldownRecovery", "OVERRIDE", 0, "Config", { type = "SkillName", skillName = "Cold Snap", includeTransfigured = true })
@@ -1415,8 +1411,7 @@ Huge sets the radius to 11.
 	{ var = "skillPierceCount", type = "count", label = "# of times Skill has Pierced:", ifStat = "PiercedCount", ifFlag = "piercing", apply = function(val, modList, enemyModList)
 		modList:NewMod("PiercedCount", "BASE", val, "Config", { type = "Condition", var = "Effective" })
 	end },
-	{ var = "meleeDistance", type = "count", label = "Melee distance to enemy:", ifTagType = "MeleeProximity", ifFlag = "melee" },
-	{ var = "projectileDistance", type = "count", label = "Projectile travel distance:", ifTagType = "DistanceRamp", ifFlag = "projectile" },
+	{ var = "enemyDistance", type = "count", label = "Distance to enemy:", ifTagType = "DistanceRamp" },
 	{ var = "conditionAtCloseRange", type = "check", label = "Is the enemy at Close Range?", ifCond = "AtCloseRange", apply = function(val, modList, enemyModList)
 		modList:NewMod("Condition:AtCloseRange", "FLAG", true, "Config", { type = "Condition", var = "Effective" })
 	end },

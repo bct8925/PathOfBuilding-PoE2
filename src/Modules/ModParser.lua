@@ -2739,7 +2739,6 @@ local specialModList = {
 	["you gain (%d+)%% increased area of effect for each mine"] = function(num) return { mod("AreaOfEffect", "INC", num, { type = "PerStat", stat = "ActiveMineLimit" }) } end,
 	["triggers level (%d+) summon triggerbots when allocated"] = { flag("HaveTriggerBots") },
 	-- Slayer
-	["deal up to (%d+)%% more melee damage to enemies, based on proximity"] = function(num) return { mod("Damage", "MORE", num, nil, bor(ModFlag.Attack, ModFlag.Melee), { type = "MeleeProximity", ramp = {1,0} }) } end,
 	["cannot be stunned while leeching"] = { flag("StunImmune", { type = "Condition", var = "Leeching" }), },
 	["you are immune to bleeding while leeching"] = { flag("BleedImmune", { type = "Condition", var = "Leeching" }), },
 	["life leech effects are not removed at full life"] = { flag("CanLeechLifeOnFullLife") },
