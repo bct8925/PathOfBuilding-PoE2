@@ -95,6 +95,7 @@ local ItemsTabClass = newClass("ItemsTab", "UndoHandler", "ControlHost", "Contro
 	self.slots = { }
 	self.orderedSlots = { }
 	self.slotOrder = { }
+	self.initSockets = true
 	self.slotAnchor = new("Control", {"TOPLEFT",self,"TOPLEFT"}, {96, 76, 310, 0})
 	local prevSlot = self.slotAnchor
 	local function addSlot(slot)
@@ -1231,20 +1232,20 @@ end
 -- Updates the status and position of the socket controls
 function ItemsTabClass:UpdateSockets()
 	-- Build a list of active sockets
-	local activeSocketList = { }
+	self.activeSocketList = { }
 	for nodeId, slot in pairs(self.sockets) do
 		if self.build.spec.allocNodes[nodeId] then
-			t_insert(activeSocketList, nodeId)
+			t_insert(self.activeSocketList, nodeId)
 			slot.inactive = false
 		else
 			slot.inactive = true
 		end
 	end
-	table.sort(activeSocketList)
+	table.sort(self.activeSocketList)
 
 	-- Update the state of the active socket controls
 	self.lastSlot = self.slots[baseSlots[#baseSlots]]
-	for index, nodeId in ipairs(activeSocketList) do
+	for index, nodeId in ipairs(self.activeSocketList) do
 		self.sockets[nodeId].label = "Socket #"..index
 		self.lastSlot = self.sockets[nodeId]
 	end
@@ -1252,6 +1253,7 @@ function ItemsTabClass:UpdateSockets()
 	if main.portraitMode then
 		self.controls.itemList:SetAnchor("TOPRIGHT",self.lastSlot,"BOTTOMRIGHT", 0, 40)
 	end
+	self.initSockets = false
 end
 
 -- Returns the slot control and equipped jewel for the given node ID
@@ -1726,7 +1728,7 @@ function ItemsTabClass:UpdateDisplayItemRangeLines()
 		wipeTable(self.controls.displayItemRangeLine.list)
 		for _, modLine in ipairs(self.displayItem.rangeLineList) do
 			-- primarily for Against the Darkness // a way to cut down on really long modLines, gsub could be updated for others
-			t_insert(self.controls.displayItemRangeLine.list, modLine.line:gsub(" Passive Skills in Radius also grant", ":"))
+			t_insert(self.controls.displayItemRangeLine.list, (modLine.line:gsub(" Passive Skills in Radius also grant", ":")))
 		end
 		self.controls.displayItemRangeLine.selIndex = 1
 		self.controls.displayItemRangeSlider.val = self.displayItem.rangeLineList[1].range
