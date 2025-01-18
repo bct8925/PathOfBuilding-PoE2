@@ -982,6 +982,9 @@ function SkillsTabClass:FindSkillGem(nameSpec)
 end
 
 function SkillsTabClass:ProcessGemLevel(gemData)
+	if not gemData then
+		return 1
+	end
 	local grantedEffect = gemData.grantedEffect
 	local naturalMaxLevel = gemData.naturalMaxLevel
 	if self.defaultGemLevel == "awakenedMaximum" then
