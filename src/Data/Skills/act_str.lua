@@ -71,6 +71,8 @@ skills["AncestralWarriorTotemPlayer"] = {
 			damageIncrementalEffectiveness = 0.006699999794364,
 			statDescriptionScope = "skill_stat_descriptions",
 			baseFlags = {
+				totem = true,
+				attack = true,
 			},
 			constantStats = {
 				{ "base_totem_duration", 8000 },
@@ -309,6 +311,9 @@ skills["ArmourBreakerPlayer"] = {
 			incrementalEffectiveness = 0.054999999701977,
 			statDescriptionScope = "heavy_strike",
 			baseFlags = {
+				attack = true,
+				area = true,
+				melee = true,
 			},
 			constantStats = {
 				{ "melee_range_+", 2 },
@@ -989,6 +994,8 @@ skills["BoneshatterPlayer"] = {
 			damageIncrementalEffectiveness = 0.053700000047684,
 			statDescriptionScope = "boneshatter",
 			baseFlags = {
+				attack = true,
+				melee = true,
 			},
 			constantStats = {
 				{ "melee_range_+", 2 },
@@ -1050,6 +1057,9 @@ skills["BoneshatterPlayer"] = {
 			damageIncrementalEffectiveness = 0.053700000047684,
 			statDescriptionScope = "boneshatter",
 			baseFlags = {
+				attack = true,
+				melee = true,
+				area = true,
 			},
 			constantStats = {
 				{ "active_skill_base_area_of_effect_radius", 20 },
@@ -1793,6 +1803,7 @@ skills["StaffConsecratePlayer"] = {
 			incrementalEffectiveness = 0.054999999701977,
 			statDescriptionScope = "consecrate",
 			baseFlags = {
+				spell = true,
 			},
 			constantStats = {
 				{ "base_skill_effect_duration", 8000 },
@@ -2130,6 +2141,7 @@ skills["DreadBannerPlayer"] = {
 			incrementalEffectiveness = 0.054999999701977,
 			statDescriptionScope = "dread_banner",
 			baseFlags = {
+				duration = true,
 			},
 			constantStats = {
 				{ "active_skill_base_area_of_effect_radius", 40 },
@@ -2467,6 +2479,9 @@ skills["EarthshatterPlayer"] = {
 			incrementalEffectiveness = 0.054999999701977,
 			statDescriptionScope = "spike_slam_statset_0",
 			baseFlags = {
+				attack = true,
+				area = true,
+				melee = true,
 			},
 			constantStats = {
 				{ "base_skill_effect_duration", 6000 },
@@ -2525,6 +2540,10 @@ skills["EarthshatterPlayer"] = {
 			incrementalEffectiveness = 0.054999999701977,
 			statDescriptionScope = "spike_slam_statset_1",
 			baseFlags = {
+				attack = true,
+				area = true,
+				melee = true,
+				duration = true,
 			},
 			constantStats = {
 				{ "active_skill_base_area_of_effect_radius", 10 },
@@ -2642,6 +2661,7 @@ skills["EmergencyReloadPlayer"] = {
 			incrementalEffectiveness = 0.054999999701977,
 			statDescriptionScope = "emergency_reload",
 			baseFlags = {
+				duration = true,
 			},
 			constantStats = {
 				{ "base_skill_effect_duration", 6000 },
@@ -2894,6 +2914,9 @@ skills["ExsanguinatePlayer"] = {
 			damageIncrementalEffectiveness = 0.0094999996945262,
 			statDescriptionScope = "exsanguinate",
 			baseFlags = {
+				spell = true,
+				duration = true,
+				chaining = true,
 			},
 			constantStats = {
 				{ "base_skill_effect_duration", 1000 },
@@ -3454,6 +3477,10 @@ skills["HammerOfTheGodsPlayer"] = {
 			incrementalEffectiveness = 0.054999999701977,
 			statDescriptionScope = "hammer_of_the_gods",
 			baseFlags = {
+				attack = true,
+				area = true,
+				melee = true,
+				duration = true,
 			},
 			constantStats = {
 				{ "base_skill_effect_duration", 2500 },
@@ -3754,6 +3781,9 @@ skills["InfernalCryPlayer"] = {
 			incrementalEffectiveness = 0.054999999701977,
 			statDescriptionScope = "infernal_cry",
 			baseFlags = {
+				warcry = true,
+				area = true,
+				duration = true,
 			},
 			constantStats = {
 				{ "infernal_cry_exerted_attack_all_damage_%_to_gain_as_fire_per_5_power_up_to_cap%", 25 },
@@ -3876,6 +3906,8 @@ skills["InfernalCryCorpseExplosionPlayer"] = {
 			damageIncrementalEffectiveness = 0.0065000001341105,
 			statDescriptionScope = "infernal_cry_corpse_explosion",
 			baseFlags = {
+				area = true,
+				hit = true,
 			},
 			constantStats = {
 				{ "active_skill_base_area_of_effect_radius", 16 },
@@ -3999,6 +4031,9 @@ skills["LeapSlamPlayer"] = {
 			incrementalEffectiveness = 0.092720001935959,
 			statDescriptionScope = "leap_slam",
 			baseFlags = {
+				attack = true,
+				area = true,
+				melee = true,
 			},
 			constantStats = {
 				{ "broken_armour_consume_art_variation", 1 },
@@ -8889,6 +8924,9 @@ skills["MagmaSprayPlayer"] = {
 			damageIncrementalEffectiveness = 0.017300000414252,
 			statDescriptionScope = "skill_stat_descriptions",
 			baseFlags = {
+				attack = true,
+				area = true,
+				melee = true,
 			},
 			constantStats = {
 				{ "active_skill_base_area_of_effect_radius", 22 },
@@ -9009,6 +9047,9 @@ skills["MoltenBlastPlayer"] = {
 			incrementalEffectiveness = 0.054999999701977,
 			statDescriptionScope = "molten_blast_statset_0",
 			baseFlags = {
+				attack = true,
+				area = true,
+				projectile = true,
 			},
 			constantStats = {
 				{ "active_skill_base_area_of_effect_radius", 16 },
@@ -9074,6 +9115,8 @@ skills["MoltenBlastPlayer"] = {
 			incrementalEffectiveness = 0.054999999701977,
 			statDescriptionScope = "molten_blast_statset_1",
 			baseFlags = {
+				attack = true,
+				projectile = true,
 			},
 			constantStats = {
 				{ "base_number_of_projectiles", 8 },
@@ -9648,6 +9691,8 @@ skills["ReapPlayer"] = {
 			damageIncrementalEffectiveness = 0.0094999996945262,
 			statDescriptionScope = "reap",
 			baseFlags = {
+				spell = true,
+				area = true,
 			},
 			constantStats = {
 				{ "base_skill_effect_duration", 1000 },
@@ -9766,6 +9811,10 @@ skills["ResonatingShieldPlayer"] = {
 			damageIncrementalEffectiveness = 0.006699999794364,
 			statDescriptionScope = "shield_drum",
 			baseFlags = {
+				attack = true,
+				area = true,
+				melee = true,
+				shieldAttack = true,
 			},
 			constantStats = {
 				{ "active_skill_base_area_of_effect_radius", 23 },
@@ -9840,6 +9889,7 @@ skills["RipwireBallistaPlayer"] = {
 	weaponTypes = {
 		["Crossbow"] = true,
 	},
+	skillTotemId = 22,
 	castTime = 1,
 	qualityStats = {
 	},
@@ -9893,6 +9943,7 @@ skills["RipwireBallistaPlayer"] = {
 			damageIncrementalEffectiveness = 0.006699999794364,
 			statDescriptionScope = "skill_stat_descriptions",
 			baseFlags = {
+				totem = true,
 			},
 			constantStats = {
 				{ "base_totem_range", 60 },
@@ -10154,6 +10205,9 @@ skills["RollingSlamPlayer"] = {
 			incrementalEffectiveness = 0.092720001935959,
 			statDescriptionScope = "double_slam",
 			baseFlags = {
+				attack = true,
+				area = true,
+				melee = true,
 			},
 			constantStats = {
 				{ "added_attack_time_ms", 1500 },
@@ -10217,6 +10271,9 @@ skills["RollingSlamPlayer"] = {
 			incrementalEffectiveness = 0.092720001935959,
 			statDescriptionScope = "double_slam",
 			baseFlags = {
+				attack = true,
+				area = true,
+				melee = true,
 			},
 			constantStats = {
 				{ "active_skill_base_area_of_effect_radius", 14 },
@@ -10282,6 +10339,9 @@ skills["RollingSlamPlayer"] = {
 			incrementalEffectiveness = 0.092720001935959,
 			statDescriptionScope = "double_slam",
 			baseFlags = {
+				attack = true,
+				area = true,
+				melee = true,
 			},
 			constantStats = {
 				{ "active_skill_base_secondary_area_of_effect_radius", 18 },
@@ -10404,6 +10464,7 @@ skills["ScavengedPlatingPlayer"] = {
 			damageIncrementalEffectiveness = 0.0065000001341105,
 			statDescriptionScope = "scavenged_plating",
 			baseFlags = {
+				duration = true,
 			},
 			constantStats = {
 				{ "base_skill_effect_duration", 8000 },
@@ -10520,6 +10581,9 @@ skills["SeismicCryPlayer"] = {
 			damageIncrementalEffectiveness = 0.0065000001341105,
 			statDescriptionScope = "seismic_cry",
 			baseFlags = {
+				warcry = true,
+				hit = true,
+				area = true,
 			},
 			constantStats = {
 				{ "skill_empowers_next_x_melee_attacks", 1 },
@@ -10763,6 +10827,10 @@ skills["ShieldChargePlayer"] = {
 			damageIncrementalEffectiveness = 0.006699999794364,
 			statDescriptionScope = "channel_shield_charge",
 			baseFlags = {
+				attack = true,
+				area = true,
+				melee = true,
+				shieldAttack = true,
 			},
 			constantStats = {
 				{ "active_skill_base_area_of_effect_radius", 24 },
@@ -10834,6 +10902,10 @@ skills["ShieldChargePlayer"] = {
 			incrementalEffectiveness = 0.054999999701977,
 			statDescriptionScope = "channel_shield_charge",
 			baseFlags = {
+				attack = true,
+				area = true,
+				melee = true,
+				shieldAttack = true,
 			},
 			constantStats = {
 				{ "base_knockback_distance", 900 },
@@ -10962,6 +11034,8 @@ skills["ShieldWallPlayer"] = {
 			damageIncrementalEffectiveness = 0.006699999794364,
 			statDescriptionScope = "shield_barricade",
 			baseFlags = {
+				attack = true,
+				shieldAttack = true,
 			},
 			constantStats = {
 				{ "base_skill_effect_duration", 6000 },
@@ -11103,6 +11177,7 @@ skills["ShockwaveTotemPlayer"] = {
 			damageIncrementalEffectiveness = 0.006699999794364,
 			statDescriptionScope = "skill_stat_descriptions",
 			baseFlags = {
+				totem = true,
 			},
 			constantStats = {
 				{ "base_totem_duration", 12000 },
@@ -11220,6 +11295,10 @@ skills["ShockwaveTotemQuakePlayer"] = {
 			incrementalEffectiveness = 0.054999999701977,
 			statDescriptionScope = "totem_shockwave_quake",
 			baseFlags = {
+				totem = true,
+				attack = true,
+				area = true,
+				melee = true,
 			},
 			constantStats = {
 				{ "active_skill_base_area_of_effect_radius", 30 },
@@ -11279,6 +11358,9 @@ skills["ShockwaveTotemQuakePlayer"] = {
 			incrementalEffectiveness = 0.054999999701977,
 			statDescriptionScope = "totem_shockwave_quake",
 			baseFlags = {
+				totem = true,
+				attack = true,
+				area = true,
 			},
 			constantStats = {
 				{ "active_skill_base_area_of_effect_radius", 30 },
@@ -11397,6 +11479,9 @@ skills["StampedePlayer"] = {
 			incrementalEffectiveness = 0.054999999701977,
 			statDescriptionScope = "channel_stampede_statset_0",
 			baseFlags = {
+				attack = true,
+				area = true,
+				melee = true,
 			},
 			constantStats = {
 				{ "shield_charge_base_movement_speed", 70 },
@@ -11463,6 +11548,9 @@ skills["StampedePlayer"] = {
 			incrementalEffectiveness = 0.054999999701977,
 			statDescriptionScope = "channel_stampede_statset_1",
 			baseFlags = {
+				attack = true,
+				area = true,
+				melee = true,
 			},
 			constantStats = {
 				{ "active_skill_base_area_of_effect_radius", 32 },
@@ -11529,6 +11617,9 @@ skills["StampedePlayer"] = {
 			incrementalEffectiveness = 0.054999999701977,
 			statDescriptionScope = "channel_stampede_statset_2",
 			baseFlags = {
+				attack = true,
+				area = true,
+				melee = true,
 			},
 			constantStats = {
 				{ "shield_charge_base_movement_speed", 70 },
@@ -11654,6 +11745,9 @@ skills["SunderPlayer"] = {
 			incrementalEffectiveness = 0.092720001935959,
 			statDescriptionScope = "new_sunder_statset_0",
 			baseFlags = {
+				attack = true,
+				area = true,
+				melee = true,
 			},
 			constantStats = {
 				{ "broken_armour_consume_art_variation", 1 },
@@ -11722,6 +11816,8 @@ skills["SunderPlayer"] = {
 			incrementalEffectiveness = 0.054999999701977,
 			statDescriptionScope = "new_sunder_statset_1",
 			baseFlags = {
+				attack = true,
+				area = true,
 			},
 			constantStats = {
 				{ "active_skill_base_secondary_area_of_effect_radius", 12 },
@@ -11846,6 +11942,9 @@ skills["SuperchargedSlamPlayer"] = {
 			incrementalEffectiveness = 0.092720001935959,
 			statDescriptionScope = "channelled_slam_statset_0",
 			baseFlags = {
+				attack = true,
+				area = true,
+				melee = true,
 			},
 			constantStats = {
 				{ "active_skill_base_area_of_effect_radius", 16 },
@@ -11908,6 +12007,9 @@ skills["SuperchargedSlamPlayer"] = {
 			incrementalEffectiveness = 0.092720001935959,
 			statDescriptionScope = "channelled_slam_statset_1",
 			baseFlags = {
+				attack = true,
+				area = true,
+				melee = true,
 			},
 			constantStats = {
 				{ "active_skill_base_area_of_effect_radius", 12 },
@@ -12029,6 +12131,7 @@ skills["TimeOfNeedPlayer"] = {
 			incrementalEffectiveness = 0.054999999701977,
 			statDescriptionScope = "time_of_need",
 			baseFlags = {
+				duration = true,
 			},
 			stats = {
 				"base_skill_effect_duration",
@@ -12142,6 +12245,10 @@ skills["VolcanicFissurePlayer"] = {
 			incrementalEffectiveness = 0.092720001935959,
 			statDescriptionScope = "volcanic_fissure",
 			baseFlags = {
+				attack = true,
+				area = true,
+				melee = true,
+				duration = true,
 			},
 			constantStats = {
 				{ "base_skill_effect_duration", 12000 },

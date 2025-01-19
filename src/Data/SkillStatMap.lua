@@ -599,7 +599,7 @@ return {
 	flag("NeverCrit"),
 },
 ["base_critical_strike_multiplier_+"] = {
-	mod("CritMultiplier", "BASE", nil),
+	mod("CritMultiplier", "INC", nil),
 },
 ["critical_strike_chance_+%_vs_shocked_enemies"] = {
 	mod("CritChance", "INC", nil, 0, 0, { type = "ActorCondition", actor = "enemy", var = "Shocked" }),
@@ -728,6 +728,9 @@ return {
 ["chaos_damage_+%"] = {
 	mod("ChaosDamage", "INC", nil),
 },
+["active_skill_chaos_damage_+%_final"] = {
+	mod("ChaosDamage", "MORE", nil),
+},
 ["elemental_damage_+%"] = {
 	mod("ElementalDamage", "INC", nil),
 },
@@ -775,6 +778,9 @@ return {
 },
 ["damage_+%_vs_frozen_enemies"] = {
 	mod("Damage", "INC", nil, ModFlag.Hit, 0, { type = "ActorCondition", actor = "enemy", var = "Frozen" }),
+},
+["active_skill_damage_+%_final_vs_chilled_enemies"] = {
+	mod("Damage", "MORE", nil, ModFlag.Hit, 0, { type = "ActorCondition", actor = "enemy", var = "Chilled" }),
 },
 ["base_reduce_enemy_fire_resistance_%"] = {
 	mod("FirePenetration", "BASE", nil),
@@ -893,6 +899,10 @@ return {
 ["physical_weapon_damage_+%_per_10_str"] = {
 	mod("PhysicalDamage", "INC", nil, ModFlag.Weapon, 0, { type = "PerStat", stat = "Str", div = 10 }),
 },
+["hits_ignore_enemy_monster_physical_damage_reduction"] = {
+	mod("ChanceToIgnoreEnemyPhysicalDamageReduction", "BASE", nil),
+	base = 100,
+},
 -- PvP Damage
 ["support_makes_skill_mine_pvp_damage_+%_final"] = {
 	mod("PvpDamageMultiplier", "MORE", nil),
@@ -938,7 +948,7 @@ return {
 	mod("DamageGainAsFire", "BASE", nil, 0, 0, { type = "ActorCondition", actor = "enemy", var = "Burning" }),
 },
 ["support_innervate_buff_grant_%_added_lightning_attack_damage"] = {
-	mod("DamageGainAsLightning", "BASE", nil, ModFlag.Attack, 0, { type = "Condition", var = "KilledShockedLast3Seconds" }),
+	mod("DamageGainAsLightning", "BASE", nil, ModFlag.Attack, 0, { type = "Condition", var = "KilledShockedLast3Seconds" }, { type = "GlobalEffect", effectType = "Buff", effectName = "Innervate" } ),
 },
 ["base_physical_damage_%_to_convert_to_lightning"] = {
 	mod("PhysicalDamageConvertToLightning", "BASE", nil),
@@ -1042,6 +1052,14 @@ return {
 	mod("BleedChance", "BASE", nil),
 	value = 100,
 },
+["attacks_inflict_bleeding_on_hit"] = {
+	mod("BleedChance", "BASE", nil, ModFlag.Attack),
+	value = 100,
+},
+["display_fake_attack_hit_bleed"] = {
+	mod("BleedChance", "BASE", nil, ModFlag.Attack),
+	value = 100,
+},
 ["bleed_on_melee_attack_chance_%"] = {
 	mod("BleedChance", "BASE", nil, ModFlag.Melee),
 },
@@ -1070,11 +1088,22 @@ return {
 	mod("PoisonChance", "BASE", nil),
 	value = 100,
 },
+["display_fake_attack_hit_poison"] = {
+	mod("PoisonChance", "BASE", nil, ModFlag.Attack),
+	value = 100,
+},
 ["base_chance_to_ignite_%"] = {
 	mod("EnemyIgniteChance", "BASE", nil),
 },
+["active_skill_ignite_chance_+%_final"] = {
+	mod("EnemyIgniteChance", "MORE", nil),
+},
 ["always_ignite"] = {
 	mod("EnemyIgniteChance", "BASE", nil),
+	value = 100,
+},
+["display_fake_attack_hit_ignite"] = {
+	mod("EnemyIgniteChance", "BASE", nil, ModFlag.Attack),
 	value = 100,
 },
 ["base_chance_to_shock_%"] = {
@@ -1176,6 +1205,9 @@ return {
 ["ignite_duration_+%"] = {
 	mod("EnemyIgniteDuration", "INC", nil),
 },
+["active_skill_ignite_duration_+%_final"] = {
+	mod("EnemyIgniteDuration", "MORE", nil),
+},
 ["lightning_ailment_duration_+%"] = {
 	mod("EnemyShockDuration", "INC", nil),
 	mod("EnemySapDuration", "INC", nil),
@@ -1232,7 +1264,13 @@ return {
 	mod("ColdDotMultiplier", "BASE", nil),
 },
 ["active_skill_ignite_damage_+%_final"] = {
-	mod("Damage", "MORE", nil, 0, KeywordFlag.Ignite),
+	mod("AilmentMagnitude", "MORE", nil, 0, KeywordFlag.Ignite),
+},
+["active_skill_ignite_effect_+%_final"] = {
+	mod("AilmentMagnitude", "MORE", nil, 0, KeywordFlag.Ignite),
+},
+["base_ignite_effect_+%"] = {
+	mod("AilmentMagnitude", "INC", nil, 0, KeywordFlag.Ignite),
 },
 ["damaging_ailments_deal_damage_+%_faster"] = {
 	mod("BleedFaster", "INC", nil),
@@ -1383,7 +1421,7 @@ return {
 	mod("LightningExposureChance", "BASE", nil),
 },
 ["inflict_lightning_exposure_for_x_ms_on_shock"] = {
-	mod("LightningExposureChance", "BASE", 100, ModFlag.Hit, 0, { type = "Condition", var = "Shocked" }),
+	mod("LightningExposureChance", "BASE", 100, ModFlag.Hit, 0, { type = "ActorCondition", actor = "enemy", var = "Shocked"}),
 },
 ["base_inflict_fire_exposure_on_hit_%_chance"] = {
 	mod("FireExposureChance", "BASE", nil),
@@ -1719,22 +1757,22 @@ return {
 	skill("setOffHandBaseCritChance", nil),
 	value = 5,
 },
-["off_hand_local_minimum_added_physical_damage"] = {
+["off_hand_weapon_minimum_physical_damage"] = {
 	skill("setOffHandPhysicalMin", nil),
 },
-["off_hand_local_maximum_added_physical_damage"] = {
+["off_hand_weapon_maximum_physical_damage"] = {
 	skill("setOffHandPhysicalMax", nil),
 },
-["off_hand_local_minimum_added_cold_damage"] = {
+["off_hand_weapon_minimum_cold_damage"] = {
 	skill("setOffHandColdMin", nil),
 },
-["off_hand_local_maximum_added_cold_damage"] = {
+["off_hand_weapon_maximum_cold_damage"] = {
 	skill("setOffHandColdMax", nil),
 },
-["off_hand_local_minimum_added_fire_damage"] = {
+["off_hand_weapon_minimum_fire_damage"] = {
 	skill("setOffHandFireMin", nil),
 },
-["off_hand_local_maximum_added_fire_damage"] = {
+["off_hand_weapon_maximum_fire_damage"] = {
 	skill("setOffHandFireMax", nil),
 },
 ["off_hand_base_weapon_attack_duration_ms"] = {
@@ -1758,6 +1796,12 @@ return {
 ["off_hand_maximum_added_fire_damage_per_15_shield_armour"] = {
 	mod("FireMax", "BASE", nil, 0, 0, { type = "Condition", var = "OffHandAttack" }, { type = "PerStat", stat = "ArmourOnWeapon 2", div = 15 }),
 },
+["off_hand_minimum_added_physical_damage_per_15_shield_armour"] = {
+	mod("PhysicalMin", "BASE", nil, 0, 0, { type = "Condition", var = "OffHandAttack" }, { type = "PerStat", stat = "ArmourOnWeapon 2", div = 15 }),
+},
+["off_hand_maximum_added_physical_damage_per_15_shield_armour"] = {
+	mod("PhysicalMax", "BASE", nil, 0, 0, { type = "Condition", var = "OffHandAttack" }, { type = "PerStat", stat = "ArmourOnWeapon 2", div = 15 }),
+},
 ["additional_critical_strike_chance_per_10_shield_maximum_energy_shield_permyriad"] = {
 	mod("CritChance", "BASE", nil, 0, 0, { type = "PerStat", stat = "EnergyShieldOnWeapon 2", div = 10, }),
 	div = 100,
@@ -1768,13 +1812,13 @@ return {
 },
 -- Impale
 ["attacks_impale_on_hit_%_chance"] = {
-    mod("ImpaleChance", "BASE", nil, 0, KeywordFlag.Attack)
+	mod("ImpaleChance", "BASE", nil, 0, KeywordFlag.Attack)
 },
 ["impale_on_hit_%_chance"] = {
-    mod("ImpaleChance", "BASE", nil, 0, 0)
+	mod("ImpaleChance", "BASE", nil, 0, 0)
 },
 ["spells_impale_on_hit_%_chance"] = {
-    mod("ImpaleChance", "BASE", nil, 0, KeywordFlag.Spell)
+	mod("ImpaleChance", "BASE", nil, 0, KeywordFlag.Spell)
 },
 ["impale_debuff_effect_+%"] = {
 	mod("ImpaleEffect", "INC", nil)
@@ -1937,8 +1981,8 @@ return {
 	mod("TotemPlacementSpeed", "INC", nil),
 },
 ["totems_regenerate_%_life_per_minute"] = {
-    mod("LifeRegenPercent", "BASE", nil, 0, KeywordFlag.Totem),
-    div = 60,
+	mod("LifeRegenPercent", "BASE", nil, 0, KeywordFlag.Totem),
+	div = 60,
 },
 ["totem_duration_+%"] = {
 	mod("TotemDuration", "INC", nil),

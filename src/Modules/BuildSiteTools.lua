@@ -9,12 +9,20 @@ buildSites = { }
 -- Import/Export websites list used in dropdowns
 buildSites.websiteList = {
 	{
+		label = "Maxroll", id = "Maxroll", matchURL = "maxroll%.gg/poe2/pob/.*", regexURL = "maxroll%.gg/poe2/pob/(.+)%s*$", downloadURL = "maxroll%.gg/poe2/api/pob/%1",
+		codeOut = "https://maxroll.gg/poe2/pob/", postUrl = "https://maxroll.gg/poe2/api/pob", postFields = "pobCode=", linkURL = "maxroll%.gg/poe2/pob/%1"
+	},
+	{
 		label = "pobb.in", id = "POBBin", matchURL = "pobb%.in/.+", regexURL = "pobb%.in/(.+)%s*$", downloadURL = "pobb.in/pob/%1",
 		codeOut = "https://pobb.in/", postUrl = "https://pobb.in/pob/", postFields = "", linkURL = "pobb.in/%1"
 	},
 	{
-		label = "PoeNinja", id = "PoeNinja", matchURL = "poe%.ninja/pob/%w+", regexURL = "poe%.ninja/pob/(%w+)%s*$", downloadURL = "poe.ninja/pob/raw/%1",
-		codeOut = "", postUrl = "https://poe.ninja/pob/api/api_post.php", postFields = "api_paste_code=", linkURL="poe.ninja/pob/%1"
+		label = "poe2.ninja", id = "Poe2Ninja", matchURL = "poe2%.ninja/pob/%w+", regexURL = "poe2%.ninja/pob/(%w+)%s*$", downloadURL = "poe2.ninja/pob/raw/%1",
+		codeOut = "", postUrl = "https://poe2.ninja/pob/api/api_post.php", postFields = "api_paste_code=", linkURL="poe2.ninja/pob/%1"
+	},
+	{ 
+		label = "poe2db.tw", id = "PoE2DB", matchURL = "poe2db%.tw/.+", regexURL = "poe2db%.tw/pob/(.+)%s*$", downloadURL = "poe2db.tw/pob/%1/raw", 
+		codeOut = "", postUrl = "https://poe2db.tw/pob/api/gen", postFields = "", linkURL = "poe2db.tw/pob/%1" 
 	},
 	{
 		label = "Pastebin.com", id = "pastebin", matchURL = "pastebin%.com/%w+", regexURL = "pastebin%.com/(%w+)%s*$", downloadURL = "pastebin.com/raw/%1", linkURL = "pastebin.com/%1"
@@ -71,8 +79,8 @@ function buildSites.DownloadBuild(link, websiteInfo, callback)
 	-- Only called on program start via protocol handler
 	if not websiteInfo then
 		for _, siteInfo in ipairs(buildSites.websiteList) do
-			if link:match("^pob:[/\\]*" .. siteInfo.id:lower() .. "[/\\]+(.+)") then
-				siteCodeURL = link:gsub("^pob:[/\\]*" .. siteInfo.id:lower() .. "[/\\]+(.+)", "https://" .. siteInfo.downloadURL)
+			if link:match("^pob2:[/\\]*" .. siteInfo.id:lower() .. "[/\\]+(.+)") then
+				siteCodeURL = link:gsub("^pob2:[/\\]*" .. siteInfo.id:lower() .. "[/\\]+(.+)", "https://" .. siteInfo.downloadURL)
 				websiteInfo = siteInfo
 				break
 			end
@@ -94,14 +102,14 @@ function buildSites.DownloadBuild(link, websiteInfo, callback)
 end
 
 -- Parses and converts URI's to import links. Currently only supports protocol handler URI's, extend as needed.
--- @param uri String Example: pob://pobbin/<id> or pob://poeninja/<id>
+-- @param uri String Example: pob2://pobbin/<id> or pob2://poeninja/<id>
 function buildSites.ParseImportLinkFromURI(uri)
 	local importLink = nil
 	
 	-- Check if it's an URI from protocol handler
 	for _, siteInfo in ipairs(buildSites.websiteList) do
-		if uri:match("^pob:[/\\]*" .. siteInfo.id:lower() .. "[/\\]+(.+)") then
-			importLink = uri:gsub("^pob:[/\\]*" .. siteInfo.id:lower() .. "[/\\]+(.+)", "https://" .. siteInfo.linkURL)
+		if uri:match("^pob2:[/\\]*" .. siteInfo.id:lower() .. "[/\\]+(.+)") then
+			importLink = uri:gsub("^pob2:[/\\]*" .. siteInfo.id:lower() .. "[/\\]+(.+)", "https://" .. siteInfo.linkURL)
 			break
 		end
 	end

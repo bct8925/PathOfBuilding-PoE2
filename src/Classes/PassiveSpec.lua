@@ -958,6 +958,7 @@ function PassiveSpecClass:BuildAllDependsAndPaths()
 	local visited = { }
 	local attributes = { "Dexterity", "Intelligence", "Strength" }
 	-- Check all nodes for other nodes which depend on them (i.e. are only connected to the tree through that node)
+	self.switchableNodes = { }
 	for id, node in pairs(self.nodes) do
 		node.depends = wipeTable(node.depends)
 		node.intuitiveLeapLikesAffecting = { }
@@ -968,6 +969,7 @@ function PassiveSpecClass:BuildAllDependsAndPaths()
 			local nodeToReplace = self.tree.nodes[id]
 			if self.tree.nodes[id].isSwitchable and self.tree.nodes[id].options[self.curClassName] then
 				nodeToReplace = self.tree.nodes[id].options[self.curClassName]
+				self.switchableNodes[nodeToReplace.id] = node
 			end
 			self:ReplaceNode(node, nodeToReplace)
 		end
@@ -1947,7 +1949,7 @@ function PassiveSpecClass:CreateUndoState()
 		secondaryAscendClassId = self.secondaryAscendClassId,
 		hashList = allocNodeIdList,
 		weaponSets = weaponSets,
-		hashOverrides = self.hashOverrides,
+		hashOverrides = copyTable(self.hashOverrides, true),
 		masteryEffects = selections,
 		treeVersion = self.treeVersion
 	}

@@ -355,7 +355,7 @@ function calcs.buildActiveSkillModList(env, activeSkill)
 	if skillFlags.hit then
 		skillModFlags = bor(skillModFlags, ModFlag.Hit)
 	end
-	if skillFlags.attack then
+	if skillFlags.attack or skillFlags.nonWeaponAttack then
 		skillModFlags = bor(skillModFlags, ModFlag.Attack)
 	else
 		skillModFlags = bor(skillModFlags, ModFlag.Cast)
@@ -445,12 +445,8 @@ function calcs.buildActiveSkillModList(env, activeSkill)
 		end
 	end
 
-	-- Calculate Distance for meleeDistance or projectileDistance (for melee proximity, e.g. Impact)
-	if skillFlags.melee then
-		effectiveRange = env.configInput.meleeDistance
-	else
-		effectiveRange = env.configInput.projectileDistance
-	end
+	-- Calculate distance from enemy
+	effectiveRange = env.configInput.enemyDistance
 
 	-- Build config structure for modifier searches
 	activeSkill.skillCfg = {
@@ -601,7 +597,7 @@ function calcs.buildActiveSkillModList(env, activeSkill)
 
 	-- Find totem level
 	if skillFlags.totem then
-		activeSkill.skillData.totemLevel = activeEffect.grantedEffectLevel.levelRequirement
+		activeSkill.skillData.totemLevel = 1 or activeEffect.grantedEffect.levels[activeEffect.level].levelRequirement
 	end
 
 	-- Add active mine multiplier

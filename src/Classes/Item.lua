@@ -885,6 +885,9 @@ function ItemClass:ParseRaw(raw, rarity, highQuality)
 	if deferJewelRadiusIndexAssignment then
 		self.jewelRadiusIndex = self.jewelData.radiusIndex
 	end
+	if self.jewelData and self.jewelData.timeLostJewelRadiusOverride then
+		self.jewelRadiusIndex = self.jewelData.timeLostJewelRadiusOverride
+	end
 end
 
 function ItemClass:NormaliseQuality()

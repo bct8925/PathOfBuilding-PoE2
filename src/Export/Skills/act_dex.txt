@@ -149,7 +149,7 @@ statMap = {
 },
 #mods
 #set HeraldOfThunderOnKillPlayer
-#flags attack
+#flags nonWeaponAttack hit
 #mods
 #skillEnd
 
@@ -193,12 +193,12 @@ statMap = {
 #skill PlagueBearerPlayer
 #startSets
 #set PlagueBearerPlayer
+#flags
 statMap = {
 	["plague_bearer_maximum_stored_poison_damage"] = {
 		mod("PlagueBearerMaxDamage", "BASE", nil, 0, 0, { type = "GlobalEffect", effectType = "Buff", effectName = "Plague Bearer" }),
 	},
 },
-#flags
 #mods
 #skillEnd
 

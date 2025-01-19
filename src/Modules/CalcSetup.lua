@@ -43,6 +43,7 @@ function calcs.initModDB(env, modDB)
 	modDB:NewMod("MaxLifeLeechRate", "BASE", 20, "Base")
 	modDB:NewMod("MaxManaLeechRate", "BASE", 20, "Base")
 	modDB:NewMod("ImpaleStacksMax", "BASE", 5, "Base")
+	modDB:NewMod("IgniteStacksMax", "BASE", 1, "Base")
 	modDB:NewMod("BleedStacksMax", "BASE", 1, "Base")
 	modDB:NewMod("PoisonStacksMax", "BASE", 1, "Base")
 	modDB:NewMod("MaxEnergyShieldLeechRate", "BASE", 10, "Base")
@@ -56,6 +57,7 @@ function calcs.initModDB(env, modDB)
 	modDB:NewMod("BallistaPlacementTime", "BASE", 0.35, "Base")
 	modDB:NewMod("ActiveTotemLimit", "BASE", 1, "Base")
 	modDB:NewMod("ShockStacksMax", "BASE", 1, "Base")
+	modDB:NewMod("ChillStacksMax", "BASE", 1, "Base")
 	modDB:NewMod("ScorchStacksMax", "BASE", 1, "Base")
 	modDB:NewMod("MovementSpeed", "INC", -30, "Base", { type = "Condition", var = "Maimed" })
 	modDB:NewMod("Evasion", "INC", -15, "Base", { type = "Condition", var = "Maimed" })
@@ -91,59 +93,96 @@ function calcs.initModDB(env, modDB)
 end
 
 -- grab the stat lines from the selected variants on the jewel to add to the nodes
--- e.g. Against the Darkness
+-- e.g. Against the Darkness or Time-Lost jewels
 local function setRadiusJewelStats(radiusJewel, radiusJewelStats)
-	local jewel = radiusJewel.item
-	if jewel.title == "Against the Darkness" then
-		radiusJewelStats.source = radiusJewel.data.modSource
-
-		local variant = jewel.variant or 1
+	-- ATD has a special case with variant/variantAlt but other jewels have a fairly simple iterative list
+	local function setStats(jewel, radiusJewelStats, index, alternate)
+		local variant = (alternate and jewel.variantAlt or jewel.variant) or index
 		local range = jewel.explicitModLines[variant].range
+		local line = jewel.explicitModLines[variant].line
 		local value = 0
-		jewel.explicitModLines[variant].line:gsub("%((%d+)%-(%d+)%)",
+		
+		line:gsub("%((%d+)%-(%d+)%)",
 			function(num1, num2)
 				value = round(num1 + (num2-num1) * range)
 			end
 		)
-		radiusJewelStats[1] = {
-			isNotable = (jewel.explicitModLines[variant].line:match("^(%S+)") == "Notable"),
-			sd = jewel.explicitModLines[variant].line:gsub(".*grant ", ""):gsub("%(.-%)", value)
-		}
-		
-		local variantAlt = jewel.variantAlt or 2
-		local rangeAlt = jewel.explicitModLines[variantAlt].range
-		local valueAlt = 0
-		jewel.explicitModLines[variantAlt].line:gsub("%((%d+)%-(%d+)%)",
-			function(num1, num2)
-				valueAlt = round(num1 + (num2-num1) * rangeAlt)
-			end
-		)
-		radiusJewelStats[2] = {
-			isNotable = (jewel.explicitModLines[variantAlt].line:match("^(%S+)") == "Notable"),
-			sd = jewel.explicitModLines[variantAlt].line:gsub(".*grant ", ""):gsub("%(.-%)", valueAlt)
+		radiusJewelStats[index] = {
+			isNotable = (line:match("^(%S+)") == "Notable"),
+			toAdd = (line:find("also% grant")~= nil), -- only add mods with the "also grant" text to radiusNodes
+			sd = line:gsub(".*grant ", ""):gsub("%(.-%)", value)
 		}
 	end
+	
+	local jewel = radiusJewel.item
+	if jewel.baseName:find("Time%-Lost") ~= nil then
+		radiusJewelStats.source = radiusJewel.data.modSource
+		if jewel.title == "Against the Darkness" then
+			setStats(jewel, radiusJewelStats, 1, false)
+			setStats(jewel, radiusJewelStats, 2, true)
+		else
+			local jewelModLines = copyTable(jewel.explicitModLines, true)
+			-- sanitize mods in case of line breaks
+			for id, mod in ipairs(jewelModLines) do
+				local line1, line2 = mod.line:match("^(.-)\n(.*)$")
+				-- if a line break is found, copy the modLineTable, modify the original with the first string 
+				-- and add the table with second string to the end
+				if line1 and line2 then
+					jewel.explicitModLines[id].line = line1
+					local linebreakMod = copyTable(jewel.explicitModLines[id])
+					linebreakMod.line = line2
+					t_insert(jewel.explicitModLines, linebreakMod)
+				end
+			end
+			for modIndex, _ in ipairs(jewelModLines) do
+				setStats(jewel, radiusJewelStats, modIndex, false)
+			end
+		end
+	end
+end
+
+local function addStats(jewel, node, spec)
+	-- short term to avoid running the logic on AddItemTooltip
+	if not spec.build.treeTab.skipTimeLostJewelProcessing then
+		-- reset node stats to base or override for attributes
+		if spec.hashOverrides and spec.hashOverrides[node.id] then
+			node.sd = copyTable(spec.hashOverrides[node.id].sd, true)
+		else
+			node.sd = copyTable(spec.tree.nodes[node.id].sd, true)
+		end
+
+		local radiusJewelStats = { }
+		setRadiusJewelStats(jewel, radiusJewelStats)
+		for _, stat in ipairs(radiusJewelStats) do
+			-- the node and stat types match, add sd to node if it's not already there and it's an 'also grant' mod
+			if not isValueInTable(node.sd, stat.sd) and ((node.type == "Notable" and stat.isNotable) or (node.type == "Normal" and not stat.isNotable))
+				and stat.toAdd then
+				t_insert(node.sd, stat.sd)
+			end
+		end
+		spec.tree:ProcessStats(node)
+	end
+	return node.modList
 end
 
 local function addStatsFromJewelToNode(jewel, node, spec)
-	-- reset node stats to base or override for attributes
-	if spec.hashOverrides and spec.hashOverrides[node.id] then
-		node.sd = copyTable(spec.hashOverrides[node.id].sd, true)
-	else
-		node.sd = copyTable(spec.tree.nodes[node.id].sd, true)
-	end
-	
-	local radiusJewelStats = { }
-	setRadiusJewelStats(jewel, radiusJewelStats)
-	for _, stat in ipairs(radiusJewelStats) do
-		-- the node and jewelStat types match, add sd to node if it's not already there
-		if not isValueInTable(node.sd, stat.sd) and ((node.type == "Notable" and stat.isNotable) or (node.type ~= "Notable" and not stat.isNotable)) then
-			t_insert(node.sd, stat.sd)
+	-- attribute nodes do not count as Small Passives
+	if not node.isAttribute then
+		local itemsTab = spec.build.itemsTab
+		-- if the Time-Lost jewel is socketed, add the stat
+		if itemsTab.activeSocketList then
+			for _, nodeId in pairs(itemsTab.activeSocketList) do
+				local socketIndex, socketedJewel = itemsTab:GetSocketAndJewelForNodeID(nodeId)
+				if socketedJewel and socketedJewel.baseName:find("Time%-Lost") == 1 then
+					return addStats(jewel, node, spec)
+				end
+			end
+		-- activeSocketList isn't init on Load, need to run once
+		elseif itemsTab.initSockets then
+			return addStats(jewel, node, spec)
 		end
 	end
-	spec.tree:ProcessStats(node)
 end
-
 function calcs.buildModListForNode(env, node, incSmallPassiveSkill)
 	local modList = new("ModList")
 	if node.type == "Keystone" then
@@ -152,30 +191,14 @@ function calcs.buildModListForNode(env, node, incSmallPassiveSkill)
 		modList:AddList(node.modList)
 	end
 
-	if node.allocMode and node.allocMode ~= 0 then
-		for i, mod in ipairs(modList) do
-			local added = false
-			for j, extra in ipairs(mod) do
-				-- if type conditional and start with WeaponSet then update the var to the current weapon set
-				if extra.type == "Condition" and extra.var:match("^WeaponSet") then
-					mod[j].var = "WeaponSet".. node.allocMode
-					added = true
-					break
-				end
-			end
-			if not added then
-				table.insert(mod, { type = "Condition", var = "WeaponSet".. node.allocMode })
-			end
-		end
-	end
-
 	-- Run first pass radius jewels
 	for _, rad in pairs(env.radiusJewelList) do
 		if rad.type == "Other" and rad.nodes[node.id] and rad.nodes[node.id].type ~= "Mastery" then
-			if rad.item.title ~= "Against the Darkness" then
+			if rad.item.baseName:find("Time%-Lost") == nil then
 				rad.func(node, modList, rad.data)
 			else
-				addStatsFromJewelToNode(rad, node, env.build.spec)
+				local nodeList = addStatsFromJewelToNode(rad, node, env.build.spec)
+				if nodeList then modList = nodeList end
 			end
 		end
 	end
@@ -195,14 +218,15 @@ function calcs.buildModListForNode(env, node, incSmallPassiveSkill)
 	-- Run second pass radius jewels
 	for _, rad in pairs(env.radiusJewelList) do
 		if rad.nodes[node.id] and rad.nodes[node.id].type ~= "Mastery" and (rad.type == "Threshold" or (rad.type == "Self" and env.allocNodes[node.id]) or (rad.type == "SelfUnalloc" and not env.allocNodes[node.id])) then
-			if rad.item.title ~= "Against the Darkness" then
+			if rad.item.baseName:find("Time%-Lost") == nil then
 				rad.func(node, modList, rad.data)
 			else
-				addStatsFromJewelToNode(rad, node, env.build.spec)
+				local nodeList = addStatsFromJewelToNode(rad, node, env.build.spec)
+				if nodeList then modList = nodeList end
 			end
 		end
 	end
-
+	
 	if modList:Flag(nil, "PassiveSkillHasOtherEffect") then
 		for i, mod in ipairs(modList:List(skillCfg, "NodeModifier")) do
 			if i == 1 then wipeTable(modList) end
@@ -224,6 +248,23 @@ function calcs.buildModListForNode(env, node, incSmallPassiveSkill)
 
 	if modList:Flag(nil, "CanExplode") then
 		t_insert(env.explodeSources, node)
+	end
+
+	if node.allocMode and node.allocMode ~= 0 then
+		for i, mod in ipairs(modList) do
+			local added = false
+			for j, extra in ipairs(mod) do
+				-- if type conditional and start with WeaponSet then update the var to the current weapon set
+				if extra.type == "Condition" and extra.var and extra.var:match("^WeaponSet") then
+					mod[j].var = "WeaponSet".. node.allocMode
+					added = true
+					break
+				end
+			end
+			if not added then
+				table.insert(mod, { type = "Condition", var = "WeaponSet".. node.allocMode })
+			end
+		end
 	end
 
 	-- Apply Inc Node scaling from Hulking Form
@@ -559,7 +600,7 @@ function calcs.initEnv(build, mode, override, specEnv)
 		modDB:NewMod("ManaRegen", "BASE", 0.04, "Base", { type = "PerStat", stat = "Mana", div = 1 })
 		modDB:NewMod("Spirit", "BASE", 0, "Base")
 		modDB:NewMod("Devotion", "BASE", 0, "Base")
-		modDB:NewMod("Evasion", "BASE", 30, "Base")
+		modDB:NewMod("Evasion", "BASE", 3, "Base", { type = "Multiplier", var = "Level", base = 27 })
 		modDB:NewMod("Accuracy", "BASE", 3, "Base", { type = "Multiplier", var = "Level", base = -3 })
 		modDB:NewMod("CritMultiplier", "BASE", 100, "Base")
 		modDB:NewMod("DotMultiplier", "BASE", 50, "Base", { type = "Condition", var = "CriticalStrike" })
@@ -593,7 +634,7 @@ function calcs.initEnv(build, mode, override, specEnv)
 		modDB:NewMod("Speed", "MORE", 20, "Base", ModFlag.Attack, { type = "Condition", var = "DualWielding" }, { type = "Condition", var = "DoubledInherentDualWieldingSpeed"})
 		modDB:NewMod("BlockChance", "BASE", 20, "Base", { type = "Condition", var = "DualWielding" }, { type = "Condition", var = "NoInherentBlock", neg = true}, { type = "Condition", var = "DoubledInherentDualWieldingBlock", neg = true})
 		modDB:NewMod("BlockChance", "BASE", 40, "Base", { type = "Condition", var = "DualWielding" }, { type = "Condition", var = "NoInherentBlock", neg = true}, { type = "Condition", var = "DoubledInherentDualWieldingBlock"})
-		modDB:NewMod("Damage", "MORE", 200, "Base", 0, KeywordFlag.Bleed, { type = "ActorCondition", actor = "enemy", var = "Moving" }, { type = "Condition", var = "NoExtraBleedDamageToMovingEnemy", neg = true })
+		modDB:NewMod("AilmentMagnitude", "MORE", 100, "Base", 0, KeywordFlag.Bleed, { type = "ActorCondition", actor = "enemy", var = "Moving" }, { type = "Condition", var = "NoExtraBleedDamageToMovingEnemy", neg = true })
 		modDB:NewMod("Condition:BloodStance", "FLAG", true, "Base", { type = "Condition", var = "SandStance", neg = true })
 		modDB:NewMod("Condition:PrideMinEffect", "FLAG", true, "Base", { type = "Condition", var = "PrideMaxEffect", neg = true })
 		modDB:NewMod("PerBrutalTripleDamageChance", "BASE", 3, "Base")
@@ -707,6 +748,9 @@ function calcs.initEnv(build, mode, override, specEnv)
 		modDB:NewMod("Multiplier:AllocatedLifeMastery", "BASE", allocatedMasteryTypes["Life Mastery"])
 	end
 
+	-- add Conditional WeaponnSet# base on weapon set from item
+	modDB:NewMod("Condition:WeaponSet" .. (build.itemsTab.activeItemSet.useSecondWeaponSet and 2 or 1) , "FLAG", true, "Weapon Set")
+
 	-- Build and merge item modifiers, and create list of radius jewels
 	if not accelerate.requirementsItems then
 		local items = {}
@@ -753,7 +797,7 @@ function calcs.initEnv(build, mode, override, specEnv)
 					if item.jewelData then
 						item.jewelData.limitDisabled = nil
 					end
-					if item and item.type == "Jewel" and item.name:match("The Adorned, Crimson Jewel") then
+					if item and item.type == "Jewel" and item.name:match("The Adorned, Diamond") then
 						env.modDB.multipliers["CorruptedMagicJewelEffect"] = item.jewelData.corruptedMagicJewelIncEffect / 100
 					end
 					if item.limit and not env.configInput.ignoreJewelLimits then
@@ -1194,6 +1238,16 @@ function calcs.initEnv(build, mode, override, specEnv)
 		end
 		if #override.extraJewelFuncs > 0 then
 			return calcs.initEnv(build, mode, override, specEnv)
+		end
+	end
+
+	if env.player.itemList["Weapon 2"] and env.player.itemList["Weapon 2"].type == "Quiver" then
+		local quiverEffectMod = env.modDB:Sum("INC", nil, "EffectOfBonusesFromQuiver") / 100
+		local modList = env.player.itemList["Weapon 2"].modList
+		for _, mod in ipairs(modList) do
+			local modCopy = copyTable(mod)
+			modCopy.source = "Many Sources:" .. tostring(quiverEffectMod * 100) .. "% Quiver Bonus Effect"
+			modDB:ScaleAddMod(modCopy, quiverEffectMod)
 		end
 	end
 

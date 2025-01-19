@@ -316,7 +316,17 @@ Variant: Current
 {variant:2}UniqueCriticalStrikeChance3
 UniqueDexterity2
 UniqueIntelligence6
-Critical Hits Poison the enemy
+UniquePoisonOnCrit1
+]],[[
+Glimpse of Chaos
+Tribal Mask
+UniqueModifyableWhileCorrupted1
+UniqueIncreasedLife37
+UniqueIncreasedMana33
+UniqueFireResist22
+UniqueColdResist19
+UniqueLightningResist17
+UniqueChaosResistanceIsZero2
 ]],[[
 The Hollow Mask
 Hewn Mask

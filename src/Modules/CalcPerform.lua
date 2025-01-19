@@ -1028,17 +1028,6 @@ function calcs.perform(env, skipEHP)
 		end
 	end
 
-	if env.player.itemList["Weapon 2"] and env.player.itemList["Weapon 2"].type == "Quiver" then
-		local quiverEffectMod = modDB:Sum("INC", nil, "EffectOfBonusesFromQuiver") / 100
-		if quiverEffectMod > 0 then
-			for _, mod in ipairs(env.player.itemList["Weapon 2"].modList) do
-				local modCopy = copyTable(mod)
-				modCopy.source = "Many Sources:" .. tostring(quiverEffectMod * 100) .. "% Quiver Bonus Effect"
-				modDB:ScaleAddMod(modCopy, quiverEffectMod)
-			end
-		end
-	end
-
 	local ringsEffectMod = modDB:Sum("INC", nil, "EffectOfBonusesFromRings") / 100
 	if ringsEffectMod > 0 then
 		if env.player.itemList["Ring 1"] then
@@ -2708,7 +2697,18 @@ function calcs.perform(env, skipEHP)
 		["Chill"] = {
 			condition = "Chilled",
 			mods = function(num)
-				local mods = { modLib.createMod("ActionSpeed", "INC", -num, "Chill", { type = "Condition", var = "Chilled" }) }
+				local mods = {  }
+
+				if modDB:Flag(nil, "ChillCanStack") then
+					t_insert(mods, modLib.createMod("DamageTaken", "INC", num, "Shock", { type = "Condition", var = "Shocked" }, { type = "Multiplier", var = "ShockStacks", limit = modDB:Override(nil, "ShockStacksMax") or modDB:Sum("BASE", nil, "ShockStacksMax")}))
+					output["CurrentChill"] = num * m_min(enemyDB:Sum("BASE", nil, "Multiplier:ChillStacks"), modDB:Override(nil, "ChillStacksMax") or modDB:Sum("BASE", nil, "ChillStacksMax"))
+					if breakdown then
+						t_insert(mods, modLib.createMod("ActionSpeed", "INC", -num, "Chill Stacks", { type = "Condition", var = "Chilled" }, { type = "Multiplier", var = "ShockStacks", limit = modDB:Override(nil, "ShockStacksMax") or modDB:Sum("BASE", nil, "ShockStacksMax")}))
+					end
+				else 
+					t_insert(mods, modLib.createMod("ActionSpeed", "INC", -num, "Chill", { type = "Condition", var = "Chilled" }))
+				end
+
 				if output.HasBonechill and (hasGuaranteedBonechill or enemyDB:Sum("BASE", nil, "ChillVal") > 0) then
 					t_insert(mods, modLib.createMod("ColdDamageTaken", "INC", num, "Bonechill", { type = "Condition", var = "Chilled" }))
 				end

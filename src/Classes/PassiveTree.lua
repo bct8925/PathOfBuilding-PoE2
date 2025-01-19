@@ -81,13 +81,10 @@ local PassiveTreeClass = newClass("PassiveTree", function(self, treeVersion)
 	end
 
 	self.size = m_min(self.max_x - self.min_x, self.max_y - self.min_y) * self.scaleImage * 1.1
-
-	if versionNum >= 3.10 then
-		-- Migrate to old format
-		for i = 0, 6 do
-			self.classes[i] = self.classes[i + 1]
-			self.classes[i + 1] = nil
-		end
+	
+	for i = 0, 6 do
+		self.classes[i] = self.classes[i + 1]
+		self.classes[i + 1] = nil
 	end
 
 	-- Build maps of class name -> class table
@@ -96,10 +93,7 @@ local PassiveTreeClass = newClass("PassiveTree", function(self, treeVersion)
 	self.classNotables = { }
 
 	for classId, class in pairs(self.classes) do
-		if versionNum >= 3.10 then
-			-- Migrate to old format
-			class.classes = class.ascendancies
-		end
+		class.classes = class.ascendancies
 		class.classes[0] = { name = "None" }
 		self.classNameMap[class.name] = classId
 		for ascendClassId, ascendClass in pairs(class.classes) do
@@ -187,20 +181,17 @@ local PassiveTreeClass = newClass("PassiveTree", function(self, treeVersion)
 		data.size = artWidth
 		data.rsq = data.size * data.size
 	end
-
-	if versionNum >= 3.10 then
-		-- Migrate groups to old format
-		for _, group in pairs(self.groups) do
-			group.n = group.nodes
-			group.oo = { }
-			for _, orbit in ipairs(group.orbits) do
-				group.oo[orbit] = true
-			end
+	
+	for _, group in pairs(self.groups) do
+		group.n = group.nodes
+		group.oo = { }
+		for _, orbit in ipairs(group.orbits) do
+			group.oo[orbit] = true
 		end
+	end
 
 		-- Go away
 		self.nodes.root = nil
-	end
 
 	ConPrintf("Processing tree...")
 	self.ascendancyMap = { }
@@ -515,8 +506,9 @@ function PassiveTreeClass:ProcessNode(node)
 	node.targetSize = self:GetNodeTargetSize(node)
 	node.overlay = self.nodeOverlay[node.type]
 	if node.overlay then
-		node.rsq = node.targetSize.width * node.targetSize.height
-		node.size = node.targetSize.width
+		local size = node.targetSize["overlay"] and node.targetSize["overlay"].width or node.targetSize.width
+		node.rsq = size * size
+		node.size = size
 	end
 
 	-- Derive the true position of the node

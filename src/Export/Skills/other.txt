@@ -18,7 +18,12 @@ local skills, mod, flag, skill = ...
 #skill BleedingConcoctionPlayer
 #startSets
 #set BleedingConcoctionPlayer
-#flags
+#flags attack projectile
+statMap = {
+	["flask_throw_bleed_effect_+%_final"] = {
+		mod("AilmentMagnitude", "MORE", nil, 0, KeywordFlag.Bleed),
+	},
+},
 #mods
 #skillEnd
 
@@ -26,7 +31,7 @@ local skills, mod, flag, skill = ...
 #skill MeleeBowPlayer
 #startSets
 #set MeleeBowPlayer
-#flags
+#flags attack projectile
 #mods
 #skillEnd
 
@@ -53,13 +58,13 @@ local skills, mod, flag, skill = ...
 #flags
 #mods
 #set ElementalExpressionFirePlayer
-#flags
+#flags spell area
 #mods
 #set ElementalExpressionColdPlayer
-#flags
+#flags spell projectile
 #mods
 #set ElementalExpressionLightningPlayer
-#flags
+#flags spell chaining
 #mods
 #skillEnd
 
@@ -67,16 +72,16 @@ local skills, mod, flag, skill = ...
 #skill ElementalStormPlayer
 #startSets
 #set ElementalStormPlayer
-#flags
+#flags area duration
 #mods
 #set ElementalStormFirePlayer
-#flags
+#flags spell area duration
 #mods
 #set ElementalStormLightningPlayer
-#flags
+#flags spell area duration
 #mods
 #set ElementalStormColdPlayer
-#flags
+#flags spell area duration
 #mods
 #skillEnd
 
@@ -84,7 +89,7 @@ local skills, mod, flag, skill = ...
 #skill EncaseInJadePlayer
 #startSets
 #set EncaseInJadePlayer
-#flags
+#flags duration
 #mods
 #skillEnd
 
@@ -92,7 +97,13 @@ local skills, mod, flag, skill = ...
 #skill ExplosiveConcoctionPlayer
 #startSets
 #set ExplosiveConcoctionPlayer
-#flags
+#flags attack projectile duration
+statMap = {
+	["flask_throw_fire_exposure_ms"] = {
+		mod("FireExposureChance", "BASE", nil),
+		value = 100,
+	},
+},
 #mods
 #skillEnd
 
@@ -100,7 +111,13 @@ local skills, mod, flag, skill = ...
 #skill FulminatingConcoctionPlayer
 #startSets
 #set FulminatingConcoctionPlayer
-#flags
+#flags attack projectile duration
+statMap = {
+	["flask_throw_lightning_exposure_ms"] = {
+		mod("LightningExposureChance", "BASE", nil),
+		value = 100,
+	},
+},
 #mods
 #skillEnd
 
@@ -124,7 +141,7 @@ local skills, mod, flag, skill = ...
 #skill Melee1HMacePlayer
 #startSets
 #set Melee1HMacePlayer
-#flags
+#flags attack area melee
 #mods
 #skillEnd
 
@@ -132,7 +149,7 @@ local skills, mod, flag, skill = ...
 #skill Melee2HMacePlayer
 #startSets
 #set Melee2HMacePlayer
-#flags
+#flags attack area melee
 #mods
 #skillEnd
 
@@ -140,7 +157,7 @@ local skills, mod, flag, skill = ...
 #skill MeleeMaceMacePlayer
 #startSets
 #set MeleeMaceMacePlayer
-#flags
+#flags attack area melee
 #mods
 #skillEnd
 
@@ -156,7 +173,12 @@ local skills, mod, flag, skill = ...
 #skill PoisonousConcoctionPlayer
 #startSets
 #set PoisonousConcoctionPlayer
-#flags
+#flags attack projectile
+statMap = {
+	["flask_throw_poison_effect_+%_final"] = {
+		mod("AilmentMagnitude", "MORE", nil, 0, KeywordFlag.Poison),
+	},
+},
 #mods
 #skillEnd
 
@@ -188,7 +210,13 @@ local skills, mod, flag, skill = ...
 #skill ShatteringConcoctionPlayer
 #startSets
 #set ShatteringConcoctionPlayer
-#flags
+#flags attack projectile duration
+statMap = {
+	["flask_throw_cold_exposure_ms"] = {
+		mod("ColdExposureChance", "BASE", nil),
+		value = 100,
+	},
+},
 #mods
 #skillEnd
 
@@ -221,7 +249,7 @@ local skills, mod, flag, skill = ...
 #skill TimeFreezePlayer
 #startSets
 #set TimeFreezePlayer
-#flags
+#flags area duration
 #mods
 #skillEnd
 

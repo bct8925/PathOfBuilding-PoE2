@@ -500,8 +500,8 @@ function main:LoadSettings(ignoreBuild)
 	local setXML, errMsg = common.xml.LoadXMLFile(self.userPath.."Settings.xml")
 	if not setXML then
 		return true
-	elseif setXML[1].elem ~= "PathOfBuilding" then
-		launch:ShowErrMsg("^1Error parsing 'Settings.xml': 'PathOfBuilding' root element missing")
+	elseif setXML[1].elem ~= "PathOfBuilding2" then
+		launch:ShowErrMsg("^1Error parsing 'Settings.xml': 'PathOfBuilding2' root element missing")
 		return true
 	end
 	for _, node in ipairs(setXML[1]) do
@@ -625,8 +625,8 @@ function main:LoadSharedItems()
 	local setXML, errMsg = common.xml.LoadXMLFile(self.userPath.."Settings.xml")
 	if not setXML then
 		return true
-	elseif setXML[1].elem ~= "PathOfBuilding" then
-		launch:ShowErrMsg("^1Error parsing 'Settings.xml': 'PathOfBuilding' root element missing")
+	elseif setXML[1].elem ~= "PathOfBuilding2" then
+		launch:ShowErrMsg("^1Error parsing 'Settings.xml': 'PathOfBuilding2' root element missing")
 		return true
 	end
 	for _, node in ipairs(setXML[1]) do
@@ -665,7 +665,7 @@ function main:LoadSharedItems()
 end
 
 function main:SaveSettings()
-	local setXML = { elem = "PathOfBuilding" }
+	local setXML = { elem = "PathOfBuilding2" }
 	local mode = { elem = "Mode", attrib = { mode = self.mode } }
 	for _, val in ipairs({ self:CallMode("GetArgs") }) do
 		local child = { elem = "Arg", attrib = { } }
@@ -745,7 +745,7 @@ function main:OpenPathPopup(invalidPath, ignoreBuild)
 		"\nSpecify a new location for your Settings.xml:"
 	end)
 	controls.explainButton = new("ButtonControl", { "LEFT", controls.label, "RIGHT" }, { 4, 0, 20, 20 }, "?", function()
-		OpenURL("https://github.com/PathOfBuildingCommunity/PathOfBuilding/wiki/Why-do-I-have-to-change-my-Settings-path%3F")
+		OpenURL("https://github.com/PathOfBuildingCommunity/PathOfBuilding-PoE2/wiki/Why-do-I-have-to-change-my-Settings-path%3F")
 	end)
 	controls.userPath = new("EditControl", { "TOPLEFT", controls.label, "TOPLEFT" }, { 0, 60, 206, 20 }, invalidPath, nil, nil, nil, function(buf)
 		invalidPath = sanitiseText(buf)
@@ -1210,8 +1210,8 @@ function main:OpenAboutPopup(helpSectionIndex)
 	end)
 	controls.version = new("LabelControl", nil, {0, 18, 0, 18}, "^7Path of Building Community Fork v"..launch.versionNumber)
 	controls.forum = new("LabelControl", nil, {0, 36, 0, 18}, "^7Based on Openarl's Path of Building")
-	controls.github = new("ButtonControl", nil, {0, 62, 438, 18}, "^7GitHub page: ^x4040FFhttps://github.com/PathOfBuildingCommunity/PathOfBuilding", function(control)
-		OpenURL("https://github.com/PathOfBuildingCommunity/PathOfBuilding")
+	controls.github = new("ButtonControl", nil, {0, 62, 438, 18}, "^7GitHub page: ^x4040FFhttps://github.com/PathOfBuildingCommunity/PathOfBuilding-PoE2", function(control)
+		OpenURL("https://github.com/PathOfBuildingCommunity/PathOfBuilding-PoE2")
 	end)
 	controls.verLabel = new("ButtonControl", {"TOPLEFT", nil, "TOPLEFT"}, {10, 85, 100, 18}, "^7Version history:", function()
 		controls.changelog.list = changeList

@@ -185,7 +185,14 @@ skills["BleedingConcoctionPlayer"] = {
 			incrementalEffectiveness = 0.14000000059605,
 			damageIncrementalEffectiveness = 0.0065000001341105,
 			statDescriptionScope = "throw_flask_bleed",
+			statMap = {
+				["flask_throw_bleed_effect_+%_final"] = {
+					mod("AilmentMagnitude", "MORE", nil, 0, KeywordFlag.Bleed),
+				},
+			},
 			baseFlags = {
+				attack = true,
+				projectile = true,
 			},
 			constantStats = {
 				{ "additional_base_critical_strike_chance", 500 },
@@ -314,6 +321,8 @@ skills["MeleeBowPlayer"] = {
 			incrementalEffectiveness = 0.054999999701977,
 			statDescriptionScope = "skill_stat_descriptions",
 			baseFlags = {
+				attack = true,
+				projectile = true,
 			},
 			constantStats = {
 				{ "movement_speed_+%_final_while_performing_action", -70 },
@@ -734,6 +743,8 @@ skills["ElementalExpressionTriggeredPlayer"] = {
 			damageIncrementalEffectiveness = 0.0065000001341105,
 			statDescriptionScope = "skill_stat_descriptions",
 			baseFlags = {
+				spell = true,
+				area = true,
 			},
 			constantStats = {
 				{ "active_skill_base_area_of_effect_radius", 36 },
@@ -795,6 +806,8 @@ skills["ElementalExpressionTriggeredPlayer"] = {
 			damageIncrementalEffectiveness = 0.0065000001341105,
 			statDescriptionScope = "skill_stat_descriptions",
 			baseFlags = {
+				spell = true,
+				projectile = true,
 			},
 			constantStats = {
 				{ "base_number_of_projectiles", 3 },
@@ -859,6 +872,8 @@ skills["ElementalExpressionTriggeredPlayer"] = {
 			damageIncrementalEffectiveness = 0.0065000001341105,
 			statDescriptionScope = "skill_stat_descriptions",
 			baseFlags = {
+				spell = true,
+				chaining = true,
 			},
 			constantStats = {
 				{ "number_of_chains", 7 },
@@ -975,6 +990,8 @@ skills["ElementalStormPlayer"] = {
 			damageIncrementalEffectiveness = 0.0065000001341105,
 			statDescriptionScope = "tornado_triggered",
 			baseFlags = {
+				area = true,
+				duration = true,
 			},
 			constantStats = {
 				{ "tornado_base_damage_interval_ms", 250 },
@@ -1041,6 +1058,9 @@ skills["ElementalStormPlayer"] = {
 			damageIncrementalEffectiveness = 0.0065000001341105,
 			statDescriptionScope = "tornado_triggered",
 			baseFlags = {
+				spell = true,
+				area = true,
+				duration = true,
 			},
 			constantStats = {
 				{ "tornado_base_damage_interval_ms", 250 },
@@ -1109,6 +1129,9 @@ skills["ElementalStormPlayer"] = {
 			damageIncrementalEffectiveness = 0.0065000001341105,
 			statDescriptionScope = "tornado_triggered",
 			baseFlags = {
+				spell = true,
+				area = true,
+				duration = true,
 			},
 			constantStats = {
 				{ "tornado_base_damage_interval_ms", 250 },
@@ -1177,6 +1200,9 @@ skills["ElementalStormPlayer"] = {
 			damageIncrementalEffectiveness = 0.0065000001341105,
 			statDescriptionScope = "tornado_triggered",
 			baseFlags = {
+				spell = true,
+				area = true,
+				duration = true,
 			},
 			constantStats = {
 				{ "tornado_base_damage_interval_ms", 250 },
@@ -1299,6 +1325,7 @@ skills["EncaseInJadePlayer"] = {
 			incrementalEffectiveness = 0.054999999701977,
 			statDescriptionScope = "encase_in_jade",
 			baseFlags = {
+				duration = true,
 			},
 			constantStats = {
 				{ "base_skill_effect_duration", 4000 },
@@ -1412,7 +1439,16 @@ skills["ExplosiveConcoctionPlayer"] = {
 			incrementalEffectiveness = 0.14000000059605,
 			damageIncrementalEffectiveness = 0.0065000001341105,
 			statDescriptionScope = "throw_flask_fire",
+			statMap = {
+				["flask_throw_fire_exposure_ms"] = {
+					mod("FireExposureChance", "BASE", nil),
+					value = 100,
+				},
+			},
 			baseFlags = {
+				attack = true,
+				projectile = true,
+				duration = true,
 			},
 			constantStats = {
 				{ "additional_base_critical_strike_chance", 500 },
@@ -1540,7 +1576,16 @@ skills["FulminatingConcoctionPlayer"] = {
 			incrementalEffectiveness = 0.14000000059605,
 			damageIncrementalEffectiveness = 0.0065000001341105,
 			statDescriptionScope = "throw_flask_lightning",
+			statMap = {
+				["flask_throw_lightning_exposure_ms"] = {
+					mod("LightningExposureChance", "BASE", nil),
+					value = 100,
+				},
+			},
 			baseFlags = {
+				attack = true,
+				projectile = true,
+				duration = true,
 			},
 			constantStats = {
 				{ "additional_base_critical_strike_chance", 800 },
@@ -1898,6 +1943,9 @@ skills["Melee1HMacePlayer"] = {
 			incrementalEffectiveness = 0.054999999701977,
 			statDescriptionScope = "skill_stat_descriptions",
 			baseFlags = {
+				attack = true,
+				area = true,
+				melee = true,
 			},
 			constantStats = {
 				{ "melee_conditional_step_distance", 10 },
@@ -2011,6 +2059,9 @@ skills["Melee2HMacePlayer"] = {
 			incrementalEffectiveness = 0.054999999701977,
 			statDescriptionScope = "skill_stat_descriptions",
 			baseFlags = {
+				attack = true,
+				area = true,
+				melee = true,
 			},
 			constantStats = {
 				{ "melee_conditional_step_distance", 10 },
@@ -2125,6 +2176,9 @@ skills["MeleeMaceMacePlayer"] = {
 			incrementalEffectiveness = 0.054999999701977,
 			statDescriptionScope = "skill_stat_descriptions",
 			baseFlags = {
+				attack = true,
+				area = true,
+				melee = true,
 			},
 			constantStats = {
 				{ "melee_conditional_step_distance", 10 },
@@ -2354,7 +2408,14 @@ skills["PoisonousConcoctionPlayer"] = {
 			incrementalEffectiveness = 0.14000000059605,
 			damageIncrementalEffectiveness = 0.0065000001341105,
 			statDescriptionScope = "throw_flask_poison",
+			statMap = {
+				["flask_throw_poison_effect_+%_final"] = {
+					mod("AilmentMagnitude", "MORE", nil, 0, KeywordFlag.Poison),
+				},
+			},
 			baseFlags = {
+				attack = true,
+				projectile = true,
 			},
 			constantStats = {
 				{ "additional_base_critical_strike_chance", 500 },
@@ -2751,7 +2812,16 @@ skills["ShatteringConcoctionPlayer"] = {
 			incrementalEffectiveness = 0.14000000059605,
 			damageIncrementalEffectiveness = 0.0065000001341105,
 			statDescriptionScope = "throw_flask_cold",
+			statMap = {
+				["flask_throw_cold_exposure_ms"] = {
+					mod("ColdExposureChance", "BASE", nil),
+					value = 100,
+				},
+			},
 			baseFlags = {
+				attack = true,
+				projectile = true,
+				duration = true,
 			},
 			constantStats = {
 				{ "additional_base_critical_strike_chance", 1100 },
@@ -3226,6 +3296,8 @@ skills["TimeFreezePlayer"] = {
 			incrementalEffectiveness = 0.054999999701977,
 			statDescriptionScope = "time_stop",
 			baseFlags = {
+				area = true,
+				duration = true,
 			},
 			constantStats = {
 				{ "base_skill_effect_duration", 3000 },

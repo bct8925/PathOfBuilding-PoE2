@@ -603,6 +603,11 @@ skills["SupportColdExposurePlayer"] = {
 			label = "Cold Exposure",
 			incrementalEffectiveness = 0.054999999701977,
 			statDescriptionScope = "gem_stat_descriptions",
+			statMap = {
+				["inflict_cold_exposure_for_x_ms_on_cold_crit"] = {
+					mod("ColdExposureChance", "BASE", nil),
+				},
+			},
 			baseFlags = {
 			},
 			constantStats = {
@@ -1099,7 +1104,8 @@ skills["SupportElementalDischargePlayer"] = {
 			},
 		},
 	}
-}skills["TriggeredElementalDischargePlayer"] = {
+}
+skills["TriggeredElementalDischargePlayer"] = {
 	name = "Elemental Discharge",
 	hidden = true,
 	skillTypes = { [SkillType.Spell] = true, [SkillType.Damage] = true, [SkillType.SkillGrantedBySupport] = true, [SkillType.Triggerable] = true, [SkillType.Cooldown] = true, [SkillType.Triggered] = true, },
@@ -1402,6 +1408,14 @@ skills["SupportFeedingFrenzyPlayer"] = {
 			label = "Feeding Frenzy",
 			incrementalEffectiveness = 0.092720001935959,
 			statDescriptionScope = "gem_stat_descriptions",
+			statMap = {
+				["feeding_frenzy_minion_damage_+%_final"] = {
+				mod("MinionModifier", "LIST", { mod = mod("Damage", "MORE", nil) }),
+				},
+				["feeding_frenzy_minion_damage_taken_+%_final"] = {
+					mod("MinionModifier", "LIST", { mod = mod("DamageTaken", "MORE", nil) }),
+				},
+			},
 			baseFlags = {
 			},
 			constantStats = {

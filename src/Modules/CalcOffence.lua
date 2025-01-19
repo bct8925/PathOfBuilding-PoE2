@@ -87,7 +87,7 @@ end
 
 local function calcGainedDamage(activeSkill, output, cfg, damageType)
 	local gainTable = activeSkill.gainTable
-	
+
 	local gainedMin, gainedMax = 0, 0
 	for _, otherType in ipairs(dmgTypeList) do
 		local baseMin = m_floor(output[otherType.."MinBase"])
@@ -100,7 +100,7 @@ local function calcGainedDamage(activeSkill, output, cfg, damageType)
 			gainedMax = gainedMax + (baseMax + convertedMax) * gainMult
 		end
 	end
-	
+
 	return gainedMin, gainedMax
 end
 
@@ -622,7 +622,7 @@ function calcs.offence(env, actor, activeSkill)
 	end
 	if skillModList:Flag(nil, "ProjectileSpeedAppliesToBowDamage") then
 		-- Bow mastery projectile speed to damage with bows conversion
-		for i, value in ipairs(skillModList:Tabulate("INC", { }, "ProjectileSpeed")) do
+		for i, value in ipairs(skillModList:Tabulate("INC", { flags = ModFlag.Bow }, "ProjectileSpeed")) do
 			local mod = value.mod
 			skillModList:NewMod("Damage", mod.type, mod.value, mod.source, bor(ModFlag.Bow, ModFlag.Hit), mod.keywordFlags, unpack(mod))
 		end
@@ -1819,9 +1819,12 @@ function calcs.offence(env, actor, activeSkill)
 		for _, toType in ipairs(dmgTypeList) do
 			local conv
 			if skill then
-				conv = m_max(skillModList:Sum("BASE", skillCfg, "Skill"..fromType.."DamageConvertTo"..toType), 0)
+				conv = m_max(skillModList:Sum("BASE", skillCfg,
+					"SkillDamageConvertTo"..toType,
+					"Skill"..fromType.."DamageConvertTo"..toType), 0)
 			else
 				conv = m_max(skillModList:Sum("BASE", skillCfg,
+					"DamageConvertTo"..toType,
 					fromType.."DamageConvertTo"..toType,
 					isElemental[fromType] and "ElementalDamageConvertTo"..toType or nil,
 					fromType ~= "Chaos" and "NonChaosDamageConvertTo"..toType or nil), 0)
@@ -1895,7 +1898,7 @@ function calcs.offence(env, actor, activeSkill)
 				activeSkill.conversionTable[damageType][fromType] = data.base
 			end
 			for toType, amount in pairs(data.conv) do
-				activeSkill.conversionTable[damageType][toType] = 
+				activeSkill.conversionTable[damageType][toType] =
 					(activeSkill.conversionTable[damageType][toType] or 0) + amount
 			end
 		end
@@ -1904,9 +1907,13 @@ function calcs.offence(env, actor, activeSkill)
 		activeSkill.gainTable[damageType] = {}
 		for _, toType in ipairs(dmgTypeList) do
 			local globalGain = m_max(skillModList:Sum("BASE", skillCfg,
+				"DamageAs"..toType,
 				"DamageGainAs"..toType,
+				damageType.."DamageAs"..toType,
 				damageType.."DamageGainAs"..toType,
+				isElemental[damageType] and "ElementalDamageAs"..toType or nil,
 				isElemental[damageType] and "ElementalDamageGainAs"..toType or nil,
+				damageType ~= "Chaos" and "NonChaosDamageAs"..toType or nil,
 				damageType ~= "Chaos" and "NonChaosDamageGainAs"..toType or nil), 0)
 			local skillGain = m_max(skillModList:Sum("BASE", skillCfg,
 				"SkillDamageGainAs"..toType,
@@ -3033,7 +3040,7 @@ function calcs.offence(env, actor, activeSkill)
 			local gainedMin, gainedMax = calcGainedDamage(activeSkill, output, cfg, damageType)
 			local baseMin = output[damageTypeMin.."Base"]
 			local baseMax = output[damageTypeMax.."Base"]
-			local summedMin = baseMin * convMult + convertedMin + gainedMin 
+			local summedMin = baseMin * convMult + convertedMin + gainedMin
 			local summedMax = baseMax * convMult + convertedMax + gainedMax
 			output[damageType.."SummedMinBase"] = m_floor(summedMin)
 			output[damageType.."SummedMaxBase"] = m_floor(summedMax)
@@ -3766,7 +3773,7 @@ function calcs.offence(env, actor, activeSkill)
 
 		-- Calculate chance to inflict secondary dots/status effects
 		cfg.skillCond["CriticalStrike"] = true
-		if not skillFlags.attack or skillModList:Flag(cfg, "CannotBleed") then
+		if not skillFlags.hit or skillModList:Flag(cfg, "CannotBleed") then
 			output.BleedChanceOnCrit = 0
 		else
 			output.BleedChanceOnCrit = m_min(100, skillModList:Sum("BASE", cfg, "BleedChance") + enemyDB:Sum("BASE", nil, "SelfBleedChance"))
@@ -3787,7 +3794,7 @@ function calcs.offence(env, actor, activeSkill)
 			output.KnockbackChanceOnCrit = skillModList:Sum("BASE", cfg, "EnemyKnockbackChance")
 		end
 		cfg.skillCond["CriticalStrike"] = false
-		if not skillFlags.attack or skillModList:Flag(cfg, "CannotBleed") then
+		if not skillFlags.hit or skillModList:Flag(cfg, "CannotBleed") then
 			output.BleedChanceOnHit = 0
 		else
 			output.BleedChanceOnHit = m_min(100, skillModList:Sum("BASE", cfg, "BleedChance") + enemyDB:Sum("BASE", nil, "SelfBleedChance"))
@@ -3908,19 +3915,21 @@ function calcs.offence(env, actor, activeSkill)
 		-- Calculates damage to be used in damaging ailment calculations
 		local function calcAilmentSourceDamage(ailment, defaultDamageTypes)
 			local canCrit = not skillModList:Flag(cfg, "AilmentsAreNeverFromCrit")
-			local hitMin, hitMax = 0, 0, 0
-			local critMin, critMax = 0, 0, 0
+			local hitMin, hitMax = 0, 0
+			local critMin, critMax = 0, 0
 			for _, damageType in ipairs(dmgTypeList) do
 				if canDoAilment(ailment, damageType, defaultDamageTypes) then
 					local override = skillModList:Override(cfg, ailment .. damageType .. "HitDamage")
-					hitMin = hitMin + (override or output[damageType.."StoredHitMin"])
-					hitMax = hitMax + (override or output[damageType.."StoredHitMax"])
-					output[ailment .. damageType .. "Min"] = (override or output[damageType.."StoredHitMin"])
-					output[ailment .. damageType .. "Max"] = (override or output[damageType.."StoredHitMin"])
+					local ailmentHitMin = override or output[damageType.."StoredHitMin"] or 0
+					local ailmentHitMax = override or output[damageType.."StoredHitMax"] or 0
+					hitMin = hitMin + ailmentHitMin
+					hitMax = hitMax + ailmentHitMax
+					output[ailment .. damageType .. "Min"] = ailmentHitMin
+					output[ailment .. damageType .. "Max"] = ailmentHitMax
 					if canCrit then
-						local override = skillModList:Override(cfg, ailment .. damageType .. "CritDamage")
-						critMin = critMin + (override or output[damageType.."StoredCritMin"])
-						critMax = critMax + (override or output[damageType.."StoredCritMax"])
+						override = skillModList:Override(cfg, ailment .. damageType .. "CritDamage")
+						critMin = critMin + (override or output[damageType.."StoredCritMin"] or 0)
+						critMax = critMax + (override or output[damageType.."StoredCritMax"] or 0)
 					end
 				end
 			end

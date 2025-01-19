@@ -331,8 +331,7 @@ directiveTable.skill = function(state, args, out)
 	end
 	local nextGemLevelReqValue = 0
 	local perLevel = dat("GrantedEffectsPerLevel"):GetRowList("GrantedEffect", granted)
-	local grantedEffectStatSet = dat("GrantedEffectStatSets"):GetRow("Id", grantedId)
-	local statsPerLevel = dat("GrantedEffectStatSetsPerLevel"):GetRowList("GrantedEffectStatSets", grantedEffectStatSet)
+	local statsPerLevel = dat("GrantedEffectStatSetsPerLevel"):GetRowList("GrantedEffect", granted)
 	local gemLevelProgression = nil
 	if skillGem and not state.noGem then
 		gemLevelProgression = dat("ItemExperiencePerLevel"):GetRowList("ItemExperienceType", skillGem.GemLevelProgression)
@@ -493,7 +492,7 @@ directiveTable.skill = function(state, args, out)
 			end
 			out:write('\t},\n')
 		end
-		if granted.ActiveSkill.SkillTotem <= 21 then
+		if granted.ActiveSkill.SkillTotem < 25 then
 			out:write('\tskillTotemId = ', granted.ActiveSkill.SkillTotem, ',\n')
 		end
 		out:write('\tcastTime = ', granted.CastTime / 1000, ',\n')

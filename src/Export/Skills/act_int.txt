@@ -21,20 +21,29 @@ statMap = {
 #startSets
 #set ArchmagePlayer
 #flags
+statMap = {
+	["archmage_max_mana_permyriad_to_add_to_non_channelled_spell_mana_cost"] = {
+		mod("ManaCost", "BASE", nil, 0, 0, { type = "GlobalEffect", effectType = "Buff" }, { type = "SkillType", skillType = SkillType.Channel, neg = true }, { type = "SkillType", skillType = SkillType.Spell }, { type = "PercentStat", stat = "Mana", percent = 1 }),
+		div = 100,
+	},
+	["archmage_all_damage_%_to_gain_as_lightning_to_grant_to_non_channelling_spells_per_100_max_mana"] = {
+		mod("DamageGainAsLightning", "BASE", nil, 0, 0, { type = "GlobalEffect", effectType = "Buff" }, { type = "SkillType", skillType = SkillType.Channel, neg = true }, { type = "SkillType", skillType = SkillType.Spell }, { type = "PerStat", stat = "Mana", div = 100 }),
+	},
+},
 #mods
 #skillEnd
 
 #skill ArcticArmourPlayer
 #startSets
 #set ArcticArmourPlayer
-#flags
+#flags spell
 #mods
 #skillEnd
 
 #skill BallLightningPlayer
 #startSets
 #set BallLightningPlayer
-#flags
+#flags spell area projectile
 #mods
 #skillEnd
 
@@ -55,21 +64,21 @@ statMap = {
 #skill BlasphemyPlayer
 #startSets
 #set BlasphemyPlayer
-#flags
+#flags area
 #mods
 #skillEnd
 
 #skill SupportBlasphemyPlayer
 #startSets
 #set SupportBlasphemyPlayer
-#flags
+#flags area
 #mods
 #skillEnd
 
 #skill BlinkReservationPlayer
 #startSets
 #set BlinkReservationPlayer
-#flags
+#flags spell
 #mods
 #skillEnd
 
@@ -91,21 +100,21 @@ statMap = {
 #skill BoneCagePlayer
 #startSets
 #set BoneCagePlayer
-#flags
+#flags area duration spell
 #mods
 #skillEnd
 
 #skill BoneOfferingPlayer
 #startSets
 #set BoneOfferingPlayer
-#flags
+#flags area duration
 #mods
 #skillEnd
 
 #skill BonestormPlayer
 #startSets
 #set BonestormPlayer
-#flags
+#flags spell duration
 statMap = {
 	["bone_spear_minimum_added_attack_physical_damage_taken"] = {
 		mod("SelfPhysicalMin", "BASE", nil, ModFlag.Attack, 0, { type = "GlobalEffect", effectType = "Debuff", effectName = "Bonestorm", effectCond = "BonestormAddedDamage" }),
@@ -116,7 +125,7 @@ statMap = {
 },
 #mods
 #set BonestormExplosionPlayer
-#flags
+#flags spell duration area
 #mods
 #skillEnd
 
@@ -215,7 +224,7 @@ statMap = {
 #skill WeaponGrantedChaosboltPlayer
 #startSets
 #set WeaponGrantedChaosboltPlayer
-#flags
+#flags spell projectile
 #mods
 #skillEnd
 
@@ -240,7 +249,7 @@ statMap = {
 		mod("ChargedStaffBuffDuration", "BASE", nil, 0, 0, { type = "Multiplier", var = "RemovablePowerCharge" }, { type = "GlobalEffect", effectType = "Buff", effectName = "Charged Staff", effectCond = "UsePowerCharges" }),
 	},
 },
-#flags
+#flags attack area duration
 #mods
 #skillEnd
 
@@ -254,14 +263,14 @@ statMap = {
 #skill ColdSnapPlayer
 #startSets
 #set ColdSnapPlayer
-#flags
+#flags area spell
 #mods
 #skillEnd
 
 #skill CometPlayer
 #startSets
 #set CometPlayer
-#flags
+#flags area spell
 #mods
 #skillEnd
 
@@ -280,21 +289,21 @@ statMap = {
 #skill ContagionPlayer
 #startSets
 #set ContagionPlayer
-#flags
+#flags area duration spell
 #mods
 #skillEnd
 
 #skill DarkEffigyPlayer
 #startSets
 #set DarkEffigyPlayer
-#flags
+#flags area spell totem duration
 #mods
 #skillEnd
 
 #skill DarkEffigyProjectilePlayer
 #startSets
 #set DarkEffigyProjectilePlayer
-#flags
+#flags spell area projectile
 #mods
 #skillEnd
 
@@ -302,10 +311,10 @@ statMap = {
 #skill CorpseCloudPlayer
 #startSets
 #set CorpseCloudPlayer
-#flags
+#flags spell area duration
 #mods
 #set CorpseCloudExplosionPlayer
-#flags
+#flags spell area
 #mods
 #skillEnd
 
@@ -324,7 +333,7 @@ statMap = {
 #skill DetonateDeadPlayer
 #startSets
 #set DetonateDeadPlayer
-#flags
+#flags area spell
 #mods
 #skillEnd
 
@@ -339,7 +348,7 @@ statMap = {
 #skill ElementalConfluxPlayer
 #startSets
 #set ElementalConfluxPlayer
-#flags
+#flags duration
 #mods
 #skillEnd
 
@@ -360,17 +369,17 @@ statMap = {
 #skill BlazingClusterPlayer
 #startSets
 #set BlazingClusterPlayer
-#flags
+#flags spell duration projectile
 #mods
 #set BlazingClusterExplosionPlayer
-#flags
+#flags spell area
 #mods
 #skillEnd
 
 #skill EnfeeblePlayer
 #startSets
 #set EnfeeblePlayer
-#flags
+#flags area spell duration
 #mods
 #skillEnd
 
@@ -388,30 +397,30 @@ statMap = {
 #skill EyeOfWinterPlayer
 #startSets
 #set EyeOfWinterPlayer
-#flags
+#flags spell projectile
 #mods
 #skillEnd
 
 #skill FallingThunderPlayer
 #startSets
 #set FallingThunderPlayer
-#flags
+#flags attack area melee
 #mods
 #set FallingThunderProjectilePlayer
-#flags
+#flags attack projectile
 #mods
 #skillEnd
 
 #skill FireballPlayer
 #startSets
 #set FireballPlayer
-#flags
+#flags spell projectile
 #mods
 #set FireballExplosionPlayer
-#flags
+#flags spell area
 #mods
 #set FireballSecondaryProjectilePlayer
-#flags
+#flags spell projectile
 #mods
 #skillEnd
 
@@ -419,20 +428,20 @@ statMap = {
 #skill FireboltPlayer
 #startSets
 #set FireboltPlayer
-#flags
+#flags spell projectile
 #mods
 #set FireboltExplosionPlayer
-#flags
+#flags spell area
 #mods
 #skillEnd
 
 #skill FirestormPlayer
 #startSets
 #set FirestormPlayer
-#flags
+#flags spell area duration
 #mods
 #set FirestormEmpoweredPlayer
-#flags
+#flags spell
 #mods
 #skillEnd
 
@@ -454,7 +463,7 @@ statMap = {
 #skill FlameblastPlayer
 #startSets
 #set FlameblastPlayer
-#flags
+#flags spell area
 #mods
 #skillEnd
 
@@ -473,21 +482,21 @@ statMap = {
 #skill FlickerStrikePlayer
 #startSets
 #set FlickerStrikePlayer
-#flags
+#flags attack melee
 #mods
 #skillEnd
 
 #skill FreezingMarkPlayer
 #startSets
 #set FreezingMarkPlayer
-#flags
+#flags spell area duration
 #mods
 #skillEnd
 
 #skill TriggeredFreezingMarkNovaPlayer
 #startSets
 #set TriggeredFreezingMarkNovaPlayer
-#flags
+#flags spell area
 #mods
 #skillEnd
 
@@ -495,21 +504,21 @@ statMap = {
 #skill FreezingShardsPlayer
 #startSets
 #set FreezingShardsPlayer
-#flags
+#flags spell projectile
 #mods
 #skillEnd
 
 #skill FrostBombPlayer
 #startSets
 #set FrostBombPlayer
-#flags
+#flags spell area duration
 #mods
 #skillEnd
 
 #skill FrostWallPlayer
 #startSets
 #set FrostWallPlayer
-#flags
+#flags spell area duration
 #mods
 #skillEnd
 
@@ -528,27 +537,35 @@ statMap = {
 #skill FrostboltPlayer
 #startSets
 #set FrostboltPlayer
-#flags
+#flags spell area duration projectile
 #mods
 #set FrostboltExplosionPlayer
-#flags
+#flags spell area
 #mods
 #skillEnd
 
 #skill FrozenLocusPlayer
 #startSets
 #set FrozenLocusPlayer
-#flags
+#flags duration
 #mods
 #set FrozenLocusGroundPlayer
-#flags
+#flags area duration
 #mods
 #skillEnd
 
 #skill FrozenLocusExplodePlayer
 #startSets
 #set FrozenLocusExplodePlayer
-#flags
+#flags area nonWeaponAttack hit
+statMap = {
+	["main_hand_weapon_minimum_cold_damage"] = {
+		mod("ColdMin", "BASE", nil),
+	},
+	["main_hand_weapon_maximum_cold_damage"] = {
+		mod("ColdMax", "BASE", nil),
+	},
+},
 #mods
 #skillEnd
 
@@ -556,7 +573,7 @@ statMap = {
 #skill GalvanicFieldPlayer
 #startSets
 #set GalvanicFieldPlayer
-#flags
+#flags area duration chaining
 #mods
 #skillEnd
 
@@ -580,17 +597,17 @@ end,
 #skill GhostDancePlayer
 #startSets
 #set GhostDancePlayer
-#flags
+#flags duration
 #mods
 #skillEnd
 
 #skill GlacialCascadePlayer
 #startSets
 #set GlacialCascadePlayer
-#flags
+#flags attack area
 #mods
 #set GlacialCascadeLastSpikePlayer
-#flags
+#flags attack area
 #mods
 #skillEnd
 
@@ -604,7 +621,7 @@ end,
 #skill HandOfChayulaPlayer
 #startSets
 #set HandOfChayulaPlayer
-#flags
+#flags attack melee area
 #mods
 #skillEnd
 
@@ -621,51 +638,51 @@ end,
 #flags
 #mods
 #set HeraldOfIceOnKillPlayer
-#flags
+#flags attack area
 #mods
 #skillEnd
 
 #skill HexblastPlayer
 #startSets
 #set HexblastPlayer
-#flags
+#flags spell area
 #mods
 #skillEnd
 
 #skill IceNovaPlayer
 #startSets
 #set IceNovaPlayer
-#flags
+#flags spell area
 #mods
 #set IceNovaPlayerOnFrostbolt
-#flags
+#flags spell area
 #mods
 #skillEnd
 
 #skill IceStrikePlayer
 #startSets
 #set IceStrikePlayer
-#flags
+#flags attack area melee
 #mods
 #set IceStrikeThirdAttackPlayer
-#flags
+#flags attack area melee
 #mods
 #skillEnd
 
 #skill IncineratePlayer
 #startSets
 #set IncineratePlayer
-#flags
+#flags spell area duration
 #mods
 #set IncinerateGroundPlayer
-#flags
+#flags spell area duration
 #mods
 #skillEnd
 
 #skill KillingPalmPlayer
 #startSets
 #set KillingPalmPlayer
-#flags
+#flags attack area melee
 #mods
 #skillEnd
 
@@ -673,21 +690,21 @@ end,
 #skill LightningBoltPlayer
 #startSets
 #set LightningBoltPlayer
-#flags
+#flags spell area
 #mods
 #skillEnd
 
 #skill LightningConduitPlayer
 #startSets
 #set LightningConduitPlayer
-#flags
+#flags spell
 #mods
 #skillEnd
 
 #skill LightningWarpPlayer
 #startSets
 #set LightningWarpPlayer
-#flags
+#flags spell area duration
 #mods
 #skillEnd
 
@@ -701,7 +718,7 @@ end,
 #skill LingeringIllusionSpawnPlayer
 #startSets
 #set LingeringIllusionSpawnPlayer
-#flags
+#flags duration
 #mods
 #skillEnd
 
@@ -709,7 +726,7 @@ end,
 #skill LivingBombPlayer
 #startSets
 #set LivingBombPlayer
-#flags
+#flags spell area duration
 #mods
 #skillEnd
 
@@ -717,7 +734,7 @@ end,
 #skill MalicePlayer
 #startSets
 #set MalicePlayer
-#flags
+#flags area
 #mods
 #skillEnd
 
@@ -746,14 +763,14 @@ end,
 #skill MantraOfDestructionPlayer
 #startSets
 #set MantraOfDestructionPlayer
-#flags
+#flags duration
 #mods
 #skillEnd
 
 #skill OrbOfStormsPlayer
 #startSets
 #set OrbOfStormsPlayer
-#flags
+#flags spell chaining
 #mods
 #skillEnd
 
@@ -761,6 +778,16 @@ end,
 #startSets
 #set PainOfferingPlayer
 #flags
+statMap = {
+	["pain_offering_attack_and_cast_speed_+%"] = {
+		mod("Speed", "INC", nil, 0, 0, { type = "GlobalEffect", effectType = "Buff" }),
+	},
+	["pain_offering_damage_+%_final"] = {
+		mod("Damage", "MORE", nil, 0, 0, { type = "GlobalEffect", effectType = "Buff" }),
+	},
+},
+#baseMod skill("buffMinions", true)
+#baseMod skill("buffNotPlayer", true)
 #mods
 #skillEnd
 
@@ -768,14 +795,14 @@ end,
 #skill PowerSiphonPlayer
 #startSets
 #set PowerSiphonPlayer
-#flags
+#flags spell
 #mods
 #skillEnd
 
 #skill ProfaneRitualPlayer
 #startSets
 #set ProfaneRitualPlayer
-#flags
+#flags spell area
 #mods
 #skillEnd
 
@@ -854,21 +881,21 @@ statMap = {
 #skill SacrificePlayer
 #startSets
 #set SacrificePlayer
-#flags
+#flags minion
 #mods
 #skillEnd
 
 #skill ShatteringPalmPlayer
 #startSets
 #set ShatteringPalmPlayer
-#flags
+#flags attack area melee
 #mods
 #skillEnd
 
 #skill ShatteringPalmExplosionPlayer
 #startSets
 #set TriggeredFreezingWordExplosionPlayer
-#flags
+#flags area nonWeaponAttack hit
 #mods
 #skillEnd
 
@@ -876,7 +903,7 @@ statMap = {
 #skill ShockNovaPlayer
 #startSets
 #set ShockNovaPlayer
-#flags
+#flags spell area
 #mods
 #skillEnd
 
@@ -884,17 +911,17 @@ statMap = {
 #skill SigilOfPowerPlayer
 #startSets
 #set SigilOfPowerPlayer
-#flags
+#flags spell area duration
 #mods
 #skillEnd
 
 #skill SiphoningStrikePlayer
 #startSets
 #set SiphoningStrikePlayer
-#flags
+#flags attack area melee
 #mods
 #set SiphoningStrikePulsePlayer
-#flags
+#flags attack area
 #mods
 #skillEnd
 
@@ -965,17 +992,22 @@ statMap = {
 #skill SolarOrbPlayer
 #startSets
 #set SolarOrbPlayer
-#flags
+#flags spell area duration
 #mods
 #set SolarOrbAuraPlayer
-#flags
+#flags spell area duration
 #mods
 #skillEnd
 
 #skill SoulOfferingPlayer
 #startSets
 #set SoulOfferingPlayer
-#flags
+#flags duration
+statMap = {
+	["power_offering_buff_spell_damage_+%_final"] = {
+		mod("Damage", "MORE", nil, ModFlag.Spell, 0, { type = "GlobalEffect", effectType = "Buff" }),
+	},
+},
 #mods
 #skillEnd
 
@@ -983,35 +1015,35 @@ statMap = {
 #skill SoulrendPlayer
 #startSets
 #set SoulrendPlayer
-#flags
+#flags spell projectile duration
 #mods
 #skillEnd
 
 #skill SparkPlayer
 #startSets
 #set SparkPlayer
-#flags
+#flags spell projectile duration
 #mods
 #skillEnd
 
 #skill StaggeringPalmPlayer
 #startSets
 #set StaggeringPalmPlayer
-#flags
+#flags attack area
 #mods
 #skillEnd
 
 #skill StaggeringPalmProjectilePlayer
 #startSets
 #set StaggeringPalmProjectilePlayer
-#flags
+#flags attack projectile
 #mods
 #skillEnd
 
 #skill StaggeringPalmUnarmedProjectilePlayer
 #startSets
 #set StaggeringPalmUnarmedProjectilePlayer
-#flags
+#flags attack projectile
 #mods
 #skillEnd
 
@@ -1025,13 +1057,13 @@ statMap = {
 #skill TempestBellPlayer
 #startSets
 #set TempestBellPlayer
-#flags
+#flags attack area melee duration
 #mods
 #set TempestBellSlamPlayer
-#flags
+#flags attack area melee
 #mods
 #set TempestBellShockwavePlayer
-#flags
+#flags attack area melee
 #mods
 #skillEnd
 
@@ -1051,7 +1083,7 @@ statMap = {
 #skill TemporalChainsPlayer
 #startSets
 #set TemporalChainsPlayer
-#flags
+#flags area duration
 #mods
 #skillEnd
 
@@ -1074,7 +1106,7 @@ statMap = {
 #skill VaultingImpactPlayer
 #startSets
 #set VaultingImpactPlayer
-#flags
+#flags attack area melee
 #mods
 #skillEnd
 
@@ -1082,35 +1114,35 @@ statMap = {
 #skill VolatileDeadPlayer
 #startSets
 #set VolatileDeadPlayer
-#flags
+#flags spell area
 #mods
 #skillEnd
 
 #skill VulnerabilityPlayer
 #startSets
 #set VulnerabilityPlayer
-#flags
+#flags area duration
 #mods
 #skillEnd
 
 #skill WaveOfFrostPlayer
 #startSets
 #set WaveOfFrostPlayer
-#flags
+#flags attack area melee
 #mods
 #skillEnd
 
 #skill WhirlingAssaultPlayer
 #startSets
 #set WhirlingAssaultPlayer
-#flags
+#flags attack area melee
 #mods
 #skillEnd
 
 #skill GaleStrikePlayer
 #startSets
 #set GaleStrikePlayer
-#flags
+#flags attack area melee
 #mods
 #skillEnd
 
@@ -1118,13 +1150,13 @@ statMap = {
 #skill WitherPlayer
 #startSets
 #set WitherPlayer
-#flags
+#flags spell area duration
 #mods
 #skillEnd
 
 #skill WitheringPresencePlayer
 #startSets
 #set WitheringPresencePlayer
-#flags
+#flags duration
 #mods
 #skillEnd

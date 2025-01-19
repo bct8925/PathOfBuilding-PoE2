@@ -89,10 +89,10 @@ function PassiveTreeViewClass:Draw(build, viewPort, inputEvents)
 					-- Dragging won't actually commence unless the cursor moves far enough
 					self.dragX, self.dragY = cursorX, cursorY
 				end
-			elseif mOver then
-				if IsKeyDown("ALT") and event.key == "WHEELDOWN" then
+			elseif IsKeyDown("ALT") and mOver then
+				if event.key == "WHEELDOWN" then
 					spec.allocMode = math.max(0, spec.allocMode - 1)
-				elseif IsKeyDown("ALT") and event.key == "WHEELUP" then
+				elseif event.key == "WHEELUP" then
 					spec.allocMode = math.min(2, spec.allocMode + 1)
 				end
 			elseif event.key == "p" then
@@ -247,7 +247,7 @@ function PassiveTreeViewClass:Draw(build, viewPort, inputEvents)
 		end
 	end
 	
-	-- switchAttribute true -> allocating an attribute node, possibly with attribute in path -or- hotswap allocated attribute
+	-- switchAttribute true -> allocating an attribute node, possibly with attribute in path -or- hot-swap allocated attribute
 	-- switchAttribute false -> allocating a non-attribute node, possibly with attribute in path
 	-- we always want to keep track of last used attribute
 	local function processAttributeHotkeys(switchAttribute)
@@ -313,7 +313,7 @@ function PassiveTreeViewClass:Draw(build, viewPort, inputEvents)
 			else
 				-- a way for us to bypass the popup when allocating attribute nodes, last used hotkey + RMB
 				-- RMB + non attribute node logic
-				-- RMB hotswap logic
+				-- RMB hot-swap logic
 				if hotkeyPressed then
 					processAttributeHotkeys(hoverNode.isAttribute)
 				elseif hoverNode.isAttribute then
@@ -544,9 +544,9 @@ function PassiveTreeViewClass:Draw(build, viewPort, inputEvents)
 				local dist = math.sqrt(dx * dx + dy * dy) * (connection.orbit > 0 and 1 or -1)
 
 				if dist < r * 2 then
-					local perp = math.sqrt(r * r - (dist * dist) / 4) * (r > 0 and 1 or -1)
-					local cx = node1.x + dx / 2 + perp * (dy / dist)
-					local cy = node1.y + dy / 2 - perp * (dx / dist)
+					local perpendicular = math.sqrt(r * r - (dist * dist) / 4) * (r > 0 and 1 or -1)
+					local cx = node1.x + dx / 2 + perpendicular * (dy / dist)
+					local cy = node1.y + dy / 2 - perpendicular * (dx / dist)
 					local scx, scy = treeToScreen(cx, cy)
 					
 					local innerSize = r * scale
@@ -688,7 +688,7 @@ function PassiveTreeViewClass:Draw(build, viewPort, inputEvents)
 		end
 
 		-- Draw mastery effect artwork
-		if effect and not launch.devModeAlt then
+		if effect and not launch.devModeAlt and not self.showHeatMap then
 			if node.targetSize and node.targetSize["effect"] then
 				effect.width = node.targetSize["effect"].width
 				effect.height = node.targetSize["effect"].height
@@ -722,12 +722,12 @@ function PassiveTreeViewClass:Draw(build, viewPort, inputEvents)
 				self:DrawAsset(base, scrX, scrY, scale)
 			else
 
-				if not node.alloc and not launch.devModeAlt then
+				if not self.showHeatMap and not launch.devModeAlt and not node.alloc then
 					self:LessLuminance()
 				end
 
 				self:DrawAsset(base, scrX, scrY, scale)
-				if not node.alloc and not launch.devModeAlt then
+				if not self.showHeatMap and not launch.devModeAlt and not node.alloc then
 					SetDrawColor(1, 1, 1, 1);
 				end
 			end
@@ -780,11 +780,13 @@ function PassiveTreeViewClass:Draw(build, viewPort, inputEvents)
 				overlayImage.height = node.targetSize["overlay"].height
 			end
 
-			if not node.alloc and (node.type == "AscendClassStart" or node.type == "ClassStart") and not launch.devModeAlt then
+			if not self.showHeatMap and not launch.devModeAlt and not node.alloc and (node.type == "AscendClassStart" or node.type == "ClassStart") then
 				self:LessLuminance()
 			end
 			self:DrawAsset(overlayImage, scrX, scrY, scale)
-			SetDrawColor(1, 1, 1)
+			if not self.showHeatMap and not launch.devModeAlt and not node.alloc and (node.type == "AscendClassStart" or node.type == "ClassStart") then
+				SetDrawColor(1, 1, 1)
+			end
 		end
 		if self.searchStrResults[nodeId] then
 			-- Node matches the search string, show the highlight circle
@@ -959,7 +961,7 @@ function PassiveTreeViewClass:Zoom(level, viewPort)
 end
 
 function PassiveTreeViewClass:Focus(x, y, viewPort, build)
-	self.zoomLevel = 12
+	self.zoomLevel = 20
 	self.zoom = 1.2 ^ self.zoomLevel
 
 	local tree = build.spec.tree
@@ -1121,7 +1123,7 @@ function PassiveTreeViewClass:AddNodeTooltip(tooltip, node, build)
 		tooltip:AddLine(16, string.format("AllocMode: %d", node.allocMode or 0))
 		tooltip:AddSeparator(14)
 
-		-- add conection info for debugging
+		-- add connection info for debugging
 		for _, connection in ipairs(node.connections) do
 			tooltip:AddLine(16, string.format("^7Connection: %d, Orbit: %d", connection.id, connection.orbit))
 		end

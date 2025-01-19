@@ -17,6 +17,7 @@ Variant: Medium Ring
 Variant: Medium-Large Ring
 Variant: Large Ring
 Variant: Very Large Ring
+Variant: Massive Ring
 Limited to: 1
 Radius: Variable
 {variant:1}Only affects Passives in Very Small Ring
@@ -26,6 +27,7 @@ Radius: Variable
 {variant:5}Only affects Passives in Medium-Large Ring
 {variant:6}Only affects Passives in Large Ring
 {variant:7}Only affects Passives in Very Large Ring
+{variant:8}Only affects Passives in Massive Ring
 JewelUniqueAllocateDisconnectedPassives
 UniqueAllResistances12
 UniqueChaosResist18

@@ -982,6 +982,9 @@ function SkillsTabClass:FindSkillGem(nameSpec)
 end
 
 function SkillsTabClass:ProcessGemLevel(gemData)
+	if not gemData then
+		return 1
+	end
 	local grantedEffect = gemData.grantedEffect
 	local naturalMaxLevel = gemData.naturalMaxLevel
 	if self.defaultGemLevel == "awakenedMaximum" then
@@ -1037,7 +1040,7 @@ function SkillsTabClass:ProcessSocketGroup(socketGroup)
 			else
 				gemInstance.grantedEffect = data.skills[gemInstance.skillId]
 			end
-			if gemInstance.triggered then
+			if gemInstance.triggered and gemInstance.grantedEffect then
 				if gemInstance.grantedEffect.levels[gemInstance.level] then
 					gemInstance.grantedEffect.levels[gemInstance.level].cost = {}
 				end
@@ -1298,7 +1301,7 @@ function SkillsTabClass:UpdateGlobalGemCountAssignments()
 	for _, socketGroup in ipairs(self.socketGroupList) do
 		local countGroup = true
 		for _, gemInstance in ipairs(socketGroup.gemList) do
-			if gemInstance.fromItem then
+			if gemInstance.fromItem or (gemInstance.gemData and gemInstance.gemData.grantedEffect and gemInstance.gemData.grantedEffect.fromTree) then
 				countGroup = false
 			end
 			if gemInstance.gemData then

@@ -36,4 +36,4 @@ RUN luarocks install busted 2.2.0-1;\
 RUN --mount=type=cache,from=emmyluadebugger,source=/opt,target=/opt make -C /opt/EmmyLuaDebugger/build/ install
 RUN --mount=type=cache,from=luajit,source=/opt,target=/opt make -C /opt/LuaJIT/ install
 
-CMD [ "echo", "This container is meant to be ran with docker compose. See: https://github.com/PathOfBuildingCommunity/PathOfBuilding/blob/dev/CONTRIBUTING.md" ]
+CMD [ "echo", "This container is meant to be ran with docker compose. See: https://github.com/PathOfBuildingCommunity/PathOfBuilding-PoE2/blob/dev/CONTRIBUTING.md" ]

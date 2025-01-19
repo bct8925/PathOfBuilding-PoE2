@@ -29,7 +29,7 @@ This is a fork of Openarl's Path Of Building that includes many extra features n
 * Support for Ryslatha's Coil, Vaal Arc Lucky Buff, Perquil's Toe and more
 
 ## Download
-Head over to the [Releases](https://github.com/PathOfBuildingCommunity/PathOfBuilding/releases) page to download the install wizard or portable zip.
+Head over to the [Releases](https://github.com/PathOfBuildingCommunity/PathOfBuilding-PoE2/releases) page to download the install wizard or portable zip.
 
 ## Contribute
 You can find instructions on how to contribute code and bug reports [here](CONTRIBUTING.md).

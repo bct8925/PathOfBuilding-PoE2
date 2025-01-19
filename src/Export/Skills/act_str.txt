@@ -8,7 +8,7 @@ local skills, mod, flag, skill = ...
 #skill AncestralWarriorTotemPlayer
 #startSets
 #set AncestralWarriorTotemPlayer
-#flags
+#flags totem attack
 #mods
 #skillEnd
 
@@ -22,7 +22,7 @@ local skills, mod, flag, skill = ...
 #skill ArmourBreakerPlayer
 #startSets
 #set ArmourBreakerPlayer
-#flags
+#flags attack area melee
 #mods
 #skillEnd
 
@@ -60,10 +60,10 @@ local skills, mod, flag, skill = ...
 #skill BoneshatterPlayer
 #startSets
 #set BoneshatterPlayer
-#flags
+#flags attack melee
 #mods
 #set BoneshatterShockwavePlayer
-#flags
+#flags attack melee area
 #mods
 #skillEnd
 
@@ -133,7 +133,7 @@ local skills, mod, flag, skill = ...
 #skill StaffConsecratePlayer
 #startSets
 #set StaffConsecratePlayer
-#flags
+#flags spell
 #mods
 #skillEnd
 
@@ -155,7 +155,7 @@ local skills, mod, flag, skill = ...
 #skill DreadBannerPlayer
 #startSets
 #set DreadBannerPlayer
-#flags
+#flags duration
 #mods
 #skillEnd
 
@@ -190,17 +190,17 @@ statMap = {
 #skill EarthshatterPlayer
 #startSets
 #set EarthshatterPlayer
-#flags
+#flags attack area melee
 #mods
 #set EarthshatterSpikePlayer
-#flags
+#flags attack area melee duration
 #mods
 #skillEnd
 
 #skill EmergencyReloadPlayer
 #startSets
 #set EmergencyReloadPlayer
-#flags
+#flags duration
 #mods
 #skillEnd
 
@@ -215,7 +215,7 @@ statMap = {
 #skill ExsanguinatePlayer
 #startSets
 #set ExsanguinatePlayer
-#flags
+#flags spell duration chaining
 #mods
 #skillEnd
 
@@ -242,7 +242,7 @@ statMap = {
 #skill HammerOfTheGodsPlayer
 #startSets
 #set HammerOfTheGodsPlayer
-#flags
+#flags attack area melee duration
 #mods
 #skillEnd
 
@@ -259,21 +259,21 @@ statMap = {
 #skill InfernalCryPlayer
 #startSets
 #set InfernalCryPlayer
-#flags
+#flags warcry area duration
 #mods
 #skillEnd
 
 #skill InfernalCryCorpseExplosionPlayer
 #startSets
 #set InfernalCryCorpseExplosionPlayer
-#flags
+#flags area hit
 #mods
 #skillEnd
 
 #skill LeapSlamPlayer
 #startSets
 #set LeapSlamPlayer
-#flags
+#flags attack area melee
 #mods
 #skillEnd
 
@@ -527,17 +527,17 @@ statMap = {
 #skill MagmaSprayPlayer
 #startSets
 #set MagmaSprayPlayer
-#flags
+#flags attack area melee
 #mods
 #skillEnd
 
 #skill MoltenBlastPlayer
 #startSets
 #set MoltenBlastPlayer
-#flags
+#flags attack area projectile
 #mods
 #set MoltenBlastSecondaryPlayer
-#flags
+#flags attack projectile
 #mods
 #skillEnd
 
@@ -573,21 +573,21 @@ end,
 #skill ReapPlayer
 #startSets
 #set ReapPlayer
-#flags
+#flags spell area
 #mods
 #skillEnd
 
 #skill ResonatingShieldPlayer
 #startSets
 #set ResonatingShieldPlayer
-#flags
+#flags attack area melee shieldAttack
 #mods
 #skillEnd
 
 #skill RipwireBallistaPlayer
 #startSets
 #set RipwireBallistaPlayer
-#flags
+#flags totem
 #mods
 #skillEnd
 
@@ -601,27 +601,27 @@ end,
 #skill RollingSlamPlayer
 #startSets
 #set RollingSlamPlayer
-#flags
+#flags attack area melee
 #mods
 #set RollingSlamFirstSlamPlayer
-#flags
+#flags attack area melee
 #mods
 #set RollingSlamSecondSlamPlayer
-#flags
+#flags attack area melee
 #mods
 #skillEnd
 
 #skill ScavengedPlatingPlayer
 #startSets
 #set ScavengedPlatingPlayer
-#flags
+#flags duration
 #mods
 #skillEnd
 
 #skill SeismicCryPlayer
 #startSets
 #set SeismicCryPlayer
-#flags
+#flags warcry hit area
 #mods
 #skillEnd
 
@@ -635,81 +635,81 @@ end,
 #skill ShieldChargePlayer
 #startSets
 #set ShieldChargePlayer
-#flags
+#flags attack area melee shieldAttack
 #mods
 #set ShieldChargeFinalConePlayer
-#flags
+#flags attack area melee shieldAttack
 #mods
 #skillEnd
 
 #skill ShieldWallPlayer
 #startSets
 #set ShieldWallPlayer
-#flags
+#flags attack shieldAttack
 #mods
 #skillEnd
 
 #skill ShockwaveTotemPlayer
 #startSets
 #set ShockwaveTotemPlayer
-#flags
+#flags totem
 #mods
 #skillEnd
 
 #skill ShockwaveTotemQuakePlayer
 #startSets
 #set ShockwaveTotemQuakePlayer
-#flags
+#flags totem attack area melee
 #mods
 #set ShockwaveTotemJaggedQuakePlayer
-#flags
+#flags totem attack area
 #mods
 #skillEnd
 
 #skill StampedePlayer
 #startSets
 #set StampedePlayer
-#flags
+#flags attack area melee
 #mods
 #set StampedeSlamPlayer
-#flags
+#flags attack area melee
 #mods
 #set StampedeEruptionPlayer
-#flags
+#flags attack area melee
 #mods
 #skillEnd
 
 #skill SunderPlayer
 #startSets
 #set SunderPlayer
-#flags
+#flags attack area melee
 #mods
 #set SunderShockwavePlayer
-#flags
+#flags attack area
 #mods
 #skillEnd
 
 #skill SuperchargedSlamPlayer
 #startSets
 #set SuperchargedSlamPlayer
-#flags
+#flags attack area melee
 #mods
 #set SuperchargedSlamAftershockPlayer
-#flags
+#flags attack area melee
 #mods
 #skillEnd
 
 #skill TimeOfNeedPlayer
 #startSets
 #set TimeOfNeedPlayer
-#flags
+#flags duration
 #mods
 #skillEnd
 
 #skill VolcanicFissurePlayer
 #startSets
 #set VolcanicFissurePlayer
-#flags
+#flags attack area melee duration
 #mods
 #skillEnd
 
