@@ -422,8 +422,8 @@ local function doActorMisc(env, actor)
 			else
 				effect = m_floor(10 * (1 + onslaughtEffectInc))
 			end
-			modDB:NewMod("Speed", "INC", effect, "Onslaught", ModFlag.Attack)
-			modDB:NewMod("Speed", "INC", effect, "Onslaught", ModFlag.Cast)
+			modDB:NewMod("Speed", "INC", 2 * effect, "Onslaught", ModFlag.Attack)
+			modDB:NewMod("Speed", "INC", 2 * effect, "Onslaught", ModFlag.Cast)
 			-- TODO: Needs to add other INC speed like Warcry Speed, or proper Skill Speed mod needs to be created
 			modDB:NewMod("MovementSpeed", "INC", effect, "Onslaught")
 		end
