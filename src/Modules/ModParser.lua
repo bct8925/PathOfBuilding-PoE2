@@ -4272,6 +4272,7 @@ local specialModList = {
 		mod("ColdResist", "OVERRIDE", 0),
 		mod("LightningResist", "OVERRIDE", 0),
 	},
+	["you have no spirit"] = { flag("NoSpirit") },
 	["you have no elemental resistances"] = {
 		mod("FireResist", "OVERRIDE", 0),
 		mod("ColdResist", "OVERRIDE", 0),
