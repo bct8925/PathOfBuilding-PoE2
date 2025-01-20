@@ -424,7 +424,7 @@ local function doActorMisc(env, actor)
 			end
 			modDB:NewMod("Speed", "INC", 2 * effect, "Onslaught", ModFlag.Attack)
 			modDB:NewMod("Speed", "INC", 2 * effect, "Onslaught", ModFlag.Cast)
-			modDB:NewMod("Speed", "INC", 2 * effect, "Onslaught", ModFlag.Warcry)
+			modDB:NewMod("WarcrySpeed", "INC", 2 * effect, "Onslaught")
 			-- TODO: Skill speed effect is vague and says "and similar stats", may apply to more than this
 			modDB:NewMod("MovementSpeed", "INC", effect, "Onslaught")
 		end
