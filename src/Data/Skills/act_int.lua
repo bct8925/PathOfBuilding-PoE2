@@ -5880,6 +5880,11 @@ skills["EyeOfWinterPlayer"] = {
 			incrementalEffectiveness = 0.14000000059605,
 			damageIncrementalEffectiveness = 0.0065000001341105,
 			statDescriptionScope = "eye_of_winter_new",
+			statMap = {
+				["eye_of_winter_number_of_brittle_stacks_to_apply"] = {
+					flag("ApplyCriticalWeakness"),
+				},
+			},
 			baseFlags = {
 				spell = true,
 				projectile = true,
@@ -11302,6 +11307,11 @@ skills["MalicePlayer"] = {
 			label = "Malice",
 			incrementalEffectiveness = 0.054999999701977,
 			statDescriptionScope = "aura_crit_against_enemy",
+			statMap = {
+				["critical_chance_against_aura_apply_brittle_every_x_ms"] = {
+					flag("ApplyCriticalWeakness"),
+				},
+			},
 			baseFlags = {
 				area = true,
 			},
