@@ -418,12 +418,14 @@ local function doActorMisc(env, actor)
 			end
 			local onslaughtEffectInc = modDB:Sum("INC", nil, "OnslaughtEffect", "BuffEffectOnSelf") / 100
 			if onslaughtFromFlask then
-				effect = m_floor(20 * (1 + flaskEffectInc + onslaughtEffectInc))
+				effect = m_floor(10 * (1 + flaskEffectInc + onslaughtEffectInc))
 			else
-				effect = m_floor(20 * (1 + onslaughtEffectInc))
+				effect = m_floor(10 * (1 + onslaughtEffectInc))
 			end
-			modDB:NewMod("Speed", "INC", effect, "Onslaught", ModFlag.Attack)
-			modDB:NewMod("Speed", "INC", effect, "Onslaught", ModFlag.Cast)
+			modDB:NewMod("Speed", "INC", 2 * effect, "Onslaught", ModFlag.Attack)
+			modDB:NewMod("Speed", "INC", 2 * effect, "Onslaught", ModFlag.Cast)
+			modDB:NewMod("WarcrySpeed", "INC", 2 * effect, "Onslaught")
+			-- TODO: Skill speed effect is vague and says "and similar stats", may apply to more than this
 			modDB:NewMod("MovementSpeed", "INC", effect, "Onslaught")
 		end
 		if modDB:Flag(nil, "Fanaticism") and actor.mainSkill and actor.mainSkill.activeEffect.srcInstance.selfCast then
