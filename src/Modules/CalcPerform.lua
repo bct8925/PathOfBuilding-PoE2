@@ -424,7 +424,8 @@ local function doActorMisc(env, actor)
 			end
 			modDB:NewMod("Speed", "INC", 2 * effect, "Onslaught", ModFlag.Attack)
 			modDB:NewMod("Speed", "INC", 2 * effect, "Onslaught", ModFlag.Cast)
-			-- TODO: Needs to add other INC speed like Warcry Speed, or proper Skill Speed mod needs to be created
+			modDB:NewMod("Speed", "INC", 2 * effect, "Onslaught", ModFlag.Warcry)
+			-- TODO: Skill speed effect is vague and says "and similar stats", may apply to more than this
 			modDB:NewMod("MovementSpeed", "INC", effect, "Onslaught")
 		end
 		if modDB:Flag(nil, "Fanaticism") and actor.mainSkill and actor.mainSkill.activeEffect.srcInstance.selfCast then
