@@ -1937,6 +1937,10 @@ function calcs.offence(env, actor, activeSkill)
 			end
 			activeSkill.weapon1Cfg.skillStats = output.MainHand
 			local source = copyTable(actor.weaponData1)
+			-- Unarmed override for Concoction skills
+			if skillModList:Flag(nil, "UnarmedOverride") then
+				source = copyTable(data.unarmedWeaponData[env.classId])
+			end
 			if critOverride and source.type and source.type ~= "None" then
 				source.CritChance = critOverride
 			end
