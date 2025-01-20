@@ -847,8 +847,7 @@ c["125% increased Charges per use"]={{[1]={flags=0,keywordFlags=0,name="FlaskCha
 c["125% increased Energy Shield"]={{[1]={flags=0,keywordFlags=0,name="EnergyShield",type="INC",value=125}},nil}
 c["125% increased Evasion Rating"]={{[1]={flags=0,keywordFlags=0,name="Evasion",type="INC",value=125}},nil}
 c["125% increased Evasion and Energy Shield"]={{[1]={flags=0,keywordFlags=0,name="EvasionAndEnergyShield",type="INC",value=125}},nil}
-c["13% chance to Gain 50% of Damage with Hits as Extra Chaos Damage"]={nil,"50% of Damage with Hits as Extra Chaos Damage "}
-c["13% chance to Gain 50% of Damage with Hits as Extra Chaos Damage 7% chance to Gain 100% of Damage with Hits as Extra Chaos Damage"]={nil,"50% of Damage with Hits as Extra Chaos Damage 7% chance to Gain 100% of Damage with Hits as Extra Chaos Damage "}
+c["13% chance to Gain 50% of Damage with Hits as Extra Chaos Damage"]={{[1]={flags=4,keywordFlags=0,name="DamageGainAsChaos",type="BASE",value=6.5}},nil}
 c["13% increased Attack Speed"]={{[1]={flags=1,keywordFlags=0,name="Speed",type="INC",value=13}},nil}
 c["13% increased Cast Speed"]={{[1]={flags=16,keywordFlags=0,name="Speed",type="INC",value=13}},nil}
 c["13% increased Movement Speed"]={{[1]={flags=0,keywordFlags=0,name="MovementSpeed",type="INC",value=13}},nil}
@@ -1063,7 +1062,7 @@ c["2% increased Lightning Damage per 10 Intelligence"]={{[1]={[1]={div=10,stat="
 c["2% increased Maximum Life per socketed Grand Spectrum"]={{[1]={[1]={type="Multiplier",var="GrandSpectrum"},flags=0,keywordFlags=0,name="Life",type="INC",value=2}},nil}
 c["2% increased Movement Speed"]={{[1]={flags=0,keywordFlags=0,name="MovementSpeed",type="INC",value=2}},nil}
 c["2% increased Spirit per socketed Grand Spectrum"]={{[1]={[1]={type="Multiplier",var="GrandSpectrum"},flags=0,keywordFlags=0,name="Spirit",type="INC",value=2}},nil}
-c["2% to Maximum Fire Resistance for each 40% Uncapped Fire Resistance"]={{[1]={flags=0,keywordFlags=0,name="FireResistMax",type="BASE",value=2}},"% to  for each 40% Uncapped Fire Resistance "}
+c["2% to Maximum Fire Resistance for each 40% Uncapped Fire Resistance"]={{[1]={[1]={div=40,stat="FireResistTotal",type="PerStat"},flags=0,keywordFlags=0,name="FireResistMax",type="BASE",value=2}},nil}
 c["20 Life Regeneration per second"]={{[1]={flags=0,keywordFlags=0,name="LifeRegen",type="BASE",value=20}},nil}
 c["20 Passive Skill Points become Weapon Set Skill Points"]={{[1]={flags=0,keywordFlags=0,name="PassivePointsToWeaponSetPoints",type="BASE",value=20}},nil}
 c["20 to 30 Physical Thorns damage"]={{[1]={flags=0,keywordFlags=0,name="Damage",type="BASE",value=20}}," to 30 Physical Thorns  "}
@@ -1237,9 +1236,7 @@ c["200% increased Stun Recovery"]={{[1]={flags=0,keywordFlags=0,name="StunRecove
 c["200% increased bonuses gained from Equipped Quiver"]={{[1]={flags=0,keywordFlags=0,name="EffectOfBonusesFromQuiver",type="INC",value=200}},nil}
 c["22.5 Life Regeneration per second"]={{[1]={flags=0,keywordFlags=0,name="LifeRegen",type="BASE",value=22.5}},nil}
 c["225% increased Duration"]={{[1]={flags=0,keywordFlags=0,name="Duration",type="INC",value=225}},nil}
-c["23% chance to Gain 25% of Damage with Hits as Extra Chaos Damage"]={nil,"25% of Damage with Hits as Extra Chaos Damage "}
-c["23% chance to Gain 25% of Damage with Hits as Extra Chaos Damage 13% chance to Gain 50% of Damage with Hits as Extra Chaos Damage"]={nil,"25% of Damage with Hits as Extra Chaos Damage 13% chance to Gain 50% of Damage with Hits as Extra Chaos Damage "}
-c["23% chance to Gain 25% of Damage with Hits as Extra Chaos Damage 13% chance to Gain 50% of Damage with Hits as Extra Chaos Damage 7% chance to Gain 100% of Damage with Hits as Extra Chaos Damage"]={nil,"25% of Damage with Hits as Extra Chaos Damage 13% chance to Gain 50% of Damage with Hits as Extra Chaos Damage 7% chance to Gain 100% of Damage with Hits as Extra Chaos Damage "}
+c["23% chance to Gain 25% of Damage with Hits as Extra Chaos Damage"]={{[1]={flags=4,keywordFlags=0,name="DamageGainAsChaos",type="BASE",value=5.75}},nil}
 c["23% increased Chaos Damage"]={{[1]={flags=0,keywordFlags=0,name="ChaosDamage",type="INC",value=23}},nil}
 c["23% increased Mana Regeneration Rate"]={{[1]={flags=0,keywordFlags=0,name="ManaRegen",type="INC",value=23}},nil}
 c["23% increased Movement Speed"]={{[1]={flags=0,keywordFlags=0,name="MovementSpeed",type="INC",value=23}},nil}
@@ -1964,7 +1961,7 @@ c["65% increased Evasion Rating"]={{[1]={flags=0,keywordFlags=0,name="Evasion",t
 c["65% increased Evasion and Energy Shield"]={{[1]={flags=0,keywordFlags=0,name="EvasionAndEnergyShield",type="INC",value=65}},nil}
 c["666% increased Armour and Energy Shield"]={{[1]={flags=0,keywordFlags=0,name="ArmourAndEnergyShield",type="INC",value=666}},nil}
 c["666% increased effect of Socketed Soul Cores"]={{[1]={flags=0,keywordFlags=0,name="LocalEffect",type="INC",value=666}},"  of Socketed Soul Cores "}
-c["7% chance to Gain 100% of Damage with Hits as Extra Chaos Damage"]={nil,"100% of Damage with Hits as Extra Chaos Damage "}
+c["7% chance to Gain 100% of Damage with Hits as Extra Chaos Damage"]={{[1]={flags=4,keywordFlags=0,name="DamageGainAsChaos",type="BASE",value=7}},nil}
 c["7% increased Attributes"]={{[1]={flags=0,keywordFlags=0,name="Str",type="INC",value=7},[2]={flags=0,keywordFlags=0,name="Dex",type="INC",value=7},[3]={flags=0,keywordFlags=0,name="Int",type="INC",value=7},[4]={flags=0,keywordFlags=0,name="All",type="INC",value=7}},nil}
 c["7% increased Chaos Damage"]={{[1]={flags=0,keywordFlags=0,name="ChaosDamage",type="INC",value=7}},nil}
 c["70% increased Armour"]={{[1]={flags=0,keywordFlags=0,name="Armour",type="INC",value=70}},nil}

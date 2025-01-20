@@ -558,6 +558,12 @@ function PassiveTreeViewClass:Draw(build, viewPort, inputEvents)
 		end
 	end
 
+	-- calculate inc from SmallPassiveSkillEffect
+	local incSmallPassiveSkillEffect = 0
+	for _, node in pairs(spec.allocNodes) do
+		incSmallPassiveSkillEffect = incSmallPassiveSkillEffect + node.modList:Sum("INC", nil ,"SmallPassiveSkillEffect")
+	end
+
 	-- Draw the nodes
 	for nodeId, node in pairs(spec.nodes) do
 		-- Determine the base and overlay images for this node based on type and state
@@ -820,7 +826,7 @@ function PassiveTreeViewClass:Draw(build, viewPort, inputEvents)
 			SetDrawLayer(nil, 100)
 			local size = m_floor(node.size * scale)
 			if self.tooltip:CheckForUpdate(node, self.showStatDifferences, self.tracePath, launch.devModeAlt, build.outputRevision) then
-				self:AddNodeTooltip(self.tooltip, node, build)
+				self:AddNodeTooltip(self.tooltip, node, build, incSmallPassiveSkillEffect)
 			end
 			self.tooltip:Draw(m_floor(scrX - size), m_floor(scrY - size), size * 2, size * 2, viewPort)
 		end
@@ -1083,7 +1089,7 @@ function PassiveTreeViewClass:AddNodeName(tooltip, node, build)
 	end
 end
 
-function PassiveTreeViewClass:AddNodeTooltip(tooltip, node, build)
+function PassiveTreeViewClass:AddNodeTooltip(tooltip, node, build, incSmallPassiveSkillEffect)
 	-- Special case for sockets
 	if node.type == "Socket" and node.alloc then
 		local socket, jewel = build.itemsTab:GetSocketAndJewelForNodeID(node.id)
@@ -1146,6 +1152,25 @@ function PassiveTreeViewClass:AddNodeTooltip(tooltip, node, build)
 					line = line .. "  " .. modStr
 				end
 			end
+
+			-- Apply Inc Node scaling from Hulking Form only visually
+			if incSmallPassiveSkillEffect > 0 and node.type == "Normal" and not node.isAttribute and not node.ascendancyName and node.mods[i].list then
+				local scale = 1 + incSmallPassiveSkillEffect / 100
+				local scaledList = new("ModList")
+				scaledList:ScaleAddList(node.mods[i].list, scale)
+				local number =  line:match("%d*%.?%d+")
+				for j, mod in ipairs(scaledList) do
+					local newValue = 0
+					if type(mod.value) == "number" then
+						newValue = mod.value
+					elseif type(mod.value) == "table" then
+						newValue = mod.value.mod.value
+					end
+					line = line:gsub("%d*%.?%d+",math.abs(newValue))
+				end
+				-- line = line .. "  ^8(Effect increased by "..incSmallPassiveSkillEffect.."%)"
+			end
+
 			tooltip:AddLine(16, ((node.mods[i].extra or not node.mods[i].list) and colorCodes.UNSUPPORTED or colorCodes.MAGIC)..line)
 		end
 	end

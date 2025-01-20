@@ -651,7 +651,6 @@ function calcs.defence(env, actor)
 	for _, elem in ipairs(resistTypeList) do
 		local min, max, total, dotTotal, totemTotal, totemMax
 		min = data.misc.ResistFloor
-		max = modDB:Override(nil, elem.."ResistMax") or m_min(data.misc.MaxResistCap, modDB:Sum("BASE", nil, elem.."ResistMax", isElemental[elem] and "ElementalResistMax"))
 		total = modDB:Override(nil, elem.."Resist")
 		totemMax = modDB:Override(nil, "Totem"..elem.."ResistMax") or m_min(data.misc.MaxResistCap, modDB:Sum("BASE", nil, "Totem"..elem.."ResistMax", isElemental[elem] and "TotemElementalResistMax"))
 		totemTotal = modDB:Override(nil, "Totem"..elem.."Resist")
@@ -669,6 +668,10 @@ function calcs.defence(env, actor)
 		
 		-- Fractional resistances are truncated
 		total = m_modf(total)
+		-- Unnatural Resilience needs FireResistTotal before we calc FireResistMax
+		output[elem.."ResistTotal"] = total
+		max = modDB:Override(nil, elem.."ResistMax") or m_min(data.misc.MaxResistCap, modDB:Sum("BASE", nil, elem.."ResistMax", isElemental[elem] and "ElementalResistMax"))
+		
 		dotTotal = dotTotal and m_modf(dotTotal) or total
 		totemTotal = m_modf(totemTotal)
 		min = m_modf(min)
@@ -680,7 +683,6 @@ function calcs.defence(env, actor)
 		local totemFinal = m_max(m_min(totemTotal, totemMax), min)
 
 		output[elem.."Resist"] = final
-		output[elem.."ResistTotal"] = total
 		output[elem.."ResistOverCap"] = m_max(0, total - max)
 		output[elem.."ResistOver75"] = m_max(0, final - 75)
 		output["Missing"..elem.."Resist"] = m_max(0, max - final)
@@ -1972,7 +1974,7 @@ function calcs.buildDefenceEstimations(env, actor)
 		local impaleArmourReduct = 0
 		local percentOfArmourApplies = m_min((not modDB:Flag(nil, "ArmourDoesNotApplyTo"..damageType.."DamageTaken") and modDB:Sum("BASE", nil, "ArmourAppliesTo"..damageType.."DamageTaken") or 0), 100)
 		local effectiveAppliedArmour = (output.Armour * percentOfArmourApplies / 100) * (1 + output.ArmourDefense)
-		local resMult = 1 - (resist - enemyPen) / 100
+		local resMult = 1 - (resist > 0 and m_max(resist - enemyPen, 0) or resist) / 100
 		local reductMult = 1
 		local takenFlat = modDB:Sum("BASE", nil, "DamageTaken", damageType.."DamageTaken", "DamageTakenWhenHit", damageType.."DamageTakenWhenHit")
 		if damageCategoryConfig == "Melee" or damageCategoryConfig == "Projectile" then
@@ -2068,7 +2070,11 @@ function calcs.buildDefenceEstimations(env, actor)
 			if enemyPen ~= 0 then
 				t_insert(breakdown[damageType.."TakenHitMult"], s_format("+ Enemy Pen: %.2f", enemyPen / 100))
 			end
-			if resist ~= 0 and enemyPen ~= 0 then
+			if resist <= 0 and enemyPen ~=0 then
+				t_insert(breakdown[damageType.."TakenHitMult"], s_format("= %.2f ^8(Negative resistance unaffected by penetration)", resMult))
+			elseif (resist - enemyPen) < 0 then
+				t_insert(breakdown[damageType.."TakenHitMult"], s_format("= %.2f ^8(Penetration cannot bring resistances below 0)", resMult))
+			elseif resist ~= 0 then
 				t_insert(breakdown[damageType.."TakenHitMult"], s_format("= %.2f", resMult))
 			end
 			if resMult ~= 1 and reductMult ~= 1 then
