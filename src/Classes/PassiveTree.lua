@@ -742,10 +742,7 @@ function PassiveTreeClass:CalcOrbitAngles(nodesInOrbit)
 end
 
 function PassiveTreeClass:GetAssetByName(name, type)
-	if self.ddsMap[name] then
-		return self.ddsMap[name]
-	end
-	return self.assets[name]
+	return self.ddsMap[name] or self.assets[name]
 end
 
 function PassiveTreeClass:GetNodeTargetSize(node)
