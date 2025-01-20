@@ -667,8 +667,8 @@ function roundSymmetric(val, dec)
 	end
 end
 
--- Use rounding formula for postive numbers always used in corrupted unique roll ranges this is an incorrect way to round numbers.
-function alwaysPositveRound(val, dec)
+-- Use rounding formula for positive numbers always used in corrupted unique roll ranges this is an incorrect way to round numbers.
+function alwaysPositiveRound(val, dec)
 	if dec then
 		local factor = 10 ^ dec
 		return m_floor(val * factor + 0.5) / factor
