@@ -1596,6 +1596,7 @@ skills["BonestormPlayer"] = {
 			baseFlags = {
 				spell = true,
 				duration = true,
+				projectile = true,
 			},
 			constantStats = {
 				{ "base_number_of_projectiles", 1 },
@@ -1675,6 +1676,7 @@ skills["BonestormPlayer"] = {
 				spell = true,
 				duration = true,
 				area = true,
+				projectile = true,
 			},
 			constantStats = {
 				{ "active_skill_base_area_of_effect_radius", 5 },

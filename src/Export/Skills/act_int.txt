@@ -114,7 +114,7 @@ statMap = {
 #skill BonestormPlayer
 #startSets
 #set BonestormPlayer
-#flags spell duration
+#flags spell duration projectile
 statMap = {
 	["bone_spear_minimum_added_attack_physical_damage_taken"] = {
 		mod("SelfPhysicalMin", "BASE", nil, ModFlag.Attack, 0, { type = "GlobalEffect", effectType = "Debuff", effectName = "Bonestorm", effectCond = "BonestormAddedDamage" }),
@@ -125,7 +125,7 @@ statMap = {
 },
 #mods
 #set BonestormExplosionPlayer
-#flags spell duration area
+#flags spell duration area projectile
 #mods
 #skillEnd
 
@@ -399,9 +399,9 @@ statMap = {
 #set EyeOfWinterPlayer
 #flags spell projectile
 statMap = {
-    ["eye_of_winter_number_of_brittle_stacks_to_apply"] = {
-        flag("ApplyCriticalWeakness"),
-    },
+	["eye_of_winter_number_of_brittle_stacks_to_apply"] = {
+		flag("ApplyCriticalWeakness"),
+	},
 },
 #mods
 #skillEnd
@@ -746,9 +746,9 @@ statMap = {
 #set MalicePlayer
 #flags area
 statMap = {
-    ["critical_chance_against_aura_apply_brittle_every_x_ms"] = {
-        flag("ApplyCriticalWeakness"),
-    },
+	["critical_chance_against_aura_apply_brittle_every_x_ms"] = {
+		flag("ApplyCriticalWeakness"),
+	},
 },
 #mods
 #skillEnd
