@@ -418,12 +418,14 @@ local function doActorMisc(env, actor)
 			end
 			local onslaughtEffectInc = modDB:Sum("INC", nil, "OnslaughtEffect", "BuffEffectOnSelf") / 100
 			if onslaughtFromFlask then
-				effect = m_floor(20 * (1 + flaskEffectInc + onslaughtEffectInc))
+				effect = m_floor(10 * (1 + flaskEffectInc + onslaughtEffectInc))
 			else
-				effect = m_floor(20 * (1 + onslaughtEffectInc))
+				effect = m_floor(10 * (1 + onslaughtEffectInc))
 			end
-			modDB:NewMod("Speed", "INC", effect, "Onslaught", ModFlag.Attack)
-			modDB:NewMod("Speed", "INC", effect, "Onslaught", ModFlag.Cast)
+			modDB:NewMod("Speed", "INC", 2 * effect, "Onslaught", ModFlag.Attack)
+			modDB:NewMod("Speed", "INC", 2 * effect, "Onslaught", ModFlag.Cast)
+			modDB:NewMod("WarcrySpeed", "INC", 2 * effect, "Onslaught")
+			-- TODO: Skill speed effect is vague and says "and similar stats", may apply to more than this
 			modDB:NewMod("MovementSpeed", "INC", effect, "Onslaught")
 		end
 		if modDB:Flag(nil, "Fanaticism") and actor.mainSkill and actor.mainSkill.activeEffect.srcInstance.selfCast then
@@ -1031,7 +1033,13 @@ function calcs.perform(env, skipEHP)
 	local ringsEffectMod = modDB:Sum("INC", nil, "EffectOfBonusesFromRings") / 100
 	if ringsEffectMod > 0 then
 		if env.player.itemList["Ring 1"] then
-			for _, mod in ipairs(env.player.itemList["Ring 1"].modList or env.player.itemList["Ring 1"].slotModList[1]) do
+			local slotName = "Ring 1"
+
+			if env.player.itemList["Ring 1"].name:match("Kalandra's Touch") and env.player.itemList["Ring 2"] and not env.player.itemList["Ring 2"].name:match("Kalandra's Touch") then
+				slotName = "Ring 2"
+			end
+
+			for _, mod in ipairs(env.player.itemList[slotName].modList or env.player.itemList[slotName].slotModList[1]) do
 				-- Filter out SocketedIn type mods
 				for _, tag in ipairs(mod) do
 					if tag.type == "SocketedIn" then
@@ -1047,7 +1055,13 @@ function calcs.perform(env, skipEHP)
 			end
 		end
 		if env.player.itemList["Ring 2"] then
-			for _, mod in ipairs(env.player.itemList["Ring 2"].modList or env.player.itemList["Ring 2"].slotModList[2]) do
+			local slotName = "Ring 2"
+
+			if env.player.itemList["Ring 2"].name:match("Kalandra's Touch") and env.player.itemList["Ring 1"] and not env.player.itemList["Ring 1"].name:match("Kalandra's Touch") then
+				slotName = "Ring 1"
+			end
+
+			for _, mod in ipairs(env.player.itemList[slotName].modList or env.player.itemList[slotName].slotModList[2]) do
 				-- Filter out SocketedIn type mods
 				for _, tag in ipairs(mod) do
 					if tag.type == "SocketedIn" then
@@ -2011,6 +2025,9 @@ function calcs.perform(env, skipEHP)
 		if activeSkill.skillModList:Flag(nil, "Condition:CanWither") or (activeSkill.minion and env.minion and env.minion.modDB:Flag(nil, "Condition:CanWither")) then
 			local effect = activeSkill.minion and 5 or m_floor(5 * (1 + modDB:Sum("INC", nil, "WitherEffect") / 100))
 			modDB:NewMod("WitherEffectStack", "MAX", effect)
+		end
+		if activeSkill.skillModList:Flag(nil, "ApplyCriticalWeakness") then
+			modDB:NewMod("ApplyCriticalWeakness", "FLAG", true)
 		end
 		--Handle combustion
 		if enemyDB:Flag(nil, "Condition:Ignited") and (activeSkill.skillTypes[SkillType.Damage] or activeSkill.skillTypes[SkillType.Attack]) and not appliedCombustion then

@@ -194,7 +194,7 @@ skills["ArchmagePlayer"] = {
 			statDescriptionScope = "archmage",
 			statMap = {
 				["archmage_max_mana_permyriad_to_add_to_non_channelled_spell_mana_cost"] = {
-					mod("ManaCost", "BASE", nil, 0, 0, { type = "GlobalEffect", effectType = "Buff" }, { type = "SkillType", skillType = SkillType.Channel, neg = true }, { type = "SkillType", skillType = SkillType.Spell }, { type = "PercentStat", stat = "Mana", percent = 1 }),
+					mod("ManaCostNoMult", "BASE", nil, 0, 0, { type = "GlobalEffect", effectType = "Buff" }, { type = "SkillType", skillType = SkillType.Channel, neg = true }, { type = "SkillType", skillType = SkillType.Spell }, { type = "PercentStat", stat = "Mana", percent = 1 }),
 					div = 100,
 				},
 				["archmage_all_damage_%_to_gain_as_lightning_to_grant_to_non_channelling_spells_per_100_max_mana"] = {
@@ -1596,6 +1596,7 @@ skills["BonestormPlayer"] = {
 			baseFlags = {
 				spell = true,
 				duration = true,
+				projectile = true,
 			},
 			constantStats = {
 				{ "base_number_of_projectiles", 1 },
@@ -1675,6 +1676,7 @@ skills["BonestormPlayer"] = {
 				spell = true,
 				duration = true,
 				area = true,
+				projectile = true,
 			},
 			constantStats = {
 				{ "active_skill_base_area_of_effect_radius", 5 },
@@ -5880,6 +5882,11 @@ skills["EyeOfWinterPlayer"] = {
 			incrementalEffectiveness = 0.14000000059605,
 			damageIncrementalEffectiveness = 0.0065000001341105,
 			statDescriptionScope = "eye_of_winter_new",
+			statMap = {
+				["eye_of_winter_number_of_brittle_stacks_to_apply"] = {
+					flag("ApplyCriticalWeakness"),
+				},
+			},
 			baseFlags = {
 				spell = true,
 				projectile = true,
@@ -9614,6 +9621,11 @@ skills["HeraldOfIcePlayer"] = {
 			label = "Buff",
 			incrementalEffectiveness = 0.054999999701977,
 			statDescriptionScope = "herald_of_ice",
+			statMap = {
+				["display_herald_of_ice_behaviour"] = {
+					mod("HeraldOfIceBuff", "BASE", nil, 0, 0, { type = "GlobalEffect", effectType = "Buff", effectName = "Herald of Ice" }),
+				},
+			},
 			baseFlags = {
 			},
 			stats = {
@@ -11297,6 +11309,11 @@ skills["MalicePlayer"] = {
 			label = "Malice",
 			incrementalEffectiveness = 0.054999999701977,
 			statDescriptionScope = "aura_crit_against_enemy",
+			statMap = {
+				["critical_chance_against_aura_apply_brittle_every_x_ms"] = {
+					flag("ApplyCriticalWeakness"),
+				},
+			},
 			baseFlags = {
 				area = true,
 			},

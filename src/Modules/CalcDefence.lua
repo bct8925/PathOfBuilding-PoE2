@@ -70,7 +70,9 @@ function calcs.doActorLifeManaSpirit(actor)
 		local inc = modDB:Sum("INC", nil, res)
 		local more = modDB:More(nil, res)
 		local conv = m_min(modDB:Sum("BASE", nil, res .. "ConvertToEnergyShield", res .. "ConvertToArmour", res .. "ConvertToEvasion"), 100)
-		output[res] = m_max(round((base * (1 - conv/100) + extra) * (1 + inc/100) * more), 1)
+		local override = modDB:Override(nil, res)
+		output[res.."HasOverride"] = override ~= nil
+		output[res] = override or m_max(round((base * (1 - conv/100) + extra) * (1 + inc/100) * more), 1)
 		if breakdown then
 			if inc ~= 0 or more ~= 1 or conv ~= 0 or extra ~= 0 then
 				breakdown[res][1] = s_format("%g ^8(base)", base)
@@ -226,22 +228,19 @@ function calcs.doActorLifeManaSpiritReservation(actor)
 
 	for _, pool in pairs({"Life", "Mana", "Spirit"}) do
 		local max = output[pool]
-		local reserved
+		local lowPerc = modDB:Sum("BASE", nil, "Low" .. pool .. "Percentage")
+		local reserved = (actor["reserved_"..pool.."Base"] or 0) + m_ceil(max * (actor["reserved_"..pool.."Percent"] or 0) / 100)
+		uncancellableReservation = actor["uncancellable_"..pool.."Reservation"] or 0
+		output[pool.."Reserved"] = m_min(reserved, max)
+		output[pool.."Unreserved"] = max - reserved
+		output[pool.."UncancellableReservation"] = m_min(uncancellableReservation, 0)
+		output[pool.."CancellableReservation"] = 100 - uncancellableReservation
 		if max > 0 then
-			local lowPerc = modDB:Sum("BASE", nil, "Low" .. pool .. "Percentage")
-			reserved = (actor["reserved_"..pool.."Base"] or 0) + m_ceil(max * (actor["reserved_"..pool.."Percent"] or 0) / 100)
-			uncancellableReservation = actor["uncancellable_"..pool.."Reservation"] or 0
-			output[pool.."Reserved"] = m_min(reserved, max)
 			output[pool.."ReservedPercent"] = m_min(reserved / max * 100, 100)
-			output[pool.."Unreserved"] = max - reserved
 			output[pool.."UnreservedPercent"] = (max - reserved) / max * 100
-			output[pool.."UncancellableReservation"] = m_min(uncancellableReservation, 0)
-			output[pool.."CancellableReservation"] = 100 - uncancellableReservation
 			if (max - reserved) / max <= (lowPerc > 0 and lowPerc or data.misc.LowPoolThreshold) then
 				condList["Low"..pool] = true
 			end
-		else
-			reserved = 0
 		end
 		for _, value in ipairs(modDB:List(nil, "GrantReserved"..pool.."AsAura")) do
 			local auraMod = copyTable(value.mod)
@@ -651,7 +650,6 @@ function calcs.defence(env, actor)
 	for _, elem in ipairs(resistTypeList) do
 		local min, max, total, dotTotal, totemTotal, totemMax
 		min = data.misc.ResistFloor
-		max = modDB:Override(nil, elem.."ResistMax") or m_min(data.misc.MaxResistCap, modDB:Sum("BASE", nil, elem.."ResistMax", isElemental[elem] and "ElementalResistMax"))
 		total = modDB:Override(nil, elem.."Resist")
 		totemMax = modDB:Override(nil, "Totem"..elem.."ResistMax") or m_min(data.misc.MaxResistCap, modDB:Sum("BASE", nil, "Totem"..elem.."ResistMax", isElemental[elem] and "TotemElementalResistMax"))
 		totemTotal = modDB:Override(nil, "Totem"..elem.."Resist")
@@ -669,6 +667,10 @@ function calcs.defence(env, actor)
 		
 		-- Fractional resistances are truncated
 		total = m_modf(total)
+		-- Unnatural Resilience needs FireResistTotal before we calc FireResistMax
+		output[elem.."ResistTotal"] = total
+		max = modDB:Override(nil, elem.."ResistMax") or m_min(data.misc.MaxResistCap, modDB:Sum("BASE", nil, elem.."ResistMax", isElemental[elem] and "ElementalResistMax"))
+		
 		dotTotal = dotTotal and m_modf(dotTotal) or total
 		totemTotal = m_modf(totemTotal)
 		min = m_modf(min)
@@ -680,7 +682,6 @@ function calcs.defence(env, actor)
 		local totemFinal = m_max(m_min(totemTotal, totemMax), min)
 
 		output[elem.."Resist"] = final
-		output[elem.."ResistTotal"] = total
 		output[elem.."ResistOverCap"] = m_max(0, total - max)
 		output[elem.."ResistOver75"] = m_max(0, final - 75)
 		output["Missing"..elem.."Resist"] = m_max(0, max - final)
@@ -1087,7 +1088,13 @@ function calcs.defence(env, actor)
 				modDB:NewMod("Extra"..res.name, "BASE", res.globalBase, "Conversion")
 			end
 		end
-		output.EnergyShield = modDB:Override(nil, "EnergyShield") or m_max(round(output.EnergyShield), 0)
+
+		output.MaximumEnergyShield = modDB:Override(nil, "EnergyShield") or m_max(round(output.EnergyShield), 0)
+		output.EnergyShield = output.MaximumEnergyShield
+		if modDB:Flag(nil, "CannotHaveES") then
+			output.EnergyShield = 0
+		end
+
 		output.Armour = m_max(round(output.Armour), 0)
 		output.ArmourDefense = (modDB:Max(nil, "ArmourDefense") or 0) / 100
 		output.RawArmourDefense = output.ArmourDefense > 0 and ((1 + output.ArmourDefense) * 100) or nil
@@ -1972,7 +1979,7 @@ function calcs.buildDefenceEstimations(env, actor)
 		local impaleArmourReduct = 0
 		local percentOfArmourApplies = m_min((not modDB:Flag(nil, "ArmourDoesNotApplyTo"..damageType.."DamageTaken") and modDB:Sum("BASE", nil, "ArmourAppliesTo"..damageType.."DamageTaken") or 0), 100)
 		local effectiveAppliedArmour = (output.Armour * percentOfArmourApplies / 100) * (1 + output.ArmourDefense)
-		local resMult = 1 - (resist - enemyPen) / 100
+		local resMult = 1 - (resist > 0 and m_max(resist - enemyPen, 0) or resist) / 100
 		local reductMult = 1
 		local takenFlat = modDB:Sum("BASE", nil, "DamageTaken", damageType.."DamageTaken", "DamageTakenWhenHit", damageType.."DamageTakenWhenHit")
 		if damageCategoryConfig == "Melee" or damageCategoryConfig == "Projectile" then
@@ -2068,7 +2075,11 @@ function calcs.buildDefenceEstimations(env, actor)
 			if enemyPen ~= 0 then
 				t_insert(breakdown[damageType.."TakenHitMult"], s_format("+ Enemy Pen: %.2f", enemyPen / 100))
 			end
-			if resist ~= 0 and enemyPen ~= 0 then
+			if resist <= 0 and enemyPen ~=0 then
+				t_insert(breakdown[damageType.."TakenHitMult"], s_format("= %.2f ^8(Negative resistance unaffected by penetration)", resMult))
+			elseif (resist - enemyPen) < 0 then
+				t_insert(breakdown[damageType.."TakenHitMult"], s_format("= %.2f ^8(Penetration cannot bring resistances below 0)", resMult))
+			elseif resist ~= 0 then
 				t_insert(breakdown[damageType.."TakenHitMult"], s_format("= %.2f", resMult))
 			end
 			if resMult ~= 1 and reductMult ~= 1 then

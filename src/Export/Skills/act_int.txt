@@ -23,7 +23,7 @@ statMap = {
 #flags
 statMap = {
 	["archmage_max_mana_permyriad_to_add_to_non_channelled_spell_mana_cost"] = {
-		mod("ManaCost", "BASE", nil, 0, 0, { type = "GlobalEffect", effectType = "Buff" }, { type = "SkillType", skillType = SkillType.Channel, neg = true }, { type = "SkillType", skillType = SkillType.Spell }, { type = "PercentStat", stat = "Mana", percent = 1 }),
+		mod("ManaCostNoMult", "BASE", nil, 0, 0, { type = "GlobalEffect", effectType = "Buff" }, { type = "SkillType", skillType = SkillType.Channel, neg = true }, { type = "SkillType", skillType = SkillType.Spell }, { type = "PercentStat", stat = "Mana", percent = 1 }),
 		div = 100,
 	},
 	["archmage_all_damage_%_to_gain_as_lightning_to_grant_to_non_channelling_spells_per_100_max_mana"] = {
@@ -114,7 +114,7 @@ statMap = {
 #skill BonestormPlayer
 #startSets
 #set BonestormPlayer
-#flags spell duration
+#flags spell duration projectile
 statMap = {
 	["bone_spear_minimum_added_attack_physical_damage_taken"] = {
 		mod("SelfPhysicalMin", "BASE", nil, ModFlag.Attack, 0, { type = "GlobalEffect", effectType = "Debuff", effectName = "Bonestorm", effectCond = "BonestormAddedDamage" }),
@@ -125,7 +125,7 @@ statMap = {
 },
 #mods
 #set BonestormExplosionPlayer
-#flags spell duration area
+#flags spell duration area projectile
 #mods
 #skillEnd
 
@@ -398,6 +398,11 @@ statMap = {
 #startSets
 #set EyeOfWinterPlayer
 #flags spell projectile
+statMap = {
+	["eye_of_winter_number_of_brittle_stacks_to_apply"] = {
+		flag("ApplyCriticalWeakness"),
+	},
+},
 #mods
 #skillEnd
 
@@ -636,6 +641,11 @@ end,
 #startSets
 #set HeraldOfIcePlayer
 #flags
+statMap = {
+	["display_herald_of_ice_behaviour"] = {
+		mod("HeraldOfIceBuff", "BASE", nil, 0, 0, { type = "GlobalEffect", effectType = "Buff", effectName = "Herald of Ice" }),
+	},
+},
 #mods
 #set HeraldOfIceOnKillPlayer
 #flags attack area
@@ -735,6 +745,11 @@ end,
 #startSets
 #set MalicePlayer
 #flags area
+statMap = {
+	["critical_chance_against_aura_apply_brittle_every_x_ms"] = {
+		flag("ApplyCriticalWeakness"),
+	},
+},
 #mods
 #skillEnd
 

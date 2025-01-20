@@ -3612,6 +3612,11 @@ skills["HeraldOfAshPlayer"] = {
 			label = "Buff",
 			incrementalEffectiveness = 0.054999999701977,
 			statDescriptionScope = "herald_of_ash",
+			statMap = {
+				["herald_of_ash_overkill_threshold_%"] = {
+					mod("HeraldOfAshBuff", "BASE", nil, 0, 0, { type = "GlobalEffect", effectType = "Buff", effectName = "Herald of Ash" }),
+				},
+			},
 			baseFlags = {
 			},
 			constantStats = {
@@ -10463,6 +10468,14 @@ skills["ScavengedPlatingPlayer"] = {
 			incrementalEffectiveness = 0.14000000059605,
 			damageIncrementalEffectiveness = 0.0065000001341105,
 			statDescriptionScope = "scavenged_plating",
+			statMap = {
+				["scavenged_plating_armour_+%_final_per_stack"] = {
+					mod("Armour", "MORE", nil, 0, 0, { type = "GlobalEffect", effectType = "Buff", effectName = "Scavenged Plating" }, { type = "Multiplier", var = "ScavengedPlatingStacks", limitVar = "ScavengedPlatingStacksLimit" }),
+				},
+				["scavenged_plating_maximum_stacks_display"] = {
+					mod("Multiplier:ScavengedPlatingStacksLimit", "BASE", nil, 0, 0, { type = "GlobalEffect", effectType = "Buff", effectName = "Scavenged Plating"}),
+				},
+			},
 			baseFlags = {
 				duration = true,
 			},
