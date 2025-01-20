@@ -2367,7 +2367,7 @@ c["Double Stun Threshold while Shield is Raised"]={nil,"Double Stun Threshold wh
 c["Double the number of your Poisons that targets can be affected by at the same time"]={{[1]={flags=0,keywordFlags=0,name="PoisonCanStack",type="FLAG",value=true},[2]={flags=0,keywordFlags=0,name="PoisonStacks",type="MORE",value=100}},nil}
 c["Drop Ignited Ground while moving, which lasts 8 seconds and Ignites as though dealing Fire Damage equal to 10% of your maximum Life"]={nil,"Drop Ignited Ground while moving, which lasts 8 seconds and Ignites as though dealing Fire Damage equal to 10% of your maximum Life "}
 c["Drop Shocked Ground while moving, lasting 8 seconds"]={nil,"Drop Shocked Ground while moving, lasting 8 seconds "}
-c["Effect and Duration of Flames of Chayula on You is Doubled"]={nil,"Effect and Duration of Flames of Chayula on You is Doubled "}
+c["Effect and Duration of Flames of Chayula on You is Doubled"]={{[1]={flags=0,keywordFlags=0,name="Multiplier:FlameEffect",type="BASE",value=1}},nil}
 c["Effect is not removed when Unreserved Mana is Filled"]={{[1]={flags=0,keywordFlags=0,name="ManaFlaskEffectNotRemoved",type="FLAG",value=true}},nil}
 c["Eldritch Battery"]={{[1]={flags=0,keywordFlags=0,name="Keystone",type="LIST",value="Eldritch Battery"}},nil}
 c["Elemental Ailment Threshold is increased by Overcapped Chaos Resistance"]={nil,"Elemental Ailment Threshold is increased by Overcapped Chaos Resistance "}
