@@ -9,7 +9,6 @@ USE_DAT64 = true
 local ipairs = ipairs
 local t_insert = table.insert
 local t_remove = table.remove
-local t_maxn = table.maxn
 local m_ceil = math.ceil
 local m_max = math.max
 local m_min = math.min
@@ -111,16 +110,6 @@ function main:Init()
 		print(string.format(...))
 	end
 
-	function clearScriptOutput()
-		if t_maxn(self.scriptOutput) == 0 then
-			return
-		end
-		local removed = -1
-		while removed ~= nil do
-			removed = t_remove(self.scriptOutput)
-		end
-	end
-
 	function processTemplateFile(name, inDir, outDir, directiveTable)
 		local state = { }
 		local out = io.open(outDir..name..".lua", "w")
@@ -211,13 +200,13 @@ function main:Init()
 		end
 	}
 	self.controls.clearOutput = new("ButtonControl", nil, {1190, 10, 100, 18}, "Clear", function()
-		clearScriptOutput()
+		wipeTable(self.scriptOutput)
 	end) {
 		shown = function()
 			return not self.curDatFile 
 		end,
 		enabled = function()
-			return t_maxn(self.scriptOutput) > 0
+			return #self.scriptOutput > 0
 		end
 	}
 
