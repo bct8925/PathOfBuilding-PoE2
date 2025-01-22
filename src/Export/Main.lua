@@ -109,7 +109,6 @@ function main:Init()
 	function printf(...)
 		print(string.format(...))
 	end
-
 	function processTemplateFile(name, inDir, outDir, directiveTable)
 		local state = { }
 		local out = io.open(outDir..name..".lua", "w")
