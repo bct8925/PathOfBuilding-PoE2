@@ -214,6 +214,9 @@ function main:Init()
 		clearScriptOutput()
 	end) {
 		shown = function()
+			return not self.curDatFile 
+		end,
+		enabled = function()
 			return t_maxn(self.scriptOutput) > 0
 		end
 	}
