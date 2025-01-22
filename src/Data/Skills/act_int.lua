@@ -7689,6 +7689,12 @@ skills["FrostBombPlayer"] = {
 			incrementalEffectiveness = 0.14000000059605,
 			damageIncrementalEffectiveness = 0.0065000001341105,
 			statDescriptionScope = "frost_bomb",
+			statMap = {
+				['skill_cold_exposure_magnitude'] = {
+					mod("ColdExposure", "BASE", nil, 0, 0, { type = "GlobalEffect", effectType = "Debuff" }),
+					mult = -1
+				},
+			},
 			baseFlags = {
 				spell = true,
 				area = true,
