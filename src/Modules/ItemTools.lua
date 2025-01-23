@@ -49,9 +49,9 @@ function itemLib.formatValue(value, baseValueScalar, valueScalar, precision, dis
 	value = value / precision -- convert back to display space
 	if displayPrecision then value = roundSymmetric(value, displayPrecision) end -- presentation
 	if displayPrecision and not ifRequired then -- whitespace is needed
-		return string.format("%"..displayPrecision.."f", value)
+		return string.format("%."..displayPrecision.."f", value)
 	elseif displayPrecision then
-		return tostring(roundSymmetric(value, displayPrecision))
+		return tostring(value, displayPrecision)
 	else
 		return tostring(roundSymmetric(value,  precision and m_min(2, m_floor(math.log(precision, 10))) or 2)) -- max decimals ingame is 2 
 	end
