@@ -1522,6 +1522,9 @@ return {
 ["projectile_chance_to_chain_1_extra_time_from_terrain_%"] = {
 	mod("TerrainChainChance", "BASE", nil),
 },
+["spell_skills_fire_2_additional_projectiles_final_chance_%"] = {
+	mod("TwoAdditionalProjectilesChance", "BASE", nil),
+},	
 ["additional_beam_only_chains"] = {
 	mod("BeamChainCountMax", "BASE", nil),
 },
@@ -2244,6 +2247,9 @@ return {
 -- Grenade
 ["grenade_skill_%_chance_to_explode_twice"] = {
 	mod("GrenadeExplodeTwice", "INC", nil),
+},
+["support_grenade_damage_+%_final"] = {
+	mod("Damage", "MORE", nil),
 },
 -- Other
 ["triggered_skill_damage_+%"] = {
