@@ -49,9 +49,9 @@ function itemLib.formatValue(value, baseValueScalar, valueScalar, precision, dis
 	value = value / precision -- convert back to display space
 	if displayPrecision then value = roundSymmetric(value, displayPrecision) end -- presentation
 	if displayPrecision and not ifRequired then -- whitespace is needed
-		return string.format("%"..displayPrecision.."f", value)
+		return string.format("%."..displayPrecision.."f", value)
 	elseif displayPrecision then
-		return tostring(roundSymmetric(value, displayPrecision))
+		return tostring(value, displayPrecision)
 	else
 		return tostring(roundSymmetric(value,  precision and m_min(2, m_floor(math.log(precision, 10))) or 2)) -- max decimals ingame is 2 
 	end
@@ -76,7 +76,7 @@ function itemLib.applyRange(line, range, valueScalar, baseValueScalar)
 	local strippedLine = line:gsub("([%+-]?)%((%-?%d+%.?%d*)%-(%-?%d+%.?%d*)%)", function(sign, min, max)
 		local value = min + range * (tonumber(max) - min)
 		if sign == "-" then value = value * -1 end
-		return (sign == "+" and value > 0 ) and sign..tostring(value) or tostring(value)
+		return (sign == "+" and value >= 0 ) and sign..tostring(value) or tostring(value)
 	end)
 	:gsub("%-(%d+%.?%d*%%) (%a+)", antonymFunc)
 	:gsub("(%-?%d+%.?%d*)", function(value)
@@ -320,7 +320,7 @@ end
 
 function itemLib.formatModLine(modLine, dbMode)
 	local line = (not dbMode and modLine.range and itemLib.applyRange(modLine.line, modLine.range, modLine.valueScalar, modLine.corruptedRange)) or modLine.line
-	if line:match("^%+?0%%? ") or (line:match(" %+?0%%? ") and not line:match("0 to [1-9]")) or line:match(" 0%-0 ") or line:match(" 0 to 0 ") then -- Hack to hide 0-value modifiers
+	if line:match("^%+?0%%? ") or (line:match(" %+?0%%? ") and not line:match("0 to [1-9]") and not line:match("0%% to %d+%%")) or line:match(" 0%-0 ") or line:match(" 0 to 0 ") then -- Hack to hide 0-value modifiers
 		return
 	end
 	local colorCode
