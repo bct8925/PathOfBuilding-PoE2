@@ -1943,7 +1943,7 @@ c["60% increased Flask Mana Recovery rate"]={{[1]={flags=0,keywordFlags=0,name="
 c["60% increased Freeze Threshold"]={{[1]={flags=0,keywordFlags=0,name="FreezeThreshold",type="INC",value=60}},nil}
 c["60% increased Physical Damage"]={{[1]={flags=0,keywordFlags=0,name="PhysicalDamage",type="INC",value=60}},nil}
 c["60% increased Rarity of Items found"]={{[1]={flags=0,keywordFlags=0,name="LootRarity",type="INC",value=60}},nil}
-c["60% increased Stun Threshold for each time you've been Stunned Recently"]={{[1]={flags=0,keywordFlags=0,name="StunThreshold",type="INC",value=60}},"  for each time you've been Stunned Recently "}
+c["60% increased Stun Threshold for each time you've been Stunned Recently"]={{[1]={[1]={type="Multiplier",var="StunnedRecently"},flags=0,keywordFlags=0,name="StunThreshold",type="INC",value=60}},nil}
 c["60% increased bonuses gained from Equipped Rings"]={{[1]={flags=0,keywordFlags=0,name="EffectOfBonusesFromRings",type="INC",value=60}},nil}
 c["60% increased maximum Energy Shield"]={{[1]={[1]={type="Global"},flags=0,keywordFlags=0,name="EnergyShield",type="INC",value=60}},nil}
 c["60% reduced Bleeding Duration on you"]={{[1]={flags=0,keywordFlags=0,name="EnemyBleedDuration",type="INC",value=-60}},"  on you "}
