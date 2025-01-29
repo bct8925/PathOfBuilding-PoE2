@@ -2892,12 +2892,9 @@ c["Regenerate 3% of Life per second"]={{[1]={flags=0,keywordFlags=0,name="LifeRe
 c["Regenerate 3% of Life per second while on Low Life"]={{[1]={[1]={type="Condition",var="LowLife"},flags=0,keywordFlags=0,name="LifeRegenPercent",type="BASE",value=3}},nil}
 c["Regenerate 5% of Life over 1 second when Stunned"]={nil,"Regenerate 5% of Life over 1 second when Stunned "}
 c["Regenerate 5% of Life per second while Surrounded"]={{[1]={[1]={type="Condition",var="Surrounded"},flags=0,keywordFlags=0,name="LifeRegenPercent",type="BASE",value=5}},nil}
-c["Remembrancing 8000 songworthy deeds by the line of Medved"]={nil,"Remembrancing 8000 songworthy deeds by the line of Medved "}
-c["Remembrancing 8000 songworthy deeds by the line of Medved Remembrancing 8000 songworthy deeds by the line of Olroth"]={nil,"Remembrancing 8000 songworthy deeds by the line of Medved Remembrancing 8000 songworthy deeds by the line of Olroth "}
-c["Remembrancing 8000 songworthy deeds by the line of Olroth"]={nil,"Remembrancing 8000 songworthy deeds by the line of Olroth "}
-c["Remembrancing 8000 songworthy deeds by the line of Olroth Passives in radius are Conquered by the Kalguur"]={nil,"Remembrancing 8000 songworthy deeds by the line of Olroth Passives in radius are Conquered by the Kalguur "}
-c["Remembrancing 8000 songworthy deeds by the line of Vorana"]={nil,"Remembrancing 8000 songworthy deeds by the line of Vorana "}
-c["Remembrancing 8000 songworthy deeds by the line of Vorana Remembrancing 8000 songworthy deeds by the line of Medved"]={nil,"Remembrancing 8000 songworthy deeds by the line of Vorana Remembrancing 8000 songworthy deeds by the line of Medved "}
+c["Remembrancing 8000 songworthy deeds by the line of Medved"]={{[1]={flags=0,keywordFlags=0,name="JewelData",type="LIST",value={key="conqueredBy",value={conqueror={id=2,type="kalguur"},id=8000}}}},nil}
+c["Remembrancing 8000 songworthy deeds by the line of Olroth"]={{[1]={flags=0,keywordFlags=0,name="JewelData",type="LIST",value={key="conqueredBy",value={conqueror={id=3,type="kalguur"},id=8000}}}},nil}
+c["Remembrancing 8000 songworthy deeds by the line of Vorana"]={{[1]={flags=0,keywordFlags=0,name="JewelData",type="LIST",value={key="conqueredBy",value={conqueror={id=1,type="kalguur"},id=8000}}}},nil}
 c["Remove a Curse when you use a Mana Flask"]={nil,"Remove a Curse when you use a Mana Flask "}
 c["Removes all Mana"]={{[1]={flags=0,keywordFlags=0,name="Mana",type="MORE",value=-100}},nil}
 c["Removes all Spirit"]={nil,"Removes all Spirit "}
