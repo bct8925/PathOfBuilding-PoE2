@@ -835,6 +835,7 @@ local modNameList = {
 	["massive shrine buff"] = "Condition:MassiveShrine",
 	-- Count related
 	["skill slots"] = "SkillSlots",
+	["skill slot"] = "SkillSlots",
 }
 
 -- List of modifier flags
