@@ -3946,6 +3946,12 @@ local specialModList = {
 	["(%d+)%% increased minion attack speed per (%d+) dexterity"] = function(num, _, div) return { mod("MinionModifier", "LIST", { mod = mod("Speed", "INC", num, nil, ModFlag.Attack) }, { type = "PerStat", stat = "Dex", div = tonumber(div) }) } end,
 	["(%d+)%% increased minion movement speed per (%d+) dexterity"] = function(num, _, div) return { mod("MinionModifier", "LIST", { mod = mod("MovementSpeed", "INC", num) }, { type = "PerStat", stat = "Dex", div = tonumber(div) }) } end,
 	["minions deal (%d+)%% increased damage per (%d+) dexterity"] = function(num, _, div) return { mod("MinionModifier", "LIST", { mod = mod("Damage", "INC", num) }, { type = "PerStat", stat = "Dex", div = tonumber(div) }) } end,
+	["minions' resistances are equal to yours"] = function() return {
+		mod("MinionModifier", "LIST", { mod = mod("FireResist", "OVERRIDE", 1, { type = "PerStat", stat = "FireResist", actor = "parent" }) }),
+		mod("MinionModifier", "LIST", { mod = mod("ColdResist", "OVERRIDE", 1, { type = "PerStat", stat = "ColdResist", actor = "parent" }) }),
+		mod("MinionModifier", "LIST", { mod = mod("LightningResist", "OVERRIDE", 1, { type = "PerStat", stat = "LightningResist", actor = "parent" }) }),
+		mod("MinionModifier", "LIST", { mod = mod("ChaosResist", "OVERRIDE", 1, { type = "PerStat", stat = "ChaosResist", actor = "parent" }) }),
+	} end,
 	["minions have (%d+)%% chance to deal double damage while they are on full life"] = function(num) return { mod("MinionModifier", "LIST", { mod = mod("DoubleDamageChance", "BASE", num, { type = "Condition", var = "FullLife" }) }) } end,
 	["(%d+)%% increased golem damage for each type of golem you have summoned"] = function(num) return {
 		mod("MinionModifier", "LIST", { mod = mod("Damage", "INC", num, { type = "ActorCondition", actor = "parent", var = "HavePhysicalGolem" }) }, { type = "SkillType", skillType = SkillType.Golem }),
