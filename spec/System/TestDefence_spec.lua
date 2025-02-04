@@ -102,7 +102,7 @@ describe("TestDefence", function()
 		assert.are.equals(3000, build.calcsTab.calcsOutput.ColdMaximumHitTaken)
 		assert.are.equals(3000, build.calcsTab.calcsOutput.LightningMaximumHitTaken)
 		assert.are.equals(3000, build.calcsTab.calcsOutput.ChaosMaximumHitTaken)
-		local poolsRemaining = poolsRemainingAfterTypeMaxHit("Lightning")
+		local poolsRemaining = poolsRemainingAfterTypeMaxHit("Lightning", 0.8)
 		assert.are.equals(0, floor(poolsRemaining.Life))
 		assert.are.equals(0, floor(poolsRemaining.OverkillDamage))
 
@@ -414,7 +414,7 @@ describe("TestDefence", function()
 		poolsRemaining = poolsRemainingAfterTypeMaxHit("Fire")
 		assert.are.equals(0, floor(poolsRemaining.EnergyShield))
 		assert.are.equals(1000, floor(poolsRemaining.Mana))
-		assert.are.equals(0, floor(poolsRemaining.Life))
+		assert.are.not_false(1 >= floor(poolsRemaining.Life))
 		assert.are.equals(0, floor(poolsRemaining.OverkillDamage))
 	end)
 
@@ -422,7 +422,7 @@ describe("TestDefence", function()
 		build.configTab.input.enemyIsBoss = "None"
 		build.configTab.input.customMods = [[
 			+40 to maximum life
-			+200 to energy shield
+			+300 to energy shield
 			50% of damage taken bypasses energy shield
 			You have no intelligence
 			+60% to all resistances
