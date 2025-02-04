@@ -85,8 +85,10 @@ local function doActorAttribsConditions(env, actor)
 	local condList = modDB.conditions
 
 	-- Set conditions
-	if (actor.itemList["Weapon 2"] and actor.itemList["Weapon 2"].type == "Shield") or (actor == env.player and env.aegisModList) then
+	if (actor.itemList["Weapon 2"] and actor.itemList["Weapon 2"].type == "Shield") then
 		condList["UsingShield"] = true
+	elseif (actor.itemList["Weapon 2"] and actor.itemList["Weapon 2"].type == "Focus") then
+		condList["UsingFocus"] = true
 	elseif not actor.itemList["Weapon 2"] then
 		condList["OffHandIsEmpty"] = true
 	end
@@ -311,7 +313,9 @@ local function doActorAttribsConditions(env, actor)
 			end
 		end
 		if not modDB:Flag(nil, "NoDexterityAttributeBonuses") then
-			modDB:NewMod("Accuracy", "BASE", output.Dex * (modDB:Override(nil, "DexAccBonusOverride") or data.misc.AccuracyPerDexBase) * inherentAttributeMultiplier, "Dexterity")
+			if not modDB:Flag(nil, "NoDexBonusToAccuracy") then
+				modDB:NewMod("Accuracy", "BASE", output.Dex * (modDB:Override(nil, "DexAccBonusOverride") or data.misc.AccuracyPerDexBase) * inherentAttributeMultiplier, "Dexterity")
+			end
 		end
 		if not modDB:Flag(nil, "NoIntelligenceAttributeBonuses") then
 			if not modDB:Flag(nil, "NoIntBonusToMana") then
@@ -827,9 +831,9 @@ function calcs.perform(env, skipEHP)
 		for _, mod in ipairs(env.player.mainSkill.extraSkillModList) do
 			env.minion.modDB:AddMod(mod)
 		end
-		if env.aegisModList then
-			env.minion.itemList["Weapon 3"] = env.player.itemList["Weapon 2"]
-			env.minion.modDB:AddList(env.aegisModList)
+		if env.talismanModList then
+			-- Adding mods provided by "Necromantic Talisman"
+			env.minion.modDB:AddList(env.talismanModList)
 		end
 		if env.theIronMass and env.minion.type == "RaisedSkeleton" then
 			env.minion.modDB:AddList(env.theIronMass)
@@ -874,9 +878,13 @@ function calcs.perform(env, skipEHP)
 		if modDB:Flag(nil, "HalfStrengthAddedToMinions") then
 			env.minion.modDB:NewMod("Str", "BASE", round(calcLib.val(modDB, "Str") * 0.5), "Player")
 		end
+		if modDB:Flag(nil, "DexterityAddedToMinions") then
+			env.minion.modDB:NewMod("Dex", "BASE", round(calcLib.val(modDB, "Dex")), "Dead can Dance")
+		end
 	end
-	if env.aegisModList then
-		env.player.itemList["Weapon 2"] = nil
+	if env.talismanModList then
+		-- Accounting for "Necromantic Talisman"
+		env.player.itemList["Amulet"] = nil
 	end
 	if modDB:Flag(nil, "AlchemistsGenius") then
 		local effectMod = 1 + modDB:Sum("INC", nil, "BuffEffectOnSelf") / 100
@@ -1293,7 +1301,7 @@ function calcs.perform(env, skipEHP)
 
 	local effectInc = modDB:Sum("INC", {actor = "player"}, "CharmEffect")
 	local effectIncMagic = modDB:Sum("INC", {actor = "player"}, "MagicCharmEffect")
-	local charmLimit = modDB:Sum("BASE", nil, "CharmLimit")
+	local charmLimit = modDB:Override(nil, "CharmLimit") or modDB:Sum("BASE", nil, "CharmLimit")
 
 	-- charm breakdown
 	if breakdown then
@@ -1424,6 +1432,7 @@ function calcs.perform(env, skipEHP)
 						else
 							req = m_floor(reqSource[attr] * reqMultItem)
 						end
+						output[attr.."RequirementsOn"..reqSource.sourceSlot] = req;
 					elseif reqSource.source == "Gem" then
 						req = m_floor(reqSource[attr] * reqMultGem)
 					end

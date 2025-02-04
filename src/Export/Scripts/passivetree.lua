@@ -9,7 +9,6 @@ local cacheExtract = main.treeCacheExtract
 if not loadStatFile then
 	dofile("statdesc.lua")
 end
-loadStatFile("stat_descriptions.csd")
 loadStatFile("passive_skill_stat_descriptions.csd")
 
 local function extractFromGgpk(listToExtract, useRegex)
@@ -373,6 +372,7 @@ local sheets = {
 	newSheet("oils", defaultMaxWidth, 100),
 	newSheet("lines", defaultMaxWidth, 100),
 	newSheet("jewelsockets", defaultMaxWidth, 100),
+	newSheet("legion", defaultMaxWidth, 100),
 }
 local sheetLocations = {
 	["skills"] = 1,
@@ -384,6 +384,7 @@ local sheetLocations = {
 	["oils"] = 7,
 	["lines"] = 8,
 	["jewelsockets"] = 9,
+	["legion"] = 10,
 }
 local function getSheet(sheetLocation)
 	return sheets[sheetLocations[sheetLocation]]
@@ -504,6 +505,32 @@ for jewel in jewelArt:Rows() do
 	printf("Adding jewel socket " .. jewel.Item.Name .. " " .. asset.path .. " to sprite")
 	local name = jewel.Item.Name
 	addToSheet(getSheet("jewelsockets"), asset.path, "jewelpassive", commonMetadata(name))
+end
+
+-- adding legion assets
+for legion in dat("AlternatePassiveSkills"):Rows() do
+	addToSheet(getSheet("legion"), legion.DDSIcon, "legion", commonMetadata(legion.DDSIcon))
+end
+
+
+local artsToLegion = {
+	"Art/2DArt/UIImages/InGame/PassiveSkillScreenMarakethJewelCircle2",
+	"Art/2DArt/UIImages/InGame/PassiveSkillScreenKalguuranJewelCircle1",
+	"Art/2DArt/UIImages/InGame/PassiveSkillScreenKaruiJewelCircle2",
+	"Art/2DArt/UIImages/InGame/PassiveSkillScreenEternalEmpireJewelCircle1",
+	"Art/2DArt/UIImages/InGame/PassiveSkillScreenEternalEmpireJewelCircle2",
+	"Art/2DArt/UIImages/InGame/PassiveSkillScreenTemplarJewelCircle2",
+	"Art/2DArt/UIImages/InGame/PassiveSkillScreenTemplarJewelCircle1",
+	"Art/2DArt/UIImages/InGame/PassiveSkillScreenVaalJewelCircle2",
+	"Art/2DArt/UIImages/InGame/PassiveSkillScreenKalguuranJewelCircle2",
+	"Art/2DArt/UIImages/InGame/PassiveSkillScreenKaruiJewelCircle1",
+	"Art/2DArt/UIImages/InGame/PassiveSkillScreenVaalJewelCircle1",
+	"Art/2DArt/UIImages/InGame/PassiveSkillScreenMarakethJewelCircle1"
+}
+
+for _, art in ipairs(artsToLegion) do
+	local asset = uiImages[string.lower(art)]
+	addToSheet(getSheet("legion"), asset.path, "legion", commonMetadata(asset.path))
 end
 
 local tree = {
@@ -654,6 +681,7 @@ printf("Generating tree groups...")
 
 local orbitsConstants = { }
 local ascendancyGroups = {}
+local missingStatInfo = {}
 for i, group in ipairs(psg.groups) do
 	local groupIsAscendancy = false
 	local treeGroup = {
@@ -721,12 +749,33 @@ for i, group in ipairs(psg.groups) do
 
 			-- Stats
 			if passiveRow.Stats ~= nil then
-				node["stats"] = {}
+				node["stats"] = node["stats"] or {}
 				local parseStats = {}
+				local totalStats = 0
+				local namesStats = ""
 				for k, stat in ipairs(passiveRow.Stats) do
 					parseStats[stat.Id] = { min = passiveRow["Stat" .. k], max = passiveRow["Stat" .. k] }
+					totalStats = totalStats + 1
+					namesStats = namesStats .. stat.Id .. " | "
 				end
-				local out, orders = describeStats(parseStats)
+				local out, orders, missing = describeStats(parseStats)
+				if #out < totalStats then
+					table.insert(missingStatInfo, "====================================")
+					table.insert(missingStatInfo,"Stats not found for passive " .. passiveRow.Name .. " " .. passive.id)
+					table.insert(missingStatInfo,"Stats found: " .. totalStats)
+					table.insert(missingStatInfo,namesStats)
+					table.insert(missingStatInfo,"Stats out: " .. #out)
+					for k, line in ipairs(out) do
+						table.insert(missingStatInfo,line)
+					end
+					table.insert(missingStatInfo,"Missing: ")
+					for k, _ in pairs(missing) do
+						if k ~= 1 then
+							table.insert(missingStatInfo,k)
+						end
+					end
+					table.insert(missingStatInfo,"====================================")
+				end
 				for k, line in ipairs(out) do
 					table.insert(node["stats"], line)
 				end
@@ -761,6 +810,22 @@ for i, group in ipairs(psg.groups) do
 				for _, gemEffect in pairs(passiveRow.GrantedSkill.GemEffects) do
 					local skillname = gemEffect.GrantedEffect.ActiveSkill.DisplayName
 					table.insert(node["stats"], "Grants Skill: " .. skillname)
+
+					-- -- include the stat description
+					local statDescription =string.sub(string.lower(gemEffect.GrantedEffect.ActiveSkill.StatDescription), 1, -2)
+					local handle = NewFileSearch("ggpk/" .. statDescription ..".csd")
+					local almostOnce = false
+					while handle do
+						almostOnce = true
+						print(statDescription:gsub("metadata/statdescriptions", "") .. ".csd")
+						-- loadStatFile(statDescription:gsub("metadata/statdescriptions/", "") .. ".csd")
+						if not handle:NextFile() then
+							break
+						end
+					end
+					if not almostOnce then
+						table.insert(missingStatInfo, "===================================>Missing stat" .. statDescription)
+					end
 				end
 			end
 
@@ -873,6 +938,15 @@ for i, group in ipairs(psg.groups) do
 	else
 		printf("Group " .. i .. " is empty")
 	end
+end
+
+-- write file with missing Stats
+if #missingStatInfo > 0 then
+	local file = io.open(basePath .. version .. "/missingStats.txt", "w")
+	for _, line in ipairs(missingStatInfo) do
+		file:write(line .. "\n")
+	end
+	file:close()
 end
 
 -- updating skillsPerOrbit

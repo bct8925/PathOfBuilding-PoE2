@@ -707,7 +707,9 @@ holding Shift will put it in the second.]])
 					end
 					
 					-- Adding Mod
+					self.build.treeTab.skipTimeLostJewelProcessing = true
 					self:AddModComparisonTooltip(tooltip, mod)
+					self.build.treeTab.skipTimeLostJewelProcessing = false
 				end
 			end
 		end
@@ -1059,13 +1061,16 @@ function ItemsTabClass:Draw(viewPort, inputEvents)
 		if event.type == "KeyDown" then	
 			if event.key == "v" and IsKeyDown("CTRL") then
 				local newItem = Paste()
-				if newItem:find("{ ", 0, true) then
-					main:OpenConfirmPopup("Warning", "\"Advanced Item Descriptions\" (Ctrl+Alt+c) are unsupported.\n\nAbort paste?", "OK", function()
-						self:SetDisplayItem()
-					end)
-				end
 				if newItem then
+					if newItem:find("{ ", 0, true) then
+						main:OpenConfirmPopup("Warning", "\"Advanced Item Descriptions\" (Ctrl+Alt+c) are unsupported.\n\nAbort paste?", "OK", function()
+							self:SetDisplayItem()
+						end)
+					end
 					self:CreateDisplayItemFromRaw(newItem, true)
+				end
+				if self.displayItem and IsKeyDown("SHIFT") then
+					self:AddDisplayItem()
 				end
 			elseif event.key == "e" then
 				local mOverControl = self:GetMouseOverControl()
@@ -1092,6 +1097,8 @@ function ItemsTabClass:Draw(viewPort, inputEvents)
 			elseif event.key == "d" and IsKeyDown("CTRL") then
 				self.showStatDifferences = not self.showStatDifferences
 				self.build.buildFlag = true
+			elseif self.displayItem and IsKeyDown("RETURN") then
+				self:AddDisplayItem()
 			end
 		end
 	end
@@ -2959,7 +2966,7 @@ function ItemsTabClass:AddItemTooltip(tooltip, item, slot, dbMode)
 		if hasUptime then
 			local flaskChargesUsed = flaskData.chargesUsed * (1 + usedInc / 100)
 			if flaskChargesUsed > 0 and flaskDuration > 0 then
-				local averageChargesGenerated = chargesGenerated * flaskDuration
+				local averageChargesGenerated = totalChargesGenerated * flaskDuration
 				local percentageMin = m_min(averageChargesGenerated / flaskChargesUsed * 100, 100)
 				if percentageMin < 100 and chanceToNotConsumeCharges < 100 then
 					local averageChargesUsed = flaskChargesUsed * (100 - chanceToNotConsumeCharges) / 100

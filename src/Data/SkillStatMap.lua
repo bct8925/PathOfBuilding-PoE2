@@ -82,10 +82,10 @@ return {
 	skill("ChaosMax", nil),
 },
 ["main_hand_weapon_minimum_lightning_damage"] = {
-	skill("LightningMin", nil, { type = "Condition", var = "MainHandAttack" })
+	skill("LightningMin", nil)
 },
 ["main_hand_weapon_maximum_lightning_damage"] = {
-	skill("LightningMax", nil, { type = "Condition", var = "MainHandAttack" })
+	skill("LightningMax", nil)
 },
 ["spell_minimum_base_lightning_damage_per_removable_power_charge"] = {
 	skill("LightningMin", nil, { type = "Multiplier", var = "RemovablePowerCharge" }),
@@ -107,6 +107,12 @@ return {
 },
 ["spell_minimum_base_cold_damage_+_per_10_intelligence"] = {
 	skill("ColdMin", nil, { type = "PerStat", stat = "Int", div = 10 }),
+},
+["main_hand_weapon_minimum_cold_damage"] = {
+	skill("ColdMin", "BASE", nil),
+},
+["main_hand_weapon_maximum_cold_damage"] = {
+	skill("ColdMax", "BASE", nil),
 },
 ["spell_maximum_base_cold_damage_+_per_10_intelligence"] = {
 	skill("ColdMax", nil, { type = "PerStat", stat = "Int", div = 10 }),
@@ -281,7 +287,7 @@ return {
 	skill("corpseExplosionLifeMultiplier", nil),
 	div = 100,
 },
-["corpse_explosion_monster_life_permillage_fire"] = {
+["corpse_explosion_monster_life_permillage_physical"] = {
 	skill("corpseExplosionLifeMultiplier", nil),
 	div = 1000,
 },
@@ -947,9 +953,6 @@ return {
 ["non_skill_base_all_damage_%_to_gain_as_fire_with_attacks_vs_burning_enemies"] = {
 	mod("DamageGainAsFire", "BASE", nil, 0, 0, { type = "ActorCondition", actor = "enemy", var = "Burning" }),
 },
-["support_innervate_buff_grant_%_added_lightning_attack_damage"] = {
-	mod("DamageGainAsLightning", "BASE", nil, ModFlag.Attack, 0, { type = "Condition", var = "KilledShockedLast3Seconds" }, { type = "GlobalEffect", effectType = "Buff", effectName = "Innervate" } ),
-},
 ["base_physical_damage_%_to_convert_to_lightning"] = {
 	mod("PhysicalDamageConvertToLightning", "BASE", nil),
 },
@@ -1525,6 +1528,9 @@ return {
 ["projectile_chance_to_chain_1_extra_time_from_terrain_%"] = {
 	mod("TerrainChainChance", "BASE", nil),
 },
+["spell_skills_fire_2_additional_projectiles_final_chance_%"] = {
+	mod("TwoAdditionalProjectilesChance", "BASE", nil),
+},	
 ["additional_beam_only_chains"] = {
 	mod("BeamChainCountMax", "BASE", nil),
 },
@@ -1832,6 +1838,10 @@ return {
 ["base_cast_speed_+%"] = {
 	mod("Speed", "INC", nil, ModFlag.Cast),
 },
+["added_cast_time_ms"] = {
+	mod("TotalCastTime", "BASE", nil),
+	div = 1000,
+},
 ["active_skill_cast_speed_+%_final"] = {
 	mod("Speed", "MORE", nil, ModFlag.Cast),
 },
@@ -2101,6 +2111,9 @@ return {
 ["active_skill_minion_life_+%_final"] = {
 	mod("MinionModifier", "LIST", { mod = mod("Life", "MORE", nil) }),
 },
+["minion_maximum_life_%_to_gain_as_maximum_energy_shield"] = {
+	mod("MinionModifier", "LIST", { mod = mod("EnergyShield", "BASE", nil, 0, 0, { type = "PercentStat", stat = "Life", percent = 1 } ) } ),
+},
 ["support_minion_damage_minion_life_+%_final"] = {
 	mod("MinionModifier", "LIST", { mod = mod("Life", "MORE", nil) }),
 },
@@ -2248,6 +2261,9 @@ return {
 ["grenade_skill_%_chance_to_explode_twice"] = {
 	mod("GrenadeExplodeTwice", "INC", nil),
 },
+["support_grenade_damage_+%_final"] = {
+	mod("Damage", "MORE", nil),
+},
 -- Other
 ["triggered_skill_damage_+%"] = {
 	mod("TriggeredDamage", "INC", nil, 0, 0, { type = "SkillType", skillType = SkillType.Triggered }),
@@ -2292,8 +2308,11 @@ return {
 ["base_added_cooldown_count"] = {
 	mod("AdditionalCooldownUses", "BASE", nil)
 },
+["base_limit_+"] = {
+	mod("AdditionalCooldownUses", "BASE", nil),
+},
 ["kill_enemy_on_hit_if_under_10%_life"] = {
-	mod("CullPercent", "MAX", nil), 
+	mod("CullPercent", "MAX", nil),
 	value = 10
 },
 ["spell_cast_time_added_to_cooldown_if_triggered"] = {
@@ -2370,11 +2389,6 @@ return {
 ["supported_minion_skill_gem_level_+"] = {
 	mod("SupportedGemProperty", "LIST", { keyword = "grants_active_skill", key = "level", value = nil }, 0, 0, { type = "SkillType", skillType = SkillType.Minion }),
 },
-
-["base_apply_unarmed_stats_to_offhand"] = {
-	flag("UnarmedOverride")
-},
-
 -- Display only
 ["quality_display_base_additional_arrows_is_gem"] = {
 	-- Display only

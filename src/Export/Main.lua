@@ -198,6 +198,16 @@ function main:Init()
 			return not self.curDatFile
 		end
 	}
+	self.controls.clearOutput = new("ButtonControl", nil, {1190, 10, 100, 18}, "Clear", function()
+		wipeTable(self.scriptOutput)
+	end) {
+		shown = function()
+			return not self.curDatFile 
+		end,
+		enabled = function()
+			return #self.scriptOutput > 0
+		end
+	}
 
 	self.controls.scriptList = new("ScriptListControl", nil, {270, 35, 100, 300}) {
 		shown = function()
@@ -550,7 +560,7 @@ function main:LoadSettings()
 	if self.datSources and not next(self.datSources) and self.datSource then
 		t_insert(self.datSources, self.datSource)
 	end
-	if not self.datSoruce and self.datSources then
+	if not self.datSource and self.datSources then
 		self.datSource = self.datSources[1]
 	end
 end

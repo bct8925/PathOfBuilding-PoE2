@@ -787,7 +787,7 @@ function SkillsTabClass:CreateGemSlot(index)
 			addQualityLines(qualityTable, gemData.secondaryGrantedEffect)
 		end
 		-- Add stat comparisons for hovered quality (based on set quality)
-		if self.displayGroup.gemList[index] then
+		if gemData and (gemData.grantedEffect.qualityStats or (gemData.secondaryGrantedEffect and gemData.secondaryGrantedEffect.qualityStats)) and self.displayGroup.gemList[index] then
 			local calcFunc, calcBase = self.build.calcsTab:GetMiscCalculator(self.build)
 			if calcFunc then
 				local storedQuality = self.displayGroup.gemList[index].quality
@@ -1294,30 +1294,32 @@ function SkillsTabClass:SetActiveSkillSet(skillSetId)
 end
 
 -- Loop over all socket groups and gem instances
--- to udpated global gem count assignments
+-- to updated global gem count assignments
 function SkillsTabClass:UpdateGlobalGemCountAssignments()
 	wipeTable(GlobalGemAssignments)
 	local countSocketGroups = 0
 	for _, socketGroup in ipairs(self.socketGroupList) do
 		local countGroup = true
-		for _, gemInstance in ipairs(socketGroup.gemList) do
-			if gemInstance.fromItem or (gemInstance.gemData and gemInstance.gemData.grantedEffect and gemInstance.gemData.grantedEffect.fromTree) then
-				countGroup = false
-			end
-			if gemInstance.gemData then
-				if GlobalGemAssignments[gemInstance.gemData.name] then
-					GlobalGemAssignments[gemInstance.gemData.name].count = GlobalGemAssignments[gemInstance.gemData.name].count + 1
-					if socketGroup.displayLabel then
-						t_insert(GlobalGemAssignments[gemInstance.gemData.name].groups, socketGroup.displayLabel)
-					end
-				else
-					GlobalGemAssignments[gemInstance.gemData.name] = { 
-						count = 1,
-						support = gemInstance.gemData.grantedEffect and gemInstance.gemData.grantedEffect.support or false,
-						groups = { } 
-					}
-					if socketGroup.displayLabel then
-						t_insert(GlobalGemAssignments[gemInstance.gemData.name].groups, socketGroup.displayLabel)
+		if socketGroup.enabled then
+			for _, gemInstance in ipairs(socketGroup.gemList) do
+				if gemInstance.fromItem or (gemInstance.gemData and gemInstance.gemData.grantedEffect and gemInstance.gemData.grantedEffect.fromTree) then
+					countGroup = false
+				end
+				if gemInstance.gemData and gemInstance.enabled then
+					if GlobalGemAssignments[gemInstance.gemData.name] then
+						GlobalGemAssignments[gemInstance.gemData.name].count = GlobalGemAssignments[gemInstance.gemData.name].count + 1
+						if socketGroup.displayLabel then
+							t_insert(GlobalGemAssignments[gemInstance.gemData.name].groups, socketGroup.displayLabel)
+						end
+					else
+						GlobalGemAssignments[gemInstance.gemData.name] = { 
+							count = 1,
+							support = gemInstance.gemData.grantedEffect and gemInstance.gemData.grantedEffect.support or false,
+							groups = { } 
+						}
+						if socketGroup.displayLabel then
+							t_insert(GlobalGemAssignments[gemInstance.gemData.name].groups, socketGroup.displayLabel)
+						end
 					end
 				end
 			end

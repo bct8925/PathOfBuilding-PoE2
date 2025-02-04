@@ -231,6 +231,36 @@ local function getWeaponFlags(env, weaponData, weaponTypes)
 	return flags, info
 end
 
+--- Applies additional modifiers to skills with the "Empowered" flag.
+--- Checks for "ExtraEmpoweredMod" mods and applies them
+--- if they match the conditions set by the empowering effect.
+--- @param activeSkill table @Active skill data.
+local function applyExtraEmpowerMods(activeSkill)
+	local skillModList = activeSkill.skillModList
+	local empoweredMod
+	for _, mod in ipairs(skillModList) do
+		if mod.name == "Empowered" then
+			empoweredMod = mod
+			break
+		end
+	end
+	if empoweredMod then
+		for _, value in ipairs(skillModList:List(activeSkill.skillCfg, "ExtraEmpowerMod")) do
+			local mod = value.mod
+			if band(mod.flags, empoweredMod.flags) == mod.flags and MatchKeywordFlags(empoweredMod.flags, mod.keywordFlags) then
+				local newMod = copyTable(mod)
+				for _, etag in ipairs(empoweredMod) do
+					t_insert(newMod, copyTable(etag))
+					if etag.type == "GlobalEffect" then
+						newMod[#newMod].unscalable = value.unscalable
+					end
+				end
+				skillModList:AddMod(newMod)
+			end
+		end
+	end
+end
+
 -- Build list of modifiers for given active skill
 function calcs.buildActiveSkillModList(env, activeSkill)
 	local skillTypes = activeSkill.skillTypes
@@ -317,7 +347,7 @@ function calcs.buildActiveSkillModList(env, activeSkill)
 		if weapon1Flags then
 			if skillFlags.attack or skillFlags.dotFromAttack then
 				-- Concoction skills ignore weapon flags
-				activeSkill.weapon1Flags = (skillModList:Flag(nil, "UnarmedOverride") and ModFlag.Unarmed) or weapon1Flags
+				activeSkill.weapon1Flags = (skillFlags.unarmed and ModFlag.Unarmed) or weapon1Flags
 				skillFlags.weapon1Attack = true
 				if weapon1Info.melee and skillFlags.melee then
 					skillFlags.projectile = nil
@@ -338,7 +368,7 @@ function calcs.buildActiveSkillModList(env, activeSkill)
 					skillFlags.disable = true
 					activeSkill.disableReason = activeSkill.disableReason or "Weapon Types Need to be Different"
 				elseif skillFlags.attack or skillFlags.dotFromAttack then
-					activeSkill.weapon2Flags = (skillModList:Flag(nil, "UnarmedOverride") and ModFlag.Unarmed) or weapon2Flags
+					activeSkill.weapon2Flags = (skillFlags.unarmed and ModFlag.Unarmed) or weapon2Flags
 					skillFlags.weapon2Attack = true
 				end
 			elseif (skillTypes[SkillType.DualWieldOnly] or weapon2Info) and not activeSkill.summonSkill then
@@ -594,6 +624,8 @@ function calcs.buildActiveSkillModList(env, activeSkill)
 		skillModList:AddMod(value.mod)
 		t_insert(activeSkill.extraSkillModList, value.mod)
 	end
+	
+	applyExtraEmpowerMods(activeSkill)
 
 	-- Find totem level
 	if skillFlags.totem then

@@ -851,8 +851,12 @@ skills["SupportInnervatePlayer"] = {
 			incrementalEffectiveness = 0.054999999701977,
 			statDescriptionScope = "gem_stat_descriptions",
 			statMap = {
-				["support_innervate_buff_base_duration_ms"] = {
-					-- Display only
+				["support_innervate_buff_grant_%_added_lightning_attack_damage"] = {
+					mod("DamageGainAsLightning", "BASE", nil, ModFlag.Attack, 0, { type = "Condition", var = "KilledShockedLast3Seconds" }, { type = "GlobalEffect", effectType = "Buff", effectName = "Innervate" }),
+				},
+				["support_innervate_base_buff_duration"] = {
+					mod("Duration", "BASE", nil, 0, 0, { type = "Condition", var = "KilledShockedLast3Seconds" }, { type = "GlobalEffect", effectType = "Buff" }),
+					div = 1000,
 				},
 			},
 			baseFlags = {
@@ -1329,6 +1333,12 @@ skills["SupportEmpoweredCullPlayer"] = {
 			label = "Murderous Intent",
 			incrementalEffectiveness = 0.054999999701977,
 			statDescriptionScope = "gem_stat_descriptions",
+			statMap = {
+				["support_empowered_culling_strike"] = {
+					mod("ExtraEmpowerMod", "LIST", { mod = mod("CullPercent", "MAX", nil), unscalable = true }),
+					value = 10,
+				}
+			},
 			baseFlags = {
 			},
 			stats = {

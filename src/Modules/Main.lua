@@ -1118,7 +1118,7 @@ function main:OpenUpdatePopup()
 end
 
 function main:OpenAboutPopup(helpSectionIndex)
-	local textSize, titleSize, popupWidth = 16, 24, 810
+	local textSize, subTitleSize, titleSize, popupWidth = 16, 20, 24, 810
 	local changeList = { }
 	local changeVersionHeights = { }
 	local changelogName = launch.devMode and "../changelog.txt" or "changelog.txt"
@@ -1133,6 +1133,8 @@ function main:OpenAboutPopup(helpSectionIndex)
 				end
 				t_insert(changeVersionHeights, #changeList * textSize)
 				t_insert(changeList, { height = titleSize, "^7Version "..ver.." ("..date..")" })
+			elseif line:match("^---") then
+				t_insert(changeList, { height = subTitleSize, "^7"..line })
 			else
 				t_insert(changeList, { height = textSize, "^7"..line })
 			end
@@ -1210,7 +1212,7 @@ function main:OpenAboutPopup(helpSectionIndex)
 	end)
 	controls.version = new("LabelControl", nil, {0, 18, 0, 18}, "^7Path of Building Community Fork v"..launch.versionNumber)
 	controls.forum = new("LabelControl", nil, {0, 36, 0, 18}, "^7Based on Openarl's Path of Building")
-	controls.github = new("ButtonControl", nil, {0, 62, 438, 18}, "^7GitHub page: ^x4040FFhttps://github.com/PathOfBuildingCommunity/PathOfBuilding-PoE2", function(control)
+	controls.github = new("ButtonControl", nil, {0, 62, 480, 18}, "^7GitHub page: ^x4040FFhttps://github.com/PathOfBuildingCommunity/PathOfBuilding-PoE2", function(control)
 		OpenURL("https://github.com/PathOfBuildingCommunity/PathOfBuilding-PoE2")
 	end)
 	controls.verLabel = new("ButtonControl", {"TOPLEFT", nil, "TOPLEFT"}, {10, 85, 100, 18}, "^7Version history:", function()
