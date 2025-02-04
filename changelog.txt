@@ -56,7 +56,7 @@ VERSION[0.4.0][04/02/2025]
 * Add support for Heavy Armour notable (dance)
 * Add support for "ignore (non-negative) elemental resistances" mods (majochem)
 
----[Fixed Crashes] ---
+--- Fixed Crashes ---
 * Fix crash when switching between multiple choice Ascendancies (submitteddenied)
 * Fix item range crash on Ventor's Gamble (QuickStick123)
 
