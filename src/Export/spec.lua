@@ -4980,24 +4980,24 @@ return {
 		},
 		[11]={
 			list=false,
-			name="AltLife1",
+			name="EvasiveEvasion",
 			refTo="",
 			type="Int",
-			width=70
+			width=100
 		},
 		[12]={
 			list=false,
-			name="AltDamage1",
+			name="AilmentThreshold",
 			refTo="",
-			type="Float",
-			width=80
+			type="Int",
+			width=100
 		},
 		[13]={
 			list=false,
-			name="AltDamage2",
+			name="PoiseThreshold",
 			refTo="",
-			type="Float",
-			width=80
+			type="Int",
+			width=100
 		},
 		[14]={
 			list=false,
@@ -5008,28 +5008,28 @@ return {
 		},
 		[15]={
 			list=false,
-			name="EvasiveEvasion",
+			name="LeechResistance",
 			refTo="",
 			type="Int",
 			width=100
 		},
 		[16]={
 			list=false,
-			name="AilmentThreshold",
+			name="MoreElementalDamage",
 			refTo="",
 			type="Int",
-			width=110
+			width=140
 		},
 		[17]={
 			list=false,
-			name="StunThreshold",
+			name="MoreChaosDamage",
 			refTo="",
 			type="Int",
 			width=150
 		},
 		[18]={
 			list=false,
-			name="",
+			name="RareUniqueLeechResistance",
 			refTo="",
 			type="Int",
 			width=150
@@ -10346,7 +10346,7 @@ return {
 		},
 		[116]={
 			list=false,
-			name="",
+			name="PoiseThreshold",
 			refTo="",
 			type="Int",
 			width=150
