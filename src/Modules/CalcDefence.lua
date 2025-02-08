@@ -104,6 +104,22 @@ function calcs.doActorLifeManaSpirit(actor)
 	output.LowestOfMaximumLifeAndMaximumMana = m_min(output.Life, output.Mana)
 end
 
+
+-- Calculate Darkness and Darkness Reservation
+---@param actor table
+function calcs.doActorDarkness(actor)
+	local modDB = actor.modDB
+	local output = actor.output
+	local condList = modDB.conditions
+	local inc = modDB:Sum("INC", nil, "Darkness")
+	local base = modDB:Sum("BASE", nil, "Darkness")
+	output.Darkness = base * (1+inc/100)
+
+	local reserved = modDB:Sum("BASE", nil, "ReservedDarkness")
+	output.ReservedDarkness = m_min(reserved, output.Darkness)
+	output.UnreservedDarkness = output.Darkness - output.ReservedDarkness
+end
+
 -- Calculate life/mana/spirit reservation
 ---@param actor table
 function calcs.doActorLifeManaSpiritReservation(actor)
@@ -1280,6 +1296,9 @@ function calcs.defence(env, actor)
 
 	-- Calculate life and mana reservations
 	calcs.doActorLifeManaSpiritReservation(actor)
+
+	-- Calculate darkness and darkness reservation
+	calcs.doActorDarkness(actor)
 
 	-- Stormweaver's Force of Will adds effect per max mana. Needs to happen before mana regen is calculated
 	if modDB.conditions["AffectedByArcaneSurge"] or modDB:Flag(nil, "Condition:ArcaneSurge") then
