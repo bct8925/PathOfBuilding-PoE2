@@ -2841,8 +2841,7 @@ c["Iron Grip"]={{[1]={[1]={div=2,stat="Str",type="PerStat"},flags=2,keywordFlags
 c["Iron Reflexes"]={{[1]={flags=0,keywordFlags=0,name="Keystone",type="LIST",value="Iron Reflexes"}},nil}
 c["Iron Will"]={{[1]={[1]={div=2,stat="Str",type="PerStat"},flags=1025,keywordFlags=0,name="Damage",type="INC",value=1},[2]={flags=0,keywordFlags=0,name="NoStrBonusToLife",type="FLAG",value=true}},nil}
 c["Knocks Back Enemies if you get a Critical Hit with a Quarterstaff"]={{[1]={[1]={type="Condition",var="CriticalStrike"},flags=2097152,keywordFlags=0,name="EnemyKnockbackChance",type="BASE",value=100}},nil}
-c["Leech 5% of Physical Attack Damage as Life"]={nil,"Leech 5% of Physical Attack Damage as Life "}
-c["Leech 5% of Physical Attack Damage as Life You gain Onslaught for 4 seconds on Kill"]={nil,"Leech 5% of Physical Attack Damage as Life You gain Onslaught for 4 seconds on Kill "}
+c["Leech 5% of Physical Attack Damage as Life"]={{[1]={flags=1,keywordFlags=0,name="PhysicalDamageLifeLeech",type="BASE",value=5}},nil}
 c["Leech Life 15% faster"]={{[1]={flags=0,keywordFlags=0,name="LifeLeechRate",type="INC",value=15}},nil}
 c["Leech Life 20% slower"]={{[1]={flags=0,keywordFlags=0,name="LifeLeechRate",type="INC",value=-20}},nil}
 c["Leech Life 25% faster"]={{[1]={flags=0,keywordFlags=0,name="LifeLeechRate",type="INC",value=25}},nil}
@@ -3283,7 +3282,7 @@ c["Your Dexterity is added to your Minions"]={{[1]={flags=0,keywordFlags=0,name=
 c["Your Hits are Crushing Blows"]={nil,"Your Hits are Crushing Blows "}
 c["Your Hits can't be Evaded"]={{[1]={flags=0,keywordFlags=0,name="CannotBeEvaded",type="FLAG",value=true}},nil}
 c["Your Stun Threshold is doubled"]={{[1]={flags=0,keywordFlags=0,name="StunThreshold",type="MORE",value=100}},nil}
-c["Your speed is unaffected by Slows"]={nil,"Your speed is unaffected by Slows "}
+c["Your speed is unaffected by Slows"]={{[1]={flags=0,keywordFlags=0,name="UnaffectedBySlows",type="FLAG",value=true}},nil}
 c["dealing 10% of their Life as Physical Damage"]={nil,"dealing 10% of their Life as Physical Damage "}
 c["dealing 10% of their Life as Physical Damage Warcry Skills have 30% increased Area of Effect"]={nil,"dealing 10% of their Life as Physical Damage Warcry Skills have 30% increased Area of Effect "}
 c["dealing 25% of their Life as Physical Damage"]={nil,"dealing 25% of their Life as Physical Damage "}
