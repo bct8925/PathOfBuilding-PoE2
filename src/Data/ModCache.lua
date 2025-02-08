@@ -3149,7 +3149,7 @@ c["Skills have -2 seconds to Cooldown"]={{}," seconds to Cooldown "}
 c["Skills have 33% chance to not consume a Cooldown when used"]={{[1]={[1]={skillType=101,type="SkillType"},flags=0,keywordFlags=0,name="CooldownChanceNotConsume",type="BASE",value=0.33}},nil}
 c["Skills have a 125% longer Perfect Timing window"]={{[1]={flags=0,keywordFlags=0,name="PerfectTiming",type="INC",value=125}},nil}
 c["Skills have a 150% longer Perfect Timing window"]={{[1]={flags=0,keywordFlags=0,name="PerfectTiming",type="INC",value=150}},nil}
-c["Skills reserve 50% less Spirit"]={nil,"Skills reserve 50% less Spirit "}
+c["Skills reserve 50% less Spirit"]={{[1]={flags=0,keywordFlags=0,name="SpiritReserved",type="MORE",value=-50}},nil}
 c["Skills that would Summon a Totem have 20% chance to Summon two Totems instead"]={nil,"Skills that would Summon a Totem have 20% chance to Summon two Totems instead "}
 c["Slam Skills have 12% increased Area of Effect"]={{[1]={[1]={skillType=103,type="SkillType"},flags=0,keywordFlags=0,name="AreaOfEffect",type="INC",value=12}},nil}
 c["Slam Skills you use yourself cause Aftershocks"]={nil,"Slam Skills you use yourself cause Aftershocks "}
