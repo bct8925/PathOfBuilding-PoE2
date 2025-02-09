@@ -2825,6 +2825,7 @@ local specialModList = {
 	-- Warrior - Titan
 	["(%d+)%% increased effect of small passive skills"] = function(num) return { mod("SmallPassiveSkillEffect", "INC", num) } end,
 	-- Warrior - Warbringer
+	["ignore warcry cooldowns"] ={ mod("CooldownRecovery", "OVERRIDE", 0, { type = "SkillType", skillType = SkillType.Warcry}) },
 	["break armour equal to (%d+)%% of hit damage dealt"] = { flag("Condition:CanArmourBreak", { type = "GlobalEffect", effectType = "Buff", effectName = "ArmourBreak" })}, -- 'Anvil's Weight'
 	-- Trickster
 	["(%d+)%% chance to gain (%d+)%% of non%-chaos damage with hits as extra chaos damage"] = function(num, _, perc) return { mod("NonChaosDamageGainAsChaos", "BASE", num / 100 * tonumber(perc)) } end,
