@@ -2645,11 +2645,10 @@ c["Gain 10 Rage when Critically Hit by an Enemy"]={{}," Rage when Critically Hit
 c["Gain 10% of Damage as Extra Cold Damage"]={{[1]={flags=0,keywordFlags=0,name="DamageGainAsCold",type="BASE",value=10}},nil}
 c["Gain 10% of Damage as Extra Lightning Damage"]={{[1]={flags=0,keywordFlags=0,name="DamageGainAsLightning",type="BASE",value=10}},nil}
 c["Gain 10% of Damage as Extra Physical Damage"]={{[1]={flags=0,keywordFlags=0,name="DamageGainAsPhysical",type="BASE",value=10}},nil}
-c["Gain 10% of Elemental Damage Damage as Extra Fire Damage"]={{[1]={flags=0,keywordFlags=0,name="ElementalDamageGainAsFire",type="BASE",value=10}},"  Damage  "}
-c["Gain 10% of Elemental Damage Damage as Extra Fire Damage Gain 10% of Elemental Damage Damage as Extra Lightning Damage"]={{[1]={flags=0,keywordFlags=0,name="ElementalDamageGainAsFire",type="BASE",value=10}},"  Damage  Gain 10% of Elemental Damage Damage as Extra Lightning Damage "}
 c["Gain 10% of Elemental Damage Damage as Extra Lightning Damage"]={{[1]={flags=0,keywordFlags=0,name="ElementalDamageGainAsLightning",type="BASE",value=10}},"  Damage  "}
 c["Gain 10% of Elemental Damage Damage as Extra Lightning Damage 33% of Elemental Damage Converted to Cold Damage"]={{[1]={flags=0,keywordFlags=0,name="ElementalDamageGainAsLightning",type="BASE",value=10}},"  Damage  33% of Elemental Damage Converted to Cold Damage "}
 c["Gain 10% of Elemental Damage as Extra Cold Damage"]={{[1]={flags=0,keywordFlags=0,name="ElementalDamageGainAsCold",type="BASE",value=10}},nil}
+c["Gain 10% of Elemental Damage as Extra Fire Damage"]={{[1]={flags=0,keywordFlags=0,name="ElementalDamageGainAsFire",type="BASE",value=10}},nil}
 c["Gain 100% of Maximum Energy Shield as additional Freeze Threshold"]={{[1]={[1]={percent=100,stat="EnergyShield",type="PercentStat"},flags=0,keywordFlags=0,name="FreezeThreshold",type="BASE",value=1}},nil}
 c["Gain 11% of Damage as Extra Chaos Damage"]={{[1]={flags=0,keywordFlags=0,name="DamageGainAsChaos",type="BASE",value=11}},nil}
 c["Gain 12% of Physical Damage as Extra Fire Damage"]={{[1]={flags=0,keywordFlags=0,name="PhysicalDamageGainAsFire",type="BASE",value=12}},nil}
@@ -2701,6 +2700,7 @@ c["Gain 60% of Damage as Extra Fire Damage"]={{[1]={flags=0,keywordFlags=0,name=
 c["Gain 8 Life per Enemy Killed"]={{[1]={flags=0,keywordFlags=0,name="LifeOnKill",type="BASE",value=8}},nil}
 c["Gain 8% of Damage as Extra Fire Damage"]={{[1]={flags=0,keywordFlags=0,name="DamageGainAsFire",type="BASE",value=8}},nil}
 c["Gain 8% of Elemental Damage as Extra Cold Damage"]={{[1]={flags=0,keywordFlags=0,name="ElementalDamageGainAsCold",type="BASE",value=8}},nil}
+c["Gain 8% of Elemental Damage as Extra Fire Damage"]={{[1]={flags=0,keywordFlags=0,name="ElementalDamageGainAsFire",type="BASE",value=8}},nil}
 c["Gain 8% of Evasion Rating as extra Armour"]={{[1]={flags=0,keywordFlags=0,name="EvasionGainAsArmour",type="BASE",value=8}},nil}
 c["Gain 8% of maximum Energy Shield as additional Stun Threshold"]={{[1]={[1]={percent=8,stat="EnergyShield",type="PercentStat"},flags=0,keywordFlags=0,name="StunThreshold",type="BASE",value=1}},nil}
 c["Gain 9 Life per Enemy Killed"]={{[1]={flags=0,keywordFlags=0,name="LifeOnKill",type="BASE",value=9}},nil}
