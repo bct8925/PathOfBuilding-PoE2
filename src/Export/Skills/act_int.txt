@@ -58,6 +58,11 @@ statMap = {
 #skill BlasphemyPlayer
 #set BlasphemyPlayer
 #flags area
+statMap = {
+	["blasphemy_base_spirit_reservation_per_socketed_curse"] = {
+		mod("SkillData", "LIST", { key = "spiritReservationFlat", value = nil })
+	},
+},
 #mods
 #skillEnd
 
@@ -1024,6 +1029,11 @@ statMap = {
 #skill VulnerabilityPlayer
 #set VulnerabilityPlayer
 #flags area duration
+statMap = {
+	["vulnerability_total_armour_-"] = {
+		mod("IgnoreArmour", "BASE", nil, 0, 0, { type = "GlobalEffect", effectType = "Curse" }),
+	},
+},
 #mods
 #skillEnd
 

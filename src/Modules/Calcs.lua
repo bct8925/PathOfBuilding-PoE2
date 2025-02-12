@@ -149,32 +149,6 @@ function calcs.getMiscCalculator(build)
 	end, env.player.output
 end
 
-local function getActiveSkillCount(activeSkill)
-	if not activeSkill.socketGroup then
-		return 1, true
-	elseif activeSkill.socketGroup.groupCount then
-		return activeSkill.socketGroup.groupCount, true
-	else
-		local gemList = activeSkill.socketGroup.gemList
-		for _, gemData in pairs(gemList) do
-			if gemData.gemData then
-				if gemData.gemData.vaalGem then
-					if activeSkill.activeEffect.grantedEffect == gemData.gemData.grantedEffectList[1] then
-						return gemData.count or 1,  gemData.enableGlobal1 == true
-					elseif activeSkill.activeEffect.grantedEffect == gemData.gemData.grantedEffectList[2] then
-						return gemData.count or 1,  gemData.enableGlobal2 == true
-					end
-				else
-					if (activeSkill.activeEffect.grantedEffect == gemData.gemData.grantedEffect and not gemData.gemData.grantedEffect.support) or isValueInArray(gemData.gemData.additionalGrantedEffects, activeSkill.activeEffect.grantedEffect) then
-						return gemData.count or 1, true
-					end
-				end
-			end
-		end
-	end
-	return 1, true
-end
-
 function calcs.calcFullDPS(build, mode, override, specEnv)
 	local fullEnv, cachedPlayerDB, cachedEnemyDB, cachedMinionDB = calcs.initEnv(build, mode, override, specEnv)
 	local usedEnv = nil
@@ -204,7 +178,7 @@ function calcs.calcFullDPS(build, mode, override, specEnv)
 
 	for _, activeSkill in ipairs(fullEnv.player.activeSkillList) do
 		if activeSkill.socketGroup and activeSkill.socketGroup.includeInFullDPS then
-			local activeSkillCount, enabled = getActiveSkillCount(activeSkill)
+			local activeSkillCount, enabled = calcs.getActiveSkillCount(activeSkill)
 			if enabled then
 				fullEnv.player.mainSkill = activeSkill
 				calcs.perform(fullEnv, true)
@@ -440,7 +414,7 @@ function calcs.buildOutput(build, mode)
 			if not GlobalCache.cachedData[mode][uuid] then
 				calcs.buildActiveSkill(env, mode, skill, uuid)
 			end
-			if GlobalCache.cachedData[mode][uuid] then
+			if GlobalCache.cachedData[mode][uuid] and (not skill.triggeredBy or skill.triggeredBy.grantedEffect.id ~= "SupportBlasphemyPlayer") then
 				output.EnergyShieldProtectsMana = env.modDB:Flag(nil, "EnergyShieldProtectsMana")
 				for pool, costResource in pairs({["LifeUnreserved"] = "LifeCost", ["ManaUnreserved"] = "ManaCost", ["Rage"] = "RageCost", ["EnergyShield"] = "ESCost"}) do
 					local cachedCost = GlobalCache.cachedData[mode][uuid].Env.player.output[costResource]
