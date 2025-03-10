@@ -42,7 +42,6 @@ local skills, mod, flag, skill = ...
 #set AttritionPlayer
 #flags
 statMap = {
-statMap = {
 	["skill_attrition_presence_max_seconds"] = {
 		mod("Multiplier:AttritionMaxDamage", "BASE", nil, 0, 0, { type = "GlobalEffect", effectType = "Buff"}),
 	},
