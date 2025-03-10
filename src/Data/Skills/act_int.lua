@@ -886,8 +886,11 @@ skills["SupportBlasphemyPlayer"] = {
 			incrementalEffectiveness = 0.092720001935959,
 			statDescriptionScope = "gem_stat_descriptions",
 			statMap = {
+				["support_blasphemy_curse_effect_+%_final"] = {
+					mod("CurseEffect", "MORE", nil),
+				},
 				["active_skill_base_area_of_effect_radius"] = {
-					skill("radiusExtra", nil)
+					skill("radiusExtra", nil),
 				},
 			},
 			baseFlags = {
