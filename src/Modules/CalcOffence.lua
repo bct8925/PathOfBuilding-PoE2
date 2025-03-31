@@ -1205,6 +1205,19 @@ function calcs.offence(env, actor, activeSkill)
 			breakdown.LinkEffectMod = breakdown.mod(skillModList, skillCfg, "LinkEffect", "BuffEffect")
 		end
 	end
+	if activeSkill.skillTypes[SkillType.IceCrystal] then
+		local IceCrystalLifeMod = calcLib.mod(skillModList, skillCfg, "IceCrystalLife")
+		local baseIceCrystal = skillModList:Sum("BASE", skillCfg, "IceCrystalLifeBase")
+		output.IceCrystalLife = baseIceCrystal * IceCrystalLifeMod
+		if breakdown then
+			breakdown.IceCrystalLife = {
+				s_format("%.f ^8(Base Crystal Life)", baseIceCrystal),
+				s_format("x %.2f ^8(effect modifiers)", IceCrystalLifeMod),
+				s_format("\n"),
+				s_format("= %.f ^8(Ice Crystal Life)", output.IceCrystalLife),
+			}
+		end
+	end
 	if (skillFlags.trap or skillFlags.mine) and not (skillData.trapCooldown or skillData.cooldown) then
 		skillFlags.notAverage = true
 		skillFlags.showAverage = false
