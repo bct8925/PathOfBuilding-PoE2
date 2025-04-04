@@ -364,6 +364,7 @@ skills["DeathStormSkeletonStormMageMinion"] = {
 			baseFlags = {
 				spell = true,
 				area = true,
+				hit = true,
 			},
 			constantStats = {
 				{ "ground_lightning_art_variation", 1003 },
