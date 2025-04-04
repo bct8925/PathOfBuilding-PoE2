@@ -344,6 +344,7 @@ function GGPKClass:GetNeededFiles()
 		"Metadata/Items/Belts/AbstractBelt.it",
 		"Metadata/Items/Armours/AbstractArmour.it",
 		"Metadata/Items/Armours/Shields/AbstractShield.it",
+		"Metadata/Items/Armours/Shields/AbstractBuckler.it",
 		"Metadata/Items/Armours/Helmets/AbstractHelmet.it",
 		"Metadata/Items/Armours/Gloves/AbstractGloves.it",
 		"Metadata/Items/Armours/Focus/AbstractFocus.it",
