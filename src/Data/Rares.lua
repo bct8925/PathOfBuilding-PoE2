@@ -491,9 +491,9 @@ Suffix: GlobalProjectileSkillGemLevelTwoHandWeapon4
 +6 Elemental Crossbow
 Desolate Crossbow
 Crafted: true
-Prefix: LocalAddedFireDamage8
-Prefix: LocalAddedColdDamage8
-Prefix: LocalAddedLightningDamage8
+Prefix: LocalAddedFireDamageTwoHand8_
+Prefix: LocalAddedColdDamageTwoHand8
+Prefix: LocalAddedLightningDamageTwoHand8
 Suffix: LocalIncreasedAttackSpeed2
 Suffix: LocalCriticalStrikeChance3
 Suffix: GlobalProjectileSkillGemLevelTwoHandWeapon4
@@ -511,9 +511,9 @@ Suffix: GlobalProjectileSkillGemLevelTwoHandWeapon4
 +6 Elemental Crossbow
 Siege Crossbow
 Crafted: true
-Prefix: LocalAddedFireDamage8
-Prefix: LocalAddedColdDamage8
-Prefix: LocalAddedLightningDamage8
+Prefix: LocalAddedFireDamageTwoHand8_
+Prefix: LocalAddedColdDamageTwoHand8
+Prefix: LocalAddedLightningDamageTwoHand8
 Suffix: LocalIncreasedAttackSpeed2
 Suffix: LocalCriticalStrikeChance3
 Suffix: GlobalProjectileSkillGemLevelTwoHandWeapon4
@@ -531,9 +531,9 @@ Suffix: GlobalProjectileSkillGemLevelTwoHandWeapon4
 +6 Elemental Crossbow
 Gemini Crossbow
 Crafted: true
-Prefix: LocalAddedFireDamage8
-Prefix: LocalAddedColdDamage8
-Prefix: LocalAddedLightningDamage8
+Prefix: LocalAddedFireDamageTwoHand8_
+Prefix: LocalAddedColdDamageTwoHand8
+Prefix: LocalAddedLightningDamageTwoHand8
 Suffix: LocalIncreasedAttackSpeed2
 Suffix: LocalCriticalStrikeChance3
 Suffix: GlobalProjectileSkillGemLevelTwoHandWeapon4
@@ -551,9 +551,9 @@ Suffix: GlobalProjectileSkillGemLevelTwoHandWeapon4
 +6 Elemental Crossbow
 Flexed Crossbow
 Crafted: true
-Prefix: LocalAddedFireDamage8
-Prefix: LocalAddedColdDamage8
-Prefix: LocalAddedLightningDamage8
+Prefix: LocalAddedFireDamageTwoHand8_
+Prefix: LocalAddedColdDamageTwoHand8
+Prefix: LocalAddedLightningDamageTwoHand8
 Suffix: LocalIncreasedAttackSpeed2
 Suffix: LocalCriticalStrikeChance3
 Suffix: GlobalProjectileSkillGemLevelTwoHandWeapon4
