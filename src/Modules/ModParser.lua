@@ -2380,6 +2380,9 @@ local specialModList = {
 	["leeche?s? ([%d%.]+)%% of (%a+) attack damage as life"] = function(num, _, dmgType) return {
 		mod(firstToUpper(dmgType) .. "DamageLifeLeech", "BASE", num, nil, ModFlag.Attack, 0),
 	} end,
+	-- Amazon
+	["chance to hit with attacks can exceed 100%%"] = {flag("Condition:HitChanceCanExceed100", { type = "Skilltype", skillType = SkillType.Attack})},
+	["gain additional critical hit chance equal to (%d+)%% of excess chance to hit with attacks"] = function(num) return { mod("CritChance", "BASE", 0.01 * num, { type = "Multiplier", var = "ExcessHitChance" }, { type = "SkillType", skillType = SkillType.Attack})} end,
 	-- Ascendant
 	["grants (%d+) passive skill points?"] = function(num) return { mod("ExtraPoints", "BASE", num) } end,
 	["can allocate passives from the %a+'s starting point"] = { },
