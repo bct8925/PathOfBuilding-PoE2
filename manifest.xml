@@ -528,7 +528,6 @@
 	<File name="Modules/ModParser.lua" part="program" sha1="1bf3825b17bb86fbb2efbc16c32d6bbdea8b8eff" />
 	<File name="Modules/ModTools.lua" part="program" sha1="89443de61424513494b9e5a77da0838d007512dd" />
 	<File name="Modules/StatDescriber.lua" part="program" sha1="97a386c2f9c2566fadd5f3cb70c87da45161a0ed" />
-	<File name="poe_api_response.json" part="program" sha1="d3baa7640a9d8e059d3c20f1691748c1f3a4fea5" />
 	<File name="UpdateApply.lua" part="program" sha1="4dd42f413cb89a963e4ae1b40e214985b909c05b" />
 	<File name="UpdateCheck.lua" part="program" sha1="f24015a9fc3d07bbc208eee4cf357ac921f27712" />
 	<File name="abseil_dll.dll" part="runtime" runtime="win32" sha1="a9c7023135500a50a6b53ab7a00c56914f16914f" />
