@@ -29,7 +29,10 @@ Culling Strike against Frozen Enemies
 ]],[[
 Olrovasara
 Torment Club
-Adds 1 to (60-80) Lightning Damage
+Variant: Pre 0.2.0
+Variant: Current
+{variant:1}Adds 1 to (60-80) Lightning Damage
+{variant:2}Adds 1 to (80-120) Lightning Damage
 +(300-400) to Accuracy Rating
 (5-30)% increased Attack Speed
 On Hitting an enemy, gains maximum added Lightning damage equal to
@@ -49,11 +52,13 @@ Energy Generation is doubled
 Trenchtimbre
 Spiked Club
 Variant: Pre 0.1.1
+Variant: Pre 0.2.0
 Variant: Current
 {variant:1}Adds (10-12) to (18-35) Physical Damage
-{variant:2}Adds (13-15) to (22-25) Physical Damage
+{variant:2,3}Adds (13-15) to (22-25) Physical Damage
 (20-30)% increased Attack Speed
-+(1-3) to Level of all Minion Skills
+{variant:2}+(1-3) to Level of all Minion Skills
+{variant:3}+(1-2) to Level of all Minion Skills
 Increases and Reductions to Minion Attack Speed also affect you
 ]],[[
 Wylund's Stake
@@ -67,7 +72,7 @@ Variant: Current
 {variant:2}+(10-20) to Strength
 {variant:2}+(20-30)% to Fire Resistance
 Hits Break (30-50) Armour
-Apply Fire Exposure when fully breaking enemy Armour
+Inflicts Fire Exposure when this Weapon Fully Breaks Armour
 ]],
 -- Weapon: Two Handed Mace
 [[
