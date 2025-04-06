@@ -2777,6 +2777,7 @@ local specialModList = {
 	["non%-channelling spells cost an additional (%d+)%% of maximum energy shield"] = function(num) return { mod("ESCostBase", "BASE", 1, nil, 0, KeywordFlag.Spell, { type = "PercentStat", percent = num, stat = "EnergyShield" }, { type = "SkillType", skillType = SkillType.Channel, neg = true } )} end,
 	["non%-channelling spells consume power charges to deal (%d+)%% more damage"] = function(num) return { mod("Damage", "MORE", num, nil, 0,KeywordFlag.Spell, { type = "SkillType", skillType = SkillType.Channel, neg = true }, { type = "MultiplierThreshold", var = "RemovablePowerCharge", threshold = 1 })} end,
 	["no inherent mana regeneration"] = { flag("Condition:NoInherentManaRegen") },
+	["%+1 ring slot"] = { flag("AdditionalRingSlot") },
 	["regenerate (%D+) equal to (%d+)%% of maximum (%D+) per second"] = function(_, resource1, num, resource2) return { mod( combineToUpper(resource1) .. "Regen", "BASE", 1, { type = "PercentStat", stat = combineToUpper(resource2), percent = num } )} end,
 	-- Mercenary
 	-- +2 Weapon Set Passive Skill Points
@@ -4228,6 +4229,10 @@ local specialModList = {
 	["projectiles deal (%d+)%% increased damage with hits and ailments for each enemy pierced"] = function(num) return { mod("Damage", "INC", num, nil, 0, bor(KeywordFlag.Hit, KeywordFlag.Ailment), { type = "PerStat", stat = "PiercedCount" }, { type = "SkillType", skillType = SkillType.Projectile }) } end,
 	["(%d+)%% increased bonuses gained from equipped quiver"] = function(num) return {mod("EffectOfBonusesFromQuiver", "INC", num)} end,
 	["(%d+)%% increased bonuses gained from equipped rings"] = function(num) return {mod("EffectOfBonusesFromRings", "INC", num)} end,
+	["(%d+)%% increased bonuses gained from equipped rings and amulets"] = function(num) return {
+		mod("EffectOfBonusesFromRings", "INC", num),
+		mod("EffectOfBonusesFromAmulets", "INC", num),
+	} end,
 	["(%d+)%% chance for spell skills to fire 2 additional projectiles"] = function(num) return { mod("TwoAdditionalProjectilesChance", "BASE", num, nil , ModFlag.Spell) } end,
 	-- Strike Skills
 	["non%-vaal strike skills target (%d+) additional nearby enem[yi]e?s?"] = function(num) return { mod("AdditionalStrikeTarget", "BASE", num, { type = "SkillType", skillType = SkillType.MeleeSingleTarget}, { type = "SkillType", skillType = SkillType.Vaal, neg = true}) } end,

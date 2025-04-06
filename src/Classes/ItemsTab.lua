@@ -27,7 +27,7 @@ local socketDropList = {
 	{ label = colorCodes.SCION.."S", color = "W" }
 }
 
-local baseSlots = { "Weapon 1", "Weapon 2", "Helmet", "Body Armour", "Gloves", "Boots", "Amulet", "Ring 1", "Ring 2", "Belt", "Charm 1", "Charm 2", "Charm 3", "Flask 1", "Flask 2" }
+local baseSlots = { "Weapon 1", "Weapon 2", "Helmet", "Body Armour", "Gloves", "Boots", "Amulet", "Ring 1", "Ring 2", "Ring 3","Belt", "Charm 1", "Charm 2", "Charm 3", "Flask 1", "Flask 2" }
 
 local catalystQualityFormat = {
 	"^x7F7F7FQuality (Life Modifiers): "..colorCodes.MAGIC.."+%d%% (augmented)",
@@ -119,6 +119,10 @@ local ItemsTabClass = newClass("ItemsTab", "UndoHandler", "ControlHost", "Contro
 			swapSlot.weaponSet = 2
 			swapSlot.shown = function()
 				return self.activeItemSet.useSecondWeaponSet
+			end
+		elseif slotName == "Ring 3" then
+			slot.shown = function()
+				return self.build.calcsTab.mainEnv.modDB:Flag(nil, "AdditionalRingSlot")
 			end
 		end
 	end
@@ -3054,7 +3058,7 @@ function ItemsTabClass:AddItemTooltip(tooltip, item, slot, dbMode)
 		-- Build sorted list of slots to compare with
 		local compareSlots = { }
 		for slotName, slot in pairs(self.slots) do
-			if self:IsItemValidForSlot(item, slotName) and not slot.inactive and (not slot.weaponSet or slot.weaponSet == (self.activeItemSet.useSecondWeaponSet and 2 or 1)) then
+			if self:IsItemValidForSlot(item, slotName) and not slot.inactive and (not slot.weaponSet or slot.weaponSet == (self.activeItemSet.useSecondWeaponSet and 2 or 1)) and slot.shown() then
 				t_insert(compareSlots, slot)
 			end
 		end
