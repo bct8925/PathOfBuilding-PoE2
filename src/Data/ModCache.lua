@@ -179,6 +179,7 @@ c["+13 to all Attributes"]={{[1]={flags=0,keywordFlags=0,name="Str",type="BASE",
 c["+13% to Block chance"]={{[1]={flags=0,keywordFlags=0,name="BlockChance",type="BASE",value=13}},nil}
 c["+13% to Chaos Resistance"]={{[1]={flags=0,keywordFlags=0,name="ChaosResist",type="BASE",value=13}},nil}
 c["+13% to Cold Resistance"]={{[1]={flags=0,keywordFlags=0,name="ColdResist",type="BASE",value=13}},nil}
+c["+13% to Critical Damage Bonus"]={{[1]={flags=0,keywordFlags=0,name="CritMultiplier",type="BASE",value=13}},nil}
 c["+13% to Fire Resistance"]={{[1]={flags=0,keywordFlags=0,name="FireResist",type="BASE",value=13}},nil}
 c["+13% to Lightning Resistance"]={{[1]={flags=0,keywordFlags=0,name="LightningResist",type="BASE",value=13}},nil}
 c["+13% to all Elemental Resistances"]={{[1]={flags=0,keywordFlags=0,name="ElementalResist",type="BASE",value=13}},nil}
@@ -198,6 +199,7 @@ c["+15 to maximum Mana"]={{[1]={flags=0,keywordFlags=0,name="Mana",type="BASE",v
 c["+15% to Block chance"]={{[1]={flags=0,keywordFlags=0,name="BlockChance",type="BASE",value=15}},nil}
 c["+15% to Chaos Resistance"]={{[1]={flags=0,keywordFlags=0,name="ChaosResist",type="BASE",value=15}},nil}
 c["+15% to Cold Resistance"]={{[1]={flags=0,keywordFlags=0,name="ColdResist",type="BASE",value=15}},nil}
+c["+15% to Critical Damage Bonus"]={{[1]={flags=0,keywordFlags=0,name="CritMultiplier",type="BASE",value=15}},nil}
 c["+15% to Critical Hit Chance"]={{[1]={flags=0,keywordFlags=0,name="CritChance",type="BASE",value=15}},nil}
 c["+15% to Fire Resistance"]={{[1]={flags=0,keywordFlags=0,name="FireResist",type="BASE",value=15}},nil}
 c["+15% to Lightning Resistance"]={{[1]={flags=0,keywordFlags=0,name="LightningResist",type="BASE",value=15}},nil}
@@ -4491,11 +4493,11 @@ c["Spells have a 25% chance to inflict Withered for 4 seconds on Hit"]={{}," to 
 c["Spending Energy Shield does not interrupt Recharge"]={nil,"Spending Energy Shield does not interrupt Recharge "}
 c["Strength can satisfy other Attribute Requirements of Melee Weapons and Melee Skills"]={nil,"Strength can satisfy other Attribute Requirements of Melee Weapons and Melee Skills "}
 c["Strength's inherent bonus is 1% increased Energy Shield per 2 Strength instead"]={{[1]={[1]={div="2",stat="Str",type="PerStat"},flags=0,keywordFlags=0,name="EnergyShield",type="INC",value=1},[2]={flags=0,keywordFlags=0,name="NoStrBonusToLife",type="FLAG",value=true}},nil}
-c["Strikes deal Splash damage to targets within 1.8 metres"]={nil,"Strikes deal Splash damage to targets within 1.8 metres "}
-c["Strikes deal Splash damage to targets within 1.8 metres 172% increased Physical Damage"]={nil,"Strikes deal Splash damage to targets within 1.8 metres 172% increased Physical Damage "}
-c["Strikes deal Splash damage to targets within 1.8 metres Adds 35 to 50 Physical Damage"]={{[1]={flags=0,keywordFlags=0,name="PhysicalMin",type="BASE",value=35},[2]={flags=0,keywordFlags=0,name="PhysicalMax",type="BASE",value=50}},"Strikes deal Splash  to targets within 1.8 metres  "}
-c["Strikes deal Splash damage to targets within 1.8 metres Adds 62 to 94 Fire Damage"]={{[1]={flags=0,keywordFlags=0,name="FireMin",type="BASE",value=62},[2]={flags=0,keywordFlags=0,name="FireMax",type="BASE",value=94}},"Strikes deal Splash  to targets within 1.8 metres  "}
-c["Strikes deal Splash damage to targets within 1.8 metres Knocks Back Enemies on Hit"]={nil,"Strikes deal Splash damage to targets within 1.8 metres Knocks Back Enemies on Hit "}
+c["Strikes deal Splash damage to targets within 1.5 metres"]={nil,"Strikes deal Splash damage to targets within 1.5 metres "}
+c["Strikes deal Splash damage to targets within 1.5 metres 172% increased Physical Damage"]={nil,"Strikes deal Splash damage to targets within 1.5 metres 172% increased Physical Damage "}
+c["Strikes deal Splash damage to targets within 1.5 metres Adds 35 to 50 Physical Damage"]={{[1]={flags=0,keywordFlags=0,name="PhysicalMin",type="BASE",value=35},[2]={flags=0,keywordFlags=0,name="PhysicalMax",type="BASE",value=50}},"Strikes deal Splash  to targets within 1.5 metres  "}
+c["Strikes deal Splash damage to targets within 1.5 metres Adds 62 to 94 Fire Damage"]={{[1]={flags=0,keywordFlags=0,name="FireMin",type="BASE",value=62},[2]={flags=0,keywordFlags=0,name="FireMax",type="BASE",value=94}},"Strikes deal Splash  to targets within 1.5 metres  "}
+c["Strikes deal Splash damage to targets within 1.5 metres Knocks Back Enemies on Hit"]={nil,"Strikes deal Splash damage to targets within 1.5 metres Knocks Back Enemies on Hit "}
 c["Stun Threshold is based on 30% of your Energy Shield instead of Life"]={{[1]={flags=0,keywordFlags=0,name="StunThresholdBasedOnEnergyShieldInsteadOfLife",type="FLAG",value=true},[2]={flags=0,keywordFlags=0,name="StunThresholdEnergyShieldPercent",type="BASE",value=30}},nil}
 c["Successfully Parrying a Melee Hit grants 40% increased Damage to your next Ranged Attack"]={nil,"Successfully Parrying a Melee Hit grants 40% increased Damage to your next Ranged Attack "}
 c["Successfully Parrying a Melee Hit grants 40% increased Damage to your next Ranged Attack Successfully Parrying a Projectile Hit grants 40% increased Damage to your next Melee Attack"]={nil,"Successfully Parrying a Melee Hit grants 40% increased Damage to your next Ranged Attack Successfully Parrying a Projectile Hit grants 40% increased Damage to your next Melee Attack "}

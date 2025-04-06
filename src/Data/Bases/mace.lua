@@ -43,9 +43,9 @@ itemBases["Warpick"] = {
 	quality = 20,
 	socketLimit = 2,
 	tags = { maraketh_basetype = true, onehand = true, mace = true, weapon = true, one_hand_weapon = true, default = true, },
-	implicit = "+(30-40)% to Critical Damage Bonus",
+	implicit = "+(10-15)% to Critical Damage Bonus",
 	implicitModTypes = { { "damage", "attack", "critical" }, },
-	weapon = { PhysicalMin = 18, PhysicalMax = 24, CritChanceBase = 8, AttackRateBase = 1.45, Range = 11, },
+	weapon = { PhysicalMin = 18, PhysicalMax = 24, CritChanceBase = 7, AttackRateBase = 1.45, Range = 11, },
 	req = { level = 22, str = 52, },
 }
 itemBases["Plated Mace"] = {
@@ -145,9 +145,9 @@ itemBases["Battle Pick"] = {
 	quality = 20,
 	socketLimit = 2,
 	tags = { onehand = true, mace = true, weapon = true, one_hand_weapon = true, default = true, },
-	implicit = "+(30-40)% to Critical Damage Bonus",
+	implicit = "+(10-15)% to Critical Damage Bonus",
 	implicitModTypes = { { "damage", "attack", "critical" }, },
-	weapon = { PhysicalMin = 34, PhysicalMax = 46, CritChanceBase = 8, AttackRateBase = 1.45, Range = 11, },
+	weapon = { PhysicalMin = 35, PhysicalMax = 47, CritChanceBase = 7, AttackRateBase = 1.45, Range = 11, },
 	req = { level = 51, str = 117, },
 }
 itemBases["Marching Mace"] = {
@@ -210,9 +210,9 @@ itemBases["Strife Pick"] = {
 	quality = 20,
 	socketLimit = 2,
 	tags = { onehand = true, mace = true, weapon = true, one_hand_weapon = true, default = true, },
-	implicit = "+(30-40)% to Critical Damage Bonus",
+	implicit = "+(10-15)% to Critical Damage Bonus",
 	implicitModTypes = { { "damage", "attack", "critical" }, },
-	weapon = { PhysicalMin = 48, PhysicalMax = 64, CritChanceBase = 8, AttackRateBase = 1.45, Range = 11, },
+	weapon = { PhysicalMin = 49, PhysicalMax = 66, CritChanceBase = 7, AttackRateBase = 1.45, Range = 11, },
 	req = { level = 78, str = 212, },
 }
 itemBases["Fortified Hammer"] = {
@@ -277,7 +277,7 @@ itemBases["Cultist Greathammer"] = {
 	quality = 20,
 	socketLimit = 3,
 	tags = { two_hand_weapon = true, maraketh_basetype = true, mace = true, weapon = true, twohand = true, default = true, },
-	implicit = "Strikes deal Splash damage to targets within 1.8 metres",
+	implicit = "Strikes deal Splash damage to targets within 1.5 metres",
 	implicitModTypes = { { "attack" }, },
 	weapon = { PhysicalMin = 32, PhysicalMax = 43, CritChanceBase = 5, AttackRateBase = 1.05, Range = 13, },
 	req = { level = 22, str = 52, },
@@ -380,7 +380,7 @@ itemBases["Zealot Greathammer"] = {
 	quality = 20,
 	socketLimit = 3,
 	tags = { two_hand_weapon = true, mace = true, weapon = true, twohand = true, default = true, },
-	implicit = "Strikes deal Splash damage to targets within 1.8 metres",
+	implicit = "Strikes deal Splash damage to targets within 1.5 metres",
 	implicitModTypes = { { "attack" }, },
 	weapon = { PhysicalMin = 62, PhysicalMax = 83, CritChanceBase = 5, AttackRateBase = 1.05, Range = 13, },
 	req = { level = 51, str = 117, },
@@ -446,7 +446,7 @@ itemBases["Fanatic Greathammer"] = {
 	quality = 20,
 	socketLimit = 3,
 	tags = { two_hand_weapon = true, mace = true, weapon = true, twohand = true, default = true, },
-	implicit = "Strikes deal Splash damage to targets within 1.8 metres",
+	implicit = "Strikes deal Splash damage to targets within 1.5 metres",
 	implicitModTypes = { { "attack" }, },
 	weapon = { PhysicalMin = 89, PhysicalMax = 120, CritChanceBase = 5, AttackRateBase = 1.05, Range = 13, },
 	req = { level = 78, str = 212, },

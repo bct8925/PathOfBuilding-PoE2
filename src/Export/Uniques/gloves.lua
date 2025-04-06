@@ -16,7 +16,7 @@ UniqueCriticalStrikesLeechIsInstant1
 Dreadfist
 Bolstered Mitts
 UniqueLocalIncreasedPhysicalDamageReductionRatingPercent10
-UniqueCriticalMultiplier1
+UniqueCriticalMultiplier2
 UniqueImpaleOnCriticalHit1
 UniqueCriticalsCannotConsumeImpale1
 UniqueAttackerTakesDamage8

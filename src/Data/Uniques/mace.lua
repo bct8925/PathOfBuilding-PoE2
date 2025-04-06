@@ -58,8 +58,9 @@ the enemy's Power for 6 seconds, up to a total of 500
 ]],[[
 Sculpted Suffering
 Warpick
+Implicits: 1
++(10-15)% to Critical Damage Bonus
 Adds (21-26) to (25-31) Physical Damage
-+(30-40)% to Critical Damage Bonus
 (10-15)% increased Attack Speed
 Breaks Armour equal to 40% of damage from Hits with this weapon
 Fully Armour Broken enemies you kill with Hits Shatter
@@ -128,7 +129,7 @@ Increases and Reductions to Minion Damage also affect you
 The Empty Roar
 Cultist Greathammer
 Implicits: 1
-Strikes deal Splash damage to targets within 1.8 metres
+Strikes deal Splash damage to targets within 1.5 metres
 Adds (25-35) to (40-50) Physical Damage
 Leeches 10% of Physical Damage as Life
 (10-20)% chance to cause Bleeding on Hit

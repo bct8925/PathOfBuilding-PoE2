@@ -57,6 +57,7 @@ UniqueMaximumLightningDamagePerPower1
 ]],[[
 Sculpted Suffering
 Warpick
+Implicits: 1
 MaceImplicitCriticalMultiplier1
 UniqueLocalAddedPhysicalDamage18
 UniqueLocalIncreasedAttackSpeed17

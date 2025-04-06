@@ -21909,7 +21909,7 @@ return {
 						[2]="#"
 					}
 				},
-				text="Strikes deal Splash damage to targets within 1.8 metres"
+				text="Strikes deal Splash damage to targets within 1.5 metres"
 			}
 		},
 		stats={
