@@ -550,6 +550,7 @@ local tree = {
 	["nodes"]= { },
 	["assets"]={},
 	["ddsCoords"] = {},
+	["jewelSlots"] = {},
 	["constants"]= { -- calculate this
         ["classes"]= {
             ["StrDexIntClass"]= 0,
@@ -970,6 +971,13 @@ if #missingStatInfo > 0 then
 		file:write(line .. "\n")
 	end
 	file:close()
+end
+
+-- Generating jewel slots
+printf("Generating jewel slots...")
+local jewelSlots = dat("passivejewelslots")
+for jewelSlot in jewelSlots:Rows() do
+	table.insert(tree.jewelSlots, jewelSlot.Passive.PassiveSkillNodeId)
 end
 
 -- updating skillsPerOrbit
