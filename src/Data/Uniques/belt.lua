@@ -3,6 +3,15 @@
 return {
 -- Belt
 [[
+Bijouborne
+Double Belt
+Implicits: 1
++(50-100) to maximum Mana
+(10-50)% reduced Charm Effect Duration
++2 Charm Slots
++(15-25) to Dexterity
+(20-30)% increased Charm Charges gained
+]],[[
 Birthright Buckle
 Wide Belt
 Implicits: 1
@@ -33,6 +42,15 @@ Implicits: 1
 +(20-30) to Dexterity
 (30-40)% increased Life and Mana Recovery from Flasks
 You are considered on Low Life while at 75% of maximum Life or below instead
+]],[[
+Goregirdle
+Plate Belt
+Implicits: 1
++(100-140) to Armour
++(20-30) to Strength
+(10-20) Life Regeneration per second
+Defend with 200% of Armour
+Maximum Physical Damage Reduction is 50%
 ]],[[
 Headhunter
 Heavy Belt
@@ -124,6 +142,16 @@ Implicits: 1
 +(20-30) to Intelligence
 You lose 5% of maximum Energy Shield per second
 Excess Life Recovery from Leech is applied to Energy Shield
+]],[[
+Waistgate Heavy Belt
+Heavy Belt
+Implicits: 1
+(20-30)% increased Stun Threshold
++(50-80) to maximum Life
++(50-80) to maximum Mana
+(20-30)% increased Flask Life Recovery rate
+(20-30)% increased Flask Mana Recovery rate
+Life and Mana Flasks can be equipped in either slot
 ]],[[
 Zerphi's Genesis
 Heavy Belt

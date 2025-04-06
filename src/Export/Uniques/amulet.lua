@@ -177,6 +177,14 @@ UniqueChaosResist1
 UniqueManaRegeneration6
 UniqueAdditionalChargeGeneration1
 ]],[[
+Stone of Lazhwar
+Lapis Amulet
+Implicits: 1
+AmuletImplicitIntelligence1
+UniqueIncreasedMana3
+UniqueIncreasedCastSpeed3
+UniqueBlockPercentWithFocus1
+]],[[
 Surefooted Sigil
 Jade Amulet
 Implicits: 1
@@ -207,5 +215,14 @@ AmuletImplicitStrength1
 UniqueMaximumLifeIncrease7
 UniqueFireResist12
 UniqueEnemiesInPresenceFireExposure1
+]],[[
+Yoke of Suffering
+Bloodstone Amulet
+Implicits: 1
+AmuletImplicitIncreasedLife1
+UniqueAllResistances19
+UniqueElementalDamagePercent1
+UniqueEnemiesTakeIncreasedDamagePerAilmentType1
+UniqueElementalAilmentDuration1
 ]],
 }

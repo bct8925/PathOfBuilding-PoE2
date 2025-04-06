@@ -13,6 +13,14 @@ UniqueLocalIncreasedPhysicalDamageReductionRatingPercent11
 UniqueIntelligence9
 UniqueCriticalStrikesLeechIsInstant1
 ]],[[
+Dreadfist
+Bolstered Mitts
+UniqueLocalIncreasedPhysicalDamageReductionRatingPercent10
+UniqueCriticalMultiplier1
+UniqueImpaleOnCriticalHit1
+UniqueCriticalsCannotConsumeImpale1
+UniqueAttackerTakesDamage8
+]],[[
 Hateforge
 Moulded Mitts
 UniqueLocalIncreasedPhysicalDamageReductionRatingPercent4
@@ -28,6 +36,14 @@ UniqueIncreasedSkillSpeed1
 UniqueIncreasedLife3
 UniqueMaximumManaIncrease3
 UniqueShareChargesWithAllies1
+]],[[
+Empire's Grasp
+Titan Mitts
+UniqueLocalIncreasedPhysicalDamageReductionRatingPercent30
+UniqueStrength23
+UniqueLifeGainedFromEnemyDeath11
+UniqueIncreasedPhysicalDamagePercent1
+UniqueEnemyKnockbackDirectionReversed1
 ]],[[
 Treefingers
 Riveted Mitts
@@ -123,12 +139,37 @@ UniqueSpellDamage1
 UniqueIncreasedCastSpeed6
 AmuletImplicitIntelligence1
 ]],[[
+Essentia Sanguis
+Furtive Wraps
+UniqueLocalIncreasedEvasionAndEnergyShield17
+UniqueAddedLightningDamage3
+UniqueIntelligence31
+UniqueLightningResist26
+UniqueLeechEnergyShieldInsteadofLife1
+]],[[
 Kitoko's Current
 Jewelled Gloves
 UniqueLocalIncreasedEnergyShieldPercent7
 UniqueDexterity2
 UniqueAttackAndCastSpeed1
 UniqueLightningDamageCanElectrocute1
+]],[[
+Leopold's Applause
+Embroidered Gloves
+UniqueLocalIncreasedEnergyShieldPercent1
+UniqueIncreasedMana12
+UniqueItemFoundRarityIncrease21
+UniqueElementalPenetration1
+UniqueElementalPenetrationBelowZero1
+]],[[
+Nightscale
+Pauascale Gloves
+UniqueLocalIncreasedEnergyShieldPercent26
+UniqueCriticalStrikeChance14
+UniqueIntelligence29
+UniqueColdResist34
+UniqueManaRegenerationRateIfCritRecently1
+UniqueNoManaRegenIfNotCritRecently1
 ]],[[
 Painter's Servant
 Torn Gloves
@@ -178,6 +219,15 @@ UniqueAddedPhysicalDamage3
 UniqueIncreasedLife6
 UniqueIncreasedAttackSpeed2
 UniqueStrengthSatisfiesAllWeaponRequirements1
+]],[[
+Valako's Vice
+Plate Gauntlets
+UniqueLocalIncreasedArmourAndEvasion23
+UniqueIncreasedAttackSpeed9
+UniqueStrength41
+UniqueDexterity37
+UniqueLightningResist23
+UniqueFireDamageConvertToLightning1
 ]],
 -- Gloves: Armour/Energy Shield
 [[
@@ -200,6 +250,16 @@ UniqueLocalIncreasedArmourAndEnergyShield4
 UniqueLifeGainedFromEnemyDeath3
 UniqueManaGainedFromEnemyDeath4
 UniqueEnemiesKilledCountAsYours1
+]],[[
+The Prisoner's Manacles
+Diviner Cuffs
+UniqueLocalIncreasedArmourAndEnergyShield21
+UniqueIncreasedLife54
+UniqueReducedLocalAttributeRequirements5
+UniqueLightningResist28
+UniqueLifeRegeneration23
+UniqueSlowEffect1
+UniqueCannotImmobilise1
 ]],[[
 Shackles of the Wretched
 Aged Cuffs
