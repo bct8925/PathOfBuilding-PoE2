@@ -186,7 +186,26 @@ Scout's Vest
 +300 to maximum Life
 25% reduced Attribute Requirements
 100% of Fire Damage from Hits taken as Physical Damage
+]],[[
+Sands of Silk
+Shrouded Vest
+(50-100)% increased Evasion Rating
++(50-80) to maximum Mana
++(10-20) to Dexterity
++(10-20) to Intelligence
++(10-15)% to Fire Resistance
+(15-30)% increased Cooldown Recovery Rate
+]],[[
+Yriel's Fostering
+Strider Vest
+(100-150)% increased Evasion Rating
++(80-120) to maximum Life
++(10-30) to Spirit
+(40-60)% reduced Bleeding Duration on you
+(40-60)% reduced Poison Duration on you
+You can have two Companions of different types
 ]],
+
 -- Body: Energy Shield
 [[
 Bitterbloom
@@ -205,6 +224,13 @@ Variant: Current
 {variant:2}+(10-20)% to Cold Resistance
 Damage over Time bypasses your Energy Shield
 While not on Full Life, Sacrifice 10% of maximum Mana per Second to Recover that much Life
+]],[[
+Cloak of Defiance
+Havoc Raiment
+(50-100)% increased Energy Shield
++(100-150) to maximum Mana
+50% increased Mana Regeneration Rate
+30% of Damage is taken from Mana before Life
 ]],[[
 Cloak of Flame
 Silk Robe
@@ -229,6 +255,14 @@ Variant: Current
 {variant:1}50% of Maximum Life Converted to Energy Shield
 {variant:2}25% of Maximum Life Converted to Energy Shield
 ]],[[
+Gloamgown
+Elementalist Robe
+(100-140)% increased Energy Shield
++(30-40) to Spirit
++(25-35)% to Cold Resistance
+1000% increased Energy Shield Recharge Rate
+Your base Energy Shield Recharge Delay is 10 seconds
+]],[[
 Necromantle
 Bone Raiment
 Variant: Pre 0.1.1
@@ -248,6 +282,16 @@ Variant: Current
 {variant:2}+(10-20)% to Lightning Resistance
 30% slower start of Energy Shield Recharge
 Energy Shield Recharge is not interrupted by Damage if Recharge began Recently
+]],[[
+Silks of Veneration
+Havoc Raiment
+Implicits: 1
+(40-50)% increased Mana Regeneration Rate
++(30-50) to Spirit
++(20-30) to Intelligence
++(10-20)% to all Elemental Resistances
+(30-50)% increased Energy Shield Recharge Rate
+Current Energy Shield also grants Elemental Damage reduction
 ]],[[
 Temporalis
 Silk Robe
@@ -269,6 +313,13 @@ Variant: Current
 {variant:2}+(20-30) to Intelligence
 +(17-23)% to Chaos Resistance
 Life Recharges
+]],[[
+Vis Mortis
+Plated Raiment
+(70-100)% increased Energy Shield
++(70-100) to maximum Mana
+Minions have 50% reduced maximum Life
+Minions have Unholy Might
 ]],
 -- Body: Armour/Evasion
 [[
@@ -299,6 +350,16 @@ Chain Mail
 +(75-150) to Stun Threshold
 25% chance to be inflicted with Bleeding when Hit
 ]],[[
+The Coming Calamity
+Heroic Armour
+Implicits: 4
+Grants Skill: Herald of Ash
+Grants Skill: Herald of Ice
+Grants Skill: Herald of Thunder
++(60-80) to maximum Life
++(30-40)% to all Elemental Resistances
+Enemies in your Presence have no Elemental Resistances
+]],[[
 Doryani's Prototype
 Scale Mail
 (50-100)% increased Armour and Evasion
@@ -306,6 +367,15 @@ Scale Mail
 Armour also applies to Lightning damage taken from Hits
 Enemies in your Presence have Lightning Resistance equal to yours
 Lightning Resistance does not affect Lightning damage taken
+]],[[
+The Fallen Formation
+Lamellar Mail
+(100-200)% increased Armour and Evasion
++(20-30) to Strength
++(20-30) to Dexterity
+(8-12) Life Regeneration per second
+-20 to maximum Valour
+Banners always have maximum Valour
 ]],[[
 Irongrasp
 Vagabond Armour
@@ -340,6 +410,15 @@ Explorer Armour
 +(10-20)% to all Elemental Resistances
 -17% to Chaos Resistance
 Charms use no Charges
+]],[[
+Widow's Reign
+Knight Armour
+(100-150)% increased Armour and Evasion
++(100-150) to maximum Life
++(17-23)% to Chaos Resistance
++(200-300) to Ailment Threshold
+Life that would be lost by taking Damage is instead Reserved
+until you take no Damage to Life for 5 seconds
 ]],
 -- Body: Armour/Energy Shield
 [[
@@ -376,6 +455,35 @@ Mail Vestments
 +(30-40)% to Cold Resistance
 Freeze as though dealing Cold damage equal to 10% of your maximum Mana when Hit
 ]],[[
+The Mutable Star
+Cleric Vestments
+(100-150)% increased Armour and Energy Shield
+(50-100)% increased Energy Shield Recharge Rate
+(25-35) Life Regeneration per second
+(30-50)% reduced Bleeding Duration on you
+(30-50)% reduced Ignite Duration on you
+Defend against Hits as though you had 1% more Armour per 1% current Energy Shield
+]],[[
+Sacrosanctum
+Corvus Mantle
+Implicits: 1
++(20-30) to Spirit
+(80-120)% increased Armour and Energy Shield
++(20-30) to Strength
++(20-30) to Intelligence
++(17-23)% to Chaos Resistance
+(5-10)% of Damage taken Recouped as Life
+Damage taken Recouped as Life is also Recouped as Energy Shield
+]],[[
+Soul Mantle
+Sacrificial Mantle
+(80-120)% increased Armour and Energy Shield
++10 to Strength
++15 to Intelligence
+(20-30)% reduced Totem Life
++1 to maximum number of Summoned Totems
+Inflicts a random Curse on you when your Totems die, ignoring Curse limit
+]],[[
 Voll's Protector
 Ironclad Vestments
 Variant: Pre 0.1.1
@@ -384,6 +492,16 @@ Variant: Current
 25% reduced maximum Mana
 {variant:2}+(13-17)% to Chaos Resistance
 25% chance to gain a Power Charge on Critical Hit
+]],[[
+Waveshaper
+Tideseer Mantle
++(100-200) to maximum Energy Shield
++(20-40) to Spirit
++(25-35)% to Fire Resistance
++(25-35)% to Cold Resistance
+Increases and Reductions to Mana Regeneration Rate also
+apply to Energy Shield Recharge Rate
+Gain (30-50)% of Maximum Mana as Armour
 ]],
 -- Body: Evasion/Energy Shield
 [[
@@ -432,6 +550,15 @@ Marabout Garb
 +(15-25)% to Lightning Resistance
 (30-50)% faster start of Energy Shield Recharge
 The Effect of Chill on you is reversed
+]],[[
+Zerphi's Serape
+Scalper's Jacket
+(60-80)% increased Evasion and Energy Shield
++(40-60) to maximum Mana
+50% increased Attribute Requirements
+(-30-30)% reduced Life Regeneration rate
+(-30-30)% reduced Mana Regeneration Rate
+Soul Eater
 ]],
 -- Body: Armour/Evasion/Energy Shield
 [[

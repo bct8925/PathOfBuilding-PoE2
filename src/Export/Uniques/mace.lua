@@ -27,6 +27,24 @@ Variant: Current
 UniqueLocalAllDamageCanFreeze1
 UniqueLocalCullingStrikeFrozenEnemies1
 ]],[[
+Mjölner
+Torment Club
+Implicits: 1
+Grants Skill: Level (1-20) Lightning Spell on Hit
+UniqueIntelligenceRequirements2
+UniqueStrengthRequirements2
+UniqueLocalIncreasedPhysicalDamagePercent12
+UniqueLocalIncreasedAttackSpeed20
+UniqueGlobalLightningGemLevel2
+]],[[
+Nebuloch
+Brigand Mace
+UniqueLocalAddedPhysicalDamage17
+UniqueLocalCriticalMultiplier2
+UniqueLocalChaosDamage1
+UniqueConsumeEnduranceChargeAlwaysCrit1
+UniqueChaosDamagePerEnduranceCharge1
+]],[[
 Olrovasara
 Torment Club
 Variant: Pre 0.2.0
@@ -36,6 +54,14 @@ Variant: Current
 UniqueLocalIncreasedAccuracy5
 UniqueLocalIncreasedAttackSpeed10
 UniqueMaximumLightningDamagePerPower1
+]],[[
+Sculpted Suffering
+Warpick
+MaceImplicitCriticalMultiplier1
+UniqueLocalAddedPhysicalDamage18
+UniqueLocalIncreasedAttackSpeed17
+UniqueLocalArmourBreakOnDamage1
+UniqueFullyArmourBrokenShatterOnKill1
 ]],[[
 Seeing Stars
 Plated Mace
@@ -98,6 +124,24 @@ UniqueIncreasedMana22
 {variant:1}UniqueLocalCriticalStrikeChance3
 UniqueMinionDamageAffectsYou1
 ]],[[
+The Empty Roar
+Cultist Greathammer
+Implicits: 1
+MaceImplicitSplashDamage1
+UniqueLocalAddedPhysicalDamage15
+UniqueLifeLeechLocal2
+UniqueLocalChanceToBleed1
+UniqueAttacksCountAsExerted1
+UniqueCannotUseWarcries1
+]],[[
+The Hammer of Faith
+Giant Maul
+UniqueLocalIncreasedPhysicalDamagePercent9
+UniqueLocalIncreasedAttackSpeed14
+UniqueAllResistances21
+UniqueManaRegeneration29
+UniqueShrineBuffAlternating1
+]],[[
 Hoghunt
 Felled Greatclub
 Variant: Pre 0.1.1
@@ -131,6 +175,14 @@ UniqueLifeGainedFromEnemyDeath8
 UniqueLocalCritChanceOverride1
 UniqueLocalNoCriticalStrikeMultiplier1
 ]],[[
+Tidebreaker
+Pointed Maul
+UniqueLocalIncreasedPhysicalDamagePercent13
+UniqueGlobalIncreaseMeleeSkillGemLevel1
+UniqueIntelligence39
+UniqueLocalStunDamageIncrease2
+UniqueLocalAllDamageCanChill1
+]],[[
 Trephina
 Forge Maul
 Variant: Pre 0.1.1
@@ -140,5 +192,14 @@ Variant: Current
 UniqueLocalIncreasedAttackSpeed5
 UniqueLocalStunDamageIncrease1
 UniqueAlwaysCritHeavyStun1
+]],[[
+Shyaba
+Temple Maul
+UniqueDexterityRequirements1
+UniqueStrengthRequirements1
+UniqueLocalIncreasedPhysicalDamagePercent5
+UniqueLocalIncreasedAttackSpeed15
+UniqueLightRadius17
+UniqueAlwaysHits1
 ]],
 }

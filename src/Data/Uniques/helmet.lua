@@ -11,6 +11,14 @@ Wrapped Greathelm
 (5-15)% increased Dexterity
 (5-15)% increased Intelligence
 ]],[[
+Blood Price
+Fierce Greathelm
+(80-120)% increased Armour
+(10-15) Life Regeneration per second
++(100-150) to Stun Threshold
+(30-60)% increased Presence Area of Effect
+Enemies in your Presence have at least 10% of Life Reserved
+]],[[
 Corona of the Red Sun
 Warrior Greathelm
 Variant: Pre 0.1.1
@@ -75,6 +83,14 @@ Armoured Cap
 +(50-75)% to Cold Resistance
 Presence Radius is doubled
 ]],[[
+The Black Insignia
+Corsair Cap
+(70-100)% increased Evasion Rating
+(10-20)% increased Rarity of Items found
++(15-25)% to Lightning Resistance
+Gain Tailwind on Critical Hit, no more than once per second
+Lose all Tailwind when Hit
+]],[[
 Elevore
 Hunter Hood
 Variant: Pre 0.1.1
@@ -90,6 +106,14 @@ Felt Cap
 +(30-50) to Evasion Rating
 10% increased Rarity of Items found
 +(25-35)% to all Elemental Resistances
+]],[[
+Heatshiver
+Velvet Cap
+(50-70)% increased Evasion Rating
++(60-100) to maximum Mana
++(20-30)% to Fire Resistance
++(20-30)% to Cold Resistance
+Gain 1% of Cold damage as Extra Fire damage per 1% Chill Magnitude on enemy
 ]],[[
 Innsmouth
 Shabby Hood
@@ -114,6 +138,14 @@ Lace Hood
 +(15-25)% to Fire Resistance
 30% increased Light Radius
 Enemies in your Presence are Ignited as though dealt 100 Base Fire Damage
+]],[[
+Starkonja's Head
+Leatherbound Hood
+(100-200)% increased Evasion Rating
+(15-25)% increased Critical Hit Chance
++(30-40) to Dexterity
+150% increased Global Evasion Rating when on Low Life
+15% of Damage from Hits is taken from your Companion's Life before you
 ]],
 -- Helmet: Energy Shield
 [[
@@ -129,6 +161,14 @@ Variant: Current
 {variant:2}10% of Damage taken bypasses Energy Shield
 {variant:1}Gain (25-30)% of maximum Life as Extra maximum Energy Shield
 {variant:2}Gain (10-15)% of maximum Life as Extra maximum Energy Shield
+]],[[
+Crown of Eyes
+Coral Circlet
+(100-140)% increased Energy Shield
++(150-200) to Accuracy Rating
++(10-15) to all Attributes
+-10% to Fire Resistance
+Increases and Reductions to Spell Damage also apply to Attacks at 150% of their value
 ]],[[
 Crown of Thorns
 Twig Circlet
@@ -157,6 +197,14 @@ Variant: Current
 {variant:2}+(30-50)% to Cold Resistance
 25% reduced Light Radius
 ]],[[
+Indigon
+Magus Tiara
+(60-100)% increased Energy Shield
++(80-120) to maximum Mana
+(35-50)% increased Cost of Skills for each 200 total Mana Spent Recently
+(35-50)% increased Spell damage for each 200 total Mana you have Spent Recently
+Mana Recovery other than Regeneration cannot Recover Mana
+]],[[
 Mask of the Stitched Demon
 Feathered Tiara
 (120-160)% increased Energy Shield
@@ -173,6 +221,14 @@ Chain Tiara
 Enemies in your Presence are Blinded
 {variant:1}Every second, inflicts Critical Weakness on enemies in your Presence for 1 second
 {variant:2}Every second, inflicts Critical Weakness on enemies in your Presence for 15 seconds
+]],[[
+Scold's Bridle
+Jade Tiara
++(75-150) to maximum Energy Shield
+(60-100)% increased Spell Damage
++(80-100) to maximum Mana
+15% reduced Cast Speed
+Take (25-100)% of Mana Costs you pay for Skills as Physical Damage
 ]],[[
 Visage of Ayah
 Beaded Circlet
@@ -192,6 +248,14 @@ Closed Helm
 +(200-400) to Accuracy Rating
 (30-50)% increased Critical Hit Chance
 Skills have a (100-150)% longer Perfect Timing window
+]],[[
+The Bringer of Rain
+Decorated Helm
+(600-800)% increased Armour and Evasion
++(200-300) to Accuracy Rating
+(30-60) Life Regeneration per second
+Can't use Body Armour
+You can wield Two-Handed Axes, Maces and Swords in one hand
 ]],[[
 Erian's Cobble
 Guarded Helm
@@ -302,6 +366,15 @@ Variant: Current
 Gain 10 Life per Enemy Killed
 Gain 10 Mana per Enemy Killed
 +1 to Level of all Skills
+]],[[
+The Deepest Tower
+Spiritbone Crown
+(70-130)% increased Armour and Energy Shield
++(70-100) to maximum Life
++(17-23)% to Chaos Resistance
+50% reduced Presence Area of Effect
+10% reduced Light Radius
+Enemies in your Presence count as being on Low Life
 ]],[[
 Keeper of the Arc
 Spiritbone Crown
