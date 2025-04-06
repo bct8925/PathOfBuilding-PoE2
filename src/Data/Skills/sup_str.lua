@@ -1009,6 +1009,15 @@ skills["SupportDoubleBarrelPlayer"] = {
 			label = "Double Barrel",
 			incrementalEffectiveness = 0.054999999701977,
 			statDescriptionScope = "gem_stat_descriptions",
+			statMap = {
+				["support_double_barrel_number_of_crossbow_bolts_+"] = {
+					mod("CrossbowBoltCount", "BASE", nil),
+				},
+				["support_double_barrel_crossbow_reload_speed_-%_final"] = {
+					mod("ReloadSpeed", "MORE", nil),
+					mult = -1
+				},
+			},
 			baseFlags = {
 			},
 			constantStats = {
@@ -1535,6 +1544,11 @@ skills["SupportFreshClipPlayer"] = {
 			label = "Fresh Clip",
 			incrementalEffectiveness = 0.054999999701977,
 			statDescriptionScope = "gem_stat_descriptions",
+			statMap = {
+				["support_damage_+%_final_per_crossbow_bolt_reloaded_in_past_6_seconds"] = {
+					mod("Damage", "MORE", nil, 0, 0, { type = "Multiplier", var = "BoltsReloadedPastSixSeconds" } ),
+				},
+			},
 			baseFlags = {
 			},
 			constantStats = {

@@ -2327,6 +2327,18 @@ return {
 ["reload_speed_+%"] = {
 	mod("ReloadSpeed", "INC", nil),
 },
+["base_number_of_crossbow_bolts"] = {
+	mod("CrossbowBoltCount", "BASE", nil)
+},
+["projectiles_crossbow_barrage"] = {
+	flag("SequentialProjectiles"),
+},
+["crossbow_barrage_attack_time_ratio_%"] = {
+	mod("BarrageAttackTimePenalty", "BASE", nil, 0, 0, { type = "SkillType", skillType = SkillType.CrossbowSkill}), -- actual handling of effect is done in CalcOffence because we need "ProjectileCount" - 1
+},
+["active_skill_reload_speed_+%_final"] = {
+	mod("ReloadSpeed", "MORE", nil),
+},
 -- Grenade
 ["grenade_skill_%_chance_to_explode_twice"] = {
 	mod("GrenadeExplodeTwice", "INC", nil),

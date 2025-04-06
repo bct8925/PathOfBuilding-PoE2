@@ -1473,6 +1473,9 @@ Huge sets the radius to 11.
 	{ var = "conditionAtCloseRange", type = "check", label = "Is the enemy at Close Range?", ifCond = "AtCloseRange", apply = function(val, modList, enemyModList)
 		modList:NewMod("Condition:AtCloseRange", "FLAG", true, "Config", { type = "Condition", var = "Effective" })
 	end },
+	{ var = "multiplierBoltsReloadedPerSecond", type = "countAllowZero", label = "# bolts reloaded past 6 seconds", tooltip = "Override number of bolts reloaded in the past 6 seconds.\nUsed to calculate damage bonus from Fresh Clip support.\nAssumes calculated average if no value is specified.", ifSkill = "Fresh Clip", apply = function(val, modList, enemyModList)
+		modList:NewMod("Multiplier:BoltsReloadedPastSixSeconds", "OVERRIDE", val, "Config", { type = "Condition", var = "Effective" })
+	end },
 	{ var = "enemyMultiplierEnemyPresenceSeconds", type = "count", label = "Enemy in Your Presence Duration", tooltip = "Number of seconds the enemy has been in your presence.", ifEnemyMult = "EnemyPresenceSeconds", apply = function(val, modList, enemyModList)
 		enemyModList:NewMod("Multiplier:EnemyPresenceSeconds", "BASE", val, "Config", { type = "Condition", var = "Effective" })
 	end },
