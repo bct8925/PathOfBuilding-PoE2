@@ -36,10 +36,21 @@ function calcs.hitChance(evasion, accuracy)
 	return m_max(m_min(round(rawChance), 100), 5)	
 end
 
+-- Calculate uncapped hit chance for mods that enable "Chance to hit with Attacks can exceed 100%"
+function calcs.hitChanceUncapped(evasion, accuracy)
+	if accuracy < 0 then
+		return 5
+	end
+	local rawChance = ( accuracy * 1.5 ) / ( accuracy + evasion ) * 100
+	return m_max(round(rawChance), 5)	
+end
 -- Calculate damage reduction from armour, float
 function calcs.armourReductionF(armour, raw)
 	if armour == 0 and raw == 0 then
 		return 0
+	elseif armour < 0 then -- account for Armour break below zero
+		armour = -armour -- revert value to positive for calculation
+		return -((armour / (armour + raw * data.misc.ArmourRatio) * 100))
 	end
 	return (armour / (armour + raw * data.misc.ArmourRatio) * 100)
 end
@@ -232,7 +243,7 @@ function calcs.doActorLifeManaSpiritReservation(actor)
 					values.reservedFlat = values.reservedFlat * activeSkillCount
 				end
 				
-				if activeSkill.skillTypes[SkillType.CanHaveMultipleOngoingSkillInstances] and activeSkill.activeEffect.srcInstance.supportEffect and activeSkill.activeEffect.srcInstance.supportEffect.isSupporting then
+				if activeSkill.skillTypes[SkillType.IsBlasphemy] and activeSkill.activeEffect.srcInstance.supportEffect and activeSkill.activeEffect.srcInstance.supportEffect.isSupporting then
 					-- Sadly no better way to get key/val table element count in lua.
 					local instances = 0
 					for _ in pairs(activeSkill.activeEffect.srcInstance.supportEffect.isSupporting) do
@@ -346,9 +357,9 @@ function calcs.applyDmgTakenConversion(activeSkill, output, breakdown, sourceTyp
 				local effArmour = (output.Armour * percentOfArmourApplies / 100) * (1 + output.ArmourDefense)
 				-- effArmour needs to consider the "EvasionAddsToPdr" flag mod, and add the evasion to armour
 				armourReduct = round(effArmour ~= 0 and damage ~= 0 and calcs.armourReductionF(effArmour, damage) or 0)
-				armourReduct = m_min(output.DamageReductionMax, armourReduct)
+				armourReduct = m_min(output[damageType.."DamageReductionMax"], armourReduct)
 			end
-			reductMult = (1 - m_max(m_min(output.DamageReductionMax, armourReduct + reduction), 0) / 100) * damageTakenMods
+			reductMult = (1 - m_max(m_min(output[damageType.."DamageReductionMax"], armourReduct + reduction), 0) / 100) * damageTakenMods
 			local combinedMult = resMult * reductMult
 			local finalDamage = damage * combinedMult
 			totalDamageTaken = totalDamageTaken + finalDamage
@@ -381,9 +392,9 @@ function calcs.takenHitFromDamage(rawDamage, damageType, actor)
 		local effectiveAppliedArmour = output[type .."EffectiveAppliedArmour"]
 		local armourDRPercent = calcs.armourReductionF(effectiveAppliedArmour, damage)
 		local flatDRPercent = modDB:Flag(nil, "SelfIgnore".."Base".. type .."DamageReduction") and 0 or output["Base".. type .."DamageReductionWhenHit"] or output["Base".. type .."DamageReduction"]
-		local totalDRPercent = m_min(output.DamageReductionMax, armourDRPercent + flatDRPercent)
+		local totalDRPercent = m_min(output[damageType.."DamageReductionMax"], armourDRPercent + flatDRPercent)
 		local enemyOverwhelmPercent = modDB:Flag(nil, "SelfIgnore".. type .."DamageReduction") and 0 or output[type .."EnemyOverwhelm"]
-		local totalDRMulti = 1 - m_max(m_min(output.DamageReductionMax, totalDRPercent - enemyOverwhelmPercent), 0) / 100
+		local totalDRMulti = 1 - m_max(m_min(output[damageType.."DamageReductionMax"], totalDRPercent - enemyOverwhelmPercent), 0) / 100
 		local totalResistMult = output[type .."ResistTakenHitMulti"]
 		return totalResistMult * totalDRMulti
 	end
@@ -755,7 +766,12 @@ function calcs.defence(env, actor)
 		total = m_modf(total)
 		-- Unnatural Resilience needs FireResistTotal before we calc FireResistMax
 		output[elem.."ResistTotal"] = total
-		max = modDB:Override(nil, elem.."ResistMax") or m_min(data.misc.MaxResistCap, modDB:Sum("BASE", nil, elem.."ResistMax", isElemental[elem] and "ElementalResistMax"))
+		if modDB:Flag(nil, "MaxBlockChanceModsApplyMaxResist") then
+			local blockMaxBonus = modDB:Sum("BASE", nil, "BlockChanceMax") - 75 -- Subtract base block cap
+			max = (modDB:Override(nil, elem.."ResistMax") or m_min(data.misc.MaxResistCap, modDB:Sum("BASE", nil, elem.."ResistMax", isElemental[elem] and "ElementalResistMax"))) + blockMaxBonus
+		else
+			max = modDB:Override(nil, elem.."ResistMax") or m_min(data.misc.MaxResistCap, modDB:Sum("BASE", nil, elem.."ResistMax", isElemental[elem] and "ElementalResistMax"))
+		end		
 		
 		dotTotal = dotTotal and m_modf(dotTotal) or total
 		totemTotal = m_modf(totemTotal)
@@ -805,7 +821,11 @@ function calcs.defence(env, actor)
 	end
 
 	-- Block
-	output.BlockChanceMax = m_min(modDB:Sum("BASE", nil, "BlockChanceMax"), data.misc.BlockChanceCap)
+	if modDB:Flag(nil, "MaxBlockChanceModsApplyMaxResist") then
+		output.BlockChanceMax = 75
+	else
+		output.BlockChanceMax = m_min(modDB:Sum("BASE", nil, "BlockChanceMax"), data.misc.BlockChanceCap)
+	end
 	if modDB:Flag(nil, "MaximumBlockAttackChanceIsEqualToParent") then
 		output.BlockChanceMax = actor.parent.output.BlockChanceMax
 	elseif modDB:Flag(nil, "MaximumBlockAttackChanceIsEqualToPartyMember") then
@@ -1238,6 +1258,7 @@ function calcs.defence(env, actor)
 				output.EvadeChance = output.MeleeEvadeChance
 				output.noSplitEvade = true
 			end
+			output.EvadeChance = m_min(output.EvadeChance, modDB:Max(nil, "EvadeChanceMax") or 100)
 			if breakdown then
 				breakdown.EvadeChance = {
 					s_format("Enemy level: %d ^8(%s the Configuration tab)", env.enemyLevel, env.configInput.enemyLevel and "overridden from" or "can be overridden in"),
@@ -1622,11 +1643,20 @@ function calcs.defence(env, actor)
 	end
 
 	-- Damage Reduction
-	output.DamageReductionMax = modDB:Override(nil, "DamageReductionMax") or data.misc.DamageReductionCap
+	output.DamageReductionMax = modDB:Max(nil, "DamageReductionMax") or data.misc.DamageReductionCap
 	modDB:NewMod("ArmourAppliesToPhysicalDamageTaken", "BASE", 100)
 	for _, damageType in ipairs(dmgTypeList) do
-		output["Base"..damageType.."DamageReduction"] = m_min(m_max(0, modDB:Sum("BASE", nil, damageType.."DamageReduction", isElemental[damageType] and "ElementalDamageReduction")), output.DamageReductionMax)
-		output["Base"..damageType.."DamageReductionWhenHit"] = m_min(m_max(0, output["Base"..damageType.."DamageReduction"] + modDB:Sum("BASE", nil, damageType.."DamageReductionWhenHit")), output.DamageReductionMax)
+		output[damageType.."DamageReductionMax"] = m_min(modDB:Max(nil, damageType.."DamageReductionMax") or data.misc.DamageReductionCap, output.DamageReductionMax)
+
+		local base = m_max(0, modDB:Sum("BASE", nil, damageType.."DamageReduction", isElemental[damageType] and "ElementalDamageReduction"))
+		local typeMax = m_min(base, output[damageType.."DamageReductionMax"])
+		local globalMax = m_min(typeMax, output[damageType.."DamageReductionMax"])
+		output["Base"..damageType.."DamageReduction"] = globalMax
+
+		local baseWhenHit = globalMax + modDB:Sum("BASE", nil, damageType.."DamageReductionWhenHit")
+		local typeMaxWhenHit = m_min(baseWhenHit, output[damageType.."DamageReductionMax"])
+		local globalMaxWhenHit = m_min(typeMaxWhenHit, output[damageType.."DamageReductionMax"])
+		output["Base"..damageType.."DamageReductionWhenHit"] = globalMaxWhenHit
 	end
 
 	-- Miscellaneous: move speed, avoidance, weapon swap speed
@@ -1700,6 +1730,8 @@ function calcs.defence(env, actor)
 		end
 	end
 
+	-- TODO: Calculate elemental ailment threshold by refactoring calcLib.val to allow for multiple mods, similar to calcLib.mod
+	output.AilmentThreshold = calcLib.val(modDB, "AilmentThreshold")
 	for _, ailment in ipairs(data.nonElementalAilmentTypeList) do
 		output[ailment.."AvoidChance"] = modDB:Flag(nil, ailment.."Immune") and 100 or m_floor(m_min(modDB:Sum("BASE", nil, "Avoid"..ailment, "AvoidAilments"), 100))
 	end
@@ -2108,16 +2140,16 @@ function calcs.buildDefenceEstimations(env, actor)
 		output[damageType.."takenFlat"] = takenFlat
 		if percentOfArmourApplies > 0 then
 			armourReduct = calcs.armourReduction(effectiveAppliedArmour, damage)
-			armourReduct = m_min(output.DamageReductionMax, armourReduct)
+			armourReduct = m_min(output[damageType.."DamageReductionMax"], armourReduct)
 			if impaleDamage > 0 then
-				impaleArmourReduct = m_min(output.DamageReductionMax, calcs.armourReduction(effectiveAppliedArmour, impaleDamage))
+				impaleArmourReduct = m_min(output[damageType.."DamageReductionMax"], calcs.armourReduction(effectiveAppliedArmour, impaleDamage))
 			end
 		end
-		local totalReduct = m_min(output.DamageReductionMax, armourReduct + reduction)
-		reductMult = 1 - m_max(m_min(output.DamageReductionMax, totalReduct - enemyOverwhelm), 0) / 100
+		local totalReduct = m_min(output[damageType.."DamageReductionMax"], armourReduct + reduction)
+		reductMult = 1 - m_max(m_min(output[damageType.."DamageReductionMax"], totalReduct - enemyOverwhelm), 0) / 100
 		output[damageType.."DamageReduction"] = 100 - reductMult * 100
 		if impaleDamage > 0 then
-			impaleDamage = impaleDamage * resMult * (1 - m_max(m_min(output.DamageReductionMax, m_min(output.DamageReductionMax, impaleArmourReduct + reduction) - enemyOverwhelm), 0) / 100)
+			impaleDamage = impaleDamage * resMult * (1 - m_max(m_min(output[damageType.."DamageReductionMax"], m_min(output[damageType.."DamageReductionMax"], impaleArmourReduct + reduction) - enemyOverwhelm), 0) / 100)
 			impaleDamage = impaleDamage * enemyImpaleChance / 100 * 5 * output[damageType.."TakenReflect"]
 		end
 		if breakdown then
@@ -3360,7 +3392,7 @@ function calcs.buildDefenceEstimations(env, actor)
 
 						-- tack on some caps
 						local noDRMaxHit = totalHitPool / damageConvertedMulti / totalResistMult / totalTakenMulti * (1 - takenFlat * totalTakenMulti / totalHitPool)
-						local maxDRMaxHit = noDRMaxHit / (1 - (output.DamageReductionMax - enemyOverwhelmPercent) / 100)
+						local maxDRMaxHit = noDRMaxHit / (1 - (output[damageType.."DamageReductionMax"] - enemyOverwhelmPercent) / 100)
 						hitTaken = m_floor(m_max(m_min(RAW, maxDRMaxHit), noDRMaxHit))
 						useConversionSmoothing = useConversionSmoothing or convertPercent ~= 100
 					end
