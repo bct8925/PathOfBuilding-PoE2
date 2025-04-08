@@ -992,13 +992,6 @@ statMap = {
 #mods
 #skillEnd
 
-#from item
-#skill SoulrendPlayer
-#set SoulrendPlayer
-#flags spell projectile duration
-#mods
-#skillEnd
-
 #skill SparkPlayer
 #set SparkPlayer
 #flags spell projectile duration
