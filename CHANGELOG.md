@@ -1,5 +1,13 @@
 # Changelog
 
+## [v0.7.1](https://github.com/PathOfBuildingCommunity/PathOfBuilding/tree/v0.7.1) (2025/04/09)
+
+[Full Changelog](https://github.com/PathOfBuildingCommunity/PathOfBuilding-PoE2/compare/v0.7.0...v0.7.1)
+
+### Fixed Crashes
+- Fix Import for Armour Piercing Rounds ([trompetin17](https://github.com/justjuangui))
+
+
 ## [v0.7.0](https://github.com/PathOfBuildingCommunity/PathOfBuilding/tree/v0.7.0) (2025/04/09)
 
 [Full Changelog](https://github.com/PathOfBuildingCommunity/PathOfBuilding-PoE2/compare/v0.6.0...v0.7.0)

@@ -1,3 +1,8 @@
+VERSION[0.7.1][2025/04/09]
+
+--- Fixed Behaviours ---
+* Fix Import for Armour Piercing Rounds (trompetin17)
+
 VERSION[0.7.0][2025/04/09]
 
 --- New to Path of Building ---

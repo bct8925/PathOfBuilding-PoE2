@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <PoBVersion>
-	<Version number="0.7.0" />
+	<Version number="0.7.1" />
 	<Source part="default" url="https://raw.githubusercontent.com/PathOfBuildingCommunity/PathOfBuilding-PoE2/{branch}/" />
 	<Source part="runtime" platform="win32" url="https://raw.githubusercontent.com/PathOfBuildingCommunity/PathOfBuilding-PoE2/{branch}/runtime/" />
 	<Source part="program" url="https://raw.githubusercontent.com/PathOfBuildingCommunity/PathOfBuilding-PoE2/{branch}/src/" />
 	<Source part="tree" url="https://raw.githubusercontent.com/PathOfBuildingCommunity/PathOfBuilding-PoE2/{branch}/src/" />
-	<File name="changelog.txt" part="default" sha1="52a1fa8a97fc6662b0a7ff7927e269871e4e5c40" />
+	<File name="changelog.txt" part="default" sha1="f696926553ca9fc6db93ad91613c3961647fc816" />
 	<File name="help.txt" part="default" sha1="eb788d20352333fad99bcf6092306f0c3bca3122" />
 	<File name="LICENSE.md" part="default" sha1="e81bd01e60cdf8646f3308ec71fa0e8e638d544e" />
 	<File name="Assets/game_ui_small.png" part="program" sha1="3e3f01a7c21ffe5ee7dfb644e9f3b7188c319d4d" />
@@ -49,7 +49,7 @@
 	<File name="Classes/ExtBuildListProvider.lua" part="program" sha1="79d6bab71c0e0194e7c5b48e6cfb348d85e20263" />
 	<File name="Classes/FolderListControl.lua" part="program" sha1="27a6203072993c799a83d078bf188cb83464ae8a" />
 	<File name="Classes/GemSelectControl.lua" part="program" sha1="6506320cf22f0ff6936a4d0c1e199ac07e5e2ad6" />
-	<File name="Classes/ImportTab.lua" part="program" sha1="2e8fd1b4b4072139b56853c4b12beee05a12ae01" />
+	<File name="Classes/ImportTab.lua" part="program" sha1="5a43354a28aa535ccc0f74477a6db3f44283e1d6" />
 	<File name="Classes/Item.lua" part="program" sha1="d8f7d95faf794afc22af8a057309a2dd6f722f18" />
 	<File name="Classes/ItemDBControl.lua" part="program" sha1="8fabdb469a18712e653c99ae1847662b19aa92d8" />
 	<File name="Classes/ItemListControl.lua" part="program" sha1="a1703a75de1235b4947dea6d7454211ba1498e99" />

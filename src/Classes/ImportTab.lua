@@ -672,7 +672,7 @@ function ImportTabClass:ImportItemsAndSkills(charData)
 		local gemId = self.build.data.gemForBaseName[typeLine:lower()]
 
 		if gemId then
-			local gemInstance = { level = 20, quality = 0, enabled = true, enableGlobal1 = true, gemId = gemId }
+			local gemInstance = { level = 20, quality = 0, enabled = true, enableGlobal1 = true, enableGlobal2 = true, count = 1,  gemId = gemId }
 			gemInstance.nameSpec = self.build.data.gems[gemId].name
 			gemInstance.support = skillData.support
 
