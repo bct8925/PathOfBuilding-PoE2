@@ -2503,6 +2503,9 @@ local specialModList = {
 	["gain energy shield from equipped body armour as extra maximum life"] = {
 		mod("Life", "BASE", 1, { type = "PerStat", stat = "EnergyShieldOnBody Armour", div = 1 }),
 	},
+	["gain additional maximum life equal to (%d+)%% of the energy shield on equipped body armour"] = function(num) return {
+		mod("Life", "BASE", 1, { type = "PercentStat", stat = "EnergyShieldOnBody Armour", percent = num }),
+	} end,
 	["(%d+)%% of life loss from hits is prevented, then that much life is lost over 4 seconds instead"] = function(num) return { mod("LifeLossPrevented", "BASE", num) } end,
 	-- Champion
 	["cannot be stunned while you have fortify"] = { flag("StunImmune", { type = "Condition", var = "Fortified" }) },
