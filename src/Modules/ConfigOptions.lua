@@ -1483,7 +1483,7 @@ Huge sets the radius to 11.
 	{ var = "skillPierceCount", type = "count", label = "# of times Skill has Pierced:", ifStat = "PiercedCount", ifFlag = "piercing", apply = function(val, modList, enemyModList)
 		modList:NewMod("PiercedCount", "BASE", val, "Config", { type = "Condition", var = "Effective" })
 	end },
-	{ var = "enemyDistance", type = "count", label = "Distance to enemy:", tooltip = "10 units equals 1 metre", defaultPlaceholderState = 25, apply = function(val, modList, enemyModList)
+	{ var = "enemyDistance", type = "count", label = "Distance to enemy:", tooltip = "10 units equals 1 metre\nPlayer and Minion Attacks incur an Accuracy penalty based on distance from the origin of the damage to the target,\nwith no penalty for targets within 2 metres and up to 90% less Accuracy for targets further than 12 metres away-", defaultPlaceholderState = 20, apply = function(val, modList, enemyModList)
 		modList:NewMod("Multiplier:enemyDistance", "BASE", val, "Config", { type = "Condition", var = "Effective" })
 	end },
 	{ var = "conditionAtCloseRange", type = "check", label = "Is the enemy at Close Range?", ifCond = "AtCloseRange", apply = function(val, modList, enemyModList)
@@ -1495,8 +1495,11 @@ Huge sets the radius to 11.
 	{ var = "enemyMultiplierEnemyPresenceSeconds", type = "count", label = "Enemy in Your Presence Duration", tooltip = "Number of seconds the enemy has been in your presence.", ifEnemyMult = "EnemyPresenceSeconds", apply = function(val, modList, enemyModList)
 		enemyModList:NewMod("Multiplier:EnemyPresenceSeconds", "BASE", val, "Config", { type = "Condition", var = "Effective" })
 	end },
-	{ var = "conditionEnemyMoving", type = "check", label = "Is the enemy Moving?", ifMod = "BleedChance", apply = function(val, modList, enemyModList)
+	{ var = "conditionEnemyMoving", type = "check", label = "Is the enemy Moving?", ifMod = "BleedChance", tooltip = "Bleeding deals an extra 100% damage while the target is moving, or if the Bleeding is Aggravated", apply = function(val, modList, enemyModList)
 		enemyModList:NewMod("Condition:Moving", "FLAG", true, "Config", { type = "Condition", var = "Effective" })
+	end },
+	{ var = "conditionBleedAggravated", type = "check", label = "Is the Bleed Aggravated?", ifMod = "BleedChance", tooltip = "Bleeding deals an extra 100% damage while the target is moving, or if the Bleeding is Aggravated", apply = function(val, modList, enemyModList)
+		enemyModList:NewMod("Condition:BleedAggravated", "FLAG", true, "Config", { type = "Condition", var = "Effective" })
 	end },
 	{ var = "conditionEnemyFullLife", type = "check", label = "Is the enemy on Full ^xE05030Life?", ifEnemyCond = "FullLife", apply = function(val, modList, enemyModList)
 		enemyModList:NewMod("Condition:FullLife", "FLAG", true, "Config", { type = "Condition", var = "Effective" })
@@ -1518,6 +1521,9 @@ Huge sets the radius to 11.
 	end },
 	{ var = "conditionEnemyCursed", type = "check", label = "Is the enemy Cursed?", ifEnemyCond = "Cursed", tooltip = "The enemy will automatically be considered to be Cursed if you have at least one curse enabled,\nbut you can use this option to force it if necessary.", apply = function(val, modList, enemyModList)
 		enemyModList:NewMod("Condition:Cursed", "FLAG", true, "Config", { type = "Condition", var = "Effective" })
+	end },
+	{ var = "conditionEnemyDazed", type = "check", label = "Is the enemy Dazed?", tooltip ="Dazed enemies take 50% more stun buildup for 8 seconds.", apply = function(val, modList, enemyModList)
+		enemyModList:NewMod("Condition:Dazed", "FLAG", true, "Config", { type = "Condition", var = "Effective" })
 	end },
 	{ var = "conditionEnemyStunned", type = "check", label = "Is the enemy Stunned?", ifEnemyCond = "Stunned", apply = function(val, modList, enemyModList)
 		enemyModList:NewMod("Condition:Stunned", "FLAG", true, "Config", { type = "Condition", var = "Effective" })
@@ -1574,7 +1580,7 @@ Huge sets the radius to 11.
 	{ var = "overrideBuffBlinded", type = "count", label = "Effect of Blind (if not maximum):", ifOption = "conditionEnemyBlinded", tooltip = "If you have a guaranteed source of Blind, the strongest one will apply.", apply = function(val, modList, enemyModList)
 		enemyModList:NewMod("BlindEffect", "OVERRIDE", val, "Config", {type = "GlobalEffect", effectType = "Buff" })
 	end },
-	{ var = "conditionEnemyPinned", type = "check", label = "Is the enemy Pinned?", tooltip ="Pinned enemies cannot move for 4 seconds.", apply = function(val, modList, enemyModList)
+	{ var = "conditionEnemyPinned", type = "check", label = "Is the enemy Pinned?", tooltip ="Pinned enemies cannot move and cannot evade 4 seconds.\n They are also Light Stunned when they become pinned.", apply = function(val, modList, enemyModList)
 		enemyModList:NewMod("Condition:Pinned", "FLAG", true, "Config", { type = "Condition", var = "Effective" })
 		enemyModList:NewMod("Condition:Immobilised", "FLAG", true, "Config", { type = "Condition", var = "Effective" })
 		enemyModList:NewMod("CannotEvade", "FLAG", true, "Config", { type = "Condition", var = "Effective" })
@@ -1945,19 +1951,19 @@ Huge sets the radius to 11.
 			enemyModList:NewMod("Damage", "INC", 30, "100% Delirious")
 		end
 	end },
-	{ var = "enemyPhysicalReduction", type = "integer", label = "Enemy Phys. Damage Reduction:", apply = function(val, modList, enemyModList)
+	{ var = "enemyPhysicalReduction", type = "countAllowZero", label = "Enemy Phys. Damage Reduction:", apply = function(val, modList, enemyModList)
 		enemyModList:NewMod("PhysicalDamageReduction", "BASE", val, "EnemyConfig")
 	end },
-	{ var = "enemyLightningResist", type = "integer", label = "Enemy ^xADAA47Lightning Resistance:", apply = function(val, modList, enemyModList)
+	{ var = "enemyLightningResist", type = "countAllowZero", label = "Enemy ^xADAA47Lightning Resistance:", apply = function(val, modList, enemyModList)
 		enemyModList:NewMod("LightningResist", "BASE", val, "EnemyConfig")
 	end },
-	{ var = "enemyColdResist", type = "integer", label = "Enemy ^x3F6DB3Cold Resistance:", apply = function(val, modList, enemyModList)
+	{ var = "enemyColdResist", type = "countAllowZero", label = "Enemy ^x3F6DB3Cold Resistance:", apply = function(val, modList, enemyModList)
 		enemyModList:NewMod("ColdResist", "BASE", val, "EnemyConfig")
 	end },
-	{ var = "enemyFireResist", type = "integer", label = "Enemy ^xB97123Fire Resistance:", apply = function(val, modList, enemyModList)
+	{ var = "enemyFireResist", type = "countAllowZero", label = "Enemy ^xB97123Fire Resistance:", apply = function(val, modList, enemyModList)
 		enemyModList:NewMod("FireResist", "BASE", val, "EnemyConfig")
 	end },
-	{ var = "enemyChaosResist", type = "integer", label = "Enemy ^xD02090Chaos Resistance:", apply = function(val, modList, enemyModList)
+	{ var = "enemyChaosResist", type = "countAllowZero", label = "Enemy ^xD02090Chaos Resistance:", apply = function(val, modList, enemyModList)
 		enemyModList:NewMod("ChaosResist", "BASE", val, "EnemyConfig")
 	end },
 	{ var = "enemyMaxResist", type = "check", label = "Enemy Max Resistance is always 75%", tooltip = "Enemy Maximum resistance is increased by the resistance configurations \nThis locks it at the default value", apply = function(val, modList, enemyModList)

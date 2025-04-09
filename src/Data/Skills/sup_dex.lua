@@ -893,6 +893,11 @@ skills["SupportDeadlyHeraldsPlayer"] = {
 			label = "Deadly Herald",
 			incrementalEffectiveness = 0.054999999701977,
 			statDescriptionScope = "gem_stat_descriptions",
+			statMap = {
+				["support_deadly_heralds_damage_+%_final"] = {
+					mod("Damage", "MORE", nil),
+				}
+			},
 			baseFlags = {
 			},
 			constantStats = {
@@ -2499,6 +2504,14 @@ skills["SupportReachPlayer"] = {
 			label = "Reach",
 			incrementalEffectiveness = 0.054999999701977,
 			statDescriptionScope = "gem_stat_descriptions",
+			statMap = {
+				["support_reach_accuracy_within_2m_+%_final"] = {
+					mod("Accuracy", "MORE", nil, 0, 0, { type = "MultiplierThreshold", var = "enemyDistance", threshold = 20, upper = true } ),
+				},
+				["support_reach_area_of_effect_+%_final"] = {
+					mod("AreaOfEffect", "MORE", nil),
+				},
+			},
 			baseFlags = {
 			},
 			constantStats = {

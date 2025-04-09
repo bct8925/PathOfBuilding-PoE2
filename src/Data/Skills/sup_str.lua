@@ -3019,7 +3019,8 @@ skills["SupportStompingGroundPlayer"] = {
 			},
 		},
 	}
-}skills["StompingGroundShockwavePlayer"] = {
+}
+skills["StompingGroundShockwavePlayer"] = {
 	name = "Stomping Ground Shockwave",
 	hidden = true,
 	skillTypes = { [SkillType.Attack] = true, [SkillType.Area] = true, [SkillType.Damage] = true, [SkillType.Triggered] = true, [SkillType.Triggerable] = true, [SkillType.SkillGrantedBySupport] = true, [SkillType.UseGlobalStats] = true, [SkillType.NoAttackOrCastTime] = true, },
@@ -3043,8 +3044,11 @@ skills["SupportStompingGroundPlayer"] = {
 				},
 			},
 			baseFlags = {
-				attack = true,
+				nonWeaponAttack = true,
 				area = true,
+			},
+			baseMods = {
+				skill("showAverage", true),
 			},
 			constantStats = {
 				{ "active_skill_base_area_of_effect_radius", 20 },
@@ -3199,6 +3203,11 @@ skills["SupportTremorsPlayer"] = {
 			label = "Tremors",
 			incrementalEffectiveness = 0.054999999701977,
 			statDescriptionScope = "gem_stat_descriptions",
+			statMap = {
+				["support_unstable_earth_damage_+%_final"] = {
+					mod("Damage", "MORE", nil),
+				},
+			},
 			baseFlags = {
 			},
 			constantStats = {

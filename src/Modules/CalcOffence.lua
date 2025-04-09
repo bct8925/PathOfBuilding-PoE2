@@ -527,6 +527,22 @@ function calcs.offence(env, actor, activeSkill)
 			func(activeSkill, output, breakdown)
 		end
 	end
+	-- Checks if a given item is classified as a martial weapon base on global data.weaponTypeInfo table
+	-- Note: long-term it might be better to add "MartialWeapon" flags to items instead potentially once PR #688 is complete
+	---@param item table @item as contained in actor.itemList
+	---@return boolean
+	local function isMartialWeapon(item)
+		local itemType = item.type or "None"
+		if itemType == "Staff" and not (item.base.subType == "Warstaff" or (item.baseName and item.baseName:find("Quarterstaff"))) then return false end -- Workaround to rule out caster staves
+		local nonMartialWeapons = {"None", "Wand", "Fishing Rod" } -- filter out other non-martial bases
+		for _, val in pairs(nonMartialWeapons) do
+			if val == itemType then return false end
+		end
+		for key, _ in pairs(data.weaponTypeInfo) do
+			if itemType == key then return true end
+		end
+		return false
+	end
 
 	runSkillFunc("initialFunc")
 
@@ -614,6 +630,40 @@ function calcs.offence(env, actor, activeSkill)
 			for _, damageType in ipairs(dmgTypeList) do
 				skillModList:NewMod(damageType.."Min", "BASE", m_floor((actor.weaponData2[damageType.."Min"] or 0) * multiplier), "Spellblade Off Hand", ModFlag.Spell)
 				skillModList:NewMod(damageType.."Max", "BASE", m_floor((actor.weaponData2[damageType.."Max"] or 0) * multiplier), "Spellblade Off Hand", ModFlag.Spell)
+			end
+		end
+	end
+	-- Add weapon base stats to output for use in mods like Tactician's ""Watch How I Do It" Ascendancy notable" and Amazon's "Penetrate"
+	-- Note: This might run into issues with Energy Blade or similar mechanics that could "replace" the weapon items, but it's hard to test because PoE2 doesn't have those mechanics yet
+	for i in pairs({ "1", "2" }) do
+		-- Section for martial weapons only for now
+		if actor.itemList["Weapon " .. i] and isMartialWeapon(actor.itemList["Weapon " .. i]) then
+			-- Add base min and max damage
+			for _, damageType in ipairs(dmgTypeList) do
+				if actor.itemList["Weapon " .. i] and actor["weaponData" .. i][damageType .. "Min"] then
+					output[damageType .. "Min" .. "OnWeapon " .. i] = actor["weaponData" .. i][damageType .. "Min"]
+				end
+				if actor["weaponData" .. i][damageType .. "Max"] then
+					output[damageType .. "Max" .. "OnWeapon " .. i] = actor["weaponData" .. i][damageType .. "Max"]
+				end
+			end
+			-- Add total local accuracy
+			output["AccuracyOnWeapon " .. i] = actor.itemList["Weapon " .. i].baseModList:Sum("BASE", nil, "Accuracy")
+		end
+	end
+	-- Add bonus mods for Tactician's "Watch How I Do It" (technically this could be done in ModParser, but it would always add 10 mods instead of just the necessary ones)
+	if actor.parent and actor.modDB:Flag(nil, "GainMainHandDmgFromParent") and actor.parent.itemList["Weapon 1"] then
+		local modSource = ""
+		for i, value in ipairs(actor.modDB:Tabulate("FLAG", nil, "GainMainHandDmgFromParent")) do
+			modSource = value.mod.source
+		end
+		local modValue = actor.parent.modDB:Sum("BASE", { source = modSource }, "Multiplier:MainHandDamageToAllies")
+		for _, damageType in ipairs(dmgTypeList) do
+			if actor.parent.weaponData1[damageType .. "Min"] then
+				skillModList:NewMod(damageType .. "Min", "BASE", 1, modSource, { type = "PercentStat", stat = damageType .. "MinOnWeapon 1", percent = modValue, actor = "parent" }, { type = "SkillType", skillType = SkillType.Attack })
+			end
+			if actor.parent.weaponData1[damageType .. "Max"] then
+				skillModList:NewMod(damageType .. "Max", "BASE", 1, modSource, { type = "PercentStat", stat = damageType .. "MaxOnWeapon 1", percent = modValue, actor = "parent" }, { type = "SkillType", skillType = SkillType.Attack })
 			end
 		end
 	end
@@ -1193,20 +1243,20 @@ function calcs.offence(env, actor, activeSkill)
 			breakdown.CurseEffectMod = breakdown.mod(skillModList, skillCfg, "CurseEffect")
 		end
 
-		local curseFrequencyMod = calcLib.mod(skillModList, skillCfg, "CurseFrequency")
+		local curseActivationMod = calcLib.mod(skillModList, skillCfg, "CurseActivation")
 		local curseDelayMod = calcLib.mod(skillModList, skillCfg, "CurseDelay")
 		output.CurseDelayBase = (skillData.curseDelay or 0) + skillModList:Sum("BASE", skillCfg, "CurseDelayBase")
-		output.CurseDelay = output.CurseDelayBase / curseFrequencyMod * curseDelayMod
+		output.CurseDelay = output.CurseDelayBase / curseActivationMod * curseDelayMod
 		output.CurseDelay = m_ceil(output.CurseDelay * data.misc.ServerTickRate) / data.misc.ServerTickRate
 		if breakdown and output.CurseDelay ~= output.CurseDelayBase then
 			breakdown.CurseDelay = {
 				s_format("%.2fs ^8(base)", output.CurseDelayBase),
 			}
-			if curseFrequencyMod ~= 1 then
-				t_insert(breakdown.CurseDelay, s_format("x %.4f ^8(frequency modifier)", curseFrequencyMod))
-			end
 			if curseDelayMod ~= 1 then
 				t_insert(breakdown.CurseDelay, s_format("x %.4f ^8(delay modifier)", curseDelayMod))
+			end
+			if curseActivationMod ~= 1 then
+				t_insert(breakdown.CurseDelay, s_format("/ %.4f ^8(activation modifier)", curseActivationMod))
 			end
 			t_insert(breakdown.CurseDelay, s_format("rounded up to nearest server tick"))
 			t_insert(breakdown.CurseDelay, s_format("= %.3fs", output.CurseDelay))
@@ -1743,7 +1793,7 @@ function calcs.offence(env, actor, activeSkill)
 		--Support cost multipliers are calculated first and rounded down after 4 digits
 		local mult = floor(skillModList:More(skillCfg, "SupportManaMultiplier"), 4)
 		-- First pass to calculate base costs. Used for cost conversion (e.g. Petrified Blood)
-		local additionalLifeCost = skillModList:Sum("BASE", skillCfg, "ManaCostAsLifeCost") / 100 -- Extra cost (e.g. Petrified Blood) calculations
+		local additionalLifeCost = skillModList:Sum("BASE", skillCfg, "BaseManaCostAsLifeCost") / 100 -- Extra cost (e.g. Petrified Blood) calculations
 		local additionalESCost = skillModList:Sum("BASE", skillCfg, "ManaCostAsEnergyShieldCost") / 100 -- Extra cost (e.g. Replica Covenant) calculations
 		local hybridLifeCost = m_min(skillModList:Sum("BASE", skillCfg, "HybridManaAndLifeCost_Life"), 100) / 100 -- Blood Magic, Lifetap and tree mods capped at 100
 		for resource, val in pairs(costs) do
@@ -1779,7 +1829,7 @@ function calcs.offence(env, actor, activeSkill)
 					costs[manaType].baseCostNoMult = 0
 				elseif additionalLifeCost > 0 or hybridLifeCost > 0 then
 					val.baseCost = costs[manaType].baseCost
-					val.finalBaseCost = val.finalBaseCost + round(costs[manaType].finalBaseCost * (hybridLifeCost + additionalLifeCost))
+					val.finalBaseCost = val.finalBaseCost + round(costs[manaType].finalBaseCost * hybridLifeCost) + m_floor(val.baseCost * mult) * additionalLifeCost
 				end
 			elseif val.type == "ES" then
 				local manaType = resource:gsub("ES", "Mana")
@@ -2213,9 +2263,23 @@ function calcs.offence(env, actor, activeSkill)
 		local incVsEnemy = skillModList:Sum("INC", cfg, "Accuracy", "AccuracyVsEnemy")
 		local more = skillModList:More("MORE", cfg, "Accuracy")
 		local moreVsEnemy = skillModList:More("MORE", cfg, "Accuracy", "AccuracyVsEnemy")
-
+		
+		local enemyDistance = env.modDB:Sum("BASE", nil, "Multiplier:enemyDistance") / 10 or 20
+		local enemyDistanceCapped = m_max(m_min(enemyDistance * 10, data.misc.AccuracyFalloffEnd), data.misc.AccuracyFalloffStart)
+		local modValue = m_floor(data.misc.MaxAccuracyRangePenalty * calcLib.mod(skillModList, cfg, "AccuracyPenalty"))
+		local accuracyPenalty = 1 - ((enemyDistanceCapped - data.misc.AccuracyFalloffStart) / 100) * modValue / 100
+		local accuracyPenalties = {}
+		local distances = {2, 5, 9, 12}
+		for _, distance in ipairs(distances) do
+			accuracyPenalties["accuracyPenalty" .. distance .. "m"] = 1 - ((distance * 10 - data.misc.AccuracyFalloffStart) / 100) * modValue / 100
+		end
+		
 		output.Accuracy = m_max(0, m_floor(base * (1 + inc / 100) * more))
 		local accuracyVsEnemy = m_max(0, m_floor(baseVsEnemy * (1 + incVsEnemy / 100) * moreVsEnemy))
+		local accuracyVsEnemyBase = accuracyVsEnemy
+		if not modDB:Flag(cfg, "NoAccuracyDistancePenalty") then
+			accuracyVsEnemy = m_floor(accuracyVsEnemy * accuracyPenalty)
+		end
 		if breakdown then
 			breakdown.Accuracy = { }
 			breakdown.multiChain(breakdown.Accuracy, {
@@ -2229,6 +2293,7 @@ function calcs.offence(env, actor, activeSkill)
 				breakdown.multiChain(breakdown.Accuracy, {
 					label = "Effective Accuracy vs Enemy",
 					base = { "%g ^8(base)", baseVsEnemy },
+					{ "%.2f ^8(distance penalty)", accuracyPenalty },
 					{ "%.2f ^8(increased/reduced)", 1 + incVsEnemy / 100 },
 					{ "%.2f ^8(more/less)", moreVsEnemy },
 					total = s_format("= %g", accuracyVsEnemy)
@@ -2251,19 +2316,36 @@ function calcs.offence(env, actor, activeSkill)
 			output.AccuracyHitChance = 100
 		else
 			local enemyEvasion = m_max(round(calcLib.val(enemyDB, "Evasion")), 0)
-			output.AccuracyHitChance = calcs.hitChance(enemyEvasion, accuracyVsEnemy) * calcLib.mod(skillModList, cfg, "HitChance")
+			local hitChanceMod = calcLib.mod(skillModList, cfg, "HitChance")
+			output.AccuracyHitChance = calcs.hitChance(enemyEvasion, accuracyVsEnemy) * hitChanceMod
+			local hitChances = {}
+			for _, distance in ipairs(distances) do
+				local adjustedAccuracy = m_floor(accuracyVsEnemyBase * accuracyPenalties["accuracyPenalty" .. distance .. "m"])
+				hitChances["hitChance" .. distance .. "m"] = calcs.hitChance(enemyEvasion, adjustedAccuracy) * hitChanceMod
+			end
 			if breakdown then
 				breakdown.AccuracyHitChance = {
-					"Enemy level: "..env.enemyLevel..(env.configInput.enemyLevel and " ^8(overridden from the Configuration tab" or " ^8(can be overridden in the Configuration tab)"),
-					"Enemy evasion: "..enemyEvasion,
-					"Approximate hit chance: "..output.AccuracyHitChance.."%",
+					"Enemy level: " .. env.enemyLevel .. (env.configInput.enemyLevel and " ^8(overridden from the Configuration tab" or " ^8(can be overridden in the Configuration tab)"),
+					"Enemy evasion: " .. enemyEvasion,
+					"",
+					"Approximate hit chance at:",
 				}
+				for i = 1, #distances do
+					local lower = distances[i]
+    				local upper = distances[i + 1]
+					if enemyDistance ~= lower then -- This ugly formatting keeps the text aligned in the display
+						t_insert(breakdown.AccuracyHitChance, string.rep("  ", 4 - string.len(lower))..string.rep(" ", string.len(lower) - 2)..lower .. "m: "..hitChances["hitChance" .. lower .. "m"].."%")
+					end
+					if enemyDistance >= lower and enemyDistance < upper then
+						t_insert(breakdown.AccuracyHitChance, string.rep("  ", 4 - string.len(enemyDistance))..string.rep(" ", string.len(enemyDistance) - 2)..enemyDistance.."m: "..output.AccuracyHitChance.."% ^8(current config)")
+					end
+				end
 			end
 		end
 		-- Accounting for mods that enable "Chance to hit with Attacks can exceed 100%"
 		if skillModList:Flag(nil,"Condition:HitChanceCanExceed100") and output.AccuracyHitChance == 100 then
 			local enemyEvasion = m_max(round(calcLib.val(enemyDB, "Evasion")), 0)
-			output.AccuracyHitChanceUncapped = m_max(calcs.hitChanceUncapped(enemyEvasion, accuracyVsEnemy) * calcLib.mod(skillModList, cfg, "HitChance"), output.AccuracyHitChance) -- keep higher chance in case of "CannotBeEvaded"
+			output.AccuracyHitChanceUncapped = m_max(calcs.hitChance(enemyEvasion, accuracyVsEnemy, true) * calcLib.mod(skillModList, cfg, "HitChance"), output.AccuracyHitChance) -- keep higher chance in case of "CannotBeEvaded"
 			if breakdown and breakdown.AccuracyHitChance then
 				t_insert(breakdown.AccuracyHitChance, "Uncapped hit chance: " .. output.AccuracyHitChanceUncapped .. "%")
 			elseif breakdown then
@@ -3395,7 +3477,7 @@ function calcs.offence(env, actor, activeSkill)
 								enemyDB:ReplaceMod("Armour", "OVERRIDE", -enemyDB:Sum("BASE", { source = "Config" }, "Armour"), "ArmourBreak", { type = "Condition", var = "ArmourBrokenBelowZeroMax" }, { type = "GlobalEffect", effectType= "Debuff", effectName = "ArmourBreak" }) -- if Config is set to Max, add mod with max value (use replace to avoid doubling)
 							end
 							local enemyArmour = enemyDB:Override(nil, "Armour") or m_max(calcLib.val(enemyDB, "Armour"), enemyArmourMin)
-							local ignoreEnemyArmour = calcLib.val(enemyDB, "IgnoreArmour") -- check for mods that ignore Armour
+							local ignoreEnemyArmour = skillModList:Flag(cfg, "IgnoreEnemyArmour") and enemyArmour or calcLib.val(enemyDB, "IgnoreArmour") -- check for mods that ignore Armour
 							if ignoreEnemyArmour and (enemyArmour > 0) then enemyArmour = m_max(enemyArmour - ignoreEnemyArmour, 0) end -- subtract ignored value up to zero, if Armour is still positive (to allow future support of negative Armour)
 							local armourReduction = calcs.armourReductionF(enemyArmour, damageTypeHitAvg * skillModList:More(cfg, "CalcArmourAsThoughDealing"))
 							local ChanceToIgnoreEnemyPhysicalDamageReduction = m_min(skillModList:Sum("BASE", cfg, "ChanceToIgnoreEnemyPhysicalDamageReduction"), 100)
@@ -3505,13 +3587,20 @@ function calcs.offence(env, actor, activeSkill)
 						lifeLeech = skillModList:Sum("BASE", cfg, "DamageLifeLeechToPlayer")
 					else
 						if skillModList:Flag(nil, "LifeLeechBasedOnChaosDamage") then
-								if damageType == "Chaos" then
-									lifeLeech = skillModList:Sum("BASE", cfg, "DamageLeech", "DamageLifeLeech", "PhysicalDamageLifeLeech", "LightningDamageLifeLeech", "ColdDamageLifeLeech", "FireDamageLifeLeech", "ChaosDamageLifeLeech", "ElementalDamageLifeLeech") + enemyDB:Sum("BASE", cfg, "SelfDamageLifeLeech") / 100
-								end
-							else
-								lifeLeech = skillModList:Sum("BASE", cfg, "DamageLeech", "DamageLifeLeech", damageType.."DamageLifeLeech", isElemental[damageType] and "ElementalDamageLifeLeech" or nil) + enemyDB:Sum("BASE", cfg, "SelfDamageLifeLeech") / 100
+							if damageType == "Chaos" then
+								lifeLeech = skillModList:Sum("BASE", cfg, "DamageLeech", "DamageLifeLeech", "PhysicalDamageLifeLeech", "LightningDamageLifeLeech", "ColdDamageLifeLeech", "FireDamageLifeLeech", "ChaosDamageLifeLeech", "ElementalDamageLifeLeech") + enemyDB:Sum("BASE", cfg, "SelfDamageLifeLeech") / 100
 							end
+						else
+							if pass == 1 and damageType == "Physical" and skillModList:Flag(nil, "PhysicalAsElementalDamageLifeLeech") then
+								skillModList:NewMod("ElementalDamageLifeLeech", "BASE", skillModList:Sum("BASE", cfg, "PhysicalDamageLifeLeech"), "Mystic Harvest")
+							end
+							lifeLeech = skillModList:Sum("BASE", cfg, "DamageLeech", "DamageLifeLeech", damageType.."DamageLifeLeech", isElemental[damageType] and "ElementalDamageLifeLeech" or nil) + enemyDB:Sum("BASE", cfg, "SelfDamageLifeLeech") / 100
+						end
 						energyShieldLeech = skillModList:Sum("BASE", cfg, "DamageEnergyShieldLeech", damageType.."DamageEnergyShieldLeech", isElemental[damageType] and "ElementalDamageEnergyShieldLeech" or nil) + enemyDB:Sum("BASE", cfg, "SelfDamageEnergyShieldLeech") / 100
+						if pass == 1 and damageType == "Physical" and skillModList:Flag(nil, "PhysicalAsAllDamageManaLeech") then
+							skillModList:NewMod("ElementalDamageManaLeech", "BASE", skillModList:Sum("BASE", cfg, "PhysicalDamageLifeLeech"), "Ravenous Doubts")
+							skillModList:NewMod("ChaosDamageManaLeech", "BASE", skillModList:Sum("BASE", cfg, "PhysicalDamageLifeLeech"), "Ravenous Doubts")
+						end
 						manaLeech = skillModList:Sum("BASE", cfg, "DamageLeech", "DamageManaLeech", damageType.."DamageManaLeech", isElemental[damageType] and "ElementalDamageManaLeech" or nil) + enemyDB:Sum("BASE", cfg, "SelfDamageManaLeech") / 100
 					end
 
@@ -4533,9 +4622,9 @@ function calcs.offence(env, actor, activeSkill)
 				output[flatAilment.."ChanceOnCrit"] = 0
 				skillFlags["inflict"..flatAilment] = false
 			else
-				local base = skillModList:Sum("BASE", cfg, flatAilment.."Chance") + enemyDB:Sum("BASE", nil, "Self"..flatAilment.."Chance")
-				local inc = skillModList:Sum("INC", cfg, flatAilment.."Chance")
-				local more = skillModList:More(cfg, flatAilment.."Chance")
+				local base = skillModList:Sum("BASE", cfg, flatAilment.."Chance", "AilmentChance") + enemyDB:Sum("BASE", nil, "Self"..flatAilment.."Chance")
+				local inc = skillModList:Sum("INC", cfg, flatAilment.."Chance", "AilmentChance")
+				local more = skillModList:More(cfg, flatAilment.."Chance", "AilmentChance")
 				local chance = m_min(100, base * (1 + inc / 100) * more)
 				output[flatAilment.."ChanceOnHit"] = chance
 				output[flatAilment.."ChanceOnCrit"] = chance
@@ -4569,9 +4658,9 @@ function calcs.offence(env, actor, activeSkill)
 			-- TODO: average for now, can do more complicated calculation later
 			local hitAvg = hitMin + (hitMax - hitMin) / 2
 			local critAvg = critMin + (critMax - critMin) / 2
-			local base = skillModList:Sum("BASE", cfg, "Enemy"..ailment.."Chance") + enemyDB:Sum("BASE", nil, "Self"..ailment.."Chance")
-			local inc = skillModList:Sum("INC", cfg, "Enemy"..ailment.."Chance")
-			local more = skillModList:More(cfg, "Enemy"..ailment.."Chance")
+			local base = skillModList:Sum("BASE", cfg, "Enemy"..ailment.."Chance", "AilmentChance") + enemyDB:Sum("BASE", nil, "Self"..ailment.."Chance")
+			local inc = skillModList:Sum("INC", cfg, "Enemy"..ailment.."Chance", "AilmentChance")
+			local more = skillModList:More(cfg, "Enemy"..ailment.."Chance", "AilmentChance")
 			local hitElementalAilmentChance = hitAvg / enemyThreshold * data.gameConstants[ailment .. "ChanceMultiplier"]
 			hitElementalAilmentChance = (hitElementalAilmentChance + base) * (1 + inc / 100) * more
 			local critElementalAilmentChance = critAvg / enemyThreshold * data.gameConstants[ailment .. "ChanceMultiplier"]

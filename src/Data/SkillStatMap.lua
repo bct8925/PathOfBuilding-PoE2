@@ -1741,6 +1741,9 @@ return {
 ["accuracy_rating_+%_when_on_low_life"] = {
 	mod("Accuracy", "INC", nil, 0, 0, { type = "Condition", var = "LowLife"})
 },
+["accuracy_range_penalty_+%"] = {
+	mod("AccuracyPenalty", "INC", nil),
+},
 ["attack_damage_+%"] = {
 	mod("Damage", "INC", nil, ModFlag.Attack),
 },
@@ -2221,6 +2224,9 @@ return {
 ["number_of_mage_skeletons_to_summon"] = {
 	mod("MinionPerCastCount", "BASE", nil)
 },
+["first_X_minions_have_0_base_spirit_reservation"] = {
+	mod("MinionFreeSpiritCount", "BASE", nil)
+},
 ["minion_always_crit"] = {
 	mod("MinionModifier", "LIST", { mod = mod("CritChance", "OVERRIDE", nil) }),
 	value = 100,
@@ -2275,7 +2281,7 @@ return {
 	div = 1000,
 },
 ["base_curse_delay_+%"] = {
-	mod("CurseFrequency", "INC", nil),
+	mod("CurseDelay", "INC", nil),
 },
 -- Hex
 ["curse_maximum_doom"] = {

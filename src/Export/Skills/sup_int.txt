@@ -189,6 +189,14 @@ statMap = {
 
 #skill SupportCommandment
 #set SupportCommandment
+statMap = {
+	["support_minion_damage_with_non_command_skills_+%_final"] = {
+		mod("MinionModifier", "LIST", { mod = mod("Damage", "MORE", nil, 0, 0, {type = "Condition", var = "CommandableSkill", neg = true}) }),
+	},
+	["minion_command_skill_cooldown_speed_+%"] = {
+		mod("MinionModifier", "LIST", { mod = mod("CooldownRecovery", "INC", nil, 0, 0, {type = "Condition", var = "CommandableSkill"}) }),
+	},
+},
 #mods
 #skillEnd
 
@@ -212,7 +220,7 @@ statMap = {
 		mod("Speed", "MORE", nil, ModFlag.Cast),
 	},
 	["support_slow_cast_spell_damage_+%_final"] = {
-		mod("Damage", "MORE", nil, OR64(ModFlag.Hit, ModFlag.Spell)),
+		mod("Damage", "MORE", nil),
 	},
 },
 #mods
@@ -222,7 +230,7 @@ statMap = {
 #set SupportControlledDestructionPlayer
 statMap = {
 	["support_controlled_destruction_spell_damage_+%_final"] = {
-		mod("Damage", "MORE", nil, ModFlag.Spell),
+		mod("Damage", "MORE", nil, ModFlag.Hit),
 	},
 },
 #mods
@@ -531,11 +539,6 @@ statMap = {
 
 #skill SupportHinderPlayer
 #set SupportHinderPlayer
-#mods
-#skillEnd
-
-#skill SupportHoarfrostPlayer
-#set SupportHoarfrostPlayer
 #mods
 #skillEnd
 

@@ -134,6 +134,13 @@ statMap = {
 #skillEnd
 
 #from tree
+#skill MetaCastFireSpellOnHitPlayer
+#set MetaCastFireSpellOnHitPlayer
+#flags
+#mods
+#skillEnd
+
+#from tree
 #skill ExplosiveConcoctionPlayer
 #set ExplosiveConcoctionPlayer
 #flags attack projectile duration unarmed
@@ -267,7 +274,7 @@ statMap = {
 #from item
 #skill ShieldBlockPlayer
 #set ShieldBlockPlayer
-#flags attack area shieldAttack
+#flags attack area shieldAttack melee
 #mods
 #skillEnd
 
@@ -315,10 +322,10 @@ statMap = {
 #from item
 #skill SpearThrowPlayer
 #set SpearThrowPlayer
-#flags attack area
+#flags attack projectile
 #mods
 #set SpearThrowFrenzyChargePlayer
-#flags attack area
+#flags attack projectile area
 #mods
 #skillEnd
 
