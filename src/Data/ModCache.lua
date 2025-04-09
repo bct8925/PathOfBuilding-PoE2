@@ -362,6 +362,7 @@ c["+3 to Level of all Consecrate Skills"]={{[1]={flags=0,keywordFlags=0,name="Ge
 c["+3 to Level of all Contagion Skills"]={{[1]={flags=0,keywordFlags=0,name="GemProperty",type="LIST",value={key="level",keyOfScaledMod="value",keyword="contagion",value=3}}},nil}
 c["+3 to Level of all Convalescence Skills"]={{[1]={flags=0,keywordFlags=0,name="GemProperty",type="LIST",value={key="level",keyOfScaledMod="value",keyword="convalescence",value=3}}},nil}
 c["+3 to Level of all Crossbow Shot Skills"]={{[1]={flags=0,keywordFlags=0,name="GemProperty",type="LIST",value={key="level",keyOfScaledMod="value",keyword="crossbow shot",value=3}}},nil}
+c["+3 to Level of all Cull The Weak Skills"]={{[1]={flags=0,keywordFlags=0,name="GemProperty",type="LIST",value={key="level",keyOfScaledMod="value",keyword="cull the weak",value=3}}},nil}
 c["+3 to Level of all Dark Effigy Skills"]={{[1]={flags=0,keywordFlags=0,name="GemProperty",type="LIST",value={key="level",keyOfScaledMod="value",keyword="dark effigy",value=3}}},nil}
 c["+3 to Level of all Decompose Skills"]={{[1]={flags=0,keywordFlags=0,name="GemProperty",type="LIST",value={key="level",keyOfScaledMod="value",keyword="decompose",value=3}}},nil}
 c["+3 to Level of all Defiance Banner Skills"]={{[1]={flags=0,keywordFlags=0,name="GemProperty",type="LIST",value={key="level",keyOfScaledMod="value",keyword="defiance banner",value=3}}},nil}
@@ -398,6 +399,7 @@ c["+3 to Level of all Eye of Winter Skills"]={{[1]={flags=0,keywordFlags=0,name=
 c["+3 to Level of all Falling Thunder Skills"]={{[1]={flags=0,keywordFlags=0,name="GemProperty",type="LIST",value={key="level",keyOfScaledMod="value",keyword="falling thunder",value=3}}},nil}
 c["+3 to Level of all Fangs of Frost Skills"]={{[1]={flags=0,keywordFlags=0,name="GemProperty",type="LIST",value={key="level",keyOfScaledMod="value",keyword="fangs of frost",value=3}}},nil}
 c["+3 to Level of all Fire Skills"]={{[1]={flags=0,keywordFlags=0,name="GemProperty",type="LIST",value={key="level",keyOfScaledMod="value",keyword="fire",value=3}}},nil}
+c["+3 to Level of all Fire Spell on Hit Skills"]={{[1]={flags=0,keywordFlags=0,name="GemProperty",type="LIST",value={key="level",keyOfScaledMod="value",keywordList={[1]="fire",[2]="spell",[3]="on",[4]="hit"},value=3}}},nil}
 c["+3 to Level of all Fireball Skills"]={{[1]={flags=0,keywordFlags=0,name="GemProperty",type="LIST",value={key="level",keyOfScaledMod="value",keyword="fireball",value=3}}},nil}
 c["+3 to Level of all Firebolt Skills"]={{[1]={flags=0,keywordFlags=0,name="GemProperty",type="LIST",value={key="level",keyOfScaledMod="value",keyword="firebolt",value=3}}},nil}
 c["+3 to Level of all Firestorm Skills"]={{[1]={flags=0,keywordFlags=0,name="GemProperty",type="LIST",value={key="level",keyOfScaledMod="value",keyword="firestorm",value=3}}},nil}
@@ -531,7 +533,6 @@ c["+3 to Level of all Sniper's Mark Skills"]={{[1]={flags=0,keywordFlags=0,name=
 c["+3 to Level of all Solar Orb Skills"]={{[1]={flags=0,keywordFlags=0,name="GemProperty",type="LIST",value={key="level",keyOfScaledMod="value",keyword="solar orb",value=3}}},nil}
 c["+3 to Level of all Sorcery Ward Skills"]={{[1]={flags=0,keywordFlags=0,name="GemProperty",type="LIST",value={key="level",keyOfScaledMod="value",keyword="sorcery ward",value=3}}},nil}
 c["+3 to Level of all Soul Offering Skills"]={{[1]={flags=0,keywordFlags=0,name="GemProperty",type="LIST",value={key="level",keyOfScaledMod="value",keyword="soul offering",value=3}}},nil}
-c["+3 to Level of all Soulrend Skills"]={{[1]={flags=0,keywordFlags=0,name="GemProperty",type="LIST",value={key="level",keyOfScaledMod="value",keyword="soulrend",value=3}}},nil}
 c["+3 to Level of all Spark Skills"]={{[1]={flags=0,keywordFlags=0,name="GemProperty",type="LIST",value={key="level",keyOfScaledMod="value",keyword="spark",value=3}}},nil}
 c["+3 to Level of all Spear Stab Skills"]={{[1]={flags=0,keywordFlags=0,name="GemProperty",type="LIST",value={key="level",keyOfScaledMod="value",keyword="spear stab",value=3}}},nil}
 c["+3 to Level of all Spear Throw Skills"]={{[1]={flags=0,keywordFlags=0,name="GemProperty",type="LIST",value={key="level",keyOfScaledMod="value",keyword="spear throw",value=3}}},nil}
@@ -773,7 +774,6 @@ c["+85 to maximum Life"]={{[1]={flags=0,keywordFlags=0,name="Life",type="BASE",v
 c["+85 to maximum Mana"]={{[1]={flags=0,keywordFlags=0,name="Mana",type="BASE",value=85}},nil}
 c["+86 to maximum Energy Shield"]={{[1]={flags=0,keywordFlags=0,name="EnergyShield",type="BASE",value=86}},nil}
 c["+9% to all Elemental Resistances"]={{[1]={flags=0,keywordFlags=0,name="ElementalResist",type="BASE",value=9}},nil}
-c["+90 to all Attributes"]={{[1]={flags=0,keywordFlags=0,name="Str",type="BASE",value=90},[2]={flags=0,keywordFlags=0,name="Dex",type="BASE",value=90},[3]={flags=0,keywordFlags=0,name="Int",type="BASE",value=90},[4]={flags=0,keywordFlags=0,name="All",type="BASE",value=90}},nil}
 c["+90 to maximum Life"]={{[1]={flags=0,keywordFlags=0,name="Life",type="BASE",value=90}},nil}
 c["+90 to maximum Mana"]={{[1]={flags=0,keywordFlags=0,name="Mana",type="BASE",value=90}},nil}
 c["+92 to maximum Life"]={{[1]={flags=0,keywordFlags=0,name="Life",type="BASE",value=92}},nil}
@@ -1047,8 +1047,7 @@ c["100% increased Culling Strike Threshold"]={{}," Culling Strike Threshold "}
 c["100% increased Defences from Equipped Shield"]={{[1]={[1]={slotName="Weapon 2",type="SlotName"},[2]={type="Condition",var="UsingShield"},flags=0,keywordFlags=0,name="Defences",type="INC",value=100}},nil}
 c["100% increased Effect of Jewel Socket Passive Skills"]={{[1]={flags=0,keywordFlags=0,name="LocalEffect",type="INC",value=100}},"  of Jewel Socket Passive Skills "}
 c["100% increased Effect of Jewel Socket Passive Skills containing Corrupted Magic Jewels"]={{[1]={flags=0,keywordFlags=0,name="JewelData",type="LIST",value={key="corruptedMagicJewelIncEffect",value=100}}},nil}
-c["100% increased Effect of the Socketed Jewel"]={{[1]={flags=0,keywordFlags=0,name="LocalEffect",type="INC",value=100}},"  of the Socketed Jewel "}
-c["100% increased Effect of the Socketed Jewel 50% more Mana Cost of Skills if you have no Energy Shield"]={{[1]={[1]={neg=true,type="Condition",var="HaveEnergyShield"},flags=0,keywordFlags=0,name="LocalEffect",type="INC",value=100}},"  of the Socketed Jewel 50% more Mana Cost of Skills  "}
+c["100% increased Effect of the Socketed Jewel"]={{[1]={flags=0,keywordFlags=0,name="SocketedJewelEffect",type="INC",value=100}},nil}
 c["100% increased Elemental Damage with Attacks"]={{[1]={flags=0,keywordFlags=65536,name="ElementalDamage",type="INC",value=100}},nil}
 c["100% increased Energy Shield"]={{[1]={flags=0,keywordFlags=0,name="EnergyShield",type="INC",value=100}},nil}
 c["100% increased Energy Shield Recharge Rate"]={{[1]={flags=0,keywordFlags=0,name="EnergyShieldRecharge",type="INC",value=100}},nil}
@@ -3564,7 +3563,7 @@ c["Cannot use Life Flasks"]={nil,"Cannot use Life Flasks "}
 c["Cannot use Projectile Attacks"]={nil,"Cannot use Projectile Attacks "}
 c["Cannot use Shield Skills"]={nil,"Cannot use Shield Skills "}
 c["Cannot use Warcries"]={nil,"Cannot use Warcries "}
-c["Carry a Chest which adds 20 Inventory Slots"]={nil,"Carry a Chest which adds 20 Inventory Slots "}
+c["Carry a Chest which adds 20 Inventory Slots"]={{},nil}
 c["Causes 200% increased Stun Buildup"]={nil,"Causes 200% increased Stun Buildup "}
 c["Causes 200% increased Stun Buildup All Damage from Hits with this Weapon Contributes to Chill Magnitude"]={nil,"Causes 200% increased Stun Buildup All Damage from Hits with this Weapon Contributes to Chill Magnitude "}
 c["Causes 50% increased Stun Buildup"]={nil,"Causes 50% increased Stun Buildup "}
@@ -3639,7 +3638,7 @@ c["Curse Enemies with Enfeeble on Block"]={{[1]={flags=0,keywordFlags=0,name="Ex
 c["Curse Skills have 15% increased Cast Speed"]={{[1]={flags=16,keywordFlags=2,name="Speed",type="INC",value=15}},nil}
 c["Curse Skills have 20% increased Cast Speed"]={{[1]={flags=16,keywordFlags=2,name="Speed",type="INC",value=20}},nil}
 c["Curse Skills have 20% increased Skill Effect Duration"]={{[1]={flags=0,keywordFlags=2,name="Duration",type="INC",value=20}},nil}
-c["Cursed Enemies Killed by you, or by Allies in your Presence, have a 33% chance to Explode, dealing a quarter of their maximum Life as Chaos Damage"]={nil,"Cursed Enemies Killed by you, or by Allies in your Presence, have a 33% chance to Explode, dealing a quarter of their maximum Life as Chaos Damage "}
+c["Cursed Enemies Killed by you, or by Allies in your Presence, have a 33% chance to Explode, dealing a quarter of their maximum Life as Chaos Damage"]={{[1]={[1]={actor="enemy",type="ActorCondition",var="Cursed"},flags=0,keywordFlags=0,name="ExplodeMod",type="LIST",value={amount=25,chance=0.33,keyOfScaledMod="chance",type="Chaos"}},[2]={flags=0,keywordFlags=0,name="CanExplode",type="FLAG",value=true}},nil}
 c["Curses have no Activation Delay"]={{[1]={flags=0,keywordFlags=0,name="CurseDelay",type="MORE",value=-100}},nil}
 c["Curses you inflict are reflected back to you"]={nil,"Curses you inflict are reflected back to you "}
 c["DNT Ded."]={nil,"DNT Ded. "}
@@ -3958,7 +3957,7 @@ c["Grants Skill: Elemental Expression"]={{[1]={flags=0,keywordFlags=0,name="Extr
 c["Grants Skill: Elemental Storm"]={{[1]={flags=0,keywordFlags=0,name="ExtraSkill",type="LIST",value={level=1,skillId="ElementalStormPlayer"}}},nil}
 c["Grants Skill: Encase in Jade"]={{[1]={flags=0,keywordFlags=0,name="ExtraSkill",type="LIST",value={level=1,skillId="EncaseInJadePlayer"}}},nil}
 c["Grants Skill: Explosive Concoction"]={{[1]={flags=0,keywordFlags=0,name="ExtraSkill",type="LIST",value={level=1,skillId="ExplosiveConcoctionPlayer"}}},nil}
-c["Grants Skill: Fire Spell on Melee Hit"]={nil,nil}
+c["Grants Skill: Fire Spell on Melee Hit"]={{[1]={flags=0,keywordFlags=0,name="ExtraSkill",type="LIST",value={level=1,skillId="MetaCastFireSpellOnHitPlayer"}}},nil}
 c["Grants Skill: Fulminating Concoction"]={{[1]={flags=0,keywordFlags=0,name="ExtraSkill",type="LIST",value={level=1,skillId="FulminatingConcoctionPlayer"}}},nil}
 c["Grants Skill: Infuse Weapon"]={{[1]={flags=0,keywordFlags=0,name="ExtraSkill",type="LIST",value={level=1,skillId="AmazonTriggerElementalInfusionPlayer"}}},nil}
 c["Grants Skill: Into the Breach"]={{[1]={flags=0,keywordFlags=0,name="ExtraSkill",type="LIST",value={level=1,skillId="IntoTheBreachPlayer"}}},nil}
@@ -4201,8 +4200,7 @@ c["Mark Skills have 10% increased Cast Speed"]={{[1]={[1]={skillType=98,type="Sk
 c["Mark Skills have 25% increased Skill Effect Duration"]={{[1]={[1]={skillType=98,type="SkillType"},flags=0,keywordFlags=0,name="Duration",type="INC",value=25}},nil}
 c["Maximum 10 Fragile Regrowth"]={nil,"Maximum 10 Fragile Regrowth "}
 c["Maximum 10 Fragile Regrowth 0.5% of maximum Life Regenerated per second per Fragile Regrowth"]={nil,"Maximum 10 Fragile Regrowth 0.5% of maximum Life Regenerated per second per Fragile Regrowth "}
-c["Maximum Chance to Evade is 50%"]={{[1]={flags=0,keywordFlags=0,name="EvadeChance",type="OVERRIDE",value=50}},"Maximum  "}
-c["Maximum Chance to Evade is 50% Maximum Physical Damage Reduction is 50%"]={{[1]={flags=0,keywordFlags=0,name="EvadeChance",type="OVERRIDE",value=50}},"Maximum  Maximum Physical Damage Reduction is 50% "}
+c["Maximum Chance to Evade is 50%"]={{[1]={flags=0,keywordFlags=0,name="EvadeChanceMax",type="MAX",value=50}},nil}
 c["Maximum Life is 1"]={{[1]={flags=0,keywordFlags=0,name="Life",type="OVERRIDE",value=1}},nil}
 c["Maximum Mana is replaced by Maximum Infernal Flame"]={nil,"Maximum Mana is replaced by Maximum Infernal Flame "}
 c["Maximum Mana is replaced by Maximum Infernal Flame Gain Infernal Flame instead of spending Mana for Skill costs"]={nil,"Maximum Mana is replaced by Maximum Infernal Flame Gain Infernal Flame instead of spending Mana for Skill costs "}
@@ -4297,7 +4295,7 @@ c["No Inherent loss of Rage"]={nil,"No Inherent loss of Rage "}
 c["No Movement Speed Penalty while Shield is Raised"]={nil,"No Movement Speed Penalty while Shield is Raised "}
 c["No Physical Damage"]={{[1]={flags=0,keywordFlags=0,name="WeaponData",type="LIST",value={key="PhysicalMin"}},[2]={flags=0,keywordFlags=0,name="WeaponData",type="LIST",value={key="PhysicalMax"}},[3]={flags=0,keywordFlags=0,name="WeaponData",type="LIST",value={key="PhysicalDPS"}}},nil}
 c["No inherent Mana Regeneration"]={{[1]={flags=0,keywordFlags=0,name="Condition:NoInherentManaRegen",type="FLAG",value=true}},nil}
-c["Non-Channelling Spells consume a Power Charge if able to deal 25% more Damage"]={nil,"consume a Power Charge if able to deal 25% more Damage "}
+c["Non-Channelling Spells consume a Power Charge if able to deal 25% more Damage"]={{[1]={[1]={neg=true,skillType=48,type="SkillType"},[2]={threshold=1,type="MultiplierThreshold",var="RemovablePowerCharge"},flags=0,keywordFlags=131072,name="Damage",type="MORE",value=25}},nil}
 c["Non-Channelling Spells cost an additional 3% of maximum Energy Shield"]={{[1]={[1]={percent=3,stat="EnergyShield",type="PercentStat"},[2]={neg=true,skillType=48,type="SkillType"},flags=0,keywordFlags=131072,name="ESCostBase",type="BASE",value=1}},nil}
 c["Non-Channelling Spells cost an additional 6% of your maximum Life"]={nil,"cost an additional 6% of your maximum Life "}
 c["Non-Channelling Spells cost an additional 6% of your maximum Life Non-Channelling Spells have 5% increased Critical Hit Chance per 100 maximum Life"]={nil,"cost an additional 6% of your maximum Life Non-Channelling Spells have 5% increased Critical Hit Chance per 100 maximum Life "}
@@ -4546,8 +4544,7 @@ c["Totems have 30% more Skill Speed"]={{[1]={flags=0,keywordFlags=16384,name="Sp
 c["Totems have 4% increased Attack Speed per Summoned Totem"]={{[1]={[1]={stat="TotemsSummoned",type="PerStat"},flags=1,keywordFlags=16384,name="Speed",type="INC",value=4}},nil}
 c["Totems only use Skills when you fire an Attack Projectile"]={nil,"Totems only use Skills when you fire an Attack Projectile "}
 c["Totems reserve 100 Spirit each"]={nil,"Totems reserve 100 Spirit each "}
-c["Trigger Ancestral Spirits when you Summon a Totem"]={nil,"Trigger Ancestral Spirits when you Summon a Totem "}
-c["Trigger Ancestral Spirits when you Summon a Totem Grants Skill: Ancestral Spirits"]={nil,"Trigger Ancestral Spirits when you Summon a Totem Grants Skill: Ancestral Spirits "}
+c["Trigger Ancestral Spirits when you Summon a Totem"]={{},nil}
 c["Trigger Decompose Skill on Step"]={nil,"Trigger Decompose Skill on Step "}
 c["Trigger Elemental Expression on Melee Critical Hit"]={nil,"Trigger Elemental Expression on Melee Critical Hit "}
 c["Trigger Elemental Expression on Melee Critical Hit Grants Skill: Elemental Expression"]={nil,"Trigger Elemental Expression on Melee Critical Hit Grants Skill: Elemental Expression "}
@@ -4617,8 +4614,7 @@ c["While not on Full Life, Sacrifice 1% of Mana per Second to Recover that much 
 c["While not on Full Life, Sacrifice 10% of maximum Mana per Second to Recover that much Life"]={{[1]={[1]={neg=true,type="Condition",var="FullLife"},flags=0,keywordFlags=0,name="ManaDegenPercent",type="BASE",value=10},[2]={[1]={percent=10,stat="Mana",type="PercentStat"},[2]={neg=true,type="Condition",var="FullLife"},flags=0,keywordFlags=0,name="LifeRecovery",type="BASE",value=1}},nil}
 c["While on High Infernal Flame, you and Allies in your"]={nil,"While on High Infernal Flame, you and Allies in your "}
 c["While on High Infernal Flame, you and Allies in your Presence Gain 50% of Damage as Fire Damage"]={nil,"While on High Infernal Flame, you and 50% of Damage as Fire Damage "}
-c["While you are not on Low Mana, you and Allies in your Presence have Unholy Might"]={nil,"While you are not on Low Mana, you and Unholy Might "}
-c["While you are not on Low Mana, you and Allies in your Presence have Unholy Might Lose 5% of maximum Mana per Second"]={nil,"While you are not on Low Mana, you and Unholy Might Lose 5% of maximum Mana per Second "}
+c["While you are not on Low Mana, you and Allies in your Presence have Unholy Might"]={{[1]={[1]={neg=true,type="Condition",var="LowMana"},flags=0,keywordFlags=0,name="ExtraAura",type="LIST",value={mod={flags=0,keywordFlags=0,name="Condition:UnholyMight",type="FLAG",value=true}}}},nil}
 c["You are Blind"]={{[1]={[1]={neg=true,type="Condition",var="CannotBeBlinded"},flags=0,keywordFlags=0,name="Condition:Blinded",type="FLAG",value=true}},nil}
 c["You are Immune to Bleeding"]={{[1]={flags=0,keywordFlags=0,name="BleedImmune",type="FLAG",value=true}},nil}
 c["You are considered on Low Life while at 75% of maximum Life or below instead"]={{[1]={flags=0,keywordFlags=0,name="LowLifePercentage",type="BASE",value=0.75}},nil}
