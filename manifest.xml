@@ -512,7 +512,7 @@
 	<File name="Modules/CalcBreakdown.lua" part="program" sha1="cc2454eaf888b48ad57047c38509d69792fc4e7f" />
 	<File name="Modules/CalcDefence.lua" part="program" sha1="ff3ce3aeb471bfaaa3e47cbda9e45a9416055305" />
 	<File name="Modules/CalcMirages.lua" part="program" sha1="64dfcbb7530fc7a69c483348cce0833912e2416f" />
-	<File name="Modules/CalcOffence.lua" part="program" sha1="23d6d884614a812d3bdbae82437d05e929b14578" />
+	<File name="Modules/CalcOffence.lua" part="program" sha1="d63fa0d1ad23db2632e3d2ac321b6578da95ec91" />
 	<File name="Modules/CalcPerform.lua" part="program" sha1="abec8e7da8674be8e63c07704882e13cf5898662" />
 	<File name="Modules/Calcs.lua" part="program" sha1="3b784306bfc18d31157fa7fc8167ac285ddafe5a" />
 	<File name="Modules/CalcSections.lua" part="program" sha1="c0f4ba9e97ccc311a81803d459800647edb5faf1" />

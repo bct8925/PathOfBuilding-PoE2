@@ -2332,7 +2332,7 @@ function calcs.offence(env, actor, activeSkill)
 				}
 				for i = 1, #distances do
 					local lower = distances[i]
-    				local upper = distances[i + 1]
+    				local upper = distances[i + 1] or lower
 					if enemyDistance ~= lower then -- This ugly formatting keeps the text aligned in the display
 						t_insert(breakdown.AccuracyHitChance, string.rep("  ", 4 - string.len(lower))..string.rep(" ", string.len(lower) - 2)..lower .. "m: "..hitChances["hitChance" .. lower .. "m"].."%")
 					end
