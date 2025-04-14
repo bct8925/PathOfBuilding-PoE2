@@ -2236,6 +2236,10 @@ local specialModList = {
 		mod("BleedStacksMax", "OVERRIDE", num),
 		flag("Condition:HaveCrimsonDance"),
 	} end,
+	["base (%a+) duration is (%d+) seconds?"] = function(_, ailment, num) return {-- Crimson Assault (but also supports poison & ignite variants with same wording)
+		mod(firstToUpper(ailment:gsub("ing",""))  .. "DurationBase", "OVERRIDE", num)
+	} end,
+	["bleeding you inflict is aggravated"] = { mod("EnemyModifier", "LIST", { mod = flag("Condition:BleedAggravated") }) },
 	["your minions spread caustic ground on death, dealing 20%% of their maximum life as chaos damage per second"] = { mod("ExtraMinionSkill", "LIST", { skillId = "SiegebreakerCausticGround" }) },
 	["your minions spread burning ground on death, dealing 20%% of their maximum life as fire damage per second"] = { mod("ExtraMinionSkill", "LIST", { skillId = "ReplicaSiegebreakerBurningGround" }) },
 	["you can have an additional brand attached to an enemy"] = { mod("BrandsAttachedLimit", "BASE", 1) },
@@ -2520,9 +2524,7 @@ local specialModList = {
 	["gain additional maximum life equal to (%d+)%% of the energy shield on equipped body armour"] = function(num) return {
 		mod("Life", "BASE", 1, { type = "PercentStat", stat = "EnergyShieldOnBody Armour", percent = num }),
 	} end,
-	["bleeding you inflict on cursed targets is aggravated"] = function(num) return {
-		mod("EnemyModifier", "LIST", { mod = flag("Condition:BleedAggravated", { type = "Condition", var = "Cursed" }) }),
-	} end,
+	["bleeding you inflict on cursed targets is aggravated"] = { mod("EnemyModifier", "LIST", { mod = flag("Condition:BleedAggravated", { type = "Condition", var = "Cursed" }) }) },
 	["critical hits ignore monster armour"] = { flag("IgnoreEnemyArmour", { type = "Condition", var = "CriticalStrike" }) },
 	["(%d+)%% of life loss from hits is prevented, then that much life is lost over 4 seconds instead"] = function(num) return { mod("LifeLossPrevented", "BASE", num) } end,
 	-- Champion
