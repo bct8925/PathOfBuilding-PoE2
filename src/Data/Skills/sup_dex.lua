@@ -1454,6 +1454,43 @@ skills["SupportCooldownReductionPlayer"] = {
 		},
 	}
 }
+skills["SupportInhibitorPlayer"] = {
+	name = "Inhibitor",
+	description = "Supports any Skill you use yourself or that you Trigger. Supported Skills cannot consume Charges by any means. Cannot Support Skills which require Charges to be used.",
+	color = 2,
+	support = true,
+	requireSkillTypes = { SkillType.Damage, SkillType.Attack, SkillType.CrossbowSkill, SkillType.CrossbowAmmoSkill, SkillType.Spell, SkillType.DegenOnlySpellDamage, },
+	addSkillTypes = { SkillType.CannotConsumeCharges, },
+	excludeSkillTypes = { SkillType.UsedByTotem, SkillType.Trapped, SkillType.RemoteMined, SkillType.RequiresCharges, },
+	levels = {
+		[1] = { levelRequirement = 0, },
+	},
+	statSets = {
+		[1] = {
+			label = "Inhibitor",
+			incrementalEffectiveness = 0.054999999701977,
+			statDescriptionScope = "gem_stat_descriptions",
+			statMap = {
+				["support_inhibitor_damage_+%_final_per_charge_type"] = {
+					mod("Damage", "MORE", nil, 0, 0, { type = "MultiplierThreshold", var = "FrenzyCharge", threshold = 1 }),
+					mod("Damage", "MORE", nil, 0, 0, { type = "MultiplierThreshold", var = "PowerCharge", threshold = 1 }),
+					mod("Damage", "MORE", nil, 0, 0, { type = "MultiplierThreshold", var = "EnduranceCharge", threshold = 1 }),
+				},
+			},
+			baseFlags = {
+			},
+			constantStats = {
+				{ "support_inhibitor_damage_+%_final_per_charge_type", 4 },
+			},
+			stats = {
+				"cannot_consume_power_frenzy_endurance_charges",
+			},
+			levels = {
+				[1] = { actorLevel = 1, },
+			},
+		},
+	}
+}
 skills["SupportInnervatePlayer"] = {
 	name = "Innervate",
 	description = "Supports Attacks you use yourself. Killing a Shocked enemy with supported skills infuses all of your Attacks with Lightning damage for a short time.",

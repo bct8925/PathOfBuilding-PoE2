@@ -16803,7 +16803,7 @@ return {
 			orbitIndex=2,
 			skill=703,
 			stats={
-				[1]="Gain additional Stun Threshold equal to 8% of maximum Energy Shield"
+				[1]="Gain additional Stun Threshold equal to 12% of maximum Energy Shield"
 			}
 		},
 		[722]={
@@ -20169,7 +20169,8 @@ return {
 			skill=3894,
 			stats={
 				[1]="3% increased maximum Life, Mana and Energy Shield",
-				[2]="Gain additional Stun Threshold equal to 20% of maximum Energy Shield"
+				[2]="Gain additional Ailment Threshold equal to 15% of maximum Energy Shield",
+				[3]="Gain additional Stun Threshold equal to 15% of maximum Energy Shield"
 			}
 		},
 		[3918]={
@@ -26773,7 +26774,8 @@ return {
 			skill=9642,
 			stats={
 				[1]="28% increased maximum Energy Shield",
-				[2]="Gain additional Stun Threshold equal to 12% of maximum Energy Shield"
+				[2]="Gain additional Ailment Threshold equal to 12% of maximum Energy Shield",
+				[3]="Gain additional Stun Threshold equal to 12% of maximum Energy Shield"
 			}
 		},
 		[9698]={
@@ -27553,12 +27555,13 @@ return {
 			},
 			group=227,
 			icon="Art/2DArt/SkillIcons/passives/EnergyShieldNode.dds",
-			name="Stun Threshold from Energy Shield",
+			name="Stun and Ailment Threshold from Energy Shield",
 			orbit=3,
 			orbitIndex=11,
 			skill=10208,
 			stats={
-				[1]="Gain additional Stun Threshold equal to 8% of maximum Energy Shield"
+				[1]="Gain additional Ailment Threshold equal to 8% of maximum Energy Shield",
+				[2]="Gain additional Stun Threshold equal to 8% of maximum Energy Shield"
 			}
 		},
 		[10242]={
@@ -28130,7 +28133,7 @@ return {
 			orbitIndex=8,
 			skill=10552,
 			stats={
-				[1]="Gain additional Stun Threshold equal to 8% of maximum Energy Shield"
+				[1]="Gain additional Stun Threshold equal to 12% of maximum Energy Shield"
 			}
 		},
 		[10571]={
@@ -30919,12 +30922,13 @@ return {
 			},
 			group=427,
 			icon="Art/2DArt/SkillIcons/passives/EnergyShieldNode.dds",
-			name="Stun Threshold from Energy Shield",
+			name="Stun and Ailment Threshold from Energy Shield",
 			orbit=4,
 			orbitIndex=25,
 			skill=13307,
 			stats={
-				[1]="Gain additional Stun Threshold equal to 8% of maximum Energy Shield"
+				[1]="Gain additional Ailment Threshold equal to 8% of maximum Energy Shield",
+				[2]="Gain additional Stun Threshold equal to 8% of maximum Energy Shield"
 			}
 		},
 		[13341]={
@@ -37495,7 +37499,7 @@ return {
 			orbitIndex=6,
 			skill=18895,
 			stats={
-				[1]="Gain additional Stun Threshold equal to 8% of maximum Energy Shield"
+				[1]="Gain additional Stun Threshold equal to 12% of maximum Energy Shield"
 			}
 		},
 		[18910]={
@@ -39845,12 +39849,13 @@ return {
 			},
 			group=227,
 			icon="Art/2DArt/SkillIcons/passives/EnergyShieldNode.dds",
-			name="Stun Threshold from Energy Shield",
+			name="Stun and Ailment Threshold from Energy Shield",
 			orbit=3,
 			orbitIndex=16,
 			skill=21415,
 			stats={
-				[1]="Gain additional Stun Threshold equal to 8% of maximum Energy Shield"
+				[1]="Gain additional Ailment Threshold equal to 8% of maximum Energy Shield",
+				[2]="Gain additional Stun Threshold equal to 8% of maximum Energy Shield"
 			}
 		},
 		[21438]={
@@ -41433,12 +41438,13 @@ return {
 			},
 			group=227,
 			icon="Art/2DArt/SkillIcons/passives/EnergyShieldNode.dds",
-			name="Stun Threshold from Energy Shield",
+			name="Stun and Ailment Threshold from Energy Shield",
 			orbit=3,
 			orbitIndex=14,
 			skill=22909,
 			stats={
-				[1]="Gain additional Stun Threshold equal to 8% of maximum Energy Shield"
+				[1]="Gain additional Ailment Threshold equal to 8% of maximum Energy Shield",
+				[2]="Gain additional Stun Threshold equal to 8% of maximum Energy Shield"
 			}
 		},
 		[22927]={
@@ -44145,12 +44151,13 @@ return {
 			},
 			group=458,
 			icon="Art/2DArt/SkillIcons/passives/EnergyShieldNode.dds",
-			name="Stun Threshold from Energy Shield",
+			name="Stun and Ailment Threshold from Energy Shield",
 			orbit=7,
 			orbitIndex=20,
 			skill=25363,
 			stats={
-				[1]="Gain additional Stun Threshold equal to 8% of maximum Energy Shield"
+				[1]="Gain additional Ailment Threshold equal to 8% of maximum Energy Shield",
+				[2]="Gain additional Stun Threshold equal to 8% of maximum Energy Shield"
 			}
 		},
 		[25374]={
@@ -45446,12 +45453,13 @@ return {
 			},
 			group=427,
 			icon="Art/2DArt/SkillIcons/passives/EnergyShieldNode.dds",
-			name="Stun Threshold from Energy Shield",
+			name="Stun and Ailment Threshold from Energy Shield",
 			orbit=4,
 			orbitIndex=40,
 			skill=26614,
 			stats={
-				[1]="Gain additional Stun Threshold equal to 8% of maximum Energy Shield"
+				[1]="Gain additional Ailment Threshold equal to 8% of maximum Energy Shield",
+				[2]="Gain additional Stun Threshold equal to 8% of maximum Energy Shield"
 			}
 		},
 		[26638]={
@@ -54552,7 +54560,7 @@ return {
 			},
 			skill=34531,
 			stats={
-				[1]="20% increased Stun Recovery",
+				[1]="Gain additional Ailment Threshold equal to 20% of maximum Energy Shield",
 				[2]="Gain additional Stun Threshold equal to 20% of maximum Energy Shield"
 			}
 		},
@@ -65323,12 +65331,13 @@ return {
 			},
 			group=458,
 			icon="Art/2DArt/SkillIcons/passives/EnergyShieldNode.dds",
-			name="Stun Threshold from Energy Shield",
+			name="Stun and Ailment Threshold from Energy Shield",
 			orbit=7,
 			orbitIndex=12,
 			skill=44098,
 			stats={
-				[1]="Gain additional Stun Threshold equal to 8% of maximum Energy Shield"
+				[1]="Gain additional Ailment Threshold equal to 8% of maximum Energy Shield",
+				[2]="Gain additional Stun Threshold equal to 8% of maximum Energy Shield"
 			}
 		},
 		[44141]={
@@ -66622,7 +66631,6 @@ return {
 			}
 		},
 		[44917]={
-			activeEffectImage="Art/2DArt/UIImages/InGame/PassiveMastery/MasteryBackgroundGraphic/MasteryLeechPattern",
 			connections={
 				[1]={
 					id=34984,
@@ -68163,12 +68171,13 @@ return {
 			},
 			group=427,
 			icon="Art/2DArt/SkillIcons/passives/EnergyShieldNode.dds",
-			name="Stun Threshold from Energy Shield",
+			name="Stun and Ailment Threshold from Energy Shield",
 			orbit=4,
 			orbitIndex=35,
 			skill=46275,
 			stats={
-				[1]="Gain additional Stun Threshold equal to 8% of maximum Energy Shield"
+				[1]="Gain additional Ailment Threshold equal to 8% of maximum Energy Shield",
+				[2]="Gain additional Stun Threshold equal to 8% of maximum Energy Shield"
 			}
 		},
 		[46296]={
@@ -80423,7 +80432,7 @@ return {
 			skill=56349,
 			stats={
 				[1]="Maximum Life is 1",
-				[2]="Immune to Chaos Damage"
+				[2]="Immune to Chaos Damage and Bleeding"
 			}
 		},
 		[56360]={
@@ -83061,12 +83070,13 @@ return {
 			},
 			group=427,
 			icon="Art/2DArt/SkillIcons/passives/EnergyShieldNode.dds",
-			name="Stun Threshold from Energy Shield",
+			name="Stun and Ailment Threshold from Energy Shield",
 			orbit=4,
 			orbitIndex=20,
 			skill=58789,
 			stats={
-				[1]="Gain additional Stun Threshold equal to 8% of maximum Energy Shield"
+				[1]="Gain additional Ailment Threshold equal to 8% of maximum Energy Shield",
+				[2]="Gain additional Stun Threshold equal to 8% of maximum Energy Shield"
 			}
 		},
 		[58814]={
@@ -86284,7 +86294,8 @@ return {
 			skill=61493,
 			stats={
 				[1]="+5 to all Attributes",
-				[2]="Gain additional Stun Threshold equal to 20% of maximum Energy Shield"
+				[2]="Gain additional Ailment Threshold equal to 16% of maximum Energy Shield",
+				[3]="Gain additional Stun Threshold equal to 16% of maximum Energy Shield"
 			}
 		},
 		[61525]={

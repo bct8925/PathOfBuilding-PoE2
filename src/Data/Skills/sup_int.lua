@@ -3875,7 +3875,7 @@ skills["SupportWildfirePlayer"] = {
 			baseFlags = {
 			},
 			constantStats = {
-				{ "support_ignite_proliferation_radius", 20 },
+				{ "support_ignite_proliferation_radius", 15 },
 			},
 			stats = {
 			},

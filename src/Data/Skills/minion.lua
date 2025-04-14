@@ -305,8 +305,8 @@ skills["BoneshatterBruteMinion"] = {
 skills["ArcSkeletonMageMinion"] = {
 	name = "Arc",
 	hidden = true,
-	description = "An arc of Lightning stretches from the caster to a targeted enemy and Chains on to other nearby enemies.",
-	skillTypes = { [SkillType.Spell] = true, [SkillType.Damage] = true, [SkillType.Trappable] = true, [SkillType.Totemable] = true, [SkillType.Mineable] = true, [SkillType.Chains] = true, [SkillType.Multicastable] = true, [SkillType.Triggerable] = true, [SkillType.Lightning] = true, [SkillType.CanRapidFire] = true, [SkillType.Invokable] = true, [SkillType.UsableWhileMoving] = true, },
+	description = "An arc of Lightning stretches from the caster to a targeted enemy and Chains on to other nearby enemies. Shocked enemies Hit release damaging pulses.",
+	skillTypes = { [SkillType.Spell] = true, [SkillType.Damage] = true, [SkillType.Trappable] = true, [SkillType.Totemable] = true, [SkillType.Mineable] = true, [SkillType.Chains] = true, [SkillType.Multicastable] = true, [SkillType.Triggerable] = true, [SkillType.Lightning] = true, [SkillType.CanRapidFire] = true, [SkillType.Invokable] = true, [SkillType.UsableWhileMoving] = true, [SkillType.Area] = true, [SkillType.AreaSpell] = true, },
 	castTime = 1.25,
 	qualityStats = {
 	},
@@ -319,7 +319,7 @@ skills["ArcSkeletonMageMinion"] = {
 			baseEffectiveness = 1.2000000476837,
 			incrementalEffectiveness = 0.25,
 			damageIncrementalEffectiveness = 0.037999998778105,
-			statDescriptionScope = "skill_stat_descriptions",
+			statDescriptionScope = "arc",
 			baseFlags = {
 				spell = true,
 				chaining = true,

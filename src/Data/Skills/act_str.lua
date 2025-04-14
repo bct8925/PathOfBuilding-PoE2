@@ -3852,7 +3852,7 @@ skills["HeraldOfBloodPlayer"] = {
 	name = "Herald of Blood",
 	baseTypeName = "Herald of Blood",
 	color = 1,
-	description = "While active, killing an enemy with Blood Loss will cause a bloody explosion that deals Physical Attack damage to surrounding enemies based off the life of the exploded enemy, destroying their Corpse in the process. The explosion also has a chance to Aggravate Bleeding.",
+	description = "While active, killing an enemy with Blood Loss will cause a bloody explosion that deals Physical Attack damage to surrounding enemies based off the life of the exploded enemy, destroying their Corpse if the enemy was Normal or Magic. The explosion also has a chance to Aggravate Bleeding.",
 	skillTypes = { [SkillType.OngoingSkill] = true, [SkillType.HasReservation] = true, [SkillType.Buff] = true, [SkillType.Persistent] = true, [SkillType.Herald] = true, [SkillType.UseGlobalStats] = true, [SkillType.Area] = true, [SkillType.Attack] = true, [SkillType.Physical] = true, [SkillType.SkillConsumesBleeding] = true, [SkillType.NoAttackOrCastTime] = true, },
 	weaponTypes = {
 		["One Handed Mace"] = true,
@@ -11483,7 +11483,7 @@ skills["ShieldWallPlayer"] = {
 	name = "Shield Wall",
 	baseTypeName = "Shield Wall",
 	color = 1,
-	description = "Ram your Shield into the ground, throwing up a semi-circular wall of earth. Enemies can attack the walls and your Slams will instantly destroy them. Each wall segment explodes when destroyed, damaging enemies around it.",
+	description = "Ram your Shield into the ground, throwing up a semi-circular wall of earth. Enemies can attack the walls and your Slams or Warcries will instantly destroy them. Each wall segment explodes when destroyed, damaging enemies around it.",
 	skillTypes = { [SkillType.Attack] = true, [SkillType.Wall] = true, [SkillType.Duration] = true, [SkillType.RequiresShield] = true, [SkillType.Physical] = true, [SkillType.Area] = true, [SkillType.SupportedByFountains] = true, [SkillType.NonWeaponAttack] = true, [SkillType.Melee] = true, },
 	castTime = 1,
 	qualityStats = {

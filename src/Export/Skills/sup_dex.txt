@@ -321,6 +321,18 @@ statMap = {
 #mods
 #skillEnd
 
+#skill SupportInhibitorPlayer
+#set SupportInhibitorPlayer
+statMap = {
+	["support_inhibitor_damage_+%_final_per_charge_type"] = {
+		mod("Damage", "MORE", nil, 0, 0, { type = "MultiplierThreshold", var = "FrenzyCharge", threshold = 1 }),
+		mod("Damage", "MORE", nil, 0, 0, { type = "MultiplierThreshold", var = "PowerCharge", threshold = 1 }),
+		mod("Damage", "MORE", nil, 0, 0, { type = "MultiplierThreshold", var = "EnduranceCharge", threshold = 1 }),
+	},
+},
+#mods
+#skillEnd
+
 #skill SupportInnervatePlayer
 #set SupportInnervatePlayer
 statMap = {

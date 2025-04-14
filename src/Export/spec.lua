@@ -6422,21 +6422,21 @@ return {
 			name="ConstantStats",
 			refTo="Stats",
 			type="Key",
-			width=1000
+			width=800
 		},
 		[5]={
 			list=true,
 			name="ConstantStatsValues",
 			refTo="",
 			type="Int",
-			width=250
+			width=200
 		},
 		[6]={
 			list=false,
 			name="BaseEffectiveness",
 			refTo="",
 			type="Float",
-			width=150
+			width=120
 		},
 		[7]={
 			list=false,
@@ -6457,7 +6457,7 @@ return {
 			name="RemoveStats",
 			refTo="Stats",
 			type="Key",
-			width=180
+			width=870
 		},
 		[10]={
 			list=false,

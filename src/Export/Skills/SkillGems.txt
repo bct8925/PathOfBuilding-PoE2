@@ -267,6 +267,7 @@ Gambleshot                    		----		SupportGambleshotPlayer
 Hit and Run                   		----		SupportHitAndRunPlayer
 Impale                        		----		SupportImpalePlayer
 Ingenuity                     		----		SupportCooldownReductionPlayer
+Inhibitor                     		----		SupportInhibitorPlayer
 Innervate                     		----		SupportInnervatePlayer
 Lasting Shock                 		----		SupportLastingShockPlayer
 Leverage                      		----		SupportLeveragePlayer
