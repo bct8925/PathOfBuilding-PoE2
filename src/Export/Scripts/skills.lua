@@ -220,6 +220,8 @@ local skillTypes = {
 	"CreatesCompanion",
 	"CannotTerrainChain",
 	"SupportedByTumult",
+	"RequiresCharges",
+	"CannotConsumeCharges",
 }
 
 -- This is here to fix name collisions like in the case of Barrage
@@ -769,7 +771,7 @@ directiveTable.set = function(state, args, out)
 		for i, stat in ipairs(statRow.AdditionalStats) do
 			for k, v in pairs(tempRemoveStats) do
 				if stat.Id == v then
-					statRow.BaseResolvedValues[i] = 0 -- Set the removed stat value to zero, but would be better if we could remove the value and the corresponding statInterpolation value too
+					statRow.AdditionalStatsValues[i] = 0 -- Set the removed stat value to zero, but would be better if we could remove the value and the corresponding statInterpolation value too
 					table.remove(tempRemoveStats, k) -- Only remove the first stat which will be from the copied base set and not the current set
 					break
 				end
