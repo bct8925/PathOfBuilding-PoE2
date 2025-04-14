@@ -748,7 +748,7 @@ directiveTable.set = function(state, args, out)
 		end
 		if injectConstantValuesIntoEachLevel then
 			for i, stat in ipairs(grantedEffectStatSet.ConstantStats) do
-				if not statMap[stat.Id] then
+				if not statMap[stat.Id] or indx == 1 then
 					statMap[stat.Id] = #set.stats + #set.constantStats + 1
 					table.insert(set.stats, { id = stat.Id })
 					if indx == 1 then
@@ -779,7 +779,7 @@ directiveTable.set = function(state, args, out)
 					break
 				end
 			end
-			if not statMap[stat.Id] then
+			if not statMap[stat.Id] or indx == 1 then
 				statMap[stat.Id] = #set.stats + 1
 				table.insert(set.stats, { id = stat.Id })
 				if indx == 1 then

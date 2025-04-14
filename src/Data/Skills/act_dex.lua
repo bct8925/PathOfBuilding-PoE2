@@ -2710,6 +2710,7 @@ skills["FangsOfFrostPlayer"] = {
 			},
 			stats = {
 				"active_skill_hit_damage_freeze_multiplier_+%_final",
+				"active_skill_hit_damage_freeze_multiplier_+%_final",
 				"melee_defer_damage_prediction",
 				"cannot_cancel_skill_before_contact_point",
 				"is_area_damage",
@@ -3333,6 +3334,7 @@ skills["GlacialLancePlayer"] = {
 				{ "active_skill_base_area_of_effect_radius", 26 },
 			},
 			stats = {
+				"active_skill_hit_damage_freeze_multiplier_+%_final",
 				"active_skill_hit_damage_freeze_multiplier_+%_final",
 				"base_is_projectile",
 				"use_scaled_contact_offset",

@@ -11428,6 +11428,8 @@ skills["ShieldChargePlayer"] = {
 				"off_hand_minimum_added_physical_damage_per_15_shield_armour",
 				"off_hand_maximum_added_physical_damage_per_15_shield_armour",
 				"base_movement_velocity_+%",
+				"off_hand_minimum_added_physical_damage_per_15_shield_armour",
+				"off_hand_maximum_added_physical_damage_per_15_shield_armour",
 				"is_area_damage",
 				"attack_is_melee_override",
 				"base_skill_show_average_damage_instead_of_dps",
