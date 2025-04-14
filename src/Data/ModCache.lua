@@ -3544,7 +3544,7 @@ c["Cannot Dodge Roll"]={nil,"Cannot Dodge Roll "}
 c["Cannot Evade Enemy Attacks"]={{[1]={flags=0,keywordFlags=0,name="CannotEvade",type="FLAG",value=true}},nil}
 c["Cannot Immobilise enemies"]={nil,"Cannot Immobilise enemies "}
 c["Cannot Recharge or Regenerate Energy Shield"]={{[1]={flags=0,keywordFlags=0,name="NoEnergyShieldRecharge",type="FLAG",value=true},[2]={flags=0,keywordFlags=0,name="NoEnergyShieldRegen",type="FLAG",value=true}},nil}
-c["Cannot Regenerate Mana if you haven't dealt a Critical Hit Recently"]={nil,"Cannot Regenerate Mana if you haven't dealt a Critical Hit Recently "}
+c["Cannot Regenerate Mana if you haven't dealt a Critical Hit Recently"]={{[1]={[1]={neg=true,type="Condition",var="CritRecently"},flags=0,keywordFlags=0,name="NoManaRegen",type="FLAG",value=true}},nil}
 c["Cannot be Blinded while on Full Life"]={{[1]={[1]={type="Condition",var="FullLife"},flags=0,keywordFlags=0,name="Condition:CannotBeBlinded",type="FLAG",value=true}},nil}
 c["Cannot be Critically Hit while Parrying"]={nil,"Cannot be Critically Hit while Parrying "}
 c["Cannot be Ignited"]={{[1]={flags=0,keywordFlags=0,name="IgniteImmune",type="FLAG",value=true}},nil}
