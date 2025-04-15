@@ -2099,6 +2099,13 @@ return {
 			refTo="",
 			type="String",
 			width=150
+		},
+		[6]={
+			list=false,
+			name="MapMod",
+			refTo="Mods",
+			type="Key",
+			width=150
 		}
 	},
 	blightcraftingrecipes={
