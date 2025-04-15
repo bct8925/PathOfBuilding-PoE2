@@ -3219,24 +3219,31 @@ return {
 	charactermeleeskills={
 		[1]={
 			list=false,
-			name="",
-			refTo="",
+			name="MainHandItem",
+			refTo="WieldableClasses",
 			type="Key",
-			width=150
+			width=200
 		},
 		[2]={
 			list=false,
-			name="",
-			refTo="",
+			name="OffHandItem",
+			refTo="WieldableClasses",
 			type="Key",
-			width=150
+			width=200
 		},
 		[3]={
-			list=false,
+			list=true,
 			name="SkillGem",
 			refTo="SkillGems",
 			type="Key",
-			width=400
+			width=700
+		},
+		[4]={
+			list=false,
+			name="",
+			refTo="",
+			type="Bool",
+			width=50
 		}
 	},
 	characterpaneldescriptionmodes={
@@ -4234,7 +4241,7 @@ return {
 	craftablemodtypes={
 		[1]={
 			list=false,
-			name="",
+			name="Id",
 			refTo="ModType",
 			type="Key",
 			width=320
@@ -5697,7 +5704,7 @@ return {
 		},
 		[11]={
 			list=false,
-			name="",
+			name="SpiritGem",
 			refTo="",
 			type="Bool",
 			width=150
@@ -5891,17 +5898,17 @@ return {
 		},
 		[8]={
 			list=false,
-			name="",
-			refTo="",
+			name="CraftableModTypes",
+			refTo="CraftableModTypes",
 			type="Key",
-			width=100
+			width=250
 		},
 		[9]={
 			list=true,
-			name="",
-			refTo="",
+			name="CraftingTags",
+			refTo="AdvancedCraftingBenchCustomTags",
 			type="Key",
-			width=100
+			width=250
 		}
 	},
 	goldrespecprices={
