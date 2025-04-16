@@ -698,7 +698,9 @@ function TradeQueryClass:GetResultEvaluation(row_idx, result_index)
 		local addedNodes = {}
 		for nodeName in (result.item_string.."\r\n"):gmatch("Allocates (.-)\r?\n") do
 			local node = self.itemsTab.build.spec.tree.notableMap[nodeName:lower()]
-			addedNodes[node] = true
+			if node and node.recipes ~= nil then
+				addedNodes[node] = true
+			end
 		end
 		
 		local output = self:ReduceOutput(calcFunc({ addNodes = addedNodes }))
