@@ -1131,7 +1131,7 @@ local preFlagList = {
 	["^summoned sentinels have "] = { addToMinion = true, addToMinionTag = { type = "SkillName", skillNameList = { "Herald of Purity", "Dominating Blow", "Absolution" }, includeTransfigured = true } },
 	["^raised zombies' slam attack has "] = { addToMinion = true, tag = { type = "SkillId", skillId = "ZombieSlam" } },
 	["^raised spectres, raised zombies, and summoned skeletons have "] = { addToMinion = true, addToMinionTag = { type = "SkillName", skillNameList = { "Raise Spectre", "Raise Zombie", "Summon Skeletons" }, includeTransfigured = true } },
-	["companions [hd][ae][va][el] "] = { addToMinion = true, addToMinionTag = { type = "SkillType", skillType = SkillType.Companion } },
+	["^companions [hd][ae][va][el] "] = { addToMinion = true, addToMinionTag = { type = "SkillType", skillType = SkillType.Companion } },
 	-- Totem/trap/mine
 	["^attacks used by totems have "] = { flags = ModFlag.Attack, keywordFlags = KeywordFlag.Totem },
 	["^spells cast by totems [hd][ae][va][el] "] = { flags = ModFlag.Spell, keywordFlags = KeywordFlag.Totem },
@@ -1148,7 +1148,7 @@ local preFlagList = {
 	["^attacks [ghd][ae][iva][eln] "] = { flags = ModFlag.Attack },
 	["^attacks using your weapons [ghd][ae][iva][eln] "] = { flags = ModFlag.Attack, tag = { type = "SkillType", skillType = SkillType.NonWeaponAttack, neg = true }},
 	["^attack skills [hd][ae][va][el] "] = { keywordFlags = KeywordFlag.Attack },
-	["^spells [hd][ae][va][el] a? ?"] = { flags = ModFlag.Spell },
+	["^spells [hdf][aei][var][el] a? ?"] = { flags = ModFlag.Spell },
 	["^spell skills [hd][ae][va][el] "] = { keywordFlags = KeywordFlag.Spell },
 	["^offering skills [hd][ae][va][el] "] = { tag = { type = "SkillType", skillType = SkillType.Offering } },
 	["^projectile attack skills [hd][ae][va][el] "] = { tag = { type = "SkillType", skillType = SkillType.RangedAttack } },
@@ -1284,6 +1284,7 @@ local preFlagList = {
 	-- While in the presence of...
 	["^while a unique enemy is in your presence, "] = { tag = { type = "ActorCondition", actor = "enemy", var = "RareOrUnique" } },
 	["^while a pinnacle atlas boss is in your presence, "] = { tag = { type = "ActorCondition", actor = "enemy", var = "PinnacleBoss" } },
+	["^body armour grants "] = { tag = { type = "ItemCondition", itemSlot = "Body Armour", rarityCond = "NORMAL" } },
 }
 
 -- List of modifier tags
@@ -1701,6 +1702,8 @@ local modTagList = {
 	["if you[' ]h?a?ve hit with your main hand weapon recently"] = { tag = { type = "Condition", var = "HitRecentlyWithWeapon" } },
 	["if you[' ]h?a?ve hit with your off hand weapon recently"] = { tagList = { { type = "Condition", var = "HitRecentlyWithWeapon" }, { type = "Condition", var = "DualWielding" } } },
 	["if you[' ]h?a?ve hit a cursed enemy recently"] = { tagList = { { type = "Condition", var = "HitRecently" }, { type = "ActorCondition", actor = "enemy", var = "Cursed" } } },
+	["if you[' ]h?a?ve dealt a projectile attack hit in the past eight seconds"] = { tag = { type = "Condition", var = "HitProjectileRecently" } },
+	["if you[' ]h?a?ve dealt a melee hit in the past eight seconds"] = { tag = { type = "Condition", var = "HitMeleeRecently" } },
 	["when you or your totems hit an enemy with a spell"] = { tag = { type = "Condition", varList = { "HitSpellRecently","TotemsHitSpellRecently" } }, },
 	["on hit with spells"] = { tag = { type = "Condition", var = "HitSpellRecently" } },
 	["if you[' ]h?a?ve crit recently"] = { tag = { type = "Condition", var = "CritRecently" } },
@@ -2141,6 +2144,11 @@ local specialModList = {
 		flag("ChaosInoculation"),
 		mod("ChaosDamageTaken", "MORE", -100)
 	},
+	["immune to chaos damage and bleeding"] = {
+		flag("ChaosInoculation"),
+		mod("ChaosDamageTaken", "MORE", -100),
+		flag("BleedImmune"),
+	},
 	["leech life (%d+)%% slower"] = function(num) return {mod("LifeLeechRate", "INC", -num)} end,
 	["leech life (%d+)%% faster"] = function(num) return {mod("LifeLeechRate", "INC", num)} end,
 	["life regeneration is applied to energy shield instead"] = { flag("ZealotsOath") },
@@ -2230,6 +2238,10 @@ local specialModList = {
 		mod("BleedStacksMax", "OVERRIDE", num),
 		flag("Condition:HaveCrimsonDance"),
 	} end,
+	["base (%a+) duration is (%d+) seconds?"] = function(_, ailment, num) return {-- Crimson Assault (but also supports poison & ignite variants with same wording)
+		mod(firstToUpper(ailment:gsub("ing",""))  .. "DurationBase", "OVERRIDE", num)
+	} end,
+	["bleeding you inflict is aggravated"] = { mod("EnemyModifier", "LIST", { mod = flag("Condition:BleedAggravated") }) },
 	["your minions spread caustic ground on death, dealing 20%% of their maximum life as chaos damage per second"] = { mod("ExtraMinionSkill", "LIST", { skillId = "SiegebreakerCausticGround" }) },
 	["your minions spread burning ground on death, dealing 20%% of their maximum life as fire damage per second"] = { mod("ExtraMinionSkill", "LIST", { skillId = "ReplicaSiegebreakerBurningGround" }) },
 	["you can have an additional brand attached to an enemy"] = { mod("BrandsAttachedLimit", "BASE", 1) },
@@ -2270,11 +2282,11 @@ local specialModList = {
 		mod("PhysicalEnergyShieldBypass", "BASE", 100),
 	},
 	["(%d+)%% of damage taken bypasses energy shield"] = function(num) return {
-		mod("PhysicalEnergyShieldBypass", "OVERRIDE", num),
-		mod("LightningEnergyShieldBypass", "OVERRIDE", num),
-		mod("ColdEnergyShieldBypass", "OVERRIDE", num),
-		mod("FireEnergyShieldBypass", "OVERRIDE", num),
-		mod("ChaosEnergyShieldBypass", "OVERRIDE", num),
+		mod("PhysicalEnergyShieldBypass", "BASE", num),
+		mod("LightningEnergyShieldBypass", "BASE", num),
+		mod("ColdEnergyShieldBypass", "BASE", num),
+		mod("FireEnergyShieldBypass", "BASE", num),
+		mod("ChaosEnergyShieldBypass", "BASE", num),
 	} end,
 	["auras from your skills do not affect allies"] = { flag("SelfAuraSkillsCannotAffectAllies") },
 	["auras from your skills have (%d+)%% more effect on you"] = function(num) return { mod("SkillAuraEffectOnSelf", "MORE", num) } end,
@@ -2514,9 +2526,7 @@ local specialModList = {
 	["gain additional maximum life equal to (%d+)%% of the energy shield on equipped body armour"] = function(num) return {
 		mod("Life", "BASE", 1, { type = "PercentStat", stat = "EnergyShieldOnBody Armour", percent = num }),
 	} end,
-	["bleeding you inflict on cursed targets is aggravated"] = function(num) return {
-		mod("EnemyModifier", "LIST", { mod = flag("Condition:BleedAggravated", { type = "Condition", var = "Cursed" }) }),
-	} end,
+	["bleeding you inflict on cursed targets is aggravated"] = { mod("EnemyModifier", "LIST", { mod = flag("Condition:BleedAggravated", { type = "Condition", var = "Cursed" }) }) },
 	["critical hits ignore monster armour"] = { flag("IgnoreEnemyArmour", { type = "Condition", var = "CriticalStrike" }) },
 	["(%d+)%% of life loss from hits is prevented, then that much life is lost over 4 seconds instead"] = function(num) return { mod("LifeLossPrevented", "BASE", num) } end,
 	-- Champion
@@ -2818,6 +2828,7 @@ local specialModList = {
 	["gain accuracy rating equal to your strength"] = { mod("Accuracy", "BASE", 1, { type = "PerStat", stat = "Str" }) },
 	["gain accuracy rating equal to twice your strength"] = { mod("Accuracy", "BASE", 2, { type = "PerStat", stat = "Str" }) },
 	-- Lich
+	["your life cannot change while you have energy shield"] = { flag("EternalLife") },
 	["while you are not on low mana, you and allies in your presence have unholy might"] = { mod("ExtraAura", "LIST", { mod = flag("Condition:UnholyMight")}, { type = "Condition", var = "LowMana", neg = true }) },
 	["(%d+)%% increased magnitude of unholy might buffs you grant per (%d+) maximum mana"] = function(num, _, num2) return { mod("ExtraAura", "LIST", { mod = mod("Multiplier:UnholyMightMagnitude", "BASE", num, { type = "PerStat", stat = "Mana", div = tonumber(num2), actor = "parent"}), { type = "GlobalEffect", effectName = "BlackenedHeart", effectType = "Aura", unscaleable = true}}) } end,
 	["non%-channelling spells cost an additional (%d+)%% of maximum energy shield"] = function(num) return { mod("ESCostBase", "BASE", 1, nil, 0, KeywordFlag.Spell, { type = "PercentStat", percent = num, stat = "EnergyShield" }, { type = "SkillType", skillType = SkillType.Channel, neg = true } )} end,
@@ -2915,9 +2926,17 @@ local specialModList = {
 	["you are unaffected by bleeding while leeching"] = { mod("SelfBleedEffect", "MORE", -100, { type = "Condition", var = "Leeching" }) },
 	-- Tactician
 	["allies in your presence gain added attack damage equal to (%d+)%% of your main hand weapon's damage"] = function(num) return {
-			mod("ExtraAura", "LIST", { onlyAllies = true, mod = flag("GainMainHandDmgFromParent") }),
-			mod("Multiplier:MainHandDamageToAllies", "BASE", num),
-		} end,
+		mod("ExtraAura", "LIST", { onlyAllies = true, mod = flag("GainMainHandDmgFromParent") }),
+		mod("Multiplier:MainHandDamageToAllies", "BASE", num),
+	} end,
+	-- Warrior - Smith of Kitava
+	["body armour grants armour also applies to (%a+) damage taken from hits"] = function(_, dmgType) return {
+		mod("ArmourAppliesTo"..firstToUpper(dmgType).."DamageTaken", "BASE", 100, { type = "ItemCondition", itemSlot = "Body Armour", rarityCond = "NORMAL" })
+	} end,
+	["body armour grants hits against you have (%d+)%% reduced critical damage bonus"] = function(num) return {
+		mod("ReduceCritExtraDamage", "BASE", num, { type = "ItemCondition", itemSlot = "Body Armour", rarityCond = "NORMAL" })
+	} end,
+	["body armour grants unaffected by ignite"] = { mod("SelfIgniteEffect", "MORE", -100, { type = "ItemCondition", itemSlot = "Body Armour", rarityCond = "NORMAL"}) },
 	-- Warrior - Titan
 	["(%d+)%% increased effect of small passive skills"] = function(num) return { mod("SmallPassiveSkillEffect", "INC", num) } end,
 	["carry a chest which adds (%d+) inventory slots"] = { },
@@ -3044,6 +3063,7 @@ local specialModList = {
 	["(%d+)%% of recovery applied instantly"] = function(num) return { mod("FlaskInstantRecovery", "BASE", num) } end,
 	["has no attribute requirements"] = { flag("NoAttributeRequirements") },
 	-- Skill modifiers
+	["([%+%-]%d+)%%? to level of ([%a%s]+) skills"] = function(num, _, name) return { mod("SupportedGemProperty", "LIST", { keyword = "grants_active_skill", key = "level", value = num }, 0, 0, { type = "SkillName", skillName = firstToUpper(name) } ),} end,
 	["([%+%-]%d+)%% to quality of all skills"] = function(num) return { mod("GemProperty", "LIST", { keyword = "grants_active_skill", key = "quality", value = num, keyOfScaledMod = "value"  }) } end,
 	["([%+%-]%d+)%%? to (%a+) of all ?([%a%-' ]*) skills? ?w?i?t?h? ?a?n? ?(%a+) ?r?e?q?u?i?r?e?m?e?n?t?"] = function(num, _, property, type, gemReq)
 		if type == "" then type = "all" end
@@ -4459,6 +4479,7 @@ local specialModList = {
 	["([%d%.]+)%% of physical damage prevented from hits recently is regenerated as energy shield per second"] = function(num) return { mod("PhysicalDamageMitigatedEnergyShieldPseudoRecoup", "BASE", num * 4) } end,
 	["cannot leech or regenerate mana"] = { flag("NoManaRegen"), flag("CannotLeechMana") },
 	["right ring slot: you cannot regenerate mana" ] = { flag("NoManaRegen", { type = "SlotNumber", num = 2 }) },
+	["cannot regenerate mana if you haven't dealt a critical hit recently"] = { flag("NoManaRegen", { type = "Condition", var = "CritRecently", neg = true} ) },
 	["y?o?u? ?cannot recharge energy shield"] = { flag("NoEnergyShieldRecharge") },
 	["energy shield does not recharge"] = { flag("NoEnergyShieldRecharge") },
 	["you cannot regenerate energy shield" ] = { flag("NoEnergyShieldRegen") },
@@ -4730,6 +4751,7 @@ local specialModList = {
 	["(%d+)%% of damage from hits is taken from your spectres' life before you"] = function(num) return { mod("takenFromSpectresBeforeYou", "BASE", num) } end,
 	["(%d+)%% of damage from hits is taken from your nearest totem's life before you"] = function(num) return { mod("takenFromTotemsBeforeYou", "BASE", num, { type = "Condition", var = "HaveTotem" }) } end,
 	["(%a+) resistance cannot be penetrated"] = function(_, res) return { flag("EnemyCannotPen"..(res:gsub("^%l", string.upper)).."Resistance") } end,
+	["your base energy shield recharge delay is (%d+) seconds"] = function(num) return { mod("EnergyShieldRechargeBase", "OVERRIDE", num), } end,
 	-- Knockback
 	["cannot knock enemies back"] = { flag("CannotKnockback") },
 	["knocks back enemies if you get a critical hit with a q?u?a?r?t?e?r?staff"] = { mod("EnemyKnockbackChance", "BASE", 100, nil, ModFlag.Staff, { type = "Condition", var = "CriticalStrike" }) },
@@ -4869,7 +4891,7 @@ local specialModList = {
 	["charms gain (%d*%.?%d+) charges? per second"] = function(num) return {
 		mod("CharmChargesGenerated", "BASE", num)
 	} end,
-	["+(%d+) charm slots?"] = function(num) return { mod("CharmLimit", "BASE", num) } end,
+	["h?a?s? ?+?(%d+) charm slots?"] = function(num) return { mod("CharmLimit", "BASE", num) } end,
 	["charms use no charges"] = { flag("CharmsUseNoCharges") },
 	["(%d+)%% of charges used by charms granted to your life flasks"] = function(num) return { 
 		mod("FlaskChargesGained", "MORE", num / 100, nil, nil, { type = "Multiplier", var = "AvgCharmChargesUsed"} ) 
@@ -5015,7 +5037,7 @@ local specialModList = {
 	["equipment and skill gems have (%d+)%% reduced attribute requirements"] = function(num) return { mod("GlobalAttributeRequirements", "INC", -num) } end,
 	["equipment and skill gems have (%d+)%% increased attribute requirements"] = function(num) return { mod("GlobalAttributeRequirements", "INC", num) } end,
 	["skill gems have (%d+)%% more attribute requirements"] = function(num) return { mod("GlobalGemAttributeRequirements", "MORE", num) } end,
-	["triple attribute requirements of weapons"] = function() return { mod("GlobalWeaponAttributeRequirements", "MORE", 200) } end,
+	["triple attribute requirements of martial weapons"] = function() return { mod("GlobalWeaponAttributeRequirements", "MORE", 200) } end,
 	["mana reservation of herald skills is always (%d+)%%"] = function(num) return { mod("SkillData", "LIST", { key = "ManaReservationPercentForced", value = num }, { type = "SkillType", skillType = SkillType.Herald }) } end,
 	["([%a%s]+) reserves no mana"] = function(_, name) return {
 		mod("SkillData", "LIST", { key = "manaReservationFlat", value = 0 }, { type = "SkillId", skillId = gemIdLookup[name] }, { type = "SkillType", skillType = SkillType.Blessing, neg = true }),
