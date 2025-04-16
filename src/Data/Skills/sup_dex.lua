@@ -1382,7 +1382,7 @@ skills["SupportGambleshotPlayer"] = {
 }
 skills["SupportHitAndRunPlayer"] = {
 	name = "Hit and Run",
-	description = "Supports Attack Skills you use yourself which do not have already have some Condition for use. Supported Skills can only be used after you have moved a certain distance, but have massively increased Skill Speed. Cannot support Skills which have a Cooldown or that are Triggered.",
+	description = "Supports Attack Skills you use yourself which do not already have some Condition for use. Supported Skills can only be used after you have moved a certain distance, but have massively increased Skill Speed. Cannot support Skills which have a Cooldown or that are Triggered.",
 	color = 2,
 	support = true,
 	requireSkillTypes = { SkillType.Attack, },
@@ -1676,7 +1676,7 @@ skills["SupportLifeOnCullPlayer"] = {
 }
 skills["SupportLightningExposurePlayer"] = {
 	name = "Lightning Exposure",
-	description = "Supports any skill that Hits enemies, causing it to inflict Lightning Exposure when it Shocks an enemy.",
+	description = "Supports any skill that Hits enemies, causing it to inflict Lightning Exposure when inflicting Shock.",
 	color = 2,
 	support = true,
 	requireSkillTypes = { SkillType.Attack, SkillType.Damage, SkillType.CrossbowAmmoSkill, },

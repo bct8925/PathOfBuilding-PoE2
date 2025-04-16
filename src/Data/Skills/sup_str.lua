@@ -1303,7 +1303,7 @@ skills["SupportFigureheadPlayer"] = {
 }
 skills["SupportFireExposurePlayer"] = {
 	name = "Fire Exposure",
-	description = "Supports any skill that Hits enemies, causing it to inflict Fire Exposure when it Ignites an enemy.",
+	description = "Supports any skill that Hits enemies, causing it to inflict Fire Exposure when Igniting.",
 	color = 1,
 	support = true,
 	requireSkillTypes = { SkillType.Attack, SkillType.Damage, SkillType.CrossbowAmmoSkill, },
@@ -2110,6 +2110,7 @@ skills["SupportIronwoodPlayer"] = {
 			},
 			constantStats = {
 				{ "totem_elemental_resistance_%", 40 },
+				{ "totem_maximum_all_elemental_resistances_%", 10 },
 			},
 			stats = {
 			},

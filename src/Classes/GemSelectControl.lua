@@ -638,7 +638,7 @@ function GemSelectClass:AddGrantedEffectInfo(gemInstance, grantedEffect, addReq)
 			self.tooltip:AddLine(16, string.format("^x7F7F7FCritical Hit Chance: ^7%.2f%%", grantedEffectLevel.critChance))
 		end
 		if gemInstance.gemData.weaponRequirements then
-			self.tooltip:AddLine(16, "^x7F7F7F Requires: ^7" .. gemInstance.gemData.weaponTypesString)
+			self.tooltip:AddLine(16, "^x7F7F7F Requires: ^7" .. gemInstance.gemData.weaponRequirements)
 		end
 	end
 	if addReq and displayInstance.quality > 0 then

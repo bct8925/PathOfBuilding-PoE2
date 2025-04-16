@@ -779,7 +779,6 @@ c["+85 to maximum Life"]={{[1]={flags=0,keywordFlags=0,name="Life",type="BASE",v
 c["+85 to maximum Mana"]={{[1]={flags=0,keywordFlags=0,name="Mana",type="BASE",value=85}},nil}
 c["+86 to maximum Energy Shield"]={{[1]={flags=0,keywordFlags=0,name="EnergyShield",type="BASE",value=86}},nil}
 c["+9% to all Elemental Resistances"]={{[1]={flags=0,keywordFlags=0,name="ElementalResist",type="BASE",value=9}},nil}
-c["+90 to all Attributes"]={{[1]={flags=0,keywordFlags=0,name="Str",type="BASE",value=90},[2]={flags=0,keywordFlags=0,name="Dex",type="BASE",value=90},[3]={flags=0,keywordFlags=0,name="Int",type="BASE",value=90},[4]={flags=0,keywordFlags=0,name="All",type="BASE",value=90}},nil}
 c["+90 to maximum Life"]={{[1]={flags=0,keywordFlags=0,name="Life",type="BASE",value=90}},nil}
 c["+90 to maximum Mana"]={{[1]={flags=0,keywordFlags=0,name="Mana",type="BASE",value=90}},nil}
 c["+92 to maximum Life"]={{[1]={flags=0,keywordFlags=0,name="Life",type="BASE",value=92}},nil}
@@ -1002,7 +1001,7 @@ c["10% less Movement and Skill Speed per Dodge Roll in the past 20 seconds"]={{[
 c["10% more chance to Evade Attacks if you have been Hit by an Attack Recently"]={{[1]={[1]={type="Condition",var="BeenHitByAttackRecently"},flags=0,keywordFlags=0,name="EvadeChance",type="MORE",value=10}},nil}
 c["10% of Damage is taken from Mana before Life"]={{[1]={flags=0,keywordFlags=0,name="DamageTakenFromManaBeforeLife",type="BASE",value=10}},nil}
 c["10% of Damage taken Recouped as Life"]={{[1]={flags=0,keywordFlags=0,name="LifeRecoup",type="BASE",value=10}},nil}
-c["10% of Damage taken bypasses Energy Shield"]={{[1]={flags=0,keywordFlags=0,name="PhysicalEnergyShieldBypass",type="OVERRIDE",value=10},[2]={flags=0,keywordFlags=0,name="LightningEnergyShieldBypass",type="OVERRIDE",value=10},[3]={flags=0,keywordFlags=0,name="ColdEnergyShieldBypass",type="OVERRIDE",value=10},[4]={flags=0,keywordFlags=0,name="FireEnergyShieldBypass",type="OVERRIDE",value=10},[5]={flags=0,keywordFlags=0,name="ChaosEnergyShieldBypass",type="OVERRIDE",value=10}},nil}
+c["10% of Damage taken bypasses Energy Shield"]={{[1]={flags=0,keywordFlags=0,name="PhysicalEnergyShieldBypass",type="BASE",value=10},[2]={flags=0,keywordFlags=0,name="LightningEnergyShieldBypass",type="BASE",value=10},[3]={flags=0,keywordFlags=0,name="ColdEnergyShieldBypass",type="BASE",value=10},[4]={flags=0,keywordFlags=0,name="FireEnergyShieldBypass",type="BASE",value=10},[5]={flags=0,keywordFlags=0,name="ChaosEnergyShieldBypass",type="BASE",value=10}},nil}
 c["10% of Physical Damage Converted to Cold Damage"]={{[1]={flags=0,keywordFlags=0,name="PhysicalDamageConvertToCold",type="BASE",value=10}},nil}
 c["10% of Physical Damage Converted to Fire Damage"]={{[1]={flags=0,keywordFlags=0,name="PhysicalDamageConvertToFire",type="BASE",value=10}},nil}
 c["10% of Physical Damage Converted to Lightning Damage"]={{[1]={flags=0,keywordFlags=0,name="PhysicalDamageConvertToLightning",type="BASE",value=10}},nil}
@@ -1810,7 +1809,7 @@ c["25% more Melee Critical Hit Chance while Blinded"]={{[1]={[1]={type="Conditio
 c["25% more Skill Speed while Off Hand is empty and you have"]={{[1]={[1]={type="Condition",var="OffHandIsEmpty"},flags=0,keywordFlags=0,name="Speed",type="MORE",value=25},[2]={[1]={type="Condition",var="OffHandIsEmpty"},flags=0,keywordFlags=0,name="WarcrySpeed",type="MORE",value=25}},"   and you have "}
 c["25% more Skill Speed while Off Hand is empty and you have a One-Handed Martial Weapon equipped in your Main Hand"]={{[1]={[1]={type="Condition",var="UsingOneHandedWeapon"},[2]={type="Condition",var="OffHandIsEmpty"},flags=0,keywordFlags=0,name="Speed",type="MORE",value=25},[2]={[1]={type="Condition",var="UsingOneHandedWeapon"},[2]={type="Condition",var="OffHandIsEmpty"},flags=0,keywordFlags=0,name="WarcrySpeed",type="MORE",value=25}},nil}
 c["25% of Armour also applies to Fire Damage taken from Hits"]={{[1]={flags=0,keywordFlags=0,name="ArmourAppliesToFireDamageTaken",type="BASE",value=25}},nil}
-c["25% of Damage taken bypasses Energy Shield"]={{[1]={flags=0,keywordFlags=0,name="PhysicalEnergyShieldBypass",type="OVERRIDE",value=25},[2]={flags=0,keywordFlags=0,name="LightningEnergyShieldBypass",type="OVERRIDE",value=25},[3]={flags=0,keywordFlags=0,name="ColdEnergyShieldBypass",type="OVERRIDE",value=25},[4]={flags=0,keywordFlags=0,name="FireEnergyShieldBypass",type="OVERRIDE",value=25},[5]={flags=0,keywordFlags=0,name="ChaosEnergyShieldBypass",type="OVERRIDE",value=25}},nil}
+c["25% of Damage taken bypasses Energy Shield"]={{[1]={flags=0,keywordFlags=0,name="PhysicalEnergyShieldBypass",type="BASE",value=25},[2]={flags=0,keywordFlags=0,name="LightningEnergyShieldBypass",type="BASE",value=25},[3]={flags=0,keywordFlags=0,name="ColdEnergyShieldBypass",type="BASE",value=25},[4]={flags=0,keywordFlags=0,name="FireEnergyShieldBypass",type="BASE",value=25},[5]={flags=0,keywordFlags=0,name="ChaosEnergyShieldBypass",type="BASE",value=25}},nil}
 c["25% of Life Loss from Hits is prevented, then that much Life is lost over 4 seconds instead"]={{[1]={flags=0,keywordFlags=0,name="LifeLossPrevented",type="BASE",value=25}},nil}
 c["25% of Maximum Life Converted to Energy Shield"]={{[1]={flags=0,keywordFlags=0,name="LifeConvertToEnergyShield",type="BASE",value=25}},nil}
 c["25% of Spell Mana Cost Converted to Life Cost"]={{[1]={[1]={skillType=2,type="SkillType"},flags=0,keywordFlags=0,name="HybridManaAndLifeCost_Life",type="BASE",value=25}},nil}
@@ -2312,7 +2311,7 @@ c["5% increased Skill Speed"]={{[1]={flags=0,keywordFlags=0,name="Speed",type="I
 c["5% increased Spirit"]={{[1]={flags=0,keywordFlags=0,name="Spirit",type="INC",value=5}},nil}
 c["5% increased Strength"]={{[1]={flags=0,keywordFlags=0,name="Str",type="INC",value=5}},nil}
 c["5% of Damage taken Recouped as Life"]={{[1]={flags=0,keywordFlags=0,name="LifeRecoup",type="BASE",value=5}},nil}
-c["5% of Damage taken bypasses Energy Shield"]={{[1]={flags=0,keywordFlags=0,name="PhysicalEnergyShieldBypass",type="OVERRIDE",value=5},[2]={flags=0,keywordFlags=0,name="LightningEnergyShieldBypass",type="OVERRIDE",value=5},[3]={flags=0,keywordFlags=0,name="ColdEnergyShieldBypass",type="OVERRIDE",value=5},[4]={flags=0,keywordFlags=0,name="FireEnergyShieldBypass",type="OVERRIDE",value=5},[5]={flags=0,keywordFlags=0,name="ChaosEnergyShieldBypass",type="OVERRIDE",value=5}},nil}
+c["5% of Damage taken bypasses Energy Shield"]={{[1]={flags=0,keywordFlags=0,name="PhysicalEnergyShieldBypass",type="BASE",value=5},[2]={flags=0,keywordFlags=0,name="LightningEnergyShieldBypass",type="BASE",value=5},[3]={flags=0,keywordFlags=0,name="ColdEnergyShieldBypass",type="BASE",value=5},[4]={flags=0,keywordFlags=0,name="FireEnergyShieldBypass",type="BASE",value=5},[5]={flags=0,keywordFlags=0,name="ChaosEnergyShieldBypass",type="BASE",value=5}},nil}
 c["5% of Physical Damage from Hits taken as Damage of a Random Element"]={{[1]={flags=0,keywordFlags=0,name="PhysicalDamageFromHitsTakenAsFire",type="BASE",value=1.6666666666667},[2]={flags=0,keywordFlags=0,name="PhysicalDamageFromHitsTakenAsCold",type="BASE",value=1.6666666666667},[3]={flags=0,keywordFlags=0,name="PhysicalDamageFromHitsTakenAsLightning",type="BASE",value=1.6666666666667}},nil}
 c["5% of Spell Damage Leeched as Life"]={{[1]={flags=2,keywordFlags=0,name="DamageLifeLeech",type="BASE",value=5}},nil}
 c["5% reduced Attack Speed"]={{[1]={flags=1,keywordFlags=0,name="Speed",type="INC",value=-5}},nil}
@@ -2837,6 +2836,7 @@ c["Allies in your Presence have 50% increased Critical Damage Bonus"]={{[1]={fla
 c["Allies in your Presence have 50% increased Critical Hit Chance"]={{[1]={flags=0,keywordFlags=0,name="ExtraAura",type="LIST",value={mod={flags=0,keywordFlags=0,name="CritChance",type="INC",value=50},onlyAllies=true}}},nil}
 c["Allies in your Presence have 6% increased Attack Speed"]={{[1]={flags=0,keywordFlags=0,name="ExtraAura",type="LIST",value={mod={flags=1,keywordFlags=0,name="Speed",type="INC",value=6},onlyAllies=true}}},nil}
 c["Allies in your Presence have Block Chance equal to yours"]={nil,"Block Chance equal to yours "}
+c["Allocates Abasement"]={{[1]={flags=0,keywordFlags=0,name="GrantedPassive",type="LIST",value="abasement"}},nil}
 c["Allocates Acceleration"]={{[1]={flags=0,keywordFlags=0,name="GrantedPassive",type="LIST",value="acceleration"}},nil}
 c["Allocates Adamant Recovery"]={{[1]={flags=0,keywordFlags=0,name="GrantedPassive",type="LIST",value="adamant recovery"}},nil}
 c["Allocates Adaptable Assault"]={{[1]={flags=0,keywordFlags=0,name="GrantedPassive",type="LIST",value="adaptable assault"}},nil}
@@ -3279,6 +3279,7 @@ c["Allocates Shattering Blow"]={{[1]={flags=0,keywordFlags=0,name="GrantedPassiv
 c["Allocates Shedding Skin"]={{[1]={flags=0,keywordFlags=0,name="GrantedPassive",type="LIST",value="shedding skin"}},nil}
 c["Allocates Shield Expertise"]={{[1]={flags=0,keywordFlags=0,name="GrantedPassive",type="LIST",value="shield expertise"}},nil}
 c["Allocates Shimmering"]={{[1]={flags=0,keywordFlags=0,name="GrantedPassive",type="LIST",value="shimmering"}},nil}
+c["Allocates Shimmering Mirage"]={{[1]={flags=0,keywordFlags=0,name="GrantedPassive",type="LIST",value="shimmering mirage"}},nil}
 c["Allocates Shockwaves"]={{[1]={flags=0,keywordFlags=0,name="GrantedPassive",type="LIST",value="shockwaves"}},nil}
 c["Allocates Short Shot"]={{[1]={flags=0,keywordFlags=0,name="GrantedPassive",type="LIST",value="short shot"}},nil}
 c["Allocates Shrapnel"]={{[1]={flags=0,keywordFlags=0,name="GrantedPassive",type="LIST",value="shrapnel"}},nil}
@@ -3933,12 +3934,14 @@ c["Gain additional Ailment Threshold equal to 12% of maximum Energy Shield"]={{[
 c["Gain additional Ailment Threshold equal to 15% of maximum Energy Shield"]={{[1]={[1]={percent="15",stat="EnergyShield",type="PercentStat"},flags=0,keywordFlags=0,name="AilmentThreshold",type="BASE",value=1}},nil}
 c["Gain additional Ailment Threshold equal to 16% of maximum Energy Shield"]={{[1]={[1]={percent="16",stat="EnergyShield",type="PercentStat"},flags=0,keywordFlags=0,name="AilmentThreshold",type="BASE",value=1}},nil}
 c["Gain additional Ailment Threshold equal to 20% of maximum Energy Shield"]={{[1]={[1]={percent="20",stat="EnergyShield",type="PercentStat"},flags=0,keywordFlags=0,name="AilmentThreshold",type="BASE",value=1}},nil}
+c["Gain additional Ailment Threshold equal to 30% of maximum Energy Shield"]={{[1]={[1]={percent="30",stat="EnergyShield",type="PercentStat"},flags=0,keywordFlags=0,name="AilmentThreshold",type="BASE",value=1}},nil}
 c["Gain additional Ailment Threshold equal to 8% of maximum Energy Shield"]={{[1]={[1]={percent="8",stat="EnergyShield",type="PercentStat"},flags=0,keywordFlags=0,name="AilmentThreshold",type="BASE",value=1}},nil}
 c["Gain additional Critical Hit Chance equal to 25% of excess chance to Hit with Attacks"]={{[1]={[1]={type="Multiplier",var="ExcessHitChance"},[2]={skillType=1,type="SkillType"},flags=0,keywordFlags=0,name="CritChance",type="BASE",value=0.25}},nil}
 c["Gain additional Stun Threshold equal to 12% of maximum Energy Shield"]={{[1]={[1]={percent="12",stat="EnergyShield",type="PercentStat"},flags=0,keywordFlags=0,name="StunThreshold",type="BASE",value=1}},nil}
 c["Gain additional Stun Threshold equal to 15% of maximum Energy Shield"]={{[1]={[1]={percent="15",stat="EnergyShield",type="PercentStat"},flags=0,keywordFlags=0,name="StunThreshold",type="BASE",value=1}},nil}
 c["Gain additional Stun Threshold equal to 16% of maximum Energy Shield"]={{[1]={[1]={percent="16",stat="EnergyShield",type="PercentStat"},flags=0,keywordFlags=0,name="StunThreshold",type="BASE",value=1}},nil}
 c["Gain additional Stun Threshold equal to 20% of maximum Energy Shield"]={{[1]={[1]={percent="20",stat="EnergyShield",type="PercentStat"},flags=0,keywordFlags=0,name="StunThreshold",type="BASE",value=1}},nil}
+c["Gain additional Stun Threshold equal to 30% of maximum Energy Shield"]={{[1]={[1]={percent="30",stat="EnergyShield",type="PercentStat"},flags=0,keywordFlags=0,name="StunThreshold",type="BASE",value=1}},nil}
 c["Gain additional Stun Threshold equal to 50% of Armour on Equipped Items"]={{[1]={[1]={percent=50,stat="ArmourOnHelmet",type="PercentStat"},flags=0,keywordFlags=0,name="StunThreshold",type="BASE",value=1},[2]={[1]={percent=50,stat="ArmourOnGloves",type="PercentStat"},flags=0,keywordFlags=0,name="StunThreshold",type="BASE",value=1},[3]={[1]={percent=50,stat="ArmourOnBoots",type="PercentStat"},flags=0,keywordFlags=0,name="StunThreshold",type="BASE",value=1},[4]={[1]={percent=50,stat="ArmourOnBody Armour",type="PercentStat"},flags=0,keywordFlags=0,name="StunThreshold",type="BASE",value=1}},nil}
 c["Gain additional Stun Threshold equal to 8% of maximum Energy Shield"]={{[1]={[1]={percent="8",stat="EnergyShield",type="PercentStat"},flags=0,keywordFlags=0,name="StunThreshold",type="BASE",value=1}},nil}
 c["Gain additional maximum Life equal to 100% of the Energy Shield on Equipped Body Armour"]={{[1]={[1]={percent=100,stat="EnergyShieldOnBody Armour",type="PercentStat"},flags=0,keywordFlags=0,name="Life",type="BASE",value=1}},nil}
@@ -4041,6 +4044,10 @@ c["Grants up to your maximum Rage on use"]={nil,"Grants up to your maximum Rage 
 c["Grenade Skills Fire an additional Projectile"]={{[1]={[1]={skillType=158,type="SkillType"},flags=1024,keywordFlags=0,name="ProjectileCount",type="BASE",value=1}},nil}
 c["Grenade Skills have +1 Cooldown Use"]={{[1]={[1]={skillType=158,type="SkillType"},flags=0,keywordFlags=0,name="AdditionalCooldownUses",type="BASE",value=1}},nil}
 c["Grenades have 15% chance to activate a second time"]={{[1]={[1]={skillType=158,type="SkillType"},flags=1024,keywordFlags=0,name="DPS",type="MORE",value=15}},nil}
+c["Has 2 Charm Slot"]={{[1]={flags=0,keywordFlags=0,name="CharmLimit",type="BASE",value=2}},nil}
+c["Has 2 Charm Slots"]={{[1]={flags=0,keywordFlags=0,name="CharmLimit",type="BASE",value=2}},nil}
+c["Has 3 Charm Slot"]={{[1]={flags=0,keywordFlags=0,name="CharmLimit",type="BASE",value=3}},nil}
+c["Has 3 Charm Slots"]={{[1]={flags=0,keywordFlags=0,name="CharmLimit",type="BASE",value=3}},nil}
 c["Has 6 Rune Sockets"]={nil,"Has 6 Rune Sockets "}
 c["Hazards have 15% chance to rearm after they are triggered"]={nil,"Hazards have 15% chance to rearm after they are triggered "}
 c["Hazards have 5% chance to rearm after they are triggered"]={nil,"Hazards have 5% chance to rearm after they are triggered "}
@@ -4677,7 +4684,7 @@ c["Your Heavy Stun buildup empties 50% faster if you've successfully Parried Rec
 c["Your Hits are Crushing Blows"]={nil,"Your Hits are Crushing Blows "}
 c["Your Hits can Penetrate Elemental Resistances down to a minimum of -50%"]={nil,"Your Hits can Penetrate Elemental Resistances down to a minimum of -50% "}
 c["Your Hits can't be Evaded"]={{[1]={flags=0,keywordFlags=0,name="CannotBeEvaded",type="FLAG",value=true}},nil}
-c["Your Life cannot change while you have Energy Shield"]={nil,"Your Life cannot change while you have Energy Shield "}
+c["Your Life cannot change while you have Energy Shield"]={{[1]={flags=0,keywordFlags=0,name="EternalLife",type="FLAG",value=true}},nil}
 c["Your base Energy Shield Recharge Delay is 10 seconds"]={{[1]={flags=0,keywordFlags=0,name="EnergyShieldRechargeBase",type="OVERRIDE",value=10}},nil}
 c["Your speed is unaffected by Slows"]={{[1]={flags=0,keywordFlags=0,name="UnaffectedBySlows",type="FLAG",value=true}},nil}
 c["apply to Energy Shield Recharge Rate"]={nil,"apply to Energy Shield Recharge Rate "}

@@ -2070,6 +2070,9 @@ return {
 ["totem_elemental_resistance_%"] = {
 	mod("TotemElementalResist", "BASE", nil)
 },
+["totem_chaos_resistance_%"] = {
+	mod("TotemChaosResist", "BASE", nil)
+},
 -- Minion
 ["minion_damage_+%"] = {
 	mod("MinionModifier", "LIST", { mod = mod("Damage", "INC", nil) }),

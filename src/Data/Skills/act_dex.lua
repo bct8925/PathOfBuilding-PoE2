@@ -1300,6 +1300,9 @@ skills["DisengagePlayer"] = {
 				{ "total_attack_time_+_ms", 200 },
 				{ "leap_maximum_allowed_path_distance", 40 },
 				{ "consume_parry_debuff_on_hit_to_gain_X_frenzy_charges", 1 },
+				{ "disengage_cone_angle", 68 },
+				{ "disangage_autotargeting_angle_%", 90 },
+				{ "disengage_cone_radius", 163 },
 			},
 			stats = {
 				"is_area_damage",
@@ -1361,6 +1364,9 @@ skills["DisengagePlayer"] = {
 				{ "override_turn_duration_ms", 50 },
 				{ "attack_maximum_action_distance_+", -8 },
 				{ "leap_maximum_allowed_path_distance", 40 },
+				{ "disengage_cone_angle", 68 },
+				{ "disangage_autotargeting_angle_%", 90 },
+				{ "disengage_cone_radius", 163 },
 				{ "active_skill_base_area_of_effect_radius", 20 },
 			},
 			stats = {
@@ -3180,7 +3186,7 @@ skills["GlacialLancePlayer"] = {
 	baseTypeName = "Glacial Lance",
 	color = 2,
 	description = "Throw a single Piercing lance that leaves icy fragments in its wake. The fragments Chill nearby enemies. Consumes a Frenzy Charge if possible to cause the ice fragments created by the first Projectile to explode outwards after a short duration, peppering enemies with shrapnel.",
-	skillTypes = { [SkillType.Attack] = true, [SkillType.RangedAttack] = true, [SkillType.Area] = true, [SkillType.Cold] = true, [SkillType.Projectile] = true, [SkillType.Spear] = true, [SkillType.ProjectileSpeed] = true, [SkillType.ProjectilesFromUser] = true, [SkillType.UsableWhileMoving] = true, [SkillType.CanRapidFire] = true, [SkillType.UsableWhileMounted] = true, [SkillType.Duration] = true, [SkillType.ConsumesCharges] = true, [SkillType.SkillConsumesFrenzyChargesOnUse] = true, [SkillType.CannotChain] = true, [SkillType.ProjectilesNumberModifiersNotApplied] = true, },
+	skillTypes = { [SkillType.Attack] = true, [SkillType.RangedAttack] = true, [SkillType.Area] = true, [SkillType.Cold] = true, [SkillType.Projectile] = true, [SkillType.Spear] = true, [SkillType.ProjectileSpeed] = true, [SkillType.ProjectilesFromUser] = true, [SkillType.UsableWhileMoving] = true, [SkillType.CanRapidFire] = true, [SkillType.UsableWhileMounted] = true, [SkillType.Duration] = true, [SkillType.ConsumesCharges] = true, [SkillType.SkillConsumesFrenzyChargesOnUse] = true, [SkillType.ProjectilesNumberModifiersNotApplied] = true, },
 	weaponTypes = {
 		["Spear"] = true,
 	},
@@ -3264,7 +3270,6 @@ skills["GlacialLancePlayer"] = {
 				"quality_display_active_skill_base_secondary_area_of_effect_radius_is_gem",
 				"quality_display_active_skill_base_area_of_effect_radius_is_gem",
 				"projectiles_cannot_split",
-				"base_projectiles_cannot_chain",
 				"projectiles_cannot_fork",
 				"projectiles_cannot_return",
 				"modifiers_to_projectile_count_do_not_apply",
@@ -3320,6 +3325,7 @@ skills["GlacialLancePlayer"] = {
 				attack = true,
 				projectile = true,
 				duration = true,
+				area = true,
 			},
 			constantStats = {
 				{ "active_skill_base_physical_damage_%_to_convert_to_cold", 60 },
@@ -3347,6 +3353,7 @@ skills["GlacialLancePlayer"] = {
 				"quality_display_active_skill_base_area_of_effect_radius_is_gem",
 				"modifiers_to_projectile_count_do_not_apply",
 				"display_statset_hide_usage_stats",
+				"is_area_damage",
 			},
 			levels = {
 				[1] = { 50, 50, baseMultiplier = 1.65, statInterpolation = { 1, 1, }, actorLevel = 1, },
@@ -7178,7 +7185,7 @@ skills["StormLancePlayer"] = {
 	baseTypeName = "Storm Lance",
 	color = 2,
 	description = "Throw an electrified Spear that lodges in the ground and periodically zaps nearby enemies with Lightning bolts. If the Spear is Detonated by another Skill, it immediately unleashes a volley of bolts and expires. Consumes a Frenzy Charge if possible to fire bolts more frequently for a shorter duration, automatically Detonate at the end of its duration, and create Shocked Ground on Detonation.",
-	skillTypes = { [SkillType.Projectile] = true, [SkillType.ProjectilesFromUser] = true, [SkillType.Lightning] = true, [SkillType.Damage] = true, [SkillType.Attack] = true, [SkillType.Area] = true, [SkillType.UsableWhileMoving] = true, [SkillType.Spear] = true, [SkillType.CanRapidFire] = true, [SkillType.RangedAttack] = true, [SkillType.UsableWhileMounted] = true, [SkillType.Sustained] = true, [SkillType.Limit] = true, [SkillType.Duration] = true, [SkillType.ConsumesCharges] = true, [SkillType.SkillConsumesFrenzyChargesOnUse] = true, },
+	skillTypes = { [SkillType.Projectile] = true, [SkillType.ProjectilesFromUser] = true, [SkillType.Lightning] = true, [SkillType.Damage] = true, [SkillType.Attack] = true, [SkillType.Area] = true, [SkillType.UsableWhileMoving] = true, [SkillType.Spear] = true, [SkillType.CanRapidFire] = true, [SkillType.RangedAttack] = true, [SkillType.UsableWhileMounted] = true, [SkillType.Sustained] = true, [SkillType.Limit] = true, [SkillType.Duration] = true, [SkillType.ConsumesCharges] = true, [SkillType.SkillConsumesFrenzyChargesOnUse] = true, [SkillType.CreatesGroundEffect] = true, },
 	weaponTypes = {
 		["Spear"] = true,
 	},
@@ -9255,6 +9262,7 @@ skills["WhirlingSlashPlayer"] = {
 				{ "melee_conditional_step_distance", 26 },
 			},
 			stats = {
+				"visual_hit_effect_physical_is_wind",
 				"is_area_damage",
 				"sandstorm_swipe_display",
 				"global_knockback",
@@ -9336,8 +9344,8 @@ skills["WhirlingSlashPlayer"] = {
 				{ "sandstorm_swipe_nova_radius_+_per_stage", 3 },
 			},
 			stats = {
-				"is_area_damage",
 				"visual_hit_effect_physical_is_wind",
+				"is_area_damage",
 				"display_statset_hide_usage_stats",
 				"quality_display_sandstorm_swipe_is_gem",
 				"base_skill_show_average_damage_instead_of_dps",
@@ -9392,7 +9400,7 @@ skills["WhirlwindLancePlayer"] = {
 	baseTypeName = "Whirlwind Lance",
 	color = 2,
 	description = "Throw a Spear with enough force to kick up a Whirlwind where it lands, Slowing enemies and Blinding them in its area of effect. Entering the Whirlwind collapses it, dealing damage and causing Knockback. Consumes a Frenzy Charge if possible to create the Whirlwind with one more than its normal maximum number of stages.",
-	skillTypes = { [SkillType.Attack] = true, [SkillType.RangedAttack] = true, [SkillType.Projectile] = true, [SkillType.ProjectileSpeed] = true, [SkillType.ProjectilesFromUser] = true, [SkillType.Area] = true, [SkillType.UsableWhileMoving] = true, [SkillType.Limit] = true, [SkillType.CanRapidFire] = true, [SkillType.Spear] = true, [SkillType.UsableWhileMounted] = true, [SkillType.SupportedByFountains] = true, [SkillType.Duration] = true, },
+	skillTypes = { [SkillType.Attack] = true, [SkillType.RangedAttack] = true, [SkillType.Projectile] = true, [SkillType.ProjectileSpeed] = true, [SkillType.ProjectilesFromUser] = true, [SkillType.Area] = true, [SkillType.UsableWhileMoving] = true, [SkillType.Limit] = true, [SkillType.CanRapidFire] = true, [SkillType.Spear] = true, [SkillType.UsableWhileMounted] = true, [SkillType.SupportedByFountains] = true, [SkillType.Duration] = true, [SkillType.ConsumesCharges] = true, [SkillType.SkillConsumesFrenzyChargesOnUse] = true, },
 	weaponTypes = {
 		["Spear"] = true,
 	},
@@ -9527,6 +9535,7 @@ skills["WhirlwindLancePlayer"] = {
 			baseFlags = {
 				attack = true,
 				duration = true,
+				melee = true,
 			},
 			constantStats = {
 				{ "movement_speed_+%_final_while_performing_action", -70 },
@@ -9544,6 +9553,7 @@ skills["WhirlwindLancePlayer"] = {
 				{ "windstorm_gain_all_damage_%_as_corresponding_element_if_empowered", 50 },
 				{ "sandstorm_swipe_nova_radius_+", 3 },
 				{ "base_skill_effect_duration", 8000 },
+				{ "skill_specific_stat_description_mode", 1 },
 			},
 			stats = {
 				"projectile_uses_contact_position",

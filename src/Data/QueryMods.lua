@@ -345,6 +345,15 @@ return {
 				["type"] = "enchant", 
 			}, 
 		}, 
+		["14211"] = {
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "enchant.stat_2954116742|14211", 
+				["text"] = "Allocates Shredding Contraptions", 
+				["type"] = "enchant", 
+			}, 
+		}, 
 		["14324"] = {
 			["specialCaseData"] = {
 			}, 
@@ -1611,6 +1620,15 @@ return {
 			["tradeMod"] = {
 				["id"] = "enchant.stat_2954116742|30392", 
 				["text"] = "Allocates Succour", 
+				["type"] = "enchant", 
+			}, 
+		}, 
+		["30408"] = {
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "enchant.stat_2954116742|30408", 
+				["text"] = "Allocates Efficient Contraptions", 
 				["type"] = "enchant", 
 			}, 
 		}, 
@@ -3810,6 +3828,15 @@ return {
 				["type"] = "enchant", 
 			}, 
 		}, 
+		["5335"] = {
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "enchant.stat_2954116742|5335", 
+				["text"] = "Allocates Shimmering Mirage", 
+				["type"] = "enchant", 
+			}, 
+		}, 
 		["53367"] = {
 			["specialCaseData"] = {
 			}, 
@@ -4926,6 +4953,15 @@ return {
 				["type"] = "enchant", 
 			}, 
 		}, 
+		["7338"] = {
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "enchant.stat_2954116742|7338", 
+				["text"] = "Allocates Abasement", 
+				["type"] = "enchant", 
+			}, 
+		}, 
 		["7341"] = {
 			["specialCaseData"] = {
 			}, 
@@ -5667,7 +5703,7 @@ return {
 				["type"] = "enchant", 
 			}, 
 		}, 
-		["4815_CorruptedBloodImmunity"] = {
+		["4816_CorruptedBloodImmunity"] = {
 			["AnyJewel"] = {
 				["max"] = 1, 
 				["min"] = 1, 
@@ -5684,7 +5720,7 @@ return {
 				["type"] = "enchant", 
 			}, 
 		}, 
-		["5822_EnergyGeneration"] = {
+		["5823_EnergyGeneration"] = {
 			["Helmet"] = {
 				["max"] = 30, 
 				["min"] = 20, 
@@ -5697,7 +5733,7 @@ return {
 				["type"] = "enchant", 
 			}, 
 		}, 
-		["6232_CharmChargeGeneration"] = {
+		["6233_CharmChargeGeneration"] = {
 			["Amulet"] = {
 				["max"] = 0.17, 
 				["min"] = 0.08, 
@@ -5710,7 +5746,7 @@ return {
 				["type"] = "enchant", 
 			}, 
 		}, 
-		["6234_LifeFlaskChargeGeneration"] = {
+		["6235_LifeFlaskChargeGeneration"] = {
 			["Amulet"] = {
 				["max"] = 0.17, 
 				["min"] = 0.08, 
@@ -5723,7 +5759,7 @@ return {
 				["type"] = "enchant", 
 			}, 
 		}, 
-		["6235_ManaFlaskChargeGeneration"] = {
+		["6236_ManaFlaskChargeGeneration"] = {
 			["Amulet"] = {
 				["max"] = 0.17, 
 				["min"] = 0.08, 
@@ -5736,7 +5772,7 @@ return {
 				["type"] = "enchant", 
 			}, 
 		}, 
-		["6255_GoldFoundIncrease"] = {
+		["6256_GoldFoundIncrease"] = {
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -5745,7 +5781,7 @@ return {
 				["type"] = "enchant", 
 			}, 
 		}, 
-		["6595_ImmuneToMaim"] = {
+		["6596_ImmuneToMaim"] = {
 			["AnyJewel"] = {
 				["max"] = 1, 
 				["min"] = 1, 
@@ -5762,7 +5798,7 @@ return {
 				["type"] = "enchant", 
 			}, 
 		}, 
-		["6854_LocalWeaponRangeIncrease"] = {
+		["6855_LocalWeaponRangeIncrease"] = {
 			["1HMace"] = {
 				["max"] = 20, 
 				["min"] = 10, 
@@ -5791,7 +5827,7 @@ return {
 				["type"] = "enchant", 
 			}, 
 		}, 
-		["6960_LocalRageOnHit"] = {
+		["6961_LocalRageOnHit"] = {
 			["1HMace"] = {
 				["max"] = 1, 
 				["min"] = 1, 
@@ -5820,7 +5856,7 @@ return {
 				["type"] = "enchant", 
 			}, 
 		}, 
-		["7015_LocalChanceToMaim"] = {
+		["7016_LocalChanceToMaim"] = {
 			["2HWeapon"] = {
 				["max"] = 15, 
 				["min"] = 10, 
@@ -5841,7 +5877,7 @@ return {
 				["type"] = "enchant", 
 			}, 
 		}, 
-		["7030_LocalChanceToPoisonOnHit"] = {
+		["7031_LocalChanceToPoisonOnHit"] = {
 			["2HWeapon"] = {
 				["max"] = 15, 
 				["min"] = 10, 
@@ -6268,7 +6304,7 @@ return {
 				["type"] = "enchant", 
 			}, 
 		}, 
-		["8551_ChainFromTerrain"] = {
+		["8552_ChainFromTerrain"] = {
 			["Quiver"] = {
 				["max"] = 20, 
 				["min"] = 10, 
@@ -6724,7 +6760,7 @@ return {
 				["type"] = "enchant", 
 			}, 
 		}, 
-		["9181_ThornsDamageIncrease"] = {
+		["9182_ThornsDamageIncrease"] = {
 			["Chest"] = {
 				["max"] = 50, 
 				["min"] = 40, 
@@ -6975,7 +7011,7 @@ return {
 				["type"] = "enchant", 
 			}, 
 		}, 
-		["9404_WeaponSwapSpeed"] = {
+		["9405_WeaponSwapSpeed"] = {
 			["Gloves"] = {
 				["max"] = 30, 
 				["min"] = 20, 
@@ -7091,7 +7127,7 @@ return {
 				["type"] = "enchant", 
 			}, 
 		}, 
-		["9450_YouCannotBeHindered"] = {
+		["9451_YouCannotBeHindered"] = {
 			["AnyJewel"] = {
 				["max"] = 1, 
 				["min"] = 1, 
@@ -8653,7 +8689,7 @@ return {
 				["type"] = "explicit", 
 			}, 
 		}, 
-		["4581_BleedDotMultiplier"] = {
+		["4582_BleedDotMultiplier"] = {
 			["AnyJewel"] = {
 				["max"] = 15, 
 				["min"] = 5, 
@@ -8670,7 +8706,7 @@ return {
 				["type"] = "explicit", 
 			}, 
 		}, 
-		["4698_BlindEffect"] = {
+		["4699_BlindEffect"] = {
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -8679,7 +8715,7 @@ return {
 				["type"] = "explicit", 
 			}, 
 		}, 
-		["5047_ForkingProjectiles"] = {
+		["5048_ForkingProjectiles"] = {
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -8688,7 +8724,7 @@ return {
 				["type"] = "explicit", 
 			}, 
 		}, 
-		["5125_BeltIncreasedCharmChargesGained"] = {
+		["5126_BeltIncreasedCharmChargesGained"] = {
 			["Belt"] = {
 				["max"] = 40, 
 				["min"] = 5, 
@@ -8701,7 +8737,7 @@ return {
 				["type"] = "explicit", 
 			}, 
 		}, 
-		["5125_CharmChargesGained"] = {
+		["5126_CharmChargesGained"] = {
 			["AnyJewel"] = {
 				["max"] = 15, 
 				["min"] = 5, 
@@ -8718,7 +8754,7 @@ return {
 				["type"] = "explicit", 
 			}, 
 		}, 
-		["5127_BeltReducedCharmChargesUsed"] = {
+		["5128_BeltReducedCharmChargesUsed"] = {
 			["Belt"] = {
 				["max"] = 25, 
 				["min"] = 8, 
@@ -8731,7 +8767,7 @@ return {
 				["type"] = "explicit", 
 			}, 
 		}, 
-		["5231_CompanionDamage"] = {
+		["5232_CompanionDamage"] = {
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -8740,7 +8776,7 @@ return {
 				["type"] = "explicit", 
 			}, 
 		}, 
-		["5233_CompanionLife"] = {
+		["5234_CompanionLife"] = {
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -8749,7 +8785,7 @@ return {
 				["type"] = "explicit", 
 			}, 
 		}, 
-		["5305_CriticalAilmentEffect"] = {
+		["5306_CriticalAilmentEffect"] = {
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -8758,7 +8794,7 @@ return {
 				["type"] = "explicit", 
 			}, 
 		}, 
-		["5403_CurseDelay"] = {
+		["5404_CurseDelay"] = {
 			["AnyJewel"] = {
 				["max"] = 15, 
 				["min"] = 5, 
@@ -8775,7 +8811,7 @@ return {
 				["type"] = "explicit", 
 			}, 
 		}, 
-		["5423_DamagevsArmourBrokenEnemies"] = {
+		["5424_DamagevsArmourBrokenEnemies"] = {
 			["AnyJewel"] = {
 				["max"] = 25, 
 				["min"] = 15, 
@@ -8792,7 +8828,7 @@ return {
 				["type"] = "explicit", 
 			}, 
 		}, 
-		["5489_CharmDamageWhileUsing"] = {
+		["5490_CharmDamageWhileUsing"] = {
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -8801,7 +8837,7 @@ return {
 				["type"] = "explicit", 
 			}, 
 		}, 
-		["5494_HeraldDamage"] = {
+		["5495_HeraldDamage"] = {
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -8810,7 +8846,7 @@ return {
 				["type"] = "explicit", 
 			}, 
 		}, 
-		["5528_DamagingAilmentDuration"] = {
+		["5529_DamagingAilmentDuration"] = {
 			["AnyJewel"] = {
 				["max"] = 10, 
 				["min"] = 5, 
@@ -8827,7 +8863,7 @@ return {
 				["type"] = "explicit", 
 			}, 
 		}, 
-		["5530_FasterAilmentDamageForJewel"] = {
+		["5531_FasterAilmentDamageForJewel"] = {
 			["AnyJewel"] = {
 				["max"] = 7, 
 				["min"] = 3, 
@@ -8844,7 +8880,7 @@ return {
 				["type"] = "explicit", 
 			}, 
 		}, 
-		["5538_DazeBuildup"] = {
+		["5539_DazeBuildup"] = {
 			["AnyJewel"] = {
 				["max"] = 20, 
 				["min"] = 10, 
@@ -8861,7 +8897,7 @@ return {
 				["type"] = "explicit", 
 			}, 
 		}, 
-		["5561_DebuffTimePassed"] = {
+		["5562_DebuffTimePassed"] = {
 			["AnyJewel"] = {
 				["max"] = 10, 
 				["min"] = 5, 
@@ -8878,7 +8914,7 @@ return {
 				["type"] = "explicit", 
 			}, 
 		}, 
-		["5753_ExertedAttackDamage"] = {
+		["5754_ExertedAttackDamage"] = {
 			["AnyJewel"] = {
 				["max"] = 20, 
 				["min"] = 10, 
@@ -8895,7 +8931,7 @@ return {
 				["type"] = "explicit", 
 			}, 
 		}, 
-		["5822_EnergyGeneration"] = {
+		["5823_EnergyGeneration"] = {
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -8904,7 +8940,7 @@ return {
 				["type"] = "explicit", 
 			}, 
 		}, 
-		["5832_FocusEnergyShield"] = {
+		["5833_FocusEnergyShield"] = {
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -8913,7 +8949,7 @@ return {
 				["type"] = "explicit", 
 			}, 
 		}, 
-		["6025_BeltIncreasedFlaskChargesGained"] = {
+		["6026_BeltIncreasedFlaskChargesGained"] = {
 			["Belt"] = {
 				["max"] = 40, 
 				["min"] = 5, 
@@ -8926,7 +8962,7 @@ return {
 				["type"] = "explicit", 
 			}, 
 		}, 
-		["6025_IncreasedFlaskChargesGained"] = {
+		["6026_IncreasedFlaskChargesGained"] = {
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -8935,7 +8971,7 @@ return {
 				["type"] = "explicit", 
 			}, 
 		}, 
-		["6214_RageOnHit"] = {
+		["6215_RageOnHit"] = {
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -8944,7 +8980,7 @@ return {
 				["type"] = "explicit", 
 			}, 
 		}, 
-		["6216_GainRageWhenHit"] = {
+		["6217_GainRageWhenHit"] = {
 			["AnyJewel"] = {
 				["max"] = 3, 
 				["min"] = 1, 
@@ -8961,7 +8997,7 @@ return {
 				["type"] = "explicit", 
 			}, 
 		}, 
-		["6306_HazardDamage"] = {
+		["6307_HazardDamage"] = {
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -8970,7 +9006,7 @@ return {
 				["type"] = "explicit", 
 			}, 
 		}, 
-		["6511_PinBuildup"] = {
+		["6512_PinBuildup"] = {
 			["AnyJewel"] = {
 				["max"] = 20, 
 				["min"] = 10, 
@@ -8987,7 +9023,7 @@ return {
 				["type"] = "explicit", 
 			}, 
 		}, 
-		["6567_IgniteEffect"] = {
+		["6568_IgniteEffect"] = {
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -8996,7 +9032,7 @@ return {
 				["type"] = "explicit", 
 			}, 
 		}, 
-		["6569_ElementalAilmentDuration"] = {
+		["6570_ElementalAilmentDuration"] = {
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -9005,7 +9041,7 @@ return {
 				["type"] = "explicit", 
 			}, 
 		}, 
-		["6705_LifeFlaskChargePercentGeneration"] = {
+		["6706_LifeFlaskChargePercentGeneration"] = {
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -9014,7 +9050,7 @@ return {
 				["type"] = "explicit", 
 			}, 
 		}, 
-		["6956_FlaskGainChargePerMinute"] = {
+		["6957_FlaskGainChargePerMinute"] = {
 			["Charm"] = {
 				["max"] = 0.25, 
 				["min"] = 0.15, 
@@ -9035,7 +9071,7 @@ return {
 				["type"] = "explicit", 
 			}, 
 		}, 
-		["6958_CorruptForTwoEnchantments"] = {
+		["6959_CorruptForTwoEnchantments"] = {
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -9044,7 +9080,7 @@ return {
 				["type"] = "explicit", 
 			}, 
 		}, 
-		["6980_JewelRadiusLargerRadius"] = {
+		["6981_JewelRadiusLargerRadius"] = {
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -9053,7 +9089,7 @@ return {
 				["type"] = "explicit", 
 			}, 
 		}, 
-		["6999_JewelRadiusNotableEffect"] = {
+		["7000_JewelRadiusNotableEffect"] = {
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -9062,7 +9098,7 @@ return {
 				["type"] = "explicit", 
 			}, 
 		}, 
-		["7003_JewelRadiusSmallNodeEffect"] = {
+		["7004_JewelRadiusSmallNodeEffect"] = {
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -9071,7 +9107,7 @@ return {
 				["type"] = "explicit", 
 			}, 
 		}, 
-		["7045_LocalRuneAndSoulCoreEffect"] = {
+		["7046_LocalRuneAndSoulCoreEffect"] = {
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -9080,7 +9116,7 @@ return {
 				["type"] = "explicit", 
 			}, 
 		}, 
-		["7155_MaceStun"] = {
+		["7156_MaceStun"] = {
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -9089,7 +9125,7 @@ return {
 				["type"] = "explicit", 
 			}, 
 		}, 
-		["7184_ManaFlaskChargePercentGeneration"] = {
+		["7185_ManaFlaskChargePercentGeneration"] = {
 			["AnyJewel"] = {
 				["max"] = 20, 
 				["min"] = 10, 
@@ -9106,7 +9142,7 @@ return {
 				["type"] = "explicit", 
 			}, 
 		}, 
-		["7949_MarkDuration"] = {
+		["7950_MarkDuration"] = {
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -9115,7 +9151,7 @@ return {
 				["type"] = "explicit", 
 			}, 
 		}, 
-		["8018_MeleeDamageIfProjectileHitRecently"] = {
+		["8019_MeleeDamageIfProjectileHitRecently"] = {
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -9124,7 +9160,7 @@ return {
 				["type"] = "explicit", 
 			}, 
 		}, 
-		["8098_MinionAccuracyRatingForJewel"] = {
+		["8099_MinionAccuracyRatingForJewel"] = {
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -9133,7 +9169,7 @@ return {
 				["type"] = "explicit", 
 			}, 
 		}, 
-		["8103_MinionAttackSpeedAndCastSpeed"] = {
+		["8104_MinionAttackSpeedAndCastSpeed"] = {
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -9142,7 +9178,7 @@ return {
 				["type"] = "explicit", 
 			}, 
 		}, 
-		["8120_MinionCriticalStrikeChanceIncrease"] = {
+		["8121_MinionCriticalStrikeChanceIncrease"] = {
 			["AnyJewel"] = {
 				["max"] = 20, 
 				["min"] = 10, 
@@ -9159,7 +9195,7 @@ return {
 				["type"] = "explicit", 
 			}, 
 		}, 
-		["8122_MinionCriticalStrikeMultiplier"] = {
+		["8123_MinionCriticalStrikeMultiplier"] = {
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -9168,7 +9204,7 @@ return {
 				["type"] = "explicit", 
 			}, 
 		}, 
-		["8168_MinionReviveSpeed"] = {
+		["8169_MinionReviveSpeed"] = {
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -10100,7 +10136,7 @@ return {
 				["type"] = "explicit", 
 			}, 
 		}, 
-		["8381_OfferingDuration"] = {
+		["8382_OfferingDuration"] = {
 			["AnyJewel"] = {
 				["max"] = 25, 
 				["min"] = 15, 
@@ -10117,7 +10153,7 @@ return {
 				["type"] = "explicit", 
 			}, 
 		}, 
-		["8382_OfferingLife"] = {
+		["8383_OfferingLife"] = {
 			["AnyJewel"] = {
 				["max"] = 25, 
 				["min"] = 15, 
@@ -10324,21 +10360,12 @@ return {
 				["type"] = "explicit", 
 			}, 
 		}, 
-		["8403_ParryDamage"] = {
+		["8404_ParryDamage"] = {
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
 				["id"] = "explicit.stat_2176628242", 
 				["text"] = "Small Passive Skills in Radius also grant #% increased Parry Damage", 
-				["type"] = "explicit", 
-			}, 
-		}, 
-		["8409_ParriedDebuffDuration"] = {
-			["specialCaseData"] = {
-			}, 
-			["tradeMod"] = {
-				["id"] = "explicit.stat_95491901", 
-				["text"] = "Notable Passive Skills in Radius also grant #% increased Parried Debuff Duration", 
 				["type"] = "explicit", 
 			}, 
 		}, 
@@ -10435,7 +10462,16 @@ return {
 				["type"] = "explicit", 
 			}, 
 		}, 
-		["8410_StunThresholdDuringParry"] = {
+		["8410_ParriedDebuffDuration"] = {
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "explicit.stat_95491901", 
+				["text"] = "Notable Passive Skills in Radius also grant #% increased Parried Debuff Duration", 
+				["type"] = "explicit", 
+			}, 
+		}, 
+		["8411_StunThresholdDuringParry"] = {
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -10769,7 +10805,7 @@ return {
 				["type"] = "explicit", 
 			}, 
 		}, 
-		["8506_PoisonEffect"] = {
+		["8507_PoisonEffect"] = {
 			["AnyJewel"] = {
 				["max"] = 15, 
 				["min"] = 5, 
@@ -10836,7 +10872,7 @@ return {
 				["type"] = "explicit", 
 			}, 
 		}, 
-		["8551_ChainFromTerrain"] = {
+		["8552_ChainFromTerrain"] = {
 			["AnyJewel"] = {
 				["max"] = 5, 
 				["min"] = 3, 
@@ -10853,7 +10889,7 @@ return {
 				["type"] = "explicit", 
 			}, 
 		}, 
-		["8554_ProjectileDamageIfMeleeHitRecently"] = {
+		["8555_ProjectileDamageIfMeleeHitRecently"] = {
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -11037,7 +11073,7 @@ return {
 				["type"] = "explicit", 
 			}, 
 		}, 
-		["8598_QuarterstaffFreezeBuildup"] = {
+		["8599_QuarterstaffFreezeBuildup"] = {
 			["AnyJewel"] = {
 				["max"] = 20, 
 				["min"] = 10, 
@@ -11104,7 +11140,7 @@ return {
 				["type"] = "explicit", 
 			}, 
 		}, 
-		["8606_QuiverModifierEffect"] = {
+		["8607_QuiverModifierEffect"] = {
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -11172,7 +11208,7 @@ return {
 				["type"] = "explicit", 
 			}, 
 		}, 
-		["8610_MaximumRage"] = {
+		["8611_MaximumRage"] = {
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -11397,15 +11433,6 @@ return {
 			}, 
 			["usePositiveSign"] = true, 
 		}, 
-		["8719_CrossbowReloadSpeed"] = {
-			["specialCaseData"] = {
-			}, 
-			["tradeMod"] = {
-				["id"] = "explicit.stat_3856744003", 
-				["text"] = "Notable Passive Skills in Radius also grant #% increased Crossbow Reload Speed", 
-				["type"] = "explicit", 
-			}, 
-		}, 
 		["871_GlobalEnergyShieldPercent"] = {
 			["Amulet"] = {
 				["max"] = 50, 
@@ -11424,6 +11451,15 @@ return {
 			["tradeMod"] = {
 				["id"] = "explicit.stat_2482852589", 
 				["text"] = "#% increased maximum Energy Shield", 
+				["type"] = "explicit", 
+			}, 
+		}, 
+		["8720_CrossbowReloadSpeed"] = {
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "explicit.stat_3856744003", 
+				["text"] = "Notable Passive Skills in Radius also grant #% increased Crossbow Reload Speed", 
 				["type"] = "explicit", 
 			}, 
 		}, 
@@ -11866,7 +11902,7 @@ return {
 				["type"] = "explicit", 
 			}, 
 		}, 
-		["8795_ShieldArmourIncrease"] = {
+		["8796_ShieldArmourIncrease"] = {
 			["AnyJewel"] = {
 				["max"] = 32, 
 				["min"] = 18, 
@@ -11896,7 +11932,7 @@ return {
 				["type"] = "explicit", 
 			}, 
 		}, 
-		["8801_ShockEffect"] = {
+		["8802_ShockEffect"] = {
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -12165,8 +12201,8 @@ return {
 		}, 
 		["896_CharmGuardWhileActive"] = {
 			["Charm"] = {
-				["max"] = 209, 
-				["min"] = 15, 
+				["max"] = 500, 
+				["min"] = 44, 
 			}, 
 			["specialCaseData"] = {
 			}, 
@@ -12178,8 +12214,8 @@ return {
 		}, 
 		["897_CharmGainLifeOnUse"] = {
 			["Charm"] = {
-				["max"] = 82, 
-				["min"] = 4, 
+				["max"] = 350, 
+				["min"] = 8, 
 			}, 
 			["specialCaseData"] = {
 			}, 
@@ -12191,8 +12227,8 @@ return {
 		}, 
 		["898_CharmGainManaOnUse"] = {
 			["Charm"] = {
-				["max"] = 47, 
-				["min"] = 3, 
+				["max"] = 300, 
+				["min"] = 16, 
 			}, 
 			["specialCaseData"] = {
 			}, 
@@ -12302,15 +12338,6 @@ return {
 				["type"] = "explicit", 
 			}, 
 		}, 
-		["9069_StunThresholdfromEnergyShield"] = {
-			["specialCaseData"] = {
-			}, 
-			["tradeMod"] = {
-				["id"] = "explicit.stat_1653682082", 
-				["text"] = "Small Passive Skills in Radius also grant Gain additional Stun Threshold equal to #% of maximum Energy Shield", 
-				["type"] = "explicit", 
-			}, 
-		}, 
 		["906_FlaskHealsMinions"] = {
 			["LifeFlask"] = {
 				["max"] = 80, 
@@ -12324,7 +12351,16 @@ return {
 				["type"] = "explicit", 
 			}, 
 		}, 
-		["9071_IncreasedStunThresholdIfNoRecentStun"] = {
+		["9070_StunThresholdfromEnergyShield"] = {
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "explicit.stat_1653682082", 
+				["text"] = "Small Passive Skills in Radius also grant Gain additional Stun Threshold equal to #% of maximum Energy Shield", 
+				["type"] = "explicit", 
+			}, 
+		}, 
+		["9072_IncreasedStunThresholdIfNoRecentStun"] = {
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -12723,7 +12759,7 @@ return {
 			}, 
 			["usePositiveSign"] = true, 
 		}, 
-		["9181_ThornsDamageIncrease"] = {
+		["9182_ThornsDamageIncrease"] = {
 			["AnyJewel"] = {
 				["max"] = 20, 
 				["min"] = 10, 
@@ -12740,7 +12776,7 @@ return {
 				["type"] = "explicit", 
 			}, 
 		}, 
-		["9187_ThornsPhysicalDamage"] = {
+		["9188_ThornsPhysicalDamage"] = {
 			["Belt"] = {
 				["max"] = 185.5, 
 				["min"] = 2, 
@@ -13009,7 +13045,7 @@ return {
 			}, 
 			["usePositiveSign"] = true, 
 		}, 
-		["9244_DamageWithTriggeredSpells"] = {
+		["9245_DamageWithTriggeredSpells"] = {
 			["AnyJewel"] = {
 				["max"] = 18, 
 				["min"] = 10, 
@@ -13316,7 +13352,7 @@ return {
 				["type"] = "explicit", 
 			}, 
 		}, 
-		["9371_VolatilityOnKillChance"] = {
+		["9372_VolatilityOnKillChance"] = {
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -13326,15 +13362,11 @@ return {
 			}, 
 		}, 
 		["937_AdditionalCharm"] = {
-			["Belt"] = {
-				["max"] = 2, 
-				["min"] = 1, 
-			}, 
 			["specialCaseData"] = {
 				["overrideModLinePlural"] = "+# Charm Slots", 
 			}, 
 			["tradeMod"] = {
-				["id"] = "explicit.stat_1416292992", 
+				["id"] = "explicit.stat_554899692", 
 				["text"] = "# Charm Slot", 
 				["type"] = "explicit", 
 			}, 
@@ -13358,7 +13390,7 @@ return {
 				["type"] = "explicit", 
 			}, 
 		}, 
-		["9392_WarcryEffect"] = {
+		["9393_WarcryEffect"] = {
 			["AnyJewel"] = {
 				["max"] = 15, 
 				["min"] = 5, 
@@ -13375,7 +13407,7 @@ return {
 				["type"] = "explicit", 
 			}, 
 		}, 
-		["9395_WarcryDamage"] = {
+		["9396_WarcryDamage"] = {
 			["AnyJewel"] = {
 				["max"] = 20, 
 				["min"] = 10, 
@@ -13410,7 +13442,7 @@ return {
 			}, 
 			["usePositiveSign"] = true, 
 		}, 
-		["9404_WeaponSwapSpeed"] = {
+		["9405_WeaponSwapSpeed"] = {
 			["specialCaseData"] = {
 			}, 
 			["tradeMod"] = {
@@ -13559,7 +13591,7 @@ return {
 			}, 
 			["usePositiveSign"] = true, 
 		}, 
-		["9422_WitheredEffect"] = {
+		["9423_WitheredEffect"] = {
 			["AnyJewel"] = {
 				["max"] = 10, 
 				["min"] = 5, 
@@ -15145,6 +15177,23 @@ return {
 			}, 
 			["usePositiveSign"] = true, 
 		}, 
+		["implicit.stat_1137147997"] = {
+			["1HWeapon"] = {
+				["max"] = 1, 
+				["min"] = 1, 
+			}, 
+			["Flail"] = {
+				["max"] = 1, 
+				["min"] = 1, 
+			}, 
+			["specialCaseData"] = {
+			}, 
+			["tradeMod"] = {
+				["id"] = "implicit.stat_1137147997", 
+				["text"] = "Unblockable", 
+				["type"] = "implicit", 
+			}, 
+		}, 
 		["implicit.stat_1207554355"] = {
 			["Quiver"] = {
 				["max"] = 30, 
@@ -15203,6 +15252,20 @@ return {
 			["tradeMod"] = {
 				["id"] = "implicit.stat_1412682799", 
 				["text"] = "Used when you become Poisoned", 
+				["type"] = "implicit", 
+			}, 
+		}, 
+		["implicit.stat_1416292992"] = {
+			["Belt"] = {
+				["max"] = 3, 
+				["min"] = 1, 
+			}, 
+			["specialCaseData"] = {
+				["overrideModLinePlural"] = "+# Charm Slots", 
+			}, 
+			["tradeMod"] = {
+				["id"] = "implicit.stat_1416292992", 
+				["text"] = "Has # Charm Slot", 
 				["type"] = "implicit", 
 			}, 
 		}, 
@@ -16587,7 +16650,7 @@ return {
 				["type"] = "rune", 
 			}, 
 		}, 
-		["5125"] = {
+		["5126"] = {
 			["Boots"] = {
 				["max"] = 10, 
 				["min"] = 10, 
@@ -16620,7 +16683,7 @@ return {
 				["type"] = "rune", 
 			}, 
 		}, 
-		["5561"] = {
+		["5562"] = {
 			["Boots"] = {
 				["max"] = 8, 
 				["min"] = 8, 
@@ -16653,7 +16716,7 @@ return {
 				["type"] = "rune", 
 			}, 
 		}, 
-		["5822"] = {
+		["5823"] = {
 			["1HMace"] = {
 				["max"] = 10, 
 				["min"] = 10, 
@@ -16702,7 +16765,7 @@ return {
 				["type"] = "rune", 
 			}, 
 		}, 
-		["6027"] = {
+		["6028"] = {
 			["Boots"] = {
 				["max"] = 12, 
 				["min"] = 8, 
@@ -16735,7 +16798,7 @@ return {
 				["type"] = "rune", 
 			}, 
 		}, 
-		["6255"] = {
+		["6256"] = {
 			["Boots"] = {
 				["max"] = 5, 
 				["min"] = 5, 
@@ -16768,7 +16831,7 @@ return {
 				["type"] = "rune", 
 			}, 
 		}, 
-		["6969"] = {
+		["6970"] = {
 			["1HMace"] = {
 				["max"] = 10, 
 				["min"] = 10, 
@@ -16817,7 +16880,7 @@ return {
 				["type"] = "rune", 
 			}, 
 		}, 
-		["7030"] = {
+		["7031"] = {
 			["1HMace"] = {
 				["max"] = 15, 
 				["min"] = 15, 
@@ -16866,7 +16929,7 @@ return {
 				["type"] = "rune", 
 			}, 
 		}, 
-		["7033"] = {
+		["7034"] = {
 			["1HMace"] = {
 				["max"] = 20, 
 				["min"] = 20, 
@@ -16939,7 +17002,7 @@ return {
 				["type"] = "rune", 
 			}, 
 		}, 
-		["7034"] = {
+		["7035"] = {
 			["1HMace"] = {
 				["max"] = 20, 
 				["min"] = 20, 
@@ -17012,7 +17075,7 @@ return {
 				["type"] = "rune", 
 			}, 
 		}, 
-		["7035"] = {
+		["7036"] = {
 			["1HMace"] = {
 				["max"] = 20, 
 				["min"] = 20, 
@@ -17085,7 +17148,7 @@ return {
 				["type"] = "rune", 
 			}, 
 		}, 
-		["8159"] = {
+		["8160"] = {
 			["1HMace"] = {
 				["max"] = 10, 
 				["min"] = 10, 
@@ -17134,7 +17197,7 @@ return {
 				["type"] = "rune", 
 			}, 
 		}, 
-		["8160"] = {
+		["8161"] = {
 			["Boots"] = {
 				["max"] = 10, 
 				["min"] = 10, 
@@ -17695,7 +17758,7 @@ return {
 			}, 
 			["usePositiveSign"] = true, 
 		}, 
-		["8812"] = {
+		["8813"] = {
 			["Boots"] = {
 				["max"] = 10, 
 				["min"] = 10, 
@@ -17827,30 +17890,30 @@ return {
 				["type"] = "rune", 
 			}, 
 		}, 
-		["9186"] = {
+		["9187"] = {
 			["Boots"] = {
-				["max"] = 5.5, 
-				["min"] = 5.5, 
+				["max"] = 50.5, 
+				["min"] = 50.5, 
 			}, 
 			["Chest"] = {
-				["max"] = 5.5, 
-				["min"] = 5.5, 
+				["max"] = 50.5, 
+				["min"] = 50.5, 
 			}, 
 			["Focus"] = {
-				["max"] = 5.5, 
-				["min"] = 5.5, 
+				["max"] = 50.5, 
+				["min"] = 50.5, 
 			}, 
 			["Gloves"] = {
-				["max"] = 5.5, 
-				["min"] = 5.5, 
+				["max"] = 50.5, 
+				["min"] = 50.5, 
 			}, 
 			["Helmet"] = {
-				["max"] = 5.5, 
-				["min"] = 5.5, 
+				["max"] = 50.5, 
+				["min"] = 50.5, 
 			}, 
 			["Shield"] = {
-				["max"] = 5.5, 
-				["min"] = 5.5, 
+				["max"] = 50.5, 
+				["min"] = 50.5, 
 			}, 
 			["specialCaseData"] = {
 			}, 

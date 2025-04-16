@@ -1982,22 +1982,6 @@ return {
 	},
 	battlepasstracks={
 	},
-	belttypes={
-		[1]={
-			list=false,
-			name="BaseItemType",
-			refTo="BaseItemTypes",
-			type="Key",
-			width=210
-		},
-		[2]={
-			list=false,
-			name="CharmCount",
-			refTo="",
-			type="Int",
-			width=100
-		}
-	},
 	bestiarycapturablemonsters={
 	},
 	bestiaryencounters={

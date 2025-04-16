@@ -472,7 +472,7 @@ itemBases["Greater Rune of Tithing"] = {
 	hidden = true,
 	tags = { default = true, },
 	implicitModTypes = { },
-	implicit = "Martial Weapons: Meta Skills gain 10% increased Energy\nArmour: 1 to 10 Lightning Thorns damage",
+	implicit = "Martial Weapons: Meta Skills gain 10% increased Energy\nArmour: 1 to 100 Lightning Thorns damage",
 	req = { level = 65, },
 }
 itemBases["Greater Rune of Alacrity"] = {

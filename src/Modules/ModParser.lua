@@ -4891,7 +4891,7 @@ local specialModList = {
 	["charms gain (%d*%.?%d+) charges? per second"] = function(num) return {
 		mod("CharmChargesGenerated", "BASE", num)
 	} end,
-	["+(%d+) charm slots?"] = function(num) return { mod("CharmLimit", "BASE", num) } end,
+	["h?a?s? ?+?(%d+) charm slots?"] = function(num) return { mod("CharmLimit", "BASE", num) } end,
 	["charms use no charges"] = { flag("CharmsUseNoCharges") },
 	["(%d+)%% of charges used by charms granted to your life flasks"] = function(num) return { 
 		mod("FlaskChargesGained", "MORE", num / 100, nil, nil, { type = "Multiplier", var = "AvgCharmChargesUsed"} ) 
