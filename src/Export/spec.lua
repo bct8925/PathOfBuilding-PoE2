@@ -11025,6 +11025,13 @@ return {
 			refTo="",
 			type="Int",
 			width=150
+		},
+		[8]={
+			list=false,
+			name="UIArtOverride",
+			refTo="PassiveNodeUIArtOverride",
+			type="Key",
+			width=200
 		}
 	},
 	passivejeweluniqueart={
@@ -11071,6 +11078,85 @@ return {
 			refTo="",
 			type="String",
 			width=150
+		}
+	},
+	passivenodeuiartoverride={
+		[1]={
+			list=false,
+			name="Id",
+			refTo="",
+			type="String",
+			width=200
+		},
+		[2]={
+			list=false,
+			name="SocketNormal",
+			refTo="",
+			type="String",
+			width=420
+		},
+		[3]={
+			list=false,
+			name="SocketCanAllocate",
+			refTo="",
+			type="String",
+			width=450
+		},
+		[4]={
+			list=false,
+			name="SocketActive",
+			refTo="",
+			type="String",
+			width=420
+		},
+		[5]={
+			list=false,
+			name="SocketNormal1",
+			refTo="",
+			type="String",
+			width=150
+		},
+		[6]={
+			list=false,
+			name="SocketCanAllocate1",
+			refTo="",
+			type="String",
+			width=150
+		},
+		[7]={
+			list=false,
+			name="SocketActive1",
+			refTo="",
+			type="String",
+			width=150
+		},
+		[8]={
+			list=false,
+			name="SocketNormal2",
+			refTo="",
+			type="String",
+			width=150
+		},
+		[9]={
+			list=false,
+			name="SocketCanAllocate2",
+			refTo="",
+			type="String",
+			width=150
+		},
+		[10]={
+			list=false,
+			name="SocketActive2",
+			refTo="",
+			type="String",
+			width=150
+		},
+		[11]={
+			list=false,
+			name="SocketMask",
+			refTo="",
+			type="String",
+			width=510
 		}
 	},
 	passiveoverridelimits={
