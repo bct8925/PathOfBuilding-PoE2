@@ -302,6 +302,8 @@ function GGPKClass:GetNeededFiles()
 		"Data/ActiveSkillWeaponRequirement.dat",
 		"Data/SkillGemSearchTerms.dat",
 		"Data/PassiveNodeUIArtOverride.dat",
+		"Data/PlayerMinionIntrinsicStats.dat",
+		"Data/MonsterCategories.dat",
 	}
 	local csdFiles = {
 		"^Metadata/StatDescriptions/specific_skill_stat_descriptions/\\w+.csd$",
