@@ -102,6 +102,7 @@ UniqueCannotBeChilledOrFrozen1
 ]],[[
 Evergrasping Ring
 Pearl Ring
+League: Dawn of the Hunt
 Implicits: 1
 RingImplicitIncreasedCastSpeed1
 UniqueIncreasedMana12
@@ -110,6 +111,7 @@ UniqueEnemiesInPresenceGainedAsChaos1
 ]],[[
 Gifts from Above
 Prismatic Ring
+League: Dawn of the Hunt
 Implicits: 1
 RingImplicitAllResistances1
 UniqueCriticalStrikeChance12
@@ -137,6 +139,7 @@ UniqueMinionReviveSpeed2
 ]],[[
 Icefang Orbit
 Iron Ring
+League: Dawn of the Hunt
 Requires Level 36
 Implicits: 1
 RingImplicitPhysicalDamage1
@@ -197,6 +200,7 @@ UniqueChillHitsCauseShattering1
 ]],[[
 Prized Pain
 Iron Ring
+League: Dawn of the Hunt
 Requires Level 48
 Implicits: 1
 RingImplicitPhysicalDamage1
@@ -216,13 +220,16 @@ UniqueManaCostReduction2
 ]],[[
 Sekhema's Resolve
 Ring
+Source: Drops from unique{Zarokh, the Temporal}
 Variant: Ruby
 Variant: Emerald
 Variant: Sapphire
 Requires Level 40
 UniqueItemFoundRarityIncrease20
 UniqueAllAttributes1
-UniqueLightningResistanceNoPenalty1
+{variant:1}UniqueFireResistanceNoPenalty1
+{variant:2}UniqueColdResistanceNoPenalty1
+{variant:3}UniqueLightningResistanceNoPenalty1
 {variant:1}UniqueOnlySocketRubyJewel1
 {variant:2}UniqueOnlySocketEmeraldJewel1
 {variant:3}UniqueOnlySocketSapphireJewel1
@@ -252,6 +259,7 @@ UniqueSelfCurseDuration1
 ]],[[
 Venopuncture
 Iron Ring
+League: Dawn of the Hunt
 Requires Level 36
 Implicits: 1
 RingImplicitPhysicalDamage1
@@ -279,6 +287,7 @@ UniqueLightningResist18
 ]],[[
 Vigilant View
 Emerald Ring
+League: Dawn of the Hunt
 Requires Level 26
 Implicits: 1
 RingImplicitIncreasedAccuracy1
