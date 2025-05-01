@@ -3465,7 +3465,7 @@ c["Aura Skills have 5% increased Magnitudes"]={{}," Magnitudes "}
 c["Aura Skills have 6% increased Magnitudes"]={{}," Magnitudes "}
 c["Auras from your Skills can only affect you"]={{[1]={flags=0,keywordFlags=0,name="SelfAurasOnlyAffectYou",type="FLAG",value=true}},nil}
 c["Banner Buffs linger on you for 4 seconds after you leave the Area"]={nil,"Banner Buffs linger on you for 4 seconds after you leave the Area "}
-c["Banner Skills have 12% increased Aura Magnitudes"]={{}," Aura Magnitudes "}
+c["Banner Skills have 12% increased Aura Magnitudes"]={{[1]={[1]={skillType=88,type="SkillType"},flags=0,keywordFlags=0,name="AuraEffect",type="INC",value=12}},nil}
 c["Banner Skills have 15% increased Area of Effect"]={{[1]={[1]={skillType=88,type="SkillType"},flags=0,keywordFlags=0,name="AreaOfEffect",type="INC",value=15}},nil}
 c["Banner Skills have 20% increased Area of Effect"]={{[1]={[1]={skillType=88,type="SkillType"},flags=0,keywordFlags=0,name="AreaOfEffect",type="INC",value=20}},nil}
 c["Banner Skills have 20% increased Duration"]={{[1]={[1]={skillType=88,type="SkillType"},flags=0,keywordFlags=0,name="Duration",type="INC",value=20}},nil}
