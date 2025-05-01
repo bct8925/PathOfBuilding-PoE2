@@ -779,7 +779,6 @@ c["+85 to maximum Life"]={{[1]={flags=0,keywordFlags=0,name="Life",type="BASE",v
 c["+85 to maximum Mana"]={{[1]={flags=0,keywordFlags=0,name="Mana",type="BASE",value=85}},nil}
 c["+86 to maximum Energy Shield"]={{[1]={flags=0,keywordFlags=0,name="EnergyShield",type="BASE",value=86}},nil}
 c["+9% to all Elemental Resistances"]={{[1]={flags=0,keywordFlags=0,name="ElementalResist",type="BASE",value=9}},nil}
-c["+90 to all Attributes"]={{[1]={flags=0,keywordFlags=0,name="Str",type="BASE",value=90},[2]={flags=0,keywordFlags=0,name="Dex",type="BASE",value=90},[3]={flags=0,keywordFlags=0,name="Int",type="BASE",value=90},[4]={flags=0,keywordFlags=0,name="All",type="BASE",value=90}},nil}
 c["+90 to maximum Life"]={{[1]={flags=0,keywordFlags=0,name="Life",type="BASE",value=90}},nil}
 c["+90 to maximum Mana"]={{[1]={flags=0,keywordFlags=0,name="Mana",type="BASE",value=90}},nil}
 c["+92 to maximum Life"]={{[1]={flags=0,keywordFlags=0,name="Life",type="BASE",value=92}},nil}
@@ -3593,6 +3592,8 @@ c["Charms use no Charges"]={{[1]={flags=0,keywordFlags=0,name="CharmsUseNoCharge
 c["Cold Damage from Hits Contributes to Ignite Chance and Magnitude instead of Chill Magnitude or Freeze Buildup"]={nil,"Cold Damage from Hits Contributes to Ignite Chance and Magnitude instead of Chill Magnitude or Freeze Buildup "}
 c["Cold Damage from Hits Contributes to Ignite Chance and Magnitude instead of Chill Magnitude or Freeze Buildup Lightning Damage from Hits Contributes to Freeze Buildup instead of Shock Chance"]={nil,"Cold Damage from Hits Contributes to Ignite Chance and Magnitude instead of Chill Magnitude or Freeze Buildup Lightning Damage from Hits Contributes to Freeze Buildup instead of Shock Chance "}
 c["Cold Exposure you inflict lowers Total Cold Resistance by an extra 5%"]={{[1]={flags=0,keywordFlags=0,name="ExtraColdExposure",type="BASE",value=-5}},nil}
+c["Cold Resistance is unaffected by Area Penalties"]={nil,"Cold Resistance is unaffected by Area Penalties "}
+c["Cold Resistance is unaffected by Area Penalties Fire Resistance is unaffected by Area Penalties"]={nil,"Cold Resistance is unaffected by Area Penalties Fire Resistance is unaffected by Area Penalties "}
 c["Companions deal 12% increased Damage"]={{[1]={[1]={skillType=198,type="SkillType"},flags=0,keywordFlags=0,name="MinionModifier",type="LIST",value={mod={flags=0,keywordFlags=0,name="Damage",type="INC",value=12}}}},nil}
 c["Companions gain your Dexterity"]={nil,"Companions gain your Dexterity "}
 c["Companions gain your Dexterity +15 to Dexterity"]={nil,"Companions gain your Dexterity +15 to Dexterity "}
@@ -3813,6 +3814,8 @@ c["Final Repeat of Spells has 40% increased Area of Effect"]={{[1]={[1]={neg=tru
 c["Fire Damage from Hits Contributes to Shock Chance instead of Ignite Chance and Magnitude"]={nil,"Fire Damage from Hits Contributes to Shock Chance instead of Ignite Chance and Magnitude "}
 c["Fire Damage from Hits Contributes to Shock Chance instead of Ignite Chance and Magnitude Cold Damage from Hits Contributes to Ignite Chance and Magnitude instead of Chill Magnitude or Freeze Buildup"]={nil,"Fire Damage from Hits Contributes to Shock Chance instead of Ignite Chance and Magnitude Cold Damage from Hits Contributes to Ignite Chance and Magnitude instead of Chill Magnitude or Freeze Buildup "}
 c["Fire Exposure you inflict lowers Total Fire Resistance by an extra 5%"]={{[1]={flags=0,keywordFlags=0,name="ExtraFireExposure",type="BASE",value=-5}},nil}
+c["Fire Resistance is unaffected by Area Penalties"]={nil,"Fire Resistance is unaffected by Area Penalties "}
+c["Fire Resistance is unaffected by Area Penalties Lightning Resistance is unaffected by Area Penalties"]={nil,"Fire Resistance is unaffected by Area Penalties Lightning Resistance is unaffected by Area Penalties "}
 c["Flasks gain 0.17 charges per Second"]={{[1]={flags=0,keywordFlags=0,name="FlaskChargesGenerated",type="BASE",value=0.17}},nil}
 c["Forks Critical Hits"]={nil,"Forks Critical Hits "}
 c["Forks Critical Hits 10% of Skill Mana Costs Converted to Life Costs"]={nil,"Forks Critical Hits 10% of Skill Mana Costs Converted to Life Costs "}
@@ -4343,6 +4346,7 @@ c["Passives in radius of Blood Magic can be Allocated without being connected to
 c["Passives in radius of Bulwark can be Allocated without being connected to your tree"]={{[1]={flags=0,keywordFlags=0,name="JewelData",type="LIST",value={key="fromNothingKeystone",value="bulwark"}},[2]={flags=0,keywordFlags=0,name="FromNothingKeystones",type="LIST",value={key="bulwark",value=true}}},nil}
 c["Passives in radius of Chaos Inoculation can be Allocated without being connected to your tree"]={{[1]={flags=0,keywordFlags=0,name="JewelData",type="LIST",value={key="fromNothingKeystone",value="chaos inoculation"}},[2]={flags=0,keywordFlags=0,name="FromNothingKeystones",type="LIST",value={key="chaos inoculation",value=true}}},nil}
 c["Passives in radius of Conduit can be Allocated without being connected to your tree"]={{[1]={flags=0,keywordFlags=0,name="JewelData",type="LIST",value={key="fromNothingKeystone",value="conduit"}},[2]={flags=0,keywordFlags=0,name="FromNothingKeystones",type="LIST",value={key="conduit",value=true}}},nil}
+c["Passives in radius of Crimson Assault can be Allocated without being connected to your tree"]={{[1]={flags=0,keywordFlags=0,name="JewelData",type="LIST",value={key="fromNothingKeystone",value="crimson assault"}},[2]={flags=0,keywordFlags=0,name="FromNothingKeystones",type="LIST",value={key="crimson assault",value=true}}},nil}
 c["Passives in radius of Dance with Death can be Allocated without being connected to your tree"]={{[1]={flags=0,keywordFlags=0,name="JewelData",type="LIST",value={key="fromNothingKeystone",value="dance with death"}},[2]={flags=0,keywordFlags=0,name="FromNothingKeystones",type="LIST",value={key="dance with death",value=true}}},nil}
 c["Passives in radius of Eldritch Battery can be Allocated without being connected to your tree"]={{[1]={flags=0,keywordFlags=0,name="JewelData",type="LIST",value={key="fromNothingKeystone",value="eldritch battery"}},[2]={flags=0,keywordFlags=0,name="FromNothingKeystones",type="LIST",value={key="eldritch battery",value=true}}},nil}
 c["Passives in radius of Elemental Equilibrium can be Allocated without being connected to your tree"]={{[1]={flags=0,keywordFlags=0,name="JewelData",type="LIST",value={key="fromNothingKeystone",value="elemental equilibrium"}},[2]={flags=0,keywordFlags=0,name="FromNothingKeystones",type="LIST",value={key="elemental equilibrium",value=true}}},nil}
@@ -4357,6 +4361,7 @@ c["Passives in radius of Oasis can be Allocated without being connected to your 
 c["Passives in radius of Pain Attunement can be Allocated without being connected to your tree"]={{[1]={flags=0,keywordFlags=0,name="JewelData",type="LIST",value={key="fromNothingKeystone",value="pain attunement"}},[2]={flags=0,keywordFlags=0,name="FromNothingKeystones",type="LIST",value={key="pain attunement",value=true}}},nil}
 c["Passives in radius of Resolute Technique can be Allocated without being connected to your tree"]={{[1]={flags=0,keywordFlags=0,name="JewelData",type="LIST",value={key="fromNothingKeystone",value="resolute technique"}},[2]={flags=0,keywordFlags=0,name="FromNothingKeystones",type="LIST",value={key="resolute technique",value=true}}},nil}
 c["Passives in radius of Resonance can be Allocated without being connected to your tree"]={{[1]={flags=0,keywordFlags=0,name="JewelData",type="LIST",value={key="fromNothingKeystone",value="resonance"}},[2]={flags=0,keywordFlags=0,name="FromNothingKeystones",type="LIST",value={key="resonance",value=true}}},nil}
+c["Passives in radius of Trusted Kinship can be Allocated without being connected to your tree"]={{[1]={flags=0,keywordFlags=0,name="JewelData",type="LIST",value={key="fromNothingKeystone",value="trusted kinship"}},[2]={flags=0,keywordFlags=0,name="FromNothingKeystones",type="LIST",value={key="trusted kinship",value=true}}},nil}
 c["Passives in radius of Unwavering Stance can be Allocated without being connected to your tree"]={{[1]={flags=0,keywordFlags=0,name="JewelData",type="LIST",value={key="fromNothingKeystone",value="unwavering stance"}},[2]={flags=0,keywordFlags=0,name="FromNothingKeystones",type="LIST",value={key="unwavering stance",value=true}}},nil}
 c["Passives in radius of Vaal Pact can be Allocated without being connected to your tree"]={{[1]={flags=0,keywordFlags=0,name="JewelData",type="LIST",value={key="fromNothingKeystone",value="vaal pact"}},[2]={flags=0,keywordFlags=0,name="FromNothingKeystones",type="LIST",value={key="vaal pact",value=true}}},nil}
 c["Passives in radius of Whispers of Doom can be Allocated without being connected to your tree"]={{[1]={flags=0,keywordFlags=0,name="JewelData",type="LIST",value={key="fromNothingKeystone",value="whispers of doom"}},[2]={flags=0,keywordFlags=0,name="FromNothingKeystones",type="LIST",value={key="whispers of doom",value=true}}},nil}
@@ -4366,6 +4371,23 @@ c["Persistent Buffs have 50% less Reservation"]={{[1]={[1]={skillType=139,type="
 c["Physical Damage Reduction from Armour is based on your combined Armour and Evasion Rating"]={{[1]={flags=0,keywordFlags=0,name="EvasionAddsToPdr",type="FLAG",value=true}},nil}
 c["Physical Damage is Pinning"]={nil,"Physical Damage is Pinning "}
 c["Pinned enemies cannot perform actions"]={nil,"Pinned enemies cannot perform actions "}
+c["Possessed by Spirit Of The Bear for 20 seconds on use"]={nil,"Possessed by Spirit Of The Bear for 20 seconds on use "}
+c["Possessed by Spirit Of The Bear for 20 seconds on use Possessed by Spirit Of The Boar for 20 seconds on use"]={nil,"Possessed by Spirit Of The Bear for 20 seconds on use Possessed by Spirit Of The Boar for 20 seconds on use "}
+c["Possessed by Spirit Of The Boar for 20 seconds on use"]={nil,"Possessed by Spirit Of The Boar for 20 seconds on use "}
+c["Possessed by Spirit Of The Boar for 20 seconds on use Possessed by Spirit Of The Cat for 20 seconds on use"]={nil,"Possessed by Spirit Of The Boar for 20 seconds on use Possessed by Spirit Of The Cat for 20 seconds on use "}
+c["Possessed by Spirit Of The Cat for 20 seconds on use"]={nil,"Possessed by Spirit Of The Cat for 20 seconds on use "}
+c["Possessed by Spirit Of The Cat for 20 seconds on use Possessed by Spirit Of The Owl for 20 seconds on use"]={nil,"Possessed by Spirit Of The Cat for 20 seconds on use Possessed by Spirit Of The Owl for 20 seconds on use "}
+c["Possessed by Spirit Of The Owl for 20 seconds on use"]={nil,"Possessed by Spirit Of The Owl for 20 seconds on use "}
+c["Possessed by Spirit Of The Owl for 20 seconds on use Possessed by Spirit Of The Ox for 20 seconds on use"]={nil,"Possessed by Spirit Of The Owl for 20 seconds on use Possessed by Spirit Of The Ox for 20 seconds on use "}
+c["Possessed by Spirit Of The Ox for 20 seconds on use"]={nil,"Possessed by Spirit Of The Ox for 20 seconds on use "}
+c["Possessed by Spirit Of The Ox for 20 seconds on use Possessed by Spirit Of The Primate for 20 seconds on use"]={nil,"Possessed by Spirit Of The Ox for 20 seconds on use Possessed by Spirit Of The Primate for 20 seconds on use "}
+c["Possessed by Spirit Of The Primate for 20 seconds on use"]={nil,"Possessed by Spirit Of The Primate for 20 seconds on use "}
+c["Possessed by Spirit Of The Primate for 20 seconds on use Possessed by Spirit Of The Serpent for 20 seconds on use"]={nil,"Possessed by Spirit Of The Primate for 20 seconds on use Possessed by Spirit Of The Serpent for 20 seconds on use "}
+c["Possessed by Spirit Of The Serpent for 20 seconds on use"]={nil,"Possessed by Spirit Of The Serpent for 20 seconds on use "}
+c["Possessed by Spirit Of The Serpent for 20 seconds on use Possessed by Spirit Of The Stag for 20 seconds on use"]={nil,"Possessed by Spirit Of The Serpent for 20 seconds on use Possessed by Spirit Of The Stag for 20 seconds on use "}
+c["Possessed by Spirit Of The Stag for 20 seconds on use"]={nil,"Possessed by Spirit Of The Stag for 20 seconds on use "}
+c["Possessed by Spirit Of The Stag for 20 seconds on use Possessed by Spirit Of The Wolf for 20 seconds on use"]={nil,"Possessed by Spirit Of The Stag for 20 seconds on use Possessed by Spirit Of The Wolf for 20 seconds on use "}
+c["Possessed by Spirit Of The Wolf for 20 seconds on use"]={nil,"Possessed by Spirit Of The Wolf for 20 seconds on use "}
 c["Presence Gain 50% of Damage as Fire Damage"]={nil,"Presence Gain 50% of Damage as Fire Damage "}
 c["Presence Radius is doubled"]={nil,"Presence Radius is doubled "}
 c["Projectile Damage builds Pin"]={nil,"Projectile Damage builds Pin "}
@@ -4565,6 +4587,8 @@ c["Unlimited number of Summoned Totems Totems reserve 100 Spirit each"]={nil,"Un
 c["Unwavering Stance"]={{[1]={flags=0,keywordFlags=0,name="Keystone",type="LIST",value="Unwavering Stance"}},nil}
 c["Unwithered enemies are Withered for 8 seconds when they enter your Presence"]={nil,"Unwithered enemies are Withered for 8 seconds when they enter your Presence "}
 c["Unwithered enemies are Withered for 8 seconds when they enter your Presence 20% increased Effect of Withered"]={nil,"Unwithered enemies are Withered for 8 seconds when they enter your Presence 20% increased Effect of Withered "}
+c["Used when you Kill a Rare or Unique Enemy"]={nil,"Used when you Kill a Rare or Unique Enemy "}
+c["Used when you Kill a Rare or Unique Enemy Possessed by Spirit Of The Bear for 20 seconds on use"]={nil,"Used when you Kill a Rare or Unique Enemy Possessed by Spirit Of The Bear for 20 seconds on use "}
 c["Used when you are affected by a Slow"]={nil,"Used when you are affected by a Slow "}
 c["Used when you are affected by a Slow Grants Onslaught during effect"]={nil,"Used when you are affected by a Slow Grants Onslaught during effect "}
 c["Used when you become Frozen"]={nil,"Used when you become Frozen "}

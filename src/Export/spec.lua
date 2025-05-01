@@ -142,38 +142,38 @@ return {
 	activeskillrequirements={
 		[1]={
 			list=false,
-			name="",
-			refTo="",
+			name="Id",
+			refTo="GrantedEffects",
 			type="Key",
-			width=230
+			width=180
 		},
 		[2]={
 			list=false,
-			name="",
-			refTo="",
+			name="BuffDefinition",
+			refTo="buffdefinitions",
 			type="Key",
-			width=350
+			width=300
 		},
 		[3]={
 			list=false,
 			name="",
 			refTo="",
-			type="Int",
-			width=150
+			type="Bool",
+			width=80
 		},
 		[4]={
 			list=false,
 			name="",
 			refTo="",
 			type="Int",
-			width=150
+			width=50
 		},
 		[5]={
 			list=false,
 			name="",
 			refTo="",
-			type="Bool",
-			width=150
+			type="Key",
+			width=50
 		},
 		[6]={
 			list=false,
@@ -184,10 +184,38 @@ return {
 		},
 		[7]={
 			list=false,
+			name="StatRequrement",
+			refTo="Stats",
+			type="Key",
+			width=300
+		},
+		[8]={
+			list=false,
 			name="",
 			refTo="",
-			type="Key",
-			width=50
+			type="Bool",
+			width=80
+		},
+		[9]={
+			list=false,
+			name="",
+			refTo="",
+			type="Int",
+			width=150
+		},
+		[10]={
+			list=false,
+			name="",
+			refTo="",
+			type="Bool",
+			width=80
+		},
+		[11]={
+			list=false,
+			name="",
+			refTo="",
+			type="Bool",
+			width=80
 		}
 	},
 	activeskills={
@@ -294,14 +322,14 @@ return {
 			name="SkillSpecificStat",
 			refTo="Stats",
 			type="Key",
-			width=1800
+			width=250
 		},
 		[16]={
 			list=true,
 			name="GenericStat",
 			refTo="Stats",
 			type="Key",
-			width=1420
+			width=250
 		},
 		[17]={
 			list=true,
@@ -364,7 +392,7 @@ return {
 			name="StatContextFlags",
 			refTo="VirtualStatContextFlags",
 			type="Key",
-			width=200
+			width=150
 		},
 		[26]={
 			list=false,
@@ -417,15 +445,15 @@ return {
 		},
 		[33]={
 			list=false,
-			name="SummonID?",
-			refTo="",
+			name="MinionType",
+			refTo="MinionType",
 			type="Key",
 			width=150
 		},
 		[34]={
 			list=false,
-			name="",
-			refTo="",
+			name="SecondaryAudio",
+			refTo="CharacterAudioEvents",
 			type="Key",
 			width=150
 		},
@@ -438,10 +466,10 @@ return {
 		},
 		[36]={
 			list=false,
-			name="",
+			name="ShortDescription",
 			refTo="",
 			type="String",
-			width=150
+			width=540
 		},
 		[37]={
 			list=false,
@@ -4966,8 +4994,8 @@ return {
 		},
 		[30]={
 			list=false,
-			name="",
-			refTo="",
+			name="VirtualStatFlag",
+			refTo="VirtualStatContextFlags",
 			type="Key",
 			width=200
 		},
@@ -4980,7 +5008,7 @@ return {
 		},
 		[32]={
 			list=false,
-			name="",
+			name="IsAttack",
 			refTo="",
 			type="Bool",
 			width=80
@@ -5001,14 +5029,14 @@ return {
 		},
 		[35]={
 			list=false,
-			name="",
-			refTo="",
+			name="FakeHitType",
+			refTo="DamageCalculationTypes",
 			type="ShortKey",
 			width=320
 		},
 		[36]={
 			list=false,
-			name="",
+			name="IsFakeHit",
 			refTo="",
 			type="Bool",
 			width=150
@@ -8438,7 +8466,7 @@ return {
 			name="",
 			refTo="",
 			type="Key",
-			width=70
+			width=100
 		}
 	},
 	miniqueststates={

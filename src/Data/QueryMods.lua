@@ -13366,7 +13366,7 @@ return {
 				["overrideModLinePlural"] = "+# Charm Slots", 
 			}, 
 			["tradeMod"] = {
-				["id"] = "explicit.stat_554899692", 
+				["id"] = "explicit.stat_2582079000", 
 				["text"] = "# Charm Slot", 
 				["type"] = "explicit", 
 			}, 
