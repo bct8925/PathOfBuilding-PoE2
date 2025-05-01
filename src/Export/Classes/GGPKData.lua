@@ -254,6 +254,7 @@ function GGPKClass:GetNeededFiles()
 		"Data/ItemInherentSkills.dat",
 		"Data/KeywordPopups.dat",
 		"Data/SoulCores.dat",
+		"Data/SoulCoresPerClass.dat",
 		"Data/UtilityFlaskBuffs.dat",
 		"Data/GrantedSkillSocketNumbers.dat",
 		"Data/AdvancedCraftingBenchCustomTags.dat",
