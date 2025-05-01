@@ -3559,9 +3559,9 @@ c["Cannot gain Spirit from Equipment"]={{[1]={flags=0,keywordFlags=0,name="Canno
 c["Cannot have Energy Shield"]={{[1]={flags=0,keywordFlags=0,name="CannotHaveES",type="FLAG",value=true}},nil}
 c["Cannot use Charms"]={{[1]={flags=0,keywordFlags=0,name="CharmLimit",type="OVERRIDE",value=0}},nil}
 c["Cannot use Life Flasks"]={nil,"Cannot use Life Flasks "}
-c["Cannot use Projectile Attacks"]={nil,"Cannot use Projectile Attacks "}
-c["Cannot use Shield Skills"]={nil,"Cannot use Shield Skills "}
-c["Cannot use Warcries"]={nil,"Cannot use Warcries "}
+c["Cannot use Projectile Attacks"]={{[1]={[1]={skillType=1,type="SkillType"},[2]={skillType=3,type="SkillType"},flags=0,keywordFlags=0,name="DisableSkill",type="FLAG",value=true}},nil}
+c["Cannot use Shield Skills"]={{[1]={[1]={skillType=10,type="SkillType"},flags=0,keywordFlags=0,name="DisableSkill",type="FLAG",value=true}},nil}
+c["Cannot use Warcries"]={{[1]={[1]={skillType=63,type="SkillType"},flags=0,keywordFlags=0,name="DisableSkill",type="FLAG",value=true}},nil}
 c["Carry a Chest which adds 20 Inventory Slots"]={{},nil}
 c["Causes 200% increased Stun Buildup"]={nil,"Causes 200% increased Stun Buildup "}
 c["Causes 200% increased Stun Buildup All Damage from Hits with this Weapon Contributes to Chill Magnitude"]={nil,"Causes 200% increased Stun Buildup All Damage from Hits with this Weapon Contributes to Chill Magnitude "}
