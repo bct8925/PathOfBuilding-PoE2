@@ -4380,7 +4380,7 @@ c["Possessed by Spirit Of The Stag for 20 seconds on use"]={nil,"Possessed by Sp
 c["Possessed by Spirit Of The Stag for 20 seconds on use Possessed by Spirit Of The Wolf for 20 seconds on use"]={nil,"Possessed by Spirit Of The Stag for 20 seconds on use Possessed by Spirit Of The Wolf for 20 seconds on use "}
 c["Possessed by Spirit Of The Wolf for 20 seconds on use"]={nil,"Possessed by Spirit Of The Wolf for 20 seconds on use "}
 c["Presence Gain 50% of Damage as Fire Damage"]={nil,"Presence Gain 50% of Damage as Fire Damage "}
-c["Presence Radius is doubled"]={{[1]={[1]={globalLimit=100,globalLimitKey="AreaOfEffectDoubledLimit",type="Multiplier",var="AreaOfEffectDoubled"},flags=0,keywordFlags=0,name="AreaOfEffect",type="MORE",value=100},[2]={flags=0,keywordFlags=0,name="Multiplier:AreaOfEffectDoubled",type="OVERRIDE",value=1}},"Presence   "}
+c["Presence Radius is doubled"]={{[1]={[1]={globalLimit=100,globalLimitKey="PresenceRadiusDoubledLimit",type="Multiplier",var="PresenceRadiusDoubled"},flags=0,keywordFlags=0,name="PresenceRadius",type="MORE",value=100},[2]={flags=0,keywordFlags=0,name="Multiplier:PresenceRadiusDoubled",type="OVERRIDE",value=1}},nil}
 c["Projectile Damage builds Pin"]={nil,"Projectile Damage builds Pin "}
 c["Projectiles Pierce all Ignited enemies"]={nil,"Projectiles Pierce all Ignited enemies "}
 c["Projectiles Pierce all Ignited enemies Attacks Gain 10% of Damage as Extra Fire Damage"]={nil,"Projectiles Pierce all Ignited enemies Attacks Gain 10% of Damage as Extra Fire Damage "}
