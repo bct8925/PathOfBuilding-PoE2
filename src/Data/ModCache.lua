@@ -4136,7 +4136,7 @@ c["Life Leech can Overflow Maximum Life"]={nil,"Life Leech can Overflow Maximum 
 c["Life Leech effects Recover Energy Shield instead while on Full Life"]={{[1]={[1]={type="Condition",var="FullLife"},[2]={type="Condition",var="LeechingLife"},flags=0,keywordFlags=0,name="ImmortalAmbition",type="FLAG",value=true}},nil}
 c["Life Leech effects are not removed when Unreserved Life is Filled"]={{[1]={flags=0,keywordFlags=0,name="CanLeechLifeOnFullLife",type="FLAG",value=true}},nil}
 c["Life Leech from your Hits also applies to your Companion"]={nil,"Life Leech from your Hits also applies to your Companion "}
-c["Life Leech is Converted to Energy Shield Leech"]={nil,"Life Leech is Converted to Energy Shield Leech "}
+c["Life Leech is Converted to Energy Shield Leech"]={{[1]={flags=0,keywordFlags=0,name="GhostReaver",type="FLAG",value=true}},nil}
 c["Life Leech is Instant"]={{[1]={flags=0,keywordFlags=0,name="InstantLifeLeech",type="BASE",value=100}},nil}
 c["Life Leech recovers based on your Chaos damage instead of Physical damage"]={nil,"Life Leech recovers based on your Chaos damage instead of Physical damage "}
 c["Life Leech recovers based on your Elemental damage as well as Physical damage"]={{[1]={flags=0,keywordFlags=0,name="PhysicalAsElementalDamageLifeLeech",type="FLAG",value=true}},nil}
