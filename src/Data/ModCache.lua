@@ -1324,7 +1324,7 @@ c["15% increased maximum Energy Shield"]={{[1]={[1]={type="Global"},flags=0,keyw
 c["15% increased maximum Life"]={{[1]={flags=0,keywordFlags=0,name="Life",type="INC",value=15}},nil}
 c["15% more Maximum Life"]={{[1]={flags=0,keywordFlags=0,name="Life",type="MORE",value=15}},nil}
 c["15% more Maximum Lightning Damage"]={{[1]={flags=0,keywordFlags=0,name="MaxLightningDamage",type="MORE",value=15}},nil}
-c["15% of Damage from Hits is taken from your Companion's Life before you"]={{[1]={flags=0,keywordFlags=0,name="Damage",type="BASE",value=15}},"  from Hits is taken from your Companion's Life before you "}
+c["15% of Damage from Hits is taken from your Damageable Companion's Life before you"]={{[1]={flags=0,keywordFlags=0,name="Damage",type="BASE",value=15}},"  from Hits is taken from your Damageable Companion's Life before you "}
 c["15% of Elemental Damage taken Recouped as Life"]={{[1]={flags=0,keywordFlags=0,name="LightningLifeRecoup",type="BASE",value=15},[2]={flags=0,keywordFlags=0,name="ColdLifeRecoup",type="BASE",value=15},[3]={flags=0,keywordFlags=0,name="FireLifeRecoup",type="BASE",value=15}},nil}
 c["15% of Physical Damage Converted to Cold Damage while you have at least 150 Devotion"]={{[1]={[1]={stat="Devotion",threshold=150,type="StatThreshold"},flags=0,keywordFlags=0,name="PhysicalDamageConvertToCold",type="BASE",value=15}},nil}
 c["15% of Physical Damage Converted to Fire Damage while you have at least 150 Devotion"]={{[1]={[1]={stat="Devotion",threshold=150,type="StatThreshold"},flags=0,keywordFlags=0,name="PhysicalDamageConvertToFire",type="BASE",value=15}},nil}

@@ -606,8 +606,8 @@ local configSettings = {
 		modList:NewMod("Multiplier:TraumaStacks", "BASE", val, "Config", { type = "Condition", var = "Combat" })
 	end },
 	{ label = "Trinity:", ifSkill = "Trinity" },
-	{ var = "configResonanceCount", type = "count", label = "Lowest Resonance Count:", ifSkill = "Trinity", tooltip = "Sets the amount of resonance on the lowest element.", apply = function(val, modList, enemyModList)
-		modList:NewMod("Multiplier:ResonanceCount", "BASE", m_max(m_min(val, 100), 0), "Config")
+	{ var = "configResonanceCount", type = "count", label = "Total Resonance Count:", ifSkill = "Trinity", tooltip = "Sets the total Resonance Count.", apply = function(val, modList, enemyModList)
+		modList:NewMod("Multiplier:ResonanceCount", "BASE", m_max(m_min(val, 300), 0), "Config")
 	end },
 	{ label = "Twister:", ifSkill = "Twister" },
 	{ var = "twisterCold", type = "check", label = "Twister gained ^x3F6DB3Cold^7 Element:", ifSkill = "Twister", tooltip = "Twister has passed over ^x3F6DB3Cold^7 Ground or consumed a ^x3F6DB3Cold^7 Whirlwind.", apply = function(val, modList, enemyModList)
