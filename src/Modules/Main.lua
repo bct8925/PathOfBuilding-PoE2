@@ -103,7 +103,7 @@ function main:Init()
 	self.notSupportedModTooltips = true
 	self.notSupportedTooltipText = " ^8(Not supported in PoB yet)"
 	self.POESESSID = ""
-	self.showPublicBuilds = true
+	--self.showPublicBuilds = true
 	self.showFlavourText = true
 
 	if self.userPath then
@@ -622,9 +622,9 @@ function main:LoadSettings(ignoreBuild)
 				if node.attrib.disableDevAutoSave then
 					self.disableDevAutoSave = node.attrib.disableDevAutoSave == "true"
 				end
-				if node.attrib.showPublicBuilds then
-					self.showPublicBuilds = node.attrib.showPublicBuilds == "true"
-				end
+				--if node.attrib.showPublicBuilds then
+					--self.showPublicBuilds = node.attrib.showPublicBuilds == "true"
+				--end
 				if node.attrib.showFlavourText then
 					self.showFlavourText = node.attrib.showFlavourText == "true"
 				end
@@ -739,7 +739,7 @@ function main:SaveSettings()
 		POESESSID = self.POESESSID,
 		invertSliderScrollDirection = tostring(self.invertSliderScrollDirection),
 		disableDevAutoSave = tostring(self.disableDevAutoSave),
-		showPublicBuilds = tostring(self.showPublicBuilds),
+		--showPublicBuilds = tostring(self.showPublicBuilds),
 		showFlavourText = tostring(self.showFlavourText)
 	} })
 	local res, errMsg = common.xml.SaveXMLFile(setXML, self.userPath.."Settings.xml")
@@ -915,10 +915,10 @@ function main:OpenOptionsPopup()
 		self.edgeSearchHighlight = state
 	end)
 	
-	nextRow()
-	controls.showPublicBuilds = new("CheckBoxControl", { "TOPLEFT", nil, "TOPLEFT" }, { defaultLabelPlacementX, currentY, 20 }, "^7Show Latest/Trending builds:", function(state)
-		self.showPublicBuilds = state
-	end)
+	--nextRow()
+	--controls.showPublicBuilds = new("CheckBoxControl", { "TOPLEFT", nil, "TOPLEFT" }, { defaultLabelPlacementX, currentY, 20 }, "^7Show Latest/Trending builds:", function(state)
+		--self.showPublicBuilds = state
+	--end)
 
 	nextRow()
 	controls.showFlavourText = new("CheckBoxControl", { "TOPLEFT", nil, "TOPLEFT" }, { defaultLabelPlacementX, currentY, 20 }, "^7Styled Tooltips with Flavour Text:", function(state)
@@ -1012,7 +1012,7 @@ function main:OpenOptionsPopup()
 	controls.betaTest.state = self.betaTest
 	controls.edgeSearchHighlight.state = self.edgeSearchHighlight
 	controls.titlebarName.state = self.showTitlebarName
-	controls.showPublicBuilds.state = self.showPublicBuilds
+	--controls.showPublicBuilds.state = self.showPublicBuilds
 	controls.showFlavourText.state = self.showFlavourText
 	local initialNodePowerTheme = self.nodePowerTheme
 	local initialColorPositive = self.colorPositive
@@ -1032,7 +1032,7 @@ function main:OpenOptionsPopup()
 	local initialNotSupportedModTooltips = self.notSupportedModTooltips
 	local initialInvertSliderScrollDirection = self.invertSliderScrollDirection
 	local initialDisableDevAutoSave = self.disableDevAutoSave
-	local initialShowPublicBuilds = self.showPublicBuilds
+	--local initialShowPublicBuilds = self.showPublicBuilds
 	local initialShowFlavourText = self.showFlavourText
 
 	-- last line with buttons has more spacing
