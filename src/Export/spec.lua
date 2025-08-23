@@ -17216,8 +17216,6 @@ return {
 	strongboxes={
 	},
 	strongboxpacks={
-	},
-	strongboxpacks={
 		[1]={
 			list=false,
 			name="",

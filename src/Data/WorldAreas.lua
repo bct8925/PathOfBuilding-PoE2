@@ -737,8 +737,8 @@ worldAreas["HideoutChaos"] = {
 }
 
 worldAreas["HideoutSummit"] = {
-	name = "Summit Hideout (Act 1)",
-	baseName = "Summit Hideout",
+	name = "Plateau of the Gods Hideout (Act 1)",
+	baseName = "Plateau of the Gods Hideout",
 	tags = {  },
 	act = 1,
 	level = 65,

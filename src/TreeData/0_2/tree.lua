@@ -22577,7 +22577,7 @@ return {
 			orbitIndex=21,
 			skill=5108,
 			stats={
-				[1]="Attacks with One Handed Weapons have 12% increased Chance to inflict Ailments"
+				[1]="Attacks with One-Handed Weapons have 12% increased Chance to inflict Ailments"
 			}
 		},
 		[5163]={
