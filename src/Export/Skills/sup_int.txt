@@ -27,6 +27,16 @@ statMap = {
 
 #skill SupportAmbrosiaPlayer
 #set SupportAmbrosiaPlayer
+statMap = {
+	["consume_%_of_maximum_mana_flask_charges_on_skill_use"] = {
+		mod("Multiplier:ManaFlaskMaxChargesPercent", "BASE", nil),
+	},
+	["gain_%_damage_as_lighting_per_mana_flask_charge_consumed"] = {
+		mod("DamageGainAsLightning", "BASE", nil, 0, 0, { type = "Multiplier", var = "ManaFlaskChargeConsumed"}),
+	},
+},
+#baseMod mod("Multiplier:ManaFlaskChargeConsumed", "BASE", 1, 0, 0, { type = "PercentStat", stat = "ManaFlask1MaxCharges", percentVar = "ManaFlaskMaxChargesPercent", floor = true })
+#baseMod mod("Multiplier:ManaFlaskChargeConsumed", "BASE", 1, 0, 0, { type = "PercentStat", stat = "ManaFlask2MaxCharges", percentVar = "ManaFlaskMaxChargesPercent", floor = true })
 #mods
 #skillEnd
 
@@ -305,6 +315,12 @@ statMap = {
 
 #skill SupportDerangePlayer
 #set SupportDerangePlayer
+statMap = {
+	["support_shield_sacrifice_damage_over_time_+%_final_per_100_intelligence"] = {
+		mod("Damage", "MORE", nil, ModFlag.Dot, 0, { type = "PerStat", stat = "Int", div = 100 }),
+	},
+},
+
 #mods
 #skillEnd
 
@@ -335,7 +351,7 @@ statMap = {
 
 #skill TriggeredElementalDischargePlayer
 #set TriggeredElementalDischargePlayer
-#flags spell
+#flags spell area
 statMap = {
 	["spell_minimum_base_fire_damage_as_%_of_intelligence"] = {
 		mod("FireMin", "BASE", nil, 0, KeywordFlag.Spell, { type = "PercentStat", stat = "Int", percent = 1 }, { type = "Condition", var = "IgniteConsumed" }),
@@ -669,7 +685,7 @@ statMap = {
 #skillEnd
 #skill TriggeredManaFlarePlayer
 #set TriggeredManaFlarePlayer
-#flags spell
+#flags spell area
 #baseMod skill("currentManaPercentage", true)
 statMap = {
 	["support_mana_flare_%_of_current_mana_consumed"] = {
@@ -709,6 +725,11 @@ statMap = {
 
 #skill SupportMusterPlayer
 #set SupportMusterPlayer
+statMap = {
+	["support_varied_troops_damage_+%_final_per_different_persistent_ominion"] = {
+		mod("MinionModifier", "LIST", { mod = mod("Damage", "MORE", nil, 0, 0, { type = "Multiplier", actor = "parent", var = "PersistentMinionTypes" }) }),
+	},
+},
 #mods
 #skillEnd
 

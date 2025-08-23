@@ -80,7 +80,7 @@ statMap = {
 #flags area
 statMap = {
 	["blasphemy_base_spirit_reservation_per_socketed_curse"] = {
-		mod("SkillData", "LIST", { key = "spiritReservationFlat", value = nil })
+		mod("SkillData", "LIST", { key = "blasphemyReservationFlatSpirit", value = nil })
 	},
 },
 #mods
@@ -137,12 +137,6 @@ statMap = {
 #mods
 #set BonestormExplosionPlayer
 #flags spell area projectile
-#mods
-#skillEnd
-
-#skill SupportInvisibleMetaGemSupport
-#set SupportInvisibleMetaGemSupport
-#flags
 #mods
 #skillEnd
 
@@ -228,13 +222,13 @@ statMap = {
 #skill ChargeInfusionPlayer
 #set ChargeInfusionPlayer
 statMap = {
-	["skill_charge_matery_skill_speed_+%_final_with_frenzy_charges"] = {
+	["charge_mastery_skill_speed_+%_final_with_frenzy_charges"] = {
 		mod("Speed", "MORE", nil, 0, 0, { type = "StatThreshold", stat = "FrenzyCharges", threshold = 1 }, { type = "GlobalEffect", effectType = "Buff", effectName = "Charge Infusion" }),
 	},
-	["skill_charge_mastery_crit_chance_+%_final_with_power_charges"] = {
+	["charge_mastery_crit_chance_+%_final_with_power_charges"] = {
 		mod("CritChance", "MORE", nil, 0, 0, { type = "StatThreshold", stat = "PowerCharges", threshold = 1 }, { type = "GlobalEffect", effectType = "Buff", effectName = "Charge Infusion" }),
 	},
-	["skill_charge_mastery_defences_+%_final_with_endurance_charges"] = {
+	["charge_mastery_defences_+%_final_with_endurance_charges"] = {
 		mod("Defences", "MORE", nil, 0, 0, { type = "StatThreshold", stat = "EnduranceCharges", threshold = 1 }, { type = "GlobalEffect", effectType = "Buff", effectName = "Charge Infusion" }),
 	},
 },
@@ -349,7 +343,7 @@ statMap = {
 #flags
 statMap = {
 	["base_skill_buff_total_maximum_energy_shield_+_to_apply"] = {
-		mod("EnergyShield", "BASE", nil, 0, 0, { type = "GlobalEffect", effectType = "Aura" }),
+		mod("EnergyShieldTotal", "BASE", nil, 0, 0, { type = "GlobalEffect", effectType = "Aura" }),
 	},
 },
 #mods
@@ -488,7 +482,7 @@ statMap = {
 
 #skill FlickerStrikePlayer
 #set FlickerStrikePlayer
-#flags attack melee
+#flags attack melee area
 #mods
 #skillEnd
 
@@ -1009,19 +1003,10 @@ statMap = {
 #mods
 #skillEnd
 
+#minionList
 #skill SummonSpectrePlayer
 #set SummonSpectrePlayer
 #flags spell minion spectre duration permanentMinion
-minionList = {
-},
-statMap = {
-	["accuracy_rating"] = {
-		mod("MinionModifier", "LIST", { mod = mod("Accuracy", "BASE", nil) })
-	},
-	["raised_spectre_level"] = {
-		skill("minionLevel", nil),
-	},
-},
 #mods
 #skillEnd
 

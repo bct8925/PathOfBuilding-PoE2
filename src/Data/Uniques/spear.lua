@@ -5,6 +5,7 @@ return {
 [[
 Chainsting
 Hunting Spear
+League: Dawn of the Hunt
 Implicits: 2
 Grants Skill: Spear Throw
 (15-25)% chance to Maim on Hit
@@ -16,6 +17,7 @@ All Damage from Hits with this Weapon Contributes to Pin Buildup
 ]],[[
 Daevata's Wind
 War Spear
+League: Dawn of the Hunt
 Implicits: 2
 Grants Skill: Spear Throw
 (25-35)% increased Projectile Speed with this Weapon
@@ -27,6 +29,7 @@ Adds (10-15) to (21-26) Physical Damage
 ]],[[
 Saitha's Spear
 Barbed Spear
+League: Dawn of the Hunt
 Implicits: 1
 Grants Skill: Spear Throw
 Adds (14-26) to (27-32) Physical Damage
@@ -37,6 +40,7 @@ Aggravating any Bleeding with this Weapon also Aggravates all Ignites on the tar
 ]],[[
 Splinter of Loratta
 Hardwood Spear
+League: Dawn of the Hunt
 Implicits: 1
 Grants Skill: Spear Throw
 Adds (2-3) to (6-8) Physical Damage
@@ -46,6 +50,7 @@ Always Poison on Hit with this weapon
 ]],[[
 Skysliver
 Winged Spear
+League: Dawn of the Hunt
 Implicits: 1
 Grants Skill: Spear Throw
 No Physical Damage
@@ -56,17 +61,23 @@ Rolls only the minimum or maximum Damage value for each Damage Type
 ]],[[
 Spire of Ire
 Helix Spear
+League: Dawn of the Hunt
+Variant: Pre 0.2.1
+Variant: Current
 Implicits: 2
 Grants Skill: Spear Throw
 Grants Skill: Level (1-20) Chaotic Infusion
 (15-20)% increased Attack Speed
-Leeches (6-10)% of Physical Damage as Life
-Adds (106-146) to (181-221) Chaos damage
+{variant:1}Leeches (0.06-0.1)% of Physical Damage as Life
+{variant:2}Leeches (10-20)% of Physical Damage as Life
+{variant:1}Adds (106-146) to (181-221) Chaos damage
+{variant:2}Adds (167-201) to (267-333) Chaos damage
 When you Consume a Charge Trigger Chaotic Infusion to gain 2 Chaos Infusion
 Life Leech recovers based on your Chaos damage instead of Physical damage
 ]],[[
 Tangletongue
 Forked Spear
+League: Dawn of the Hunt
 Implicits: 1
 Grants Skill: Spear Throw
 Adds (14-18) to (30-36) Physical Damage
@@ -77,6 +88,7 @@ Forks Critical Hits
 ]],[[
 Tyranny's Grip
 Ironhead Spear
+League: Dawn of the Hunt
 Implicits: 1
 Grants Skill: Spear Throw
 (150-200)% increased Physical Damage

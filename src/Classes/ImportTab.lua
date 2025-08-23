@@ -28,6 +28,21 @@ local ImportTabClass = newClass("ImportTab", "ControlHost", "Control", function(
 	self.controls.charImportStatusLabel = new("LabelControl", {"TOPLEFT",self.controls.sectionCharImport,"TOPLEFT"}, {6, 14, 200, 16}, function()
 		return "^7Character import status: "..(type(self.charImportStatus) == "function" and self.charImportStatus() or self.charImportStatus)
 	end)
+
+	self.controls.logoutApiButton = new("ButtonControl", {"TOPLEFT",self.controls.charImportStatusLabel,"TOPRIGHT"}, {4, 0, 200, 16}, "^7Logout from Path of Exile API", function()
+		main.lastToken = nil
+		self.api.authToken = nil
+		main.lastRefreshToken = nil
+		self.api.refreshToken = nil
+		main.tokenExpiry = nil
+		self.api.tokenExpiry = nil
+		main:SaveSettings()
+		self.charImportMode = "AUTHENTICATION"
+		self.charImportStatus = colorCodes.WARNING.."Not authenticated"
+	end)
+	self.controls.logoutApiButton.shown = function()
+		return self.charImportMode == "SELECTCHAR" and self.api.authToken ~= nil
+	end
 	
 	self.controls.characterImportAnchor = new("Control", {"TOPLEFT",self.controls.sectionCharImport,"TOPLEFT"}, {6, 40, 200, 16})
 	self.controls.sectionCharImport.height = function() return self.charImportMode == "AUTHENTICATION" and 60 or 200 end
@@ -676,12 +691,47 @@ function ImportTabClass:ImportItemsAndSkills(charData)
 	local funcGetGemInstance = function(skillData)
 		local typeLine = sanitiseText(skillData.typeLine) .. (skillData.support and " Support" or "")
 		local gemId = self.build.data.gemForBaseName[typeLine:lower()]
+		
+		if typeLine:match("^Spectre:") then
+			gemId = "Metadata/Items/Gems/SkillGemSummonSpectre"
+		end		
+		if typeLine:match("^Companion:") then
+			gemId = "Metadata/Items/Gems/SkillGemSummonBeast"
+		end
 
 		if gemId then
 			local gemInstance = { level = 20, quality = 0, enabled = true, enableGlobal1 = true, enableGlobal2 = true, count = 1,  gemId = gemId }
-			gemInstance.nameSpec = self.build.data.gems[gemId].name
 			gemInstance.support = skillData.support
 
+			local spectreList = data.spectres
+			if typeLine:sub(1, 8) == "Spectre:" then
+				local spectreName = typeLine:sub(10) -- gets monster name after "Spectre: "
+				for id, spectre in pairs(spectreList) do
+					if spectre.name == spectreName then
+						if not isValueInArray(self.build.spectreList, id) then
+							t_insert(self.build.spectreList, id)
+						end
+						gemInstance.skillMinion = id -- Sets imported minion in dropdown on left
+						gemInstance.skillMinionCalcs = id-- Sets imported minion in dropdown in calcs tab
+						break
+					end
+				end
+			end
+			if typeLine:sub(1, 10) == "Companion:" then
+				local companionName = typeLine:sub(12)
+				for id, spectre in pairs(spectreList) do
+					if spectre.name == companionName then
+						if not isValueInArray(self.build.beastList, id) then
+							t_insert(self.build.beastList, id)
+						end
+						gemInstance.skillMinion = id
+						gemInstance.skillMinionCalcs = id
+						break
+					end
+				end
+			end
+
+			gemInstance.nameSpec = self.build.data.gems[gemId].name
 			for _, property in pairs(skillData.properties) do
 				if property.name == "Level" then
 					gemInstance.level = tonumber(property.values[1][1]:match("%d+"))
@@ -701,10 +751,12 @@ function ImportTabClass:ImportItemsAndSkills(charData)
 			local group = { label = "", enabled = true, gemList = { } }
 			t_insert(group.gemList, gemInstance )
 
-			for _, anotherSkillData in pairs(skillData.socketedItems) do
-				local anotherGemInstance = funcGetGemInstance(anotherSkillData)
-				if anotherGemInstance then
-					t_insert(group.gemList, anotherGemInstance )
+			if skillData.socketedItems then
+				for _, anotherSkillData in pairs(skillData.socketedItems) do
+					local anotherGemInstance = funcGetGemInstance(anotherSkillData)
+					if anotherGemInstance then
+						t_insert(group.gemList, anotherGemInstance )
+					end
 				end
 			end
 
@@ -883,6 +935,7 @@ function ImportTabClass:ImportItem(itemData, slotName)
 	end
 	item.mirrored = itemData.mirrored
 	item.corrupted = itemData.corrupted
+	item.fractured = itemData.fractured
 	if itemData.sockets and itemData.sockets[1] then
 		item.sockets = { }
 		item.itemSocketCount = 0
@@ -935,6 +988,14 @@ function ImportTabClass:ImportItem(itemData, slotName)
 			for line in line:gmatch("[^\n]+") do
 				local modList, extra = modLib.parseMod(line)
 				t_insert(item.implicitModLines, { line = line, extra = extra, mods = modList or { } })
+			end
+		end
+	end
+	if itemData.fracturedMods then
+		for _, line in ipairs(itemData.fracturedMods) do
+			for line in line:gmatch("[^\n]+") do
+				local modList, extra = modLib.parseMod(line)
+				t_insert(item.explicitModLines, { line = line, extra = extra, mods = modList or { }, fractured = true })
 			end
 		end
 	end

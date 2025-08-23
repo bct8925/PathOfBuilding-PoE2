@@ -571,6 +571,10 @@ function calcs.offence(env, actor, activeSkill)
 
 	-- set flask scaling
 	output.LifeFlaskRecovery = env.itemModDB.multipliers["LifeFlaskRecovery"]
+	output.LifeFlask1MaxCharges = env.itemModDB.multipliers["LifeFlask1MaxCharges"]
+	output.LifeFlask2MaxCharges = env.itemModDB.multipliers["LifeFlask2MaxCharges"]
+	output.ManaFlask1MaxCharges = env.itemModDB.multipliers["ManaFlask1MaxCharges"]
+	output.ManaFlask2MaxCharges = env.itemModDB.multipliers["ManaFlask2MaxCharges"]
 
 	if modDB.conditions["AffectedByEnergyBlade"] then
 		local dmgMod = calcLib.mod(skillModList, skillCfg, "EnergyBladeDamage")
@@ -631,6 +635,43 @@ function calcs.offence(env, actor, activeSkill)
 			if actor.parent.weaponData1[damageType .. "Max"] then
 				skillModList:NewMod(damageType .. "Max", "BASE", 1, modSource, { type = "PercentStat", stat = damageType .. "MaxOnWeapon 1", percent = modValue, actor = "parent" }, { type = "SkillType", skillType = SkillType.Attack })
 			end
+		end
+	end
+	-- Apply Gemling's "Integrated Efficency" Passive
+	if skillModList:Flag(nil, "SkillDamageIncreasedPerRedSupport") or
+		skillModList:Flag(nil, "SkillSpeedIncreasedPerGreenSupport") or
+		skillModList:Flag(nil, "SkillCritChanceIncreasedPerBlueSupport") then
+		
+		local redSupportCount = 0
+		local greenSupportCount = 0
+		local blueSupportCount = 0
+		for _, support in ipairs(activeSkill.supportList) do
+			if support.gemData.grantedEffect.color == 1 then
+				redSupportCount = redSupportCount + 1
+			elseif support.gemData.grantedEffect.color == 2 then
+				greenSupportCount = greenSupportCount + 1
+			elseif support.gemData.grantedEffect.color == 3 then
+				blueSupportCount = blueSupportCount + 1
+			end
+		end
+
+		local lookupModData = function(flag) 
+			local result = 	actor.modDB:Tabulate("FLAG", nil, flag)
+			return { source = result[1].mod.source, value = result[1].mod.value }
+		end
+		-- Conditionally check each to avoid future issues if a mod is reused in isolation
+		local modData = { source = nil, value = nil }
+		if skillModList:Flag(nil, "SkillDamageIncreasedPerRedSupport") then
+			modData = lookupModData("SkillDamageIncreasedPerRedSupport")
+			skillModList:NewMod("Damage", "INC", redSupportCount * modData.value, modData.source)
+		end
+		if skillModList:Flag(nil, "SkillSpeedIncreasedPerGreenSupport") then
+			modData = lookupModData("SkillSpeedIncreasedPerGreenSupport")
+			skillModList:NewMod("Speed", "INC", greenSupportCount * modData.value, modData.source)
+		end
+		if skillModList:Flag(nil, "SkillCritChanceIncreasedPerBlueSupport") then
+			modData = lookupModData("SkillCritChanceIncreasedPerBlueSupport")
+			skillModList:NewMod("CritChance", "INC", blueSupportCount * modData.value, modData.source)
 		end
 	end
 	if skillModList:Flag(nil, "MinionDamageAppliesToPlayer") or skillModList:Flag(skillCfg, "MinionDamageAppliesToPlayer") then
@@ -1279,6 +1320,13 @@ function calcs.offence(env, actor, activeSkill)
 				end
 				t_insert(breakdown.WarcryEffectMod, s_format("= %.1f%%", output.WarcryEffectMod * 100))
 			end
+		end
+	end
+	if skillModList:Flag(skillCfg, "CanCreateHazards") then
+		output.HazardRearmChance = m_min(skillModList:Sum("BASE", skillCfg, "HazardRearmChance"), 100)
+		skillModList:NewMod("DPS", "MORE", output.HazardRearmChance, "Chance To Rearm")
+		if breakdown then
+			output.HazardRearmChance = skillModList:Sum("BASE", skillCfg, "HazardRearmChance")
 		end
 	end
 	if activeSkill.skillTypes[SkillType.Link] then
@@ -3151,6 +3199,7 @@ function calcs.offence(env, actor, activeSkill)
 
 			if critOverride == 100 then
 				output.PreEffectiveCritChance = 100
+				output.PreForkCritChance = 100
 				output.CritChance = 100
 			else
 				local base = 0
@@ -3168,13 +3217,18 @@ function calcs.offence(env, actor, activeSkill)
 					output.CritChance = m_max(output.CritChance, 0)
 				end
 				output.PreEffectiveCritChance = output.CritChance
+				local preHitCheckCritChance = output.CritChance
+				if env.mode_effective then
+					output.CritChance = output.CritChance * output.AccuracyHitChance / 100
+				end
 				local preLuckyCritChance = output.CritChance
 				if env.mode_effective and skillModList:Flag(cfg, "CritChanceLucky") then
 					output.CritChance = (1 - (1 - output.CritChance / 100) ^ 2) * 100
 				end
-				local preHitCheckCritChance = output.CritChance
-				if env.mode_effective then
-					output.CritChance = output.CritChance * output.AccuracyHitChance / 100
+				output.PreForkCritChance = output.CritChance
+				local preForkCritChance = output.CritChance
+				if env.mode_effective and skillModList:Flag(cfg, "ForkCrit") then
+					output.CritChance = (1 - (1 - output.CritChance / 100) ^ 2) * 100
 				end
 				if breakdown and output.CritChance ~= baseCrit then
 					breakdown.CritChance = { }
@@ -3195,15 +3249,21 @@ function calcs.offence(env, actor, activeSkill)
 						local overCap = preCapCritChance - 100
 						t_insert(breakdown.CritChance, s_format("Crit is overcapped by %.2f%% (%d%% increased Critical Hit Chance)", overCap, overCap / more / (baseCrit + base) * 100))
 					end
+					if env.mode_effective and output.AccuracyHitChance < 100 then
+						t_insert(breakdown.CritChance, "")
+						t_insert(breakdown.CritChance, "Effective Crit Chance:")
+						t_insert(breakdown.CritChance, s_format("%.2f%%", preHitCheckCritChance))
+						t_insert(breakdown.CritChance, s_format("x %.2f ^8(chance to hit)", output.AccuracyHitChance / 100))
+						t_insert(breakdown.CritChance, s_format("= %.2f%%", preLuckyCritChance))
+					end
 					if env.mode_effective and skillModList:Flag(cfg, "CritChanceLucky") then
 						t_insert(breakdown.CritChance, "Crit Chance is Lucky:")
 						t_insert(breakdown.CritChance, s_format("1 - (1 - %.4f) x (1 - %.4f)", preLuckyCritChance / 100, preLuckyCritChance / 100))
-						t_insert(breakdown.CritChance, s_format("= %.2f%%", preHitCheckCritChance))
+						t_insert(breakdown.CritChance, s_format("= %.2f%%", preForkCritChance))
 					end
-					if env.mode_effective and output.AccuracyHitChance < 100 then
-						t_insert(breakdown.CritChance, "Crit confirmation roll:")
-						t_insert(breakdown.CritChance, s_format("%.2f%%", preHitCheckCritChance))
-						t_insert(breakdown.CritChance, s_format("x %.2f ^8(chance to hit)", output.AccuracyHitChance / 100))
+					if env.mode_effective and skillModList:Flag(cfg, "ForkCrit") then
+						t_insert(breakdown.CritChance, "Critical Strike Forks:")
+						t_insert(breakdown.CritChance, s_format("1 - (1 - %.4f) x (1 - %.4f)", preForkCritChance / 100, preForkCritChance / 100))
 						t_insert(breakdown.CritChance, s_format("= %.2f%%", output.CritChance))
 					end
 				end
@@ -3215,12 +3275,33 @@ function calcs.offence(env, actor, activeSkill)
 			else
 				local extraDamage = skillModList:Sum("BASE", cfg, "CritMultiplier") / 100
 				local extraDamageInc = 1 + skillModList:Sum("INC", cfg, "CritMultiplier") / 100
-				local extraDamageMore = 1 + skillModList:Sum("MORE", cfg, "CritMultiplier") / 100
+				local extraDamageMore = skillModList:More("MORE", cfg, "CritMultiplier")
 				extraDamage = extraDamage * extraDamageInc * extraDamageMore
 				local multiOverride = skillModList:Override(skillCfg, "CritMultiplier")
 				if multiOverride then
 					extraDamage = multiOverride / 100
 				end
+
+				output.PreEffectiveCritMultiplier = 1 + extraDamage
+				-- if crit forks are enabled, roll for crit twice and add multiplier for each
+				if env.mode_effective and skillModList:Flag(cfg, "ForkCrit") then
+					-- get crit chance and calculate odds of critting twice
+					local critChancePercentage = output.PreForkCritChance
+					local forkMultiChance = (critChancePercentage ^ 2) / 100
+					output.CritForks = forkMultiChance
+					local damageBonus = extraDamage
+					local forkedBonus = forkMultiChance * extraDamage / 100
+					if breakdown and enemyInc ~= 1 then
+						breakdown.CritForks = {
+							s_format("%.2f%% ^8(effective crit chance)", critChancePercentage),
+							s_format("x %.2f%%", critChancePercentage),
+							s_format("= %.2f%% ^8(crit forks chance)", forkMultiChance),
+						}
+					end
+					extraDamage = damageBonus + forkedBonus
+					skillModList:NewMod("CritMultiplier", "MORE", floor(forkMultiChance, 2), "Forked Crit Damage Bonus")
+				end
+
 				if env.mode_effective then
 					local enemyInc = 1 + enemyDB:Sum("INC", nil, "SelfCritMultiplier") / 100
 					extraDamage = extraDamage + enemyDB:Sum("BASE", nil, "SelfCritMultiplier") / 100
@@ -3442,6 +3523,7 @@ function calcs.offence(env, actor, activeSkill)
 						-- Apply enemy resistances and damage taken modifiers
 						local resist = 0
 						local pen = 0
+						local minPen = 0
 						local sourceRes = damageType
 						local takenInc = enemyDB:Sum("INC", cfg, "DamageTaken", damageType.."DamageTaken")
 						local takenMore = enemyDB:More(cfg, "DamageTaken", damageType.."DamageTaken")
@@ -3505,6 +3587,7 @@ function calcs.offence(env, actor, activeSkill)
 								-- Update the penetration based on the element used
 								if isElemental[elementUsed] then
 									pen = skillModList:Sum("BASE", cfg, elementUsed.."Penetration", "ElementalPenetration")
+									minPen = skillModList:Sum("BASE", cfg, elementUsed.."PenetrationMinimum", "ElementalPenetrationMinimum")
 								elseif elementUsed == "Chaos" then
 									pen = skillModList:Sum("BASE", cfg, "ChaosPenetration")
 								end
@@ -3514,6 +3597,7 @@ function calcs.offence(env, actor, activeSkill)
 									resist = 0
 								end
 								pen = skillModList:Sum("BASE", cfg, damageType.."Penetration", "ElementalPenetration")
+								minPen = skillModList:Sum("BASE", cfg, damageType.."PenetrationMinimum", "ElementalPenetrationMinimum")
 								takenInc = takenInc + enemyDB:Sum("INC", cfg, "ElementalDamageTaken")
 							elseif damageType == "Chaos" then
 								pen = skillModList:Sum("BASE", cfg, "ChaosPenetration")
@@ -3540,7 +3624,7 @@ function calcs.offence(env, actor, activeSkill)
 						if skillModList:Flag(cfg, isElemental[damageType] and "CannotElePenIgnore" or nil) then
 							effMult = effMult * (1 - resist / 100)
 						elseif useRes then
-							effMult = effMult * (1 - (resist > 0 and m_max(resist - pen, 0) or resist) / 100)
+							effMult = effMult * (1 - (resist > minPen and m_max(resist - pen, minPen) or resist) / 100)
 						end
 						damageTypeHitMin = damageTypeHitMin * effMult
 						damageTypeHitMax = damageTypeHitMax * effMult
@@ -3550,10 +3634,10 @@ function calcs.offence(env, actor, activeSkill)
 						end
 						if pass == 2 and breakdown and (effMult ~= 1 or sourceRes ~= damageType) and skillModList:Flag(cfg, isElemental[damageType] and "CannotElePenIgnore" or nil) then
 							t_insert(breakdown[damageType], s_format("x %.3f ^8(effective DPS modifier)", effMult))
-							breakdown[damageType.."EffMult"] = breakdown.effMult(damageType, resist, 0, takenInc, effMult, takenMore, sourceRes, useRes, invertChance)
-						elseif pass == 2 and breakdown and (effMult ~= 1 or (resist - pen) < 0 or sourceRes ~= damageType) then
+							breakdown[damageType.."EffMult"] = breakdown.effMult(damageType, resist, 0, takenInc, effMult, takenMore, sourceRes, useRes, invertChance, minPen)
+						elseif pass == 2 and breakdown and (effMult ~= 1 or (resist - pen) < minPen or sourceRes ~= damageType) then
 							t_insert(breakdown[damageType], s_format("x %.3f ^8(effective DPS modifier)", effMult))
-							breakdown[damageType.."EffMult"] = breakdown.effMult(damageType, resist, pen, takenInc, effMult, takenMore, sourceRes, useRes, invertChance)
+							breakdown[damageType.."EffMult"] = breakdown.effMult(damageType, resist, pen, takenInc, effMult, takenMore, sourceRes, useRes, invertChance, minPen)
 						end
 					end
 					if pass == 2 and breakdown then
@@ -3896,7 +3980,9 @@ function calcs.offence(env, actor, activeSkill)
 		-- Combine crit stats, average damage and DPS
 		combineStat("PreEffectiveCritChance", "AVERAGE")
 		combineStat("CritChance", "AVERAGE")
+		combineStat("PreEffectiveCritMultiplier", "AVERAGE")
 		combineStat("CritMultiplier", "AVERAGE")
+		combineStat("CritForks", "AVERAGE")
 		combineStat("AverageDamage", "DPS")
 		combineStat("PvpAverageDamage", "DPS")
 		combineStat("TotalDPS", "DPS")
@@ -4322,8 +4408,9 @@ function calcs.offence(env, actor, activeSkill)
 				ailmentTypeMod = ailmentDamageType
 			end
 			local rateMod = (calcLib.mod(skillModList, cfg, ailment .. "Faster") + enemyDB:Sum("INC", nil, "Self" .. ailment .. "Faster") / 100)  / calcLib.mod(skillModList, cfg, ailment .. "Slower")
-			local durationBase = env.modDB:Override(nil, ailment .. "DurationBase") or data.misc[ailment .. "DurationBase"]
-			local durationMod = m_max(calcLib.mod(skillModList, dotCfg, "Enemy" .. ailment .. "Duration", "EnemyAilmentDuration", "Enemy" .. ailmentTypeMod .. "AilmentDuration", "SkillAndDamagingAilmentDuration") * calcLib.mod(enemyDB, nil, "Self" .. ailment .. "Duration", "SelfAilmentDuration", "Self" .. ailmentTypeMod .. "AilmentDuration"), 0)
+			local durationBase = skillData[ailment:lower() .. "DurationIsSkillDuration"] and skillData.duration or env.modDB:Override(nil, ailment .. "DurationBase") or data.misc[ailment .. "DurationBase"]
+			local durationMod = m_max(calcLib.mod(skillModList, dotCfg, "Enemy" .. ailment .. "Duration", "EnemyAilmentDuration", "Enemy" .. ailmentTypeMod .. "AilmentDuration", "SkillAndDamagingAilmentDuration", skillData[ailment:lower() .. "DurationIsSkillDuration"] and
+				"Duration" or nil) * calcLib.mod(enemyDB, nil, "Self" .. ailment .. "Duration", "SelfAilmentDuration", "Self" .. ailmentTypeMod .. "AilmentDuration"), 0)
 			durationMod = m_max(durationMod, 0)
 			globalOutput[ailment .. "Duration"] = durationBase * durationMod / rateMod * debuffDurationMult
 
@@ -4603,12 +4690,15 @@ function calcs.offence(env, actor, activeSkill)
 				output[flatAilment.."ChanceOnCrit"] = 0
 				skillFlags["inflict"..flatAilment] = false
 			else
-				local base = skillModList:Sum("BASE", cfg, flatAilment.."Chance", "AilmentChance") + enemyDB:Sum("BASE", nil, "Self"..flatAilment.."Chance")
-				local inc = skillModList:Sum("INC", cfg, flatAilment.."Chance", "AilmentChance")
-				local more = skillModList:More(cfg, flatAilment.."Chance", "AilmentChance")
-				local chance = m_min(100, base * (1 + inc / 100) * more)
-				output[flatAilment.."ChanceOnHit"] = chance
-				output[flatAilment.."ChanceOnCrit"] = chance
+				for _, val in pairs({"OnHit", "OnCrit"}) do
+					local critCfg = copyTable(cfg,true)
+					critCfg.skillCond.CriticalStrike = val == "OnCrit" -- force crit config to be true for "OnCrit" chance calculation
+					local base = skillModList:Sum("BASE", critCfg, flatAilment.."Chance", "AilmentChance") + enemyDB:Sum("BASE", nil, "Self"..flatAilment.."Chance")
+					local inc = skillModList:Sum("INC", critCfg, flatAilment.."Chance", "AilmentChance")
+					local more = skillModList:More(critCfg, flatAilment.."Chance", "AilmentChance")
+					local chance = m_min(100, skillModList:Override(critCfg, flatAilment .. "Chance") or (base * (1 + inc / 100) * more))
+					output[flatAilment.."Chance" .. val] = chance
+				end
 				skillFlags["inflict"..flatAilment] = true
 			end
 		end
@@ -4640,8 +4730,8 @@ function calcs.offence(env, actor, activeSkill)
 			local hitAvg = hitMin + (hitMax - hitMin) / 2
 			local critAvg = critMin + (critMax - critMin) / 2
 			local base = skillModList:Sum("BASE", cfg, "Enemy"..ailment.."Chance", "AilmentChance") + enemyDB:Sum("BASE", nil, "Self"..ailment.."Chance")
-			local inc = skillModList:Sum("INC", cfg, "Enemy"..ailment.."Chance", "AilmentChance")
-			local more = skillModList:More(cfg, "Enemy"..ailment.."Chance", "AilmentChance")
+			local inc = skillModList:Sum("INC", cfg, "Enemy"..ailment.."Chance", "AilmentChance") + enemyDB:Sum("INC", nil, "Self"..ailment.."Chance")
+			local more = skillModList:More(cfg, "Enemy"..ailment.."Chance", "AilmentChance") * enemyDB:More(nil, "Self"..ailment.."Chance")
 			local hitElementalAilmentChance = hitAvg / enemyThreshold * data.gameConstants[ailment .. "ChanceMultiplier"]
 			hitElementalAilmentChance = (hitElementalAilmentChance + base) * (1 + inc / 100) * more
 			local critElementalAilmentChance = critAvg / enemyThreshold * data.gameConstants[ailment .. "ChanceMultiplier"]
@@ -4742,7 +4832,7 @@ function calcs.offence(env, actor, activeSkill)
 					local incDur = skillModList:Sum("INC", cfg, "Enemy"..ailment.."Duration", "EnemyElementalAilmentDuration", "EnemyAilmentDuration") + enemyDB:Sum("INC", nil, "Self"..ailment.."Duration", "SelfElementalAilmentDuration", "SelfAilmentDuration")
 					local moreDur = skillModList:More(cfg, "Enemy"..ailment.."Duration", "EnemyElementalAilmentDuration", "EnemyAilmentDuration") * enemyDB:More(nil, "Self"..ailment.."Duration", "SelfElementalAilmentDuration", "SelfAilmentDuration")
 					output[ailment.."Duration"] = ailmentData[ailment].duration * (1 + incDur / 100) * moreDur * debuffDurationMult
-					output[ailment.."EffectMod"] = calcLib.mod(skillModList, cfg, "Enemy"..ailment.."Magnitude", "AilmentMagnitude")
+					output[ailment.."EffectMod"] = calcLib.mod(skillModList, cfg, "Enemy"..ailment.."Magnitude", "AilmentMagnitude") * calcLib.mod(enemyDB, cfg, "Self"..ailment.."Magnitude", "AilmentMagnitude")
 					if breakdown then
 						local maximum = globalOutput["Maximum"..ailment] or ailmentData[ailment].max
 						local current = m_max(m_min(globalOutput["Current"..ailment] or 0, maximum), 0)

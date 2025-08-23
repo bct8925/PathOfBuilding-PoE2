@@ -323,8 +323,8 @@ skills["SupportBurstingPlaguePlayer"] = {
 			baseFlags = {
 			},
 			constantStats = {
-				{ "support_bursting_plague_store_%_poison_applied_magnitude_towards_burst", 200 },
-				{ "support_bursting_plague_max_value_%_of_max_life", 10 },
+				{ "support_bursting_plague_store_%_poison_applied_magnitude_towards_burst", 100 },
+				{ "support_bursting_plague_max_value_%_of_max_life", 20 },
 			},
 			stats = {
 			},
@@ -1077,6 +1077,11 @@ skills["SupportDeliberationPlayer"] = {
 			label = "Deliberation",
 			incrementalEffectiveness = 0.054999999701977,
 			statDescriptionScope = "gem_stat_descriptions",
+			statMap = {
+				["support_deliberation_damage_+%_final"] = {
+					mod("Damage", "MORE", nil),
+				},
+			},
 			baseFlags = {
 			},
 			constantStats = {

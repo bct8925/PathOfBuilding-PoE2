@@ -135,7 +135,7 @@ skills["BarragePlayer"] = {
 	name = "Barrage",
 	baseTypeName = "Barrage",
 	color = 2,
-	description = "Ready a volley of arrows or spears, Empowering your next Bow or Projectile Spear Attack to repeat multiple times. Consumes your Frenzy Charges on use to add additional repeats.",
+	description = "Ready a volley of arrows or spears, Empowering your next Barrageable Bow or Projectile Spear Attack to Repeat multiple times. Consumes your Frenzy Charges on use to add additional repeats.",
 	skillTypes = { [SkillType.Spell] = true, [SkillType.Duration] = true, [SkillType.ModifiesNextSkill] = true, [SkillType.Cooldown] = true, [SkillType.ConsumesCharges] = true, [SkillType.UsableWhileMoving] = true, [SkillType.Buff] = true, [SkillType.EmpowersOtherSkill] = true, [SkillType.SkillConsumesFrenzyChargesOnUse] = true, [SkillType.UsableWhileMounted] = true, },
 	weaponTypes = {
 		["Spear"] = true,
@@ -825,6 +825,8 @@ skills["CombatFrenzyPlayer"] = {
 skills["SummonBeastPlayer"] = {
 	name = "Companion: {0}",
 	baseTypeName = "Companion: {0}",
+	minionList = {
+	},
 	color = 2,
 	description = "Summon a Reviving Beast Companion to aid you in combat.",
 	skillTypes = { [SkillType.Minion] = true, [SkillType.MinionsCanExplode] = true, [SkillType.Trappable] = true, [SkillType.Totemable] = true, [SkillType.Mineable] = true, [SkillType.Multicastable] = true, [SkillType.Triggerable] = true, [SkillType.CanRapidFire] = true, [SkillType.CreatesMinion] = true, [SkillType.HasReservation] = true, [SkillType.Persistent] = true, [SkillType.Companion] = true, [SkillType.CreatesCompanion] = true, },
@@ -882,6 +884,11 @@ skills["SummonBeastPlayer"] = {
 			incrementalEffectiveness = 0.092720001935959,
 			statDescriptionScope = "skill_stat_descriptions",
 			baseFlags = {
+				spell = true,
+				minion = true,
+				summonBeast = true,
+				duration = true,
+				permanentMinion = true,
 			},
 			constantStats = {
 				{ "minion_base_resummon_time_ms", 12000 },
@@ -4824,6 +4831,7 @@ skills["PlagueBearerNovaPlayer"] = {
 			incrementalEffectiveness = 0.092720001935959,
 			statDescriptionScope = "skill_stat_descriptions",
 			baseFlags = {
+				area = true,
 			},
 			constantStats = {
 				{ "active_skill_base_area_of_effect_radius", 18 },
@@ -4841,6 +4849,7 @@ skills["PlagueBearerNovaPlayer"] = {
 				"visual_hit_effect_physical_is_green",
 				"display_statset_hide_usage_stats",
 				"display_skill_deals_secondary_damage",
+				"is_area_damage",
 			},
 			levels = {
 				[1] = { actorLevel = 1, },
@@ -6979,6 +6988,8 @@ skills["SpearfieldPlayer"] = {
 				["spearfield_spear_damage_+%_final_after_half_seconds"] = {
 					mod("Damage", "MORE", nil, 0, 0, { type = "Condition", var = "SpearOlderThanHalfSecond" }),
 				},
+				["base_skill_show_average_damage_instead_of_dps"] = {
+				},
 			},
 			baseFlags = {
 				attack = true,
@@ -8593,7 +8604,7 @@ skills["TrinityPlayer"] = {
 	skillTypes = { [SkillType.OngoingSkill] = true, [SkillType.HasReservation] = true, [SkillType.Buff] = true, [SkillType.Persistent] = true, [SkillType.Lightning] = true, [SkillType.Cold] = true, [SkillType.Fire] = true, },
 	castTime = 0,
 	qualityStats = {
-		{ "trinity_damage_+%_final_to_grant_per_50_resonance", 0.1 },
+		{ "trinity_attack_speed_+%_while_all_resonance_is_at_least_250_to_grant", 0.75 },
 	},
 	levels = {
 		[1] = { spiritReservationFlat = 100, levelRequirement = 0, },
@@ -8644,7 +8655,10 @@ skills["TrinityPlayer"] = {
 			statDescriptionScope = "skill_stat_descriptions",
 			statMap = {
 				["trinity_damage_+%_final_to_grant_per_50_resonance"] = {
-					mod("Damage", "MORE", nil, 0, 0, { type = "Multiplier", var = "ResonanceCount", div = 50 },{ type = "GlobalEffect", effectType = "Buff", effectName = "Trinity" }),
+					mod("ElementalDamage", "MORE", nil, 0, 0, { type = "Multiplier", var = "ResonanceCount", div = 30 },{ type = "GlobalEffect", effectType = "Buff", effectName = "Trinity" }),
+				},
+				["trinity_attack_speed_+%_while_all_resonance_is_at_least_250_to_grant"] = {
+					mod("Speed", "INC", nil, 0, 0, { type = "MultiplierThreshold", var = "ResonanceCount", threshold = 250 },{ type = "GlobalEffect", effectType = "Buff", effectName = "Trinity" }),
 				},
 				["quality_display_trinity_is_gem"] = {
 					-- Display only
@@ -8659,8 +8673,8 @@ skills["TrinityPlayer"] = {
 			},
 			constantStats = {
 				{ "trinity_resonance_decay_delay_ms", 8000 },
-				{ "trinity_resonance_loss_per_second", 5 },
-				{ "trinity_loss_per_hit", 2 },
+				{ "trinity_resonance_loss_per_second", 10 },
+				{ "trinity_loss_per_hit", 3 },
 			},
 			stats = {
 				"trinity_damage_+%_final_to_grant_per_50_resonance",
@@ -8668,46 +8682,46 @@ skills["TrinityPlayer"] = {
 				"quality_display_trinity_is_gem",
 			},
 			levels = {
-				[1] = { 4, 2, statInterpolation = { 1, 1, }, actorLevel = 1, },
-				[2] = { 4, 2, statInterpolation = { 1, 1, }, actorLevel = 3.4519999027252, },
-				[3] = { 4, 3, statInterpolation = { 1, 1, }, actorLevel = 6.7670001983643, },
-				[4] = { 5, 3, statInterpolation = { 1, 1, }, actorLevel = 10.307999610901, },
-				[5] = { 5, 4, statInterpolation = { 1, 1, }, actorLevel = 14.074999809265, },
-				[6] = { 5, 4, statInterpolation = { 1, 1, }, actorLevel = 18.068000793457, },
-				[7] = { 6, 5, statInterpolation = { 1, 1, }, actorLevel = 22.287000656128, },
-				[8] = { 6, 5, statInterpolation = { 1, 1, }, actorLevel = 26.732000350952, },
-				[9] = { 6, 6, statInterpolation = { 1, 1, }, actorLevel = 31.40299987793, },
-				[10] = { 7, 6, statInterpolation = { 1, 1, }, actorLevel = 36.299999237061, },
-				[11] = { 7, 7, statInterpolation = { 1, 1, }, actorLevel = 41.423000335693, },
-				[12] = { 7, 7, statInterpolation = { 1, 1, }, actorLevel = 46.771999359131, },
-				[13] = { 7, 7, statInterpolation = { 1, 1, }, actorLevel = 52.34700012207, },
-				[14] = { 7, 7, statInterpolation = { 1, 1, }, actorLevel = 58.147998809814, },
-				[15] = { 7, 8, statInterpolation = { 1, 1, }, actorLevel = 64.175003051758, },
-				[16] = { 8, 8, statInterpolation = { 1, 1, }, actorLevel = 70.428001403809, },
-				[17] = { 8, 9, statInterpolation = { 1, 1, }, actorLevel = 76.906997680664, },
-				[18] = { 9, 9, statInterpolation = { 1, 1, }, actorLevel = 83.611999511719, },
-				[19] = { 9, 10, statInterpolation = { 1, 1, }, actorLevel = 90.542999267578, },
-				[20] = { 10, 10, statInterpolation = { 1, 1, }, actorLevel = 97.699996948242, },
-				[21] = { 10, 11, statInterpolation = { 1, 1, }, actorLevel = 105.08300018311, },
-				[22] = { 11, 11, statInterpolation = { 1, 1, }, actorLevel = 112.69200134277, },
-				[23] = { 11, 11, statInterpolation = { 1, 1, }, actorLevel = 120.52700042725, },
-				[24] = { 11, 11, statInterpolation = { 1, 1, }, actorLevel = 128.58799743652, },
-				[25] = { 12, 12, statInterpolation = { 1, 1, }, actorLevel = 136.875, },
-				[26] = { 12, 12, statInterpolation = { 1, 1, }, actorLevel = 145.38800048828, },
-				[27] = { 12, 12, statInterpolation = { 1, 1, }, actorLevel = 154.12699890137, },
-				[28] = { 13, 12, statInterpolation = { 1, 1, }, actorLevel = 163.09199523926, },
-				[29] = { 13, 13, statInterpolation = { 1, 1, }, actorLevel = 172.28300476074, },
-				[30] = { 13, 13, statInterpolation = { 1, 1, }, actorLevel = 181.69999694824, },
-				[31] = { 13, 13, statInterpolation = { 1, 1, }, actorLevel = 191.34300231934, },
-				[32] = { 14, 13, statInterpolation = { 1, 1, }, actorLevel = 201.21200561523, },
-				[33] = { 14, 13, statInterpolation = { 1, 1, }, actorLevel = 211.30700683594, },
-				[34] = { 14, 13, statInterpolation = { 1, 1, }, actorLevel = 221.62800598145, },
-				[35] = { 14, 13, statInterpolation = { 1, 1, }, actorLevel = 232.17500305176, },
-				[36] = { 14, 14, statInterpolation = { 1, 1, }, actorLevel = 242.94799804688, },
-				[37] = { 14, 14, statInterpolation = { 1, 1, }, actorLevel = 253.94700622559, },
-				[38] = { 15, 14, statInterpolation = { 1, 1, }, actorLevel = 265.17199707031, },
-				[39] = { 15, 14, statInterpolation = { 1, 1, }, actorLevel = 276.62298583984, },
-				[40] = { 15, 14, statInterpolation = { 1, 1, }, actorLevel = 288.29998779297, },
+				[1] = { 1, 5, statInterpolation = { 1, 1, }, actorLevel = 1, },
+				[2] = { 1, 5, statInterpolation = { 1, 1, }, actorLevel = 3.4519999027252, },
+				[3] = { 1, 6, statInterpolation = { 1, 1, }, actorLevel = 6.7670001983643, },
+				[4] = { 1, 6, statInterpolation = { 1, 1, }, actorLevel = 10.307999610901, },
+				[5] = { 1, 7, statInterpolation = { 1, 1, }, actorLevel = 14.074999809265, },
+				[6] = { 1, 7, statInterpolation = { 1, 1, }, actorLevel = 18.068000793457, },
+				[7] = { 2, 8, statInterpolation = { 1, 1, }, actorLevel = 22.287000656128, },
+				[8] = { 2, 8, statInterpolation = { 1, 1, }, actorLevel = 26.732000350952, },
+				[9] = { 2, 9, statInterpolation = { 1, 1, }, actorLevel = 31.40299987793, },
+				[10] = { 3, 9, statInterpolation = { 1, 1, }, actorLevel = 36.299999237061, },
+				[11] = { 3, 10, statInterpolation = { 1, 1, }, actorLevel = 41.423000335693, },
+				[12] = { 3, 10, statInterpolation = { 1, 1, }, actorLevel = 46.771999359131, },
+				[13] = { 3, 10, statInterpolation = { 1, 1, }, actorLevel = 52.34700012207, },
+				[14] = { 3, 10, statInterpolation = { 1, 1, }, actorLevel = 58.147998809814, },
+				[15] = { 3, 11, statInterpolation = { 1, 1, }, actorLevel = 64.175003051758, },
+				[16] = { 4, 11, statInterpolation = { 1, 1, }, actorLevel = 70.428001403809, },
+				[17] = { 4, 12, statInterpolation = { 1, 1, }, actorLevel = 76.906997680664, },
+				[18] = { 5, 12, statInterpolation = { 1, 1, }, actorLevel = 83.611999511719, },
+				[19] = { 5, 13, statInterpolation = { 1, 1, }, actorLevel = 90.542999267578, },
+				[20] = { 6, 13, statInterpolation = { 1, 1, }, actorLevel = 97.699996948242, },
+				[21] = { 6, 14, statInterpolation = { 1, 1, }, actorLevel = 105.08300018311, },
+				[22] = { 6, 14, statInterpolation = { 1, 1, }, actorLevel = 112.69200134277, },
+				[23] = { 7, 14, statInterpolation = { 1, 1, }, actorLevel = 120.52700042725, },
+				[24] = { 7, 14, statInterpolation = { 1, 1, }, actorLevel = 128.58799743652, },
+				[25] = { 7, 15, statInterpolation = { 1, 1, }, actorLevel = 136.875, },
+				[26] = { 7, 15, statInterpolation = { 1, 1, }, actorLevel = 145.38800048828, },
+				[27] = { 8, 15, statInterpolation = { 1, 1, }, actorLevel = 154.12699890137, },
+				[28] = { 8, 15, statInterpolation = { 1, 1, }, actorLevel = 163.09199523926, },
+				[29] = { 8, 16, statInterpolation = { 1, 1, }, actorLevel = 172.28300476074, },
+				[30] = { 8, 16, statInterpolation = { 1, 1, }, actorLevel = 181.69999694824, },
+				[31] = { 8, 16, statInterpolation = { 1, 1, }, actorLevel = 191.34300231934, },
+				[32] = { 8, 16, statInterpolation = { 1, 1, }, actorLevel = 201.21200561523, },
+				[33] = { 9, 16, statInterpolation = { 1, 1, }, actorLevel = 211.30700683594, },
+				[34] = { 9, 16, statInterpolation = { 1, 1, }, actorLevel = 221.62800598145, },
+				[35] = { 9, 16, statInterpolation = { 1, 1, }, actorLevel = 232.17500305176, },
+				[36] = { 9, 17, statInterpolation = { 1, 1, }, actorLevel = 242.94799804688, },
+				[37] = { 9, 17, statInterpolation = { 1, 1, }, actorLevel = 253.94700622559, },
+				[38] = { 9, 17, statInterpolation = { 1, 1, }, actorLevel = 265.17199707031, },
+				[39] = { 10, 17, statInterpolation = { 1, 1, }, actorLevel = 276.62298583984, },
+				[40] = { 10, 17, statInterpolation = { 1, 1, }, actorLevel = 288.29998779297, },
 			},
 		},
 	}
@@ -9121,7 +9135,10 @@ skills["VoltaicMarkPlayer"] = {
 			statDescriptionScope = "thaumaturgist_mark",
 			statMap = {
 				["thaumaturgist_mark_enemies_shocked_chance_+%_final"] = {
-					mod("EnemyShockChance", "MORE", nil, 0, 0, { type = "GlobalEffect", effectType = "Curse" }),
+					mod("SelfShockChance", "MORE", nil, 0, 0, { type = "GlobalEffect", effectType = "Curse" }),
+				},
+				["thaumaturgist_mark_enemy_shock_effect_+%_taken"] = {
+					mod("SelfShockMagnitude", "INC", nil, 0, 0, { type = "GlobalEffect", effectType = "Curse" }),
 				},
 			},
 			baseFlags = {
@@ -9956,6 +9973,7 @@ skills["TriggeredWindDancerPlayer"] = {
 				"global_knockback",
 				"triggerable_in_any_set",
 				"quality_display_active_skill_base_area_of_effect_radius_is_gem",
+				"visual_hit_effect_physical_is_wind",
 			},
 			levels = {
 				[1] = { actorLevel = 1, },

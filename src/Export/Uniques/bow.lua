@@ -17,10 +17,21 @@ UniqueManaGainedFromEnemyDeath6
 ]],[[
 Doomfletch
 Composite Bow
+League: Dawn of the Hunt
 UniqueLocalAddedPhysicalDamage7
 UniqueDexterity4
 UniqueManaRegeneration3
 UniqueLocalPhysicalDamageAddedAsEachElement1
+]],[[
+Lioneye's Glare
+Heavy Bow
+League: Dawn of the Hunt
+UniqueLocalIncreasedPhysicalDamagePercent14
+UniqueLocalIncreasedAccuracy8
+UniqueLocalIncreasedAttackSpeed22
+UniqueDexterity44
+UniqueLioneyeDodgeRoll1
+UniqueRepeatNoEnemyInPresence
 ]],[[
 Quill Rain
 Shortbow
@@ -31,6 +42,7 @@ UniqueWeaponDamageFinalPercent1
 ]],[[
 Slivertongue
 Zealot Bow
+League: Dawn of the Hunt
 UniqueLocalAddedPhysicalDamage14
 UniqueLocalCriticalStrikeChance6
 UniqueLifeLeechLocal1
@@ -50,6 +62,7 @@ UniqueProjectilesSplitCount1
 ]],[[
 Voltaxic Rift
 Fanatic Bow
+League: Dawn of the Hunt
 UniqueLocalAddedLightningDamage6
 UniqueLocalIncreasedAttackSpeed17
 UniqueLightningDamageConvertToChaos1

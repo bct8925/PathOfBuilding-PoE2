@@ -87,9 +87,10 @@ statMap = {
 #mods
 #skillEnd
 
+#minionList
 #skill SummonBeastPlayer
 #set SummonBeastPlayer
-#flags
+#flags spell minion summonBeast duration permanentMinion
 #mods
 #skillEnd
 
@@ -319,7 +320,7 @@ statMap = {
 
 #skill PlagueBearerNovaPlayer
 #set PlagueBearerNovaPlayer
-#flags
+#flags area
 #mods
 #skillEnd
 
@@ -460,6 +461,8 @@ statMap = {
 	["spearfield_spear_damage_+%_final_after_half_seconds"] = {
 		mod("Damage", "MORE", nil, 0, 0, { type = "Condition", var = "SpearOlderThanHalfSecond" }),
 	},
+	["base_skill_show_average_damage_instead_of_dps"] = {
+	},
 },
 #mods
 #skillEnd
@@ -562,7 +565,10 @@ statMap = {
 #flags buff duration
 statMap = {
 	["trinity_damage_+%_final_to_grant_per_50_resonance"] = {
-		mod("Damage", "MORE", nil, 0, 0, { type = "Multiplier", var = "ResonanceCount", div = 50 },{ type = "GlobalEffect", effectType = "Buff", effectName = "Trinity" }),
+		mod("ElementalDamage", "MORE", nil, 0, 0, { type = "Multiplier", var = "ResonanceCount", div = 30 },{ type = "GlobalEffect", effectType = "Buff", effectName = "Trinity" }),
+	},
+	["trinity_attack_speed_+%_while_all_resonance_is_at_least_250_to_grant"] = {
+		mod("Speed", "INC", nil, 0, 0, { type = "MultiplierThreshold", var = "ResonanceCount", threshold = 250 },{ type = "GlobalEffect", effectType = "Buff", effectName = "Trinity" }),
 	},
 	["quality_display_trinity_is_gem"] = {
 		-- Display only
@@ -609,7 +615,10 @@ statMap = {
 #flags spell
 statMap = {
 	["thaumaturgist_mark_enemies_shocked_chance_+%_final"] = {
-		mod("EnemyShockChance", "MORE", nil, 0, 0, { type = "GlobalEffect", effectType = "Curse" }),
+		mod("SelfShockChance", "MORE", nil, 0, 0, { type = "GlobalEffect", effectType = "Curse" }),
+	},
+	["thaumaturgist_mark_enemy_shock_effect_+%_taken"] = {
+		mod("SelfShockMagnitude", "INC", nil, 0, 0, { type = "GlobalEffect", effectType = "Curse" }),
 	},
 },
 #mods

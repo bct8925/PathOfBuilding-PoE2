@@ -250,7 +250,7 @@ function ModStoreClass:GetCondition(var, cfg, noMod)
 end
 
 function ModStoreClass:GetMultiplier(var, cfg, noMod)
-	return (self.multipliers[var] or 0) + (self.parent and self.parent:GetMultiplier(var, cfg, true) or 0) + (not noMod and self:Sum("BASE", cfg, multiplierName[var]) or 0)
+	return (not noMod and self:Override(cfg, multiplierName[var])) or (self.multipliers[var] or 0) + (self.parent and self.parent:GetMultiplier(var, cfg, true) or 0) + (not noMod and self:Sum("BASE", cfg, multiplierName[var]) or 0)
 end
 
 function ModStoreClass:GetStat(stat, cfg)
@@ -453,6 +453,9 @@ function ModStoreClass:EvalMod(mod, cfg)
 			end
 			local percent = tag.percent or self:GetMultiplier(tag.percentVar, cfg)
 			local mult = base * (percent and percent / 100 or 1)
+			if tag.floor then
+				mult = m_floor(mult)
+			end
 			local limitTotal
 			if tag.limit or tag.limitVar then
 				local limit = tag.limit or self:GetMultiplier(tag.limitVar, cfg)
@@ -695,13 +698,14 @@ function ModStoreClass:EvalMod(mod, cfg)
 				matchName = matchName:lower()
 				if tag.skillNameList then
 					for _, name in pairs(tag.skillNameList) do
-						if name:lower() == matchName then
+						local nameLower = name:lower()
+						if (tag.partialMatch and matchName:find(nameLower, 1, true)) or (not tag.partialMatch and nameLower == matchName) then
 							match = true
 							break
 						end
 					end
 				else
-					match = (tag.skillName and tag.skillName:lower() == matchName)
+					match = (tag.partialMatch and matchName:find(tag.skillName:lower(), 1, true) ~= nil) or (tag.skillName:lower() == matchName)
 				end
 			end
 			if tag.neg then

@@ -17,10 +17,22 @@ Gain (12-18) Mana per Enemy Killed
 ]],[[
 Doomfletch
 Composite Bow
+League: Dawn of the Hunt
 Adds (5-7) to (10-12) Physical Damage
 +10 to Dexterity
 (30-50)% increased Mana Regeneration Rate
 Attacks with this Weapon gain 50% of Physical damage as Extra damage of each Element
+]],[[
+Lioneye's Glare
+Heavy Bow
+League: Dawn of the Hunt
+(150-240)% increased Physical Damage
++(300-500) to Accuracy Rating
+10% increased Attack Speed
++(20-30) to Dexterity
++2 metres to Dodge Roll distance if you haven't Dodge Rolled Recently
+-1 metre to Dodge Roll distance if you've Dodge Rolled Recently
+Barrageable Attacks with this Bow Repeat +1 time if no enemies are in your Presence
 ]],[[
 Quill Rain
 Shortbow
@@ -31,6 +43,7 @@ Shortbow
 ]],[[
 Slivertongue
 Zealot Bow
+League: Dawn of the Hunt
 Adds (40-48) to (65-72) Physical Damage
 +(4-6)% to Critical Hit Chance
 Leeches (5-8)% of Physical Damage as Life
@@ -50,6 +63,7 @@ Projectiles Split towards +2 targets
 ]],[[
 Voltaxic Rift
 Fanatic Bow
+League: Dawn of the Hunt
 Adds 1 to (200-300) Lightning Damage
 (10-15)% increased Attack Speed
 100% of Lightning Damage Converted to Chaos Damage

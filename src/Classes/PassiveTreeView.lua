@@ -302,7 +302,7 @@ function PassiveTreeViewClass:Draw(build, viewPort, inputEvents)
 		end
 	elseif treeClick == "RIGHT" then
 		if hoverNode then
-			if hoverNode.alloc and hoverNode.type == "Socket" then
+			if hoverNode.alloc and (hoverNode.type == "Socket" or hoverNode.containJewelSocket) then
 				local slot = build.itemsTab.sockets[hoverNode.id]
 				if slot:IsEnabled() then
 					-- User right-clicked a jewel socket, jump to the item page and focus the corresponding item slot control
@@ -354,7 +354,7 @@ function PassiveTreeViewClass:Draw(build, viewPort, inputEvents)
 	local class = tree.classes[spec.curClassId]
 	if class and class.background then
 		local bgAssetName = class.background.image
-		if spec.curAscendClassId ~= 0 then
+		if spec.curAscendClassId ~= 0 and class.classes[spec.curAscendClassId] then
 			bgAssetName = class.classes[spec.curAscendClassId].background.image
 		end
 		local bg = tree:GetAssetByName(bgAssetName)
@@ -599,7 +599,7 @@ function PassiveTreeViewClass:Draw(build, viewPort, inputEvents)
 			else
 				state = "unalloc"
 			end
-			if node.type == "Socket" then
+			if node.type == "Socket" or node.containJewelSocket then
 				-- Node is a jewel socket, retrieve the socketed jewel (if present) so we can display the correct art
 				base = tree:GetAssetByName(node.overlay[state])
 
@@ -837,6 +837,7 @@ function PassiveTreeViewClass:Draw(build, viewPort, inputEvents)
 			if self.tooltip:CheckForUpdate(node, self.showStatDifferences, self.tracePath, launch.devModeAlt, build.outputRevision) then
 				self:AddNodeTooltip(self.tooltip, node, build, incSmallPassiveSkillEffect)
 			end
+			self.tooltip.center = true
 			self.tooltip:Draw(m_floor(scrX - size), m_floor(scrY - size), size * 2, size * 2, viewPort)
 		end
 	end
@@ -845,7 +846,7 @@ function PassiveTreeViewClass:Draw(build, viewPort, inputEvents)
 	SetDrawLayer(nil, 25)
 	for nodeId in pairs(tree.sockets) do
 		local node = spec.nodes[nodeId]
-		if node and node.name ~= "Charm Socket" and (not node.expansionJewel or node.expansionJewel.size == 2) then
+		if node and node.name ~= "Charm Socket" and node.containJewelSocket ~= true and (not node.expansionJewel or node.expansionJewel.size == 2) then
 			local scrX, scrY = treeToScreen(node.x, node.y)
 			local socket, jewel = build.itemsTab:GetSocketAndJewelForNodeID(nodeId)
 			if node == hoverNode then
@@ -1073,6 +1074,13 @@ end
 
 function PassiveTreeViewClass:AddNodeName(tooltip, node, build)
 	tooltip:SetRecipe(node.infoRecipe)
+	local tooltipMap = {
+		Normal = "PASSIVE",
+		Notable = "NOTABLE",
+		Socket = "JEWEL",
+		Keystone = "KEYSTONE",
+	}
+	tooltip.itemTooltip = tooltipMap[node.type] or "UNKNOWN"
 	tooltip:AddLine(24, "^7"..node.dn..(launch.devModeAlt and " ["..node.id.."]" or ""))
 	if launch.devModeAlt and node.id > 65535 then
 		-- Decompose cluster node Id
@@ -1194,7 +1202,13 @@ function PassiveTreeViewClass:AddNodeTooltip(tooltip, node, build, incSmallPassi
 				-- line = line .. "  ^8(Effect increased by "..incSmallPassiveSkillEffect.."%)"
 			end
 			
-			tooltip:AddLine(16, ((node.mods[i].extra or not node.mods[i].list) and colorCodes.UNSUPPORTED or colorCodes.MAGIC)..line)
+			if line ~= " " and (node.mods[i].extra or not node.mods[i].list) then 
+				local line = colorCodes.UNSUPPORTED..line
+				line = main.notSupportedModTooltips and (line .. main.notSupportedTooltipText) or line
+				tooltip:AddLine(16, line)
+			else
+				tooltip:AddLine(16, colorCodes.MAGIC..line)
+			end
 		end
 	end
 
@@ -1268,7 +1282,7 @@ function PassiveTreeViewClass:AddNodeTooltip(tooltip, node, build, incSmallPassi
 		local isInRadius = false
 		for id, socket in pairs(build.itemsTab.sockets) do
 			if build.itemsTab.activeSocketList and socket.inactive == false or socket.inactive == nil then
-				isInRadius = isInRadius or build.spec.nodes[id].nodesInRadius[3][node.id] ~= nil
+				isInRadius = isInRadius or (build.spec.nodes[id] and build.spec.nodes[id].nodesInRadius and build.spec.nodes[id].nodesInRadius[3][node.id] ~= nil)
 				if isInRadius then break end
 			end
 		end
@@ -1288,6 +1302,20 @@ function PassiveTreeViewClass:AddNodeTooltip(tooltip, node, build, incSmallPassi
 		end
 		for i, line in ipairs(mNode.sd) do
 			addModInfoToTooltip(mNode, i, line, localSmallIncEffect)
+		end
+	end
+
+	if node.containJewelSocket then
+		tooltip:AddSeparator(14)
+		-- Jewel socket with a jewel in it, show the jewel tooltip instead of the node tooltip
+		local socket, jewel = build.itemsTab:GetSocketAndJewelForNodeID(node.id)
+		if jewel then
+			build.itemsTab:AddItemTooltip(tooltip, jewel, { nodeId = node.id })
+			tooltip:AddSeparator(14)
+		end
+
+		if socket ~= nil and socket:IsEnabled() then
+			tooltip:AddLine(14, colorCodes.TIP.."Tip: Right click this socket to go to the items page and choose the jewel for this socket.")
 		end
 	end
 

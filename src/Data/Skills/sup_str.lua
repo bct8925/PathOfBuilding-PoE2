@@ -315,6 +315,7 @@ skills["SupportBattershoutPlayer"] = {
 				"cannot_break_armour",
 				"consume_armour_break_to_trigger_battershout_explosion",
 				"is_area_damage",
+				"is_warcry",
 			},
 			levels = {
 				[1] = { actorLevel = 1, },
@@ -606,14 +607,18 @@ skills["SupportConcoctPlayer"] = {
 			incrementalEffectiveness = 0.054999999701977,
 			statDescriptionScope = "gem_stat_descriptions",
 			statMap = {
-				["support_concoct_bleed_effect_+%_final_per_life_flask_charge_consumed"] = {
-					mod("AilmentMagnitude", "MORE", nil, 0, KeywordFlag.Bleed, { type = "Multiplier", var = "LifeFlaskChargesUsed"}),
-				},
 				["consume_%_of_maximum_life_flask_charges_on_skill_use"] = {
-					-- Display only
+					mod("Multiplier:LifeFlaskMaxChargesPercent", "BASE", nil),
+				},
+				["support_concoct_bleed_effect_+%_final_per_life_flask_charge_consumed"] = {
+					mod("AilmentMagnitude", "MORE", nil, 0, KeywordFlag.Bleed, { type = "Multiplier", var = "LifeFlaskChargeConsumed"}),
 				},
 			},
 			baseFlags = {
+			},
+			baseMods = {
+				mod("Multiplier:LifeFlaskChargeConsumed", "BASE", 1, 0, 0, { type = "PercentStat", stat = "LifeFlask1MaxCharges", percentVar = "LifeFlaskMaxChargesPercent", floor = true }),
+				mod("Multiplier:LifeFlaskChargeConsumed", "BASE", 1, 0, 0, { type = "PercentStat", stat = "LifeFlask2MaxCharges", percentVar = "LifeFlaskMaxChargesPercent", floor = true }),
 			},
 			constantStats = {
 				{ "consume_%_of_maximum_life_flask_charges_on_skill_use", 20 },
@@ -3047,6 +3052,7 @@ skills["StompingGroundShockwavePlayer"] = {
 			baseFlags = {
 				nonWeaponAttack = true,
 				area = true,
+				melee = true,
 			},
 			baseMods = {
 				skill("showAverage", true),

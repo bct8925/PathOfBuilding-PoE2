@@ -29,16 +29,22 @@ Culling Strike against Frozen Enemies
 ]],[[
 Mjölner
 Torment Club
+League: Dawn of the Hunt
+Variant: Pre 0.2.1
+Variant: Current
 Implicits: 1
-Grants Skill: Level (1-20) Lightning Spell on Hit
+Grants Skill: Level (1-20) Thundergod's Wrath
 +200 Intelligence Requirement
 +100 Strength Requirement
-(150-200)% increased Physical Damage
+{variant:1}(150-200)% increased Physical Damage
+{variant:2}(250-350)% increased Physical Damage
 (10-20)% increased Attack Speed
-+(1-2) to Level of all Lightning Skills
+{variant:1}+1 to Level of all Lightning Skills
+{variant:2}+(2-4) to Level of all Lightning Skills
 ]],[[
 Nebuloch
 Brigand Mace
+League: Dawn of the Hunt
 Adds (39-48) to (69-79) Physical Damage
 +(20-30)% to Critical Damage Bonus
 Adds (25-36) to (44-55) Chaos damage
@@ -59,6 +65,7 @@ the enemy's Power for 6 seconds, up to a total of 500
 ]],[[
 Sculpted Suffering
 Warpick
+League: Dawn of the Hunt
 Implicits: 1
 +(10-15)% to Critical Damage Bonus
 Adds (21-26) to (25-31) Physical Damage
@@ -129,6 +136,7 @@ Increases and Reductions to Minion Damage also affect you
 ]],[[
 The Empty Roar
 Cultist Greathammer
+League: Dawn of the Hunt
 Implicits: 1
 Strikes deal Splash damage to targets within 1.5 metres
 Adds (25-35) to (40-50) Physical Damage
@@ -139,11 +147,15 @@ Cannot use Warcries
 ]],[[
 The Hammer of Faith
 Giant Maul
-(200-250)% increased Physical Damage
+League: Dawn of the Hunt
+Variant: Pre 0.2.1
+Variant: Current
+{variant:1}(200-250)% increased Physical Damage
+{variant:2}(250-300)% increased Physical Damage
 10% reduced Attack Speed
 +10% to all Elemental Resistances
 50% increased Mana Regeneration Rate
-Gain a random Shrine buff every 10 seconds
+{variant:1}Gain a random Shrine buff every 10 seconds
 ]],[[
 Hoghunt
 Felled Greatclub
@@ -180,6 +192,7 @@ Critical Hits do not deal extra Damage
 ]],[[
 Tidebreaker
 Pointed Maul
+League: Dawn of the Hunt
 (120-150)% increased Physical Damage
 +(2-3) to Level of all Melee Skills
 +(20-30) to Intelligence
@@ -198,6 +211,7 @@ Always deals Critical Hits against Heavy Stunned Enemies
 ]],[[
 Shyaba
 Temple Maul
+League: Dawn of the Hunt
 +50 Dexterity Requirement
 -15 Strength Requirement
 (80-120)% increased Physical Damage

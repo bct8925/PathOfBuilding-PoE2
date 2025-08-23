@@ -5,8 +5,8 @@ c["(17-23)% increased maximum Mana"]={nil,"(17-23)% increased maximum Mana "}
 c["(17-23)% increased maximum Mana (15-25)% increased Mana Regeneration Rate"]={nil,"(17-23)% increased maximum Mana (15-25)% increased Mana Regeneration Rate "}
 c["(2-3)% increased Cast Speed"]={nil,"(2-3)% increased Cast Speed "}
 c["(2-3)% increased Movement Speed"]={nil,"(2-3)% increased Movement Speed "}
-c["(2-4)% chance to deal Double Damage"]={nil,"(2-4)% chance to deal Double Damage "}
-c["(2-4)% chance to deal Double Damage (25-35)% increased Physical Damage"]={nil,"(2-4)% chance to deal Double Damage (25-35)% increased Physical Damage "}
+c["(2-4)% chance to deal Double Damage"]={{[1]={[1]={globalLimit=100,globalLimitKey="DamageDoubledLimit",type="Multiplier",var="DamageDoubled"},flags=0,keywordFlags=0,name="Damage",type="MORE",value=100},[2]={flags=0,keywordFlags=0,name="Multiplier:DamageDoubled",type="OVERRIDE",value=1}},"(2-4)% chance to deal   "}
+c["(2-4)% chance to deal Double Damage (25-35)% increased Physical Damage"]={{[1]={[1]={globalLimit=100,globalLimitKey="DamageDoubledLimit",type="Multiplier",var="DamageDoubled"},flags=0,keywordFlags=0,name="Damage",type="MORE",value=100},[2]={flags=0,keywordFlags=0,name="Multiplier:DamageDoubled",type="OVERRIDE",value=1}},"(2-4)% chance to deal   (25-35)% increased Physical Damage "}
 c["(2-4)% increased effect of Non-Curse Auras from your Skills"]={nil,"(2-4)% increased effect of Non-Curse Auras from your Skills "}
 c["(2-4)% increased maximum Life"]={nil,"(2-4)% increased maximum Life "}
 c["(20-30)% increased Defences from Equipped Shield"]={nil,"(20-30)% increased Defences from Equipped Shield "}
@@ -79,6 +79,7 @@ c["+(8-10)% to all Elemental Resistances +6% chance to Suppress Spell Damage"]={
 c["+(9-14)% to Cold Resistance"]={nil,"+(9-14)% to Cold Resistance "}
 c["+(9-14)% to Fire Resistance"]={nil,"+(9-14)% to Fire Resistance "}
 c["+(9-14)% to Lightning Resistance"]={nil,"+(9-14)% to Lightning Resistance "}
+c["+0 to Maximum Power Charges"]={{[1]={flags=0,keywordFlags=0,name="PowerChargesMax",type="BASE",value=0}},nil}
 c["+0% to Cold Resistance"]={{[1]={flags=0,keywordFlags=0,name="ColdResist",type="BASE",value=0}},nil}
 c["+0% to Fire Resistance"]={{[1]={flags=0,keywordFlags=0,name="FireResist",type="BASE",value=0}},nil}
 c["+0% to Lightning Resistance"]={{[1]={flags=0,keywordFlags=0,name="LightningResist",type="BASE",value=0}},nil}
@@ -211,6 +212,7 @@ c["+150 to Stun Threshold"]={{[1]={flags=0,keywordFlags=0,name="StunThreshold",t
 c["+150 to maximum Energy Shield"]={{[1]={flags=0,keywordFlags=0,name="EnergyShield",type="BASE",value=150}},nil}
 c["+150 to maximum Life"]={{[1]={flags=0,keywordFlags=0,name="Life",type="BASE",value=150}},nil}
 c["+150 to maximum Mana"]={{[1]={flags=0,keywordFlags=0,name="Mana",type="BASE",value=150}},nil}
+c["+1500 to maximum Life"]={{[1]={flags=0,keywordFlags=0,name="Life",type="BASE",value=1500}},nil}
 c["+16 to Evasion Rating"]={{[1]={flags=0,keywordFlags=0,name="Evasion",type="BASE",value=16}},nil}
 c["+16% to Chaos Resistance"]={{[1]={flags=0,keywordFlags=0,name="ChaosResist",type="BASE",value=16}},nil}
 c["+160 to Accuracy Rating"]={{[1]={flags=0,keywordFlags=0,name="Accuracy",type="BASE",value=160}},nil}
@@ -223,7 +225,9 @@ c["+19 to maximum Energy Shield"]={{[1]={flags=0,keywordFlags=0,name="EnergyShie
 c["+19% to Chaos Resistance"]={{[1]={flags=0,keywordFlags=0,name="ChaosResist",type="BASE",value=19}},nil}
 c["+2 Charm Slot"]={{[1]={flags=0,keywordFlags=0,name="CharmLimit",type="BASE",value=2}},nil}
 c["+2 Charm Slots"]={{[1]={flags=0,keywordFlags=0,name="CharmLimit",type="BASE",value=2}},nil}
-c["+2 to Evasion Rating per 1 Maximum Energy Shield on Equipped Helmet"]={{[1]={[1]={div=1,stat="EnergyShieldOnHelmet",type="PerStat"},flags=0,keywordFlags=0,name="Evasion",type="BASE",value=2}},nil}
+c["+2 metres to Dodge Roll distance if you haven't Dodge Rolled Recently"]={{}," metres to Dodge Roll distance if you haven't Dodge Rolled Recently "}
+c["+2 metres to Dodge Roll distance if you haven't Dodge Rolled Recently -1 metre to Dodge Roll distance if you've Dodge Rolled Recently"]={{}," metres to Dodge Roll distance if you haven't Dodge Rolled Recently -1 metre to Dodge Roll distance  "}
+c["+2 to Evasion Rating per 1 Energy Shield on Equipped Helmet"]={{[1]={[1]={div=1,stat="EnergyShieldOnHelmet",type="PerStat"},flags=0,keywordFlags=0,name="Evasion",type="BASE",value=2}},nil}
 c["+2 to Level of all Cold Skills"]={{[1]={flags=0,keywordFlags=0,name="GemProperty",type="LIST",value={key="level",keyOfScaledMod="value",keyword="cold",value=2}}},nil}
 c["+2 to Level of all Fire Skills"]={{[1]={flags=0,keywordFlags=0,name="GemProperty",type="LIST",value={key="level",keyOfScaledMod="value",keyword="fire",value=2}}},nil}
 c["+2 to Level of all Lightning Skills"]={{[1]={flags=0,keywordFlags=0,name="GemProperty",type="LIST",value={key="level",keyOfScaledMod="value",keyword="lightning",value=2}}},nil}
@@ -337,6 +341,7 @@ c["+3 to Level of all Bone Offering Skills"]={{[1]={flags=0,keywordFlags=0,name=
 c["+3 to Level of all Boneshatter Skills"]={{[1]={flags=0,keywordFlags=0,name="GemProperty",type="LIST",value={key="level",keyOfScaledMod="value",keyword="boneshatter",value=3}}},nil}
 c["+3 to Level of all Bonestorm Skills"]={{[1]={flags=0,keywordFlags=0,name="GemProperty",type="LIST",value={key="level",keyOfScaledMod="value",keyword="bonestorm",value=3}}},nil}
 c["+3 to Level of all Bow Shot Skills"]={{[1]={flags=0,keywordFlags=0,name="GemProperty",type="LIST",value={key="level",keyOfScaledMod="value",keyword="bow shot",value=3}}},nil}
+c["+3 to Level of all Bursting Fen Toad Skills"]={{[1]={flags=0,keywordFlags=0,name="GemProperty",type="LIST",value={key="level",keyOfScaledMod="value",keyword="bursting fen toad",value=3}}},nil}
 c["+3 to Level of all Cast on Block Skills"]={{[1]={flags=0,keywordFlags=0,name="GemProperty",type="LIST",value={key="level",keyOfScaledMod="value",keyword="cast on block",value=3}}},nil}
 c["+3 to Level of all Cast on Charm Use Skills"]={{[1]={flags=0,keywordFlags=0,name="GemProperty",type="LIST",value={key="level",keyOfScaledMod="value",keyword="cast on charm use",value=3}}},nil}
 c["+3 to Level of all Cast on Critical Skills"]={{[1]={flags=0,keywordFlags=0,name="GemProperty",type="LIST",value={key="level",keyOfScaledMod="value",keyword="cast on critical",value=3}}},nil}
@@ -348,11 +353,13 @@ c["+3 to Level of all Cast on Melee Stun Skills"]={{[1]={flags=0,keywordFlags=0,
 c["+3 to Level of all Cast on Minion Death Skills"]={{[1]={flags=0,keywordFlags=0,name="GemProperty",type="LIST",value={key="level",keyOfScaledMod="value",keyword="cast on minion death",value=3}}},nil}
 c["+3 to Level of all Cast on Shock Skills"]={{[1]={flags=0,keywordFlags=0,name="GemProperty",type="LIST",value={key="level",keyOfScaledMod="value",keyword="cast on shock",value=3}}},nil}
 c["+3 to Level of all Chaos Bolt Skills"]={{[1]={flags=0,keywordFlags=0,name="GemProperty",type="LIST",value={key="level",keyOfScaledMod="value",keyword="chaos bolt",value=3}}},nil}
+c["+3 to Level of all Chaotic Infusion Skills"]={{[1]={flags=0,keywordFlags=0,name="GemProperty",type="LIST",value={key="level",keyOfScaledMod="value",keyword="chaotic infusion",value=3}}},nil}
 c["+3 to Level of all Charge Infusion Skills"]={{[1]={flags=0,keywordFlags=0,name="GemProperty",type="LIST",value={key="level",keyOfScaledMod="value",keyword="charge infusion",value=3}}},nil}
 c["+3 to Level of all Charged Staff Skills"]={{[1]={flags=0,keywordFlags=0,name="GemProperty",type="LIST",value={key="level",keyOfScaledMod="value",keyword="charged staff",value=3}}},nil}
 c["+3 to Level of all Cluster Grenade Skills"]={{[1]={flags=0,keywordFlags=0,name="GemProperty",type="LIST",value={key="level",keyOfScaledMod="value",keyword="cluster grenade",value=3}}},nil}
 c["+3 to Level of all Cold Skills"]={{[1]={flags=0,keywordFlags=0,name="GemProperty",type="LIST",value={key="level",keyOfScaledMod="value",keyword="cold",value=3}}},nil}
 c["+3 to Level of all Cold Snap Skills"]={{[1]={flags=0,keywordFlags=0,name="GemProperty",type="LIST",value={key="level",keyOfScaledMod="value",keyword="cold snap",value=3}}},nil}
+c["+3 to Level of all Cold Spell Skills"]={{[1]={flags=0,keywordFlags=0,name="GemProperty",type="LIST",value={key="level",keyOfScaledMod="value",keywordList={[1]="cold",[2]="spell"},value=3}}},nil}
 c["+3 to Level of all Combat Frenzy Skills"]={{[1]={flags=0,keywordFlags=0,name="GemProperty",type="LIST",value={key="level",keyOfScaledMod="value",keyword="combat frenzy",value=3}}},nil}
 c["+3 to Level of all Comet Skills"]={{[1]={flags=0,keywordFlags=0,name="GemProperty",type="LIST",value={key="level",keyOfScaledMod="value",keyword="comet",value=3}}},nil}
 c["+3 to Level of all Companion:  Skills"]={{}," Level of all Companion:  Skills "}
@@ -430,6 +437,7 @@ c["+3 to Level of all Grim Feast Skills"]={{[1]={flags=0,keywordFlags=0,name="Ge
 c["+3 to Level of all Hailstorm Rounds Skills"]={{[1]={flags=0,keywordFlags=0,name="GemProperty",type="LIST",value={key="level",keyOfScaledMod="value",keyword="hailstorm rounds",value=3}}},nil}
 c["+3 to Level of all Hammer of the Gods Skills"]={{[1]={flags=0,keywordFlags=0,name="GemProperty",type="LIST",value={key="level",keyOfScaledMod="value",keyword="hammer of the gods",value=3}}},nil}
 c["+3 to Level of all Hand of Chayula Skills"]={{[1]={flags=0,keywordFlags=0,name="GemProperty",type="LIST",value={key="level",keyOfScaledMod="value",keyword="hand of chayula",value=3}}},nil}
+c["+3 to Level of all Heart of Ice Skills"]={{[1]={flags=0,keywordFlags=0,name="GemProperty",type="LIST",value={key="level",keyOfScaledMod="value",keyword="heart of ice",value=3}}},nil}
 c["+3 to Level of all Herald of Ash Skills"]={{[1]={flags=0,keywordFlags=0,name="GemProperty",type="LIST",value={key="level",keyOfScaledMod="value",keyword="herald of ash",value=3}}},nil}
 c["+3 to Level of all Herald of Blood Skills"]={{[1]={flags=0,keywordFlags=0,name="GemProperty",type="LIST",value={key="level",keyOfScaledMod="value",keyword="herald of blood",value=3}}},nil}
 c["+3 to Level of all Herald of Ice Skills"]={{[1]={flags=0,keywordFlags=0,name="GemProperty",type="LIST",value={key="level",keyOfScaledMod="value",keyword="herald of ice",value=3}}},nil}
@@ -442,6 +450,8 @@ c["+3 to Level of all Ice Nova Skills"]={{[1]={flags=0,keywordFlags=0,name="GemP
 c["+3 to Level of all Ice Shards Skills"]={{[1]={flags=0,keywordFlags=0,name="GemProperty",type="LIST",value={key="level",keyOfScaledMod="value",keyword="ice shards",value=3}}},nil}
 c["+3 to Level of all Ice Shot Skills"]={{[1]={flags=0,keywordFlags=0,name="GemProperty",type="LIST",value={key="level",keyOfScaledMod="value",keyword="ice shot",value=3}}},nil}
 c["+3 to Level of all Ice Strike Skills"]={{[1]={flags=0,keywordFlags=0,name="GemProperty",type="LIST",value={key="level",keyOfScaledMod="value",keyword="ice strike",value=3}}},nil}
+c["+3 to Level of all Icestorm Skills"]={{[1]={flags=0,keywordFlags=0,name="GemProperty",type="LIST",value={key="level",keyOfScaledMod="value",keyword="icestorm",value=3}}},nil}
+c["+3 to Level of all Impurity Skills"]={{[1]={flags=0,keywordFlags=0,name="GemProperty",type="LIST",value={key="level",keyOfScaledMod="value",keyword="impurity",value=3}}},nil}
 c["+3 to Level of all Incendiary Shot Skills"]={{[1]={flags=0,keywordFlags=0,name="GemProperty",type="LIST",value={key="level",keyOfScaledMod="value",keyword="incendiary shot",value=3}}},nil}
 c["+3 to Level of all Incinerate Skills"]={{[1]={flags=0,keywordFlags=0,name="GemProperty",type="LIST",value={key="level",keyOfScaledMod="value",keyword="incinerate",value=3}}},nil}
 c["+3 to Level of all Infernal Cry Skills"]={{[1]={flags=0,keywordFlags=0,name="GemProperty",type="LIST",value={key="level",keyOfScaledMod="value",keyword="infernal cry",value=3}}},nil}
@@ -456,7 +466,6 @@ c["+3 to Level of all Lightning Conduit Skills"]={{[1]={flags=0,keywordFlags=0,n
 c["+3 to Level of all Lightning Rod Skills"]={{[1]={flags=0,keywordFlags=0,name="GemProperty",type="LIST",value={key="level",keyOfScaledMod="value",keyword="lightning rod",value=3}}},nil}
 c["+3 to Level of all Lightning Skills"]={{[1]={flags=0,keywordFlags=0,name="GemProperty",type="LIST",value={key="level",keyOfScaledMod="value",keyword="lightning",value=3}}},nil}
 c["+3 to Level of all Lightning Spear Skills"]={{[1]={flags=0,keywordFlags=0,name="GemProperty",type="LIST",value={key="level",keyOfScaledMod="value",keyword="lightning spear",value=3}}},nil}
-c["+3 to Level of all Lightning Spell on Hit Skills"]={{[1]={flags=0,keywordFlags=0,name="GemProperty",type="LIST",value={key="level",keyOfScaledMod="value",keywordList={[1]="lightning",[2]="spell",[3]="on",[4]="hit"},value=3}}},nil}
 c["+3 to Level of all Lightning Warp Skills"]={{[1]={flags=0,keywordFlags=0,name="GemProperty",type="LIST",value={key="level",keyOfScaledMod="value",keyword="lightning warp",value=3}}},nil}
 c["+3 to Level of all Lingering Illusion Skills"]={{[1]={flags=0,keywordFlags=0,name="GemProperty",type="LIST",value={key="level",keyOfScaledMod="value",keyword="lingering illusion",value=3}}},nil}
 c["+3 to Level of all Living Bomb Skills"]={{[1]={flags=0,keywordFlags=0,name="GemProperty",type="LIST",value={key="level",keyOfScaledMod="value",keyword="living bomb",value=3}}},nil}
@@ -480,6 +489,7 @@ c["+3 to Level of all Pain Offering Skills"]={{[1]={flags=0,keywordFlags=0,name=
 c["+3 to Level of all Parry Skills"]={{[1]={flags=0,keywordFlags=0,name="GemProperty",type="LIST",value={key="level",keyOfScaledMod="value",keyword="parry",value=3}}},nil}
 c["+3 to Level of all Perfect Strike Skills"]={{[1]={flags=0,keywordFlags=0,name="GemProperty",type="LIST",value={key="level",keyOfScaledMod="value",keyword="perfect strike",value=3}}},nil}
 c["+3 to Level of all Permafrost Bolts Skills"]={{[1]={flags=0,keywordFlags=0,name="GemProperty",type="LIST",value={key="level",keyOfScaledMod="value",keyword="permafrost bolts",value=3}}},nil}
+c["+3 to Level of all Pinnacle of Power Skills"]={{[1]={flags=0,keywordFlags=0,name="GemProperty",type="LIST",value={key="level",keyOfScaledMod="value",keyword="pinnacle of power",value=3}}},nil}
 c["+3 to Level of all Plague Bearer Skills"]={{[1]={flags=0,keywordFlags=0,name="GemProperty",type="LIST",value={key="level",keyOfScaledMod="value",keyword="plague bearer",value=3}}},nil}
 c["+3 to Level of all Plasma Blast Skills"]={{[1]={flags=0,keywordFlags=0,name="GemProperty",type="LIST",value={key="level",keyOfScaledMod="value",keyword="plasma blast",value=3}}},nil}
 c["+3 to Level of all Poisonburst Arrow Skills"]={{[1]={flags=0,keywordFlags=0,name="GemProperty",type="LIST",value={key="level",keyOfScaledMod="value",keyword="poisonburst arrow",value=3}}},nil}
@@ -500,6 +510,7 @@ c["+3 to Level of all Rapid Assault Skills"]={{[1]={flags=0,keywordFlags=0,name=
 c["+3 to Level of all Rapid Shot Skills"]={{[1]={flags=0,keywordFlags=0,name="GemProperty",type="LIST",value={key="level",keyOfScaledMod="value",keyword="rapid shot",value=3}}},nil}
 c["+3 to Level of all Reap Skills"]={{[1]={flags=0,keywordFlags=0,name="GemProperty",type="LIST",value={key="level",keyOfScaledMod="value",keyword="reap",value=3}}},nil}
 c["+3 to Level of all Reaper's Invocation Skills"]={{[1]={flags=0,keywordFlags=0,name="GemProperty",type="LIST",value={key="level",keyOfScaledMod="value",keyword="reaper's invocation",value=3}}},nil}
+c["+3 to Level of all Requiem Skills"]={{[1]={flags=0,keywordFlags=0,name="GemProperty",type="LIST",value={key="level",keyOfScaledMod="value",keyword="requiem",value=3}}},nil}
 c["+3 to Level of all Resonating Shield Skills"]={{[1]={flags=0,keywordFlags=0,name="GemProperty",type="LIST",value={key="level",keyOfScaledMod="value",keyword="resonating shield",value=3}}},nil}
 c["+3 to Level of all Rhoa Mount Skills"]={{[1]={flags=0,keywordFlags=0,name="GemProperty",type="LIST",value={key="level",keyOfScaledMod="value",keyword="rhoa mount",value=3}}},nil}
 c["+3 to Level of all Ripwire Ballista Skills"]={{[1]={flags=0,keywordFlags=0,name="GemProperty",type="LIST",value={key="level",keyOfScaledMod="value",keyword="ripwire ballista",value=3}}},nil}
@@ -558,6 +569,7 @@ c["+3 to Level of all Tempest Bell Skills"]={{[1]={flags=0,keywordFlags=0,name="
 c["+3 to Level of all Tempest Flurry Skills"]={{[1]={flags=0,keywordFlags=0,name="GemProperty",type="LIST",value={key="level",keyOfScaledMod="value",keyword="tempest flurry",value=3}}},nil}
 c["+3 to Level of all Temporal Chains Skills"]={{[1]={flags=0,keywordFlags=0,name="GemProperty",type="LIST",value={key="level",keyOfScaledMod="value",keyword="temporal chains",value=3}}},nil}
 c["+3 to Level of all Temporal Rift Skills"]={{[1]={flags=0,keywordFlags=0,name="GemProperty",type="LIST",value={key="level",keyOfScaledMod="value",keyword="temporal rift",value=3}}},nil}
+c["+3 to Level of all Thundergod's Wrath Skills"]={{[1]={flags=0,keywordFlags=0,name="GemProperty",type="LIST",value={key="level",keyOfScaledMod="value",keyword="thundergod's wrath",value=3}}},nil}
 c["+3 to Level of all Thunderous Leap Skills"]={{[1]={flags=0,keywordFlags=0,name="GemProperty",type="LIST",value={key="level",keyOfScaledMod="value",keyword="thunderous leap",value=3}}},nil}
 c["+3 to Level of all Time Freeze Skills"]={{[1]={flags=0,keywordFlags=0,name="GemProperty",type="LIST",value={key="level",keyOfScaledMod="value",keyword="time freeze",value=3}}},nil}
 c["+3 to Level of all Time Snap Skills"]={{[1]={flags=0,keywordFlags=0,name="GemProperty",type="LIST",value={key="level",keyOfScaledMod="value",keyword="time snap",value=3}}},nil}
@@ -635,9 +647,11 @@ c["+4 to Level of Hypothermia Skills"]={{[1]={[1]={skillName="Hypothermia",type=
 c["+4 to Level of Temporal Chains Skills"]={{[1]={[1]={skillName="Temporal chains",type="SkillName"},flags=0,keywordFlags=0,name="SupportedGemProperty",type="LIST",value={key="level",keyword="grants_active_skill",value=4}}},nil}
 c["+4 to Level of Vulnerability Skills"]={{[1]={[1]={skillName="Vulnerability",type="SkillName"},flags=0,keywordFlags=0,name="SupportedGemProperty",type="LIST",value={key="level",keyword="grants_active_skill",value=4}}},nil}
 c["+4 to Level of all Chaos Spell Skills"]={{[1]={flags=0,keywordFlags=0,name="GemProperty",type="LIST",value={key="level",keyOfScaledMod="value",keywordList={[1]="chaos",[2]="spell"},value=4}}},nil}
+c["+4 to Level of all Cold Spell Skills"]={{[1]={flags=0,keywordFlags=0,name="GemProperty",type="LIST",value={key="level",keyOfScaledMod="value",keywordList={[1]="cold",[2]="spell"},value=4}}},nil}
 c["+4 to Level of all Elemental Skills"]={{[1]={flags=0,keywordFlags=0,name="GemProperty",type="LIST",value={key="level",keyOfScaledMod="value",keyword="elemental",value=4}}},nil}
 c["+4 to Level of all Fire Skills"]={{[1]={flags=0,keywordFlags=0,name="GemProperty",type="LIST",value={key="level",keyOfScaledMod="value",keyword="fire",value=4}}},nil}
 c["+4 to Level of all Fire Spell Skills"]={{[1]={flags=0,keywordFlags=0,name="GemProperty",type="LIST",value={key="level",keyOfScaledMod="value",keywordList={[1]="fire",[2]="spell"},value=4}}},nil}
+c["+4 to Level of all Lightning Skills"]={{[1]={flags=0,keywordFlags=0,name="GemProperty",type="LIST",value={key="level",keyOfScaledMod="value",keyword="lightning",value=4}}},nil}
 c["+4 to Level of all Melee Skills"]={{[1]={flags=0,keywordFlags=0,name="GemProperty",type="LIST",value={key="level",keyOfScaledMod="value",keyword="melee",value=4}}},nil}
 c["+4 to Level of all Minion Skills"]={{[1]={flags=0,keywordFlags=0,name="GemProperty",type="LIST",value={key="level",keyOfScaledMod="value",keyword="minion",value=4}}},nil}
 c["+4 to Level of all Physical Spell Skills"]={{[1]={flags=0,keywordFlags=0,name="GemProperty",type="LIST",value={key="level",keyOfScaledMod="value",keywordList={[1]="physical",[2]="spell"},value=4}}},nil}
@@ -715,6 +729,7 @@ c["+50 to maximum Mana"]={{[1]={flags=0,keywordFlags=0,name="Mana",type="BASE",v
 c["+50% to Cold Resistance"]={{[1]={flags=0,keywordFlags=0,name="ColdResist",type="BASE",value=50}},nil}
 c["+50% to Fire Resistance"]={{[1]={flags=0,keywordFlags=0,name="FireResist",type="BASE",value=50}},nil}
 c["+50% to Lightning Resistance"]={{[1]={flags=0,keywordFlags=0,name="LightningResist",type="BASE",value=50}},nil}
+c["+500 to Accuracy Rating"]={{[1]={flags=0,keywordFlags=0,name="Accuracy",type="BASE",value=500}},nil}
 c["+52 to Spirit"]={{[1]={flags=0,keywordFlags=0,name="Spirit",type="BASE",value=52}},nil}
 c["+54 to maximum Energy Shield"]={{[1]={flags=0,keywordFlags=0,name="EnergyShield",type="BASE",value=54}},nil}
 c["+57 to maximum Energy Shield"]={{[1]={flags=0,keywordFlags=0,name="EnergyShield",type="BASE",value=57}},nil}
@@ -784,6 +799,8 @@ c["+90 to maximum Mana"]={{[1]={flags=0,keywordFlags=0,name="Mana",type="BASE",v
 c["+92 to maximum Life"]={{[1]={flags=0,keywordFlags=0,name="Life",type="BASE",value=92}},nil}
 c["+93 to Armour"]={{[1]={flags=0,keywordFlags=0,name="Armour",type="BASE",value=93}},nil}
 c["+94 to Armour"]={{[1]={flags=0,keywordFlags=0,name="Armour",type="BASE",value=94}},nil}
+c["-1 metre to Dodge Roll distance if you've Dodge Rolled Recently"]={{}," metre to Dodge Roll distance  "}
+c["-1 metre to Dodge Roll distance if you've Dodge Rolled Recently Barrageable Attacks with this Bow Repeat +1 time if no enemies are in your Presence"]={{}," metre to Dodge Roll distance  Barrageable Attacks with this Bow Repeat +1 time if no enemies are in your Presence "}
 c["-1 to all Attributes per Level"]={{[1]={[1]={type="Multiplier",var="Level"},flags=0,keywordFlags=0,name="Str",type="BASE",value=-1},[2]={[1]={type="Multiplier",var="Level"},flags=0,keywordFlags=0,name="Dex",type="BASE",value=-1},[3]={[1]={type="Multiplier",var="Level"},flags=0,keywordFlags=0,name="Int",type="BASE",value=-1},[4]={[1]={type="Multiplier",var="Level"},flags=0,keywordFlags=0,name="All",type="BASE",value=-1}},nil}
 c["-1% to all Maximum Elemental Resistances"]={{[1]={flags=0,keywordFlags=0,name="ElementalResistMax",type="BASE",value=-1}},nil}
 c["-10 Physical Damage taken from Attack Hits"]={{[1]={flags=0,keywordFlags=0,name="PhysicalDamageTakenFromAttacks",type="BASE",value=-10}},nil}
@@ -792,6 +809,7 @@ c["-10 to Strength"]={{[1]={flags=0,keywordFlags=0,name="Str",type="BASE",value=
 c["-10% to Cold Resistance"]={{[1]={flags=0,keywordFlags=0,name="ColdResist",type="BASE",value=-10}},nil}
 c["-10% to Fire Resistance"]={{[1]={flags=0,keywordFlags=0,name="FireResist",type="BASE",value=-10}},nil}
 c["-10% to all Elemental Resistances"]={{[1]={flags=0,keywordFlags=0,name="ElementalResist",type="BASE",value=-10}},nil}
+c["-10% to all Elemental Resistances per Power Charge"]={{[1]={[1]={type="Multiplier",var="PowerCharge"},flags=0,keywordFlags=0,name="ElementalResist",type="BASE",value=-10}},nil}
 c["-10% to maximum Block chance"]={{[1]={flags=0,keywordFlags=0,name="BlockChanceMax",type="BASE",value=-10}},nil}
 c["-13% to Chaos Resistance"]={{[1]={flags=0,keywordFlags=0,name="ChaosResist",type="BASE",value=-13}},nil}
 c["-13% to Cold Resistance"]={{[1]={flags=0,keywordFlags=0,name="ColdResist",type="BASE",value=-13}},nil}
@@ -819,6 +837,7 @@ c["0% reduced Flask Mana Recovery rate"]={{[1]={flags=0,keywordFlags=0,name="Fla
 c["0% reduced Life Regeneration rate"]={{[1]={flags=0,keywordFlags=0,name="LifeRegen",type="INC",value=-0}},nil}
 c["0% reduced Mana Regeneration Rate"]={{[1]={flags=0,keywordFlags=0,name="ManaRegen",type="INC",value=-0}},nil}
 c["0% reduced Rarity of Items found"]={{[1]={flags=0,keywordFlags=0,name="LootRarity",type="INC",value=-0}},nil}
+c["0% reduced Skill Effect Duration"]={{[1]={flags=0,keywordFlags=0,name="Duration",type="INC",value=-0}},nil}
 c["0.1 Life Regeneration per second"]={{[1]={flags=0,keywordFlags=0,name="LifeRegen",type="BASE",value=0.1}},nil}
 c["0.5% of maximum Life Regenerated per second per Fragile Regrowth"]={{[1]={[1]={type="Multiplier",var="FragileRegrowthCount"},flags=0,keywordFlags=0,name="LifeRegenPercent",type="BASE",value=0.5}},nil}
 c["1 Rage Regenerated for every 25 Mana Regeneration per Second"]={{[1]={[1]={div=25,stat="ManaRegen",type="PerStat"},flags=0,keywordFlags=0,name="RageRegen",type="BASE",value=1},[2]={flags=0,keywordFlags=0,name="Condition:CanGainRage",type="FLAG",value=true}},nil}
@@ -841,8 +860,7 @@ c["1% to Maximum Fire Resistance for each 40% Uncapped Fire Resistance"]={{[1]={
 c["10 Life Regeneration per second"]={{[1]={flags=0,keywordFlags=0,name="LifeRegen",type="BASE",value=10}},nil}
 c["10% chance for Attack Hits to apply ten Incision"]={{[1]={flags=0,keywordFlags=0,name="Condition:CanInflictIncision",type="FLAG",value=true}},nil}
 c["10% chance for Enemies you Kill to Explode, dealing 100%"]={{}," for Enemies you Kill to Explode, dealing 100% "}
-c["10% chance for Enemies you Kill to Explode, dealing 100% of their maximum Life as Physical Damage"]={{[1]={flags=0,keywordFlags=0,name="Life",type="BASE",value=10}}," for Enemies you Kill to Explode, dealing 100% of their  as Physical Damage "}
-c["10% chance for Enemies you Kill to Explode, dealing 100% of their maximum Life as Physical Damage Chance is doubled against Undead and Demons"]={{[1]={flags=0,keywordFlags=0,name="Life",type="BASE",value=10}}," for Enemies you Kill to Explode, dealing 100% of their  as Physical Damage Chance is doubled against Undead and Demons "}
+c["10% chance for Enemies you Kill to Explode, dealing 100% of their maximum Life as Physical Damage"]={{[1]={flags=0,keywordFlags=0,name="ExplodeMod",type="LIST",value={amount=100,chance=0.1,keyOfScaledMod="chance",type="Physical"}},[2]={flags=0,keywordFlags=0,name="CanExplode",type="FLAG",value=true}},nil}
 c["10% chance for Flasks you use to not consume Charges"]={{[1]={flags=0,keywordFlags=0,name="FlaskChanceNotConsumeCharges",type="BASE",value=10}},nil}
 c["10% chance for Mace Slam Skills you use yourself to cause Aftershocks"]={{}," for Mace Slam Skills you use yourself to cause Aftershocks "}
 c["10% chance for Mace Slam Skills you use yourself to cause Aftershocks 10% chance for Mace Strike Skills you use yourself to cause Aftershocks, dealing"]={{}," for Mace Slam Skills you use yourself to cause Aftershocks 10% chance forSkills you use yourself to cause Aftershocks, dealing "}
@@ -964,8 +982,7 @@ c["10% increased Movement Speed when on Full Life"]={{[1]={[1]={type="Condition"
 c["10% increased Physical Damage"]={{[1]={flags=0,keywordFlags=0,name="PhysicalDamage",type="INC",value=10}},nil}
 c["10% increased Poison Duration"]={{[1]={flags=0,keywordFlags=0,name="EnemyPoisonDuration",type="INC",value=10}},nil}
 c["10% increased Poison Duration for each Poison you have inflicted Recently, up to a maximum of 100%"]={{[1]={[1]={globalLimit=100,globalLimitKey="NoxiousStrike",type="Multiplier",var="PoisonAppliedRecently"},flags=0,keywordFlags=0,name="EnemyPoisonDuration",type="INC",value=10}},nil}
-c["10% increased Presence Area of Effect"]={{[1]={flags=0,keywordFlags=0,name="AreaOfEffect",type="INC",value=10}}," Presence  "}
-c["10% increased Presence Area of Effect Companions have 10% increased Area of Effect"]={{[1]={flags=512,keywordFlags=0,name="AreaOfEffect",type="INC",value=10}}," Presence  Companions have 10% increased  of Effect "}
+c["10% increased Presence Area of Effect"]={{[1]={flags=0,keywordFlags=0,name="PresenceArea",type="INC",value=10}},nil}
 c["10% increased Projectile Damage"]={{[1]={flags=1024,keywordFlags=0,name="Damage",type="INC",value=10}},nil}
 c["10% increased Projectile Speed"]={{[1]={flags=0,keywordFlags=0,name="ProjectileSpeed",type="INC",value=10}},nil}
 c["10% increased Rarity of Items found"]={{[1]={flags=0,keywordFlags=0,name="LootRarity",type="INC",value=10}},nil}
@@ -1032,7 +1049,6 @@ c["10% reduced Spell Area Damage"]={{[1]={flags=514,keywordFlags=0,name="Damage"
 c["10% reduced effect of Ignite on you"]={{[1]={flags=0,keywordFlags=0,name="SelfIgniteEffect",type="INC",value=-10}},nil}
 c["10% reduced maximum Mana"]={{[1]={flags=0,keywordFlags=0,name="Mana",type="INC",value=-10}},nil}
 c["100% chance to not consume a bolt if you've Reloaded Recently"]={{}," to not consume a bolt if you've Reloaded Recently "}
-c["100% chance to not consume a bolt if you've Reloaded Recently 30% reduced Reload Speed"]={{[1]={flags=1,keywordFlags=0,name="ReloadSpeed",type="BASE",value=100}}," to not consume a bolt if you've Reloaded Recently 30% reduced  "}
 c["100% faster start of Energy Shield Recharge"]={{[1]={flags=0,keywordFlags=0,name="EnergyShieldRechargeFaster",type="INC",value=100}},nil}
 c["100% increased Armour"]={{[1]={flags=0,keywordFlags=0,name="Armour",type="INC",value=100}},nil}
 c["100% increased Armour Break Duration"]={{[1]={flags=0,keywordFlags=0,name="Armour",type="INC",value=100}},"  Break Duration "}
@@ -1108,7 +1124,6 @@ c["12% increased Attack Speed if you've successfully Parried Recently"]={{[1]={[
 c["12% increased Attack and Cast Speed if you've summoned a Totem Recently"]={{[1]={[1]={type="Condition",var="SummonedTotemRecently"},flags=0,keywordFlags=0,name="Speed",type="INC",value=12}},nil}
 c["12% increased Block chance"]={{[1]={flags=0,keywordFlags=0,name="BlockChance",type="INC",value=12}},nil}
 c["12% increased Cast Speed"]={{[1]={flags=16,keywordFlags=0,name="Speed",type="INC",value=12}},nil}
-c["12% increased Chance to inflict Ailments with One-Handed Attacks"]={{[1]={flags=17179869188,keywordFlags=0,name="AilmentChance",type="INC",value=12}},nil}
 c["12% increased Cold Damage"]={{[1]={flags=0,keywordFlags=0,name="ColdDamage",type="INC",value=12}},nil}
 c["12% increased Cooldown Recovery Rate"]={{[1]={flags=0,keywordFlags=0,name="CooldownRecovery",type="INC",value=12}},nil}
 c["12% increased Critical Damage Bonus per Power Charge"]={{[1]={[1]={type="Multiplier",var="PowerCharge"},flags=0,keywordFlags=0,name="CritMultiplier",type="INC",value=12}},nil}
@@ -1190,6 +1205,7 @@ c["13% reduced Attack and Cast Speed"]={{[1]={flags=0,keywordFlags=0,name="Speed
 c["13% reduced Charges per use"]={{[1]={flags=0,keywordFlags=0,name="FlaskChargesUsed",type="INC",value=-13}},nil}
 c["13% reduced Charm Charges used"]={{[1]={flags=0,keywordFlags=0,name="CharmChargesUsed",type="INC",value=-13}},nil}
 c["13% reduced Flask Charges used"]={{[1]={flags=0,keywordFlags=0,name="FlaskChargesUsed",type="INC",value=-13}},nil}
+c["13% reduced Skill Effect Duration"]={{[1]={flags=0,keywordFlags=0,name="Duration",type="INC",value=-13}},nil}
 c["13% reduced maximum Mana"]={{[1]={flags=0,keywordFlags=0,name="Mana",type="INC",value=-13}},nil}
 c["130% increased Armour and Energy Shield"]={{[1]={flags=0,keywordFlags=0,name="ArmourAndEnergyShield",type="INC",value=130}},nil}
 c["130% increased Evasion Rating"]={{[1]={flags=0,keywordFlags=0,name="Evasion",type="INC",value=130}},nil}
@@ -1296,7 +1312,8 @@ c["15% increased Minion Accuracy Rating"]={{[1]={flags=0,keywordFlags=0,name="Mi
 c["15% increased Movement Speed"]={{[1]={flags=0,keywordFlags=0,name="MovementSpeed",type="INC",value=15}},nil}
 c["15% increased Parried Debuff Duration"]={{[1]={flags=0,keywordFlags=0,name="Duration",type="INC",value=15}}," Parried Debuff  "}
 c["15% increased Pin Buildup"]={{}," Pin Buildup "}
-c["15% increased Presence Area of Effect"]={{[1]={flags=0,keywordFlags=0,name="AreaOfEffect",type="INC",value=15}}," Presence  "}
+c["15% increased Poison Duration"]={{[1]={flags=0,keywordFlags=0,name="EnemyPoisonDuration",type="INC",value=15}},nil}
+c["15% increased Presence Area of Effect"]={{[1]={flags=0,keywordFlags=0,name="PresenceArea",type="INC",value=15}},nil}
 c["15% increased Projectile Damage"]={{[1]={flags=1024,keywordFlags=0,name="Damage",type="INC",value=15}},nil}
 c["15% increased Projectile Damage if you've dealt a Melee Hit in the past eight seconds"]={{[1]={[1]={type="Condition",var="HitMeleeRecently"},flags=1024,keywordFlags=0,name="Damage",type="INC",value=15}},nil}
 c["15% increased Projectile Speed"]={{[1]={flags=0,keywordFlags=0,name="ProjectileSpeed",type="INC",value=15}},nil}
@@ -1325,7 +1342,7 @@ c["15% increased maximum Energy Shield"]={{[1]={[1]={type="Global"},flags=0,keyw
 c["15% increased maximum Life"]={{[1]={flags=0,keywordFlags=0,name="Life",type="INC",value=15}},nil}
 c["15% more Maximum Life"]={{[1]={flags=0,keywordFlags=0,name="Life",type="MORE",value=15}},nil}
 c["15% more Maximum Lightning Damage"]={{[1]={flags=0,keywordFlags=0,name="MaxLightningDamage",type="MORE",value=15}},nil}
-c["15% of Damage from Hits is taken from your Companion's Life before you"]={{[1]={flags=0,keywordFlags=0,name="Damage",type="BASE",value=15}},"  from Hits is taken from your Companion's Life before you "}
+c["15% of Damage from Hits is taken from your Damageable Companion's Life before you"]={{[1]={flags=0,keywordFlags=0,name="Damage",type="BASE",value=15}},"  from Hits is taken from your Damageable Companion's Life before you "}
 c["15% of Elemental Damage taken Recouped as Life"]={{[1]={flags=0,keywordFlags=0,name="LightningLifeRecoup",type="BASE",value=15},[2]={flags=0,keywordFlags=0,name="ColdLifeRecoup",type="BASE",value=15},[3]={flags=0,keywordFlags=0,name="FireLifeRecoup",type="BASE",value=15}},nil}
 c["15% of Physical Damage Converted to Cold Damage while you have at least 150 Devotion"]={{[1]={[1]={stat="Devotion",threshold=150,type="StatThreshold"},flags=0,keywordFlags=0,name="PhysicalDamageConvertToCold",type="BASE",value=15}},nil}
 c["15% of Physical Damage Converted to Fire Damage while you have at least 150 Devotion"]={{[1]={[1]={stat="Devotion",threshold=150,type="StatThreshold"},flags=0,keywordFlags=0,name="PhysicalDamageConvertToFire",type="BASE",value=15}},nil}
@@ -1375,14 +1392,11 @@ c["16% increased Cast Speed if you've dealt a Critical Hit Recently"]={{[1]={[1]
 c["16% increased Critical Damage Bonus with Bows"]={{[1]={flags=131076,keywordFlags=0,name="CritMultiplier",type="INC",value=16}},nil}
 c["16% increased Critical Hit Chance for Spells"]={{[1]={flags=2,keywordFlags=0,name="CritChance",type="INC",value=16}},nil}
 c["16% increased Damage with Warcries"]={{[1]={flags=0,keywordFlags=4,name="Damage",type="INC",value=16}},nil}
-c["16% increased Hazard Damage"]={{[1]={flags=0,keywordFlags=0,name="Damage",type="INC",value=16}}," Hazard  "}
+c["16% increased Hazard Damage"]={{[1]={[1]={skillType=203,type="SkillType"},flags=0,keywordFlags=0,name="Damage",type="INC",value=16}},nil}
 c["16% increased Mana Regeneration Rate while not on Low Mana"]={{[1]={[1]={neg=true,type="Condition",var="LowMana"},flags=0,keywordFlags=0,name="ManaRegen",type="INC",value=16}},nil}
 c["16% increased Mana Regeneration Rate while stationary"]={{[1]={[1]={type="Condition",var="Stationary"},flags=0,keywordFlags=0,name="ManaRegen",type="INC",value=16}},nil}
 c["16% increased Melee Damage"]={{[1]={flags=256,keywordFlags=0,name="Damage",type="INC",value=16}},nil}
-c["16% increased Melee Strike Range with this weapon"]={{},"  Strike Rang "}
-c["16% increased Melee Strike Range with this weapon 172% increased Physical Damage"]={{[1]={[1]={type="Condition",var="{Hand}Attack"},[2]={skillType=1,type="SkillType"},flags=256,keywordFlags=0,name="PhysicalDamage",type="INC",value=16}},"  Strike Rang 172% increased  "}
-c["16% increased Melee Strike Range with this weapon 2% increased Area of Effect for Attacks per 10 Intelligence"]={{[1]={[1]={type="Condition",var="{Hand}Attack"},[2]={skillType=1,type="SkillType"},[3]={div=10,stat="Int",type="PerStat"},flags=256,keywordFlags=0,name="AreaOfEffect",type="INC",value=16}},"  Strike Rang 2% increased  for Attacks  "}
-c["16% increased Melee Strike Range with this weapon Adds 62 to 94 Fire Damage"]={{[1]={[1]={type="Condition",var="{Hand}Attack"},[2]={skillType=1,type="SkillType"},flags=256,keywordFlags=0,name="FireDamage",type="INC",value=16}},"  Strike Rang Adds 62 to 94  "}
+c["16% increased Melee Strike Range with this weapon"]={{[1]={[1]={type="Condition",var="{Hand}Attack"},[2]={neg=true,skillType=167,type="SkillType"},flags=8192,keywordFlags=0,name="MeleeWeaponRange",type="INC",value=16},[2]={[1]={type="Condition",var="{Hand}Attack"},[2]={neg=true,skillType=167,type="SkillType"},flags=8192,keywordFlags=0,name="UnarmedRange",type="INC",value=16}},nil}
 c["16% increased Projectile Damage"]={{[1]={flags=1024,keywordFlags=0,name="Damage",type="INC",value=16}},nil}
 c["16% increased Rarity of Items found"]={{[1]={flags=0,keywordFlags=0,name="LootRarity",type="INC",value=16}},nil}
 c["16% increased Skill Effect Duration"]={{[1]={flags=0,keywordFlags=0,name="Duration",type="INC",value=16}},nil}
@@ -1422,6 +1436,7 @@ c["18% of Damage taken Recouped as Life"]={{[1]={flags=0,keywordFlags=0,name="Li
 c["18% of Damage taken Recouped as Mana"]={{[1]={flags=0,keywordFlags=0,name="ManaRecoup",type="BASE",value=18}},nil}
 c["18% of Skill Mana Costs Converted to Life Costs"]={{[1]={flags=0,keywordFlags=0,name="HybridManaAndLifeCost_Life",type="BASE",value=18}},nil}
 c["19% increased Cast Speed"]={{[1]={flags=16,keywordFlags=0,name="Speed",type="INC",value=19}},nil}
+c["195% increased Physical Damage"]={{[1]={flags=0,keywordFlags=0,name="PhysicalDamage",type="INC",value=195}},nil}
 c["2 Mana gained when you Block"]={{[1]={flags=0,keywordFlags=0,name="ManaOnBlock",type="BASE",value=2}},nil}
 c["2% chance to Recover all Life when you Kill an Enemy"]={{[1]={[1]={percent=2,stat="Life",type="PercentStat"},[2]={type="Condition",var="AverageResourceGain"},flags=0,keywordFlags=0,name="LifeOnKill",type="BASE",value=1},[2]={[1]={percent=100,stat="Life",type="PercentStat"},[2]={type="Condition",var="MaxResourceGain"},flags=0,keywordFlags=0,name="LifeOnKill",type="BASE",value=1}},nil}
 c["2% increased Area of Effect for Attacks per 10 Intelligence"]={{[1]={[1]={div=10,stat="Int",type="PerStat"},flags=1,keywordFlags=0,name="AreaOfEffect",type="INC",value=2}},nil}
@@ -1458,6 +1473,8 @@ c["20% chance to cause Bleeding on Hit"]={{[1]={flags=0,keywordFlags=0,name="Ble
 c["20% chance to gain a Power Charge on Hit"]={nil,"a Power Charge on Hit "}
 c["20% chance to gain a Power Charge on Hit Lose all Power Charges on reaching maximum Power Charges"]={nil,"a Power Charge on Hit Lose all Power Charges on reaching maximum Power Charges "}
 c["20% chance to inflict Bleeding on Hit"]={{[1]={flags=0,keywordFlags=0,name="BleedChance",type="BASE",value=20}},nil}
+c["20% chance to load a bolt into all Crossbow skills on Kill"]={{}," to load a bolt into all  skills  "}
+c["20% chance to load a bolt into all Crossbow skills on Kill Sacrifice 300 Life to not consume the last bolt when firing"]={{[1]={[1]={type="Condition",var="KilledRecently"},[2]={includeTransfigured=true,skillName="Sacrifice",type="SkillName"},flags=67108864,keywordFlags=0,name="Life",type="BASE",value=20}}," to load a bolt into all  skills 300  to not consume the last bolt when firing "}
 c["20% faster start of Energy Shield Recharge"]={{[1]={flags=0,keywordFlags=0,name="EnergyShieldRechargeFaster",type="INC",value=20}},nil}
 c["20% increased Accuracy Rating"]={{[1]={flags=0,keywordFlags=0,name="Accuracy",type="INC",value=20}},nil}
 c["20% increased Accuracy Rating against Rare or Unique Enemies"]={{[1]={[1]={actor="enemy",type="ActorCondition",var="RareOrUnique"},flags=0,keywordFlags=0,name="Accuracy",type="INC",value=20}},nil}
@@ -1480,7 +1497,6 @@ c["20% increased Blind Effect"]={{[1]={flags=0,keywordFlags=0,name="EnemyModifie
 c["20% increased Block chance"]={{[1]={flags=0,keywordFlags=0,name="BlockChance",type="INC",value=20}},nil}
 c["20% increased Cast Speed"]={{[1]={flags=16,keywordFlags=0,name="Speed",type="INC",value=20}},nil}
 c["20% increased Cast Speed when on Low Life"]={{[1]={[1]={type="Condition",var="LowLife"},flags=16,keywordFlags=0,name="Speed",type="INC",value=20}},nil}
-c["20% increased Chance to inflict Ailments with One-Handed Attacks"]={{[1]={flags=17179869188,keywordFlags=0,name="AilmentChance",type="INC",value=20}},nil}
 c["20% increased Charm Charges used"]={{[1]={flags=0,keywordFlags=0,name="CharmChargesUsed",type="INC",value=20}},nil}
 c["20% increased Charm Effect Duration"]={{[1]={flags=0,keywordFlags=0,name="CharmDuration",type="INC",value=20}},nil}
 c["20% increased Chill Duration on Enemies"]={{[1]={flags=0,keywordFlags=0,name="EnemyChillDuration",type="INC",value=20}},nil}
@@ -1527,7 +1543,7 @@ c["20% increased Freeze Buildup with Quarterstaves"]={{}," Freeze Buildup  "}
 c["20% increased Freeze Duration on Enemies"]={{[1]={flags=0,keywordFlags=0,name="EnemyFreezeDuration",type="INC",value=20}},nil}
 c["20% increased Frenzy Charge Duration"]={{[1]={flags=0,keywordFlags=0,name="FrenzyChargesDuration",type="INC",value=20}},nil}
 c["20% increased Global Physical Damage"]={{[1]={[1]={type="Global"},flags=0,keywordFlags=0,name="PhysicalDamage",type="INC",value=20}},nil}
-c["20% increased Hazard Duration"]={{[1]={flags=0,keywordFlags=0,name="Duration",type="INC",value=20}}," Hazard  "}
+c["20% increased Hazard Duration"]={{[1]={[1]={skillType=203,type="SkillType"},flags=0,keywordFlags=0,name="Duration",type="INC",value=20}},nil}
 c["20% increased Hinder Duration"]={{[1]={flags=0,keywordFlags=0,name="Duration",type="INC",value=20}}," Hinder  "}
 c["20% increased Ignite Duration on Enemies"]={{[1]={flags=0,keywordFlags=0,name="EnemyIgniteDuration",type="INC",value=20}},nil}
 c["20% increased Knockback Distance"]={{[1]={flags=0,keywordFlags=0,name="EnemyKnockbackDistance",type="INC",value=20}},nil}
@@ -1549,8 +1565,7 @@ c["20% increased Mana Regeneration Rate"]={{[1]={flags=0,keywordFlags=0,name="Ma
 c["20% increased Melee Critical Hit Chance"]={{[1]={flags=256,keywordFlags=0,name="CritChance",type="INC",value=20}},nil}
 c["20% increased Melee Damage"]={{[1]={flags=256,keywordFlags=0,name="Damage",type="INC",value=20}},nil}
 c["20% increased Melee Damage against Immobilised Enemies"]={{[1]={[1]={actor="enemy",type="ActorCondition",var="Immobilised"},flags=256,keywordFlags=0,name="Damage",type="INC",value=20}},nil}
-c["20% increased Melee Strike Range with this weapon"]={{},"  Strike Rang "}
-c["20% increased Melee Strike Range with this weapon Any number of Poisons from this Weapon can affect a target at the same time"]={{},"  Strike Rang Any number of Poisons from this Weapon can affect a target at the same time "}
+c["20% increased Melee Strike Range with this weapon"]={{[1]={[1]={type="Condition",var="{Hand}Attack"},[2]={neg=true,skillType=167,type="SkillType"},flags=8192,keywordFlags=0,name="MeleeWeaponRange",type="INC",value=20},[2]={[1]={type="Condition",var="{Hand}Attack"},[2]={neg=true,skillType=167,type="SkillType"},flags=8192,keywordFlags=0,name="UnarmedRange",type="INC",value=20}},nil}
 c["20% increased Movement Speed"]={{[1]={flags=0,keywordFlags=0,name="MovementSpeed",type="INC",value=20}},nil}
 c["20% increased Movement Speed while affected by an Ailment"]={{[1]={[1]={type="Condition",varList={[1]="Bleeding",[2]="Poisoned",[3]="Ignited",[4]="Chilled",[5]="Frozen",[6]="Shocked",[7]="Electrocuted"}},flags=0,keywordFlags=0,name="MovementSpeed",type="INC",value=20}},nil}
 c["20% increased Movement Speed while an enemy with an Open Weakness is in your Presence"]={{[1]={[1]={type="Condition",var="OpenWeaknessEnemyPresence"},flags=0,keywordFlags=0,name="MovementSpeed",type="INC",value=20}},nil}
@@ -1558,8 +1573,9 @@ c["20% increased Parried Debuff Duration"]={{[1]={flags=0,keywordFlags=0,name="D
 c["20% increased Parry Damage"]={{[1]={[1]={includeTransfigured=true,skillName="Parry",type="SkillName"},flags=0,keywordFlags=0,name="Damage",type="INC",value=20}},nil}
 c["20% increased Physical Damage"]={{[1]={flags=0,keywordFlags=0,name="PhysicalDamage",type="INC",value=20}},nil}
 c["20% increased Pin Buildup"]={{}," Pin Buildup "}
+c["20% increased Poison Duration"]={{[1]={flags=0,keywordFlags=0,name="EnemyPoisonDuration",type="INC",value=20}},nil}
 c["20% increased Power Charge Duration"]={{[1]={flags=0,keywordFlags=0,name="PowerChargesDuration",type="INC",value=20}},nil}
-c["20% increased Presence Area of Effect"]={{[1]={flags=0,keywordFlags=0,name="AreaOfEffect",type="INC",value=20}}," Presence  "}
+c["20% increased Presence Area of Effect"]={{[1]={flags=0,keywordFlags=0,name="PresenceArea",type="INC",value=20}},nil}
 c["20% increased Projectile Damage"]={{[1]={flags=1024,keywordFlags=0,name="Damage",type="INC",value=20}},nil}
 c["20% increased Projectile Parry Range"]={{[1]={[1]={includeTransfigured=true,skillName="Parry",type="SkillName"},flags=0,keywordFlags=0,name="ProjectileCount",type="INC",value=20}}," Range "}
 c["20% increased Projectile Speed for Spell Skills"]={{[1]={flags=2,keywordFlags=0,name="ProjectileSpeed",type="INC",value=20}},nil}
@@ -1645,9 +1661,9 @@ c["22% increased Critical Damage Bonus for Attack Damage"]={{[1]={flags=1,keywor
 c["22% increased Critical Hit Chance for Attacks"]={{[1]={flags=1,keywordFlags=0,name="CritChance",type="INC",value=22}},nil}
 c["22.5 Life Regeneration per second"]={{[1]={flags=0,keywordFlags=0,name="LifeRegen",type="BASE",value=22.5}},nil}
 c["225% increased Duration"]={{[1]={flags=0,keywordFlags=0,name="Duration",type="INC",value=225}},nil}
-c["225% increased Physical Damage"]={{[1]={flags=0,keywordFlags=0,name="PhysicalDamage",type="INC",value=225}},nil}
 c["23% chance to Gain 25% of Damage with Hits as Extra Chaos Damage"]={{[1]={flags=4,keywordFlags=0,name="DamageGainAsChaos",type="BASE",value=5.75}},nil}
 c["23% increased Attack Speed"]={{[1]={flags=1,keywordFlags=0,name="Speed",type="INC",value=23}},nil}
+c["23% increased Cast Speed"]={{[1]={flags=16,keywordFlags=0,name="Speed",type="INC",value=23}},nil}
 c["23% increased Chaos Damage"]={{[1]={flags=0,keywordFlags=0,name="ChaosDamage",type="INC",value=23}},nil}
 c["23% increased Cooldown Recovery Rate"]={{[1]={flags=0,keywordFlags=0,name="CooldownRecovery",type="INC",value=23}},nil}
 c["23% increased Elemental Damage"]={{[1]={flags=0,keywordFlags=0,name="ElementalDamage",type="INC",value=23}},nil}
@@ -1662,6 +1678,7 @@ c["24% increased Evasion Rating"]={{[1]={flags=0,keywordFlags=0,name="Evasion",t
 c["24% increased Warcry Speed"]={{[1]={flags=0,keywordFlags=4,name="WarcrySpeed",type="INC",value=24}},nil}
 c["24% increased maximum Energy Shield"]={{[1]={[1]={type="Global"},flags=0,keywordFlags=0,name="EnergyShield",type="INC",value=24}},nil}
 c["24% reduced Slowing Potency of Debuffs on You"]={{}," Slowing Potency of Debuffs on You "}
+c["240% increased Physical Damage"]={{[1]={flags=0,keywordFlags=0,name="PhysicalDamage",type="INC",value=240}},nil}
 c["25 Life Regeneration per second"]={{[1]={flags=0,keywordFlags=0,name="LifeRegen",type="BASE",value=25}},nil}
 c["25 to 35 Fire Thorns damage"]={{[1]={flags=0,keywordFlags=0,name="ThornsDamage",type="BASE",value=25}}," to 35 Fire  "}
 c["25% Chance to gain a Charge when you Kill an Enemy"]={nil,"a Charge  "}
@@ -1683,6 +1700,7 @@ c["25% chance to Maim on Hit Adds 17 to 28 Physical Damage"]={{[1]={flags=4,keyw
 c["25% chance to Pierce an Enemy"]={{}," to Pierce an Enemy "}
 c["25% chance to Pierce an Enemy Bow Attacks consume 10% of your maximum Life Flask Charges if possible to deal added Physical damage equal to 5% of Flask's Life Recovery amount"]={{[1]={flags=0,keywordFlags=0,name="Life",type="BASE",value=25}}," to Pierce an Enemy Bow Attacks consume 10% of your  Flask Charges if possible to deal added Physical damage equal to 5% of Flask's Life Recovery amount "}
 c["25% chance to Poison on Hit"]={{[1]={flags=0,keywordFlags=0,name="PoisonChance",type="BASE",value=25}},nil}
+c["25% chance to Poison on Hit with Attacks"]={{[1]={flags=0,keywordFlags=65536,name="PoisonChance",type="BASE",value=25}},nil}
 c["25% chance to be inflicted with Bleeding when Hit"]={{}," to be inflicted  when Hit "}
 c["25% chance to cause Bleeding on Hit"]={{[1]={flags=0,keywordFlags=0,name="BleedChance",type="BASE",value=25}},nil}
 c["25% chance to gain a Power Charge on Critical Hit"]={nil,"a Power Charge "}
@@ -1780,8 +1798,10 @@ c["25% increased Minion Accuracy Rating"]={{[1]={flags=0,keywordFlags=0,name="Mi
 c["25% increased Movement Speed"]={{[1]={flags=0,keywordFlags=0,name="MovementSpeed",type="INC",value=25}},nil}
 c["25% increased Movement Speed while affected by an Ailment"]={{[1]={[1]={type="Condition",varList={[1]="Bleeding",[2]="Poisoned",[3]="Ignited",[4]="Chilled",[5]="Frozen",[6]="Shocked",[7]="Electrocuted"}},flags=0,keywordFlags=0,name="MovementSpeed",type="INC",value=25}},nil}
 c["25% increased Physical Damage"]={{[1]={flags=0,keywordFlags=0,name="PhysicalDamage",type="INC",value=25}},nil}
-c["25% increased Presence Area of Effect"]={{[1]={flags=0,keywordFlags=0,name="AreaOfEffect",type="INC",value=25}}," Presence  "}
+c["25% increased Presence Area of Effect"]={{[1]={flags=0,keywordFlags=0,name="PresenceArea",type="INC",value=25}},nil}
 c["25% increased Projectile Speed"]={{[1]={flags=0,keywordFlags=0,name="ProjectileSpeed",type="INC",value=25}},nil}
+c["25% increased Projectile Speed with this Weapon"]={{[1]={[1]={type="Condition",var="{Hand}Attack"},[2]={neg=true,skillType=167,type="SkillType"},flags=8192,keywordFlags=0,name="ProjectileSpeed",type="INC",value=25}},nil}
+c["25% increased Rarity of Items found"]={{[1]={flags=0,keywordFlags=0,name="LootRarity",type="INC",value=25}},nil}
 c["25% increased Shock Duration"]={{[1]={flags=0,keywordFlags=0,name="EnemyShockDuration",type="INC",value=25}},nil}
 c["25% increased Skill Effect Duration"]={{[1]={flags=0,keywordFlags=0,name="Duration",type="INC",value=25}},nil}
 c["25% increased Spell Damage"]={{[1]={flags=2,keywordFlags=0,name="Damage",type="INC",value=25}},nil}
@@ -1818,7 +1838,6 @@ c["25% reduced Cast Speed"]={{[1]={flags=16,keywordFlags=0,name="Speed",type="IN
 c["25% reduced Curse Duration"]={{[1]={flags=0,keywordFlags=2,name="Duration",type="INC",value=-25}},nil}
 c["25% reduced Damage"]={{[1]={flags=0,keywordFlags=0,name="Damage",type="INC",value=-25}},nil}
 c["25% reduced Damage with Unarmed Attacks"]={{[1]={flags=16777220,keywordFlags=0,name="Damage",type="INC",value=-25}},nil}
-c["25% reduced Duration of Ignite, Shock and Chill on Enemies"]={{[1]={flags=0,keywordFlags=0,name="EnemyShockDuration",type="INC",value=-25},[2]={flags=0,keywordFlags=0,name="EnemyChillDuration",type="INC",value=-25},[3]={flags=0,keywordFlags=0,name="EnemyIgniteDuration",type="INC",value=-25}},nil}
 c["25% reduced Effect of Chill on you"]={{[1]={flags=0,keywordFlags=0,name="SelfChillEffect",type="INC",value=-25}},nil}
 c["25% reduced Endurance Charge Duration"]={{[1]={flags=0,keywordFlags=0,name="EnduranceChargesDuration",type="INC",value=-25}},nil}
 c["25% reduced Enemy Stun Threshold"]={{[1]={flags=0,keywordFlags=0,name="EnemyStunThreshold",type="INC",value=-25}},nil}
@@ -1832,7 +1851,7 @@ c["25% reduced Ignite Duration on you"]={{[1]={flags=0,keywordFlags=0,name="Self
 c["25% reduced Light Radius"]={{[1]={flags=0,keywordFlags=0,name="LightRadius",type="INC",value=-25}},nil}
 c["25% reduced Mana Regeneration Rate while stationary"]={{[1]={[1]={type="Condition",var="Stationary"},flags=0,keywordFlags=0,name="ManaRegen",type="INC",value=-25}},nil}
 c["25% reduced Poison Duration"]={{[1]={flags=0,keywordFlags=0,name="EnemyPoisonDuration",type="INC",value=-25}},nil}
-c["25% reduced Presence Area of Effect"]={{[1]={flags=0,keywordFlags=0,name="AreaOfEffect",type="INC",value=-25}}," Presence  "}
+c["25% reduced Presence Area of Effect"]={{[1]={flags=0,keywordFlags=0,name="PresenceArea",type="INC",value=-25}},nil}
 c["25% reduced Rarity of Items found"]={{[1]={flags=0,keywordFlags=0,name="LootRarity",type="INC",value=-25}},nil}
 c["25% reduced Shock duration on you"]={{[1]={flags=0,keywordFlags=0,name="SelfShockDuration",type="INC",value=-25}},nil}
 c["25% reduced Spirit"]={{[1]={flags=0,keywordFlags=0,name="Spirit",type="INC",value=-25}},nil}
@@ -1850,6 +1869,7 @@ c["250% increased bonuses gained from Equipped Quiver"]={{[1]={flags=0,keywordFl
 c["250% of Melee Physical Damage taken reflected to Attacker"]={{[1]={flags=256,keywordFlags=0,name="PhysicalDamage",type="BASE",value=250}},"  taken reflected to Attacker "}
 c["250% of Melee Physical Damage taken reflected to Attacker Regenerate 5% of maximum Life per second while Surrounded"]={{[1]={[1]={type="Condition",var="Surrounded"},flags=256,keywordFlags=0,name="PhysicalDamage",type="BASE",value=250}},"  taken reflected to Attacker Regenerate 5% of maximum Life per second  "}
 c["26% reduced Charges per use"]={{[1]={flags=0,keywordFlags=0,name="FlaskChargesUsed",type="INC",value=-26}},nil}
+c["275% increased Physical Damage"]={{[1]={flags=0,keywordFlags=0,name="PhysicalDamage",type="INC",value=275}},nil}
 c["28% increased maximum Energy Shield"]={{[1]={[1]={type="Global"},flags=0,keywordFlags=0,name="EnergyShield",type="INC",value=28}},nil}
 c["29% increased Chaos Damage"]={{[1]={flags=0,keywordFlags=0,name="ChaosDamage",type="INC",value=29}},nil}
 c["3 Life Regeneration per second"]={{[1]={flags=0,keywordFlags=0,name="LifeRegen",type="BASE",value=3}},nil}
@@ -1902,6 +1922,7 @@ c["30% chance to Chain an additional time Adds 44 to 66 Fire Damage"]={{[1]={fla
 c["30% chance to Pierce an Enemy"]={{}," to Pierce an Enemy "}
 c["30% chance to Pierce an Enemy Projectiles have 10% chance to Chain an additional time from terrain"]={{[1]={flags=0,keywordFlags=0,name="ProjectileCount",type="BASE",value=30}}," to Pierce an Enemy  have 10% chance to Chain an additional time from terrain "}
 c["30% chance to Poison on Hit"]={{[1]={flags=0,keywordFlags=0,name="PoisonChance",type="BASE",value=30}},nil}
+c["30% chance to Poison on Hit with Attacks"]={{[1]={flags=0,keywordFlags=65536,name="PoisonChance",type="BASE",value=30}},nil}
 c["30% faster start of Energy Shield Recharge"]={{[1]={flags=0,keywordFlags=0,name="EnergyShieldRechargeFaster",type="INC",value=30}},nil}
 c["30% faster start of Energy Shield Recharge when not on Full Life"]={{[1]={[1]={neg=true,type="Condition",var="FullLife"},flags=0,keywordFlags=0,name="EnergyShieldRechargeFaster",type="INC",value=30}},nil}
 c["30% increased Accuracy Rating"]={{[1]={flags=0,keywordFlags=0,name="Accuracy",type="INC",value=30}},nil}
@@ -1948,10 +1969,7 @@ c["30% increased Daze Buildup"]={{}," Daze Buildup "}
 c["30% increased Daze Buildup with Quarterstaves"]={{}," Daze Buildup  "}
 c["30% increased Daze Buildup with Quarterstaves 30% increased Freeze Buildup with Quarterstaves"]={{}," Daze Buildup  30% increased Freeze Buildup with Quarterstaves "}
 c["30% increased Daze Buildup with Quarterstaves 30% increased Freeze Buildup with Quarterstaves 30% increased Stun Buildup with Quarterstaves"]={{}," Daze Buildup  30% increased Freeze Buildup with Quarterstaves 30% increased Stun Buildup with Quarterstaves "}
-c["30% increased Defences while wielding a Quarterstaff"]={{[1]={flags=0,keywordFlags=0,name="Defences",type="INC",value=30}},"  while wielding a Quarterstaff "}
-c["30% increased Defences while wielding a Quarterstaff 30% increased Daze Buildup with Quarterstaves"]={{[1]={flags=2097156,keywordFlags=0,name="Defences",type="INC",value=30}},"  while wielding a Quarterstaff 30% increased Daze Buildup  "}
-c["30% increased Defences while wielding a Quarterstaff 30% increased Daze Buildup with Quarterstaves 30% increased Freeze Buildup with Quarterstaves"]={{[1]={flags=2097156,keywordFlags=0,name="Defences",type="INC",value=30}},"  while wielding a Quarterstaff 30% increased Daze Buildup  30% increased Freeze Buildup with Quarterstaves "}
-c["30% increased Defences while wielding a Quarterstaff 30% increased Daze Buildup with Quarterstaves 30% increased Freeze Buildup with Quarterstaves 30% increased Stun Buildup with Quarterstaves"]={{[1]={flags=2097156,keywordFlags=0,name="Defences",type="INC",value=30}},"  while wielding a Quarterstaff 30% increased Daze Buildup  30% increased Freeze Buildup with Quarterstaves 30% increased Stun Buildup with Quarterstaves "}
+c["30% increased Defences while wielding a Quarterstaff"]={{[1]={[1]={type="Condition",var="UsingStaff"},flags=0,keywordFlags=0,name="Defences",type="INC",value=30}},nil}
 c["30% increased Electrocute Buildup"]={{}," Electrocute Buildup "}
 c["30% increased Elemental Ailment Threshold"]={{[1]={flags=0,keywordFlags=0,name="AilmentThreshold",type="INC",value=30}},nil}
 c["30% increased Elemental Damage"]={{[1]={flags=0,keywordFlags=0,name="ElementalDamage",type="INC",value=30}},nil}
@@ -1996,15 +2014,12 @@ c["30% increased Parried Debuff Magnitude"]={{}," Parried Debuff Magnitude "}
 c["30% increased Parry Damage"]={{[1]={[1]={includeTransfigured=true,skillName="Parry",type="SkillName"},flags=0,keywordFlags=0,name="Damage",type="INC",value=30}},nil}
 c["30% increased Pin Buildup"]={{}," Pin Buildup "}
 c["30% increased Pin Buildup 5% increased Movement Speed if you've Pinned an Enemy Recently"]={{[1]={[1]={type="Condition",var="PinnedEnemyRecently"},flags=0,keywordFlags=0,name="MovementSpeed",type="INC",value=30}}," Pin Buildup 5% increased   "}
-c["30% increased Presence Area of Effect"]={{[1]={flags=0,keywordFlags=0,name="AreaOfEffect",type="INC",value=30}}," Presence  "}
-c["30% increased Presence Area of Effect 5% increased Spirit"]={{[1]={flags=0,keywordFlags=0,name="AreaOfEffect",type="INC",value=30}}," Presence  5% increased Spirit "}
-c["30% increased Presence Area of Effect Aura Skills have 6% increased Magnitudes"]={{[1]={flags=0,keywordFlags=0,name="AreaOfEffect",type="INC",value=30}}," Presence  Aura Skills have 6% increased Magnitudes "}
-c["30% increased Presence Area of Effect Minions have 20% increased Area of Effect"]={{[1]={flags=0,keywordFlags=0,name="MinionModifier",type="LIST",value={mod={flags=0,keywordFlags=0,name="AreaOfEffect",type="INC",value=30}}}}," Presence  s have 20% increased Area of Effect "}
+c["30% increased Presence Area of Effect"]={{[1]={flags=0,keywordFlags=0,name="PresenceArea",type="INC",value=30}},nil}
 c["30% increased Projectile Damage if you've dealt a Melee Hit in the past eight seconds"]={{[1]={[1]={type="Condition",var="HitMeleeRecently"},flags=1024,keywordFlags=0,name="Damage",type="INC",value=30}},nil}
 c["30% increased Projectile Parry Range"]={{[1]={[1]={includeTransfigured=true,skillName="Parry",type="SkillName"},flags=0,keywordFlags=0,name="ProjectileCount",type="INC",value=30}}," Range "}
 c["30% increased Projectile Parry Range Your Heavy Stun buildup empties 50% faster if you've successfully Parried Recently"]={{[1]={[1]={type="Condition",var="ParriedRecently"},[2]={includeTransfigured=true,skillName="Parry",type="SkillName"},flags=0,keywordFlags=0,name="ProjectileCount",type="INC",value=30}}," Range Your Heavy Stun buildup empties 50% faster  "}
 c["30% increased Projectile Speed"]={{[1]={flags=0,keywordFlags=0,name="ProjectileSpeed",type="INC",value=30}},nil}
-c["30% increased Projectile Speed with this Weapon"]={{[1]={[1]={type="Condition",var="{Hand}Attack"},[2]={skillType=1,type="SkillType"},flags=0,keywordFlags=0,name="ProjectileCount",type="INC",value=30}},"  Spe "}
+c["30% increased Projectile Speed with this Weapon"]={{[1]={[1]={type="Condition",var="{Hand}Attack"},[2]={neg=true,skillType=167,type="SkillType"},flags=8192,keywordFlags=0,name="ProjectileSpeed",type="INC",value=30}},nil}
 c["30% increased Rarity of Items Dropped by Enemies killed with a Critical Hit"]={{[1]={flags=0,keywordFlags=0,name="LootRarity",type="INC",value=30}},"  by Enemies killed with a Critical Hit "}
 c["30% increased Rarity of Items Dropped by Enemies killed with a Critical Hit You have Consecrated Ground around you while stationary"]={{[1]={[1]={type="Condition",var="Stationary"},flags=0,keywordFlags=0,name="LootRarity",type="INC",value=30}},"  by Enemies killed with a Critical Hit You have Consecrated Ground around you  "}
 c["30% increased Shock Chance against Electrocuted Enemies"]={{[1]={[1]={actor="enemy",type="ActorCondition",var="Electrocuted"},flags=0,keywordFlags=0,name="EnemyShockChance",type="INC",value=30}},nil}
@@ -2080,6 +2095,7 @@ c["300% increased Armour and Energy Shield"]={{[1]={flags=0,keywordFlags=0,name=
 c["300% increased Armour and Evasion"]={{[1]={flags=0,keywordFlags=0,name="ArmourAndEvasion",type="INC",value=300}},nil}
 c["300% increased Armour, Evasion and Energy Shield"]={{[1]={flags=0,keywordFlags=0,name="Defences",type="INC",value=300}},nil}
 c["300% increased Evasion Rating"]={{[1]={flags=0,keywordFlags=0,name="Evasion",type="INC",value=300}},nil}
+c["300% increased Physical Damage"]={{[1]={flags=0,keywordFlags=0,name="PhysicalDamage",type="INC",value=300}},nil}
 c["31 to 49 Physical Thorns damage"]={{[1]={flags=0,keywordFlags=0,name="ThornsDamage",type="BASE",value=31}}," to 49 Physical  "}
 c["32% increased Spell Damage while wielding a Melee Weapon"]={{[1]={[1]={type="Condition",var="UsingMeleeWeapon"},flags=2,keywordFlags=0,name="Damage",type="INC",value=32}},nil}
 c["33% increased Damage with Hits against Enemies affected by Elemental Ailments"]={{[1]={[1]={actor="enemy",type="ActorCondition",varList={[1]="Frozen",[2]="Chilled",[3]="Shocked",[4]="Ignited",[5]="Scorched",[6]="Brittle",[7]="Sapped"}},flags=0,keywordFlags=262144,name="Damage",type="INC",value=33}},nil}
@@ -2103,9 +2119,7 @@ c["35% increased Flask Life Recovery rate"]={{[1]={flags=0,keywordFlags=0,name="
 c["35% increased Freeze Buildup"]={{}," Freeze Buildup "}
 c["35% increased Life and Mana Recovery from Flasks"]={{[1]={flags=0,keywordFlags=0,name="FlaskLifeRecovery",type="INC",value=35},[2]={flags=0,keywordFlags=0,name="FlaskManaRecovery",type="INC",value=35}},nil}
 c["35% increased Mana Regeneration Rate"]={{[1]={flags=0,keywordFlags=0,name="ManaRegen",type="INC",value=35}},nil}
-c["35% increased Projectile Speed with this Weapon"]={{[1]={[1]={type="Condition",var="{Hand}Attack"},[2]={skillType=1,type="SkillType"},flags=0,keywordFlags=0,name="ProjectileCount",type="INC",value=35}},"  Spe "}
-c["35% increased Projectile Speed with this Weapon Adds 15 to 26 Physical Damage"]={{[1]={[1]={type="Condition",var="{Hand}Attack"},[2]={skillType=1,type="SkillType"},flags=0,keywordFlags=0,name="ProjectileCount",type="INC",value=35}},"  Spe Adds 15 to 26 Physical Damage "}
-c["35% increased Projectile Speed with this Weapon Adds 4 to 105 Lightning Damage"]={{[1]={[1]={type="Condition",var="{Hand}Attack"},[2]={skillType=1,type="SkillType"},flags=0,keywordFlags=0,name="ProjectileCount",type="INC",value=35}},"  Spe Adds 4 to 105 Lightning Damage "}
+c["35% increased Projectile Speed with this Weapon"]={{[1]={[1]={type="Condition",var="{Hand}Attack"},[2]={neg=true,skillType=167,type="SkillType"},flags=8192,keywordFlags=0,name="ProjectileSpeed",type="INC",value=35}},nil}
 c["35% increased Rarity of Items found"]={{[1]={flags=0,keywordFlags=0,name="LootRarity",type="INC",value=35}},nil}
 c["35% increased Spell Area Damage"]={{[1]={flags=514,keywordFlags=0,name="Damage",type="INC",value=35}},nil}
 c["35% increased Stun Buildup"]={{}," Stun Buildup "}
@@ -2116,6 +2130,8 @@ c["35% less Armour and Evasion Rating"]={{[1]={flags=0,keywordFlags=0,name="Armo
 c["35% less Poison Duration"]={{[1]={flags=0,keywordFlags=0,name="EnemyPoisonDuration",type="MORE",value=-35}},nil}
 c["35% less minimum Physical Attack Damage"]={{[1]={[1]={skillType=1,type="SkillType"},flags=0,keywordFlags=0,name="MinPhysicalDamage",type="MORE",value=-35}},nil}
 c["35% more maximum Physical Attack Damage"]={{[1]={[1]={skillType=1,type="SkillType"},flags=0,keywordFlags=0,name="MaxPhysicalDamage",type="MORE",value=35}},nil}
+c["35% reduced Duration of Ignite, Shock and Chill on Enemies"]={{[1]={flags=0,keywordFlags=0,name="EnemyShockDuration",type="INC",value=-35},[2]={flags=0,keywordFlags=0,name="EnemyChillDuration",type="INC",value=-35},[3]={flags=0,keywordFlags=0,name="EnemyIgniteDuration",type="INC",value=-35}},nil}
+c["350% increased Physical Damage"]={{[1]={flags=0,keywordFlags=0,name="PhysicalDamage",type="INC",value=350}},nil}
 c["36% increased Damage if you've dealt a Critical Hit in the past 8 seconds"]={{[1]={[1]={type="Condition",var="CritInPast8Sec"},flags=0,keywordFlags=0,name="Damage",type="INC",value=36}},nil}
 c["36% increased maximum Energy Shield"]={{[1]={[1]={type="Global"},flags=0,keywordFlags=0,name="EnergyShield",type="INC",value=36}},nil}
 c["37% increased Chaos Damage"]={{[1]={flags=0,keywordFlags=0,name="ChaosDamage",type="INC",value=37}},nil}
@@ -2135,6 +2151,7 @@ c["4% increased Movement Speed"]={{[1]={flags=0,keywordFlags=0,name="MovementSpe
 c["4% increased Movement Speed if you've Killed Recently"]={{[1]={[1]={type="Condition",var="KilledRecently"},flags=0,keywordFlags=0,name="MovementSpeed",type="INC",value=4}},nil}
 c["4% increased Movement Speed if you've cast a Mark Spell Recently"]={{[1]={[1]={type="Condition",var="CastMarkRecently"},flags=0,keywordFlags=0,name="MovementSpeed",type="INC",value=4}},nil}
 c["4% increased Skill Speed"]={{[1]={flags=0,keywordFlags=0,name="Speed",type="INC",value=4},[2]={flags=0,keywordFlags=0,name="WarcrySpeed",type="INC",value=4}},nil}
+c["4% increased Spell Damage per 10 Intelligence"]={{[1]={[1]={div=10,stat="Int",type="PerStat"},flags=2,keywordFlags=0,name="Damage",type="INC",value=4}},nil}
 c["4% increased Strength"]={{[1]={flags=0,keywordFlags=0,name="Str",type="INC",value=4}},nil}
 c["4% increased maximum Mana"]={{[1]={flags=0,keywordFlags=0,name="Mana",type="INC",value=4}},nil}
 c["4% of Damage is taken from Mana before Life"]={{[1]={flags=0,keywordFlags=0,name="DamageTakenFromManaBeforeLife",type="BASE",value=4}},nil}
@@ -2240,6 +2257,7 @@ c["40% of Physical Damage taken as Fire Damage"]={{[1]={flags=0,keywordFlags=0,n
 c["40% reduced Bleeding Duration on you"]={{[1]={flags=0,keywordFlags=0,name="SelfBleedDuration",type="INC",value=-40}},nil}
 c["40% reduced Chill Duration on you"]={{[1]={flags=0,keywordFlags=0,name="SelfChillDuration",type="INC",value=-40}},nil}
 c["40% reduced Damage"]={{[1]={flags=0,keywordFlags=0,name="Damage",type="INC",value=-40}},nil}
+c["40% reduced Duration of Ignite, Shock and Chill on Enemies"]={{[1]={flags=0,keywordFlags=0,name="EnemyShockDuration",type="INC",value=-40},[2]={flags=0,keywordFlags=0,name="EnemyChillDuration",type="INC",value=-40},[3]={flags=0,keywordFlags=0,name="EnemyIgniteDuration",type="INC",value=-40}},nil}
 c["40% reduced Freeze Duration on you"]={{[1]={flags=0,keywordFlags=0,name="SelfFreezeDuration",type="INC",value=-40}},nil}
 c["40% reduced Ignite Duration on you"]={{[1]={flags=0,keywordFlags=0,name="SelfIgniteDuration",type="INC",value=-40}},nil}
 c["40% reduced Light Radius"]={{[1]={flags=0,keywordFlags=0,name="LightRadius",type="INC",value=-40}},nil}
@@ -2259,6 +2277,7 @@ c["45% increased Critical Damage Bonus"]={{[1]={flags=0,keywordFlags=0,name="Cri
 c["45% increased Evasion and Energy Shield"]={{[1]={flags=0,keywordFlags=0,name="EvasionAndEnergyShield",type="INC",value=45}},nil}
 c["45% increased Mana Regeneration Rate"]={{[1]={flags=0,keywordFlags=0,name="ManaRegen",type="INC",value=45}},nil}
 c["45% increased Melee Damage if you've dealt a Projectile Attack Hit in the past eight seconds"]={{[1]={[1]={type="Condition",var="HitProjectileRecently"},flags=256,keywordFlags=0,name="Damage",type="INC",value=45}},nil}
+c["45% increased Presence Area of Effect"]={{[1]={flags=0,keywordFlags=0,name="PresenceArea",type="INC",value=45}},nil}
 c["45% increased Projectile Damage if you've dealt a Melee Hit in the past eight seconds"]={{[1]={[1]={type="Condition",var="HitMeleeRecently"},flags=1024,keywordFlags=0,name="Damage",type="INC",value=45}},nil}
 c["45% increased Rarity of Items found"]={{[1]={flags=0,keywordFlags=0,name="LootRarity",type="INC",value=45}},nil}
 c["450% increased Armour"]={{[1]={flags=0,keywordFlags=0,name="Armour",type="INC",value=450}},nil}
@@ -2292,7 +2311,7 @@ c["5% increased Cast Speed"]={{[1]={flags=16,keywordFlags=0,name="Speed",type="I
 c["5% increased Chaos Damage"]={{[1]={flags=0,keywordFlags=0,name="ChaosDamage",type="INC",value=5}},nil}
 c["5% increased Cooldown Recovery Rate"]={{[1]={flags=0,keywordFlags=0,name="CooldownRecovery",type="INC",value=5}},nil}
 c["5% increased Critical Hit Chance"]={{[1]={flags=0,keywordFlags=0,name="CritChance",type="INC",value=5}},nil}
-c["5% increased Damage for each Hazard triggered Recently, up to 50%"]={{[1]={flags=0,keywordFlags=0,name="Damage",type="INC",value=5}},"  for each Hazard triggered Recently, up to 50% "}
+c["5% increased Damage for each Hazard triggered Recently, up to 50%"]={{[1]={[1]={globalLimit=50,globalLimitKey="DmgPerHazardRecently",type="Multiplier",var="HazardsTriggeredRecently"},flags=0,keywordFlags=0,name="Damage",type="INC",value=5}},nil}
 c["5% increased Damage taken while on Low Life"]={{[1]={[1]={type="Condition",var="LowLife"},flags=0,keywordFlags=0,name="DamageTaken",type="INC",value=5}},nil}
 c["5% increased Dexterity"]={{[1]={flags=0,keywordFlags=0,name="Dex",type="INC",value=5}},nil}
 c["5% increased Duration of Damaging Ailments on Enemies"]={{[1]={flags=0,keywordFlags=0,name="EnemyIgniteDuration",type="INC",value=5},[2]={flags=0,keywordFlags=0,name="EnemyBleedDuration",type="INC",value=5},[3]={flags=0,keywordFlags=0,name="EnemyPoisonDuration",type="INC",value=5}},nil}
@@ -2420,7 +2439,11 @@ c["50% of Infernal Flame lost per second if none was gained in the past 2 second
 c["50% of Maximum Life Converted to Energy Shield"]={{[1]={flags=0,keywordFlags=0,name="LifeConvertToEnergyShield",type="BASE",value=50}},nil}
 c["50% of Physical Damage prevented Recouped as Life"]={{[1]={flags=0,keywordFlags=0,name="PhysicalDamage",type="BASE",value=50}},"  prevented Recouped as Life "}
 c["50% of charges used by Charms granted to your Life Flasks"]={{[1]={[3]={type="Multiplier",var="AvgCharmChargesUsed"},flags=0,keywordFlags=0,name="FlaskChargesGained",type="MORE",value=0.5}},nil}
-c["50% of your Life Regeneration is granted to Allies in your Presence"]={{[1]={flags=0,keywordFlags=0,name="ExtraAura",type="LIST",value={mod={flags=0,keywordFlags=0,name="LifeRegen",type="BASE",value=50},onlyAllies=true}}}," your  is granted to "}
+c["50% of your Base Life Regeneration is granted to Allies in your Presence"]={{[1]={flags=0,keywordFlags=0,name="ExtraAura",type="LIST",value={mod={flags=0,keywordFlags=0,name="LifeRegen",type="BASE",value=50},onlyAllies=true}}}," your Base  is granted to "}
+c["50% of your Base Life Regeneration is granted to Allies in your Presence +10 to all Attributes"]={{[1]={flags=0,keywordFlags=0,name="ExtraAura",type="LIST",value={mod={flags=0,keywordFlags=0,name="LifeRegen",type="BASE",value=50},onlyAllies=true}}}," your Base  is granted to +10 to all Attributes "}
+c["50% of your Base Life Regeneration is granted to Allies in your Presence +30 to Dexterity"]={{[1]={flags=0,keywordFlags=0,name="ExtraAura",type="LIST",value={mod={flags=0,keywordFlags=0,name="LifeRegen",type="BASE",value=50},onlyAllies=true}}}," your Base  is granted to +30 to Dexterity "}
+c["50% of your Base Life Regeneration is granted to Allies in your Presence +30 to Intelligence"]={{[1]={flags=0,keywordFlags=0,name="ExtraAura",type="LIST",value={mod={flags=0,keywordFlags=0,name="LifeRegen",type="BASE",value=50},onlyAllies=true}}}," your Base  is granted to +30 to Intelligence "}
+c["50% of your Base Life Regeneration is granted to Allies in your Presence +30 to Strength"]={{[1]={flags=0,keywordFlags=0,name="ExtraAura",type="LIST",value={mod={flags=0,keywordFlags=0,name="LifeRegen",type="BASE",value=50},onlyAllies=true}}}," your Base  is granted to +30 to Strength "}
 c["50% reduced Amount Recovered"]={{[1]={flags=0,keywordFlags=0,name="FlaskRecovery",type="INC",value=-50}},nil}
 c["50% reduced Bleeding Duration on you"]={{[1]={flags=0,keywordFlags=0,name="SelfBleedDuration",type="INC",value=-50}},nil}
 c["50% reduced Charm Effect Duration"]={{[1]={flags=0,keywordFlags=0,name="CharmDuration",type="INC",value=-50}},nil}
@@ -2434,8 +2457,8 @@ c["50% reduced Freeze Duration on you"]={{[1]={flags=0,keywordFlags=0,name="Self
 c["50% reduced Ignite Duration on Enemies"]={{[1]={flags=0,keywordFlags=0,name="EnemyIgniteDuration",type="INC",value=-50}},nil}
 c["50% reduced Ignite Duration on you"]={{[1]={flags=0,keywordFlags=0,name="SelfIgniteDuration",type="INC",value=-50}},nil}
 c["50% reduced Poison Duration on you"]={{[1]={flags=0,keywordFlags=0,name="SelfPoisonDuration",type="INC",value=-50}},nil}
-c["50% reduced Presence Area of Effect"]={{[1]={flags=0,keywordFlags=0,name="AreaOfEffect",type="INC",value=-50}}," Presence  "}
-c["50% reduced Presence Area of Effect 10% reduced Light Radius"]={{[1]={flags=0,keywordFlags=0,name="AreaOfEffect",type="INC",value=-50}}," Presence  10% reduced Light Radius "}
+c["50% reduced Presence Area of Effect"]={{[1]={flags=0,keywordFlags=0,name="PresenceArea",type="INC",value=-50}},nil}
+c["50% reduced Reload Speed"]={{[1]={flags=1,keywordFlags=0,name="ReloadSpeed",type="INC",value=-50}},nil}
 c["50% reduced Shock duration on you"]={{[1]={flags=0,keywordFlags=0,name="SelfShockDuration",type="INC",value=-50}},nil}
 c["50% reduced Slowing Potency of Debuffs on You"]={{}," Slowing Potency of Debuffs on You "}
 c["50% reduced Slowing Potency of Debuffs on You 20 to 30 Physical Thorns damage"]={{[1]={flags=0,keywordFlags=0,name="ThornsDamage",type="INC",value=-50}}," Slowing Potency of Debuffs on You 20 to 30 Physical  "}
@@ -2504,8 +2527,7 @@ c["60% increased Flask Mana Recovery rate"]={{[1]={flags=0,keywordFlags=0,name="
 c["60% increased Freeze Threshold"]={{[1]={flags=0,keywordFlags=0,name="FreezeThreshold",type="INC",value=60}},nil}
 c["60% increased Melee Damage if you've dealt a Projectile Attack Hit in the past eight seconds"]={{[1]={[1]={type="Condition",var="HitProjectileRecently"},flags=256,keywordFlags=0,name="Damage",type="INC",value=60}},nil}
 c["60% increased Physical Damage"]={{[1]={flags=0,keywordFlags=0,name="PhysicalDamage",type="INC",value=60}},nil}
-c["60% increased Presence Area of Effect"]={{[1]={flags=0,keywordFlags=0,name="AreaOfEffect",type="INC",value=60}}," Presence  "}
-c["60% increased Presence Area of Effect Enemies in your Presence have at least 10% of Life Reserved"]={{[1]={flags=0,keywordFlags=0,name="AreaOfEffect",type="INC",value=60}}," Presence  Enemies in your Presence have at least 10% of Life Reserved "}
+c["60% increased Presence Area of Effect"]={{[1]={flags=0,keywordFlags=0,name="PresenceArea",type="INC",value=60}},nil}
 c["60% increased Projectile Damage if you've dealt a Melee Hit in the past eight seconds"]={{[1]={[1]={type="Condition",var="HitMeleeRecently"},flags=1024,keywordFlags=0,name="Damage",type="INC",value=60}},nil}
 c["60% increased Rarity of Items found"]={{[1]={flags=0,keywordFlags=0,name="LootRarity",type="INC",value=60}},nil}
 c["60% increased Stun Threshold for each time you've been Stunned Recently"]={{[1]={[1]={type="Multiplier",var="StunnedRecently"},flags=0,keywordFlags=0,name="StunThreshold",type="INC",value=60}},nil}
@@ -2513,6 +2535,7 @@ c["60% increased maximum Energy Shield"]={{[1]={[1]={type="Global"},flags=0,keyw
 c["60% reduced Bleeding Duration on you"]={{[1]={flags=0,keywordFlags=0,name="SelfBleedDuration",type="INC",value=-60}},nil}
 c["60% reduced Ice Crystal Life"]={{[1]={flags=0,keywordFlags=0,name="IceCrystalLife",type="INC",value=-60}},nil}
 c["60% reduced Poison Duration on you"]={{[1]={flags=0,keywordFlags=0,name="SelfPoisonDuration",type="INC",value=-60}},nil}
+c["60% reduced Reload Speed"]={{[1]={flags=1,keywordFlags=0,name="ReloadSpeed",type="INC",value=-60}},nil}
 c["65% increased Armour"]={{[1]={flags=0,keywordFlags=0,name="Armour",type="INC",value=65}},nil}
 c["65% increased Armour and Evasion"]={{[1]={flags=0,keywordFlags=0,name="ArmourAndEvasion",type="INC",value=65}},nil}
 c["65% increased Energy Shield"]={{[1]={flags=0,keywordFlags=0,name="EnergyShield",type="INC",value=65}},nil}
@@ -2551,6 +2574,7 @@ c["75% increased Energy Shield"]={{[1]={flags=0,keywordFlags=0,name="EnergyShiel
 c["75% increased Energy Shield Recharge Rate"]={{[1]={flags=0,keywordFlags=0,name="EnergyShieldRecharge",type="INC",value=75}},nil}
 c["75% increased Energy Shield from Equipped Focus"]={{[1]={[1]={slotName="Weapon 2",type="SlotName"},[2]={type="Condition",var="UsingFocus"},flags=0,keywordFlags=0,name="EnergyShield",type="INC",value=75}},nil}
 c["75% increased Evasion Rating"]={{[1]={flags=0,keywordFlags=0,name="Evasion",type="INC",value=75}},nil}
+c["75% increased Evasion and Energy Shield"]={{[1]={flags=0,keywordFlags=0,name="EvasionAndEnergyShield",type="INC",value=75}},nil}
 c["75% increased Melee Damage with Spears while Surrounded"]={{[1]={[1]={type="Condition",var="Surrounded"},flags=268435716,keywordFlags=0,name="Damage",type="INC",value=75}},nil}
 c["75% increased Thorns damage if you've Blocked Recently"]={{[1]={[1]={type="Condition",var="BlockedRecently"},flags=0,keywordFlags=0,name="ThornsDamage",type="INC",value=75}},nil}
 c["75% increased chance to Shock"]={{[1]={flags=0,keywordFlags=0,name="EnemyShockChance",type="INC",value=75}},nil}
@@ -2666,7 +2690,7 @@ c["90% increased Evasion Rating"]={{[1]={flags=0,keywordFlags=0,name="Evasion",t
 c["90% increased Evasion and Energy Shield"]={{[1]={flags=0,keywordFlags=0,name="EvasionAndEnergyShield",type="INC",value=90}},nil}
 c["90% increased Spell Damage"]={{[1]={flags=2,keywordFlags=0,name="Damage",type="INC",value=90}},nil}
 c["A maximum of one Modifer can be granted this way"]={nil,"A maximum of one Modifer can be granted this way "}
-c["Accuracy Rating is Doubled"]={{[1]={flags=0,keywordFlags=0,name="Accuracy",type="MORE",value=100}},nil}
+c["Accuracy Rating is Doubled"]={{[1]={[1]={globalLimit=100,globalLimitKey="AccuracyDoubledLimit",type="Multiplier",var="AccuracyDoubled"},flags=0,keywordFlags=0,name="Accuracy",type="MORE",value=100},[2]={flags=0,keywordFlags=0,name="Multiplier:AccuracyDoubled",type="OVERRIDE",value=1}},nil}
 c["Adds 1 to 10 Lightning Damage to Attacks per 20 Intelligence"]={{[1]={[1]={div=20,stat="Int",type="PerStat"},flags=0,keywordFlags=65536,name="LightningMin",type="BASE",value=1},[2]={[1]={div=20,stat="Int",type="PerStat"},flags=0,keywordFlags=65536,name="LightningMax",type="BASE",value=10}},nil}
 c["Adds 1 to 100 Lightning Damage"]={{[1]={flags=0,keywordFlags=0,name="LightningMin",type="BASE",value=1},[2]={flags=0,keywordFlags=0,name="LightningMax",type="BASE",value=100}},nil}
 c["Adds 1 to 120 Lightning Damage"]={{[1]={flags=0,keywordFlags=0,name="LightningMin",type="BASE",value=1},[2]={flags=0,keywordFlags=0,name="LightningMax",type="BASE",value=120}},nil}
@@ -2688,6 +2712,7 @@ c["Adds 1 to 80 Lightning Damage"]={{[1]={flags=0,keywordFlags=0,name="Lightning
 c["Adds 10 to 15 Cold Damage"]={{[1]={flags=0,keywordFlags=0,name="ColdMin",type="BASE",value=10},[2]={flags=0,keywordFlags=0,name="ColdMax",type="BASE",value=15}},nil}
 c["Adds 10 to 16 Physical Damage to Attacks"]={{[1]={flags=0,keywordFlags=65536,name="PhysicalMin",type="BASE",value=10},[2]={flags=0,keywordFlags=65536,name="PhysicalMax",type="BASE",value=16}},nil}
 c["Adds 10 to 17 Physical Damage"]={{[1]={flags=0,keywordFlags=0,name="PhysicalMin",type="BASE",value=10},[2]={flags=0,keywordFlags=0,name="PhysicalMax",type="BASE",value=17}},nil}
+c["Adds 10 to 17 Physical Damage to Attacks"]={{[1]={flags=0,keywordFlags=65536,name="PhysicalMin",type="BASE",value=10},[2]={flags=0,keywordFlags=65536,name="PhysicalMax",type="BASE",value=17}},nil}
 c["Adds 10 to 18 Cold Damage"]={{[1]={flags=0,keywordFlags=0,name="ColdMin",type="BASE",value=10},[2]={flags=0,keywordFlags=0,name="ColdMax",type="BASE",value=18}},nil}
 c["Adds 10 to 18 Physical Damage"]={{[1]={flags=0,keywordFlags=0,name="PhysicalMin",type="BASE",value=10},[2]={flags=0,keywordFlags=0,name="PhysicalMax",type="BASE",value=18}},nil}
 c["Adds 11 to 20 Physical Damage to Attacks"]={{[1]={flags=0,keywordFlags=65536,name="PhysicalMin",type="BASE",value=11},[2]={flags=0,keywordFlags=65536,name="PhysicalMax",type="BASE",value=20}},nil}
@@ -2698,7 +2723,6 @@ c["Adds 12 to 20 Physical Damage"]={{[1]={flags=0,keywordFlags=0,name="PhysicalM
 c["Adds 12 to 22 Cold Damage"]={{[1]={flags=0,keywordFlags=0,name="ColdMin",type="BASE",value=12},[2]={flags=0,keywordFlags=0,name="ColdMax",type="BASE",value=22}},nil}
 c["Adds 12 to 22 Physical Damage"]={{[1]={flags=0,keywordFlags=0,name="PhysicalMin",type="BASE",value=12},[2]={flags=0,keywordFlags=0,name="PhysicalMax",type="BASE",value=22}},nil}
 c["Adds 12 to 35 Physical Damage"]={{[1]={flags=0,keywordFlags=0,name="PhysicalMin",type="BASE",value=12},[2]={flags=0,keywordFlags=0,name="PhysicalMax",type="BASE",value=35}},nil}
-c["Adds 126 to 201 Chaos damage"]={{[1]={flags=0,keywordFlags=0,name="ChaosMin",type="BASE",value=126},[2]={flags=0,keywordFlags=0,name="ChaosMax",type="BASE",value=201}},nil}
 c["Adds 13 to 24 Physical Damage"]={{[1]={flags=0,keywordFlags=0,name="PhysicalMin",type="BASE",value=13},[2]={flags=0,keywordFlags=0,name="PhysicalMax",type="BASE",value=24}},nil}
 c["Adds 14 to 20 Physical Damage"]={{[1]={flags=0,keywordFlags=0,name="PhysicalMin",type="BASE",value=14},[2]={flags=0,keywordFlags=0,name="PhysicalMax",type="BASE",value=20}},nil}
 c["Adds 14 to 24 Cold Damage"]={{[1]={flags=0,keywordFlags=0,name="ColdMin",type="BASE",value=14},[2]={flags=0,keywordFlags=0,name="ColdMax",type="BASE",value=24}},nil}
@@ -2713,10 +2737,12 @@ c["Adds 17 to 28 Physical Damage"]={{[1]={flags=0,keywordFlags=0,name="PhysicalM
 c["Adds 17 to 29 Physical Damage"]={{[1]={flags=0,keywordFlags=0,name="PhysicalMin",type="BASE",value=17},[2]={flags=0,keywordFlags=0,name="PhysicalMax",type="BASE",value=29}},nil}
 c["Adds 18 to 25 Physical Damage"]={{[1]={flags=0,keywordFlags=0,name="PhysicalMin",type="BASE",value=18},[2]={flags=0,keywordFlags=0,name="PhysicalMax",type="BASE",value=25}},nil}
 c["Adds 18 to 36 Physical Damage"]={{[1]={flags=0,keywordFlags=0,name="PhysicalMin",type="BASE",value=18},[2]={flags=0,keywordFlags=0,name="PhysicalMax",type="BASE",value=36}},nil}
+c["Adds 184 to 300 Chaos damage"]={{[1]={flags=0,keywordFlags=0,name="ChaosMin",type="BASE",value=184},[2]={flags=0,keywordFlags=0,name="ChaosMax",type="BASE",value=300}},nil}
 c["Adds 20 to 26 Physical Damage"]={{[1]={flags=0,keywordFlags=0,name="PhysicalMin",type="BASE",value=20},[2]={flags=0,keywordFlags=0,name="PhysicalMax",type="BASE",value=26}},nil}
 c["Adds 20 to 27 Physical Damage"]={{[1]={flags=0,keywordFlags=0,name="PhysicalMin",type="BASE",value=20},[2]={flags=0,keywordFlags=0,name="PhysicalMax",type="BASE",value=27}},nil}
 c["Adds 20 to 30 Physical Damage"]={{[1]={flags=0,keywordFlags=0,name="PhysicalMin",type="BASE",value=20},[2]={flags=0,keywordFlags=0,name="PhysicalMax",type="BASE",value=30}},nil}
 c["Adds 20 to 31 Cold damage to Attacks"]={{[1]={flags=0,keywordFlags=65536,name="ColdMin",type="BASE",value=20},[2]={flags=0,keywordFlags=65536,name="ColdMax",type="BASE",value=31}},nil}
+c["Adds 201 to 333 Chaos damage"]={{[1]={flags=0,keywordFlags=0,name="ChaosMin",type="BASE",value=201},[2]={flags=0,keywordFlags=0,name="ChaosMax",type="BASE",value=333}},nil}
 c["Adds 22 to 28 Physical Damage"]={{[1]={flags=0,keywordFlags=0,name="PhysicalMin",type="BASE",value=22},[2]={flags=0,keywordFlags=0,name="PhysicalMax",type="BASE",value=28}},nil}
 c["Adds 24 to 28 Physical Damage"]={{[1]={flags=0,keywordFlags=0,name="PhysicalMin",type="BASE",value=24},[2]={flags=0,keywordFlags=0,name="PhysicalMax",type="BASE",value=28}},nil}
 c["Adds 24 to 41 Physical Damage"]={{[1]={flags=0,keywordFlags=0,name="PhysicalMin",type="BASE",value=24},[2]={flags=0,keywordFlags=0,name="PhysicalMax",type="BASE",value=41}},nil}
@@ -2775,6 +2801,7 @@ c["Adds 7 to 12 Physical Damage"]={{[1]={flags=0,keywordFlags=0,name="PhysicalMi
 c["Adds 7 to 13 Physical Damage to Attacks"]={{[1]={flags=0,keywordFlags=65536,name="PhysicalMin",type="BASE",value=7},[2]={flags=0,keywordFlags=65536,name="PhysicalMax",type="BASE",value=13}},nil}
 c["Adds 8 to 13 Cold Damage"]={{[1]={flags=0,keywordFlags=0,name="ColdMin",type="BASE",value=8},[2]={flags=0,keywordFlags=0,name="ColdMax",type="BASE",value=13}},nil}
 c["Adds 8 to 14 Physical Damage to Attacks"]={{[1]={flags=0,keywordFlags=65536,name="PhysicalMin",type="BASE",value=8},[2]={flags=0,keywordFlags=65536,name="PhysicalMax",type="BASE",value=14}},nil}
+c["Adds 8 to 15 Physical Damage to Attacks"]={{[1]={flags=0,keywordFlags=65536,name="PhysicalMin",type="BASE",value=8},[2]={flags=0,keywordFlags=65536,name="PhysicalMax",type="BASE",value=15}},nil}
 c["Adds 9 to 14 Cold Damage"]={{[1]={flags=0,keywordFlags=0,name="ColdMin",type="BASE",value=9},[2]={flags=0,keywordFlags=0,name="ColdMax",type="BASE",value=14}},nil}
 c["Adds 9 to 15 Cold Damage"]={{[1]={flags=0,keywordFlags=0,name="ColdMin",type="BASE",value=9},[2]={flags=0,keywordFlags=0,name="ColdMax",type="BASE",value=15}},nil}
 c["Adds 9 to 17 Physical Damage to Attacks"]={{[1]={flags=0,keywordFlags=65536,name="PhysicalMin",type="BASE",value=9},[2]={flags=0,keywordFlags=65536,name="PhysicalMax",type="BASE",value=17}},nil}
@@ -2813,12 +2840,19 @@ c["Allies in your Presence Gain 25% of Damage as Extra Fire Damage"]={{[1]={flag
 c["Allies in your Presence Gain 30% of Damage as Extra Fire Damage"]={{[1]={flags=0,keywordFlags=0,name="ExtraAura",type="LIST",value={mod={flags=0,keywordFlags=0,name="DamageGainAsFire",type="BASE",value=30},onlyAllies=true}}},nil}
 c["Allies in your Presence Regenerate 1% of your Maximum Life per second"]={{[1]={flags=0,keywordFlags=0,name="ExtraAura",type="LIST",value={mod={flags=0,keywordFlags=0,name="LifeRegenPercent",type="BASE",value=1},onlyAllies=true}}},nil}
 c["Allies in your Presence Regenerate 3% of their Maximum Life per second"]={{}," "}
-c["Allies in your Presence Regenerate 3% of their Maximum Life per second Enemies in your Presence Resist Elemental Damage based on their Lowest Resistance"]={{}," Enemies in your Presence Resist  based on their Lowest Resistance "}
-c["Allies in your Presence deal 1 to 13 additional Attack Lightning Damage"]={{[1]={flags=0,keywordFlags=0,name="ExtraAura",type="LIST",value={mod={flags=0,keywordFlags=65536,name="LightningMin",type="BASE",value=1},onlyAllies=true}},[2]={flags=0,keywordFlags=0,name="ExtraAura",type="LIST",value={mod={flags=0,keywordFlags=65536,name="LightningMax",type="BASE",value=13},onlyAllies=true}}},nil}
-c["Allies in your Presence deal 1 to 15 additional Attack Lightning Damage"]={{[1]={flags=0,keywordFlags=0,name="ExtraAura",type="LIST",value={mod={flags=0,keywordFlags=65536,name="LightningMin",type="BASE",value=1},onlyAllies=true}},[2]={flags=0,keywordFlags=0,name="ExtraAura",type="LIST",value={mod={flags=0,keywordFlags=65536,name="LightningMax",type="BASE",value=15},onlyAllies=true}}},nil}
-c["Allies in your Presence deal 5 to 8 additional Attack Cold Damage"]={{[1]={flags=0,keywordFlags=0,name="ExtraAura",type="LIST",value={mod={flags=0,keywordFlags=65536,name="ColdMin",type="BASE",value=5},onlyAllies=true}},[2]={flags=0,keywordFlags=0,name="ExtraAura",type="LIST",value={mod={flags=0,keywordFlags=65536,name="ColdMax",type="BASE",value=8},onlyAllies=true}}},nil}
+c["Allies in your Presence Regenerate 3% of their Maximum Life per second Allies in your Presence Gain 30% of Damage as Extra Fire Damage"]={{}," Allies in your Presence Gain 30% of  as Extra Fire Damage "}
+c["Allies in your Presence deal 1 to 15 added Attack Lightning Damage"]={{[1]={flags=0,keywordFlags=0,name="ExtraAura",type="LIST",value={mod={flags=0,keywordFlags=65536,name="LightningMin",type="BASE",value=1},onlyAllies=true}},[2]={flags=0,keywordFlags=0,name="ExtraAura",type="LIST",value={mod={flags=0,keywordFlags=65536,name="LightningMax",type="BASE",value=15},onlyAllies=true}}},nil}
+c["Allies in your Presence deal 1 to 63 added Attack Lightning Damage"]={{[1]={flags=0,keywordFlags=0,name="ExtraAura",type="LIST",value={mod={flags=0,keywordFlags=65536,name="LightningMin",type="BASE",value=1},onlyAllies=true}},[2]={flags=0,keywordFlags=0,name="ExtraAura",type="LIST",value={mod={flags=0,keywordFlags=65536,name="LightningMax",type="BASE",value=63},onlyAllies=true}}},nil}
+c["Allies in your Presence deal 1 to 70 added Attack Lightning Damage"]={{[1]={flags=0,keywordFlags=0,name="ExtraAura",type="LIST",value={mod={flags=0,keywordFlags=65536,name="LightningMin",type="BASE",value=1},onlyAllies=true}},[2]={flags=0,keywordFlags=0,name="ExtraAura",type="LIST",value={mod={flags=0,keywordFlags=65536,name="LightningMax",type="BASE",value=70},onlyAllies=true}}},nil}
+c["Allies in your Presence deal 15 to 31 added Attack Chaos Damage"]={{[1]={flags=0,keywordFlags=0,name="ExtraAura",type="LIST",value={mod={flags=0,keywordFlags=65536,name="ChaosMin",type="BASE",value=15},onlyAllies=true}},[2]={flags=0,keywordFlags=0,name="ExtraAura",type="LIST",value={mod={flags=0,keywordFlags=65536,name="ChaosMax",type="BASE",value=31},onlyAllies=true}}},nil}
+c["Allies in your Presence deal 17 to 37 added Attack Chaos Damage"]={{[1]={flags=0,keywordFlags=0,name="ExtraAura",type="LIST",value={mod={flags=0,keywordFlags=65536,name="ChaosMin",type="BASE",value=17},onlyAllies=true}},[2]={flags=0,keywordFlags=0,name="ExtraAura",type="LIST",value={mod={flags=0,keywordFlags=65536,name="ChaosMax",type="BASE",value=37},onlyAllies=true}}},nil}
+c["Allies in your Presence deal 19 to 32 added Attack Cold Damage"]={{[1]={flags=0,keywordFlags=0,name="ExtraAura",type="LIST",value={mod={flags=0,keywordFlags=65536,name="ColdMin",type="BASE",value=19},onlyAllies=true}},[2]={flags=0,keywordFlags=0,name="ExtraAura",type="LIST",value={mod={flags=0,keywordFlags=65536,name="ColdMax",type="BASE",value=32},onlyAllies=true}}},nil}
+c["Allies in your Presence deal 19 to 32 added Attack Fire Damage"]={{[1]={flags=0,keywordFlags=0,name="ExtraAura",type="LIST",value={mod={flags=0,keywordFlags=65536,name="FireMin",type="BASE",value=19},onlyAllies=true}},[2]={flags=0,keywordFlags=0,name="ExtraAura",type="LIST",value={mod={flags=0,keywordFlags=65536,name="FireMax",type="BASE",value=32},onlyAllies=true}}},nil}
+c["Allies in your Presence deal 23 to 35 added Attack Cold Damage"]={{[1]={flags=0,keywordFlags=0,name="ExtraAura",type="LIST",value={mod={flags=0,keywordFlags=65536,name="ColdMin",type="BASE",value=23},onlyAllies=true}},[2]={flags=0,keywordFlags=0,name="ExtraAura",type="LIST",value={mod={flags=0,keywordFlags=65536,name="ColdMax",type="BASE",value=35},onlyAllies=true}}},nil}
+c["Allies in your Presence deal 23 to 35 added Attack Fire Damage"]={{[1]={flags=0,keywordFlags=0,name="ExtraAura",type="LIST",value={mod={flags=0,keywordFlags=65536,name="FireMin",type="BASE",value=23},onlyAllies=true}},[2]={flags=0,keywordFlags=0,name="ExtraAura",type="LIST",value={mod={flags=0,keywordFlags=65536,name="FireMax",type="BASE",value=35},onlyAllies=true}}},nil}
+c["Allies in your Presence deal 5 to 8 added Attack Cold Damage"]={{[1]={flags=0,keywordFlags=0,name="ExtraAura",type="LIST",value={mod={flags=0,keywordFlags=65536,name="ColdMin",type="BASE",value=5},onlyAllies=true}},[2]={flags=0,keywordFlags=0,name="ExtraAura",type="LIST",value={mod={flags=0,keywordFlags=65536,name="ColdMax",type="BASE",value=8},onlyAllies=true}}},nil}
 c["Allies in your Presence deal 50% increased Damage"]={{[1]={flags=0,keywordFlags=0,name="ExtraAura",type="LIST",value={mod={flags=0,keywordFlags=0,name="Damage",type="INC",value=50},onlyAllies=true}}},nil}
-c["Allies in your Presence deal 6 to 10 additional Attack Fire Damage"]={{[1]={flags=0,keywordFlags=0,name="ExtraAura",type="LIST",value={mod={flags=0,keywordFlags=65536,name="FireMin",type="BASE",value=6},onlyAllies=true}},[2]={flags=0,keywordFlags=0,name="ExtraAura",type="LIST",value={mod={flags=0,keywordFlags=65536,name="FireMax",type="BASE",value=10},onlyAllies=true}}},nil}
+c["Allies in your Presence deal 6 to 10 added Attack Fire Damage"]={{[1]={flags=0,keywordFlags=0,name="ExtraAura",type="LIST",value={mod={flags=0,keywordFlags=65536,name="FireMin",type="BASE",value=6},onlyAllies=true}},[2]={flags=0,keywordFlags=0,name="ExtraAura",type="LIST",value={mod={flags=0,keywordFlags=65536,name="FireMax",type="BASE",value=10},onlyAllies=true}}},nil}
 c["Allies in your Presence deal 70% increased Damage"]={{[1]={flags=0,keywordFlags=0,name="ExtraAura",type="LIST",value={mod={flags=0,keywordFlags=0,name="Damage",type="INC",value=70},onlyAllies=true}}},nil}
 c["Allies in your Presence gain added Attack Damage equal"]={nil,"added Attack Damage equal "}
 c["Allies in your Presence gain added Attack Damage equal to 25% of your main hand Weapon's Damage"]={{[1]={flags=0,keywordFlags=0,name="ExtraAura",type="LIST",value={mod={flags=0,keywordFlags=0,name="GainMainHandDmgFromParent",type="FLAG",value=true},onlyAllies=true}},[2]={flags=0,keywordFlags=0,name="Multiplier:MainHandDamageToAllies",type="BASE",value=25}},nil}
@@ -3029,6 +3063,7 @@ c["Allocates Feel the Earth"]={{[1]={flags=0,keywordFlags=0,name="GrantedPassive
 c["Allocates Feral Force"]={{[1]={flags=0,keywordFlags=0,name="GrantedPassive",type="LIST",value="feral force"}},nil}
 c["Allocates Fervour"]={{[1]={flags=0,keywordFlags=0,name="GrantedPassive",type="LIST",value="fervour"}},nil}
 c["Allocates Final Barrage"]={{[1]={flags=0,keywordFlags=0,name="GrantedPassive",type="LIST",value="final barrage"}},nil}
+c["Allocates Finality"]={{[1]={flags=0,keywordFlags=0,name="GrantedPassive",type="LIST",value="finality"}},nil}
 c["Allocates Finesse"]={{[1]={flags=0,keywordFlags=0,name="GrantedPassive",type="LIST",value="finesse"}},nil}
 c["Allocates Finishing Blows"]={{[1]={flags=0,keywordFlags=0,name="GrantedPassive",type="LIST",value="finishing blows"}},nil}
 c["Allocates Fireproof"]={{[1]={flags=0,keywordFlags=0,name="GrantedPassive",type="LIST",value="fireproof"}},nil}
@@ -3420,11 +3455,10 @@ c["Allocates Wrapped Quiver"]={{[1]={flags=0,keywordFlags=0,name="GrantedPassive
 c["Allocates Zone of Control"]={{[1]={flags=0,keywordFlags=0,name="GrantedPassive",type="LIST",value="zone of control"}},nil}
 c["Alternating every 5 seconds:"]={nil,"Alternating every 5 seconds: "}
 c["Alternating every 5 seconds: Take 30% less Damage from Hits"]={nil,"Alternating every 5 seconds: Take 30% less Damage from Hits "}
-c["Always Hits"]={nil,"Always Hits "}
-c["Always Poison on Hit with this weapon"]={nil,"Always Poison on Hit with this weapon "}
+c["Always Hits"]={{[1]={[1]={type="Condition",var="{Hand}Attack"},flags=0,keywordFlags=0,name="CannotBeEvaded",type="FLAG",value=true}},nil}
+c["Always Poison on Hit with this weapon"]={{[1]={[1]={type="Condition",var="{Hand}Attack"},[2]={neg=true,skillType=167,type="SkillType"},flags=8192,keywordFlags=0,name="PoisonChance",type="OVERRIDE",value=100}},nil}
 c["Always deals Critical Hits against Heavy Stunned Enemies"]={{[1]={[1]={actor="enemy",type="ActorCondition",var="HeavyStunned"},[2]={type="Condition",var="{Hand}Attack"},flags=0,keywordFlags=0,name="CritChance",type="OVERRIDE",value=100}},nil}
-c["Any number of Poisons from this Weapon can affect a target at the same time"]={nil,"Any number of Poisons from this Weapon can affect a target at the same time "}
-c["Any number of Poisons from this Weapon can affect a target at the same time Always Poison on Hit with this weapon"]={nil,"Any number of Poisons from this Weapon can affect a target at the same time Always Poison on Hit with this weapon "}
+c["Any number of Poisons from this Weapon can affect a target at the same time"]={{[1]={flags=0,keywordFlags=0,name="PoisonCanStack",type="FLAG",value=true},[2]={[1]={type="Condition",var="{Hand}Attack"},[2]={neg=true,skillType=167,type="SkillType"},flags=0,keywordFlags=0,name="PoisonStacks",type="OVERRIDE",value=math.huge}},nil}
 c["Apply Elemental Exposure to Enemies 3 metres in front of you"]={nil,"Apply Elemental Exposure to Enemies 3 metres in front of you "}
 c["Apply Elemental Exposure to Enemies 3 metres in front of you for 4 seconds while Shield is raised"]={nil,"Apply Elemental Exposure to Enemies 3 metres in front of you for 4 seconds while Shield is raised "}
 c["Area Skills have 20% chance to Knock Enemies Back on Hit"]={{[1]={[1]={skillType=8,type="SkillType"},flags=0,keywordFlags=0,name="EnemyKnockbackChance",type="BASE",value=20}},nil}
@@ -3453,14 +3487,22 @@ c["Attacks Gain 8% of Damage as Extra Cold Damage"]={{[1]={flags=1,keywordFlags=
 c["Attacks Gain 8% of Damage as Extra Fire Damage"]={{[1]={flags=1,keywordFlags=0,name="DamageGainAsFire",type="BASE",value=8}},nil}
 c["Attacks consume an Endurance Charge to Critically Hit"]={nil,"Attacks consume an Endurance Charge to Critically Hit "}
 c["Attacks consume an Endurance Charge to Critically Hit Take 100 Chaos damage per second per Endurance Charge"]={nil,"Attacks consume an Endurance Charge to Critically Hit Take 100 Chaos damage per second per Endurance Charge "}
+c["Attacks cost an additional 6% of your maximum Mana"]={{[1]={[1]={percent=6,stat="Mana",type="PercentStat"},flags=0,keywordFlags=65536,name="ManaCost",type="BASE",value=1}},nil}
 c["Attacks gain increased Accuracy Rating equal to their Critical Hit Chance"]={nil,"increased Accuracy Rating equal to their Critical Hit Chance "}
 c["Attacks have +1% to Critical Hit Chance"]={{[1]={flags=1,keywordFlags=0,name="CritChance",type="BASE",value=1}},nil}
 c["Attacks have 10% chance to Maim on Hit"]={{}," to Maim  "}
 c["Attacks have 25% chance to Maim on Hit"]={{}," to Maim  "}
+c["Attacks have Added maximum Lightning Damage equal to 8% of maximum Mana"]={{[1]={[1]={percent=8,stat="Mana",type="PercentStat"},[2]={skillType=1,type="SkillType"},flags=0,keywordFlags=0,name="LightningMax",type="BASE",value=1}},nil}
+c["Attacks have Added maximum Lightning Damage equal to 9% of maximum Mana"]={{[1]={[1]={percent=9,stat="Mana",type="PercentStat"},[2]={skillType=1,type="SkillType"},flags=0,keywordFlags=0,name="LightningMax",type="BASE",value=1}},nil}
+c["Attacks have added Physical damage equal to 3% of maximum Life"]={{[1]={[1]={percent=3,stat="Life",type="PercentStat"},[2]={skillType=1,type="SkillType"},flags=0,keywordFlags=0,name="PhysicalMin",type="BASE",value=1},[2]={[1]={percent=3,stat="Life",type="PercentStat"},[2]={skillType=1,type="SkillType"},flags=0,keywordFlags=0,name="PhysicalMax",type="BASE",value=1}},nil}
+c["Attacks used by Totems have 2% increased Attack Speed per Summoned Totem"]={{[1]={[1]={stat="TotemsSummoned",type="PerStat"},flags=1,keywordFlags=16384,name="Speed",type="INC",value=2}},nil}
 c["Attacks used by Totems have 4% increased Attack Speed"]={{[1]={flags=1,keywordFlags=16384,name="Speed",type="INC",value=4}},nil}
+c["Attacks used by Totems have 4% increased Attack Speed per Summoned Totem"]={{[1]={[1]={stat="TotemsSummoned",type="PerStat"},flags=1,keywordFlags=16384,name="Speed",type="INC",value=4}},nil}
 c["Attacks using your Weapons have Added Physical Damage equal"]={nil,"Added Physical Damage equal "}
 c["Attacks using your Weapons have Added Physical Damage equal to 25% of the Accuracy Rating on the Weapon"]={{[1]={[1]={percent="25",stat="AccuracyOnWeapon 1",type="PercentStat"},[2]={neg=true,skillType=167,type="SkillType"},[3]={type="Condition",var="MainHandAttack"},flags=1,keywordFlags=0,name="PhysicalMin",type="BASE",value=1},[2]={[1]={percent="25",stat="AccuracyOnWeapon 1",type="PercentStat"},[2]={neg=true,skillType=167,type="SkillType"},[3]={type="Condition",var="MainHandAttack"},flags=1,keywordFlags=0,name="PhysicalMax",type="BASE",value=1},[3]={[1]={percent="25",stat="AccuracyOnWeapon 2",type="PercentStat"},[2]={neg=true,skillType=167,type="SkillType"},[3]={type="Condition",var="OffHandAttack"},flags=1,keywordFlags=0,name="PhysicalMin",type="BASE",value=1},[4]={[1]={percent="25",stat="AccuracyOnWeapon 2",type="PercentStat"},[2]={neg=true,skillType=167,type="SkillType"},[3]={type="Condition",var="OffHandAttack"},flags=1,keywordFlags=0,name="PhysicalMax",type="BASE",value=1}},nil}
-c["Attacks with this Weapon gain 50% of Physical damage as Extra damage of each Element"]={{[1]={[1]={type="Condition",var="{Hand}Attack"},[2]={skillType=1,type="SkillType"},flags=0,keywordFlags=0,name="PhysicalDamage",type="BASE",value=50}},"  as Extra damage of each Element "}
+c["Attacks with One-Handed Weapons have 12% increased Chance to inflict Ailments"]={{[1]={flags=17179869184,keywordFlags=0,name="AilmentChance",type="INC",value=12}},nil}
+c["Attacks with One-Handed Weapons have 20% increased Chance to inflict Ailments"]={{[1]={flags=17179869184,keywordFlags=0,name="AilmentChance",type="INC",value=20}},nil}
+c["Attacks with this Weapon gain 50% of Physical damage as Extra damage of each Element"]={{[1]={[2]={type="Condition",var="{Hand}Attack"},[3]={skillType=1,type="SkillType"},flags=0,keywordFlags=0,name="PhysicalDamageGainAsLightning",type="BASE",value=50},[2]={[2]={type="Condition",var="{Hand}Attack"},[3]={skillType=1,type="SkillType"},flags=0,keywordFlags=0,name="PhysicalDamageGainAsCold",type="BASE",value=50},[3]={[2]={type="Condition",var="{Hand}Attack"},[3]={skillType=1,type="SkillType"},flags=0,keywordFlags=0,name="PhysicalDamageGainAsFire",type="BASE",value=50}},nil}
 c["Attribute Requirements of Gems can be satisified by your highest Attribute"]={{[1]={flags=0,keywordFlags=0,name="GemAttributeRequirementsSatisfiedByHighestAttribute",type="FLAG",value=true}},nil}
 c["Aura Skills have 1% more Aura Effect per 2% of maximum Mana they Reserve"]={{[1]={[1]={skillType=39,type="SkillType"},[2]={div=2,stat="ManaReservedPercent",type="PerStat"},flags=0,keywordFlags=0,name="AuraEffect",type="MORE",value=1}},nil}
 c["Aura Skills have 12% increased Magnitudes"]={{}," Magnitudes "}
@@ -3468,12 +3510,13 @@ c["Aura Skills have 5% increased Magnitudes"]={{}," Magnitudes "}
 c["Aura Skills have 6% increased Magnitudes"]={{}," Magnitudes "}
 c["Auras from your Skills can only affect you"]={{[1]={flags=0,keywordFlags=0,name="SelfAurasOnlyAffectYou",type="FLAG",value=true}},nil}
 c["Banner Buffs linger on you for 4 seconds after you leave the Area"]={nil,"Banner Buffs linger on you for 4 seconds after you leave the Area "}
-c["Banner Skills have 12% increased Aura Magnitudes"]={{}," Aura Magnitudes "}
+c["Banner Skills have 12% increased Aura Magnitudes"]={{[1]={[1]={skillType=88,type="SkillType"},flags=0,keywordFlags=0,name="AuraEffect",type="INC",value=12}},nil}
 c["Banner Skills have 15% increased Area of Effect"]={{[1]={[1]={skillType=88,type="SkillType"},flags=0,keywordFlags=0,name="AreaOfEffect",type="INC",value=15}},nil}
 c["Banner Skills have 20% increased Area of Effect"]={{[1]={[1]={skillType=88,type="SkillType"},flags=0,keywordFlags=0,name="AreaOfEffect",type="INC",value=20}},nil}
 c["Banner Skills have 20% increased Duration"]={{[1]={[1]={skillType=88,type="SkillType"},flags=0,keywordFlags=0,name="Duration",type="INC",value=20}},nil}
 c["Banners also grant +5% to all Elemental Resistances to you and Allies"]={{[1]={[1]={skillType=88,type="SkillType"},flags=0,keywordFlags=0,name="ExtraAuraEffect",type="LIST",value={mod={flags=0,keywordFlags=0,name="ElementalResist",type="BASE",value=5}}}},nil}
 c["Banners always have maximum Valour"]={nil,"Banners always have maximum Valour "}
+c["Barrageable Attacks with this Bow Repeat +1 time if no enemies are in your Presence"]={nil,"Barrageable Attacks with this Bow Repeat +1 time if no enemies are in your Presence "}
 c["Base Bleeding Duration is 1 second"]={{[1]={flags=0,keywordFlags=0,name="BleedDurationBase",type="OVERRIDE",value="1"}},nil}
 c["Base Critical Hit Chance for Attacks with Weapons is 7%"]={{[1]={flags=0,keywordFlags=0,name="WeaponBaseCritChance",type="OVERRIDE",value=7}},nil}
 c["Base Critical Hit Chance for Attacks with Weapons is 8%"]={{[1]={flags=0,keywordFlags=0,name="WeaponBaseCritChance",type="OVERRIDE",value=8}},nil}
@@ -3486,9 +3529,10 @@ c["Bleeding you inflict is Aggravated"]={{[1]={flags=0,keywordFlags=0,name="Enem
 c["Bleeding you inflict on Cursed targets is Aggravated"]={{[1]={flags=0,keywordFlags=0,name="EnemyModifier",type="LIST",value={mod={[1]={type="Condition",var="Cursed"},flags=0,keywordFlags=0,name="Condition:BleedAggravated",type="FLAG",value=true}}}},nil}
 c["Blind Chilled enemies on Hit"]={nil,"Blind Chilled enemies on Hit "}
 c["Blind Enemies when they Stun you"]={nil,"Blind Enemies when they Stun you "}
+c["Blind Targets when you Poison them"]={nil,"Blind Targets when you Poison them "}
 c["Blind does not affect your Light Radius"]={nil,"Blind does not affect your Light Radius "}
 c["Blind does not affect your Light Radius 25% more Melee Critical Hit Chance while Blinded"]={nil,"Blind does not affect your Light Radius 25% more Melee Critical Hit Chance while Blinded "}
-c["Block Chance is doubled"]={{[1]={flags=0,keywordFlags=0,name="BlockChance",type="MORE",value=100}},nil}
+c["Block Chance is doubled"]={{[1]={[1]={globalLimit=100,globalLimitKey="BlockChanceDoubledLimit",type="Multiplier",var="BlockChanceDoubled"},flags=0,keywordFlags=0,name="BlockChance",type="MORE",value=100},[2]={flags=0,keywordFlags=0,name="Multiplier:BlockChanceDoubled",type="OVERRIDE",value=1}},nil}
 c["Block chance is Lucky"]={{[1]={flags=0,keywordFlags=0,name="BlockChanceIsLucky",type="FLAG",value=true}},nil}
 c["Blocking Damage Poisons the Enemy as though dealing 100 Base Chaos Damage"]={nil,"Blocking Damage Poisons the Enemy as though dealing 100 Base Chaos Damage "}
 c["Blocking Damage Poisons the Enemy as though dealing 100 Base Chaos Damage Blocking Damage Poisons the Enemy as though dealing 200 Base Chaos Damage"]={nil,"Blocking Damage Poisons the Enemy as though dealing 100 Base Chaos Damage Blocking Damage Poisons the Enemy as though dealing 200 Base Chaos Damage "}
@@ -3530,9 +3574,7 @@ c["Can Block damage from all Hits Cannot use Shield Skills"]={nil,"Can Block dam
 c["Can Evade all Hits"]={nil,"Can Evade all Hits "}
 c["Can Evade all Hits 75% less Evasion Rating"]={nil,"Can Evade all Hits 75% less Evasion Rating "}
 c["Can Evade all Hits if you have not been Hit Recently"]={nil,"Can Evade all Hits if you have not been Hit Recently "}
-c["Can Socket a non-Unique Basic Jewel into the Phylactery"]={nil,"Can Socket a non-Unique Basic Jewel into the Phylactery "}
-c["Can Socket a non-Unique Basic Jewel into the Phylactery 100% increased Effect of the Socketed Jewel"]={nil,"Can Socket a non-Unique Basic Jewel into the Phylactery 100% increased Effect of the Socketed Jewel "}
-c["Can Socket a non-Unique Basic Jewel into the Phylactery 100% increased Effect of the Socketed Jewel 50% more Mana Cost of Skills if you have no Energy Shield"]={nil,"Can Socket a non-Unique Basic Jewel into the Phylactery 100% increased Effect of the Socketed Jewel 50% more Mana Cost of Skills if you have no Energy Shield "}
+c["Can Socket a non-Unique Basic Jewel into the Phylactery"]={{},nil}
 c["Can be modified while Corrupted"]={nil,"Can be modified while Corrupted "}
 c["Can be modified while Corrupted +150 to maximum Life"]={nil,"Can be modified while Corrupted +150 to maximum Life "}
 c["Can instead consume 25% of maximum Mana to trigger Charms with insufficient charges"]={nil,"Can instead consume 25% of maximum Mana to trigger Charms with insufficient charges "}
@@ -3562,9 +3604,9 @@ c["Cannot gain Spirit from Equipment"]={{[1]={flags=0,keywordFlags=0,name="Canno
 c["Cannot have Energy Shield"]={{[1]={flags=0,keywordFlags=0,name="CannotHaveES",type="FLAG",value=true}},nil}
 c["Cannot use Charms"]={{[1]={flags=0,keywordFlags=0,name="CharmLimit",type="OVERRIDE",value=0}},nil}
 c["Cannot use Life Flasks"]={nil,"Cannot use Life Flasks "}
-c["Cannot use Projectile Attacks"]={nil,"Cannot use Projectile Attacks "}
-c["Cannot use Shield Skills"]={nil,"Cannot use Shield Skills "}
-c["Cannot use Warcries"]={nil,"Cannot use Warcries "}
+c["Cannot use Projectile Attacks"]={{[1]={[1]={skillType=1,type="SkillType"},[2]={skillType=3,type="SkillType"},flags=0,keywordFlags=0,name="DisableSkill",type="FLAG",value=true}},nil}
+c["Cannot use Shield Skills"]={{[1]={[1]={skillType=10,type="SkillType"},flags=0,keywordFlags=0,name="DisableSkill",type="FLAG",value=true}},nil}
+c["Cannot use Warcries"]={{[1]={[1]={skillType=63,type="SkillType"},flags=0,keywordFlags=0,name="DisableSkill",type="FLAG",value=true}},nil}
 c["Carry a Chest which adds 20 Inventory Slots"]={{},nil}
 c["Causes 200% increased Stun Buildup"]={nil,"Causes 200% increased Stun Buildup "}
 c["Causes 200% increased Stun Buildup All Damage from Hits with this Weapon Contributes to Chill Magnitude"]={nil,"Causes 200% increased Stun Buildup All Damage from Hits with this Weapon Contributes to Chill Magnitude "}
@@ -3577,20 +3619,20 @@ c["Causes Bleeding on Hit"]={{[1]={[1]={type="Condition",var="{Hand}Attack"},fla
 c["Causes Daze buildup equal to 100% of Damage dealt"]={nil,"Causes Daze buildup equal to 100% of Damage dealt "}
 c["Causes Daze buildup equal to 100% of Damage dealt 172% increased Physical Damage"]={nil,"Causes Daze buildup equal to 100% of Damage dealt 172% increased Physical Damage "}
 c["Causes Daze buildup equal to 100% of Damage dealt Adds 44 to 66 Fire Damage"]={{[1]={flags=0,keywordFlags=0,name="FireMin",type="BASE",value=44},[2]={flags=0,keywordFlags=0,name="FireMax",type="BASE",value=66}},"Causes Daze buildup equal to 100% of  dealt  "}
-c["Causes Double Stun Buildup"]={nil,"Causes Double Stun Buildup "}
+c["Causes Double Stun Buildup"]={{}," Stun Buildup "}
 c["Causes Enemies to Explode on Critical kill, for 10% of their Life as Physical Damage"]={nil,"Causes Enemies to Explode on Critical kill, for 10% of their Life as Physical Damage "}
 c["Causes Enemies to Explode on Critical kill, for 10% of their Life as Physical Damage 120% increased Physical Damage"]={nil,"Causes Enemies to Explode on Critical kill, for 10% of their Life as Physical Damage 120% increased Physical Damage "}
 c["Causes Enemies to Explode on Critical kill, for 10% of their Life as Physical Damage 172% increased Physical Damage"]={nil,"Causes Enemies to Explode on Critical kill, for 10% of their Life as Physical Damage 172% increased Physical Damage "}
 c["Causes Enemies to Explode on Critical kill, for 10% of their Life as Physical Damage Adds 62 to 94 Fire Damage"]={{[1]={flags=0,keywordFlags=0,name="FireMin",type="BASE",value=62},[2]={flags=0,keywordFlags=0,name="FireMax",type="BASE",value=94}},"Causes Enemies to Explode on Critical kill, for 10% of their  as Physical Damage  "}
-c["Chance is doubled against Undead and Demons"]={nil,"Chance is doubled against Undead and Demons "}
+c["Chance is doubled against Undead and Demons"]={{},"Chance  against Undead and Demons "}
 c["Chance to Hit with Attacks can exceed 100%"]={{[1]={[1]={skillType=1,type="Skilltype"},flags=0,keywordFlags=0,name="Condition:HitChanceCanExceed100",type="FLAG",value=true}},nil}
-c["Chance to Ignite is doubled"]={{[1]={flags=0,keywordFlags=0,name="EnemyIgniteChance",type="MORE",value=100}},nil}
+c["Chance to Ignite is doubled"]={{[1]={[1]={globalLimit=100,globalLimitKey="EnemyIgniteChanceDoubledLimit",type="Multiplier",var="EnemyIgniteChanceDoubled"},flags=0,keywordFlags=0,name="EnemyIgniteChance",type="MORE",value=100},[2]={flags=0,keywordFlags=0,name="Multiplier:EnemyIgniteChanceDoubled",type="OVERRIDE",value=1}},nil}
 c["Chaos Damage from Hits also Contributes to Electrocute Buildup"]={nil,"Chaos Damage from Hits also Contributes to Electrocute Buildup "}
 c["Chaos Damage from Hits also Contributes to Electrocute Buildup Attacks Gain 20% of Physical Damage as extra Chaos Damage"]={nil,"Chaos Damage from Hits also Contributes to Electrocute Buildup Attacks Gain 20% of Physical Damage as extra Chaos Damage "}
 c["Chaos Damage from Hits also Contributes to Freeze Buildup"]={nil,"Chaos Damage from Hits also Contributes to Freeze Buildup "}
 c["Chaos Damage from Hits also Contributes to Freeze Buildup Chaos Damage from Hits also Contributes to Electrocute Buildup"]={nil,"Chaos Damage from Hits also Contributes to Freeze Buildup Chaos Damage from Hits also Contributes to Electrocute Buildup "}
-c["Chaos Damage from Hits also Contributes to Shock Chance"]={nil,"Chaos Damage from Hits also Contributes to Shock Chance "}
-c["Chaos Resistance is doubled"]={{[1]={flags=0,keywordFlags=0,name="ChaosResist",type="MORE",value=100}},nil}
+c["Chaos Damage from Hits also Contributes to Shock Chance"]={{[1]={flags=0,keywordFlags=0,name="ChaosCanShock",type="FLAG",value=true}},nil}
+c["Chaos Resistance is doubled"]={{[1]={[1]={globalLimit=100,globalLimitKey="ChaosResistDoubledLimit",type="Multiplier",var="ChaosResistDoubled"},flags=0,keywordFlags=0,name="ChaosResist",type="MORE",value=100},[2]={flags=0,keywordFlags=0,name="Multiplier:ChaosResistDoubled",type="OVERRIDE",value=1}},nil}
 c["Chaos Resistance is zero"]={{[1]={flags=0,keywordFlags=0,name="ChaosResist",type="OVERRIDE",value=0}},nil}
 c["Charms applied to you have 10% increased Effect"]={{[1]={[1]={actor="player",type="ActorCondition"},flags=0,keywordFlags=0,name="CharmEffect",type="INC",value=10}},nil}
 c["Charms applied to you have 25% increased Effect"]={{[1]={[1]={actor="player",type="ActorCondition"},flags=0,keywordFlags=0,name="CharmEffect",type="INC",value=25}},nil}
@@ -3600,11 +3642,11 @@ c["Charms use no Charges"]={{[1]={flags=0,keywordFlags=0,name="CharmsUseNoCharge
 c["Cold Damage from Hits Contributes to Ignite Chance and Magnitude instead of Chill Magnitude or Freeze Buildup"]={nil,"Cold Damage from Hits Contributes to Ignite Chance and Magnitude instead of Chill Magnitude or Freeze Buildup "}
 c["Cold Damage from Hits Contributes to Ignite Chance and Magnitude instead of Chill Magnitude or Freeze Buildup Lightning Damage from Hits Contributes to Freeze Buildup instead of Shock Chance"]={nil,"Cold Damage from Hits Contributes to Ignite Chance and Magnitude instead of Chill Magnitude or Freeze Buildup Lightning Damage from Hits Contributes to Freeze Buildup instead of Shock Chance "}
 c["Cold Exposure you inflict lowers Total Cold Resistance by an extra 5%"]={{[1]={flags=0,keywordFlags=0,name="ExtraColdExposure",type="BASE",value=-5}},nil}
+c["Cold Resistance is unaffected by Area Penalties"]={nil,"Cold Resistance is unaffected by Area Penalties "}
+c["Cold Resistance is unaffected by Area Penalties Fire Resistance is unaffected by Area Penalties"]={nil,"Cold Resistance is unaffected by Area Penalties Fire Resistance is unaffected by Area Penalties "}
 c["Companions deal 12% increased Damage"]={{[1]={[1]={skillType=198,type="SkillType"},flags=0,keywordFlags=0,name="MinionModifier",type="LIST",value={mod={flags=0,keywordFlags=0,name="Damage",type="INC",value=12}}}},nil}
-c["Companions gain your Dexterity"]={nil,"Companions gain your Dexterity "}
-c["Companions gain your Dexterity +15 to Dexterity"]={nil,"Companions gain your Dexterity +15 to Dexterity "}
-c["Companions gain your Strength"]={nil,"Companions gain your Strength "}
-c["Companions gain your Strength +15 to Strength"]={nil,"Companions gain your Strength +15 to Strength "}
+c["Companions gain your Dexterity"]={{[1]={flags=0,keywordFlags=0,name="DexterityAddedToCompanions",type="FLAG",value=true}},nil}
+c["Companions gain your Strength"]={{[1]={flags=0,keywordFlags=0,name="StrengthAddedToCompanions",type="FLAG",value=true}},nil}
 c["Companions have +1 to each Defence for every 2 of that Defence you have"]={{}," each Defence for every 2 of that Defence you have "}
 c["Companions have +12% to all Elemental Resistances"]={{[1]={[1]={skillType=198,type="SkillType"},flags=0,keywordFlags=0,name="MinionModifier",type="LIST",value={mod={flags=0,keywordFlags=0,name="ElementalResist",type="BASE",value=12}}}},nil}
 c["Companions have +30% to Chaos Resistance"]={{[1]={[1]={skillType=198,type="SkillType"},flags=0,keywordFlags=0,name="MinionModifier",type="LIST",value={mod={flags=0,keywordFlags=0,name="ChaosResist",type="BASE",value=30}}}},nil}
@@ -3621,7 +3663,7 @@ c["Converts all Evasion Rating to Armour"]={{[1]={flags=0,keywordFlags=0,name="I
 c["Corrupted Blood cannot be inflicted on you"]={{[1]={flags=0,keywordFlags=0,name="CorruptedBloodImmune",type="FLAG",value=true}},nil}
 c["Creates Consecrated Ground on use"]={{},nil}
 c["Critical Hits Ignore Enemy Monster Lightning Resistance"]={{[1]={[1]={type="Condition",var="CriticalStrike"},flags=0,keywordFlags=0,name="IgnoreLightningResistance",type="FLAG",value=true}},nil}
-c["Critical Hits Poison the enemy"]={nil,"Critical Hits Poison the enemy "}
+c["Critical Hits Poison the enemy"]={{[1]={[1]={type="Condition",var="CriticalStrike"},flags=0,keywordFlags=0,name="PoisonChance",type="OVERRIDE",value=100}},nil}
 c["Critical Hits cannot Extract Impale"]={nil,"Critical Hits cannot Extract Impale "}
 c["Critical Hits cannot Extract Impale 31 to 49 Physical Thorns damage"]={nil,"Critical Hits cannot Extract Impale 31 to 49 Physical Thorns damage "}
 c["Critical Hits do not deal extra Damage"]={{[1]={flags=0,keywordFlags=0,name="NoCritMultiplier",type="FLAG",value=true}},nil}
@@ -3717,11 +3759,12 @@ c["Dodge Roll cannot Avoid Damage"]={nil,"Dodge Roll cannot Avoid Damage "}
 c["Dodge Roll cannot Avoid Damage Take 30% less Damage from Hits while Dodge Rolling"]={nil,"Dodge Roll cannot Avoid Damage Take 30% less Damage from Hits while Dodge Rolling "}
 c["Dodge Roll passes through Enemies"]={nil,"Dodge Roll passes through Enemies "}
 c["Double Activation Delay of Curses"]={{[1]={flags=0,keywordFlags=0,name="CurseDelay",type="MORE",value=100}},nil}
-c["Double Stun Threshold while Shield is Raised"]={nil,"Double Stun Threshold while Shield is Raised "}
+c["Double Stun Threshold while Shield is Raised"]={{[1]={[1]={globalLimit=100,globalLimitKey="StunThresholdDoubledLimit",type="Multiplier",var="StunThresholdDoubled"},flags=0,keywordFlags=0,name="StunThreshold",type="MORE",value=100},[2]={flags=0,keywordFlags=0,name="Multiplier:StunThresholdDoubled",type="OVERRIDE",value=1}},"  while Shield is Raised "}
 c["Double the number of your Poisons that targets can be affected by at the same time"]={{[1]={flags=0,keywordFlags=0,name="PoisonCanStack",type="FLAG",value=true},[2]={flags=0,keywordFlags=0,name="PoisonStacks",type="MORE",value=100}},nil}
 c["Doubles Mana Costs"]={{[1]={flags=0,keywordFlags=0,name="ManaCost",type="MORE",value=100}},nil}
 c["Drop Ignited Ground while moving, which lasts 8 seconds and Ignites as though dealing Fire Damage equal to 10% of your maximum Life"]={nil,"Drop Ignited Ground while moving, which lasts 8 seconds and Ignites as though dealing Fire Damage equal to 10% of your maximum Life "}
 c["Drop Shocked Ground while moving, lasting 8 seconds"]={nil,"Drop Shocked Ground while moving, lasting 8 seconds "}
+c["Each Arrow fired is a Crescendo, Splinter, Reversing, Diamond, Covetous, or Blunt Arrow"]={nil,"Each Arrow fired is a Crescendo, Splinter, Reversing, Diamond, Covetous, or Blunt Arrow "}
 c["Effect and Duration of Flames of Chayula on You is Doubled"]={{[1]={flags=0,keywordFlags=0,name="Multiplier:FlameEffect",type="BASE",value=1}},nil}
 c["Effect is not removed when Unreserved Mana is Filled"]={{[1]={flags=0,keywordFlags=0,name="ManaFlaskEffectNotRemoved",type="FLAG",value=true}},nil}
 c["Eldritch Battery"]={{[1]={flags=0,keywordFlags=0,name="Keystone",type="LIST",value="Eldritch Battery"}},nil}
@@ -3745,35 +3788,36 @@ c["Enemies Hitting you have 10% chance to gain an Endurance,  Frenzy or Power Ch
 c["Enemies Ignited by you have -5% to Fire Resistance"]={{[1]={flags=0,keywordFlags=0,name="EnemyModifier",type="LIST",value={mod={[1]={type="Condition",var="Ignited"},flags=0,keywordFlags=0,name="FireResist",type="BASE",value=-5}}}},nil}
 c["Enemies Ignited by you take Chaos Damage instead of Fire Damage from Ignite"]={{[1]={flags=0,keywordFlags=0,name="IgniteToChaos",type="FLAG",value=true}},nil}
 c["Enemies Immobilised by you take 25% less Damage"]={{[1]={flags=0,keywordFlags=0,name="EnemyModifier",type="LIST",value={mod={[1]={type="Condition",var="Immobilised"},flags=0,keywordFlags=0,name="DamageTaken",type="MORE",value=-25}}}},nil}
-c["Enemies affected by your Hazards Recently have 25% reduced Armour"]={nil,"your Hazards Recently have 25% reduced Armour "}
-c["Enemies affected by your Hazards Recently have 25% reduced Armour Enemies affected by your Hazards Recently have 25% reduced Evasion Rating"]={nil,"your Hazards Recently have 25% reduced Armour Enemies affected by your Hazards Recently have 25% reduced Evasion Rating "}
-c["Enemies affected by your Hazards Recently have 25% reduced Evasion Rating"]={nil,"your Hazards Recently have 25% reduced Evasion Rating "}
+c["Enemies affected by your Hazards Recently have 25% reduced Armour"]={{[1]={flags=0,keywordFlags=0,name="EnemyModifier",type="LIST",value={mod={[1]={type="ActorCondition",var="AffectedByHazardRecently"},flags=0,keywordFlags=0,name="Armour",type="INC",value=-25}}}},nil}
+c["Enemies affected by your Hazards Recently have 25% reduced Evasion Rating"]={{[1]={flags=0,keywordFlags=0,name="EnemyModifier",type="LIST",value={mod={[1]={type="ActorCondition",var="AffectedByHazardRecently"},flags=0,keywordFlags=0,name="Evasion",type="INC",value=-25}}}},nil}
 c["Enemies are Culled on Block"]={nil,"Enemies are Culled on Block "}
 c["Enemies have Maximum Concentration equal to 40% of their Maximum Life"]={nil,"Enemies have Maximum Concentration equal to 40% of their Maximum Life "}
 c["Enemies have Maximum Concentration equal to 40% of their Maximum Life Break enemy Concentration on Hit equal to 100% of Damage Dealt"]={nil,"Enemies have Maximum Concentration equal to 40% of their Maximum Life Break enemy Concentration on Hit equal to 100% of Damage Dealt "}
 c["Enemies have Maximum Concentration equal to 40% of their Maximum Life Break enemy Concentration on Hit equal to 100% of Damage Dealt Enemies regain 10% of Concentration every second if they haven't lost Concentration in the past 5 seconds"]={nil,"Enemies have Maximum Concentration equal to 40% of their Maximum Life Break enemy Concentration on Hit equal to 100% of Damage Dealt Enemies regain 10% of Concentration every second if they haven't lost Concentration in the past 5 seconds "}
 c["Enemies have an Accuracy Penalty against you based on Distance"]={{[1]={flags=0,keywordFlags=0,name="EnemyAccuracyDistancePenalty",type="FLAG",value=true}},nil}
 c["Enemies in Jagged Ground you create take 10% increased Damage"]={nil,"Enemies in Jagged Ground you create take 10% increased Damage "}
-c["Enemies in your Presence Gain 12% of Damage as Extra Chaos Damage"]={nil,"Enemies in your Presence Gain 12% of Damage as Extra Chaos Damage "}
-c["Enemies in your Presence Resist Elemental Damage based on their Lowest Resistance"]={nil,"Enemies in your Presence Resist Elemental Damage based on their Lowest Resistance "}
-c["Enemies in your Presence are Blinded"]={nil,"Enemies in your Presence are Blinded "}
-c["Enemies in your Presence are Blinded Every second, inflicts Critical Weakness on enemies in your Presence for 1 second"]={nil,"Enemies in your Presence are Blinded Every second, inflicts Critical Weakness on enemies in your Presence for 1 second "}
-c["Enemies in your Presence are Ignited as though dealt 100 Base Fire Damage"]={nil,"Enemies in your Presence are Ignited as though dealt 100 Base Fire Damage "}
-c["Enemies in your Presence are Intimidated"]={nil,"Enemies in your Presence are Intimidated "}
-c["Enemies in your Presence are Slowed by 20%"]={nil,"Enemies in your Presence are Slowed by 20% "}
-c["Enemies in your Presence count as being on Low Life"]={nil,"Enemies in your Presence count as being on Low Life "}
-c["Enemies in your Presence count as having double Power"]={nil,"Enemies in your Presence count as having double Power "}
-c["Enemies in your Presence have 10% reduced Cooldown Recovery Rate"]={nil,"Enemies in your Presence have 10% reduced Cooldown Recovery Rate "}
-c["Enemies in your Presence have Fire Exposure"]={nil,"Enemies in your Presence have Fire Exposure "}
-c["Enemies in your Presence have Lightning Resistance equal to yours"]={{[1]={flags=0,keywordFlags=0,name="EnemyLightningResistEqualToYours",type="FLAG",value=true}},nil}
-c["Enemies in your Presence have at least 10% of Life Reserved"]={nil,"Enemies in your Presence have at least 10% of Life Reserved "}
-c["Enemies in your Presence have no Elemental Resistances"]={nil,"Enemies in your Presence have no Elemental Resistances "}
-c["Enemies in your Presence killed by anyone count as being killed by you instead"]={nil,"Enemies in your Presence killed by anyone count as being killed by you instead "}
+c["Enemies in your Presence Gain 12% of Damage as Extra Chaos Damage"]={{[1]={flags=0,keywordFlags=0,name="EnemyModifier",type="LIST",value={mod={[1]={actor="enemy",type="ActorCondition",var="EnemyInPresence"},flags=0,keywordFlags=0,name="DamageGainAsChaos",type="BASE",value=12}}}},nil}
+c["Enemies in your Presence Gain 9% of Damage as Extra Chaos Damage"]={{[1]={flags=0,keywordFlags=0,name="EnemyModifier",type="LIST",value={mod={[1]={actor="enemy",type="ActorCondition",var="EnemyInPresence"},flags=0,keywordFlags=0,name="DamageGainAsChaos",type="BASE",value=9}}}},nil}
+c["Enemies in your Presence Resist Elemental Damage based on their Lowest Resistance"]={{[1]={[1]={type="Condition",var="EnemyInPresence"},flags=0,keywordFlags=0,name="ElementalDamageUsesLowestResistance",type="FLAG",value=true}},nil}
+c["Enemies in your Presence are Blinded"]={{[1]={flags=0,keywordFlags=0,name="EnemyModifier",type="LIST",value={mod={[1]={actor="enemy",type="ActorCondition",var="EnemyInPresence"},flags=0,keywordFlags=0,name="Condition:Blinded",type="FLAG",value=true}}}},nil}
+c["Enemies in your Presence are Ignited as though dealt 100 Base Fire Damage"]={nil,"Ignited as though dealt 100 Base Fire Damage "}
+c["Enemies in your Presence are Intimidated"]={{[1]={flags=0,keywordFlags=0,name="EnemyModifier",type="LIST",value={mod={[1]={actor="enemy",type="ActorCondition",var="EnemyInPresence"},flags=0,keywordFlags=0,name="Condition:Intimidated",type="FLAG",value=true}}}},nil}
+c["Enemies in your Presence are Slowed by 20%"]={nil,"Slowed by 20% "}
+c["Enemies in your Presence count as being on Low Life"]={{[1]={[1]={type="Condition",var="EnemyInPresence"},flags=0,keywordFlags=0,name="EnemyModifier",type="LIST",value={mod={flags=0,keywordFlags=0,name="Condition:LowLife",type="FLAG",value=true}}}},nil}
+c["Enemies in your Presence count as having double Power"]={{},"count as having  Power "}
+c["Enemies in your Presence have 10% reduced Cooldown Recovery Rate"]={{[1]={flags=0,keywordFlags=0,name="EnemyModifier",type="LIST",value={mod={[1]={actor="enemy",type="ActorCondition",var="EnemyInPresence"},flags=0,keywordFlags=0,name="CooldownRecovery",type="INC",value=-10}}}},nil}
+c["Enemies in your Presence have Fire Exposure"]={{[1]={flags=0,keywordFlags=0,name="EnemyModifier",type="LIST",value={mod={[1]={actor="enemy",type="ActorCondition",var="EnemyInPresence"},flags=0,keywordFlags=0,name="FireExposure",type="BASE",value=-20}}}},nil}
+c["Enemies in your Presence have Lightning Resistance equal to yours"]={{[1]={[1]={type="Condition",var="EnemyInPresence"},flags=0,keywordFlags=0,name="EnemyLightningResistEqualToYours",type="FLAG",value=true}},nil}
+c["Enemies in your Presence have at least 10% of Life Reserved"]={{[1]={flags=0,keywordFlags=0,name="EnemyModifier",type="LIST",value={mod={[1]={actor="enemy",type="ActorCondition",var="EnemyInPresence"},flags=0,keywordFlags=0,name="LifeReservationPercent",type="BASE",value=10}}}},nil}
+c["Enemies in your Presence have no Elemental Resistances"]={{[1]={flags=0,keywordFlags=0,name="EnemyModifier",type="LIST",value={mod={[1]={actor="enemy",type="ActorCondition",var="EnemyInPresence"},flags=0,keywordFlags=0,name="FireResist",type="OVERRIDE",value=0}}},[2]={flags=0,keywordFlags=0,name="EnemyModifier",type="LIST",value={mod={[1]={actor="enemy",type="ActorCondition",var="EnemyInPresence"},flags=0,keywordFlags=0,name="ColdResist",type="OVERRIDE",value=0}}},[3]={flags=0,keywordFlags=0,name="EnemyModifier",type="LIST",value={mod={[1]={actor="enemy",type="ActorCondition",var="EnemyInPresence"},flags=0,keywordFlags=0,name="LightningResist",type="OVERRIDE",value=0}}}},nil}
+c["Enemies in your Presence killed by anyone count as being killed by you instead"]={nil,"killed by anyone count as being killed by you instead "}
 c["Enemies near Enemies you Mark are Blinded"]={nil,"Enemies near Enemies you Mark are Blinded "}
 c["Enemies near Enemies you Mark are Blinded Enemies you Mark cannot deal Critical Hits"]={nil,"Enemies near Enemies you Mark are Blinded Enemies you Mark cannot deal Critical Hits "}
 c["Enemies regain 10% of Concentration every second if they haven't lost Concentration in the past 5 seconds"]={nil,"Enemies regain 10% of Concentration every second if they haven't lost Concentration in the past 5 seconds "}
 c["Enemies take 10% increased Damage for each Elemental Ailment type among"]={nil,"Enemies take 10% increased Damage for each Elemental Ailment type among "}
-c["Enemies take 10% increased Damage for each Elemental Ailment type among your Ailments on them"]={nil,"Enemies take 10% increased Damage for each Elemental Ailment type among your Ailments on them "}
+c["Enemies take 10% increased Damage for each Elemental Ailment type among Enemies take 20% increased Damage for each Elemental Ailment type among"]={nil,"Enemies take 10% increased Damage for each Elemental Ailment type among Enemies take 20% increased Damage for each Elemental Ailment type among "}
+c["Enemies take 20% increased Damage for each Elemental Ailment type among"]={nil,"Enemies take 20% increased Damage for each Elemental Ailment type among "}
+c["Enemies take 20% increased Damage for each Elemental Ailment type among your Ailments on them"]={nil,"Enemies take 20% increased Damage for each Elemental Ailment type among your Ailments on them "}
 c["Enemies you Curse are Hindered, with 15% reduced Movement Speed"]={{[1]={flags=0,keywordFlags=0,name="EnemyModifier",type="LIST",value={mod={[1]={type="Condition",var="Cursed"},flags=0,keywordFlags=0,name="Condition:Hindered",type="FLAG",value=true}}}},nil}
 c["Enemies you Curse cannot Recharge Energy Shield"]={{[1]={[1]={type="Condition",var="Curse"},flags=0,keywordFlags=0,name="EnemyModifier",type="LIST",value={mod={flags=0,keywordFlags=0,name="NoEnergyShieldRecharge",type="FLAG",value=true}}}},nil}
 c["Enemies you Curse have -3% to Chaos Resistance"]={{[1]={flags=0,keywordFlags=0,name="EnemyModifier",type="LIST",value={mod={[1]={type="Condition",var="Curse"},flags=0,keywordFlags=0,name="ChaosResist",type="BASE",value=-3}}}},nil}
@@ -3783,7 +3827,7 @@ c["Enemies you Mark have 10% reduced Accuracy Rating"]={{[1]={[1]={actor="enemy"
 c["Enemies you Mark take 10% increased Damage"]={{[1]={[1]={actor="enemy",type="ActorCondition",var="Marked"},flags=0,keywordFlags=0,name="EnemyModifier",type="LIST",value={mod={flags=0,keywordFlags=0,name="DamageTaken",type="INC",value=10}}}},nil}
 c["Enemies you apply Incision to take 2% increased Physical Damage per Incision"]={{[1]={flags=0,keywordFlags=0,name="EnemyModifier",type="LIST",value={mod={[1]={type="Multiplier",var="IncisionStack"},flags=0,keywordFlags=0,name="PhysicalDamageTaken",type="INC",value=2}}}},nil}
 c["Enemies' Damage with Critical Hits against you is Lucky"]={nil,"Enemies' Damage with Critical Hits  is Lucky "}
-c["Energy Generation is doubled"]={nil,"Energy Generation is doubled "}
+c["Energy Generation is doubled"]={{},"Energy Generation  "}
 c["Energy Shield Recharge is not interrupted by Damage if Recharge began Recently"]={nil,"Energy Shield Recharge is not interrupted by Damage if Recharge began Recently "}
 c["Energy Shield Recharge starts on use"]={nil,"Energy Shield Recharge starts on use "}
 c["Energy Shield Recharge starts when you use a Mana Flask"]={nil,"Energy Shield Recharge starts when you use a Mana Flask "}
@@ -3820,9 +3864,10 @@ c["Final Repeat of Spells has 40% increased Area of Effect"]={{[1]={[1]={neg=tru
 c["Fire Damage from Hits Contributes to Shock Chance instead of Ignite Chance and Magnitude"]={nil,"Fire Damage from Hits Contributes to Shock Chance instead of Ignite Chance and Magnitude "}
 c["Fire Damage from Hits Contributes to Shock Chance instead of Ignite Chance and Magnitude Cold Damage from Hits Contributes to Ignite Chance and Magnitude instead of Chill Magnitude or Freeze Buildup"]={nil,"Fire Damage from Hits Contributes to Shock Chance instead of Ignite Chance and Magnitude Cold Damage from Hits Contributes to Ignite Chance and Magnitude instead of Chill Magnitude or Freeze Buildup "}
 c["Fire Exposure you inflict lowers Total Fire Resistance by an extra 5%"]={{[1]={flags=0,keywordFlags=0,name="ExtraFireExposure",type="BASE",value=-5}},nil}
+c["Fire Resistance is unaffected by Area Penalties"]={nil,"Fire Resistance is unaffected by Area Penalties "}
+c["Fire Resistance is unaffected by Area Penalties Lightning Resistance is unaffected by Area Penalties"]={nil,"Fire Resistance is unaffected by Area Penalties Lightning Resistance is unaffected by Area Penalties "}
 c["Flasks gain 0.17 charges per Second"]={{[1]={flags=0,keywordFlags=0,name="FlaskChargesGenerated",type="BASE",value=0.17}},nil}
-c["Forks Critical Hits"]={nil,"Forks Critical Hits "}
-c["Forks Critical Hits 10% of Skill Mana Costs Converted to Life Costs"]={nil,"Forks Critical Hits 10% of Skill Mana Costs Converted to Life Costs "}
+c["Forks Critical Hits"]={{[1]={flags=0,keywordFlags=0,name="ForkCrit",type="FLAG",value=true}},nil}
 c["Freeze as though dealing Cold damage equal to 10% of your maximum Mana when Hit"]={nil,"Freeze as though dealing Cold damage equal to 10% of your maximum Mana when Hit "}
 c["Frenzy or Power Charge"]={nil,"Frenzy or Power Charge "}
 c["Fully Armour Broken enemies you kill with Hits Shatter"]={nil,"Fully Armour Broken enemies you kill with Hits Shatter "}
@@ -3832,7 +3877,7 @@ c["Gain 1 Fragile Regrowth each second"]={{}," Fragile Regrowth each second "}
 c["Gain 1 Rage on Melee Axe Hit"]={{[1]={flags=0,keywordFlags=0,name="Condition:CanGainRage",type="FLAG",value=true}},nil}
 c["Gain 1 Rage on Melee Hit"]={{[1]={flags=0,keywordFlags=0,name="Condition:CanGainRage",type="FLAG",value=true}},nil}
 c["Gain 1% of Cold damage as Extra Fire damage per 1% Chill Magnitude on enemy"]={{[1]={flags=0,keywordFlags=0,name="ColdDamageGainAsFire",type="BASE",value=1}},"   per 1% Chill Magnitude on enemy "}
-c["Gain 1% of Damage as Extra Chaos Damage per 20 Unreserved Darkness"]={{[1]={[1]={div=20,stat="UnreservedDarkness",type="PerStat"},flags=0,keywordFlags=0,name="PhysicalDamageGainAsChaos",type="BASE",value=1}},nil}
+c["Gain 1% of Damage as Extra Chaos Damage per 20 Unreserved Darkness"]={{[1]={[1]={div=20,stat="UnreservedDarkness",type="PerStat"},flags=0,keywordFlags=0,name="DamageGainAsChaos",type="BASE",value=1}},nil}
 c["Gain 1% of damage as Fire damage per 1% Chance to Block"]={{[1]={[1]={div=1,stat="BlockChance",type="PerStat"},flags=0,keywordFlags=0,name="DamageAsFire",type="BASE",value=1}},nil}
 c["Gain 10 Life per Enemy Killed"]={{[1]={flags=0,keywordFlags=0,name="LifeOnKill",type="BASE",value=10}},nil}
 c["Gain 10 Mana per Enemy Killed"]={{[1]={flags=0,keywordFlags=0,name="ManaOnKill",type="BASE",value=10}},nil}
@@ -3864,9 +3909,13 @@ c["Gain 25 Life per Enemy Hit with Attacks"]={{[1]={flags=4,keywordFlags=65536,n
 c["Gain 25 Life per Enemy Killed"]={{[1]={flags=0,keywordFlags=0,name="LifeOnKill",type="BASE",value=25}},nil}
 c["Gain 25 Mana per Enemy Killed"]={{[1]={flags=0,keywordFlags=0,name="ManaOnKill",type="BASE",value=25}},nil}
 c["Gain 25% of Cold Damage as Extra Fire Damage against Frozen Enemies"]={{[1]={[1]={actor="enemy",type="ActorCondition",var="Frozen"},flags=0,keywordFlags=0,name="ColdDamageGainAsFire",type="BASE",value=25}},nil}
+c["Gain 25% of Damage as Extra Cold Damage"]={{[1]={flags=0,keywordFlags=0,name="DamageGainAsCold",type="BASE",value=25}},nil}
+c["Gain 25% of Damage as Extra Fire Damage"]={{[1]={flags=0,keywordFlags=0,name="DamageGainAsFire",type="BASE",value=25}},nil}
+c["Gain 25% of Damage as Extra Lightning Damage"]={{[1]={flags=0,keywordFlags=0,name="DamageGainAsLightning",type="BASE",value=25}},nil}
 c["Gain 26% of Damage as Extra Cold Damage"]={{[1]={flags=0,keywordFlags=0,name="DamageGainAsCold",type="BASE",value=26}},nil}
 c["Gain 26% of Damage as Extra Fire Damage"]={{[1]={flags=0,keywordFlags=0,name="DamageGainAsFire",type="BASE",value=26}},nil}
 c["Gain 26% of Damage as Extra Lightning Damage"]={{[1]={flags=0,keywordFlags=0,name="DamageGainAsLightning",type="BASE",value=26}},nil}
+c["Gain 27% of Damage as Extra Chaos Damage"]={{[1]={flags=0,keywordFlags=0,name="DamageGainAsChaos",type="BASE",value=27}},nil}
 c["Gain 3 Life per Enemy Hit with Attacks"]={{[1]={flags=4,keywordFlags=65536,name="LifeOnHit",type="BASE",value=3}},nil}
 c["Gain 3 Life per Enemy Killed"]={{[1]={flags=0,keywordFlags=0,name="LifeOnKill",type="BASE",value=3}},nil}
 c["Gain 3 Rage when Hit by an Enemy"]={{[1]={flags=0,keywordFlags=0,name="Condition:CanGainRage",type="FLAG",value=true}},nil}
@@ -3910,7 +3959,7 @@ c["Gain 8% of Evasion Rating as extra Armour"]={{[1]={flags=0,keywordFlags=0,nam
 c["Gain 9 Life per Enemy Killed"]={{[1]={flags=0,keywordFlags=0,name="LifeOnKill",type="BASE",value=9}},nil}
 c["Gain Accuracy Rating equal to your Intelligence"]={{[1]={[1]={stat="Int",type="PerStat"},flags=0,keywordFlags=0,name="Accuracy",type="BASE",value=1}},nil}
 c["Gain Accuracy Rating equal to your Strength"]={{[1]={[1]={stat="Str",type="PerStat"},flags=0,keywordFlags=0,name="Accuracy",type="BASE",value=1}},nil}
-c["Gain Ailment Threshold equal to the lowest of Evasion and Armour on your Boots"]={nil,"Ailment Threshold equal to the lowest of Evasion and Armour on your Boots "}
+c["Gain Ailment Threshold equal to the lowest of Evasion and Armour on your Boots"]={{[1]={[1]={stat="LowestOfArmourAndEvasionOnBoots",type="PerStat"},flags=0,keywordFlags=0,name="AilmentThreshold",type="BASE",value=1}},nil}
 c["Gain Arcane Surge on Hit with Spells if you have at least 150 Devotion"]={{[1]={[1]={type="Condition",var="HitSpellRecently"},[2]={stat="Devotion",threshold=150,type="StatThreshold"},flags=0,keywordFlags=0,name="Condition:ArcaneSurge",type="FLAG",value=true}},nil}
 c["Gain Endurance Charges instead of Power Charges"]={nil,"Endurance Charges instead of Power Charges "}
 c["Gain Frenzy Charges instead of Endurance Charges"]={nil,"Frenzy Charges instead of Endurance Charges "}
@@ -3970,15 +4019,21 @@ c["Grants Skill: Fulminating Concoction"]={{[1]={flags=0,keywordFlags=0,name="Ex
 c["Grants Skill: Infuse Weapon"]={{[1]={flags=0,keywordFlags=0,name="ExtraSkill",type="LIST",value={level=1,skillId="AmazonTriggerElementalInfusionPlayer"}}},nil}
 c["Grants Skill: Into the Breach"]={{[1]={flags=0,keywordFlags=0,name="ExtraSkill",type="LIST",value={level=1,skillId="IntoTheBreachPlayer"}}},nil}
 c["Grants Skill: Level 11 Bone Blast"]={{[1]={flags=0,keywordFlags=0,name="ExtraSkill",type="LIST",value={level=11,skillId="BoneBlastPlayer"}}},nil}
+c["Grants Skill: Level 11 Bursting Fen Toad"]={{[1]={flags=0,keywordFlags=0,name="ExtraSkill",type="LIST",value={level=11,skillId="ExplodingPoisonToadPlayer"}}},nil}
 c["Grants Skill: Level 11 Chaos Bolt"]={{[1]={flags=0,keywordFlags=0,name="ExtraSkill",type="LIST",value={level=11,skillId="WeaponGrantedChaosboltPlayer"}}},nil}
+c["Grants Skill: Level 11 Chaotic Infusion"]={{[1]={flags=0,keywordFlags=0,name="ExtraSkill",type="LIST",value={level=11,skillId="ChaosSpearTriggerChaosInfusionPlayer"}}},nil}
+c["Grants Skill: Level 11 Compose Requiem"]={{[1]={flags=0,keywordFlags=0,name="ExtraSkill",type="LIST",value={level=11,skillId="CrossbowRequiemAmmoPlayer"}}},nil}
 c["Grants Skill: Level 11 Decompose"]={{[1]={flags=0,keywordFlags=0,name="ExtraSkill",type="LIST",value={level=11,skillId="CorpseCloudPlayer"}}},nil}
 c["Grants Skill: Level 11 Discipline"]={{[1]={flags=0,keywordFlags=0,name="ExtraSkill",type="LIST",value={level=11,skillId="DisciplinePlayer"}}},nil}
 c["Grants Skill: Level 11 Ember Fusillade"]={{[1]={flags=0,keywordFlags=0,name="ExtraSkill",type="LIST",value={level=11,skillId="BlazingClusterPlayer"}}},nil}
 c["Grants Skill: Level 11 Firebolt"]={{[1]={flags=0,keywordFlags=0,name="ExtraSkill",type="LIST",value={level=11,skillId="FireboltPlayer"}}},nil}
 c["Grants Skill: Level 11 Freezing Shards"]={{[1]={flags=0,keywordFlags=0,name="ExtraSkill",type="LIST",value={level=11,skillId="FreezingShardsPlayer"}}},nil}
+c["Grants Skill: Level 11 Heart of Ice"]={{[1]={flags=0,keywordFlags=0,name="ExtraSkill",type="LIST",value={level=11,skillId="HeartOfIcePlayer"}}},nil}
 c["Grants Skill: Level 11 Herald of Ash"]={{[1]={flags=0,keywordFlags=0,name="ExtraSkill",type="LIST",value={level=11,skillId="HeraldOfAshPlayer"}}},nil}
 c["Grants Skill: Level 11 Herald of Ice"]={{[1]={flags=0,keywordFlags=0,name="ExtraSkill",type="LIST",value={level=11,skillId="HeraldOfIcePlayer"}}},nil}
 c["Grants Skill: Level 11 Herald of Thunder"]={{[1]={flags=0,keywordFlags=0,name="ExtraSkill",type="LIST",value={level=11,skillId="HeraldOfThunderPlayer"}}},nil}
+c["Grants Skill: Level 11 Icestorm"]={{[1]={flags=0,keywordFlags=0,name="ExtraSkill",type="LIST",value={level=11,skillId="IcestormPlayer"}}},nil}
+c["Grants Skill: Level 11 Impurity"]={{[1]={flags=0,keywordFlags=0,name="ExtraSkill",type="LIST",value={level=11,skillId="ImpurityPlayer"}}},nil}
 c["Grants Skill: Level 11 Lightning Bolt"]={{[1]={flags=0,keywordFlags=0,name="ExtraSkill",type="LIST",value={level=11,skillId="LightningBoltPlayer"}}},nil}
 c["Grants Skill: Level 11 Living Bomb"]={{[1]={flags=0,keywordFlags=0,name="ExtraSkill",type="LIST",value={level=11,skillId="LivingBombPlayer"}}},nil}
 c["Grants Skill: Level 11 Malice"]={{[1]={flags=0,keywordFlags=0,name="ExtraSkill",type="LIST",value={level=11,skillId="MalicePlayer"}}},nil}
@@ -3986,31 +4041,36 @@ c["Grants Skill: Level 11 Mana Drain"]={{[1]={flags=0,keywordFlags=0,name="Extra
 c["Grants Skill: Level 11 Parry"]={{[1]={flags=0,keywordFlags=0,name="ExtraSkill",type="LIST",value={level=11,skillId="ParryPlayer"}}},nil}
 c["Grants Skill: Level 11 Power Siphon"]={{[1]={flags=0,keywordFlags=0,name="ExtraSkill",type="LIST",value={level=11,skillId="PowerSiphonPlayer"}}},nil}
 c["Grants Skill: Level 11 Purity of Fire"]={{[1]={flags=0,keywordFlags=0,name="ExtraSkill",type="LIST",value={level=11,skillId="PurityOfFirePlayer"}}},nil}
+c["Grants Skill: Level 11 Purity of Ice"]={{[1]={flags=0,keywordFlags=0,name="ExtraSkill",type="LIST",value={level=11,skillId="PurityOfIcePlayer"}}},nil}
 c["Grants Skill: Level 11 Purity of Lightning"]={{[1]={flags=0,keywordFlags=0,name="ExtraSkill",type="LIST",value={level=11,skillId="PurityOfLightningPlayer"}}},nil}
 c["Grants Skill: Level 11 Raise Shield"]={{[1]={flags=0,keywordFlags=0,name="ExtraSkill",type="LIST",value={level=11,skillId="ShieldBlockPlayer"}}},nil}
 c["Grants Skill: Level 11 Sigil of Power"]={{[1]={flags=0,keywordFlags=0,name="ExtraSkill",type="LIST",value={level=11,skillId="SigilOfPowerPlayer"}}},nil}
 c["Grants Skill: Level 11 Skeletal Warrior Minion"]={{[1]={flags=0,keywordFlags=0,name="ExtraSkill",type="LIST",value={level=11,skillId="SummonSkeletalWarriorsPlayer"}}},nil}
 c["Grants Skill: Level 11 Spark"]={{[1]={flags=0,keywordFlags=0,name="ExtraSkill",type="LIST",value={level=11,skillId="SparkPlayer"}}},nil}
+c["Grants Skill: Level 11 Thundergod's Wrath"]={{[1]={flags=0,keywordFlags=0,name="ExtraSkill",type="LIST",value={level=11,skillId="MetaCastLightningSpellOnHitPlayer"}}},nil}
 c["Grants Skill: Level 11 Volatile Dead"]={{[1]={flags=0,keywordFlags=0,name="ExtraSkill",type="LIST",value={level=11,skillId="VolatileDeadPlayer"}}},nil}
 c["Grants Skill: Level 20 Bone Blast"]={{[1]={flags=0,keywordFlags=0,name="ExtraSkill",type="LIST",value={level=20,skillId="BoneBlastPlayer"}}},nil}
+c["Grants Skill: Level 20 Bursting Fen Toad"]={{[1]={flags=0,keywordFlags=0,name="ExtraSkill",type="LIST",value={level=20,skillId="ExplodingPoisonToadPlayer"}}},nil}
 c["Grants Skill: Level 20 Chaos Bolt"]={{[1]={flags=0,keywordFlags=0,name="ExtraSkill",type="LIST",value={level=20,skillId="WeaponGrantedChaosboltPlayer"}}},nil}
-c["Grants Skill: Level 20 Chaotic Infusion"]={nil,nil}
-c["Grants Skill: Level 20 Chaotic Infusion 20% increased Attack Speed"]={nil,nil}
+c["Grants Skill: Level 20 Chaotic Infusion"]={{[1]={flags=0,keywordFlags=0,name="ExtraSkill",type="LIST",value={level=20,skillId="ChaosSpearTriggerChaosInfusionPlayer"}}},nil}
+c["Grants Skill: Level 20 Compose Requiem"]={{[1]={flags=0,keywordFlags=0,name="ExtraSkill",type="LIST",value={level=20,skillId="CrossbowRequiemAmmoPlayer"}}},nil}
 c["Grants Skill: Level 20 Decompose"]={{[1]={flags=0,keywordFlags=0,name="ExtraSkill",type="LIST",value={level=20,skillId="CorpseCloudPlayer"}}},nil}
 c["Grants Skill: Level 20 Discipline"]={{[1]={flags=0,keywordFlags=0,name="ExtraSkill",type="LIST",value={level=20,skillId="DisciplinePlayer"}}},nil}
 c["Grants Skill: Level 20 Ember Fusillade"]={{[1]={flags=0,keywordFlags=0,name="ExtraSkill",type="LIST",value={level=20,skillId="BlazingClusterPlayer"}}},nil}
 c["Grants Skill: Level 20 Firebolt"]={{[1]={flags=0,keywordFlags=0,name="ExtraSkill",type="LIST",value={level=20,skillId="FireboltPlayer"}}},nil}
 c["Grants Skill: Level 20 Freezing Shards"]={{[1]={flags=0,keywordFlags=0,name="ExtraSkill",type="LIST",value={level=20,skillId="FreezingShardsPlayer"}}},nil}
+c["Grants Skill: Level 20 Heart of Ice"]={{[1]={flags=0,keywordFlags=0,name="ExtraSkill",type="LIST",value={level=20,skillId="HeartOfIcePlayer"}}},nil}
 c["Grants Skill: Level 20 Herald of Ash"]={{[1]={flags=0,keywordFlags=0,name="ExtraSkill",type="LIST",value={level=20,skillId="HeraldOfAshPlayer"}}},nil}
 c["Grants Skill: Level 20 Herald of Ice"]={{[1]={flags=0,keywordFlags=0,name="ExtraSkill",type="LIST",value={level=20,skillId="HeraldOfIcePlayer"}}},nil}
 c["Grants Skill: Level 20 Herald of Thunder"]={{[1]={flags=0,keywordFlags=0,name="ExtraSkill",type="LIST",value={level=20,skillId="HeraldOfThunderPlayer"}}},nil}
+c["Grants Skill: Level 20 Icestorm"]={{[1]={flags=0,keywordFlags=0,name="ExtraSkill",type="LIST",value={level=20,skillId="IcestormPlayer"}}},nil}
+c["Grants Skill: Level 20 Impurity"]={{[1]={flags=0,keywordFlags=0,name="ExtraSkill",type="LIST",value={level=20,skillId="ImpurityPlayer"}}},nil}
 c["Grants Skill: Level 20 Lightning Bolt"]={{[1]={flags=0,keywordFlags=0,name="ExtraSkill",type="LIST",value={level=20,skillId="LightningBoltPlayer"}}},nil}
-c["Grants Skill: Level 20 Lightning Spell on Hit"]={nil,nil}
-c["Grants Skill: Level 20 Lightning Spell on Hit +200 Intelligence Requirement"]={nil,nil}
 c["Grants Skill: Level 20 Living Bomb"]={{[1]={flags=0,keywordFlags=0,name="ExtraSkill",type="LIST",value={level=20,skillId="LivingBombPlayer"}}},nil}
 c["Grants Skill: Level 20 Malice"]={{[1]={flags=0,keywordFlags=0,name="ExtraSkill",type="LIST",value={level=20,skillId="MalicePlayer"}}},nil}
 c["Grants Skill: Level 20 Mana Drain"]={{[1]={flags=0,keywordFlags=0,name="ExtraSkill",type="LIST",value={level=20,skillId="ManaDrainPlayer"}}},nil}
 c["Grants Skill: Level 20 Parry"]={{[1]={flags=0,keywordFlags=0,name="ExtraSkill",type="LIST",value={level=20,skillId="ParryPlayer"}}},nil}
+c["Grants Skill: Level 20 Pinnacle of Power"]={{[1]={flags=0,keywordFlags=0,name="ExtraSkill",type="LIST",value={level=20,skillId="PinnacleOfPowerPlayer"}}},nil}
 c["Grants Skill: Level 20 Power Siphon"]={{[1]={flags=0,keywordFlags=0,name="ExtraSkill",type="LIST",value={level=20,skillId="PowerSiphonPlayer"}}},nil}
 c["Grants Skill: Level 20 Purity of Fire"]={{[1]={flags=0,keywordFlags=0,name="ExtraSkill",type="LIST",value={level=20,skillId="PurityOfFirePlayer"}}},nil}
 c["Grants Skill: Level 20 Purity of Ice"]={{[1]={flags=0,keywordFlags=0,name="ExtraSkill",type="LIST",value={level=20,skillId="PurityOfIcePlayer"}}},nil}
@@ -4019,6 +4079,7 @@ c["Grants Skill: Level 20 Raise Shield"]={{[1]={flags=0,keywordFlags=0,name="Ext
 c["Grants Skill: Level 20 Sigil of Power"]={{[1]={flags=0,keywordFlags=0,name="ExtraSkill",type="LIST",value={level=20,skillId="SigilOfPowerPlayer"}}},nil}
 c["Grants Skill: Level 20 Skeletal Warrior Minion"]={{[1]={flags=0,keywordFlags=0,name="ExtraSkill",type="LIST",value={level=20,skillId="SummonSkeletalWarriorsPlayer"}}},nil}
 c["Grants Skill: Level 20 Spark"]={{[1]={flags=0,keywordFlags=0,name="ExtraSkill",type="LIST",value={level=20,skillId="SparkPlayer"}}},nil}
+c["Grants Skill: Level 20 Thundergod's Wrath"]={{[1]={flags=0,keywordFlags=0,name="ExtraSkill",type="LIST",value={level=20,skillId="MetaCastLightningSpellOnHitPlayer"}}},nil}
 c["Grants Skill: Level 20 Volatile Dead"]={{[1]={flags=0,keywordFlags=0,name="ExtraSkill",type="LIST",value={level=20,skillId="VolatileDeadPlayer"}}},nil}
 c["Grants Skill: Life Remnants"]={{[1]={flags=0,keywordFlags=0,name="ExtraSkill",type="LIST",value={level=1,skillId="LifeRemnantsPlayer"}}},nil}
 c["Grants Skill: Manifest Weapon"]={{[1]={flags=0,keywordFlags=0,name="ExtraSkill",type="LIST",value={level=1,skillId="ManifestWeaponPlayer"}}},nil}
@@ -4040,6 +4101,10 @@ c["Grants Skill: Unbound Avatar"]={{[1]={flags=0,keywordFlags=0,name="ExtraSkill
 c["Grants Skill: Unleash"]={{[1]={flags=0,keywordFlags=0,name="ExtraSkill",type="LIST",value={level=1,skillId="UnleashPlayer"}}},nil}
 c["Grants a Frenzy Charge on use"]={nil,"Grants a Frenzy Charge on use "}
 c["Grants a Power Charge on use"]={nil,"Grants a Power Charge on use "}
+c["Grants effect of Dreaming Gloom Shrine"]={nil,"Grants effect of Dreaming Gloom Shrine "}
+c["Grants effect of Guided Freezing Shrine"]={nil,"Grants effect of Guided Freezing Shrine "}
+c["Grants effect of Guided Meteoric Shrine"]={nil,"Grants effect of Guided Meteoric Shrine "}
+c["Grants effect of Guided Tempest Shrine"]={nil,"Grants effect of Guided Tempest Shrine "}
 c["Grants up to your maximum Rage on use"]={nil,"Grants up to your maximum Rage on use "}
 c["Grenade Skills Fire an additional Projectile"]={{[1]={[1]={skillType=158,type="SkillType"},flags=1024,keywordFlags=0,name="ProjectileCount",type="BASE",value=1}},nil}
 c["Grenade Skills have +1 Cooldown Use"]={{[1]={[1]={skillType=158,type="SkillType"},flags=0,keywordFlags=0,name="AdditionalCooldownUses",type="BASE",value=1}},nil}
@@ -4049,18 +4114,16 @@ c["Has 2 Charm Slots"]={{[1]={flags=0,keywordFlags=0,name="CharmLimit",type="BAS
 c["Has 3 Charm Slot"]={{[1]={flags=0,keywordFlags=0,name="CharmLimit",type="BASE",value=3}},nil}
 c["Has 3 Charm Slots"]={{[1]={flags=0,keywordFlags=0,name="CharmLimit",type="BASE",value=3}},nil}
 c["Has 6 Rune Sockets"]={nil,"Has 6 Rune Sockets "}
-c["Hazards have 15% chance to rearm after they are triggered"]={nil,"Hazards have 15% chance to rearm after they are triggered "}
-c["Hazards have 5% chance to rearm after they are triggered"]={nil,"Hazards have 5% chance to rearm after they are triggered "}
+c["Hazards have 15% chance to rearm after they are triggered"]={{[1]={[1]={skillType=203,type="SkillType"},flags=0,keywordFlags=0,name="HazardRearmChance",type="BASE",value=15}},nil}
+c["Hazards have 5% chance to rearm after they are triggered"]={{[1]={[1]={skillType=203,type="SkillType"},flags=0,keywordFlags=0,name="HazardRearmChance",type="BASE",value=5}},nil}
 c["Herald Skills deal 20% increased Damage"]={{[1]={[1]={skillType=52,type="SkillType"},flags=0,keywordFlags=0,name="Damage",type="INC",value=20}},nil}
 c["Herald Skills deal 30% increased Damage"]={{[1]={[1]={skillType=52,type="SkillType"},flags=0,keywordFlags=0,name="Damage",type="INC",value=30}},nil}
 c["Herald Skills have 30% increased Area of Effect"]={{[1]={[1]={skillType=52,type="SkillType"},flags=0,keywordFlags=0,name="AreaOfEffect",type="INC",value=30}},nil}
 c["Historic"]={{},nil}
-c["Hits Break 30% increased Armour on targets with Ailments"]={nil,"Hits Break 30% increased Armour on targets with Ailments "}
-c["Hits Break 30% increased Armour on targets with Ailments +10 to Strength"]={nil,"Hits Break 30% increased Armour on targets with Ailments +10 to Strength "}
-c["Hits Break 30% increased Armour on targets with Ailments +10 to Strength 25% increased Physical Damage"]={nil,"Hits Break 30% increased Armour on targets with Ailments +10 to Strength 25% increased Physical Damage "}
+c["Hits Break 30% increased Armour on targets with Ailments"]={{[1]={[1]={actor="enemy",type="ActorCondition",varList={[1]="Frozen",[2]="Chilled",[3]="Shocked",[4]="Electrocuted",[5]="Ignited",[6]="Poisoned",[7]="Bleeding"}},flags=0,keywordFlags=0,name="ArmourBreakPerHit",type="INC",value=30}},nil}
 c["Hits Break 50 Armour"]={nil,"Hits Break 50 Armour "}
 c["Hits Break 50 Armour Inflicts Fire Exposure when this Weapon Fully Breaks Armour"]={nil,"Hits Break 50 Armour Inflicts Fire Exposure when this Weapon Fully Breaks Armour "}
-c["Hits Break 50% increased Armour on targets with Ailments"]={nil,"Hits Break 50% increased Armour on targets with Ailments "}
+c["Hits Break 50% increased Armour on targets with Ailments"]={{[1]={[1]={actor="enemy",type="ActorCondition",varList={[1]="Frozen",[2]="Chilled",[3]="Shocked",[4]="Electrocuted",[5]="Ignited",[6]="Poisoned",[7]="Bleeding"}},flags=0,keywordFlags=0,name="ArmourBreakPerHit",type="INC",value=50}},nil}
 c["Hits against you have 15% reduced Critical Damage Bonus per Socket filled"]={{[1]={flags=0,keywordFlags=0,name="EnemyModifier",type="LIST",value={mod={[1]={type="Multiplier",var="RunesSocketedIn{SlotName}"},flags=4,keywordFlags=0,name="CritMultiplier",type="INC",value=-15}}}},nil}
 c["Hits against you have 20% reduced Critical Damage Bonus"]={{[1]={flags=0,keywordFlags=0,name="EnemyModifier",type="LIST",value={mod={flags=4,keywordFlags=0,name="CritMultiplier",type="INC",value=-20}}}},nil}
 c["Hits against you have 25% reduced Critical Damage Bonus"]={{[1]={flags=0,keywordFlags=0,name="EnemyModifier",type="LIST",value={mod={flags=4,keywordFlags=0,name="CritMultiplier",type="INC",value=-25}}}},nil}
@@ -4096,9 +4159,10 @@ c["Increases and Reductions to Mana Regeneration Rate also apply to Energy Shiel
 c["Increases and Reductions to Minion Attack Speed also affect you"]={{[1]={flags=0,keywordFlags=0,name="MinionAttackSpeedAppliesToPlayer",type="FLAG",value=true},[2]={flags=0,keywordFlags=0,name="ImprovedMinionAttackSpeedAppliesToPlayer",type="MAX",value=100}},nil}
 c["Increases and Reductions to Minion Damage also affect you"]={{[1]={flags=0,keywordFlags=0,name="MinionDamageAppliesToPlayer",type="FLAG",value=true},[2]={flags=0,keywordFlags=0,name="ImprovedMinionDamageAppliesToPlayer",type="MAX",value=100}},nil}
 c["Increases and Reductions to Projectile Speed also apply to Damage with Bows"]={{[1]={flags=0,keywordFlags=0,name="ProjectileSpeedAppliesToBowDamage",type="FLAG",value=true}},nil}
-c["Increases and Reductions to Spell Damage also apply to Attacks at 150% of their value"]={{[1]={flags=0,keywordFlags=0,name="SpellDamageAppliesToAttacks",type="FLAG",value=true},[2]={flags=0,keywordFlags=0,name="ImprovedSpellDamageAppliesToAttacks",type="MAX",value=150}},nil}
+c["Increases and Reductions to Spell damage also apply to Attacks"]={{[1]={flags=0,keywordFlags=0,name="SpellDamageAppliesToAttacks",type="FLAG",value=true},[2]={flags=0,keywordFlags=0,name="ImprovedSpellDamageAppliesToAttacks",type="MAX",value=100}},nil}
 c["Infinite Projectile Parry Range"]={nil,"Infinite Projectile Parry Range "}
 c["Infinite Projectile Parry Range 50% increased Parried Debuff Duration"]={nil,"Infinite Projectile Parry Range 50% increased Parried Debuff Duration "}
+c["Inflict Cold Exposure on Hit, lowering Total Cold Resistance by 30%"]={nil,"Inflict Cold Exposure on Hit, lowering Total Cold Resistance by 30% "}
 c["Inflict Cold Exposure on Igniting an Enemy"]={nil,"Inflict Cold Exposure on Igniting an Enemy "}
 c["Inflict Cold Exposure on Igniting an Enemy Inflict Fire Exposure on Shocking an Enemy"]={nil,"Inflict Cold Exposure on Igniting an Enemy Inflict Fire Exposure on Shocking an Enemy "}
 c["Inflict Corrupted Blood for 5 seconds on Block, dealing 50% of"]={nil,"Inflict Corrupted Blood for 5 seconds on Block, dealing 50% of "}
@@ -4126,12 +4190,16 @@ c["Leech Life 15% faster"]={{[1]={flags=0,keywordFlags=0,name="LifeLeechRate",ty
 c["Leech Life 20% slower"]={{[1]={flags=0,keywordFlags=0,name="LifeLeechRate",type="INC",value=-20}},nil}
 c["Leech Life 25% faster"]={{[1]={flags=0,keywordFlags=0,name="LifeLeechRate",type="INC",value=25}},nil}
 c["Leech Life 5% slower"]={{[1]={flags=0,keywordFlags=0,name="LifeLeechRate",type="INC",value=-5}},nil}
-c["Leech from Critical Hits is instant"]={nil,"Leech from Critical Hits is instant "}
+c["Leech from Critical Hits is instant"]={{[1]={[1]={type="Condition",var="CriticalStrike"},flags=0,keywordFlags=0,name="InstantLifeLeech",type="BASE",value=100},[2]={[1]={type="Condition",var="CriticalStrike"},flags=0,keywordFlags=0,name="InstantManaLeech",type="BASE",value=100},[3]={[1]={type="Condition",var="CriticalStrike"},flags=0,keywordFlags=0,name="InstantEnergyShieldLeech",type="BASE",value=100}},nil}
+c["Leeches 0.1% of Physical Damage as Life"]={{[1]={flags=0,keywordFlags=0,name="PhysicalDamageLifeLeech",type="BASE",value=0.1}},nil}
 c["Leeches 1% of maximum Life when you Cast a Spell"]={nil,"Leeches 1% of maximum Life when you Cast a Spell "}
 c["Leeches 10% of Physical Damage as Life"]={{[1]={flags=0,keywordFlags=0,name="PhysicalDamageLifeLeech",type="BASE",value=10}},nil}
+c["Leeches 15% of Physical Damage as Life"]={{[1]={flags=0,keywordFlags=0,name="PhysicalDamageLifeLeech",type="BASE",value=15}},nil}
+c["Leeches 20% of Physical Damage as Life"]={{[1]={flags=0,keywordFlags=0,name="PhysicalDamageLifeLeech",type="BASE",value=20}},nil}
 c["Leeches 5.5% of Physical Damage as Mana"]={{[1]={flags=0,keywordFlags=0,name="PhysicalDamageManaLeech",type="BASE",value=5.5}},nil}
 c["Leeches 6.5% of Physical Damage as Life"]={{[1]={flags=0,keywordFlags=0,name="PhysicalDamageLifeLeech",type="BASE",value=6.5}},nil}
 c["Leeches 7% of Physical Damage as Mana"]={{[1]={flags=0,keywordFlags=0,name="PhysicalDamageManaLeech",type="BASE",value=7}},nil}
+c["Leeches 7.5% of Physical Damage as Life"]={{[1]={flags=0,keywordFlags=0,name="PhysicalDamageLifeLeech",type="BASE",value=7.5}},nil}
 c["Leeches 8% of Physical Damage as Life"]={{[1]={flags=0,keywordFlags=0,name="PhysicalDamageLifeLeech",type="BASE",value=8}},nil}
 c["Left ring slot: Projectiles from Spells Fork"]={{[1]={[1]={num=1,type="SlotNumber"},flags=1026,keywordFlags=0,name="ForkOnce",type="FLAG",value=true},[2]={[1]={num=1,type="SlotNumber"},flags=1026,keywordFlags=0,name="ForkCountMax",type="BASE",value=1}},nil}
 c["Left ring slot: Projectiles from Spells cannot Chain"]={{[1]={[1]={num=1,type="SlotNumber"},flags=1026,keywordFlags=0,name="CannotChain",type="FLAG",value=true}},nil}
@@ -4150,7 +4218,7 @@ c["Life Leech can Overflow Maximum Life"]={nil,"Life Leech can Overflow Maximum 
 c["Life Leech effects Recover Energy Shield instead while on Full Life"]={{[1]={[1]={type="Condition",var="FullLife"},[2]={type="Condition",var="LeechingLife"},flags=0,keywordFlags=0,name="ImmortalAmbition",type="FLAG",value=true}},nil}
 c["Life Leech effects are not removed when Unreserved Life is Filled"]={{[1]={flags=0,keywordFlags=0,name="CanLeechLifeOnFullLife",type="FLAG",value=true}},nil}
 c["Life Leech from your Hits also applies to your Companion"]={nil,"Life Leech from your Hits also applies to your Companion "}
-c["Life Leech is Converted to Energy Shield Leech"]={nil,"Life Leech is Converted to Energy Shield Leech "}
+c["Life Leech is Converted to Energy Shield Leech"]={{[1]={flags=0,keywordFlags=0,name="GhostReaver",type="FLAG",value=true}},nil}
 c["Life Leech is Instant"]={{[1]={flags=0,keywordFlags=0,name="InstantLifeLeech",type="BASE",value=100}},nil}
 c["Life Leech recovers based on your Chaos damage instead of Physical damage"]={nil,"Life Leech recovers based on your Chaos damage instead of Physical damage "}
 c["Life Leech recovers based on your Elemental damage as well as Physical damage"]={{[1]={flags=0,keywordFlags=0,name="PhysicalAsElementalDamageLifeLeech",type="FLAG",value=true}},nil}
@@ -4311,9 +4379,9 @@ c["Non-Channelling Spells consume a Power Charge if able to deal 25% more Damage
 c["Non-Channelling Spells cost an additional 3% of maximum Energy Shield"]={{[1]={[1]={percent=3,stat="EnergyShield",type="PercentStat"},[2]={neg=true,skillType=48,type="SkillType"},flags=0,keywordFlags=131072,name="ESCostBase",type="BASE",value=1}},nil}
 c["Non-Channelling Spells cost an additional 6% of your maximum Life"]={nil,"cost an additional 6% of your maximum Life "}
 c["Non-Channelling Spells cost an additional 6% of your maximum Life Non-Channelling Spells have 5% increased Critical Hit Chance per 100 maximum Life"]={nil,"cost an additional 6% of your maximum Life Non-Channelling Spells have 5% increased Critical Hit Chance per 100 maximum Life "}
-c["Non-Channelling Spells deal 10% increased Damage per 100 maximum Life"]={{[1]={[1]={neg=true,skillType=48,type="SkillType"},[2]={div=100,stat="Life",type="PerStat"},flags=0,keywordFlags=131072,name="Damage",type="INC",value=10}},nil}
-c["Non-Channelling Spells deal 30% more Damage"]={{[1]={[1]={neg=true,skillType=48,type="SkillType"},flags=0,keywordFlags=131072,name="Damage",type="MORE",value=30}},nil}
-c["Non-Channelling Spells have 5% increased Critical Hit Chance per 100 maximum Life"]={{[1]={[1]={neg=true,skillType=48,type="SkillType"},[2]={div=100,stat="Life",type="PerStat"},flags=0,keywordFlags=131072,name="CritChance",type="INC",value=5}},nil}
+c["Non-Channelling Spells deal 10% increased Damage per 100 maximum Life"]={{[1]={[1]={neg=true,skillType=48,type="SkillType"},[2]={div=100,stat="Life",type="PerStat"},flags=2,keywordFlags=0,name="Damage",type="INC",value=10}},nil}
+c["Non-Channelling Spells deal 30% more Damage"]={{[1]={[1]={neg=true,skillType=48,type="SkillType"},flags=2,keywordFlags=0,name="Damage",type="MORE",value=30}},nil}
+c["Non-Channelling Spells have 5% increased Critical Hit Chance per 100 maximum Life"]={{[1]={[1]={neg=true,skillType=48,type="SkillType"},[2]={div=100,stat="Life",type="PerStat"},flags=2,keywordFlags=0,name="CritChance",type="INC",value=5}},nil}
 c["Offering Skills have 20% increased Area of Effect"]={{[1]={[1]={skillType=154,type="SkillType"},flags=0,keywordFlags=0,name="AreaOfEffect",type="INC",value=20}},nil}
 c["Offering Skills have 30% increased Duration"]={{[1]={[1]={skillType=154,type="SkillType"},flags=0,keywordFlags=0,name="Duration",type="INC",value=30}},nil}
 c["Offering Skills have 30% reduced Duration"]={{[1]={[1]={skillType=154,type="SkillType"},flags=0,keywordFlags=0,name="Duration",type="INC",value=-30}},nil}
@@ -4352,6 +4420,7 @@ c["Passives in radius of Blood Magic can be Allocated without being connected to
 c["Passives in radius of Bulwark can be Allocated without being connected to your tree"]={{[1]={flags=0,keywordFlags=0,name="JewelData",type="LIST",value={key="fromNothingKeystone",value="bulwark"}},[2]={flags=0,keywordFlags=0,name="FromNothingKeystones",type="LIST",value={key="bulwark",value=true}}},nil}
 c["Passives in radius of Chaos Inoculation can be Allocated without being connected to your tree"]={{[1]={flags=0,keywordFlags=0,name="JewelData",type="LIST",value={key="fromNothingKeystone",value="chaos inoculation"}},[2]={flags=0,keywordFlags=0,name="FromNothingKeystones",type="LIST",value={key="chaos inoculation",value=true}}},nil}
 c["Passives in radius of Conduit can be Allocated without being connected to your tree"]={{[1]={flags=0,keywordFlags=0,name="JewelData",type="LIST",value={key="fromNothingKeystone",value="conduit"}},[2]={flags=0,keywordFlags=0,name="FromNothingKeystones",type="LIST",value={key="conduit",value=true}}},nil}
+c["Passives in radius of Crimson Assault can be Allocated without being connected to your tree"]={{[1]={flags=0,keywordFlags=0,name="JewelData",type="LIST",value={key="fromNothingKeystone",value="crimson assault"}},[2]={flags=0,keywordFlags=0,name="FromNothingKeystones",type="LIST",value={key="crimson assault",value=true}}},nil}
 c["Passives in radius of Dance with Death can be Allocated without being connected to your tree"]={{[1]={flags=0,keywordFlags=0,name="JewelData",type="LIST",value={key="fromNothingKeystone",value="dance with death"}},[2]={flags=0,keywordFlags=0,name="FromNothingKeystones",type="LIST",value={key="dance with death",value=true}}},nil}
 c["Passives in radius of Eldritch Battery can be Allocated without being connected to your tree"]={{[1]={flags=0,keywordFlags=0,name="JewelData",type="LIST",value={key="fromNothingKeystone",value="eldritch battery"}},[2]={flags=0,keywordFlags=0,name="FromNothingKeystones",type="LIST",value={key="eldritch battery",value=true}}},nil}
 c["Passives in radius of Elemental Equilibrium can be Allocated without being connected to your tree"]={{[1]={flags=0,keywordFlags=0,name="JewelData",type="LIST",value={key="fromNothingKeystone",value="elemental equilibrium"}},[2]={flags=0,keywordFlags=0,name="FromNothingKeystones",type="LIST",value={key="elemental equilibrium",value=true}}},nil}
@@ -4366,6 +4435,7 @@ c["Passives in radius of Oasis can be Allocated without being connected to your 
 c["Passives in radius of Pain Attunement can be Allocated without being connected to your tree"]={{[1]={flags=0,keywordFlags=0,name="JewelData",type="LIST",value={key="fromNothingKeystone",value="pain attunement"}},[2]={flags=0,keywordFlags=0,name="FromNothingKeystones",type="LIST",value={key="pain attunement",value=true}}},nil}
 c["Passives in radius of Resolute Technique can be Allocated without being connected to your tree"]={{[1]={flags=0,keywordFlags=0,name="JewelData",type="LIST",value={key="fromNothingKeystone",value="resolute technique"}},[2]={flags=0,keywordFlags=0,name="FromNothingKeystones",type="LIST",value={key="resolute technique",value=true}}},nil}
 c["Passives in radius of Resonance can be Allocated without being connected to your tree"]={{[1]={flags=0,keywordFlags=0,name="JewelData",type="LIST",value={key="fromNothingKeystone",value="resonance"}},[2]={flags=0,keywordFlags=0,name="FromNothingKeystones",type="LIST",value={key="resonance",value=true}}},nil}
+c["Passives in radius of Trusted Kinship can be Allocated without being connected to your tree"]={{[1]={flags=0,keywordFlags=0,name="JewelData",type="LIST",value={key="fromNothingKeystone",value="trusted kinship"}},[2]={flags=0,keywordFlags=0,name="FromNothingKeystones",type="LIST",value={key="trusted kinship",value=true}}},nil}
 c["Passives in radius of Unwavering Stance can be Allocated without being connected to your tree"]={{[1]={flags=0,keywordFlags=0,name="JewelData",type="LIST",value={key="fromNothingKeystone",value="unwavering stance"}},[2]={flags=0,keywordFlags=0,name="FromNothingKeystones",type="LIST",value={key="unwavering stance",value=true}}},nil}
 c["Passives in radius of Vaal Pact can be Allocated without being connected to your tree"]={{[1]={flags=0,keywordFlags=0,name="JewelData",type="LIST",value={key="fromNothingKeystone",value="vaal pact"}},[2]={flags=0,keywordFlags=0,name="FromNothingKeystones",type="LIST",value={key="vaal pact",value=true}}},nil}
 c["Passives in radius of Whispers of Doom can be Allocated without being connected to your tree"]={{[1]={flags=0,keywordFlags=0,name="JewelData",type="LIST",value={key="fromNothingKeystone",value="whispers of doom"}},[2]={flags=0,keywordFlags=0,name="FromNothingKeystones",type="LIST",value={key="whispers of doom",value=true}}},nil}
@@ -4374,9 +4444,27 @@ c["Permanently Intimidate enemies on Block"]={{[1]={[1]={type="Condition",var="B
 c["Persistent Buffs have 50% less Reservation"]={{[1]={[1]={skillType=139,type="SkillType"},[2]={skillType=5,type="SkillType"},flags=0,keywordFlags=0,name="Reserved",type="MORE",value=-50}},nil}
 c["Physical Damage Reduction from Armour is based on your combined Armour and Evasion Rating"]={{[1]={flags=0,keywordFlags=0,name="EvasionAddsToPdr",type="FLAG",value=true}},nil}
 c["Physical Damage is Pinning"]={nil,"Physical Damage is Pinning "}
+c["Pin Enemies which are Primed for Pinning"]={nil,"Pin Enemies which are Primed for Pinning "}
 c["Pinned enemies cannot perform actions"]={nil,"Pinned enemies cannot perform actions "}
+c["Possessed by Spirit Of The Bear for 20 seconds on use"]={nil,"Possessed by Spirit Of The Bear for 20 seconds on use "}
+c["Possessed by Spirit Of The Bear for 20 seconds on use Possessed by Spirit Of The Boar for 20 seconds on use"]={nil,"Possessed by Spirit Of The Bear for 20 seconds on use Possessed by Spirit Of The Boar for 20 seconds on use "}
+c["Possessed by Spirit Of The Boar for 20 seconds on use"]={nil,"Possessed by Spirit Of The Boar for 20 seconds on use "}
+c["Possessed by Spirit Of The Boar for 20 seconds on use Possessed by Spirit Of The Cat for 20 seconds on use"]={nil,"Possessed by Spirit Of The Boar for 20 seconds on use Possessed by Spirit Of The Cat for 20 seconds on use "}
+c["Possessed by Spirit Of The Cat for 20 seconds on use"]={nil,"Possessed by Spirit Of The Cat for 20 seconds on use "}
+c["Possessed by Spirit Of The Cat for 20 seconds on use Possessed by Spirit Of The Owl for 20 seconds on use"]={nil,"Possessed by Spirit Of The Cat for 20 seconds on use Possessed by Spirit Of The Owl for 20 seconds on use "}
+c["Possessed by Spirit Of The Owl for 20 seconds on use"]={nil,"Possessed by Spirit Of The Owl for 20 seconds on use "}
+c["Possessed by Spirit Of The Owl for 20 seconds on use Possessed by Spirit Of The Ox for 20 seconds on use"]={nil,"Possessed by Spirit Of The Owl for 20 seconds on use Possessed by Spirit Of The Ox for 20 seconds on use "}
+c["Possessed by Spirit Of The Ox for 20 seconds on use"]={nil,"Possessed by Spirit Of The Ox for 20 seconds on use "}
+c["Possessed by Spirit Of The Ox for 20 seconds on use Possessed by Spirit Of The Primate for 20 seconds on use"]={nil,"Possessed by Spirit Of The Ox for 20 seconds on use Possessed by Spirit Of The Primate for 20 seconds on use "}
+c["Possessed by Spirit Of The Primate for 20 seconds on use"]={nil,"Possessed by Spirit Of The Primate for 20 seconds on use "}
+c["Possessed by Spirit Of The Primate for 20 seconds on use Possessed by Spirit Of The Serpent for 20 seconds on use"]={nil,"Possessed by Spirit Of The Primate for 20 seconds on use Possessed by Spirit Of The Serpent for 20 seconds on use "}
+c["Possessed by Spirit Of The Serpent for 20 seconds on use"]={nil,"Possessed by Spirit Of The Serpent for 20 seconds on use "}
+c["Possessed by Spirit Of The Serpent for 20 seconds on use Possessed by Spirit Of The Stag for 20 seconds on use"]={nil,"Possessed by Spirit Of The Serpent for 20 seconds on use Possessed by Spirit Of The Stag for 20 seconds on use "}
+c["Possessed by Spirit Of The Stag for 20 seconds on use"]={nil,"Possessed by Spirit Of The Stag for 20 seconds on use "}
+c["Possessed by Spirit Of The Stag for 20 seconds on use Possessed by Spirit Of The Wolf for 20 seconds on use"]={nil,"Possessed by Spirit Of The Stag for 20 seconds on use Possessed by Spirit Of The Wolf for 20 seconds on use "}
+c["Possessed by Spirit Of The Wolf for 20 seconds on use"]={nil,"Possessed by Spirit Of The Wolf for 20 seconds on use "}
 c["Presence Gain 50% of Damage as Fire Damage"]={nil,"Presence Gain 50% of Damage as Fire Damage "}
-c["Presence Radius is doubled"]={nil,"Presence Radius is doubled "}
+c["Presence Radius is doubled"]={{[1]={[1]={globalLimit=100,globalLimitKey="PresenceRadiusDoubledLimit",type="Multiplier",var="PresenceRadiusDoubled"},flags=0,keywordFlags=0,name="PresenceRadius",type="MORE",value=100},[2]={flags=0,keywordFlags=0,name="Multiplier:PresenceRadiusDoubled",type="OVERRIDE",value=1}},nil}
 c["Projectile Damage builds Pin"]={nil,"Projectile Damage builds Pin "}
 c["Projectiles Pierce all Ignited enemies"]={nil,"Projectiles Pierce all Ignited enemies "}
 c["Projectiles Pierce all Ignited enemies Attacks Gain 10% of Damage as Extra Fire Damage"]={nil,"Projectiles Pierce all Ignited enemies Attacks Gain 10% of Damage as Extra Fire Damage "}
@@ -4402,6 +4490,7 @@ c["Quarterstaff Skills that consume Power Charges count as consuming an addition
 c["Recoup Effects instead occur over 4 seconds"]={{[1]={flags=0,keywordFlags=0,name="4SecondRecoup",type="FLAG",value=true}},nil}
 c["Recover 1% of maximum Life on Kill"]={{[1]={[1]={percent=1,stat="Life",type="PercentStat"},flags=0,keywordFlags=0,name="LifeOnKill",type="BASE",value=1}},nil}
 c["Recover 10% of Missing Life before being Hit by an Enemy"]={nil,"Recover 10% of Missing Life before being Hit by an Enemy "}
+c["Recover 10% of Missing Life before being Hit by an Enemy Recover 20% of Missing Life before being Hit by an Enemy"]={nil,"Recover 10% of Missing Life before being Hit by an Enemy Recover 20% of Missing Life before being Hit by an Enemy "}
 c["Recover 2% of maximum Life and Mana when you use a Warcry"]={nil,"Recover 2% of maximum Life and Mana when you use a Warcry "}
 c["Recover 2% of maximum Life and Mana when you use a Warcry 24% increased Warcry Speed"]={nil,"Recover 2% of maximum Life and Mana when you use a Warcry 24% increased Warcry Speed "}
 c["Recover 2% of maximum Life and Mana when you use a Warcry 24% increased Warcry Speed 18% increased Warcry Cooldown Recovery Rate"]={nil,"Recover 2% of maximum Life and Mana when you use a Warcry 24% increased Warcry Speed 18% increased Warcry Cooldown Recovery Rate "}
@@ -4413,6 +4502,7 @@ c["Recover 2% of maximum Life when you use a Mana Flask"]={nil,"Recover 2% of ma
 c["Recover 2% of maximum Life when you use a Mana Flask Mana Flasks gain 0.1 charges per Second"]={nil,"Recover 2% of maximum Life when you use a Mana Flask Mana Flasks gain 0.1 charges per Second "}
 c["Recover 2% of maximum Mana on Kill"]={{[1]={[1]={percent=2,stat="Mana",type="PercentStat"},flags=0,keywordFlags=0,name="ManaOnKill",type="BASE",value=1}},nil}
 c["Recover 20 Life when you Block"]={{[1]={flags=0,keywordFlags=0,name="LifeOnBlock",type="BASE",value=20}},nil}
+c["Recover 20% of Missing Life before being Hit by an Enemy"]={nil,"Recover 20% of Missing Life before being Hit by an Enemy "}
 c["Recover 20% of maximum Life when you Heavy Stun a Rare or Unique Enemy"]={nil,"Recover 20% of maximum Life when you Heavy Stun a Rare or Unique Enemy "}
 c["Recover 3% of maximum Life for each Endurance Charge consumed"]={nil,"Recover 3% of maximum Life for each Endurance Charge consumed "}
 c["Recover 3% of maximum Life for each Endurance Charge consumed +1 to Maximum Endurance Charges"]={nil,"Recover 3% of maximum Life for each Endurance Charge consumed +1 to Maximum Endurance Charges "}
@@ -4467,6 +4557,7 @@ c["Ritual Sacrifice can be used on yourself to remove 20% of maximum Life and gr
 c["Rolls only the minimum or maximum Damage value for each Damage Type"]={nil,"Rolls only the minimum or maximum Damage value for each Damage Type "}
 c["Sacrifice 15% of Life to gain that much Energy Shield when you Cast a Spell"]={{[1]={[1]={includeTransfigured=true,skillName="Sacrifice",type="SkillName"},flags=2,keywordFlags=0,name="Life",type="BASE",value=15}},"  to gain that much Energy Shield when you Cast a  "}
 c["Sacrifice 20% of Mana and they Leech that Mana"]={{[1]={[1]={includeTransfigured=true,skillName="Sacrifice",type="SkillName"},flags=0,keywordFlags=0,name="Mana",type="BASE",value=20}},"  and they Leech that Mana "}
+c["Sacrifice 300 Life to not consume the last bolt when firing"]={{[1]={[1]={includeTransfigured=true,skillName="Sacrifice",type="SkillName"},flags=0,keywordFlags=0,name="Life",type="BASE",value=300}},"  to not consume the last bolt when firing "}
 c["Share Charges with Allies in your Presence"]={nil,"Share Charges with "}
 c["Shocking Hits have a 50% chance to also Shock enemies in a 1.5 metre radius"]={nil,"Shocking Hits have a 50% chance to also Shock enemies in a 1.5 metre radius "}
 c["Shocks you when you reach maximum Power Charges"]={nil,"Shocks you when you reach maximum Power Charges "}
@@ -4478,9 +4569,9 @@ c["Skills Supported by Unleash have 10% increased Seal gain frequency"]={{[1]={f
 c["Skills Supported by Unleash have 25% increased Seal gain frequency"]={{[1]={flags=0,keywordFlags=0,name="SealGainFrequency",type="INC",value=25}},nil}
 c["Skills fire an additional Projectile"]={{[1]={flags=0,keywordFlags=0,name="ProjectileCount",type="BASE",value=1}},nil}
 c["Skills gain 1% of Damage as Chaos Damage per 3 Life Cost"]={{[1]={[1]={div=3,stat="LifeCost",type="PerStat"},flags=0,keywordFlags=0,name="DamageAsChaos",type="BASE",value=1}},nil}
-c["Skills gain 20% increased Critical Hit Chance per socketed blue Support Gem"]={{[1]={[1]={type="Multiplier",var="BlueSupportGems"},flags=0,keywordFlags=0,name="CritChance",type="INC",value=20}},nil}
-c["Skills gain 20% increased Damage per socketed red Support Gem"]={{[1]={[1]={type="Multiplier",var="RedSupportGems"},flags=0,keywordFlags=0,name="Damage",type="INC",value=20}},nil}
-c["Skills gain 6% increased Skill Speed per socketed green Support Gem"]={{[1]={[1]={type="Multiplier",var="GreenSupportGems"},flags=0,keywordFlags=0,name="Speed",type="INC",value=6},[2]={[1]={type="Multiplier",var="GreenSupportGems"},flags=0,keywordFlags=0,name="WarcrySpeed",type="INC",value=6}},nil}
+c["Skills gain 20% increased Critical Hit Chance per socketed blue Support Gem"]={{[1]={flags=0,keywordFlags=0,name="SkillCritChanceIncreasedPerBlueSupport",type="FLAG",value=20}},nil}
+c["Skills gain 20% increased Damage per socketed red Support Gem"]={{[1]={flags=0,keywordFlags=0,name="SkillDamageIncreasedPerRedSupport",type="FLAG",value=20}},nil}
+c["Skills gain 6% increased Skill Speed per socketed green Support Gem"]={{[1]={flags=0,keywordFlags=0,name="SkillSpeedIncreasedPerGreenSupport",type="FLAG",value=6}},nil}
 c["Skills gain a Base Life Cost equal to 10% of Base Mana Cost"]={{[1]={flags=0,keywordFlags=0,name="BaseManaCostAsLifeCost",type="BASE",value=10}},nil}
 c["Skills gain a Base Life Cost equal to 50% of Base Mana Cost"]={{[1]={flags=0,keywordFlags=0,name="BaseManaCostAsLifeCost",type="BASE",value=50}},nil}
 c["Skills gain a Base Life Cost equal to Base Mana Cost"]={{[1]={flags=0,keywordFlags=0,name="BaseManaCostAsLifeCost",type="BASE",value=100}},nil}
@@ -4493,6 +4584,7 @@ c["Skills have a 125% longer Perfect Timing window"]={{[1]={flags=0,keywordFlags
 c["Skills have a 150% longer Perfect Timing window"]={{[1]={flags=0,keywordFlags=0,name="PerfectTiming",type="INC",value=150}},nil}
 c["Skills reserve 50% less Spirit"]={{[1]={flags=0,keywordFlags=0,name="SpiritReserved",type="MORE",value=-50}},nil}
 c["Skills that would Summon a Totem have 20% chance to Summon two Totems instead"]={nil,"Skills that would Summon a Totem have 20% chance to Summon two Totems instead "}
+c["Skills used by Totems have 30% more Skill Speed"]={{[1]={flags=0,keywordFlags=16384,name="Speed",type="MORE",value=30},[2]={flags=0,keywordFlags=16384,name="WarcrySpeed",type="MORE",value=30}},nil}
 c["Slam Skills have 12% increased Area of Effect"]={{[1]={[1]={skillType=92,type="SkillType"},flags=0,keywordFlags=0,name="AreaOfEffect",type="INC",value=12}},nil}
 c["Slam Skills you use yourself cause Aftershocks"]={nil,"Slam Skills you use yourself cause Aftershocks "}
 c["Sorcery Ward recovers 50% faster"]={nil,"recovers 50% faster "}
@@ -4502,6 +4594,7 @@ c["Spell Skills have 20% increased Area of Effect"]={{[1]={flags=0,keywordFlags=
 c["Spell Skills have 30% increased Area of Effect"]={{[1]={flags=0,keywordFlags=131072,name="AreaOfEffect",type="INC",value=30}},nil}
 c["Spell Skills have 5% reduced Area of Effect"]={{[1]={flags=0,keywordFlags=131072,name="AreaOfEffect",type="INC",value=-5}},nil}
 c["Spell Skills have 8% increased Area of Effect"]={{[1]={flags=0,keywordFlags=131072,name="AreaOfEffect",type="INC",value=8}},nil}
+c["Spells Cast by Totems have 2% increased Cast Speed per Summoned Totem"]={{[1]={[1]={stat="TotemsSummoned",type="PerStat"},flags=18,keywordFlags=16384,name="Speed",type="INC",value=2}},nil}
 c["Spells Cast by Totems have 4% increased Cast Speed"]={{[1]={flags=18,keywordFlags=16384,name="Speed",type="INC",value=4}},nil}
 c["Spells fire 4 additional Projectiles"]={{[1]={flags=2,keywordFlags=0,name="ProjectileCount",type="BASE",value=4}},nil}
 c["Spells fire Projectiles in a circle"]={nil,"Projectiles in a circle "}
@@ -4545,11 +4638,7 @@ c["Totems Regenerate 3% of maximum Life per second"]={nil,"Totems Regenerate 3% 
 c["Totems gain +12% to all Elemental Resistances"]={{[1]={flags=0,keywordFlags=0,name="TotemElementalResist",type="BASE",value=12}},nil}
 c["Totems gain +20% to all Elemental Resistances"]={{[1]={flags=0,keywordFlags=0,name="TotemElementalResist",type="BASE",value=20}},nil}
 c["Totems have 12% additional Physical Damage Reduction"]={{[1]={flags=0,keywordFlags=16384,name="PhysicalDamageReduction",type="BASE",value=12}},nil}
-c["Totems have 2% increased Attack Speed per Summoned Totem"]={{[1]={[1]={stat="TotemsSummoned",type="PerStat"},flags=1,keywordFlags=16384,name="Speed",type="INC",value=2}},nil}
-c["Totems have 2% increased Cast Speed per Summoned Totem"]={{[1]={[1]={stat="TotemsSummoned",type="PerStat"},flags=16,keywordFlags=16384,name="Speed",type="INC",value=2}},nil}
 c["Totems have 20% additional Physical Damage Reduction"]={{[1]={flags=0,keywordFlags=16384,name="PhysicalDamageReduction",type="BASE",value=20}},nil}
-c["Totems have 30% more Skill Speed"]={{[1]={flags=0,keywordFlags=16384,name="Speed",type="MORE",value=30},[2]={flags=0,keywordFlags=16384,name="WarcrySpeed",type="MORE",value=30}},nil}
-c["Totems have 4% increased Attack Speed per Summoned Totem"]={{[1]={[1]={stat="TotemsSummoned",type="PerStat"},flags=1,keywordFlags=16384,name="Speed",type="INC",value=4}},nil}
 c["Totems only use Skills when you fire an Attack Projectile"]={nil,"Totems only use Skills when you fire an Attack Projectile "}
 c["Totems reserve 100 Spirit each"]={nil,"Totems reserve 100 Spirit each "}
 c["Trigger Ancestral Spirits when you Summon a Totem"]={{},nil}
@@ -4574,6 +4663,8 @@ c["Unlimited number of Summoned Totems Totems reserve 100 Spirit each"]={nil,"Un
 c["Unwavering Stance"]={{[1]={flags=0,keywordFlags=0,name="Keystone",type="LIST",value="Unwavering Stance"}},nil}
 c["Unwithered enemies are Withered for 8 seconds when they enter your Presence"]={nil,"Unwithered enemies are Withered for 8 seconds when they enter your Presence "}
 c["Unwithered enemies are Withered for 8 seconds when they enter your Presence 20% increased Effect of Withered"]={nil,"Unwithered enemies are Withered for 8 seconds when they enter your Presence 20% increased Effect of Withered "}
+c["Used when you Kill a Rare or Unique Enemy"]={nil,"Used when you Kill a Rare or Unique Enemy "}
+c["Used when you Kill a Rare or Unique Enemy Possessed by Spirit Of The Bear for 20 seconds on use"]={nil,"Used when you Kill a Rare or Unique Enemy Possessed by Spirit Of The Bear for 20 seconds on use "}
 c["Used when you are affected by a Slow"]={nil,"Used when you are affected by a Slow "}
 c["Used when you are affected by a Slow Grants Onslaught during effect"]={nil,"Used when you are affected by a Slow Grants Onslaught during effect "}
 c["Used when you become Frozen"]={nil,"Used when you become Frozen "}
@@ -4614,7 +4705,7 @@ c["When you Consume a Power Charge Trigger Infuse Weapon to gain 2 Cold Infusion
 c["When you Consume an Endurance Charge Trigger Infuse Weapon to gain 2 Fire Infusion"]={nil,"When you Consume an Endurance Charge Trigger Infuse Weapon to gain 2 Fire Infusion "}
 c["When you Consume an Endurance Charge Trigger Infuse Weapon to gain 2 Fire Infusion When you Consume a Frenzy Charge Trigger Infuse Weapon to gain 2 Lightning Infusion"]={nil,"When you Consume an Endurance Charge Trigger Infuse Weapon to gain 2 Fire Infusion When you Consume a Frenzy Charge Trigger Infuse Weapon to gain 2 Lightning Infusion "}
 c["When you Consume an Endurance Charge Trigger Infuse Weapon to gain 2 Fire Infusion When you Consume a Frenzy Charge Trigger Infuse Weapon to gain 2 Lightning Infusion Grants Skill: Infuse Weapon"]={nil,"When you Consume an Endurance Charge Trigger Infuse Weapon to gain 2 Fire Infusion When you Consume a Frenzy Charge Trigger Infuse Weapon to gain 2 Lightning Infusion Grants Skill: Infuse Weapon "}
-c["When you Kill a Rare monster, you gain its Modifiers for 20 seconds"]={nil,"When you Kill a Rare monster, you gain its Modifiers for 20 seconds "}
+c["When you Kill a Rare monster, you gain its Modifiers for 60 seconds"]={nil,"When you Kill a Rare monster, you gain its Modifiers for 60 seconds "}
 c["When you Leech Life from a Hit, Allies in your Presence also Leech the same amount of Life"]={nil,"When you Leech Life from a Hit, also Leech the same amount of Life "}
 c["When you leave your Banner's Area, recover 15% of the Valour consumed for that Banner"]={nil,"When you leave your Banner's Area, recover 15% of the Valour consumed for that Banner "}
 c["While not on Full Life, Sacrifice 1% of Mana per Second to Recover that much Life"]={{[1]={[1]={neg=true,type="Condition",var="FullLife"},flags=0,keywordFlags=0,name="ManaDegenPercent",type="BASE",value=1},[2]={[1]={percent=1,stat="Mana",type="PercentStat"},[2]={neg=true,type="Condition",var="FullLife"},flags=0,keywordFlags=0,name="LifeRecovery",type="BASE",value=1}},nil}
@@ -4682,7 +4773,7 @@ c["Your Dexterity is added to your Minions"]={{[1]={flags=0,keywordFlags=0,name=
 c["Your Heavy Stun buildup empties 50% faster"]={nil,"Your Heavy Stun buildup empties 50% faster "}
 c["Your Heavy Stun buildup empties 50% faster if you've successfully Parried Recently"]={nil,"Your Heavy Stun buildup empties 50% faster if you've successfully Parried Recently "}
 c["Your Hits are Crushing Blows"]={nil,"Your Hits are Crushing Blows "}
-c["Your Hits can Penetrate Elemental Resistances down to a minimum of -50%"]={nil,"Your Hits can Penetrate Elemental Resistances down to a minimum of -50% "}
+c["Your Hits can Penetrate Elemental Resistances down to a minimum of -50%"]={{[1]={flags=0,keywordFlags=262144,name="ElementalPenetrationMinimum",type="BASE",value=-50}},nil}
 c["Your Hits can't be Evaded"]={{[1]={flags=0,keywordFlags=0,name="CannotBeEvaded",type="FLAG",value=true}},nil}
 c["Your Life cannot change while you have Energy Shield"]={{[1]={flags=0,keywordFlags=0,name="EternalLife",type="FLAG",value=true}},nil}
 c["Your base Energy Shield Recharge Delay is 10 seconds"]={{[1]={flags=0,keywordFlags=0,name="EnergyShieldRechargeBase",type="OVERRIDE",value=10}},nil}
@@ -4690,13 +4781,12 @@ c["Your speed is unaffected by Slows"]={{[1]={flags=0,keywordFlags=0,name="Unaff
 c["apply to Energy Shield Recharge Rate"]={nil,"apply to Energy Shield Recharge Rate "}
 c["apply to Energy Shield Recharge Rate Gain 50% of Maximum Mana as Armour"]={nil,"apply to Energy Shield Recharge Rate Gain 50% of Maximum Mana as Armour "}
 c["for 4 seconds while Shield is raised"]={nil,"for 4 seconds while Shield is raised "}
-c["of their maximum Life as Physical Damage"]={nil,"of their maximum Life as Physical Damage "}
-c["of their maximum Life as Physical Damage Chance is doubled against Undead and Demons"]={nil,"of their maximum Life as Physical Damage Chance is doubled against Undead and Demons "}
 c["the enemy's Power for 6 seconds, up to a total of 500"]={nil,"the enemy's Power for 6 seconds, up to a total of 500 "}
 c["the same damage to enemies within 1.8 metres"]={nil,"the same damage to enemies within 1.8 metres "}
 c["until you take no Damage to Life for 5 seconds"]={nil,"until you take no Damage to Life for 5 seconds "}
 c["your Ailments on them"]={nil,"your Ailments on them "}
 c["your Ailments on them 30% reduced Duration of Ignite, Shock and Chill on Enemies"]={nil,"your Ailments on them 30% reduced Duration of Ignite, Shock and Chill on Enemies "}
+c["your Ailments on them your Ailments on them"]={nil,"your Ailments on them your Ailments on them "}
 c["your maximum Life as Physical damage per second"]={nil,"your maximum Life as Physical damage per second "}
 c["your maximum number of Power Charges"]={nil,"your maximum number of Power Charges "}
 c["your maximum number of Power Charges +1 to Maximum Power Charges"]={nil,"your maximum number of Power Charges +1 to Maximum Power Charges "}

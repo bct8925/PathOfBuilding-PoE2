@@ -62,8 +62,10 @@ function calcs.initModDB(env, modDB)
 	modDB:NewMod("MovementSpeed", "INC", -30, "Base", { type = "Condition", var = "Maimed" })
 	modDB:NewMod("Evasion", "INC", -15, "Base", { type = "Condition", var = "Maimed" })
 	modDB:NewMod("AilmentThreshold", "BASE", 50, "Base", { type = "PercentStat", stat = "Life", percent = 1 })
-	modDB:NewMod("DamageTaken", "INC", 10, "Base", ModFlag.Attack, { type = "Condition", var = "Intimidated"})
-	modDB:NewMod("DamageTaken", "INC", 10, "Base", ModFlag.Attack, { type = "Condition", var = "Intimidated", neg = true}, { type = "Condition", var = "Party:Intimidated"})
+	modDB:NewMod("DamageTaken", "INC", 10, "Base", { type = "Condition", var = "Intimidated"})
+	modDB:NewMod("DamageTaken", "INC", 10, "Base", { type = "Condition", var = "Intimidated", neg = true}, { type = "Condition", var = "Party:Intimidated"})
+	modDB:NewMod("Damage", "INC", -10, "Base", { type = "Condition", var = "Intimidated"})
+	modDB:NewMod("Damage", "INC", -10, "Base", { type = "Condition", var = "Intimidated", neg = true}, { type = "Condition", var = "Party:Intimidated"})
 	modDB:NewMod("DamageTaken", "INC", 10, "Base", ModFlag.Spell, { type = "Condition", var = "Unnerved"})
 	modDB:NewMod("DamageTaken", "INC", 10, "Base", ModFlag.Spell, { type = "Condition", var = "Unnerved", neg = true}, { type = "Condition", var = "Party:Unnerved"})
 	modDB:NewMod("Damage", "MORE", -10, "Base", { type = "Condition", var = "Debilitated"})
@@ -89,6 +91,7 @@ function calcs.initModDB(env, modDB)
 	modDB:NewMod("Convergence", "FLAG", true, "Base", { type = "Condition", var = "Convergence" })
 	modDB:NewMod("PhysicalDamageReduction", "BASE", -15, "Base", { type = "Condition", var = "Crushed" })
 	modDB:NewMod("CritChanceCap", "BASE", 100, "Base")
+	modDB:NewMod("PresenceRadius", "BASE", data.misc.presenceRadiusBase, "Base")
 	modDB.conditions["Buffed"] = env.mode_buffs
 	modDB.conditions["Combat"] = env.mode_combat
 	modDB.conditions["Effective"] = env.mode_effective
@@ -905,7 +908,7 @@ function calcs.initEnv(build, mode, override, specEnv)
 				items[slot] = nil
 			end
 		end
-
+		
 		for _, slot in pairs(build.itemsTab.orderedSlots) do
 			local slotName = slot.slotName
 			local item = items[slotName]
@@ -919,6 +922,7 @@ function calcs.initEnv(build, mode, override, specEnv)
 						env.itemModDB.multipliers["LifeFlaskRecovery"] = item.flaskData.lifeTotal
 					end
 				end
+				env.itemModDB.multipliers[item.base.subType..slotName:gsub(" ", "").."MaxCharges"] = item.flaskData.chargesMax
 				item = nil
 			elseif item and item.type == "Charm" then
 				if slot.active then
@@ -933,6 +937,17 @@ function calcs.initEnv(build, mode, override, specEnv)
 					scale = scale + node.distanceToClassStart * (item.jewelData.jewelIncEffectFromClassStart / 100)
 				end
 			end
+
+			local addSourceSlotNum = false
+			if slot.nodeId and item and item.type == "Jewel" then
+				local node = env.spec.nodes[slot.nodeId]
+				if node and node.containJewelSocket then
+					addSourceSlotNum = true
+					local inc = node.modList:Sum("INC", nil, "SocketedJewelEffect")
+					scale = scale + (inc / 100)
+				end
+			end
+
 			if item then
 				env.player.itemList[slotName] = item
 				-- Merge mods for this item
@@ -946,6 +961,13 @@ function calcs.initEnv(build, mode, override, specEnv)
 						if mod.name == "Spirit" and mod.type == "BASE" then
 							t_remove(srcList, index)
 						end
+					end
+				end
+
+				if addSourceSlotNum then
+					srcList = copyTable(srcList, false)
+					for _, mod in ipairs(srcList) do
+						mod.sourceSlotNum = slot.slotNum
 					end
 				end
 				
@@ -1112,7 +1134,7 @@ function calcs.initEnv(build, mode, override, specEnv)
 							env.itemModDB:ScaleAddMod(mod, scale)
 						end
 					end
-				elseif env.modDB.multipliers["CorruptedMagicJewelEffect"] and item.type == "Jewel" and item.rarity == "MAGIC" and item.corrupted and slot.nodeId and item.base.subType ~= "Charm" then
+				elseif env.modDB.multipliers["CorruptedMagicJewelEffect"] and item.type == "Jewel" and item.rarity == "MAGIC" and item.corrupted and slot.nodeId and item.base.subType ~= "Charm" and not env.spec.nodes[slot.nodeId].containJewelSocket then
 					scale = scale + env.modDB.multipliers["CorruptedMagicJewelEffect"]
 					local combinedList = new("ModList")
 					for _, mod in ipairs(srcList) do
@@ -1290,8 +1312,8 @@ function calcs.initEnv(build, mode, override, specEnv)
 					enabled = true,
 				}
 				activeGemInstance.fromItem = grantedSkill.sourceItem ~= nil
-				activeGemInstance.gemId = nil
 				activeGemInstance.level = grantedSkill.level
+				activeGemInstance.gemId = data.gemForSkill[data.skills[grantedSkill.skillId]]
 				activeGemInstance.enableGlobal1 = true
 				activeGemInstance.noSupports = grantedSkill.noSupports
 				group.noSupports = grantedSkill.noSupports
@@ -1613,7 +1635,7 @@ function calcs.initEnv(build, mode, override, specEnv)
 								t_insert(env.player.activeSkillList, activeSkill)
 							end
 						end
-						if gemInstance.gemData and not accelerate.requirementsGems then
+						if gemInstance.gemData and not (accelerate.requirementsGems or group.gemList[gemIndex].fromNode or group.gemList[gemIndex].fromItem) then
 							t_insert(env.requirementsTableGems, {
 								source = "Gem",
 								sourceGem = gemInstance,
@@ -1672,7 +1694,11 @@ function calcs.initEnv(build, mode, override, specEnv)
 					for _, gemInstance in ipairs(group.gemList) do
 						local grantedEffect = gemInstance.gemData and gemInstance.gemData.grantedEffect or gemInstance.grantedEffect
 						if grantedEffect and not grantedEffect.support and gemInstance.enabled then
-							group.displayLabel = (group.displayLabel and group.displayLabel..", " or "") .. grantedEffect.name
+							if grantedEffect.name:match("^Companion:") or grantedEffect.name:match("^Spectre:") then
+								group.displayLabel = (group.displayLabel and group.displayLabel..", " or "") .. gemInstance.nameSpec
+							else
+								group.displayLabel = (group.displayLabel and group.displayLabel..", " or "") .. grantedEffect.name
+							end
 						end
 					end
 					group.displayLabel = group.displayLabel or "<No active skills>"

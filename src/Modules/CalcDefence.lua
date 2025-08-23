@@ -53,10 +53,10 @@ end
 
 -- Calculate life/mana/spirit pools
 ---@param actor table
-function calcs.doActorLifeManaSpirit(actor)
+function calcs.doActorLifeManaSpirit(actor, skipBreakdown)
 	local modDB = actor.modDB
 	local output = actor.output
-	local breakdown = actor.breakdown
+	local breakdown = (not skipBreakdown) and actor.breakdown
 	local condList = modDB.conditions
 
 	local lowLifePerc = modDB:Sum("BASE", nil, "LowLifePercentage")
@@ -178,6 +178,18 @@ function calcs.doActorLifeManaSpiritReservation(actor)
 			local skillCfg = activeSkill.skillCfg
 			local mult = floor(skillModList:More(skillCfg, "ReservationMultiplier"), 4)
 			local pool = { ["Mana"] = { }, ["Life"] = { }, ["Spirit"] = { } }
+			if activeSkill.skillCfg.skillName:match("^Companion:") and activeSkill.activeEffect.srcInstance.displayEffect and activeSkill.minion then
+				activeSkill.skillData.spiritReservationPercent = activeSkill.minion.minionData.companionReservation
+				activeSkill.activeEffect.srcInstance.displayEffect.grantedEffect.name = "Companion: "..activeSkill.minion.minionData.name -- for breakdown
+				activeSkill.activeEffect.srcInstance.nameSpec = "Companion: "..activeSkill.minion.minionData.name -- for socket group
+				activeSkill.activeEffect.srcInstance.displayEffect.nameSpec = "Companion: "..activeSkill.minion.minionData.name-- for tooltip
+			end
+			if activeSkill.skillCfg.skillName:match("^Spectre:") and activeSkill.activeEffect.srcInstance.displayEffect and activeSkill.minion then
+				activeSkill.skillData.spiritReservationFlat = activeSkill.minion.minionData.spectreReservation
+				activeSkill.activeEffect.srcInstance.displayEffect.grantedEffect.name = "Spectre: "..activeSkill.minion.minionData.name-- for breakdown
+				activeSkill.activeEffect.srcInstance.nameSpec = "Spectre: "..activeSkill.minion.minionData.name -- for socket group
+				activeSkill.activeEffect.srcInstance.displayEffect.nameSpec = "Spectre: "..activeSkill.minion.minionData.name-- for tooltip
+			end
 			pool.Mana.baseFlat = activeSkill.skillData.manaReservationFlat or activeSkill.activeEffect.grantedEffectLevel.manaReservationFlat or 0
 			pool.Spirit.baseFlat = activeSkill.skillData.spiritReservationFlat or activeSkill.activeEffect.grantedEffectLevel.spiritReservationFlat or 0
 			pool.Spirit.baseFlat = pool.Spirit.baseFlat + skillModList:Sum("BASE", skillCfg, "ExtraSpirit")
@@ -210,7 +222,7 @@ function calcs.doActorLifeManaSpiritReservation(actor)
 				if activeSkill.skillData[name.."ReservationFlatForced"] then
 					values.reservedFlat = activeSkill.skillData[name.."ReservationFlatForced"]
 				else
-					local baseFlatVal = values.baseFlat
+					local baseFlatVal = values.baseFlat * mult
 					values.reservedFlat = 0
 					if values.more > 0 and values.inc > -100 and baseFlatVal ~= 0 then
 						values.reservedFlat = m_max(m_ceil(baseFlatVal * (100 + values.inc) / 100 * values.more / (1 + values.efficiency / 100), 0), 0)
@@ -222,7 +234,7 @@ function calcs.doActorLifeManaSpiritReservation(actor)
 					local basePercentVal = values.basePercent * mult
 					values.reservedPercent = 0
 					if values.more > 0 and values.inc > -100 and basePercentVal ~= 0 then
-						values.reservedPercent = m_max(m_ceil(basePercentVal * (100 + values.inc) / 100 * values.more / (1 + values.efficiency / 100), 2), 0)
+						values.reservedPercent = m_max(round(basePercentVal * (100 + values.inc) / 100 * values.more / (1 + values.efficiency / 100), 2), 0)
 					end
 				end
 				if activeSkill.activeMineCount then
@@ -232,17 +244,19 @@ function calcs.doActorLifeManaSpiritReservation(actor)
 				if activeSkill.skillTypes[SkillType.MultipleReservation] then
 					local activeSkillCount, enabled = calcs.getActiveSkillCount(activeSkill)
 					local minionFreeSpiritCount = skillModList:Sum("BASE", skillCfg, "MinionFreeSpiritCount")
-					values.reservedFlat = values.reservedFlat * mult * m_max(activeSkillCount - minionFreeSpiritCount, 0)
+					values.reservedFlat = values.reservedFlat * m_max(activeSkillCount - minionFreeSpiritCount, 0)
 				end
-				
-				if activeSkill.skillTypes[SkillType.IsBlasphemy] and activeSkill.activeEffect.srcInstance.supportEffect and activeSkill.activeEffect.srcInstance.supportEffect.isSupporting then
+				if activeSkill.skillTypes[SkillType.IsBlasphemy] and activeSkill.activeEffect.srcInstance.supportEffect and activeSkill.activeEffect.srcInstance.supportEffect.isSupporting and activeSkill.skillData["blasphemyReservationFlat" .. name] then
 					-- Sadly no better way to get key/val table element count in lua.
 					local instances = 0
 					for _ in pairs(activeSkill.activeEffect.srcInstance.supportEffect.isSupporting) do
 						instances = instances + 1
 					end
-					values.reservedFlat = values.reservedFlat * instances * mult
-					values.reservedPercent = values.reservedPercent * instances * mult
+
+					-- Extra reservation of blasphemy needs to be separated from the reservation caused by curses
+					local blasphemyFlat = activeSkill.skillData["blasphemyReservationFlat" .. name]
+					local blasphemyEffectiveFlat = m_max(m_ceil(blasphemyFlat * mult * (100 + values.inc) / 100 * values.more / (1 + values.efficiency / 100), 0), 0)
+					values.reservedFlat = values.reservedFlat + blasphemyEffectiveFlat * instances
 				end
 					-- Blood Sacrament increases reservation per stage channelled
 				if activeSkill.skillCfg.skillName == "Blood Sacrament" and activeSkill.activeStageCount then
@@ -548,7 +562,7 @@ function calcs.reducePoolsByDamage(poolTable, damageTable, actor)
 				esPoolRemaining = m_min(esPoolRemaining, energyShield)
 				damageRemainder = damageRemainder - tempDamage
 				resourcesLostToTypeDamage[damageType].energyShield = tempDamage >= 1 and tempDamage * (1 - esBypass) * esDamageTypeMultiplier or nil
-				resourcesLostToTypeDamage[damageType].eternalLifePrevented = tempDamage >= 1 and tempDamage * esBypass * esDamageTypeMultiplier or nil
+				resourcesLostToTypeDamage[damageType].eternalLifePrevented = tempDamage >= 1 and tempDamage * esBypass or nil
 			elseif energyShield > 0 and esBypass < 1 then
 				local MoMEBPool = esBypass > 0 and m_min((MoMPool + lifeHitPool) / esBypass * esDamageTypeMultiplier - (MoMPool + lifeHitPool), energyShield) or energyShield
 				local tempDamage = m_min(damageRemainder * (1 - esBypass), MoMEBPool / esDamageTypeMultiplier)
@@ -1063,6 +1077,8 @@ function calcs.defence(env, actor)
 	end
 	-- Primary defences: Energy shield, evasion and armour
 	do
+		-- Pre-calculate Life/Mana/Spirit for mods such as Beidat's hand
+		calcs.doActorLifeManaSpirit(actor, true)
 		local ward = 0
 		local energyShield = 0
 		local armour = 0
@@ -1220,11 +1236,11 @@ function calcs.defence(env, actor)
 		end
 
 		local resourceList = {
-			{ name = "Armour", basePerSlot = {}, globalBase = 0, conversionRate = { }, mods = { "Armour", "ArmourAndEvasion", "Defences" }, defence = true },
-			{ name = "Evasion", basePerSlot = {}, globalBase = 0, conversionRate = { }, mods = { "Evasion", "ArmourAndEvasion", "Defences" }, defence = true },
-			{ name = "EnergyShield", basePerSlot = {}, globalBase = 0, conversionRate = { }, mods = { "EnergyShield", "Defences" }, defence = true },
-			{ name = "Life", basePerSlot = {}, globalBase = 0, conversionRate = { }, mods = { "Life" }, },
-			{ name = "Mana", basePerSlot = {}, globalBase = 0, conversionRate = { }, mods = { "Mana" }, },
+			{ name = "Armour", basePerSlot = {}, globalBase = 0, conversionRate = { }, mods = { "Armour", "ArmourAndEvasion", "Defences" }, modsTotal = { "ArmourTotal" }, defence = true },
+			{ name = "Evasion", basePerSlot = {}, globalBase = 0, conversionRate = { }, mods = { "Evasion", "ArmourAndEvasion", "Defences" }, modsTotal = { "EvasionTotal" }, defence = true },
+			{ name = "EnergyShield", basePerSlot = {}, globalBase = 0, conversionRate = { }, mods = { "EnergyShield", "Defences" }, modsTotal = { "EnergyShieldTotal" }, defence = true },
+			{ name = "Life", basePerSlot = {}, globalBase = 0, conversionRate = { }, mods = { "Life" }, modsTotal = { "LifeTotal" }, },
+			{ name = "Mana", basePerSlot = {}, globalBase = 0, conversionRate = { }, mods = { "Mana" }, modsTotal = { "ManaTotal" }, },
 		}
 		for _, source in ipairs(resourceList) do
 			output[source.name] = (output[source.name] or 0)
@@ -1292,7 +1308,7 @@ function calcs.defence(env, actor)
 				for _, slot in pairs({"Helmet","Gloves","Boots","Body Armour","Weapon 2","Weapon 3"}) do
 					output[res.name] = output[res.name] + res.basePerSlot[slot] * calcLib.mod(modDB, { slotName = slot }, unpack(res.mods))
 				end
-				output[res.name] = output[res.name] + res.globalBase * calcLib.mod(modDB, nil, unpack(res.mods))
+				output[res.name] = output[res.name] + res.globalBase * calcLib.mod(modDB, nil, unpack(res.mods)) + modDB:Sum("BASE", nil, unpack(res.modsTotal))
 			else
 				modDB:NewMod("Extra"..res.name, "BASE", res.globalBase, "Conversion")
 			end
@@ -1995,7 +2011,7 @@ function calcs.buildDefenceEstimations(env, actor)
 				conversionTotal = conversions["total"] + conversions["totalSkill"]
 				-- Calculate the amount converted/gained as
 				for _, damageTypeTo in ipairs(dmgTypeList) do
-					local gainAsPercent = (enemyDB:Sum("BASE", enemyCfg, (damageType.."DamageGainAs"..damageTypeTo)) + conversions[damageTypeTo.."skill"] + conversions[damageTypeTo]) / 100
+					local gainAsPercent = (enemyDB:Sum("BASE", enemyCfg, (damageType.."DamageGainAs"..damageTypeTo), ("DamageGainAs"..damageTypeTo)) + conversions[damageTypeTo.."skill"] + conversions[damageTypeTo]) / 100
 					if gainAsPercent > 0 then
 						enemyDamageConversion[damageTypeTo] = enemyDamageConversion[damageTypeTo] or { }
 						enemyDamageConversion[damageTypeTo][damageType] = enemyDamage * gainAsPercent
@@ -3466,7 +3482,7 @@ function calcs.buildDefenceEstimations(env, actor)
 						-- Which means that
 						-- 		RAW = [quadratic]
 
-						local oneMinusFlatPlusOverwhelm = (1 + flatDR - enemyOverwhelmPercent / 100)
+						local oneMinusFlatPlusOverwhelm = (1 - flatDR + enemyOverwhelmPercent / 100)
 						local HP_tTM_tF_DCM_tRM = (totalHitPool / totalTakenMulti - takenFlat) / (damageConvertedMulti * totalResistMult)
 						
 						local a = data.misc.ArmourRatio * damageConvertedMulti * oneMinusFlatPlusOverwhelm

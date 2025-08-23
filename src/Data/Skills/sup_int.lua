@@ -119,7 +119,19 @@ skills["SupportAmbrosiaPlayer"] = {
 			label = "Ambrosia",
 			incrementalEffectiveness = 0.054999999701977,
 			statDescriptionScope = "gem_stat_descriptions",
+			statMap = {
+				["consume_%_of_maximum_mana_flask_charges_on_skill_use"] = {
+					mod("Multiplier:ManaFlaskMaxChargesPercent", "BASE", nil),
+				},
+				["gain_%_damage_as_lighting_per_mana_flask_charge_consumed"] = {
+					mod("DamageGainAsLightning", "BASE", nil, 0, 0, { type = "Multiplier", var = "ManaFlaskChargeConsumed"}),
+				},
+			},
 			baseFlags = {
+			},
+			baseMods = {
+				mod("Multiplier:ManaFlaskChargeConsumed", "BASE", 1, 0, 0, { type = "PercentStat", stat = "ManaFlask1MaxCharges", percentVar = "ManaFlaskMaxChargesPercent", floor = true }),
+				mod("Multiplier:ManaFlaskChargeConsumed", "BASE", 1, 0, 0, { type = "PercentStat", stat = "ManaFlask2MaxCharges", percentVar = "ManaFlaskMaxChargesPercent", floor = true }),
 			},
 			constantStats = {
 				{ "consume_%_of_maximum_mana_flask_charges_on_skill_use", 20 },
@@ -1382,6 +1394,12 @@ skills["SupportDerangePlayer"] = {
 			label = "Derange",
 			incrementalEffectiveness = 0.054999999701977,
 			statDescriptionScope = "gem_stat_descriptions",
+			statMap = {
+				["support_shield_sacrifice_damage_over_time_+%_final_per_100_intelligence"] = {
+					mod("Damage", "MORE", nil, ModFlag.Dot, 0, { type = "PerStat", stat = "Int", div = 100 }),
+				},
+			},
+
 			baseFlags = {
 			},
 			constantStats = {
@@ -1521,7 +1539,7 @@ skills["SupportElementalDischargePlayer"] = {
 skills["TriggeredElementalDischargePlayer"] = {
 	name = "Elemental Discharge",
 	hidden = true,
-	skillTypes = { [SkillType.Spell] = true, [SkillType.Damage] = true, [SkillType.SkillGrantedBySupport] = true, [SkillType.Triggerable] = true, [SkillType.Cooldown] = true, [SkillType.Triggered] = true, },
+	skillTypes = { [SkillType.Spell] = true, [SkillType.Damage] = true, [SkillType.SkillGrantedBySupport] = true, [SkillType.Triggerable] = true, [SkillType.Cooldown] = true, [SkillType.Triggered] = true, [SkillType.Area] = true, },
 	castTime = 1,
 	qualityStats = {
 	},
@@ -1555,6 +1573,7 @@ skills["TriggeredElementalDischargePlayer"] = {
 			},
 			baseFlags = {
 				spell = true,
+				area = true,
 			},
 			constantStats = {
 				{ "triggered_by_supported_spell_consuming_ignite_freeze_shock_on_hit_%", 100 },
@@ -1567,6 +1586,7 @@ skills["TriggeredElementalDischargePlayer"] = {
 				"spell_maximum_base_cold_damage_as_%_of_intelligence",
 				"spell_minimum_base_lightning_damage_as_%_of_intelligence",
 				"spell_maximum_base_lightning_damage_as_%_of_intelligence",
+				"is_area_damage",
 			},
 			levels = {
 				[1] = { 40, 60, 80, 120, 1, 120, statInterpolation = { 1, 1, 1, 1, 1, 1, }, actorLevel = 1, },
@@ -1970,7 +1990,7 @@ skills["SupportFieryDeathPlayer"] = {
 }skills["TriggeredFieryDeathPlayer"] = {
 	name = "Fiery Death",
 	hidden = true,
-	skillTypes = { [SkillType.Spell] = true, [SkillType.Damage] = true, [SkillType.SkillGrantedBySupport] = true, [SkillType.Triggerable] = true, [SkillType.Triggered] = true, [SkillType.Fire] = true, [SkillType.TargetsDestructibleCorpses] = true, },
+	skillTypes = { [SkillType.Spell] = true, [SkillType.Damage] = true, [SkillType.SkillGrantedBySupport] = true, [SkillType.Triggerable] = true, [SkillType.Triggered] = true, [SkillType.Fire] = true, [SkillType.TargetsDestructibleCorpses] = true, [SkillType.Area] = true, },
 	castTime = 1,
 	qualityStats = {
 	},
@@ -1996,6 +2016,7 @@ skills["SupportFieryDeathPlayer"] = {
 				{ "corpse_explosion_monster_life_%", 10 },
 			},
 			stats = {
+				"is_area_damage",
 			},
 			levels = {
 				[1] = { actorLevel = 1, },
@@ -2881,7 +2902,7 @@ skills["SupportManaFlarePlayer"] = {
 }skills["TriggeredManaFlarePlayer"] = {
 	name = "Mana Flare",
 	hidden = true,
-	skillTypes = { [SkillType.Spell] = true, [SkillType.Damage] = true, [SkillType.SkillGrantedBySupport] = true, [SkillType.Triggerable] = true, [SkillType.Cooldown] = true, [SkillType.Triggered] = true, },
+	skillTypes = { [SkillType.Spell] = true, [SkillType.Damage] = true, [SkillType.SkillGrantedBySupport] = true, [SkillType.Triggerable] = true, [SkillType.Cooldown] = true, [SkillType.Triggered] = true, [SkillType.Area] = true, },
 	castTime = 1,
 	qualityStats = {
 	},
@@ -2902,6 +2923,7 @@ skills["SupportManaFlarePlayer"] = {
 			},
 			baseFlags = {
 				spell = true,
+				area = true,
 			},
 			baseMods = {
 				skill("currentManaPercentage", true),
@@ -2912,6 +2934,7 @@ skills["SupportManaFlarePlayer"] = {
 				{ "active_skill_base_area_of_effect_radius", 20 },
 			},
 			stats = {
+				"is_area_damage",
 			},
 			levels = {
 				[1] = { actorLevel = 1, },
@@ -3035,6 +3058,11 @@ skills["SupportMusterPlayer"] = {
 			label = "Muster",
 			incrementalEffectiveness = 0.054999999701977,
 			statDescriptionScope = "gem_stat_descriptions",
+			statMap = {
+				["support_varied_troops_damage_+%_final_per_different_persistent_ominion"] = {
+					mod("MinionModifier", "LIST", { mod = mod("Damage", "MORE", nil, 0, 0, { type = "Multiplier", actor = "parent", var = "PersistentMinionTypes" }) }),
+				},
+			},
 			baseFlags = {
 			},
 			constantStats = {

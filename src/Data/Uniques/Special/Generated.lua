@@ -23,6 +23,7 @@ do
 	local against = {
 		"Against the Darkness",
 		"Time-Lost Diamond",
+		"Source: Drops from unique{Zarokh, the Temporal}",
 		"Limited to: 1",
 		"Has Alt Variant: true",
 	}
@@ -32,7 +33,7 @@ do
 	local variantCount = #against
 	table.insert(against, "Selected Variant: 1")
 	table.insert(against, "Selected Alt Variant: 2")
-	table.insert(against, "Radius: Medium")
+	table.insert(against, "Radius: Small")
 	table.insert(against, "Implicits: 0")
 	local smallLine = "Small Passive Skills in Radius also grant "
 	local notableLine = "Notable Passive Skills in Radius also grant "

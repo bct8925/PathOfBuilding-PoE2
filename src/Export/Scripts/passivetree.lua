@@ -397,6 +397,7 @@ local sheets = {
 	newSheet("lines", defaultMaxWidth, 100),
 	newSheet("jewel-sockets", defaultMaxWidth, 100),
 	newSheet("legion", defaultMaxWidth, 100),
+	newSheet("monster-categories", defaultMaxWidth, 100),
 }
 local sheetLocations = {
 	["skills"] = 1,
@@ -409,6 +410,7 @@ local sheetLocations = {
 	["lines"] = 8,
 	["jewel-sockets"] = 9,
 	["legion"] = 10,
+	["monster-categories"] = 11,
 }
 local function getSheet(sheetLocation)
 	return sheets[sheetLocations[sheetLocation]]
@@ -533,6 +535,20 @@ for jewel in jewelArt:Rows() do
 	printf("Adding jewel socket " .. jewel.Item.Name .. " " .. asset.path .. " to sprite")
 	local name = jewel.Item.Name
 	addToSheet(getSheet("jewel-sockets"), asset.path, "jewelpassive", commonMetadata(name))
+	:: nexttogo	::
+end
+
+-- adding monster types
+local monsterCategories = dat("MonsterCategories")
+for category in monsterCategories:Rows() do
+	if category.Type:find(ignoreFilter) ~= nil then
+		printf("Ignoring category" .. category.Type)
+		goto nexttogo
+	end
+	local asset = uiImages[string.lower(category.HudImage)]
+	printf("Adding category " .. category.Type .. " " .. asset.path .. " to sprite")
+	local name = category.Type
+	addToSheet(getSheet("monster-categories"), asset.path, "monster-categories", commonMetadata(name))
 	:: nexttogo	::
 end
 
@@ -793,6 +809,33 @@ for i, group in ipairs(psg.groups) do
 				end
 				node["ascendancyName"] = passiveRow.Ascendancy.Name
 				node["isAscendancyStart"] = passiveRow.AscendancyStart or nil
+
+				-- support for jewel sockets in ascendancy
+				if passiveRow.JewelSocket then
+					node["containJewelSocket"] = true
+
+					local uioverride = dat("passivenodeuiartoverride"):GetRow("Id", passiveRow.Id)
+
+					if uioverride then
+						local uiSocketNormal = uiImages[string.lower(uioverride.SocketNormal)]
+						addToSheet(getSheet("group-background"), uiSocketNormal.path, "frame", commonMetadata(nil))
+
+						local uiSocketActive = uiImages[string.lower(uioverride.SocketActive)]
+						addToSheet(getSheet("group-background"), uiSocketActive.path, "frame", commonMetadata(nil))
+
+						local uiSocketCanAllocate = uiImages[string.lower(uioverride.SocketCanAllocate)]
+						addToSheet(getSheet("group-background"), uiSocketCanAllocate.path, "frame", commonMetadata(nil))
+
+						node.jewelOverlay = {
+							alloc = uiSocketActive.path,
+							path = uiSocketCanAllocate.path,
+							unalloc = uiSocketNormal.path,
+						}
+						
+					else
+						printf("Jewel socket not found for ascendancy " .. passiveRow.Ascendancy.Name)
+					end
+				end
 
 				ascendancyGroups = ascendancyGroups or {}
 				ascendancyGroups[passiveRow.Ascendancy.Name] = ascendancyGroups[passiveRow.Ascendancy.Name] or { }

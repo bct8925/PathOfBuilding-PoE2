@@ -302,7 +302,7 @@ return {
 	flag("NoRepeatBonuses"),
 },
 ["hazard_rearm_%_chance"] = {
-	mod("DPS", "INC", nil),
+	mod("HazardRearmChance", "BASE", nil, 0, 0, { type = "SkillType", skillType = SkillType.Hazard } ),
 },
 --
 -- Defensive modifiers
@@ -401,6 +401,9 @@ return {
 },
 ["base_spell_block_%"] = {
 	mod("SpellBlockChance", "BASE", nil),
+},
+["additional_maximum_block_%"] = {
+	mod("BlockChanceMax", "BASE", nil),
 },
 ["base_block_%_damage_taken"] = {
 	mod("BlockEffect", "BASE", nil)
@@ -973,6 +976,11 @@ return {
 ["base_physical_damage_%_to_convert_to_chaos"] = {
 	mod("PhysicalDamageConvertToChaos", "BASE", nil),
 },
+["windstorm_gain_all_damage_%_as_corresponding_element_if_empowered"] = {
+	mod("DamageGainAsFire", "BASE", nil, 0, 0, { type = "Condition", var = "WhirlwindBuffFire" }),
+	mod("DamageGainAsCold", "BASE", nil, 0, 0, { type = "Condition", var = "WhirlwindBuffCold" }),
+	mod("DamageGainAsLightning", "BASE", nil, 0, 0, { type = "Condition", var = "WhirlwindBuffLightning" }),
+},
 -- Active Skill Physical
 ["active_skill_base_physical_damage_%_to_convert_to_lightning"] = {
 	mod("SkillPhysicalDamageConvertToLightning", "BASE", nil),
@@ -1111,6 +1119,9 @@ return {
 },
 ["base_chance_to_ignite_%"] = {
 	mod("EnemyIgniteChance", "BASE", nil),
+},
+["ignite_chance_+%"] = {
+	mod("EnemyIgniteChance", "INC", nil),
 },
 ["active_skill_ignite_chance_+%_final"] = {
 	mod("EnemyIgniteChance", "MORE", nil),
@@ -1377,6 +1388,9 @@ return {
 ["base_lightning_damage_can_electrocute"] = {
 	flag("LightningCanElectrocute"),
 },
+["is_hazard"] = {
+	flag("CanCreateHazards"),
+},
 -- Other effects
 ["enemy_phys_reduction_%_penalty_vs_hit"] = {
 	mod("EnemyPhysicalDamageReduction", "BASE", nil),
@@ -1451,6 +1465,9 @@ return {
 },
 ["link_buff_effect_on_self_+%"] = {
 	mod("LinkEffectOnSelf", "INC", nil),
+},
+["gain_energy_shield_cost_equal_to_intelligence"] = {
+	mod("ESCostNoMult", "BASE", nil, 0, 0, { type = "PercentStat", stat = "Int", percent = 100 }),
 },
 -- Projectiles
 ["base_projectile_speed_+%"] = {

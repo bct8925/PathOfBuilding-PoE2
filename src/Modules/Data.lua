@@ -18,6 +18,7 @@ local skillTypes = {
 	"act_int",
 	"other",
 	"minion",
+	"spectre",
 	"sup_str",
 	"sup_dex",
 	"sup_int",
@@ -188,7 +189,7 @@ data.misc = { -- magic numbers
 	TrapTriggerRadiusBase = 10,
 	MineDetonationRadiusBase = 60,
 	MineAuraRadiusBase = 35,
-	MinionRevivalTimeBase = 8,
+	MinionRevivalTimeBase = 7.5,
 	BrandAttachmentRangeBase = 30,
 	ProjectileDistanceCap = 150,
 	MinStunChanceNeeded = 20,
@@ -219,6 +220,7 @@ data.misc = { -- magic numbers
 	PvpElemental2 = 150,
 	PvpNonElemental1 = 0.57,
 	PvpNonElemental2 = 90,
+	presenceRadiusBase = 40, -- in units (base entity "Presence" radius of patch 0.2.0 is 4 meters)
 }
 
 data.skillColorMap = { colorCodes.STRENGTH, colorCodes.DEXTERITY, colorCodes.INTELLIGENCE, colorCodes.NORMAL }
@@ -281,6 +283,7 @@ data.keystones = {
 	"Bulwark",
 	"Chaos Inoculation",
 	"Conduit",
+	"Crimson Assault",
 	"Dance with Death",
 	"Eldritch Battery",
 	"Elemental Equilibrium",
@@ -295,6 +298,7 @@ data.keystones = {
 	"Pain Attunement",
 	"Resolute Technique",
 	"Resonance",
+	"Trusted Kinship",
 	"Unwavering Stance",
 	"Vaal Pact",
 	"Whispers of Doom",
@@ -959,3 +963,7 @@ LoadModule("Data/Uniques/Special/Generated")
 LoadModule("Data/Uniques/Special/New")
 
 data.questRewards = LoadModule("Data/QuestRewards")
+
+data.flavourText = LoadModule("Data/FlavourText")
+data.worldAreas = {}
+LoadModule("Data/WorldAreas", data.worldAreas)

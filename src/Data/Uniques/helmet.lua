@@ -13,6 +13,7 @@ Wrapped Greathelm
 ]],[[
 Blood Price
 Fierce Greathelm
+League: Dawn of the Hunt
 (80-120)% increased Armour
 (10-15) Life Regeneration per second
 +(100-150) to Stun Threshold
@@ -85,11 +86,20 @@ Presence Radius is doubled
 ]],[[
 The Black Insignia
 Corsair Cap
+League: Dawn of the Hunt
 (70-100)% increased Evasion Rating
 (10-20)% increased Rarity of Items found
 +(15-25)% to Lightning Resistance
 Gain Tailwind on Critical Hit, no more than once per second
 Lose all Tailwind when Hit
+]],[[
+Constricting Command
+Viper Cap
+League: Dawn of the Hunt
++(80-120) to maximum Life
++(10-15) to all Attributes
+(8-12) Life Regeneration per second
+Pin Enemies which are Primed for Pinning
 ]],[[
 Elevore
 Hunter Hood
@@ -109,6 +119,7 @@ Felt Cap
 ]],[[
 Heatshiver
 Velvet Cap
+League: Dawn of the Hunt
 (50-70)% increased Evasion Rating
 +(60-100) to maximum Mana
 +(20-30)% to Fire Resistance
@@ -141,11 +152,12 @@ Enemies in your Presence are Ignited as though dealt 100 Base Fire Damage
 ]],[[
 Starkonja's Head
 Leatherbound Hood
+League: Dawn of the Hunt
 (100-200)% increased Evasion Rating
 (15-25)% increased Critical Hit Chance
 +(30-40) to Dexterity
 150% increased Global Evasion Rating when on Low Life
-15% of Damage from Hits is taken from your Companion's Life before you
+15% of Damage from Hits is taken from your Damageable Companion's Life before you
 ]],
 -- Helmet: Energy Shield
 [[
@@ -164,11 +176,12 @@ Variant: Current
 ]],[[
 Crown of Eyes
 Coral Circlet
+League: Dawn of the Hunt
 (100-140)% increased Energy Shield
 +(150-200) to Accuracy Rating
 +(10-15) to all Attributes
 -10% to Fire Resistance
-Increases and Reductions to Spell Damage also apply to Attacks at 150% of their value
+Increases and Reductions to Spell damage also apply to Attacks
 ]],[[
 Crown of Thorns
 Twig Circlet
@@ -199,6 +212,7 @@ Variant: Current
 ]],[[
 Indigon
 Magus Tiara
+League: Dawn of the Hunt
 (60-100)% increased Energy Shield
 +(80-120) to maximum Mana
 (35-50)% increased Cost of Skills for each 200 total Mana Spent Recently
@@ -213,9 +227,10 @@ Cannot have Energy Shield
 Regenerate 0.05 Life per second per Maximum Energy Shield
 ]],[[
 Sandstorm Visage
+Chain Tiara
+Source: Drops from unique{Zarokh, the Temporal}
 Variant: Pre 0.2.0
 Variant: Current
-Chain Tiara
 +(80-120) to maximum Energy Shield
 +(20-30) to Dexterity
 Enemies in your Presence are Blinded
@@ -224,6 +239,7 @@ Enemies in your Presence are Blinded
 ]],[[
 Scold's Bridle
 Jade Tiara
+League: Dawn of the Hunt
 +(75-150) to maximum Energy Shield
 (60-100)% increased Spell Damage
 +(80-100) to maximum Mana
@@ -252,8 +268,12 @@ Skills have a (100-150)% longer Perfect Timing window
 ]],[[
 The Bringer of Rain
 Decorated Helm
+League: Dawn of the Hunt
+Variant: Pre 0.2.1
+Variant: Current
 (600-800)% increased Armour and Evasion
 +(200-300) to Accuracy Rating
+{variant:2}100% increased Critical Hit Chance
 (30-60) Life Regeneration per second
 Can't use Body Armour
 You can wield Two-Handed Axes, Maces and Swords in one hand
@@ -370,6 +390,7 @@ Gain 10 Mana per Enemy Killed
 ]],[[
 The Deepest Tower
 Spiritbone Crown
+League: Dawn of the Hunt
 (70-130)% increased Armour and Energy Shield
 +(70-100) to maximum Life
 +(17-23)% to Chaos Resistance
@@ -436,6 +457,15 @@ Variant: Current
 Allies in your Presence deal 50% increased Damage
 {variant:2}+(10-20) to Dexterity
 25% reduced Damage
+]],[[
+Mind of the Council
+Death Mask
+League: Dawn of the Hunt
+(60-90)% increased Evasion and Energy Shield
++(60-90) to maximum Mana
++(20-30)% to Lightning Resistance
+Attacks cost an additional 6% of your maximum Mana
+Attacks have Added maximum Lightning Damage equal to (6-9)% of maximum Mana
 ]],[[
 The Three Dragons
 Solid Mask
