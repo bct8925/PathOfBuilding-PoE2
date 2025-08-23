@@ -925,3 +925,4 @@ Metadata/Monsters/VaalMonsters/Zealots/VaalZealotSpearBloodExpedition           
 Metadata/Monsters/VaalMonsters/Zealots/VaalZealotSpearColdExpedition                      		----		Gelid Zealot
 Metadata/Monsters/Sanctified/Floppy/SanctifiedFloppyBig                                   		----		Fettered Hook
 Metadata/Monsters/Sanctified/Floppy/SanctifiedFloppyMinion                                		----		Fettered Hook
+Metadata/Monsters/Mtx/BrambleBash/BrambleBurrower                                         		----		Bramble Burrower
