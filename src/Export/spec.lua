@@ -17216,6 +17216,8 @@ return {
 	strongboxes={
 	},
 	strongboxpacks={
+	},
+	strongboxpacks={
 		[1]={
 			list=false,
 			name="",
@@ -18103,7 +18105,7 @@ return {
 		[1]={
 			list=false,
 			name="WordsKey",
-			refTo="Word",
+			refTo="Words",
 			type="Key",
 			width=150
 		},
@@ -18707,7 +18709,7 @@ return {
 		},
 		[6]={
 			list=false,
-			name="",
+			name="Text2",
 			refTo="",
 			type="String",
 			width=150

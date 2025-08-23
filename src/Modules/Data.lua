@@ -964,5 +964,6 @@ LoadModule("Data/Uniques/Special/New")
 
 data.questRewards = LoadModule("Data/QuestRewards")
 
+data.flavourText = LoadModule("Data/FlavourText")
 data.worldAreas = {}
 LoadModule("Data/WorldAreas", data.worldAreas)
