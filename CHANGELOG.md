@@ -8,7 +8,7 @@
 ## What's Changed
 ### New to Path of Building
 - Support Spectres and Companions, and overhaul Spectre Library [\#936](https://github.com/PathOfBuildingCommunity/PathOfBuilding-PoE2/pull/936) ([Blitz54](https://github.com/Blitz54))
-- Add Uniques from 0.2.1 and update old ones [\#1026](https://github.com/PathOfBuildingCommunity/PathOfBuilding-PoE2/pull/1149, https://github.com/PathOfBuildingCommunity/PathOfBuilding-PoE2/pull/1026) ([Blitz54](https://github.com/Blitz54))
+- Add Uniques from 0.2.1 and update old ones [\#1149](https://github.com/PathOfBuildingCommunity/PathOfBuilding-PoE2/pull/1149), [\#1026](https://github.com/PathOfBuildingCommunity/PathOfBuilding-PoE2/pull/1026) ([Blitz54](https://github.com/Blitz54))
 - Add support for new runes added in 0.2.1 [\#1157](https://github.com/PathOfBuildingCommunity/PathOfBuilding-PoE2/pull/1157) ([Kenishi](https://github.com/Kenishi))
 ### Tree
 - Add support for "while wielding a Quarterstaff" (One with the River) [\#1074](https://github.com/PathOfBuildingCommunity/PathOfBuilding-PoE2/pull/1074) ([Antaresque](https://github.com/Antaresque))
@@ -16,7 +16,7 @@
 - Add support for "Zealous Inquisition" explode mod (Witchhunter Ascendancy Notable) [\#1057](https://github.com/PathOfBuildingCommunity/PathOfBuilding-PoE2/pull/1057) ([majochem](https://github.com/majochem))
 - Add support for Lich Jewel Socket [\#1037](https://github.com/PathOfBuildingCommunity/PathOfBuilding-PoE2/pull/1037) ([trompetin17](https://github.com/justjuangui))
 - Add support for Sturdy Ally and Tandem Assault [\#1099](https://github.com/PathOfBuildingCommunity/PathOfBuilding-PoE2/pull/1099) ([Blitz54](https://github.com/Blitz54))
-* Add support for "Presence" and related mods by (@majochem, @Blitz54) in https://github.com/PathOfBuildingCommunity/PathOfBuilding-PoE2/pull/1094, https://github.com/PathOfBuildingCommunity/PathOfBuilding-PoE2/pull/1106
+* Add support for "Presence" and related mods in [\#1094](https://github.com/PathOfBuildingCommunity/PathOfBuilding-PoE2/pull/1094), [\#1106](https://github.com/PathOfBuildingCommunity/PathOfBuilding-PoE2/pull/1106) ([majochem](https://github.com/majochem), [Blitz54](https://github.com/Blitz54))
 - Add support for "Hazard" related mods [\#1121](https://github.com/PathOfBuildingCommunity/PathOfBuilding-PoE2/pull/1121) ([majochem](https://github.com/majochem))
 - Add support for Bleed and Poison chance on critical hit calculation [\#1058](https://github.com/PathOfBuildingCommunity/PathOfBuilding-PoE2/pull/1058) ([majochem](https://github.com/majochem))
 ### Skills
@@ -40,7 +40,7 @@
 - Add support for Splinter of Loratta (Unique Spear) [\#1054](https://github.com/PathOfBuildingCommunity/PathOfBuilding-PoE2/pull/1054) ([majochem](https://github.com/majochem))
 ### Fixed Crashes
 - Fix crash due to outdated state of sub skill dropdown [\#1116](https://github.com/PathOfBuildingCommunity/PathOfBuilding-PoE2/pull/1116) ([Paliak](https://github.com/Paliak))
-- Fix crash when deleting newly created config set [\#1120](https://github.com/PathOfBuildingCommunity/PathOfBuilding-PoE2/pull/1115, https://github.com/PathOfBuildingCommunity/PathOfBuilding-PoE2/pull/1120) ([Paliak](https://github.com/Paliak))
+- Fix crash when deleting newly created config set [\#1115](https://github.com/PathOfBuildingCommunity/PathOfBuilding-PoE2/pull/1115), [\#1120](https://github.com/PathOfBuildingCommunity/PathOfBuilding-PoE2/pull/1120) ([Paliak](https://github.com/Paliak))
 - Fix crash from support gems imported on skills from items [\#1132](https://github.com/PathOfBuildingCommunity/PathOfBuilding-PoE2/pull/1132) ([Wires77](https://github.com/Wires77))
 - Fix Gem tooltips crashing on Linux [\#1169](https://github.com/PathOfBuildingCommunity/PathOfBuilding-PoE2/pull/1169) ([TheDechev](https://github.com/TheDechev))
 ### User Interface
