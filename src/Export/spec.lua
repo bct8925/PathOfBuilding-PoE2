@@ -17125,10 +17125,10 @@ return {
 		},
 		[15]={
 			list=false,
-			name="",
+			name="CannotGrantToMinion",
 			refTo="",
 			type="Bool",
-			width=50
+			width=120
 		},
 		[16]={
 			list=false,
