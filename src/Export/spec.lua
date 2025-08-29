@@ -13614,43 +13614,29 @@ return {
 		},
 		[3]={
 			list=false,
-			name="IconInactive",
-			refTo="",
-			type="String",
-			width=150
-		},
-		[4]={
-			list=false,
-			name="IconActive",
-			refTo="",
-			type="String",
-			width=150
-		},
-		[5]={
-			list=false,
-			name="Background",
-			refTo="",
-			type="String",
-			width=150
-		},
-		[6]={
-			list=false,
 			name="",
 			refTo="",
 			type="Bool",
 			width=50
 		},
-		[7]={
+		[4]={
 			list=false,
 			name="SoundEffect",
 			refTo="SoundEffects",
 			type="Key",
 			width=150
 		},
-		[8]={
+		[5]={
 			list=false,
 			name="MasteryCount",
 			refTo="Stats",
+			type="Key",
+			width=150
+		},
+		[6]={
+			list=false,
+			name="MasteryArt",
+			refTo="PassiveSkillTreeMasteryArt",
 			type="Key",
 			width=150
 		}
