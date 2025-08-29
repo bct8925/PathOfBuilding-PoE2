@@ -14223,6 +14223,133 @@ return {
 			width=150
 		}
 	},
+	passiveskilltreeconnectionart={
+		[1]={
+			list=false,
+			name="Id",
+			refTo="",
+			type="String",
+			width=150
+		},
+		[2]={
+			list=false,
+			name="",
+			refTo="",
+			type="String",
+			width=591
+		},
+		[3]={
+			list=false,
+			name="",
+			refTo="",
+			type="String",
+			width=633
+		},
+		[4]={
+			list=false,
+			name="",
+			refTo="",
+			type="String",
+			width=591
+		},
+		[5]={
+			list=false,
+			name="",
+			refTo="",
+			type="String",
+			width=591
+		},
+		[6]={
+			list=false,
+			name="",
+			refTo="",
+			type="String",
+			width=493
+		},
+		[7]={
+			list=false,
+			name="",
+			refTo="",
+			type="String",
+			width=381
+		},
+		[8]={
+			list=false,
+			name="",
+			refTo="",
+			type="String",
+			width=381
+		}
+	},
+	passiveskilltreemasteryart={
+		[1]={
+			list=false,
+			name="Id",
+			refTo="",
+			type="String",
+			width=200
+		},
+		[2]={
+			list=false,
+			name="Inactive",
+			refTo="",
+			type="String",
+			width=400
+		},
+		[3]={
+			list=false,
+			name="Active",
+			refTo="",
+			type="String",
+			width=400
+		},
+		[4]={
+			list=false,
+			name="Effect",
+			refTo="",
+			type="String",
+			width=400
+		}
+	},
+	passiveskilltreenodeframeart={
+		[1]={
+			list=false,
+			name="Id",
+			refTo="",
+			type="String",
+			width=150
+		},
+		[2]={
+			list=false,
+			name="Normal",
+			refTo="",
+			type="String",
+			width=605
+		},
+		[3]={
+			list=false,
+			name="CanAllocate",
+			refTo="",
+			type="String",
+			width=640
+		},
+		[4]={
+			list=false,
+			name="Active",
+			refTo="",
+			type="String",
+			width=626
+		},
+		[5]={
+			list=false,
+			name="Mask",
+			refTo="",
+			type="String",
+			width=570
+		}
+	},
+	passiveskilltreenoderrameart={
+	},
 	passiveskilltrees={
 		[1]={
 			list=false,
@@ -14419,73 +14546,52 @@ return {
 		},
 		[9]={
 			list=false,
-			name="PassiveFrameActive",
-			refTo="",
-			type="String",
-			width=550
+			name="ConnectionsArt",
+			refTo="PassiveSkillTreeConnectionArt",
+			type="Key",
+			width=250
 		},
 		[10]={
 			list=false,
-			name="NotableFrameActive",
-			refTo="",
-			type="String",
-			width=550
+			name="PassiveFrame",
+			refTo="PassiveSkillTreeNodeFrameArt",
+			type="Key",
+			width=210
 		},
 		[11]={
 			list=false,
-			name="KeystoneFrameActive",
-			refTo="",
-			type="String",
-			width=550
+			name="NotableFrame",
+			refTo="PassiveSkillTreeNodeFrameArt",
+			type="Key",
+			width=190
 		},
 		[12]={
 			list=false,
-			name="PassiveFrameCanAllocate",
-			refTo="",
-			type="String",
-			width=550
+			name="KeystoneFrame",
+			refTo="PassiveSkillTreeNodeFrameArt",
+			type="Key",
+			width=200
 		},
 		[13]={
 			list=false,
-			name="NotableFrameCanAllocate",
-			refTo="",
-			type="String",
-			width=550
+			name="JewelFrame",
+			refTo="PassiveSkillTreeNodeFrameArt",
+			type="Key",
+			width=190
 		},
 		[14]={
 			list=false,
-			name="KeystoneFrameCanAllocate",
+			name="Glow",
 			refTo="",
 			type="String",
-			width=550
+			width=290
 		},
 		[15]={
 			list=false,
-			name="Ornament",
+			name="",
 			refTo="",
-			type="String",
-			width=550
-		},
-		[16]={
-			list=false,
-			name="GroupBackgroundSmallBlank",
-			refTo="",
-			type="String",
-			width=550
-		},
-		[17]={
-			list=false,
-			name="GroupBackgroundMediumBlank",
-			refTo="",
-			type="String",
-			width=550
-		},
-		[18]={
-			list=false,
-			name="GroupBackgroundLargeBlank",
-			refTo="",
-			type="String",
-			width=550
+			type="Key",
+			width=150
 		}
 	},
 	passiveskilltypes={
