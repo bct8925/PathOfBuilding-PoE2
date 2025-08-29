@@ -1498,7 +1498,7 @@ return {
 			width=50
 		},
 		[3]={
-			list=true,
+			list=false,
 			name="Class",
 			refTo="Characters",
 			type="Key",
@@ -1580,6 +1580,64 @@ return {
 			refTo="",
 			type="Bool",
 			width=150
+		},
+		[15]={
+			list=false,
+			name="Replace",
+			refTo="Ascendancy",
+			type="ShortKey",
+			width=70
+		},
+		[16]={
+			list=false,
+			name="UIArt",
+			refTo="PassiveSkillTreeUIArt",
+			type="Key",
+			width=160
+		},
+		[17]={
+			list=false,
+			name="",
+			refTo="",
+			type="Key",
+			width=120
+		},
+		[18]={
+			list=false,
+			name="",
+			refTo="",
+			type="Key",
+			width=80
+		},
+		[19]={
+			list=false,
+			name="",
+			refTo="",
+			type="Key",
+			width=80
+		}
+	},
+	ascendancypassiveskilloverrides={
+		[1]={
+			list=false,
+			name="Id",
+			refTo="Ascendancy",
+			type="Key",
+			width=150
+		},
+		[2]={
+			list=false,
+			name="OriginalNode",
+			refTo="PassiveSkills",
+			type="Key",
+			width=210
+		},
+		[3]={
+			list=false,
+			name="SwitchedNode",
+			refTo="PassiveSkills",
+			type="Key",
+			width=240
 		}
 	},
 	atlasawakeningstats={
@@ -4000,6 +4058,20 @@ return {
 			name="GemCuttingIcon1",
 			refTo="",
 			type="String",
+			width=150
+		},
+		[72]={
+			list=false,
+			name="",
+			refTo="",
+			type="Key",
+			width=150
+		},
+		[73]={
+			list=false,
+			name="",
+			refTo="",
+			type="Key",
 			width=150
 		}
 	},
@@ -13292,6 +13364,92 @@ return {
 			width=100
 		}
 	},
+	passivejewelradiiart={
+		[1]={
+			list=false,
+			name="Id",
+			refTo="",
+			type="String",
+			width=150
+		},
+		[2]={
+			list=false,
+			name="Cirlce1",
+			refTo="",
+			type="String",
+			width=150
+		},
+		[3]={
+			list=false,
+			name="Cirlce2",
+			refTo="",
+			type="String",
+			width=110
+		},
+		[4]={
+			list=false,
+			name="Glow",
+			refTo="",
+			type="String",
+			width=200
+		},
+		[5]={
+			list=false,
+			name="",
+			refTo="",
+			type="Key",
+			width=260
+		},
+		[6]={
+			list=false,
+			name="Inverse",
+			refTo="",
+			type="String",
+			width=460
+		},
+		[7]={
+			list=false,
+			name="",
+			refTo="",
+			type="Int",
+			width=50
+		},
+		[8]={
+			list=false,
+			name="",
+			refTo="",
+			type="Int",
+			width=50
+		},
+		[9]={
+			list=false,
+			name="Inverse2",
+			refTo="",
+			type="String",
+			width=510
+		},
+		[10]={
+			list=false,
+			name="Inverse2Offset?",
+			refTo="",
+			type="Int",
+			width=150
+		},
+		[11]={
+			list=false,
+			name="",
+			refTo="",
+			type="Int",
+			width=50
+		},
+		[12]={
+			list=false,
+			name="",
+			refTo="",
+			type="Bool",
+			width=50
+		}
+	},
 	passivejewelslots={
 		[1]={
 			list=false,
@@ -13777,7 +13935,7 @@ return {
 			name="Stats",
 			refTo="Stats",
 			type="Key",
-			width=640
+			width=780
 		},
 		[4]={
 			list=false,
@@ -14122,6 +14280,13 @@ return {
 			refTo="",
 			type="Bool",
 			width=150
+		},
+		[53]={
+			list=true,
+			name="",
+			refTo="PassiveSkills",
+			type="ShortKey",
+			width=605
 		}
 	},
 	passiveskillstatcategories={
@@ -14303,7 +14468,7 @@ return {
 			name="Id",
 			refTo="",
 			type="String",
-			width=150
+			width=230
 		},
 		[2]={
 			list=false,
@@ -14467,6 +14632,20 @@ return {
 			list=false,
 			name="UIArt",
 			refTo="passiveskilltreeuiart",
+			type="Key",
+			width=150
+		},
+		[20]={
+			list=false,
+			name="",
+			refTo="",
+			type="Key",
+			width=150
+		},
+		[21]={
+			list=false,
+			name="",
+			refTo="",
 			type="Key",
 			width=150
 		}
