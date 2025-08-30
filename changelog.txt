@@ -1,3 +1,8 @@
+VERSION[0.10.1][2025/08/30]
+
+--- Fixed Crashes ---
+* Fix Crash when opening some builds that converted a 0.2 tree to 0.3
+
 VERSION[0.10.0][2025/08/30]
 
 --- The Third Edict ---
