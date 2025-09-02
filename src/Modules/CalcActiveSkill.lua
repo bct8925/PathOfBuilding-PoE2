@@ -197,6 +197,24 @@ function calcs.copyActiveSkill(env, mode, skill)
 	return newSkill, newEnv
 end
 
+-- Check for "asThoughUsing..." weaponTypes match, which is mechanically different from "countAs..."
+---@param weaponData table
+---@param weaponTypes table
+---@return boolean @whether a match was found
+local function checkAsThoughWeaponTypes(weaponData, weaponTypes)
+	if (not weaponData.asThoughUsing) or (not weaponTypes) then
+		return false
+	else
+		-- check if any 'usingKey' for which 'usingValue = true' is also true in weaponTypes
+		for usingKey, usingValue in pairs(weaponData.asThoughUsing) do
+			for _, types in ipairs(weaponTypes) do
+				if usingValue and types[usingKey] then return true end
+			end
+		end
+	end
+	return false
+end
+
 -- Get weapon flags and info for given weapon
 local function getWeaponFlags(env, weaponData, weaponTypes)
 	local info = env.data.weaponTypeInfo[weaponData.type]
@@ -207,7 +225,7 @@ local function getWeaponFlags(env, weaponData, weaponTypes)
 		for _, types in ipairs(weaponTypes) do
 			if not types[weaponData.type] and
 			(not weaponData.countsAsAll1H or not (types["Claw"] or types["Dagger"] or types["One Handed Axe"] or types["One Handed Mace"] or types["One Handed Sword"]
-			or types["Spear"])) then
+			or types["Spear"])) and not (weaponData.asThoughUsing and checkAsThoughWeaponTypes(weaponData, weaponTypes)) then
 				return nil, info
 			end
 		end
@@ -671,6 +689,15 @@ function calcs.buildActiveSkillModList(env, activeSkill)
 	elseif noPotentialStage and activeEffect.srcInstance and not (activeEffect.gemData and #activeEffect.gemData.additionalGrantedEffects >= 1) then
 		activeEffect.srcInstance.skillStageCountCalcs = nil
 		activeEffect.srcInstance.skillStageCount = nil
+	end
+
+	-- Hollow Palm Technique added phys for skills that would use Quarterstaff
+	if activeSkill.actor.modDB.conditions.HollowPalm and activeEffect.grantedEffect.weaponTypes and activeEffect.grantedEffect.weaponTypes.Staff then
+		local gemLevel = activeEffect.level
+		local physMin = data.hollowPalmAddedPhys[gemLevel and gemLevel or 1][1]
+		local physMax = data.hollowPalmAddedPhys[gemLevel and gemLevel or 1][2]
+		skillModList:NewMod("PhysicalMin", "BASE", physMin, "Hollow Palm Technique", ModFlag.Attack, nil, { type = "Condition", var = "HollowPalm" })
+		skillModList:NewMod("PhysicalMax", "BASE", physMax, "Hollow Palm Technique", ModFlag.Attack, nil, { type = "Condition", var = "HollowPalm" })
 	end
 
 	-- Extract skill data

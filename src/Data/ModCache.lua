@@ -83,7 +83,6 @@ c["+0 to Maximum Power Charges"]={{[1]={flags=0,keywordFlags=0,name="PowerCharge
 c["+0% to Cold Resistance"]={{[1]={flags=0,keywordFlags=0,name="ColdResist",type="BASE",value=0}},nil}
 c["+0% to Fire Resistance"]={{[1]={flags=0,keywordFlags=0,name="FireResist",type="BASE",value=0}},nil}
 c["+0% to Lightning Resistance"]={{[1]={flags=0,keywordFlags=0,name="LightningResist",type="BASE",value=0}},nil}
-c["+0.1% to Critical Hit Chance per 10 Item Energy Shield on Equipped Armour Items"]={{[1]={flags=0,keywordFlags=0,name="CritChance",type="BASE",value=0.1}},"  per 10 Item Energy Shield on Equipped Armour Items "}
 c["+0.15% to Thorns Critical Hit Chance"]={{[1]={flags=0,keywordFlags=0,name="CritChance",type="BASE",value=0.15}}," Thorns  "}
 c["+0.15% to Thorns Critical Hit Chance +25% to Thorns Critical Hit Chance"]={{[1]={flags=0,keywordFlags=0,name="CritChance",type="BASE",value=0.15}}," Thorns  +25% to Thorns Critical Hit Chance "}
 c["+0.5 metres to Dodge Roll distance while Surrounded"]={{}," metres to Dodge Roll distance  "}
@@ -941,8 +940,6 @@ c["1% increased Movement Speed for each time you've Blocked in the past 10 secon
 c["1% increased Movement Speed per 500 Evasion Rating"]={{[1]={[1]={div=500,stat="Evasion",type="PerStat"},flags=0,keywordFlags=0,name="MovementSpeed",type="INC",value=1}},nil}
 c["1% increased Movement Speed per 800 Evasion Rating"]={{[1]={[1]={div=800,stat="Evasion",type="PerStat"},flags=0,keywordFlags=0,name="MovementSpeed",type="INC",value=1}},nil}
 c["1% increased maximum Darkness per 1% Chaos Resistance"]={{[1]={[1]={div=1,stat="ChaosResist",type="PerStat"},flags=0,keywordFlags=0,name="Darkness",type="INC",value=1}},nil}
-c["1% more Attack Speed per 25 Item Evasion Rating on Equipped Armour Items"]={{[1]={flags=1,keywordFlags=0,name="Speed",type="MORE",value=1}},"  per 25 Item Evasion Rating on Equipped Armour Items "}
-c["1% more Attack Speed per 25 Item Evasion Rating on Equipped Armour Items +0.1% to Critical Hit Chance per 10 Item Energy Shield on Equipped Armour Items"]={{[1]={flags=1,keywordFlags=0,name="Speed",type="MORE",value=1}},"  per 25 Item Evasion Rating on Equipped Armour Items +0.1% to Critical Hit Chance per 10 Item Energy Shield on Equipped Armour Items "}
 c["10 Life Regeneration per second"]={{[1]={flags=0,keywordFlags=0,name="LifeRegen",type="BASE",value=10}},nil}
 c["10 Life gained when you Block"]={{[1]={flags=0,keywordFlags=0,name="LifeOnBlock",type="BASE",value=10}},nil}
 c["10% Chance to build an additional Combo on Hit"]={{}," to build an additional Combo  "}
@@ -4255,7 +4252,7 @@ c["Can Attack as though using a Quarterstaff while both of your hand slots are e
 c["Can Attack as though using a Quarterstaff while both of your hand slots are empty Unarmed Attacks that would use your Quarterstaff's damage gain:"]={nil,"Can Attack as though using a Quarterstaff while both of your hand slots are empty Unarmed Attacks that would use your Quarterstaff's damage gain: "}
 c["Can Attack as though using a Quarterstaff while both of your hand slots are empty Unarmed Attacks that would use your Quarterstaff's damage gain: Physical damage based on their Skill Level"]={nil,"Can Attack as though using a Quarterstaff while both of your hand slots are empty Unarmed Attacks that would use your Quarterstaff's damage gain: Physical damage based on their Skill Level "}
 c["Can Attack as though using a Quarterstaff while both of your hand slots are empty Unarmed Attacks that would use your Quarterstaff's damage gain: Physical damage based on their Skill Level 1% more Attack Speed per 25 Item Evasion Rating on Equipped Armour Items"]={nil,"Can Attack as though using a Quarterstaff while both of your hand slots are empty Unarmed Attacks that would use your Quarterstaff's damage gain: Physical damage based on their Skill Level 1% more Attack Speed per 25 Item Evasion Rating on Equipped Armour Items "}
-c["Can Attack as though using a Quarterstaff while both of your hand slots are empty Unarmed Attacks that would use your Quarterstaff's damage gain: Physical damage based on their Skill Level 1% more Attack Speed per 25 Item Evasion Rating on Equipped Armour Items +0.1% to Critical Hit Chance per 10 Item Energy Shield on Equipped Armour Items"]={nil,"Can Attack as though using a Quarterstaff while both of your hand slots are empty Unarmed Attacks that would use your Quarterstaff's damage gain: Physical damage based on their Skill Level 1% more Attack Speed per 25 Item Evasion Rating on Equipped Armour Items +0.1% to Critical Hit Chance per 10 Item Energy Shield on Equipped Armour Items "}
+c["Can Attack as though using a Quarterstaff while both of your hand slots are empty Unarmed Attacks that would use your Quarterstaff's damage gain: Physical damage based on their Skill Level 1% more Attack Speed per 25 Item Evasion Rating on Equipped Armour Items +0.1% to Critical Hit Chance per 10 Item Energy Shield on Equipped Armour Items"]={{[1]={[1]={type="Condition",var="HollowPalm"},[2]={div=25,stat="EvasionOnAllArmourItems",type="PerStat"},flags=1,keywordFlags=0,name="Speed",type="MORE",value=1},[2]={[1]={type="Condition",var="HollowPalm"},[2]={div="10",stat="EnergyShieldOnAllArmourItems",type="PerStat"},flags=1,keywordFlags=0,name="CritChance",type="BASE",value=0.1}},nil}
 c["Can Socket a non-Unique Basic Jewel into the Phylactery"]={{},nil}
 c["Can be modified while Corrupted"]={nil,"Can be modified while Corrupted "}
 c["Can be modified while Corrupted +150 to maximum Life"]={nil,"Can be modified while Corrupted +150 to maximum Life "}
@@ -5354,9 +5351,6 @@ c["Persistent Buffs have 50% less Reservation"]={{[1]={[1]={skillType=139,type="
 c["Physical Damage Reduction from Armour is based on your combined Armour and Evasion Rating"]={{[1]={flags=0,keywordFlags=0,name="EvasionAppliesToPhysicalDamageTaken",type="BASE",value=100}},nil}
 c["Physical Damage is Pinning"]={nil,"Physical Damage is Pinning "}
 c["Physical Spell Critical Hits build Pin"]={nil,"Physical Spell Critical Hits build Pin "}
-c["Physical damage based on their Skill Level"]={nil,"Physical damage based on their Skill Level "}
-c["Physical damage based on their Skill Level 1% more Attack Speed per 25 Item Evasion Rating on Equipped Armour Items"]={nil,"Physical damage based on their Skill Level 1% more Attack Speed per 25 Item Evasion Rating on Equipped Armour Items "}
-c["Physical damage based on their Skill Level 1% more Attack Speed per 25 Item Evasion Rating on Equipped Armour Items +0.1% to Critical Hit Chance per 10 Item Energy Shield on Equipped Armour Items"]={nil,"Physical damage based on their Skill Level 1% more Attack Speed per 25 Item Evasion Rating on Equipped Armour Items +0.1% to Critical Hit Chance per 10 Item Energy Shield on Equipped Armour Items "}
 c["Pin Enemies which are Primed for Pinning"]={nil,"Pin Enemies which are Primed for Pinning "}
 c["Pinned Enemies cannot deal Critical Hits"]={nil,"Pinned Enemies cannot deal Critical Hits "}
 c["Pinned enemies cannot perform actions"]={nil,"Pinned enemies cannot perform actions "}
@@ -5634,10 +5628,6 @@ c["Triggered Spells deal 40% increased Spell Damage"]={{[1]={[1]={skillType=37,t
 c["Triple Attribute requirements of Martial Weapons"]={{[1]={flags=0,keywordFlags=0,name="GlobalWeaponAttributeRequirements",type="MORE",value=200}},nil}
 c["Unaffected by Chill during Dodge Roll"]={nil,"Unaffected by Chill during Dodge Roll "}
 c["Unaffected by Chill while Leeching Mana"]={{[1]={[1]={type="Condition",var="LeechingMana"},flags=0,keywordFlags=0,name="SelfChillEffect",type="MORE",value=-100}},nil}
-c["Unarmed Attacks that would use your Quarterstaff's damage gain:"]={nil,"Unarmed Attacks that would use your Quarterstaff's damage gain: "}
-c["Unarmed Attacks that would use your Quarterstaff's damage gain: Physical damage based on their Skill Level"]={nil,"Unarmed Attacks that would use your Quarterstaff's damage gain: Physical damage based on their Skill Level "}
-c["Unarmed Attacks that would use your Quarterstaff's damage gain: Physical damage based on their Skill Level 1% more Attack Speed per 25 Item Evasion Rating on Equipped Armour Items"]={nil,"Unarmed Attacks that would use your Quarterstaff's damage gain: Physical damage based on their Skill Level 1% more Attack Speed per 25 Item Evasion Rating on Equipped Armour Items "}
-c["Unarmed Attacks that would use your Quarterstaff's damage gain: Physical damage based on their Skill Level 1% more Attack Speed per 25 Item Evasion Rating on Equipped Armour Items +0.1% to Critical Hit Chance per 10 Item Energy Shield on Equipped Armour Items"]={nil,"Unarmed Attacks that would use your Quarterstaff's damage gain: Physical damage based on their Skill Level 1% more Attack Speed per 25 Item Evasion Rating on Equipped Armour Items +0.1% to Critical Hit Chance per 10 Item Energy Shield on Equipped Armour Items "}
 c["Unlimited number of Summoned Totems"]={nil,"Unlimited number of Summoned Totems "}
 c["Unlimited number of Summoned Totems Totems reserve 75 Spirit each"]={nil,"Unlimited number of Summoned Totems Totems reserve 75 Spirit each "}
 c["Unwavering Stance"]={{[1]={flags=0,keywordFlags=0,name="Keystone",type="LIST",value="Unwavering Stance"}},nil}
