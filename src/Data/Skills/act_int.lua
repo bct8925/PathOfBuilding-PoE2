@@ -4628,6 +4628,7 @@ skills["DarkEffigyProjectilePlayer"] = {
 				spell = true,
 				area = true,
 				projectile = true,
+				totem = true,
 			},
 			constantStats = {
 				{ "skill_disabled_unless_cloned", 2 },

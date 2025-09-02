@@ -296,7 +296,7 @@ statMap = {
 
 #skill DarkEffigyProjectilePlayer
 #set DarkEffigyProjectilePlayer
-#flags spell area projectile
+#flags spell area projectile totem
 #mods
 #skillEnd
 
