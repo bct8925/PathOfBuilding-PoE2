@@ -122,6 +122,7 @@ minions["RaisedSkeletonBrute"] = {
 	skillList = {
 		"MinionMeleeStep",
 		"BoneshatterBruteMinion",
+		"ShatteringRoarSkeletalBruteMinion",
 	},
 	modList = {
 		-- MonsterNoDropsOrExperience [monster_no_drops_or_experience = 1]
@@ -185,7 +186,7 @@ minions["RaisedSkeletonFrostMage"] = {
 	},
 	skillList = {
 		"FrostBoltSkeletonMageMinion",
-		"IceBombSkeletonMageMinion",
+		"IceArmourSkeletonMageMinion",
 	},
 	modList = {
 		-- MonsterNoDropsOrExperience [monster_no_drops_or_experience = 1]
@@ -354,134 +355,9 @@ minions["SummonedHellhound"] = {
 	},
 }
 
-minions["AncestralSpiritTurtle"] = {
-	name = "Ancestral Spirit Turtle",
-	monsterTags = { "beast", "Beast_onhit_audio", "bludgeoning_weapon", "has_one_hand_mace", "has_one_handed_melee", "light_armour", "medium_height", "melee", "not_dex", "not_int", "physical_affinity", "reptile_beast", "very_slow_movement", },
-	life = 1.3,
-	baseDamageIgnoresAttackSpeed = true,
-	armour = 1,
-	fireResist = 0,
-	coldResist = 0,
-	lightningResist = 0,
-	chaosResist = 0,
-	damage = 1.2,
-	damageSpread = 0.2,
-	attackTime = 1,
-	attackRange = 15,
-	accuracy = 1,
-	baseMovementSpeed = 9,
-	spectreReservation = 50,
-	companionReservation = 30,
-	monsterCategory = "Beast",
-	spawnLocation = {
-	},
-	skillList = {
-		"MeleeAtAnimationSpeed",
-		"ABTTTortoiseTotemBubble",
-	},
-	modList = {
-		-- MonsterCannotBeSlowed [action_speed_cannot_be_reduced_below_base = 1]
-		-- MonsterCannotBeSlowed [movement_speed_cannot_be_reduced_below_base = 1]
-		-- MonsterCannotBeStunned1 [base_cannot_be_stunned = 1]
-		-- MonsterNoDropsOrExperience [monster_no_drops_or_experience = 1]
-	},
-}
 
-minions["AncestralSpiritHulk"] = {
-	name = "Ancestral Jade Hulk",
-	monsterTags = { "beast", "Beast_onhit_audio", "bludgeoning_weapon", "has_one_hand_mace", "has_one_handed_melee", "light_armour", "mammal_beast", "medium_height", "melee", "not_dex", "not_int", "physical_affinity", "slow_movement", },
-	life = 1,
-	baseDamageIgnoresAttackSpeed = true,
-	armour = 0.7,
-	fireResist = 0,
-	coldResist = 0,
-	lightningResist = 0,
-	chaosResist = 0,
-	damage = 1.8,
-	damageSpread = 0.2,
-	attackTime = 1,
-	attackRange = 14,
-	accuracy = 1,
-	baseMovementSpeed = 27,
-	spectreReservation = 50,
-	companionReservation = 30,
-	monsterCategory = "Beast",
-	spawnLocation = {
-	},
-	skillList = {
-		"MeleeAtAnimationSpeed",
-		"DTTAncestralJadeHulkLeapSlam",
-		"GAAncestralJadeHulkLeapImpact",
-		"TCAncestralLeagueKaruiHulk",
-		"GAAncestralLeagueKaruiHulkCharge",
-	},
-	modList = {
-		-- MonsterNoDropsOrExperience [monster_no_drops_or_experience = 1]
-	},
-}
 
-minions["AncestralSpiritCaster"] = {
-	name = "Ancestral Jadecaster",
-	monsterTags = { "bludgeoning_weapon", "has_one_hand_mace", "has_one_handed_melee", "human", "humanoid", "karui", "light_armour", "medium_height", "medium_movement", "melee", "not_dex", "not_str", "physical_affinity", "ranged", "Unarmed_onhit_audio", },
-	life = 0.53,
-	baseDamageIgnoresAttackSpeed = true,
-	energyShield = 0.2,
-	fireResist = 0,
-	coldResist = 0,
-	lightningResist = 0,
-	chaosResist = 0,
-	damage = 1,
-	damageSpread = 0.2,
-	attackTime = 1,
-	attackRange = 14,
-	accuracy = 1,
-	baseMovementSpeed = 32,
-	spectreReservation = 50,
-	companionReservation = 30,
-	monsterCategory = "Humanoid",
-	spawnLocation = {
-	},
-	skillList = {
-		"MeleeAtAnimationSpeed",
-		"MPSAncestralTotemSpiritSoulCasterProjectile",
-		"EASAncestralEncaseEnemy",
-		"GSAncestralJadePrison",
-	},
-	modList = {
-		-- MonsterNoDropsOrExperience [monster_no_drops_or_experience = 1]
-	},
-}
 
-minions["AncestralSpiritWarhorn"] = {
-	name = "Ancestral Warhorn",
-	monsterTags = { "2HBluntWood_onhit_audio", "bludgeoning_weapon", "has_one_hand_mace", "has_one_handed_melee", "human", "humanoid", "karui", "light_armour", "medium_height", "melee", "not_int", "physical_affinity", "very_slow_movement", },
-	life = 0.75,
-	baseDamageIgnoresAttackSpeed = true,
-	armour = 0.35,
-	evasion = 0.15,
-	fireResist = 0,
-	coldResist = 0,
-	lightningResist = 0,
-	chaosResist = 0,
-	damage = 1.2,
-	damageSpread = 0.2,
-	attackTime = 1,
-	attackRange = 27,
-	accuracy = 1,
-	baseMovementSpeed = 13,
-	spectreReservation = 50,
-	companionReservation = 30,
-	monsterCategory = "Humanoid",
-	spawnLocation = {
-	},
-	skillList = {
-		"MeleeAtAnimationSpeed",
-		"EGTotemSpiritJadeHornBlow",
-	},
-	modList = {
-		-- MonsterNoDropsOrExperience [monster_no_drops_or_experience = 1]
-	},
-}
 
 minions["UnearthBoneConstruct"] = {
 	name = "Bone Crawler",
@@ -505,6 +381,8 @@ minions["UnearthBoneConstruct"] = {
 	},
 	skillList = {
 		"MinionMelee",
+		"DATTBoneConstructPlayerSummoned",
+		"GABoneConstructPlayerSummoned",
 	},
 	modList = {
 		-- MonsterNoDropsOrExperience [monster_no_drops_or_experience = 1]
@@ -570,5 +448,59 @@ minions["ManifestWeapon"] = {
 		"GAAnimateWeaponQuarterstaffSweep",
 	},
 	modList = {
+	},
+}
+
+minions["RavenousSwarm"] = {
+	name = "Ravenous Swarm",
+	monsterTags = { "slow_movement", "Unarmed_onhit_audio", },
+	life = 0.7,
+	baseDamageIgnoresAttackSpeed = true,
+	fireResist = 0,
+	coldResist = 0,
+	lightningResist = 0,
+	chaosResist = 0,
+	damage = 0.84,
+	damageSpread = 0.3,
+	attackTime = 1,
+	attackRange = 1,
+	accuracy = 1,
+	baseMovementSpeed = 24,
+	spectreReservation = 50,
+	companionReservation = 30,
+	spawnLocation = {
+	},
+	skillList = {
+		"RavenousSwarmAttack",
+	},
+	modList = {
+	},
+}
+
+minions["LivingLightning"] = {
+	name = "Living Lightning",
+	monsterTags = { "construct", "extra_small_height", "ghost_armour", "is_unarmed", "melee", "physical_affinity", "very_fast_movement", },
+	life = 1,
+	baseDamageIgnoresAttackSpeed = true,
+	fireResist = 0,
+	coldResist = 0,
+	lightningResist = 0,
+	chaosResist = 0,
+	damage = 0.35,
+	damageSpread = 0.8,
+	attackTime = 1,
+	attackRange = 20,
+	accuracy = 1,
+	baseMovementSpeed = 97,
+	spectreReservation = 50,
+	companionReservation = 30,
+	monsterCategory = "Construct",
+	spawnLocation = {
+	},
+	skillList = {
+		"LivingLightningZap",
+	},
+	modList = {
+		-- MonsterNoDropsOrExperience [monster_no_drops_or_experience = 1]
 	},
 }
