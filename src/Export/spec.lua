@@ -6472,11 +6472,11 @@ return {
 			width=190
 		},
 		[3]={
-			list=false,
-			name="NonBossVersion",
-			refTo="WorldAreas",
-			type="Key",
-			width=220
+			list=true,
+			name="",
+			refTo="",
+			type="Int",
+			width=160
 		},
 		[4]={
 			list=true,
@@ -12275,7 +12275,7 @@ return {
 		},
 		[3]={
 			list=false,
-			name="BaseDamageIgnoresAttackSpeed",
+			name="IsPlayerMinion",
 			refTo="",
 			type="Bool",
 			width=180
@@ -12313,14 +12313,14 @@ return {
 			name="Resistances",
 			refTo="MonsterResistances",
 			type="Key",
-			width=250
+			width=280
 		},
 		[9]={
 			list=false,
-			name="IsPlayerMinion",
+			name="BaseDamageIgnoresAttackSpeed",
 			refTo="",
 			type="Bool",
-			width=80
+			width=200
 		},
 		[10]={
 			list=false,
@@ -12844,10 +12844,10 @@ return {
 		},
 		[74]={
 			list=false,
-			name="",
+			name="NotSummoned",
 			refTo="",
 			type="Bool",
-			width=50
+			width=90
 		},
 		[75]={
 			list=false,
