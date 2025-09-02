@@ -2711,7 +2711,7 @@ c["50% of Chaos damage you prevent when Hit Recouped as Life and Mana during eff
 c["50% of Cold and Lightning Damage taken as Fire Damage"]={{[1]={flags=0,keywordFlags=0,name="ColdDamageTakenAsFire",type="BASE",value=50},[2]={flags=0,keywordFlags=0,name="LightningDamageTakenAsFire",type="BASE",value=50}},nil}
 c["50% of Damage taken Recouped as Mana"]={{[1]={flags=0,keywordFlags=0,name="ManaRecoup",type="BASE",value=50}},nil}
 c["50% of Elemental Damage taken as Chaos Damage"]={{[1]={flags=0,keywordFlags=0,name="ElementalDamageTakenAsChaos",type="BASE",value=50}},nil}
-c["50% of Evasion Rating also grants Elemental Damage reduction"]={{[1]={flags=0,keywordFlags=0,name="Evasion",type="BASE",value=50}},"  also grants Elemental Damage reduction "}
+c["50% of Evasion Rating also grants Elemental Damage reduction"]={{[1]={flags=0,keywordFlags=0,name="EvasionAppliesToFireDamageTaken",type="BASE",value=50},[2]={flags=0,keywordFlags=0,name="EvasionAppliesToColdDamageTaken",type="BASE",value=50},[3]={flags=0,keywordFlags=0,name="EvasionAppliesToLightningDamageTaken",type="BASE",value=50}},nil}
 c["50% of Maximum Life Converted to Energy Shield"]={{[1]={flags=0,keywordFlags=0,name="LifeConvertToEnergyShield",type="BASE",value=50}},nil}
 c["50% of Physical Damage prevented Recouped as Life"]={{[1]={flags=0,keywordFlags=0,name="PhysicalDamage",type="BASE",value=50}},"  prevented Recouped as Life "}
 c["50% of Skill Mana costs Converted to Life Costs during any Life Flask Effect"]={{[1]={flags=0,keywordFlags=0,name="ManaCost",type="BASE",value=50}}," Skill s Converted to Life Costs during any Life Flask Effect "}
@@ -5099,7 +5099,7 @@ c["Passives in radius of Whispers of Doom can be Allocated without being connect
 c["Passives in radius of Zealot's Oath can be Allocated without being connected to your tree"]={{[1]={flags=0,keywordFlags=0,name="JewelData",type="LIST",value={key="fromNothingKeystone",value="zealot's oath"}},[2]={flags=0,keywordFlags=0,name="FromNothingKeystones",type="LIST",value={key="zealot's oath",value=true}}},nil}
 c["Permanently Intimidate enemies on Block"]={{[1]={[1]={type="Condition",var="BlockedRecently"},flags=0,keywordFlags=0,name="EnemyModifier",type="LIST",value={mod={flags=0,keywordFlags=0,name="Condition:Intimidated",type="FLAG",value=true}}}},nil}
 c["Persistent Buffs have 50% less Reservation"]={{[1]={[1]={skillType=139,type="SkillType"},[2]={skillType=5,type="SkillType"},flags=0,keywordFlags=0,name="Reserved",type="MORE",value=-50}},nil}
-c["Physical Damage Reduction from Armour is based on your combined Armour and Evasion Rating"]={{[1]={flags=0,keywordFlags=0,name="EvasionAddsToPdr",type="FLAG",value=true}},nil}
+c["Physical Damage Reduction from Armour is based on your combined Armour and Evasion Rating"]={{[1]={flags=0,keywordFlags=0,name="EvasionAppliesToPhysicalDamageTaken",type="BASE",value=100}},nil}
 c["Physical Damage is Pinning"]={nil,"Physical Damage is Pinning "}
 c["Physical Spell Critical Hits build Pin"]={nil,"Physical Spell Critical Hits build Pin "}
 c["Physical damage based on their Skill Level"]={nil,"Physical damage based on their Skill Level "}
