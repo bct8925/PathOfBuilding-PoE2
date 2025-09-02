@@ -1,3 +1,8 @@
+VERSION[0.11.1][2025/09/02]
+
+--- Fixed Crashes ---
+* Fix Crash when importing builds using Warcries (LocalIdentity)
+
 VERSION[0.11.0][2025/09/02]
 
 --- The Third Edict ---
