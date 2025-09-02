@@ -39,7 +39,7 @@
 ### Accuracy Improvements
 - Fix Lead Me Through Grace... parsing [\#1249](https://github.com/PathOfBuildingCommunity/PathOfBuilding-PoE2/pull/1249) ([Nostrademous](https://github.com/Nostrademous))
 ### Fixed Bugs
-- Fix invalid authentification URL being opened [\#1244](https://github.com/PathOfBuildingCommunity/PathOfBuilding-PoE2/pull/1244) ([teroshan](https://github.com/teroshan))
+- Fix invalid authentication URL being opened [\#1244](https://github.com/PathOfBuildingCommunity/PathOfBuilding-PoE2/pull/1244) ([teroshan](https://github.com/teroshan))
 
 
 ## [v0.10.2](https://github.com/PathOfBuildingCommunity/PathOfBuilding/tree/v0.10.2) (2025/08/30)
