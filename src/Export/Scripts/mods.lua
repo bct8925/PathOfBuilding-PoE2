@@ -247,6 +247,8 @@ writeMods("../Data/ModItemExclusive.lua", function(mod) -- contains primarily un
 	and (mod.Family[1] and mod.Family[1].Id ~= "AuraBonus" or not mod.Family[1])
 	and not mod.Id:match("^Synthesis") and not mod.Id:match("Royale") and not mod.Id:match("Cowards") and not mod.Id:match("Map") and not mod.Id:match("Ultimatum") and not mod.Id:match("SpecialCorruption")
 end)
-
+writeMods("../Data/ModVeiled.lua", function(mod)
+	return mod.Domain == 28 and not mod.Id:match("Map")
+end)
 
 print("Mods exported.")
