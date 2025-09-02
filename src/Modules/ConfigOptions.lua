@@ -402,10 +402,6 @@ local configSettings = {
 	{ var = "infusedChannellingInfusion", type = "check", label = "Is Infusion active?", ifSkill = "Infused Channelling", apply = function(val, modList, enemyModList)
 		modList:NewMod("Condition:InfusionActive", "FLAG", true, "Config")
 	end },
-	{ label = "Innervate:", ifSkill = "Innervate" },
-	{ var = "innervateInnervation", type = "check", label = "Is Innervation active?", ifSkill = "Innervate", apply = function(val, modList, enemyModList)
-		modList:NewMod("Condition:InnervationActive", "FLAG", true, "Config")
-	end },
 	{ label = "Intensify:", ifSkill = { "Intensify", "Crackling Lance", "Pinpoint" } },
 	{ var = "intensifyIntensity", type = "count", label = "# of Intensity:", ifSkill = { "Intensify", "Crackling Lance", "Pinpoint" }, apply = function(val, modList, enemyModList)
 		modList:NewMod("Multiplier:Intensity", "BASE", val, "Config")
@@ -431,6 +427,12 @@ local configSettings = {
 	{ label = "Momentum:", ifSkill = "Momentum" },
 	{ var = "momentumDamage", type = "check", label = "Moved 2m during Skill use?", ifSkill = "Momentum", ifFlag = "CanPerformSkillWhileMoving", apply = function(val, modList, enemyModList)
 		modList:NewMod("Condition:Moved2m", "FLAG", true, "Config")
+	end },
+	{ label = "Stoicism:", ifSkill = { "Stoicism I", "Stoicism II" } },
+	{ var = "stoicismSeconds", type = "count", label = "Seconds building Stoicism:", ifSkill = { "Stoicism I", "Stoicism II" }, tooltip = "Seconds since last reset. Stoicism I: 1%/s (full 20s). Stoicism II: 2%/s (full 10s).", apply = function(val, modList, enemyModList)
+		modList:NewMod("Condition:UsingStoicism", "FLAG", true, "Config")
+		modList:NewMod("Multiplier:StoicismSeconds", "BASE", m_min(m_max(val, 0), 20), "Config")
+		modList:NewMod("Multiplier:StoicismCap", "BASE", 20, "Config")
 	end },
 	{ label = "Parry:", ifSkill = "Parry" },
 	{ var = "parryActive", type = "check", label = "Enemy has Parry Debuff", ifSkill = "Parry", tooltip = "The Parry debuff grants:\n\tEnemies take 50% more Attack Damage", apply = function(val, modList, enemyModList)
