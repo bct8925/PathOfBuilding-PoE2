@@ -2356,7 +2356,7 @@ skills["CrossbowRequiemAmmoPlayer"] = {
 				"display_statset_hide_usage_stats",
 				"crossbow_ammo_skill_does_not_transition",
 				"crossbow_ammo_has_no_ammo",
-				"skill_is_instant_while_sprinting",
+				"can_be_used_instantly_in_any_set",
 			},
 			levels = {
 				[1] = { actorLevel = 1, },
@@ -3596,8 +3596,7 @@ skills["EmergencyReloadPlayer"] = {
 			},
 			stats = {
 				"emergency_reload_damage_+%_final",
-				"base_skill_is_instant",
-				"triggerable_in_any_set",
+				"can_be_used_instantly_in_any_set",
 				"action_can_be_used_in_aiming_stance",
 				"action_can_be_used_in_upward_aiming_stance",
 				"base_deal_no_damage",
@@ -4330,6 +4329,7 @@ skills["FortifyingCryShockwavePlayer"] = {
 				"attack_is_melee_override",
 				"skill_triggered_manually_by_other_skill",
 				"triggerable_in_any_set",
+				"is_area_damage",
 			},
 			notMinionStat = {
 				"off_hand_weapon_minimum_physical_damage",
@@ -5386,7 +5386,7 @@ skills["InfernalCryPlayer"] = {
 	name = "Infernal Cry",
 	baseTypeName = "Infernal Cry",
 	color = 1,
-	description = "Perform a Warcry, Empowering subsequent Attacks if there are enemies nearby. Enemies in the warcry's area are destabilised and will Combust on death. This Skill's cooldown can be bypassed by expending an Endurance Charge.",
+	description = "Perform a Warcry, Empowering subsequent Melee Attacks if there are enemies nearby. Enemies in the warcry's area are destabilised and will Combust on death. This Skill's cooldown can be bypassed by expending an Endurance Charge.",
 	skillTypes = { [SkillType.Warcry] = true, [SkillType.Area] = true, [SkillType.Duration] = true, [SkillType.Fire] = true, [SkillType.Cooldown] = true, [SkillType.ConsumesCharges] = true, [SkillType.EmpowersOtherSkill] = true, [SkillType.UsableWhileMoving] = true, [SkillType.SkillConsumesEnduranceChargesOnUse] = true, [SkillType.NoAttackInPlace] = true, [SkillType.Nova] = true, },
 	castTime = 0.8,
 	qualityStats = {
@@ -6057,7 +6057,7 @@ skills["ArmourPiercingBoltsAmmoPlayer"] = {
 				"can_perform_skill_while_moving",
 				"base_deal_no_damage",
 				"display_statset_hide_usage_stats",
-				"skill_is_instant_while_sprinting",
+				"can_be_used_instantly_in_any_set",
 			},
 			levels = {
 				[1] = { 12, statInterpolation = { 1, }, actorLevel = 1, },
@@ -6310,7 +6310,7 @@ skills["ExplosiveShotAmmoPlayer"] = {
 				"can_perform_skill_while_moving",
 				"base_deal_no_damage",
 				"display_statset_hide_usage_stats",
-				"skill_is_instant_while_sprinting",
+				"can_be_used_instantly_in_any_set",
 			},
 			levels = {
 				[1] = { actorLevel = 1, },
@@ -6645,7 +6645,7 @@ skills["FragmentationRoundsAmmoPlayer"] = {
 				"can_perform_skill_while_moving",
 				"base_deal_no_damage",
 				"display_statset_hide_usage_stats",
-				"skill_is_instant_while_sprinting",
+				"can_be_used_instantly_in_any_set",
 			},
 			levels = {
 				[1] = { actorLevel = 1, },
@@ -6992,7 +6992,7 @@ skills["GalvanicShardsAmmoPlayer"] = {
 				"base_deal_no_damage",
 				"display_statset_hide_usage_stats",
 				"quality_display_base_number_of_crossbow_bolts_is_gem",
-				"skill_is_instant_while_sprinting",
+				"can_be_used_instantly_in_any_set",
 			},
 			levels = {
 				[1] = { actorLevel = 1, },
@@ -7327,7 +7327,7 @@ skills["GlacialBoltAmmoPlayer"] = {
 				"can_perform_skill_while_moving",
 				"base_deal_no_damage",
 				"display_statset_hide_usage_stats",
-				"skill_is_instant_while_sprinting",
+				"can_be_used_instantly_in_any_set",
 			},
 			levels = {
 				[1] = { actorLevel = 1, },
@@ -7675,7 +7675,7 @@ skills["HailstormRoundsAmmoPlayer"] = {
 				"crossbow_ammo_skill_has_passive_reloading",
 				"display_statset_hide_usage_stats",
 				"quality_display_base_number_of_crossbow_bolts_is_gem",
-				"skill_is_instant_while_sprinting",
+				"can_be_used_instantly_in_any_set",
 			},
 			levels = {
 				[1] = { 16, statInterpolation = { 1, }, actorLevel = 1, },
@@ -7921,7 +7921,7 @@ skills["HighVelocityRoundsAmmoPlayer"] = {
 				"can_perform_skill_while_moving",
 				"base_deal_no_damage",
 				"display_statset_hide_usage_stats",
-				"skill_is_instant_while_sprinting",
+				"can_be_used_instantly_in_any_set",
 			},
 			levels = {
 				[1] = { actorLevel = 1, },
@@ -8263,7 +8263,7 @@ skills["IceShardsAmmoPlayer"] = {
 				"can_perform_skill_while_moving",
 				"base_deal_no_damage",
 				"display_statset_hide_usage_stats",
-				"skill_is_instant_while_sprinting",
+				"can_be_used_instantly_in_any_set",
 			},
 			levels = {
 				[1] = { actorLevel = 1, },
@@ -8609,7 +8609,7 @@ skills["IncendiaryShotAmmoPlayer"] = {
 				"can_perform_skill_while_moving",
 				"base_deal_no_damage",
 				"display_statset_hide_usage_stats",
-				"skill_is_instant_while_sprinting",
+				"can_be_used_instantly_in_any_set",
 			},
 			levels = {
 				[1] = { actorLevel = 1, },
@@ -8873,7 +8873,7 @@ skills["PermafrostBoltsAmmoPlayer"] = {
 				"can_perform_skill_while_moving",
 				"base_deal_no_damage",
 				"display_statset_hide_usage_stats",
-				"skill_is_instant_while_sprinting",
+				"can_be_used_instantly_in_any_set",
 			},
 			levels = {
 				[1] = { actorLevel = 1, },
@@ -9131,7 +9131,7 @@ skills["PlasmaBlastAmmoPlayer"] = {
 				"base_deal_no_damage",
 				"display_statset_hide_usage_stats",
 				"quality_display_base_number_of_crossbow_bolts_is_gem",
-				"skill_is_instant_while_sprinting",
+				"can_be_used_instantly_in_any_set",
 			},
 			levels = {
 				[1] = { actorLevel = 1, },
@@ -9465,7 +9465,7 @@ skills["RapidShotAmmoPlayer"] = {
 				"base_deal_no_damage",
 				"display_statset_hide_usage_stats",
 				"quality_display_base_number_of_crossbow_bolts_is_gem",
-				"skill_is_instant_while_sprinting",
+				"can_be_used_instantly_in_any_set",
 			},
 			levels = {
 				[1] = { actorLevel = 1, },
@@ -9722,7 +9722,7 @@ skills["ShockburstRoundsAmmoPlayer"] = {
 				"base_deal_no_damage",
 				"display_statset_hide_usage_stats",
 				"quality_display_base_number_of_crossbow_bolts_is_gem",
-				"skill_is_instant_while_sprinting",
+				"can_be_used_instantly_in_any_set",
 			},
 			levels = {
 				[1] = { 10, statInterpolation = { 1, }, actorLevel = 1, },
@@ -10057,7 +10057,7 @@ skills["SiegeCascadeAmmoPlayer"] = {
 				"can_perform_skill_while_moving",
 				"base_deal_no_damage",
 				"display_statset_hide_usage_stats",
-				"skill_is_instant_while_sprinting",
+				"can_be_used_instantly_in_any_set",
 			},
 			levels = {
 				[1] = { actorLevel = 1, },
@@ -10388,7 +10388,7 @@ skills["StormblastBoltsAmmoPlayer"] = {
 				"base_deal_no_damage",
 				"display_statset_hide_usage_stats",
 				"quality_display_base_number_of_crossbow_bolts_is_gem",
-				"skill_is_instant_while_sprinting",
+				"can_be_used_instantly_in_any_set",
 			},
 			levels = {
 				[1] = { actorLevel = 1, },
@@ -11861,6 +11861,7 @@ skills["ResonatingShieldPlayer"] = {
 				"attack_speed_modifiers_apply_to_over_time_cost",
 				"cannot_be_empowered_by_warcries",
 				"replace_off_hand_unarmed_attack_stats_with_shield_type",
+				"is_area_damage",
 			},
 			notMinionStat = {
 				"off_hand_weapon_minimum_physical_damage",
@@ -12829,6 +12830,7 @@ skills["ShieldWallPlayer"] = {
 				attack = true,
 				shieldAttack = true,
 				melee = true,
+				area = true,
 			},
 			constantStats = {
 				{ "base_skill_effect_duration", 6000 },
@@ -12851,6 +12853,7 @@ skills["ShieldWallPlayer"] = {
 				"shield_wall_segment_display_stat",
 				"quality_display_shield_wall_is_gem",
 				"replace_off_hand_unarmed_attack_stats_with_shield_type",
+				"is_area_damage",
 			},
 			notMinionStat = {
 				"off_hand_weapon_minimum_physical_damage",
