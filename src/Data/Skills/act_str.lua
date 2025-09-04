@@ -5244,6 +5244,11 @@ skills["HeraldOfBloodPlayer"] = {
 			label = "Buff",
 			incrementalEffectiveness = 0.054999999701977,
 			statDescriptionScope = "herald_of_blood",
+			statMap = {
+				["display_herald_of_blood_behaviour"] = {
+					flag("Condition:EnemiesExplode", { type = "GlobalEffect", effectType = "Buff", effectName = "Herald of Blood" } ),
+				},
+			},
 			baseFlags = {
 			},
 			stats = {
