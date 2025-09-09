@@ -1792,6 +1792,8 @@ function calcs.initEnv(build, mode, override, specEnv)
 	-- This needs to be done here at the end as otherwise we will only consider gems in the
 	-- selected active skill group
 	-- Calculate skill gem and support gem counts
+	-- Currently PoB2 doesn't associate weapon skill supports with the actual weapon sets
+	-- so it ends up counting all support gems when it should only take into account the active weapon set
 	local slotSupportGemSocketsCount = { R = 0, G = 0, B = 0 }
 	-- Loop through socket groups to calculate number of socketed gems
 	for _, socketGroup in pairs(env.build.skillsTab.socketGroupList) do
@@ -1821,6 +1823,24 @@ function calcs.initEnv(build, mode, override, specEnv)
 	env.modDB.multipliers.RedSupportGems = (env.modDB.multipliers.RedSupportGems or 0) + slotSupportGemSocketsCount.R
 	env.modDB.multipliers.GreenSupportGems = (env.modDB.multipliers.GreenSupportGems or 0) + slotSupportGemSocketsCount.G
 	env.modDB.multipliers.BlueSupportGems = (env.modDB.multipliers.BlueSupportGems or 0) + slotSupportGemSocketsCount.B
-
+	
+	-- Crystallised Immunity notable support
+	if (slotSupportGemSocketsCount.R > slotSupportGemSocketsCount.G) and (slotSupportGemSocketsCount.R > slotSupportGemSocketsCount.B) then
+		env.modDB.conditions["MajorityRedSocketedSupports"] = true;
+	elseif (slotSupportGemSocketsCount.G > slotSupportGemSocketsCount.R) and (slotSupportGemSocketsCount.G > slotSupportGemSocketsCount.B) then
+		env.modDB.conditions["MajorityGreenSocketedSupports"] = true;
+	elseif (slotSupportGemSocketsCount.B > slotSupportGemSocketsCount.R) and (slotSupportGemSocketsCount.B > slotSupportGemSocketsCount.G) then
+		env.modDB.conditions["MajorityBlueSocketedSupports"] = true;
+	end
+	
+	-- Gem Studded, Gemling notable support
+	if (slotSupportGemSocketsCount.R >= slotSupportGemSocketsCount.G) and (slotSupportGemSocketsCount.R >= slotSupportGemSocketsCount.B) then
+		env.modDB.conditions["MostNumerousRedSocketedSupports"] = true;
+	elseif (slotSupportGemSocketsCount.G >= slotSupportGemSocketsCount.R) and (slotSupportGemSocketsCount.G >= slotSupportGemSocketsCount.B) then
+		env.modDB.conditions["MostNumerousGreenSocketedSupports"] = true;
+	elseif (slotSupportGemSocketsCount.B >= slotSupportGemSocketsCount.R) and (slotSupportGemSocketsCount.B >= slotSupportGemSocketsCount.G) then
+		env.modDB.conditions["MostNumerousBlueSocketedSupports"] = true;
+	end
+	
 	return env, cachedPlayerDB, cachedEnemyDB, cachedMinionDB
 end

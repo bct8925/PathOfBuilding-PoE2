@@ -130,7 +130,7 @@ c["+1% to Maximum Lightning Resistance"]={{[1]={flags=0,keywordFlags=0,name="Lig
 c["+1% to Maximum Lightning Resistance per 4 Green Support Gems Socketed"]={{[1]={[1]={div=4,type="Multiplier",var="GreenSupportGems"},flags=0,keywordFlags=0,name="LightningResistMax",type="BASE",value=1}},nil}
 c["+1% to all Maximum Elemental Resistances"]={{[1]={flags=0,keywordFlags=0,name="ElementalResistMax",type="BASE",value=1}},nil}
 c["+1% to all Maximum Elemental Resistances if you have at"]={{[1]={flags=0,keywordFlags=0,name="ElementalResistMax",type="BASE",value=1}},"  if you have at "}
-c["+1% to all Maximum Elemental Resistances if you have at least 5 Red, Green and Blue Support Gems Socketed"]={{[1]={flags=0,keywordFlags=0,name="ElementalResistMax",type="BASE",value=1}},"  if you have at least 5 Red, Green and Blue Support Gems Socketed "}
+c["+1% to all Maximum Elemental Resistances if you have at least 5 Red, Green and Blue Support Gems Socketed"]={{[1]={[1]={threshold=5,type="MultiplierThreshold",var="RedSupportGems"},[2]={threshold=5,type="MultiplierThreshold",var="GreenSupportGems"},[3]={threshold=5,type="MultiplierThreshold",var="BlueSupportGems"},flags=0,keywordFlags=0,name="ElementalResistMax",type="BASE",value=1}},nil}
 c["+1% to all maximum Resistances if you have at least 150 Devotion"]={{[1]={[1]={stat="Devotion",threshold=150,type="StatThreshold"},flags=0,keywordFlags=0,name="ElementalResistMax",type="BASE",value=1},[2]={[1]={stat="Devotion",threshold=150,type="StatThreshold"},flags=0,keywordFlags=0,name="ChaosResistMax",type="BASE",value=1}},nil}
 c["+1% to maximum Block chance"]={{[1]={flags=0,keywordFlags=0,name="BlockChanceMax",type="BASE",value=1}},nil}
 c["+1.1% to Unarmed Melee Attack Critical Hit Chance"]={{[1]={flags=16777477,keywordFlags=0,name="CritChance",type="BASE",value=1.1}},nil}
@@ -274,12 +274,12 @@ c["+2 to Maximum Rage"]={{[1]={flags=0,keywordFlags=0,name="MaximumRage",type="B
 c["+2 to Melee Strike Range"]={{[1]={flags=0,keywordFlags=0,name="MeleeWeaponRange",type="BASE",value=2},[2]={flags=0,keywordFlags=0,name="UnarmedRange",type="BASE",value=2}},nil}
 c["+2% chance to Suppress Spell Damage"]={{[1]={flags=0,keywordFlags=0,name="SpellSuppressionChance",type="BASE",value=2}},nil}
 c["+2% to Maximum Cold Resistance"]={{[1]={flags=0,keywordFlags=0,name="ColdResistMax",type="BASE",value=2}},nil}
-c["+2% to Maximum Cold Resistance if you have at least 5 Blue Support Gems Socketed"]={{[1]={flags=0,keywordFlags=0,name="ColdResistMax",type="BASE",value=2}},"  if you have at least 5 Blue Support Gems Socketed "}
+c["+2% to Maximum Cold Resistance if you have at least 5 Blue Support Gems Socketed"]={{[1]={[1]={threshold=5,type="MultiplierThreshold",var="BlueSupportGems"},flags=0,keywordFlags=0,name="ColdResistMax",type="BASE",value=2}},nil}
 c["+2% to Maximum Fire Resistance"]={{[1]={flags=0,keywordFlags=0,name="FireResistMax",type="BASE",value=2}},nil}
-c["+2% to Maximum Fire Resistance if you have at least 5 Red Support Gems Socketed"]={{[1]={flags=0,keywordFlags=0,name="FireResistMax",type="BASE",value=2}},"  if you have at least 5 Red Support Gems Socketed "}
+c["+2% to Maximum Fire Resistance if you have at least 5 Red Support Gems Socketed"]={{[1]={[1]={threshold=5,type="MultiplierThreshold",var="RedSupportGems"},flags=0,keywordFlags=0,name="FireResistMax",type="BASE",value=2}},nil}
 c["+2% to Maximum Fire Resistance while Ignited"]={{[1]={[1]={type="Condition",var="Ignited"},flags=0,keywordFlags=0,name="FireResistMax",type="BASE",value=2}},nil}
 c["+2% to Maximum Lightning Resistance"]={{[1]={flags=0,keywordFlags=0,name="LightningResistMax",type="BASE",value=2}},nil}
-c["+2% to Maximum Lightning Resistance if you have at least 5 Green Support Gems Socketed"]={{[1]={flags=0,keywordFlags=0,name="LightningResistMax",type="BASE",value=2}},"  if you have at least 5 Green Support Gems Socketed "}
+c["+2% to Maximum Lightning Resistance if you have at least 5 Green Support Gems Socketed"]={{[1]={[1]={threshold=5,type="MultiplierThreshold",var="GreenSupportGems"},flags=0,keywordFlags=0,name="LightningResistMax",type="BASE",value=2}},nil}
 c["+2% to Quality of all Skills"]={{[1]={flags=0,keywordFlags=0,name="GemProperty",type="LIST",value={key="quality",keyOfScaledMod="value",keyword="all",value=2}}},nil}
 c["+2% to maximum Block chance"]={{[1]={flags=0,keywordFlags=0,name="BlockChanceMax",type="BASE",value=2}},nil}
 c["+2.4% to Critical Hit Chance"]={{[1]={flags=0,keywordFlags=0,name="CritChance",type="BASE",value=2.4}},nil}
@@ -2668,15 +2668,12 @@ c["5% increased Life Regeneration rate"]={{[1]={flags=0,keywordFlags=0,name="Lif
 c["5% increased Lightning Damage"]={{[1]={flags=0,keywordFlags=0,name="LightningDamage",type="INC",value=5}},nil}
 c["5% increased Magnitude of Ailments you inflict"]={{[1]={flags=0,keywordFlags=0,name="AilmentMagnitude",type="INC",value=5}},nil}
 c["5% increased Mana Regeneration Rate"]={{[1]={flags=0,keywordFlags=0,name="ManaRegen",type="INC",value=5}},nil}
-c["5% increased Maximum Life if you have at least 10 Red Support Gems Socketed"]={{[1]={flags=0,keywordFlags=0,name="Life",type="INC",value=5}},"  if you have at least 10 Red Support Gems Socketed "}
-c["5% increased Maximum Life if you have at least 10 Red Support Gems Socketed 5% increased Maximum Mana if you have at least 10 Blue Support Gems Socketed"]={{[1]={flags=0,keywordFlags=0,name="Life",type="INC",value=5}},"  if you have at least 10 Red Support Gems Socketed 5% increased Maximum Mana if you have at least 10 Blue Support Gems Socketed "}
-c["5% increased Maximum Life if you have at least 10 Red Support Gems Socketed 5% increased Maximum Mana if you have at least 10 Blue Support Gems Socketed 5% increased Movement Speed if you have at least 10 Green Support Gems Socketed"]={{[1]={flags=0,keywordFlags=0,name="Life",type="INC",value=5}},"  if you have at least 10 Red Support Gems Socketed 5% increased Maximum Mana if you have at least 10 Blue Support Gems Socketed 5% increased Movement Speed if you have at least 10 Green Support Gems Socketed "}
+c["5% increased Maximum Life if you have at least 10 Red Support Gems Socketed"]={{[1]={[1]={threshold=10,type="MultiplierThreshold",var="RedSupportGems"},flags=0,keywordFlags=0,name="Life",type="INC",value=5}},nil}
 c["5% increased Maximum Life per Socket filled"]={{[1]={[1]={type="Multiplier",var="RunesSocketedIn{SlotName}"},flags=0,keywordFlags=0,name="Life",type="INC",value=5}},nil}
-c["5% increased Maximum Mana if you have at least 10 Blue Support Gems Socketed"]={{[1]={flags=0,keywordFlags=0,name="Mana",type="INC",value=5}},"  if you have at least 10 Blue Support Gems Socketed "}
-c["5% increased Maximum Mana if you have at least 10 Blue Support Gems Socketed 5% increased Movement Speed if you have at least 10 Green Support Gems Socketed"]={{[1]={flags=0,keywordFlags=0,name="Mana",type="INC",value=5}},"  if you have at least 10 Blue Support Gems Socketed 5% increased Movement Speed if you have at least 10 Green Support Gems Socketed "}
+c["5% increased Maximum Mana if you have at least 10 Blue Support Gems Socketed"]={{[1]={[1]={threshold=10,type="MultiplierThreshold",var="BlueSupportGems"},flags=0,keywordFlags=0,name="Mana",type="INC",value=5}},nil}
 c["5% increased Maximum Mana per Socket filled"]={{[1]={[1]={type="Multiplier",var="RunesSocketedIn{SlotName}"},flags=0,keywordFlags=0,name="Mana",type="INC",value=5}},nil}
 c["5% increased Movement Speed"]={{[1]={flags=0,keywordFlags=0,name="MovementSpeed",type="INC",value=5}},nil}
-c["5% increased Movement Speed if you have at least 10 Green Support Gems Socketed"]={{[1]={flags=0,keywordFlags=0,name="MovementSpeed",type="INC",value=5}},"  if you have at least 10 Green Support Gems Socketed "}
+c["5% increased Movement Speed if you have at least 10 Green Support Gems Socketed"]={{[1]={[1]={threshold=10,type="MultiplierThreshold",var="GreenSupportGems"},flags=0,keywordFlags=0,name="MovementSpeed",type="INC",value=5}},nil}
 c["5% increased Movement Speed if you've Pinned an Enemy Recently"]={{[1]={[1]={type="Condition",var="PinnedEnemyRecently"},flags=0,keywordFlags=0,name="MovementSpeed",type="INC",value=5}},nil}
 c["5% increased Movement Speed per Frenzy Charge"]={{[1]={[1]={type="Multiplier",var="FrenzyCharge"},flags=0,keywordFlags=0,name="MovementSpeed",type="INC",value=5}},nil}
 c["5% increased Physical Damage"]={{[1]={flags=0,keywordFlags=0,name="PhysicalDamage",type="INC",value=5}},nil}
@@ -4189,8 +4186,7 @@ c["Blocking Damage Poisons the Enemy as though dealing 100 Base Chaos Damage"]={
 c["Blocking Damage Poisons the Enemy as though dealing 100 Base Chaos Damage Blocking Damage Poisons the Enemy as though dealing 200 Base Chaos Damage"]={nil,"Blocking Damage Poisons the Enemy as though dealing 100 Base Chaos Damage Blocking Damage Poisons the Enemy as though dealing 200 Base Chaos Damage "}
 c["Blocking Damage Poisons the Enemy as though dealing 200 Base Chaos Damage"]={nil,"Blocking Damage Poisons the Enemy as though dealing 200 Base Chaos Damage "}
 c["Blood Magic"]={{[1]={flags=0,keywordFlags=0,name="Keystone",type="LIST",value="Blood Magic"}},nil}
-c["Blue: Skills have 30% less cost"]={nil,"Blue: Skills have 30% less cost "}
-c["Blue: Skills have 30% less cost Green: 40% less Movement Speed Penalty from using Skills while Moving"]={nil,"Blue: Skills have 30% less cost Green: 40% less Movement Speed Penalty from using Skills while Moving "}
+c["Blue: Skills have 30% less cost"]={{[1]={[1]={type="Condition",var="MostNumerousBlueSocketedSupports"},flags=0,keywordFlags=0,name="ManaCost",type="MORE",value=-30}},nil}
 c["Body Armour grants +100% of Armour also applies to Chaos Damage"]={{[1]={[1]={itemSlot="Body Armour",rarityCond="NORMAL",type="ItemCondition"},flags=0,keywordFlags=0,name="Armour",type="BASE",value=100}},"  also applies to Chaos Damage "}
 c["Body Armour grants +50% of Armour also applies to Elemental Damage"]={{[1]={[1]={itemSlot="Body Armour",rarityCond="NORMAL",type="ItemCondition"},flags=0,keywordFlags=0,name="Armour",type="BASE",value=50}},"  also applies to Elemental Damage "}
 c["Body Armour grants +75% to Cold Resistance"]={{[1]={[1]={itemSlot="Body Armour",rarityCond="NORMAL",type="ItemCondition"},flags=0,keywordFlags=0,name="ColdResist",type="BASE",value=75}},nil}
@@ -4572,10 +4568,7 @@ c["Fire Spells Convert 100% of Fire Damage to Chaos Damage"]={{[1]={[1]={skillTy
 c["Fissure Skills have a 20% chance to create an additional Fissure"]={nil,"Fissure Skills have a 20% chance to create an additional Fissure "}
 c["Flammability Magnitude is doubled"]={{},"Magnitude  "}
 c["Flasks gain 0.17 charges per Second"]={{[1]={flags=0,keywordFlags=0,name="FlaskChargesGenerated",type="BASE",value=0.17}},nil}
-c["For each colour of Socketed Support Gem that is most numerous, gain:"]={nil,"For each colour of Socketed Support Gem that is most numerous, gain: "}
-c["For each colour of Socketed Support Gem that is most numerous, gain: Red: Hits against you have no Critical Damage Bonus"]={nil,"For each colour of Socketed Support Gem that is most numerous, gain: Red: Hits  have no Critical Damage Bonus "}
-c["For each colour of Socketed Support Gem that is most numerous, gain: Red: Hits against you have no Critical Damage Bonus Blue: Skills have 30% less cost"]={nil,"For each colour of Socketed Support Gem that is most numerous, gain: Red: Hits  have no Critical Damage Bonus Blue: Skills have 30% less cost "}
-c["For each colour of Socketed Support Gem that is most numerous, gain: Red: Hits against you have no Critical Damage Bonus Blue: Skills have 30% less cost Green: 40% less Movement Speed Penalty from using Skills while Moving"]={nil,"For each colour of Socketed Support Gem that is most numerous, gain: Red: Hits  have no Critical Damage Bonus Blue: Skills have 30% less cost Green: 40% less Movement Speed Penalty from using Skills while Moving "}
+c["For each colour of Socketed Support Gem that is most numerous, gain:"]={{},nil}
 c["Frenzy or Power Charge"]={nil,"Frenzy or Power Charge "}
 c["Fully Armour Broken enemies you kill with Hits Shatter"]={nil,"Fully Armour Broken enemies you kill with Hits Shatter "}
 c["Fully Broken Armour effects also apply to Fire Damage Taken from Hits"]={nil,"Fully Broken Armour effects also apply to Fire Damage Taken from Hits "}
@@ -4943,9 +4936,7 @@ c["Immobilise enemies at 50% buildup instead of 100%"]={nil,"Immobilise enemies 
 c["Immobilise enemies at 50% buildup instead of 100% Enemies Immobilised by you take 25% less Damage"]={nil,"Immobilise enemies at 50% buildup instead of 100% Enemies Immobilised by you take 25% less Damage "}
 c["Immune to Bleeding if Equipped Helmet has higher Armour than Evasion Rating"]={{[1]={[1]={type="Condition",var="HelmetArmourHigherThanEvasion"},flags=0,keywordFlags=0,name="BleedImmune",type="FLAG",value=true}},nil}
 c["Immune to Chaos Damage and Bleeding"]={{[1]={flags=0,keywordFlags=0,name="ChaosInoculation",type="FLAG",value=true},[2]={flags=0,keywordFlags=0,name="ChaosDamageTaken",type="MORE",value=-100},[3]={flags=0,keywordFlags=0,name="BleedImmune",type="FLAG",value=true}},nil}
-c["Immune to Chill if a majority of your Socketed Support Gems are Blue"]={nil,"Immune to Chill if a majority of your Socketed Support Gems are Blue "}
-c["Immune to Chill if a majority of your Socketed Support Gems are Blue Immune to Ignite if a majority of your Socketed Support Gems are Red"]={nil,"Immune to Chill if a majority of your Socketed Support Gems are Blue Immune to Ignite if a majority of your Socketed Support Gems are Red "}
-c["Immune to Chill if a majority of your Socketed Support Gems are Blue Immune to Ignite if a majority of your Socketed Support Gems are Red Immune to Shock if a majority of your Socketed Support Gems are Green"]={nil,"Immune to Chill if a majority of your Socketed Support Gems are Blue Immune to Ignite if a majority of your Socketed Support Gems are Red Immune to Shock if a majority of your Socketed Support Gems are Green "}
+c["Immune to Chill if a majority of your Socketed Support Gems are Blue"]={{[1]={[1]={type="Condition",var="MajorityBlueSocketedSupports"},flags=0,keywordFlags=0,name="ChillImmune",type="FLAG",value=true}},nil}
 c["Immune to Corrupted Blood"]={nil,"Immune to Corrupted Blood "}
 c["Immune to Corrupted Blood 40% reduced Duration of Bleeding on You"]={nil,"Immune to Corrupted Blood 40% reduced Duration of Bleeding on You "}
 c["Immune to Elemental Ailments while on Consecrated Ground if you have at least 150 Devotion"]={{[1]={[1]={type="Condition",var="OnConsecratedGround"},[2]={stat="Devotion",threshold=150,type="StatThreshold"},flags=0,keywordFlags=0,name="ElementalAilmentImmune",type="FLAG",value=true}},nil}
@@ -4954,14 +4945,13 @@ c["Immune to Freeze and Chill while affected by Ice Archon"]={nil,"Immune to Fre
 c["Immune to Hinder"]={nil,"Immune to Hinder "}
 c["Immune to Hinder Immune to Maim"]={nil,"Immune to Hinder Immune to Maim "}
 c["Immune to Ignite"]={{[1]={flags=0,keywordFlags=0,name="IgniteImmune",type="FLAG",value=true}},nil}
-c["Immune to Ignite if a majority of your Socketed Support Gems are Red"]={nil,"Immune to Ignite if a majority of your Socketed Support Gems are Red "}
-c["Immune to Ignite if a majority of your Socketed Support Gems are Red Immune to Shock if a majority of your Socketed Support Gems are Green"]={nil,"Immune to Ignite if a majority of your Socketed Support Gems are Red Immune to Shock if a majority of your Socketed Support Gems are Green "}
+c["Immune to Ignite if a majority of your Socketed Support Gems are Red"]={{[1]={[1]={type="Condition",var="MajorityRedSocketedSupports"},flags=0,keywordFlags=0,name="IgniteImmune",type="FLAG",value=true}},nil}
 c["Immune to Ignite while affected by Flame Archon"]={nil,"Immune to Ignite while affected by Flame Archon "}
 c["Immune to Maim"]={nil,"Immune to Maim "}
 c["Immune to Poison"]={{[1]={flags=0,keywordFlags=0,name="PoisonImmune",type="FLAG",value=true}},nil}
 c["Immune to Poison if Equipped Helmet has higher Evasion Rating than Armour"]={{[1]={[1]={type="Condition",var="HelmetEvasionHigherThanArmour"},flags=0,keywordFlags=0,name="PoisonImmune",type="FLAG",value=true}},nil}
 c["Immune to Shock"]={{[1]={flags=0,keywordFlags=0,name="ShockImmune",type="FLAG",value=true}},nil}
-c["Immune to Shock if a majority of your Socketed Support Gems are Green"]={nil,"Immune to Shock if a majority of your Socketed Support Gems are Green "}
+c["Immune to Shock if a majority of your Socketed Support Gems are Green"]={{[1]={[1]={type="Condition",var="MajorityGreenSocketedSupports"},flags=0,keywordFlags=0,name="ShockImmune",type="FLAG",value=true}},nil}
 c["Immune to Shock while affected by Lightning Archon"]={nil,"Immune to Shock while affected by Lightning Archon "}
 c["Increases and Reductions to Armour also apply to Energy Shield"]={nil,"Increases and Reductions to Armour also apply to Energy Shield "}
 c["Increases and Reductions to Armour also apply to Energy Shield Recharge Rate at 40% of their value"]={{[1]={flags=0,keywordFlags=0,name="ArmourAppliesToEnergyShieldRecharge",type="FLAG",value=true},[2]={flags=0,keywordFlags=0,name="ImprovedArmourAppliesToEnergyShieldRecharge",type="MAX",value=40}},nil}
@@ -5424,9 +5414,7 @@ c["Recover Life equal to 20% of Mana Flask's Recovery Amount when used Recover M
 c["Recover Mana equal to 20% of Life Flask's Recovery Amount when used"]={nil,"Recover Mana equal to 20% of Life Flask's Recovery Amount when used "}
 c["Recover all Mana when Used"]={nil,"Recover all Mana when Used "}
 c["Recover all Mana when Used Deals 25% of current Mana as Chaos Damage to you when Effect ends"]={nil,"Recover all Mana when Used Deals 25% of current Mana as Chaos Damage to you when Effect ends "}
-c["Red: Hits against you have no Critical Damage Bonus"]={nil,"Red: Hits  have no Critical Damage Bonus "}
-c["Red: Hits against you have no Critical Damage Bonus Blue: Skills have 30% less cost"]={nil,"Red: Hits  have no Critical Damage Bonus Blue: Skills have 30% less cost "}
-c["Red: Hits against you have no Critical Damage Bonus Blue: Skills have 30% less cost Green: 40% less Movement Speed Penalty from using Skills while Moving"]={nil,"Red: Hits  have no Critical Damage Bonus Blue: Skills have 30% less cost Green: 40% less Movement Speed Penalty from using Skills while Moving "}
+c["Red: Hits against you have no Critical Damage Bonus"]={{[1]={[1]={type="Condition",var="MostNumerousRedSocketedSupports"},flags=0,keywordFlags=0,name="ReduceCritExtraDamage",type="BASE",value=100}},nil}
 c["Reflects opposite Ring"]={{},nil}
 c["Regenerate (0.7-1.2)% of Life per second"]={nil,"Regenerate (0.7-1.2)% of Life per second "}
 c["Regenerate 0.05 Life per second per Maximum Energy Shield"]={{[1]={[1]={div=1,stat="MaximumEnergyShield",type="PerStat"},flags=0,keywordFlags=0,name="LifeRegen",type="BASE",value=0.05}},nil}
@@ -5754,7 +5742,6 @@ c["apply to Energy Shield Recharge Rate Gain 50% of Maximum Mana as Armour"]={ni
 c["every different Grenade fired in the past 8 seconds"]={nil,"every different Grenade fired in the past 8 seconds "}
 c["for 4 seconds, every 0.25 seconds while raised"]={nil,"for 4 seconds, every 0.25 seconds while raised "}
 c["gain 6 Cold Surges or 6 Fire Surges"]={{}," Cold Surges or 6 Fire Surges "}
-c["least 5 Red, Green and Blue Support Gems Socketed"]={nil,"least 5 Red, Green and Blue Support Gems Socketed "}
 c["the enemy's Power for 6 seconds, up to a total of 500"]={nil,"the enemy's Power for 6 seconds, up to a total of 500 "}
 c["the same damage to enemies within 1.8 metres"]={nil,"the same damage to enemies within 1.8 metres "}
 c["until you take no Damage to Life for 5 seconds"]={nil,"until you take no Damage to Life for 5 seconds "}

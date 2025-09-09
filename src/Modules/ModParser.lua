@@ -1562,6 +1562,13 @@ local modTagList = {
 	["while affected by a normal abyss jewel"] = { tag = { type = "MultiplierThreshold", var = "NormalAbyssJewels", threshold = 1 } },
 	["while an enemy with an open weakness is in your presence"] = { tag = { type = "Condition", var = "OpenWeaknessEnemyPresence" } }, -- This one means there's an enemy that has open weakness "nearby"
 	["against enemies with an open weakness"] = { tag = { type = "Condition", var = "EnemyHasOpenWeakness" } }, -- This one means the enemy you're targeting has open weakness
+	-- Gem conditions
+	["if you have at least (%d+) (%a+) support gems socketed"] = function(count, _, color) return { tag = { type = "MultiplierThreshold", var = firstToUpper(color) .. "SupportGems", threshold = count } }  end,
+	["if you have at least (%d+) red, green and blue support gems socketed"] = function(count) 
+		return { tagList = { 
+			{ type = "MultiplierThreshold", var = "RedSupportGems", threshold = count }, 
+			{ type = "MultiplierThreshold", var = "GreenSupportGems", threshold = count }, 
+			{ type = "MultiplierThreshold", var = "BlueSupportGems", threshold = count } } } end,
 	-- Slot conditions
 	["when in main hand"] = { tag = { type = "SlotNumber", num = 1 } },
 	["when in off hand"] = { tag = { type = "SlotNumber", num = 2 } },
@@ -3056,6 +3063,14 @@ local specialModList = {
 	["skills gain (%d+)%% increased skill speed per socketed green support gem"] = function(num) return { 
 		mod("SkillSpeedIncreasedPerGreenSupport", "FLAG", num) 
 	} end,
+	["for each colour of socketed support gem that is most numerous, gain:"] = {}, 
+	["red: hits against you have no critical damage bonus"] = { 
+		mod("ReduceCritExtraDamage", "BASE", 100, { type = "Condition", var = "MostNumerousRedSocketedSupports" })
+	}, 
+	["blue: skills have (%d+)%% less cost"] = function(count) return {
+		mod("ManaCost", "MORE", -count, { type = "Condition", var = "MostNumerousBlueSocketedSupports" })
+	} end,
+	
 	-- Monk - Stormweaver
 	["targets can be affected by two of your shocks at the same time"] = { flag("ShockCanStack"), mod("ShockStacksMax", "OVERRIDE", 2) },
 	["targets can be affected by two of your chills at the same time"] = { flag("ChillCanStack"), mod("ChillStacksMax", "OVERRIDE", 2) },
@@ -4757,6 +4772,9 @@ local specialModList = {
 		flag("CurseImmune", { type = "Condition", var = "UsingFlask" }),
 		flag("StunImmune", { type = "Condition", var = "UsingFlask" }),
 	},
+	["immun[ei]t?y? to (%a+) if a majority of your socketed support gems are (%a+)"] = function(_, ailment, color)
+		return { flag(firstToUpper(ailment) .. "Immune", {type = "Condition", var = "Majority" .. firstToUpper(color) .. "SocketedSupports"})} 
+	end,
 	["gain (%d+)%% of maximum energy shield as additional (%a+) threshold"] = function(num, _, statType)
 		return { mod(firstToUpper(statType) .. "Threshold", "BASE", 1, { type = "PercentStat", stat = "EnergyShield", percent = num }) }
 	end,
