@@ -675,14 +675,6 @@ statMap = {
 
 #skill SupportHulkingMinionsPlayer
 #set SupportHulkingMinionsPlayer
-statMap = {
-	["support_titanblood_minion_damage_+%_final"] = {
-		mod("MinionModifier", "LIST", { mod = mod("Damage", "MORE", nil) }),
-	},
-	["support_titanblood_minion_life_+%_final"] = {
-		mod("MinionModifier", "LIST", { mod = mod("Life", "MORE", nil) }),
-	},
-},
 #mods
 #skillEnd
 
