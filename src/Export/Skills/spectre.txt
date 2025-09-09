@@ -138,6 +138,12 @@ statMap = {
 #mods
 #skillEnd
 
+#skill DTTKaruiBloodFeverButcherLeap
+#set DTTKaruiBloodFeverButcherLeap
+#flags attack
+#mods
+#skillEnd
+
 #skill DTTHellscapeStabbySkyStab
 #set DTTHellscapeStabbySkyStab
 #flags attack melee projectile
@@ -147,6 +153,12 @@ statMap = {
 #skill DTTMantisRatLeap Leap
 #set DTTMantisRatLeap
 #flags triggerable attack
+#mods
+#skillEnd
+
+#skill EDSAbyssMorayClanFlamethrower Flamethrower
+#set EDSAbyssMorayClanFlamethrower
+#flags triggerable spell
 #mods
 #skillEnd
 
@@ -302,6 +314,30 @@ statMap = {
 #mods
 #skillEnd
 
+#skill GSAbyssPaleEliteBeam Beam
+#set GSAbyssPaleEliteBeam
+#flags triggerable spell hit
+#mods
+#skillEnd
+
+#skill MPSAbyssPaleEliteSnowBall Snowball
+#set MPSAbyssPaleEliteSnowBall
+#flags triggerable projectile spell hit
+#mods
+#skillEnd
+
+#skill GSAbyssPaleEliteSnowBallImpact Snowball Impact
+#set GSAbyssPaleEliteSnowBallImpact
+#flags triggerable spell hit area
+#mods
+#skillEnd
+
+#skill GSAbyssPrimordialMonsterScreech Screech
+#set GSAbyssPrimordialMonsterScreech
+#flags triggerable spell hit
+#mods
+#skillEnd
+
 #skill GSDesertBatZap Zap
 #set GSDesertBatZap
 #flags triggerable spell hit
@@ -361,6 +397,12 @@ statMap = {
 #skill GSWarlockRaiseBugs Raise Bugs
 #set GSWarlockRaiseBugs
 #flags spell
+#mods
+#skillEnd
+
+#skill HuhuGrubLarvaeMortar Mortar
+#set HuhuGrubLarvaeMortar
+#flags triggerable projectile spell hit area
 #mods
 #skillEnd
 
@@ -479,6 +521,60 @@ statMap = {
 #mods
 #skillEnd
 
+#skill MPSAbyssPaleEliteFireball Fireball
+#set MPSAbyssPaleEliteFireball
+#flags spell projectile triggerable hit
+#mods
+#skillEnd
+
+#skill MPSAbyssPitArtillery Artillery
+#set MPSAbyssPitArtillery
+#flags spell projectile triggerable hit area
+#mods
+#skillEnd
+
+#skill GSAbyssPitArtilleryMortarImpact Artillery Impact
+#set GSAbyssPitArtilleryMortarImpact
+#flags spell triggerable hit area
+#mods
+#skillEnd
+
+#skill MPSAbyssPaleWalker2Fireball Fireball
+#set MPSAbyssPaleWalker2Fireball
+#flags spell projectile triggerable hit
+#mods
+#skillEnd
+
+#skill MPSAbyssCocoon3BallSpit Large Ball Spit
+#set MPSAbyssCocoon3BallSpit
+#flags spell projectile triggerable hit
+#mods
+#skillEnd
+
+#skill GSAbyssCocoon3BallSpitImpact Large Ball Impact
+#set GSAbyssCocoon3BallSpitImpact
+#flags spell triggerable hit
+#mods
+#skillEnd
+
+#skill CGEAbyssCocoon3FlameGeyser Large Ball Flame Geyser
+#set CGEAbyssCocoon3FlameGeyser
+#flags spell area duration
+#mods
+#skillEnd
+
+#skill MPSAbyssCocoon3BallSpitSmall Small Ball Spit
+#set MPSAbyssCocoon3BallSpitSmall
+#flags spell projectile triggerable hit
+#mods
+#skillEnd
+
+#skill GSAbyssCocoon3BallSpitSmallImpact Small Ball Impact 
+#set GSAbyssCocoon3BallSpitSmallImpact
+#flags spell triggerable hit
+#mods
+#skillEnd
+
 #skill MPSArmourCasterBasic Fireball
 #set MPSArmourCasterBasic
 #flags spell projectile triggerable hit
@@ -536,7 +632,7 @@ statMap = {
 
 #skill MPSBreachEliteFallenLunarisMonsterChaosSpark Chaos Spark
 #set MPSBreachEliteFallenLunarisMonsterChaosSpark
-#flags spell projectile triggerable hit
+#flags spell projectile triggerable duration hit
 #mods
 #skillEnd
 
@@ -779,6 +875,18 @@ statMap = {
 #mods
 #skillEnd
 
+#skill TBAbyssCarrionWingBeam Beam
+#set TBAbyssCarrionWingBeam
+#flags spell attack hit triggerable
+#mods
+#skillEnd
+
+#skill GSAbyssCarrionWingBeamImpact Beam Impact
+#set GSAbyssCarrionWingBeamImpact
+#flags spell hit triggerable
+#mods
+#skillEnd
+
 #skill TBBreachElitePaleLightningBoltSpammableLeft Lightning Bolt
 #set TBBreachElitePaleLightningBoltSpammableLeft
 #flags spell hit triggerable
@@ -830,5 +938,24 @@ statMap = {
 #skill VaalHumanoidShockRifle Shock Rifle
 #set VaalHumanoidShockRifle
 #flags spell projectile hit
+#mods
+#skillEnd
+
+#skill VaalZealotLightningSpark Spark
+#set VaalZealotLightningSpark
+#flags spell projectile triggerable duration hit
+#mods
+#skillEnd
+
+#skill VaalZealotLightningSparkNova Spark Nova
+#set VaalZealotLightningSparkNova
+#flags spell projectile triggerable duration hit
+#mods
+#skillEnd
+
+#skill GSVaalZealotLightningBlast Lightning Blast
+#set GSVaalZealotLightningBlast
+#flags spell triggerable hit
+#baseMod skill("cooldown", 10.5)
 #mods
 #skillEnd
