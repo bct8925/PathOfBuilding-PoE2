@@ -993,11 +993,10 @@ c["10% increased Accuracy Rating with Bows"]={{[1]={flags=131076,keywordFlags=0,
 c["10% increased Accuracy Rating with Spears"]={{[1]={flags=268435460,keywordFlags=0,name="Accuracy",type="INC",value=10}},nil}
 c["10% increased Area Damage"]={{[1]={flags=512,keywordFlags=0,name="Damage",type="INC",value=10}},nil}
 c["10% increased Armour"]={{[1]={flags=0,keywordFlags=0,name="Armour",type="INC",value=10}},nil}
-c["10% increased Armour and Evasion Rating per Summoned Totem in your Presence"]={{[1]={[1]={stat="TotemsSummoned",type="PerStat"},flags=0,keywordFlags=0,name="ArmourAndEvasion",type="INC",value=10}},"   in your Presence "}
-c["10% increased Armour and Evasion Rating per Summoned Totem in your Presence 10% increased Attack Damage per Summoned Totem in your Presence"]={{[1]={[1]={stat="TotemsSummoned",type="PerStat"},[2]={stat="TotemsSummoned",type="PerStat"},flags=0,keywordFlags=0,name="ArmourAndEvasion",type="INC",value=10}},"   in your Presence 10% increased Attack Damage  in your Presence "}
+c["10% increased Armour and Evasion Rating per Summoned Totem in your Presence"]={{[1]={[1]={stat="TotemsSummoned",type="PerStat"},flags=0,keywordFlags=0,name="ArmourAndEvasion",type="INC",value=10}},nil}
 c["10% increased Attack Area Damage"]={{[1]={flags=513,keywordFlags=0,name="Damage",type="INC",value=10}},nil}
 c["10% increased Attack Damage"]={{[1]={flags=1,keywordFlags=0,name="Damage",type="INC",value=10}},nil}
-c["10% increased Attack Damage per Summoned Totem in your Presence"]={{[1]={[1]={stat="TotemsSummoned",type="PerStat"},flags=1,keywordFlags=0,name="Damage",type="INC",value=10}},"   in your Presence "}
+c["10% increased Attack Damage per Summoned Totem in your Presence"]={{[1]={[1]={stat="TotemsSummoned",type="PerStat"},flags=1,keywordFlags=0,name="Damage",type="INC",value=10}},nil}
 c["10% increased Attack Speed"]={{[1]={flags=1,keywordFlags=0,name="Speed",type="INC",value=10}},nil}
 c["10% increased Attack Speed with Spears"]={{[1]={flags=268435461,keywordFlags=0,name="Speed",type="INC",value=10}},nil}
 c["10% increased Ballista Critical Damage Bonus"]={{[1]={[1]={type="Condition",var="BallistaSkill"},flags=0,keywordFlags=16384,name="CritMultiplier",type="INC",value=10}},nil}
@@ -4134,9 +4133,8 @@ c["Attacks have 25% chance to Maim on Hit"]={{}," to Maim  "}
 c["Attacks have Added maximum Lightning Damage equal to 8% of maximum Mana"]={{[1]={[1]={percent=8,stat="Mana",type="PercentStat"},[2]={skillType=1,type="SkillType"},flags=0,keywordFlags=0,name="LightningMax",type="BASE",value=1}},nil}
 c["Attacks have Added maximum Lightning Damage equal to 9% of maximum Mana"]={{[1]={[1]={percent=9,stat="Mana",type="PercentStat"},[2]={skillType=1,type="SkillType"},flags=0,keywordFlags=0,name="LightningMax",type="BASE",value=1}},nil}
 c["Attacks have added Physical damage equal to 3% of maximum Life"]={{[1]={[1]={percent=3,stat="Life",type="PercentStat"},[2]={skillType=1,type="SkillType"},flags=0,keywordFlags=0,name="PhysicalMin",type="BASE",value=1},[2]={[1]={percent=3,stat="Life",type="PercentStat"},[2]={skillType=1,type="SkillType"},flags=0,keywordFlags=0,name="PhysicalMax",type="BASE",value=1}},nil}
-c["Attacks used by Ballistas have 10% increased Attack Speed"]={nil,"Attacks used by Ballistas have 10% increased Attack Speed "}
-c["Attacks used by Ballistas have 10% increased Attack Speed 50% increased Ballista Immobilisation buildup"]={nil,"Attacks used by Ballistas have 10% increased Attack Speed 50% increased Ballista Immobilisation buildup "}
-c["Attacks used by Ballistas have 4% increased Attack Speed"]={nil,"Attacks used by Ballistas have 4% increased Attack Speed "}
+c["Attacks used by Ballistas have 10% increased Attack Speed"]={{[1]={[1]={type="Condition",var="BallistaSkill"},flags=1,keywordFlags=16384,name="Speed",type="INC",value=10}},nil}
+c["Attacks used by Ballistas have 4% increased Attack Speed"]={{[1]={[1]={type="Condition",var="BallistaSkill"},flags=1,keywordFlags=16384,name="Speed",type="INC",value=4}},nil}
 c["Attacks used by Totems have 3% increased Attack Speed per Summoned Totem"]={{[1]={[1]={stat="TotemsSummoned",type="PerStat"},flags=1,keywordFlags=16384,name="Speed",type="INC",value=3}},nil}
 c["Attacks used by Totems have 4% increased Attack Speed"]={{[1]={flags=1,keywordFlags=16384,name="Speed",type="INC",value=4}},nil}
 c["Attacks used by Totems have 4% increased Attack Speed per Summoned Totem"]={{[1]={[1]={stat="TotemsSummoned",type="PerStat"},flags=1,keywordFlags=16384,name="Speed",type="INC",value=4}},nil}
