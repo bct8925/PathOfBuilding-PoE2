@@ -1101,6 +1101,10 @@ function calcs.perform(env, skipEHP)
 		end
 	end
 
+	-- Stat sorting category calcs
+	output.EffectiveLootRarityMod = calcLib.mod(modDB, nil, "LootRarity")
+	output.Spirit = m_floor(calcLib.val(modDB, nil, "Spirit"))
+
 	-- Special Rarity / Quantity Calc for Bisco's
 	local lootQuantityNormalEnemies = modDB:Sum("INC", nil, "LootQuantityNormalEnemies")
 	output.LootQuantityNormalEnemies = (lootQuantityNormalEnemies > 0) and lootQuantityNormalEnemies + modDB:Sum("INC", nil, "LootQuantity") or 0
