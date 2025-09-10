@@ -2270,33 +2270,26 @@ return {
 		},
 		[27]={
 			list=false,
-			name="TradeMarketCategory",
-			refTo="TradeMarketCategory",
-			type="Key",
-			width=150
-		},
-		[28]={
-			list=false,
 			name="",
 			refTo="",
 			type="Bool",
 			width=50
 		},
-		[29]={
+		[28]={
 			list=true,
 			name="Achievement",
 			refTo="AchievementItems",
 			type="Key",
 			width=280
 		},
-		[30]={
+		[29]={
 			list=false,
 			name="",
 			refTo="",
 			type="Key",
 			width=150
 		},
-		[31]={
+		[30]={
 			list=false,
 			name="",
 			refTo="",
@@ -17234,6 +17227,13 @@ return {
 			refTo="SkillGemSearchTerms",
 			type="Key",
 			width=220
+		},
+		[31]={
+			list=false,
+			name="SupportTier",
+			refTo="",
+			type="Int",
+			width=80
 		}
 	},
 	skillgemsearchterms={
