@@ -3730,25 +3730,60 @@ function calcs.offence(env, actor, activeSkill)
 					local lifeLeech = 0
 					local energyShieldLeech = 0
 					local manaLeech = 0
+
+					-- Determine base leech value according to resource (using function to avoid repetition)
+					---@param resource string "Life" | "Mana" | "EnergyShield"
+					---@param dmgType string "Physical" | "Cold" | "Fire" | "Lightning" | "Chaos"
+					---@return number
+					local function getBaseLeech(resource, dmgType)
+						local leech = 0
+						if (not skillModList:Flag(cfg, "Condition:No" .. resource .. "LeechFrom" .. dmgType .. "Damage" )) and not (isElemental[dmgType] and skillModList:Flag(cfg, "No" .. resource .. "LeechFromElementalDamage" )) then
+							-- Check if converted physical leech (most PoE2 leech is physical only by default)
+							local convertModName, convertFlag
+							if isElemental[dmgType] and skillModList:Flag(cfg, resource .. "LeechBasedOnElementalDamage") then
+								convertFlag = resource .. "LeechBasedOnElementalDamage"
+								convertModName = "ElementalDamage" .. resource .. "Leech"
+							elseif skillModList:Flag(cfg, resource .. "LeechBasedOn".. dmgType .. "Damage") then
+								convertFlag = resource .. "LeechBasedOn" .. dmgType .. "Damage"
+								convertModName = dmgType .. "Damage" .. resource .. "Leech"
+							end
+							if convertModName and convertFlag then
+								local tempCfg = copyTable(cfg, true)
+								tempCfg.overrideCond = { ["No" .. resource .. "LeechFromPhysicalDamage"] = false } -- Need to force Condition to `false`, to calculate original phys leech values
+								local physLeechMods = skillModList:Tabulate("BASE", tempCfg , "PhysicalDamage" .. resource .. "Leech") 
+								for _, entry in ipairs(physLeechMods) do
+									-- Add new leech mods for that damage type with the same conditions, source, etc.
+									local newMod = copyTable(entry.mod)
+									newMod.name = convertModName
+									-- Tags that specifically disable Physical Damage leech need to be removed
+									local hasNoPhysLeech, tagIndex = modLib.hasTag(newMod, { type = "Condition", var = "No" .. resource .. "LeechFromPhysicalDamage", neg = true })
+									if hasNoPhysLeech then
+										t_remove(newMod, tagIndex)
+									end
+									if not skillModList:ReplaceModInternal(newMod) then -- using `ReplaceModInternal` instead of `ReplaceMod`, so I don't have to unpack the mod first
+										skillModList:AddMod(newMod)
+									end
+								end
+							end
+							leech = skillModList:Sum("BASE", cfg, "Damage" .. resource .. "Leech", dmgType.."Damage" .. resource .. "Leech", isElemental[dmgType] and "ElementalDamage" .. resource .. "Leech" or nil) + enemyDB:Sum("BASE", cfg, "SelfDamage" .. resource .. "Leech") / 100
+						elseif skillModList:Flag(cfg, "Condition:No" .. resource .. "LeechFrom" .. dmgType .. "Damage" ) then
+							-- dmgType leech should not apply, but still needs to exist for possible conversion so adding additional condition tag instead
+							local noLeechFlagTag = { type = "Condition", var = "No" .. resource .. "LeechFrom" .. dmgType .. "Damage", neg = true }
+							for _, entry in ipairs(skillModList:Tabulate("BASE", cfg, dmgType .. "Damage" .. resource .. "Leech")) do
+								if not modLib.hasTag(entry.mod, noLeechFlagTag) then
+									t_insert(entry.mod, noLeechFlagTag )
+								end
+							end
+						end
+						return leech and leech or 0
+					end
+
 					if skillFlags.mine or skillFlags.trap or skillFlags.totem then
 						lifeLeech = skillModList:Sum("BASE", cfg, "DamageLifeLeechToPlayer")
 					else
-						if skillModList:Flag(nil, "LifeLeechBasedOnChaosDamage") then
-							if damageType == "Chaos" then
-								lifeLeech = skillModList:Sum("BASE", cfg, "DamageLeech", "DamageLifeLeech", "PhysicalDamageLifeLeech", "LightningDamageLifeLeech", "ColdDamageLifeLeech", "FireDamageLifeLeech", "ChaosDamageLifeLeech", "ElementalDamageLifeLeech") + enemyDB:Sum("BASE", cfg, "SelfDamageLifeLeech") / 100
-							end
-						else
-							if pass == 1 and damageType == "Physical" and skillModList:Flag(nil, "PhysicalAsElementalDamageLifeLeech") then
-								skillModList:NewMod("ElementalDamageLifeLeech", "BASE", skillModList:Sum("BASE", cfg, "PhysicalDamageLifeLeech"), "Mystic Harvest")
-							end
-							lifeLeech = skillModList:Sum("BASE", cfg, "DamageLeech", "DamageLifeLeech", damageType.."DamageLifeLeech", isElemental[damageType] and "ElementalDamageLifeLeech" or nil) + enemyDB:Sum("BASE", cfg, "SelfDamageLifeLeech") / 100
-						end
-						energyShieldLeech = skillModList:Sum("BASE", cfg, "DamageEnergyShieldLeech", damageType.."DamageEnergyShieldLeech", isElemental[damageType] and "ElementalDamageEnergyShieldLeech" or nil) + enemyDB:Sum("BASE", cfg, "SelfDamageEnergyShieldLeech") / 100
-						if pass == 1 and damageType == "Physical" and skillModList:Flag(nil, "PhysicalAsAllDamageManaLeech") then
-							skillModList:NewMod("ElementalDamageManaLeech", "BASE", skillModList:Sum("BASE", cfg, "PhysicalDamageLifeLeech"), "Ravenous Doubts")
-							skillModList:NewMod("ChaosDamageManaLeech", "BASE", skillModList:Sum("BASE", cfg, "PhysicalDamageLifeLeech"), "Ravenous Doubts")
-						end
-						manaLeech = skillModList:Sum("BASE", cfg, "DamageLeech", "DamageManaLeech", damageType.."DamageManaLeech", isElemental[damageType] and "ElementalDamageManaLeech" or nil) + enemyDB:Sum("BASE", cfg, "SelfDamageManaLeech") / 100
+						lifeLeech = getBaseLeech("Life", damageType)
+						energyShieldLeech = getBaseLeech("EnergyShield", damageType)
+						manaLeech = getBaseLeech("Mana", damageType)
 					end
 
 					if ghostReaver and not noLifeLeech then

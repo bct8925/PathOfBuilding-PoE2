@@ -4988,7 +4988,7 @@ c["Leech Life 20% slower"]={{[1]={flags=0,keywordFlags=0,name="LifeLeechRate",ty
 c["Leech Life 25% faster"]={{[1]={flags=0,keywordFlags=0,name="LifeLeechRate",type="INC",value=25}},nil}
 c["Leech Life 5% slower"]={{[1]={flags=0,keywordFlags=0,name="LifeLeechRate",type="INC",value=-5}},nil}
 c["Leech from Critical Hits is instant"]={{[1]={[1]={type="Condition",var="CriticalStrike"},flags=0,keywordFlags=0,name="InstantLifeLeech",type="BASE",value=100},[2]={[1]={type="Condition",var="CriticalStrike"},flags=0,keywordFlags=0,name="InstantManaLeech",type="BASE",value=100},[3]={[1]={type="Condition",var="CriticalStrike"},flags=0,keywordFlags=0,name="InstantEnergyShieldLeech",type="BASE",value=100}},nil}
-c["Leech recovers based on Chaos Damage as well as Physical Damage"]={nil,"Leech recovers based on Chaos Damage as well as Physical Damage "}
+c["Leech recovers based on Chaos Damage as well as Physical Damage"]={{[1]={flags=0,keywordFlags=0,name="LifeLeechBasedOnChaosDamage",type="FLAG",value=true},[2]={flags=0,keywordFlags=0,name="ManaLeechBasedOnChaosDamage",type="FLAG",value=true},[3]={flags=0,keywordFlags=0,name="EnergyShieldLeechBasedOnChaosDamage",type="FLAG",value=true}},nil}
 c["Leeches 0.1% of Physical Damage as Life"]={{[1]={flags=0,keywordFlags=0,name="PhysicalDamageLifeLeech",type="BASE",value=0.1}},nil}
 c["Leeches 1% of maximum Life when you Cast a Spell"]={nil,"Leeches 1% of maximum Life when you Cast a Spell "}
 c["Leeches 10% of Physical Damage as Life"]={{[1]={flags=0,keywordFlags=0,name="PhysicalDamageLifeLeech",type="BASE",value=10}},nil}
@@ -5020,8 +5020,8 @@ c["Life Leech effects are not removed when Unreserved Life is Filled"]={{[1]={fl
 c["Life Leech from your Hits also applies to your Companion"]={nil,"Life Leech from your Hits also applies to your Companion "}
 c["Life Leech is Converted to Energy Shield Leech"]={{[1]={flags=0,keywordFlags=0,name="GhostReaver",type="FLAG",value=true}},nil}
 c["Life Leech is Instant"]={{[1]={flags=0,keywordFlags=0,name="InstantLifeLeech",type="BASE",value=100}},nil}
-c["Life Leech recovers based on your Chaos damage instead of Physical damage"]={nil,"Life Leech recovers based on your Chaos damage instead of Physical damage "}
-c["Life Leech recovers based on your Elemental damage as well as Physical damage"]={{[1]={flags=0,keywordFlags=0,name="PhysicalAsElementalDamageLifeLeech",type="FLAG",value=true}},nil}
+c["Life Leech recovers based on your Chaos damage instead of Physical damage"]={{[1]={flags=0,keywordFlags=0,name="LifeLeechBasedOnChaosDamage",type="FLAG",value=true},[2]={flags=0,keywordFlags=0,name="Condition:NoLifeLeechFromPhysicalDamage",type="FLAG",value=true}},nil}
+c["Life Leech recovers based on your Elemental damage as well as Physical damage"]={{[1]={flags=0,keywordFlags=0,name="LifeLeechBasedOnElementalDamage",type="FLAG",value=true}},nil}
 c["Life Leeched from Empowered Attacks is Instant"]={nil,"Life Leeched from Empowered Attacks is Instant "}
 c["Life Recharges"]={nil,"Life Recharges "}
 c["Life Recharges instead of Energy Shield"]={{[1]={flags=0,keywordFlags=0,name="EnergyShieldRechargeAppliesToLife",type="FLAG",value=true}},nil}
@@ -5073,7 +5073,7 @@ c["Mana Flasks gain 0.1 charges per Second"]={{[1]={flags=0,keywordFlags=0,name=
 c["Mana Flasks gain 0.22 charges per Second"]={{[1]={flags=0,keywordFlags=0,name="ManaFlaskChargesGenerated",type="BASE",value=0.22}},nil}
 c["Mana Flasks gain 0.25 charges per Second"]={{[1]={flags=0,keywordFlags=0,name="ManaFlaskChargesGenerated",type="BASE",value=0.25}},nil}
 c["Mana Flasks used while on Low Mana apply Recovery Instantly"]={{[1]={[1]={type="Condition",var="LowMana"},flags=0,keywordFlags=0,name="ManaFlaskInstantRecovery",type="BASE",value=100}},nil}
-c["Mana Leech recovers based on Elemental Damage Types instead of Physical Damage"]={nil,"Mana Leech recovers based on Elemental Damage Types instead of Physical Damage "}
+c["Mana Leech recovers based on Elemental Damage Types instead of Physical Damage"]={{[1]={flags=0,keywordFlags=0,name="ManaLeechBasedOnElementalDamage",type="FLAG",value=true},[2]={flags=0,keywordFlags=0,name="Condition:NoManaLeechFromPhysicalDamage",type="FLAG",value=true}},nil}
 c["Mana Recovery from Regeneration is not applied"]={{[1]={flags=0,keywordFlags=0,name="UnaffectedByManaRegen",type="FLAG",value=true}},nil}
 c["Mana Recovery other than Regeneration cannot Recover Mana"]={nil,"Mana Recovery other than Regeneration cannot Recover Mana "}
 c["Mark Skills have 10% increased Use Speed"]={{}," Use Speed "}
