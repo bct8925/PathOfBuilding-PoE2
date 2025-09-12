@@ -1011,8 +1011,8 @@ function calcs.perform(env, skipEHP)
 	output.WarcryPower = modDB:Override(nil, "WarcryPower") or modDB:Sum("BASE", nil, "WarcryPower") or 0
 	modDB.multipliers["WarcryPower"] = output.WarcryPower
 	
-	local minionTypeCount = 0
-	local minionType = { }
+	local minionTypeCount, ammoTypeCount, grenadeTypeCount = 0, 0, 0
+	local minionType, ammoType, grenadeType = { }, { }, { }
 	for _, activeSkill in ipairs(env.player.activeSkillList) do
 		local skillFlags
 		if env.mode == "CALCS" then
@@ -1087,6 +1087,16 @@ function calcs.perform(env, skipEHP)
 			minionType[activeSkill.activeEffect.grantedEffect.id] = true
 		end
 		env.modDB.multipliers["PersistentMinionTypes"] = minionTypeCount
+		if activeSkill.skillTypes[SkillType.CrossbowAmmoSkill] and not ammoType[activeSkill.activeEffect.grantedEffect.id] then
+			ammoTypeCount = ammoTypeCount + 1
+			ammoType[activeSkill.activeEffect.grantedEffect.id] = true
+		end
+		env.modDB.multipliers["AmmoTypes"] = ammoTypeCount
+		if activeSkill.skillTypes[SkillType.Grenade] and not grenadeType[activeSkill.activeEffect.grantedEffect.id] then
+			grenadeTypeCount = grenadeTypeCount + 1
+			grenadeType[activeSkill.activeEffect.grantedEffect.id] = true
+		end
+		env.modDB.multipliers["GrenadeTypes"] = grenadeTypeCount
 		if activeSkill.activeEffect.grantedEffect and activeSkill.skillTypes[SkillType.CreatesCompanion] then
 			modDB:NewMod("Condition:HaveCompanion", "FLAG", true, activeSkill.activeEffect.grantedEffect.name)
 		end
@@ -2937,6 +2947,7 @@ function calcs.perform(env, skipEHP)
 				end
 				min = min * (modDB:Sum("INC", nil, element.."ExposureEffect") / 100 + 1)
 				enemyDB:NewMod("Condition:Has"..element.."Exposure", "FLAG", true, "")
+				enemyDB:NewMod("Condition:HasExposure", "FLAG", true, "")
 				enemyDB:NewMod(element.."Resist", "BASE", m_min(min, modDB:Override(nil, "ExposureMin")), source)
 				modDB:NewMod("Condition:AppliedExposureRecently", "FLAG", true, "")
 			end
