@@ -52,6 +52,11 @@ local conquerorList = {
 	["vorana"]		=	{ id = 1, type = "kalguur" },
 	["medved"]		=	{ id = 2, type = "kalguur" },
 	["olroth"]		=	{ id = 3, type = "kalguur" },
+	["amanamu"]		=	{ id = 1, type = "abyss" },
+	["kulemak"]		=	{ id = 2, type = "abyss" },
+	["kurgal"]		=	{ id = 3, type = "abyss" },
+	["tecrod"]		=	{ id = 4, type = "abyss" },
+	["ulaman"]		=	{ id = 5, type = "abyss" },
 }
 -- List of modifier forms
 local formList = {
@@ -158,6 +163,7 @@ local modNameList = {
 	["attributes"] = { "Str", "Dex", "Int", "All" },
 	["all attributes"] = { "Str", "Dex", "Int", "All" },
 	["devotion"] = "Devotion",
+	["tribute"] = "Tribute",
 	-- Life/Mana/Spirit/Darkness
 	["maximum darkness"] = "Darkness",
 	["spirit"] = "Spirit",
@@ -1163,6 +1169,7 @@ local preFlagList = {
 	["^while a pinnacle atlas boss is in your presence, minions [hd][ae][va][el] "] = { addToMinion = true, playerTag = { type = "ActorCondition", actor = "enemy", var = "PinnacleBoss" } },
 	["^minions leech "] = { addToMinion = true },
 	["^minions' attacks deal "] = { addToMinion = true, flags = ModFlag.Attack },
+	["^undead minions [thd][ae][kva][el] "] = { addToMinion = true, addToMinionTag = { type = "SkillType", skillType = SkillType.CreatesUndeadMinion } },
 	["^golems [hd][ae][va][el] "] = { addToMinion = true, addToMinionTag = { type = "SkillType", skillType = SkillType.Golem } },
 	["^summoned golems [hd][ae][va][el] "] = { addToMinion = true, addToMinionTag = { type = "SkillType", skillType = SkillType.Golem } },
 	["^golem skills have "] = { tag = { type = "SkillType", skillType = SkillType.Golem } },
@@ -1472,6 +1479,7 @@ local modTagList = {
 	["for each (%d+) total mana y?o?u? ?h?a?v?e? ?spent recently"] = function(num) return { tag = { type = "Multiplier", var = "ManaSpentRecently", div = num } } end,
 	["for each (%d+) total mana you have spent recently, up to (%d+)%%"] = function(num, _, limit) return { tag = { type = "Multiplier", var = "ManaSpentRecently", div = num, limit = tonumber(limit), limitTotal = true } } end,
 	["per (%d+) mana spent recently, up to (%d+)%%"] = function(num, _, limit) return { tag = { type = "Multiplier", var = "ManaSpentRecently", div = num, limit = tonumber(limit), limitTotal = true } } end,
+	["per (%d+) life spent in the past 8 seconds"] = function(num) return { tag = { type = "Multiplier", var = "LifeSpentPast8s", div = num } } end,
 	["for each time you've blocked in the past 10 seconds"] = { tag = { type = "Multiplier", var =  "BlockedPast10Sec" } },
 	["per enemy killed by you or your totems recently"] = { tag = { type = "Multiplier", varList = { "EnemyKilledRecently","EnemyKilledByTotemsRecently" } } },
 	["per nearby enemy, up to %+?(%d+)%%"] = function(num) return { tag = { type = "Multiplier", var = "NearbyEnemies", limit = num, limitTotal = true } } end,
@@ -1550,6 +1558,7 @@ local modTagList = {
 	["per (%d+)%% (%a+) resistance"] = function(num, _, name) return { tag = { type = "PerStat", stat = firstToUpper(name).."Resist", div = num } } end,
 	["per (%d+)%% (%a+) resistance above 75%%"] = function(num, _, name) return { tag  = { type = "PerStat", stat = firstToUpper(name).."ResistOver75", div = num } } end,
 	["per (%d+) devotion"] = function(num) return { tag = { type = "PerStat", stat = "Devotion", actor = "parent", div = num } } end,
+	["per (%d+) tribute"] = function(num) return { tag = { type = "PerStat", stat = "Tribute", actor = "parent", div = num } } end,
 	["per (%d+)%% missing fire resistance, up to a maximum of (%d+)%%"] = function(num, _, limit) return { tag = { type = "PerStat", stat = "MissingFireResist", div = num, globalLimit = tonumber(limit), globalLimitKey = "ReplicaNebulisFire" } } end,
 	["per (%d+)%% missing cold resistance, up to a maximum of (%d+)%%"] = function(num, _, limit) return { tag = { type = "PerStat", stat = "MissingColdResist", div = num, globalLimit = tonumber(limit), globalLimitKey = "ReplicaNebulisCold" } } end,
 	["per endurance, frenzy or power charge"] = { tag = { type = "PerStat", stat = "TotalCharges" } },
@@ -1592,6 +1601,7 @@ local modTagList = {
 	["against pierced targets"] = { tag = { type = "StatThreshold", stat = "PierceCount", threshold = 1 } },
 	["to targets they pierce"] = { tag = { type = "StatThreshold", stat = "PierceCount", threshold = 1 } },
 	["w?h?i[lf]e? you have at least (%d+) devotion"] = function(num) return { tag = { type = "StatThreshold", stat = "Devotion", threshold = num } } end,
+	["w?h?i[lf]e? you have at least (%d+) tribute"] = function(num) return { tag = { type = "StatThreshold", stat = "Tribute", threshold = num } } end,
 	["while you have at least (%d+) rage"] = function(num) return { tag = { type = "MultiplierThreshold", var = "Rage", threshold = num } } end,
 	["while affected by a unique abyss jewel"] = { tag = { type = "MultiplierThreshold", var = "UniqueAbyssJewels", threshold = 1 } },
 	["while affected by a rare abyss jewel"] = { tag = { type = "MultiplierThreshold", var = "RareAbyssJewels", threshold = 1 } },
@@ -5111,6 +5121,10 @@ local specialModList = {
 	["eldritch battery during f?l?a?s?k? ?effect"] = { mod("Keystone", "LIST", "Eldritch Battery", { type = "Condition", var = "UsingFlask" }) },
 	["chaos damage t?a?k?e?n? ?does not bypass energy shield during effect"] = { flag("ChaosNotBypassEnergyShield") },
 	["when hit during effect, (%d+)%% of life loss from damage taken occurs over 4 seconds instead"] = function(num) return { mod("LifeLossPrevented", "BASE", num, { type = "Condition", var = "UsingFlask" }) } end,
+	["when taking damage from hits, (%d+)%% of life loss is prevented, then (%d+)%% of life loss prevented this way is lost over 4 seconds"] = function(prevented, _, lost) return {
+		mod("LifeLossPrevented", "BASE", prevented),
+		mod("LifeLossLost", "BASE", lost),
+	} end,
 	["y?o?u?r? ?skills [ch][oa][sv][te] no mana c?o?s?t? ?during f?l?a?s?k? ?effect"] = { mod("ManaCost", "MORE", -100, { type = "Condition", var = "UsingFlask" }) },
 	["life recovery from flasks also applies to energy shield during f?l?a?s?k? ?effect"] = { flag("LifeFlaskAppliesToEnergyShield", { type = "Condition", var = "UsingFlask" }) },
 	["consecrated ground created during effect applies (%d+)%% increased damage taken to enemies"] = function(num) return { mod("EnemyModifier", "LIST", { mod = mod("DamageTakenConsecratedGround", "INC", num, { type = "Condition", var = "OnConsecratedGround" }) }, { type = "Condition", var = "UsingFlask" }) } end,
@@ -5755,9 +5769,12 @@ local specialModList = {
 	["%+(%d+)%% to quality"] = function(num) return { mod("Quality", "BASE", num) } end,
 	["infernal blow debuff deals an additional (%d+)%% of damage per charge"] = function(num) return { mod("DebuffEffect", "BASE", num, { type = "SkillName", skillName = "Infernal Blow", includeTransfigured = true }) } end,
 	-- Legion modifiers
-	["remembrancing (%d+) songworthy deeds by the line of (.+)"] = function(num, _, name)
-		return { mod("JewelData", "LIST",
-			{ key = "conqueredBy", value = { id = num, conqueror = conquerorList[name:lower()] } }) } end,
+	["remembrancing (%d+) songworthy deeds by the line of (.+)"] = function(num, _, name) return {
+		mod("JewelData", "LIST", { key = "conqueredBy", value = { id = num, conqueror = conquerorList[name:lower()] } })
+	} end,
+	["glorifying the defilement of (%d+) souls in tribute to (.+)"] = function(num, _, name) return {
+		mod("JewelData", "LIST", { key = "conqueredBy", value = { id = num, conqueror = conquerorList[name:lower()] } })
+	} end,
 	["passives in radius are conquered by the (%D+)"] = { },
 	["historic"] = { },
 	-- Display-only modifiers
