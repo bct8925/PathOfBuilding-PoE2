@@ -223,7 +223,6 @@ skills["GasShotSkeletonSniperMinion"] = {
 			statDescriptionScope = "sniper_gas_shot_statset_2",
 			baseFlags = {
 				attack = true,
-				hit = true,
 				area = true,
 			},
 			constantStats = {
