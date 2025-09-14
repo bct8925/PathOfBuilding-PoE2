@@ -77,6 +77,7 @@
 - Fix incorrect radius on Explosive Spear [\#1286](https://github.com/PathOfBuildingCommunity/PathOfBuilding-PoE2/pull/1286) ([LocalIdentity](https://github.com/LocalIdentity))
 - Fix incorrect base types on Crown of Eyes and The Prisoner's Manacles [\#1292](https://github.com/PathOfBuildingCommunity/PathOfBuilding-PoE2/pull/1292) ([Wires77](https://github.com/Wires77))
 - Fix Heart of the Well modifier names [\#1276](https://github.com/PathOfBuildingCommunity/PathOfBuilding-PoE2/pull/1276) ([Blitz54](https://github.com/Blitz54))
+- Fix Flask mod list [\#1386](https://github.com/PathOfBuildingCommunity/PathOfBuilding-PoE2/pull/1386) ([Wires77](https://github.com/Wires77))
 - Update Constricting Command unique helmet mod [\#1338](https://github.com/PathOfBuildingCommunity/PathOfBuilding-PoE2/pull/1338) ([Wires77](https://github.com/Wires77))
 ### Other changes
 - Generate automatic changelogs for Beta releases [\#1363](https://github.com/PathOfBuildingCommunity/PathOfBuilding-PoE2/pull/1363) ([Musholic](https://github.com/Musholic))

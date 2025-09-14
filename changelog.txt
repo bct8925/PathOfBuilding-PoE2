@@ -79,6 +79,7 @@ VERSION[0.12.0][2025/09/14]
 * Fix incorrect radius on Explosive Spear (LocalIdentity)
 * Fix incorrect base types on Crown of Eyes and The Prisoner's Manacles (Wires77)
 * Fix Heart of the Well modifier names (Blitz54)
+* Fix Flask mod list (Wires77)
 * Update Constricting Command unique helmet mod (Wires77)
 
 --- Other changes ---
