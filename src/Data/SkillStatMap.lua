@@ -1211,6 +1211,9 @@ return {
 ["base_chance_to_shock_%"] = {
 	mod("EnemyShockChance", "BASE", nil),
 },
+["shock_chance_+%"] = {
+	mod("EnemyShockChance", "INC", nil),
+},
 ["active_skill_shock_chance_+%_final"] = {
 	mod("EnemyShockChance", "MORE", nil),
 },
