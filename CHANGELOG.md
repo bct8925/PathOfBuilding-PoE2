@@ -1,6 +1,6 @@
 # Changelog
 
-## [v0.12.0](https://github.com/PathOfBuildingCommunity/PathOfBuilding-PoE2/tree/v0.12.0) (2025/09/15)
+## [v0.12.0](https://github.com/PathOfBuildingCommunity/PathOfBuilding-PoE2/tree/v0.12.0) (2025/09/14)
 
 [Full Changelog](https://github.com/PathOfBuildingCommunity/PathOfBuilding-PoE2/compare/v0.11.2...v0.12.0)
 
