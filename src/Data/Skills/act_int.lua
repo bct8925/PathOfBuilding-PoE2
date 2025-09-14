@@ -6964,15 +6964,15 @@ skills["FeastOfFleshPlayer"] = {
 			},
 			constantStats = {
 				{ "active_skill_base_area_of_effect_radius", 40 },
-				{ "feast_of_flesh_regeneration_duration", 3000 },
+				{ "feast_of_flesh_recovery_duration", 3000 },
 				{ "feast_of_flesh_number_of_corpses", 5 },
 				{ "movement_speed_+%_final_while_performing_action", -70 },
 				{ "movement_speed_acceleration_+%_per_second_while_performing_action", 160 },
 				{ "movement_speed_while_performing_action_locked_duration_%", 50 },
 			},
 			stats = {
-				"base_life_recovery_per_minute",
-				"base_mana_recovery_per_minute",
+				"feast_of_flesh_recover_X_life_per_corpse_consumed",
+				"feast_of_flesh_recover_X_mana_per_corpse_consumed",
 				"base_deal_no_spell_damage",
 				"can_perform_skill_while_moving",
 			},
@@ -8622,6 +8622,7 @@ skills["TriggeredFreezingMarkNovaPlayer"] = {
 			statDescriptionScope = "freezing_mark_nova",
 			baseFlags = {
 				nonWeaponAttack = true,
+				area = true,
 			},
 			constantStats = {
 				{ "active_skill_base_area_of_effect_radius", 26 },
@@ -8634,6 +8635,7 @@ skills["TriggeredFreezingMarkNovaPlayer"] = {
 				"replace_main_hand_unarmed_attack_stats_with_nothing_type",
 				"display_statset_hide_usage_stats",
 				"triggerable_in_any_set",
+				"is_area_damage",
 			},
 			levels = {
 				[1] = { 6, 9, statInterpolation = { 1, 1, }, actorLevel = 1, },
@@ -11971,7 +11973,7 @@ skills["ScatteringCalamityPlayer"] = {
 			},
 			constantStats = {
 				{ "base_skill_effect_duration", 700 },
-				{ "blazing_cluster_delay_between_projectiles_ms", 1200 },
+				{ "base_secondary_skill_effect_duration", 1200 },
 				{ "movement_speed_+%_final_while_performing_action", -70 },
 				{ "movement_speed_acceleration_+%_per_second_while_performing_action", 160 },
 				{ "movement_speed_while_performing_action_locked_duration_%", 50 },
@@ -12045,7 +12047,7 @@ skills["ScatteringCalamityPlayer"] = {
 				projectile = true,
 			},
 			constantStats = {
-				{ "blazing_cluster_delay_between_projectiles_ms", 1200 },
+				{ "base_secondary_skill_effect_duration", 1200 },
 				{ "movement_speed_+%_final_while_performing_action", -70 },
 				{ "movement_speed_acceleration_+%_per_second_while_performing_action", 160 },
 				{ "movement_speed_while_performing_action_locked_duration_%", 50 },
@@ -15189,7 +15191,7 @@ skills["OrbOfStormsPlayer"] = {
 	baseTypeName = "Orb of Storms",
 	color = 3,
 	description = "Create an Orb of electricity that fires Chaining Lightning bolts at nearby enemies. The Orb leaves behind a Lightning Infusion Remnant when it expires.",
-	skillTypes = { [SkillType.Spell] = true, [SkillType.Damage] = true, [SkillType.Lightning] = true, [SkillType.Area] = true, [SkillType.Chains] = true, [SkillType.Triggerable] = true, [SkillType.Trappable] = true, [SkillType.Mineable] = true, [SkillType.Totemable] = true, [SkillType.AreaSpell] = true, [SkillType.Orb] = true, [SkillType.UsableWhileMoving] = true, [SkillType.Limit] = true, [SkillType.Duration] = true, [SkillType.Sustained] = true, [SkillType.NoAttackInPlace] = true, [SkillType.GeneratesInfusion] = true, [SkillType.GeneratesRemnants] = true, },
+	skillTypes = { [SkillType.Spell] = true, [SkillType.Damage] = true, [SkillType.Lightning] = true, [SkillType.Area] = true, [SkillType.Chains] = true, [SkillType.Triggerable] = true, [SkillType.Trappable] = true, [SkillType.Mineable] = true, [SkillType.Totemable] = true, [SkillType.AreaSpell] = true, [SkillType.Orb] = true, [SkillType.UsableWhileMoving] = true, [SkillType.Limit] = true, [SkillType.Duration] = true, [SkillType.Sustained] = true, [SkillType.NoAttackInPlace] = true, [SkillType.GeneratesInfusion] = true, [SkillType.GeneratesRemnants] = true, [SkillType.Unleashable] = true, },
 	castTime = 0.8,
 	qualityStats = {
 		{ "number_of_chains", 0.15 },
@@ -18846,7 +18848,7 @@ skills["SolarOrbPlayer"] = {
 	baseTypeName = "Solar Orb",
 	color = 3,
 	description = "Create a fiery Orb that periodically releases fiery pulses. Enemies that are very close to the Orb are Ignited. Flameblast can target a Solar Orb to be centred on the Orb instead of your location.",
-	skillTypes = { [SkillType.Spell] = true, [SkillType.Damage] = true, [SkillType.Fire] = true, [SkillType.Area] = true, [SkillType.Triggerable] = true, [SkillType.Trappable] = true, [SkillType.Mineable] = true, [SkillType.Totemable] = true, [SkillType.AreaSpell] = true, [SkillType.Orb] = true, [SkillType.Duration] = true, [SkillType.UsableWhileMoving] = true, [SkillType.Limit] = true, [SkillType.Sustained] = true, [SkillType.NoAttackInPlace] = true, },
+	skillTypes = { [SkillType.Spell] = true, [SkillType.Damage] = true, [SkillType.Fire] = true, [SkillType.Area] = true, [SkillType.Triggerable] = true, [SkillType.Trappable] = true, [SkillType.Mineable] = true, [SkillType.Totemable] = true, [SkillType.AreaSpell] = true, [SkillType.Orb] = true, [SkillType.Duration] = true, [SkillType.UsableWhileMoving] = true, [SkillType.Limit] = true, [SkillType.Sustained] = true, [SkillType.NoAttackInPlace] = true, [SkillType.Unleashable] = true, },
 	castTime = 0.8,
 	qualityStats = {
 		{ "active_skill_damage_+%_final_vs_burning_enemies", 1 },

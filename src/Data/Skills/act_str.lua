@@ -1146,7 +1146,7 @@ skills["BerserkPlayer"] = {
 	skillTypes = { [SkillType.OngoingSkill] = true, [SkillType.HasReservation] = true, [SkillType.Buff] = true, [SkillType.Persistent] = true, },
 	castTime = 1,
 	qualityStats = {
-		{ "rage_effect_+%", 0.5 },
+		{ "skill_base_rage_effect_+%_to_apply", 0.5 },
 	},
 	levels = {
 		[1] = { spiritReservationFlat = 30, levelRequirement = 0, },
@@ -1196,7 +1196,7 @@ skills["BerserkPlayer"] = {
 			incrementalEffectiveness = 0.054999999701977,
 			statDescriptionScope = "berserk",
 			statMap = {
-				["life_loss_%_per_minute_per_rage_while_not_losing_rage"] = {
+				["skill_base_life_loss_%_per_minute_per_rage_while_not_losing_rage_to_apply"] = {
 					mod("LifeDegen", "BASE", nil, 0, 0, { type = "GlobalEffect", effectType = "Buff" }, { type = "Multiplier", var = "RageEffect" }),
 					div = 60
 				},
@@ -1211,11 +1211,10 @@ skills["BerserkPlayer"] = {
 			baseFlags = {
 			},
 			constantStats = {
-				{ "life_loss_%_per_minute_per_rage_while_not_losing_rage", 6 },
-				{ "rage_art_variation", 2 },
+				{ "skill_base_life_loss_%_per_minute_per_rage_while_not_losing_rage_to_apply", 6 },
 			},
 			stats = {
-				"rage_effect_+%",
+				"skill_base_rage_effect_+%_to_apply",
 			},
 			levels = {
 				[1] = { 40, statInterpolation = { 1, }, actorLevel = 1, },
@@ -2659,6 +2658,7 @@ skills["DefianceBannerReservationPlayer"] = {
 	skillTypes = { [SkillType.OngoingSkill] = true, [SkillType.HasReservation] = true, [SkillType.Buff] = true, [SkillType.Persistent] = true, [SkillType.CanHaveMultipleOngoingSkillInstances] = true, [SkillType.Area] = true, [SkillType.Duration] = true, [SkillType.Banner] = true, [SkillType.NoAttackInPlace] = true, },
 	castTime = 1,
 	qualityStats = {
+		{ "base_reservation_efficiency_+%", 0.5 },
 	},
 	levels = {
 		[1] = { spiritReservationFlat = 30, levelRequirement = 0, },
@@ -2763,7 +2763,6 @@ skills["DefianceBannerPlayer"] = {
 	skillTypes = { [SkillType.Banner] = true, [SkillType.Area] = true, [SkillType.Duration] = true, [SkillType.UsableWhileMoving] = true, [SkillType.Buff] = true, [SkillType.Aura] = true, [SkillType.NoAttackInPlace] = true, [SkillType.HasUsageCondition] = true, },
 	castTime = 0.5,
 	qualityStats = {
-		{ "base_reservation_efficiency_+%", 0.5 },
 	},
 	levels = {
 		[1] = { levelRequirement = 0, },
@@ -2896,6 +2895,7 @@ skills["DreadBannerReservationPlayer"] = {
 	skillTypes = { [SkillType.OngoingSkill] = true, [SkillType.HasReservation] = true, [SkillType.Buff] = true, [SkillType.Persistent] = true, [SkillType.CanHaveMultipleOngoingSkillInstances] = true, [SkillType.Area] = true, [SkillType.Duration] = true, [SkillType.Banner] = true, [SkillType.NoAttackInPlace] = true, },
 	castTime = 1,
 	qualityStats = {
+		{ "base_reservation_efficiency_+%", 0.5 },
 	},
 	levels = {
 		[1] = { spiritReservationFlat = 30, levelRequirement = 0, },
@@ -3000,7 +3000,6 @@ skills["DreadBannerPlayer"] = {
 	skillTypes = { [SkillType.Banner] = true, [SkillType.Area] = true, [SkillType.Duration] = true, [SkillType.UsableWhileMoving] = true, [SkillType.Buff] = true, [SkillType.Aura] = true, [SkillType.NoAttackInPlace] = true, [SkillType.HasUsageCondition] = true, },
 	castTime = 0.5,
 	qualityStats = {
-		{ "base_reservation_efficiency_+%", 0.5 },
 	},
 	levels = {
 		[1] = { levelRequirement = 0, },
@@ -10646,7 +10645,7 @@ skills["MagmaBarrierPlayer"] = {
 	baseTypeName = "Magma Barrier",
 	color = 1,
 	description = "While active, increases your Block Chance passively and imbues your Shield with lava over time. When fully imbued, your next Block with your Shield raised will expend the lava to create an explosion, granting you an Endurance Charge.",
-	skillTypes = { [SkillType.Buff] = true, [SkillType.OngoingSkill] = true, [SkillType.HasReservation] = true, [SkillType.Fire] = true, [SkillType.Duration] = true, [SkillType.Persistent] = true, [SkillType.GeneratesCharges] = true, [SkillType.NoAttackInPlace] = true, },
+	skillTypes = { [SkillType.Buff] = true, [SkillType.OngoingSkill] = true, [SkillType.HasReservation] = true, [SkillType.Fire] = true, [SkillType.Persistent] = true, [SkillType.GeneratesCharges] = true, [SkillType.NoAttackInPlace] = true, },
 	castTime = 0,
 	qualityStats = {
 		{ "skill_igneous_shield_grants_block_chance_+%", 0.25 },
@@ -10828,6 +10827,7 @@ skills["MagmaSprayPlayer"] = {
 				"off_hand_maximum_added_fire_damage_per_15_shield_evasion",
 				"base_skill_show_average_damage_instead_of_dps",
 				"display_statset_hide_usage_stats",
+				"is_area_damage",
 			},
 			levels = {
 				[1] = { 4, 6, 6, 8, 6, 8, statInterpolation = { 1, 1, 1, 1, 1, 1, }, actorLevel = 1, },
@@ -15056,6 +15056,7 @@ skills["WarBannerReservationPlayer"] = {
 	skillTypes = { [SkillType.OngoingSkill] = true, [SkillType.HasReservation] = true, [SkillType.Buff] = true, [SkillType.Persistent] = true, [SkillType.CanHaveMultipleOngoingSkillInstances] = true, [SkillType.Area] = true, [SkillType.Duration] = true, [SkillType.Banner] = true, [SkillType.NoAttackInPlace] = true, },
 	castTime = 1,
 	qualityStats = {
+		{ "base_reservation_efficiency_+%", 0.5 },
 	},
 	levels = {
 		[1] = { spiritReservationFlat = 30, levelRequirement = 0, },
@@ -15160,7 +15161,6 @@ skills["WarBannerPlayer"] = {
 	skillTypes = { [SkillType.Banner] = true, [SkillType.Area] = true, [SkillType.Duration] = true, [SkillType.UsableWhileMoving] = true, [SkillType.Buff] = true, [SkillType.Aura] = true, [SkillType.NoAttackInPlace] = true, [SkillType.HasUsageCondition] = true, },
 	castTime = 0.5,
 	qualityStats = {
-		{ "base_reservation_efficiency_+%", 0.5 },
 	},
 	levels = {
 		[1] = { levelRequirement = 0, },

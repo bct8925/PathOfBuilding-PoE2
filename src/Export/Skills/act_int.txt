@@ -553,7 +553,7 @@ statMap = {
 
 #skill TriggeredFreezingMarkNovaPlayer
 #set TriggeredFreezingMarkNovaPlayer
-#flags nonWeaponAttack
+#flags nonWeaponAttack area
 #mods
 #skillEnd
 

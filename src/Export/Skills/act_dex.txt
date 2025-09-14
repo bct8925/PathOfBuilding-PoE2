@@ -71,7 +71,7 @@ statMap = {
 
 #skill BloodhoundsMarkExplosionPlayer
 #set BloodhoundsMarkExplosionPlayer
-#flags nonWeaponAttack
+#flags nonWeaponAttack area
 #mods
 #skillEnd
 
@@ -241,7 +241,7 @@ statMap = {
 #set HeraldOfPlaguePlayer
 #flags
 statMap = {
-	["herald_of_agony_poison_on_enemies_you_kill_spread_to_enemies_within_x"] = {
+	["herald_of_agony_poison_spread_on_kill_radius_base_magnitude_to_grant"] = {
 		mod("PoisonProlifRange", "BASE", nil, 0, 0, { type = "GlobalEffect", effectType = "Buff", effectName = "Herald of Plague" }),
 	},
 },
@@ -610,7 +610,7 @@ statMap = {
 #flags attack projectile area
 #mods
 #set ToxicGrowthBurstPlayer
-#flags attack projectile
+#flags attack projectile area
 #mods
 #skillEnd
 
@@ -672,7 +672,7 @@ statMap = {
 
 #skill TriggeredVoltaicMarkNovaPlayer
 #set TriggeredVoltaicMarkNovaPlayer
-#flags nonWeaponAttack
+#flags nonWeaponAttack area
 #mods
 #skillEnd
 
@@ -706,7 +706,7 @@ statMap = {
 #flags attack projectile
 #mods
 #set WhirlwindLanceStormPlayer
-#flags attack duration melee
+#flags attack duration melee area
 statMap = {
 	["sandstorm_swipe_storm_damage_+%_final_per_stage"] = {
 		mod("Damage", "MORE", nil, 0, 0, { type = "Multiplier", var = "WhirlwindStageAfterFirst", limit = 3 })
