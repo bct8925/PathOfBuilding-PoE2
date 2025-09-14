@@ -12,7 +12,7 @@ sed -i -re 's/\*\*Full Changelog\*\*: (.*)/\[Full Changelog\]\(\1\)\n/' temp_cha
 sed -i '/## New Contributors/,$d' temp_change.md
 # Convert GitHub changelog entries from "* description by @username in pull/URL/number"
 # to "- description [#number](pull/URL/number) ([username](https://github.com/username))" format
-sed -i -re 's/^\*(.*)\sby\s@(.*)\sin\s(.*\/pull\/)(.*)/-\1 [\\#\4](\3\4) ([\2](https:\/\/github.com\/\2))/' temp_change.md
+sed -i -re 's/^\*(.*)\sby\s@(.*)\sin\s(.*\/pull\/)(.*)\r?/-\1 [\\#\4](\3\4) ([\2](https:\/\/github.com\/\2))/' temp_change.md;
 # Username substitutions for preferred display names
 sed -i 's/\[Quotae/\[Quote_a/' temp_change.md
 sed -i 's/\[learn2draw/\[Lexy/' temp_change.md
