@@ -521,6 +521,8 @@ skills["SupportAncestralWarriorTotemPlayer"] = {
 		["One Handed Axe"] = true,
 		["One Handed Sword"] = true,
 	},
+	qualityStats = {
+	},
 	levels = {
 		[1] = { levelRequirement = 0, },
 		[2] = { levelRequirement = 0, },
@@ -1144,7 +1146,7 @@ skills["BerserkPlayer"] = {
 	skillTypes = { [SkillType.OngoingSkill] = true, [SkillType.HasReservation] = true, [SkillType.Buff] = true, [SkillType.Persistent] = true, },
 	castTime = 1,
 	qualityStats = {
-		{ "rage_effect_+%", 0.5 },
+		{ "skill_base_rage_effect_+%_to_apply", 0.5 },
 	},
 	levels = {
 		[1] = { spiritReservationFlat = 30, levelRequirement = 0, },
@@ -1194,7 +1196,7 @@ skills["BerserkPlayer"] = {
 			incrementalEffectiveness = 0.054999999701977,
 			statDescriptionScope = "berserk",
 			statMap = {
-				["life_loss_%_per_minute_per_rage_while_not_losing_rage"] = {
+				["skill_base_life_loss_%_per_minute_per_rage_while_not_losing_rage_to_apply"] = {
 					mod("LifeDegen", "BASE", nil, 0, 0, { type = "GlobalEffect", effectType = "Buff" }, { type = "Multiplier", var = "RageEffect" }),
 					div = 60
 				},
@@ -1209,11 +1211,10 @@ skills["BerserkPlayer"] = {
 			baseFlags = {
 			},
 			constantStats = {
-				{ "life_loss_%_per_minute_per_rage_while_not_losing_rage", 6 },
-				{ "rage_art_variation", 2 },
+				{ "skill_base_life_loss_%_per_minute_per_rage_while_not_losing_rage_to_apply", 6 },
 			},
 			stats = {
-				"rage_effect_+%",
+				"skill_base_rage_effect_+%_to_apply",
 			},
 			levels = {
 				[1] = { 40, statInterpolation = { 1, }, actorLevel = 1, },
@@ -1810,6 +1811,8 @@ skills["SupportMetaCastOnBlockPlayer"] = {
 	addSkillTypes = { SkillType.Triggered, SkillType.Cooldown, },
 	excludeSkillTypes = { SkillType.SupportedByHourglass, },
 	isTrigger = true,
+	qualityStats = {
+	},
 	levels = {
 		[1] = { levelRequirement = 0, },
 		[2] = { levelRequirement = 0, },
@@ -1954,6 +1957,8 @@ skills["SupportMetaCastOnMeleeKillPlayer"] = {
 	addSkillTypes = { SkillType.Triggered, SkillType.Cooldown, },
 	excludeSkillTypes = { SkillType.SupportedByHourglass, },
 	isTrigger = true,
+	qualityStats = {
+	},
 	levels = {
 		[8] = { storedUses = 1, levelRequirement = 0, cooldown = 0.2, },
 	},
@@ -2022,6 +2027,8 @@ skills["SupportMetaCastOnMeleeStunPlayer"] = {
 	addSkillTypes = { SkillType.Triggered, SkillType.Cooldown, },
 	excludeSkillTypes = { SkillType.SupportedByHourglass, },
 	isTrigger = true,
+	qualityStats = {
+	},
 	levels = {
 		[8] = { storedUses = 1, levelRequirement = 0, cooldown = 0.2, },
 	},
@@ -2348,7 +2355,7 @@ skills["CrossbowRequiemAmmoPlayer"] = {
 				"display_statset_hide_usage_stats",
 				"crossbow_ammo_skill_does_not_transition",
 				"crossbow_ammo_has_no_ammo",
-				"skill_is_instant_while_sprinting",
+				"can_be_used_instantly_in_any_set",
 			},
 			levels = {
 				[1] = { actorLevel = 1, },
@@ -2456,6 +2463,7 @@ skills["CrossbowRequiemPlayer"] = {
 			incrementalEffectiveness = 0.054999999701977,
 			statDescriptionScope = "rapid_shot_requiem",
 			baseFlags = {
+				attack = true,
 				projectile = true,
 				area = true,
 			},
@@ -2650,6 +2658,7 @@ skills["DefianceBannerReservationPlayer"] = {
 	skillTypes = { [SkillType.OngoingSkill] = true, [SkillType.HasReservation] = true, [SkillType.Buff] = true, [SkillType.Persistent] = true, [SkillType.CanHaveMultipleOngoingSkillInstances] = true, [SkillType.Area] = true, [SkillType.Duration] = true, [SkillType.Banner] = true, [SkillType.NoAttackInPlace] = true, },
 	castTime = 1,
 	qualityStats = {
+		{ "base_reservation_efficiency_+%", 0.5 },
 	},
 	levels = {
 		[1] = { spiritReservationFlat = 30, levelRequirement = 0, },
@@ -2754,7 +2763,6 @@ skills["DefianceBannerPlayer"] = {
 	skillTypes = { [SkillType.Banner] = true, [SkillType.Area] = true, [SkillType.Duration] = true, [SkillType.UsableWhileMoving] = true, [SkillType.Buff] = true, [SkillType.Aura] = true, [SkillType.NoAttackInPlace] = true, [SkillType.HasUsageCondition] = true, },
 	castTime = 0.5,
 	qualityStats = {
-		{ "base_reservation_efficiency_+%", 0.5 },
 	},
 	levels = {
 		[1] = { levelRequirement = 0, },
@@ -2887,6 +2895,7 @@ skills["DreadBannerReservationPlayer"] = {
 	skillTypes = { [SkillType.OngoingSkill] = true, [SkillType.HasReservation] = true, [SkillType.Buff] = true, [SkillType.Persistent] = true, [SkillType.CanHaveMultipleOngoingSkillInstances] = true, [SkillType.Area] = true, [SkillType.Duration] = true, [SkillType.Banner] = true, [SkillType.NoAttackInPlace] = true, },
 	castTime = 1,
 	qualityStats = {
+		{ "base_reservation_efficiency_+%", 0.5 },
 	},
 	levels = {
 		[1] = { spiritReservationFlat = 30, levelRequirement = 0, },
@@ -2991,7 +3000,6 @@ skills["DreadBannerPlayer"] = {
 	skillTypes = { [SkillType.Banner] = true, [SkillType.Area] = true, [SkillType.Duration] = true, [SkillType.UsableWhileMoving] = true, [SkillType.Buff] = true, [SkillType.Aura] = true, [SkillType.NoAttackInPlace] = true, [SkillType.HasUsageCondition] = true, },
 	castTime = 0.5,
 	qualityStats = {
-		{ "base_reservation_efficiency_+%", 0.5 },
 	},
 	levels = {
 		[1] = { levelRequirement = 0, },
@@ -3588,8 +3596,7 @@ skills["EmergencyReloadPlayer"] = {
 			},
 			stats = {
 				"emergency_reload_damage_+%_final",
-				"base_skill_is_instant",
-				"triggerable_in_any_set",
+				"can_be_used_instantly_in_any_set",
 				"action_can_be_used_in_aiming_stance",
 				"action_can_be_used_in_upward_aiming_stance",
 				"base_deal_no_damage",
@@ -4322,6 +4329,7 @@ skills["FortifyingCryShockwavePlayer"] = {
 				"attack_is_melee_override",
 				"skill_triggered_manually_by_other_skill",
 				"triggerable_in_any_set",
+				"is_area_damage",
 			},
 			notMinionStat = {
 				"off_hand_weapon_minimum_physical_damage",
@@ -5244,6 +5252,11 @@ skills["HeraldOfBloodPlayer"] = {
 			label = "Buff",
 			incrementalEffectiveness = 0.054999999701977,
 			statDescriptionScope = "herald_of_blood",
+			statMap = {
+				["display_herald_of_blood_behaviour"] = {
+					flag("Condition:EnemiesExplode", { type = "GlobalEffect", effectType = "Buff", effectName = "Herald of Blood" } ),
+				},
+			},
 			baseFlags = {
 			},
 			stats = {
@@ -5373,7 +5386,7 @@ skills["InfernalCryPlayer"] = {
 	name = "Infernal Cry",
 	baseTypeName = "Infernal Cry",
 	color = 1,
-	description = "Perform a Warcry, Empowering subsequent Attacks if there are enemies nearby. Enemies in the warcry's area are destabilised and will Combust on death. This Skill's cooldown can be bypassed by expending an Endurance Charge.",
+	description = "Perform a Warcry, Empowering subsequent Melee Attacks if there are enemies nearby. Enemies in the warcry's area are destabilised and will Combust on death. This Skill's cooldown can be bypassed by expending an Endurance Charge.",
 	skillTypes = { [SkillType.Warcry] = true, [SkillType.Area] = true, [SkillType.Duration] = true, [SkillType.Fire] = true, [SkillType.Cooldown] = true, [SkillType.ConsumesCharges] = true, [SkillType.EmpowersOtherSkill] = true, [SkillType.UsableWhileMoving] = true, [SkillType.SkillConsumesEnduranceChargesOnUse] = true, [SkillType.NoAttackInPlace] = true, [SkillType.Nova] = true, },
 	castTime = 0.8,
 	qualityStats = {
@@ -6044,7 +6057,7 @@ skills["ArmourPiercingBoltsAmmoPlayer"] = {
 				"can_perform_skill_while_moving",
 				"base_deal_no_damage",
 				"display_statset_hide_usage_stats",
-				"skill_is_instant_while_sprinting",
+				"can_be_used_instantly_in_any_set",
 			},
 			levels = {
 				[1] = { 12, statInterpolation = { 1, }, actorLevel = 1, },
@@ -6297,7 +6310,7 @@ skills["ExplosiveShotAmmoPlayer"] = {
 				"can_perform_skill_while_moving",
 				"base_deal_no_damage",
 				"display_statset_hide_usage_stats",
-				"skill_is_instant_while_sprinting",
+				"can_be_used_instantly_in_any_set",
 			},
 			levels = {
 				[1] = { actorLevel = 1, },
@@ -6632,7 +6645,7 @@ skills["FragmentationRoundsAmmoPlayer"] = {
 				"can_perform_skill_while_moving",
 				"base_deal_no_damage",
 				"display_statset_hide_usage_stats",
-				"skill_is_instant_while_sprinting",
+				"can_be_used_instantly_in_any_set",
 			},
 			levels = {
 				[1] = { actorLevel = 1, },
@@ -6979,7 +6992,7 @@ skills["GalvanicShardsAmmoPlayer"] = {
 				"base_deal_no_damage",
 				"display_statset_hide_usage_stats",
 				"quality_display_base_number_of_crossbow_bolts_is_gem",
-				"skill_is_instant_while_sprinting",
+				"can_be_used_instantly_in_any_set",
 			},
 			levels = {
 				[1] = { actorLevel = 1, },
@@ -7314,7 +7327,7 @@ skills["GlacialBoltAmmoPlayer"] = {
 				"can_perform_skill_while_moving",
 				"base_deal_no_damage",
 				"display_statset_hide_usage_stats",
-				"skill_is_instant_while_sprinting",
+				"can_be_used_instantly_in_any_set",
 			},
 			levels = {
 				[1] = { actorLevel = 1, },
@@ -7662,7 +7675,7 @@ skills["HailstormRoundsAmmoPlayer"] = {
 				"crossbow_ammo_skill_has_passive_reloading",
 				"display_statset_hide_usage_stats",
 				"quality_display_base_number_of_crossbow_bolts_is_gem",
-				"skill_is_instant_while_sprinting",
+				"can_be_used_instantly_in_any_set",
 			},
 			levels = {
 				[1] = { 16, statInterpolation = { 1, }, actorLevel = 1, },
@@ -7908,7 +7921,7 @@ skills["HighVelocityRoundsAmmoPlayer"] = {
 				"can_perform_skill_while_moving",
 				"base_deal_no_damage",
 				"display_statset_hide_usage_stats",
-				"skill_is_instant_while_sprinting",
+				"can_be_used_instantly_in_any_set",
 			},
 			levels = {
 				[1] = { actorLevel = 1, },
@@ -8250,7 +8263,7 @@ skills["IceShardsAmmoPlayer"] = {
 				"can_perform_skill_while_moving",
 				"base_deal_no_damage",
 				"display_statset_hide_usage_stats",
-				"skill_is_instant_while_sprinting",
+				"can_be_used_instantly_in_any_set",
 			},
 			levels = {
 				[1] = { actorLevel = 1, },
@@ -8596,7 +8609,7 @@ skills["IncendiaryShotAmmoPlayer"] = {
 				"can_perform_skill_while_moving",
 				"base_deal_no_damage",
 				"display_statset_hide_usage_stats",
-				"skill_is_instant_while_sprinting",
+				"can_be_used_instantly_in_any_set",
 			},
 			levels = {
 				[1] = { actorLevel = 1, },
@@ -8860,7 +8873,7 @@ skills["PermafrostBoltsAmmoPlayer"] = {
 				"can_perform_skill_while_moving",
 				"base_deal_no_damage",
 				"display_statset_hide_usage_stats",
-				"skill_is_instant_while_sprinting",
+				"can_be_used_instantly_in_any_set",
 			},
 			levels = {
 				[1] = { actorLevel = 1, },
@@ -9118,7 +9131,7 @@ skills["PlasmaBlastAmmoPlayer"] = {
 				"base_deal_no_damage",
 				"display_statset_hide_usage_stats",
 				"quality_display_base_number_of_crossbow_bolts_is_gem",
-				"skill_is_instant_while_sprinting",
+				"can_be_used_instantly_in_any_set",
 			},
 			levels = {
 				[1] = { actorLevel = 1, },
@@ -9219,6 +9232,9 @@ skills["PlasmaBlastPlayer"] = {
 		[39] = { baseMultiplier = 139.44, levelRequirement = 0, },
 		[40] = { baseMultiplier = 150.22, levelRequirement = 0, },
 	},
+			preDamageFunc = function(activeSkill, output)
+				activeSkill.skillData.channelTimeMultiplier = 1
+			end,
 	statSets = {
 		[1] = {
 			label = "Projectile",
@@ -9452,7 +9468,7 @@ skills["RapidShotAmmoPlayer"] = {
 				"base_deal_no_damage",
 				"display_statset_hide_usage_stats",
 				"quality_display_base_number_of_crossbow_bolts_is_gem",
-				"skill_is_instant_while_sprinting",
+				"can_be_used_instantly_in_any_set",
 			},
 			levels = {
 				[1] = { actorLevel = 1, },
@@ -9709,7 +9725,7 @@ skills["ShockburstRoundsAmmoPlayer"] = {
 				"base_deal_no_damage",
 				"display_statset_hide_usage_stats",
 				"quality_display_base_number_of_crossbow_bolts_is_gem",
-				"skill_is_instant_while_sprinting",
+				"can_be_used_instantly_in_any_set",
 			},
 			levels = {
 				[1] = { 10, statInterpolation = { 1, }, actorLevel = 1, },
@@ -10044,7 +10060,7 @@ skills["SiegeCascadeAmmoPlayer"] = {
 				"can_perform_skill_while_moving",
 				"base_deal_no_damage",
 				"display_statset_hide_usage_stats",
-				"skill_is_instant_while_sprinting",
+				"can_be_used_instantly_in_any_set",
 			},
 			levels = {
 				[1] = { actorLevel = 1, },
@@ -10375,7 +10391,7 @@ skills["StormblastBoltsAmmoPlayer"] = {
 				"base_deal_no_damage",
 				"display_statset_hide_usage_stats",
 				"quality_display_base_number_of_crossbow_bolts_is_gem",
-				"skill_is_instant_while_sprinting",
+				"can_be_used_instantly_in_any_set",
 			},
 			levels = {
 				[1] = { actorLevel = 1, },
@@ -10629,7 +10645,7 @@ skills["MagmaBarrierPlayer"] = {
 	baseTypeName = "Magma Barrier",
 	color = 1,
 	description = "While active, increases your Block Chance passively and imbues your Shield with lava over time. When fully imbued, your next Block with your Shield raised will expend the lava to create an explosion, granting you an Endurance Charge.",
-	skillTypes = { [SkillType.Buff] = true, [SkillType.OngoingSkill] = true, [SkillType.HasReservation] = true, [SkillType.Fire] = true, [SkillType.Duration] = true, [SkillType.Persistent] = true, [SkillType.GeneratesCharges] = true, [SkillType.NoAttackInPlace] = true, },
+	skillTypes = { [SkillType.Buff] = true, [SkillType.OngoingSkill] = true, [SkillType.HasReservation] = true, [SkillType.Fire] = true, [SkillType.Persistent] = true, [SkillType.GeneratesCharges] = true, [SkillType.NoAttackInPlace] = true, },
 	castTime = 0,
 	qualityStats = {
 		{ "skill_igneous_shield_grants_block_chance_+%", 0.25 },
@@ -10811,6 +10827,7 @@ skills["MagmaSprayPlayer"] = {
 				"off_hand_maximum_added_fire_damage_per_15_shield_evasion",
 				"base_skill_show_average_damage_instead_of_dps",
 				"display_statset_hide_usage_stats",
+				"is_area_damage",
 			},
 			levels = {
 				[1] = { 4, 6, 6, 8, 6, 8, statInterpolation = { 1, 1, 1, 1, 1, 1, }, actorLevel = 1, },
@@ -11195,6 +11212,8 @@ skills["SupportMortarCannonPlayer"] = {
 	requireSkillTypes = { SkillType.Grenade, },
 	addSkillTypes = { SkillType.UsedByTotem, },
 	excludeSkillTypes = { SkillType.Meta, SkillType.Triggered, SkillType.Channel, SkillType.Persistent, },
+	qualityStats = {
+	},
 	levels = {
 		[1] = { levelRequirement = 0, },
 		[2] = { levelRequirement = 0, },
@@ -11623,6 +11642,7 @@ skills["PerfectStrikePlayer"] = {
 	},
 			preDamageFunc = function(activeSkill, output)
 				activeSkill.skillData.hitTimeMultiplier = activeSkill.skillData.channelPercentOfAttackTime
+				activeSkill.skillData.channelTimeMultiplier = activeSkill.skillData.channelPercentOfAttackTime
 			end,
 	statSets = {
 		[1] = {
@@ -11846,6 +11866,7 @@ skills["ResonatingShieldPlayer"] = {
 				"attack_speed_modifiers_apply_to_over_time_cost",
 				"cannot_be_empowered_by_warcries",
 				"replace_off_hand_unarmed_attack_stats_with_shield_type",
+				"is_area_damage",
 			},
 			notMinionStat = {
 				"off_hand_weapon_minimum_physical_damage",
@@ -12814,6 +12835,7 @@ skills["ShieldWallPlayer"] = {
 				attack = true,
 				shieldAttack = true,
 				melee = true,
+				area = true,
 			},
 			constantStats = {
 				{ "base_skill_effect_duration", 6000 },
@@ -12836,6 +12858,7 @@ skills["ShieldWallPlayer"] = {
 				"shield_wall_segment_display_stat",
 				"quality_display_shield_wall_is_gem",
 				"replace_off_hand_unarmed_attack_stats_with_shield_type",
+				"is_area_damage",
 			},
 			notMinionStat = {
 				"off_hand_weapon_minimum_physical_damage",
@@ -14060,15 +14083,33 @@ skills["SuperchargedSlamPlayer"] = {
 		[39] = { attackTime = 1000, baseMultiplier = 8.63, levelRequirement = 90, cost = { ManaPerMinute = 11734, }, },
 		[40] = { attackTime = 1000, baseMultiplier = 9.21, levelRequirement = 90, cost = { ManaPerMinute = 12487, }, },
 	},
+			preDamageFunc = function(activeSkill, output)
+				activeSkill.skillData.hitTimeMultiplier = activeSkill.skillModList:Sum("BASE", activeSkill.skillCfg, "Multiplier:SuperchargedSlamStage")
+				activeSkill.skillData.channelTimeMultiplier = activeSkill.skillModList:Sum("BASE", activeSkill.skillCfg, "Multiplier:SuperchargedSlamStage")
+			end,
 	statSets = {
 		[1] = {
 			label = "Impact",
 			incrementalEffectiveness = 0.092720001935959,
 			statDescriptionScope = "channelled_slam_statset_0",
+			statMap = {
+				["channelled_slam_damage_+%_final_per_stage"] = {
+					mod("Damage", "MORE", nil, 0, 0, { type = "Multiplier", var = "SuperchargedSlamStage" }),
+				},
+				["channelled_slam_max_stages"] = {
+					mod("Multiplier:SuperchargedSlamMaxStages", "BASE", nil),
+				},
+				["base_skill_show_average_damage_instead_of_dps"] = {
+				},
+			},
 			baseFlags = {
 				attack = true,
 				area = true,
 				melee = true,
+				channelRelease = true,
+			},
+			baseMods = {
+				mod("DPS", "MORE", 100, 0, 0, { type = "Multiplier", var = "SuperchargedSlamStage" }),
 			},
 			constantStats = {
 				{ "active_skill_base_area_of_effect_radius", 16 },
@@ -14131,10 +14172,27 @@ skills["SuperchargedSlamPlayer"] = {
 			label = "Aftershock",
 			incrementalEffectiveness = 0.092720001935959,
 			statDescriptionScope = "channelled_slam_statset_1",
+			statMap = {
+				["channelled_slam_damage_+%_final_per_stage"] = {
+					mod("Damage", "MORE", nil, 0, 0, { type = "Multiplier", var = "SuperchargedSlamStage" }),
+				},
+				["channelled_slam_max_stages"] = {
+					mod("Multiplier:SuperchargedSlamMaxStages", "BASE", nil),
+				},
+				["aftershock_radius_+_per_previous_aftershock"] = {
+					skill("radiusExtra", nil, { type = "Multiplier", var = "SuperchargedSlamStage", limit = 30, limitTotal = true }),
+				},
+				["base_skill_show_average_damage_instead_of_dps"] = {
+				},
+			},
 			baseFlags = {
 				attack = true,
 				area = true,
 				melee = true,
+				channelRelease = true,
+			},
+			baseMods = {
+				mod("DPS", "MORE", 100, 0, 0, { type = "Multiplier", var = "SuperchargedSlamStage" }),
 			},
 			constantStats = {
 				{ "active_skill_base_area_of_effect_radius", 16 },
@@ -14321,6 +14379,8 @@ skills["SupportMetaCastLightningSpellOnHitPlayer"] = {
 	addSkillTypes = { SkillType.Triggered, SkillType.Cooldown, },
 	excludeSkillTypes = { SkillType.SupportedByHourglass, },
 	isTrigger = true,
+	qualityStats = {
+	},
 	levels = {
 		[1] = { levelRequirement = 0, },
 		[2] = { levelRequirement = 0, },
@@ -14996,6 +15056,7 @@ skills["WarBannerReservationPlayer"] = {
 	skillTypes = { [SkillType.OngoingSkill] = true, [SkillType.HasReservation] = true, [SkillType.Buff] = true, [SkillType.Persistent] = true, [SkillType.CanHaveMultipleOngoingSkillInstances] = true, [SkillType.Area] = true, [SkillType.Duration] = true, [SkillType.Banner] = true, [SkillType.NoAttackInPlace] = true, },
 	castTime = 1,
 	qualityStats = {
+		{ "base_reservation_efficiency_+%", 0.5 },
 	},
 	levels = {
 		[1] = { spiritReservationFlat = 30, levelRequirement = 0, },
@@ -15100,7 +15161,6 @@ skills["WarBannerPlayer"] = {
 	skillTypes = { [SkillType.Banner] = true, [SkillType.Area] = true, [SkillType.Duration] = true, [SkillType.UsableWhileMoving] = true, [SkillType.Buff] = true, [SkillType.Aura] = true, [SkillType.NoAttackInPlace] = true, [SkillType.HasUsageCondition] = true, },
 	castTime = 0.5,
 	qualityStats = {
-		{ "base_reservation_efficiency_+%", 0.5 },
 	},
 	levels = {
 		[1] = { levelRequirement = 0, },

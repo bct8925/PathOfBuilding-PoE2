@@ -569,8 +569,9 @@ function ItemClass:ParseRaw(raw, rarity, highQuality)
 					self.requirements[specName:sub(1,3):lower()] = specToNumber(specVal)
 				elseif specName == "Critical Hit Range" or specName == "Attacks per Second" or specName == "Weapon Range" or
 				       specName == "Critical Hit Chance" or specName == "Physical Damage" or specName == "Elemental Damage" or
-				       specName == "Chaos Damage" or specName == "Reload Time" or specName == "Chance to Block" or specName == "Block chance" or 
-					   specName == "Armour" or specName == "Energy Shield" or specName == "Evasion" then
+				       specName == "Chaos Damage" or specName == "Fire Damage" or specName == "Cold Damage" or specName == "Lightning Damage" or 
+					   specName == "Reload Time" or specName == "Chance to Block" or specName == "Block chance" or 
+					   specName == "Armour" or specName == "Energy Shield" or specName == "Evasion" or specName == "Requires" then
 					self.hidden_specs = true
 				-- Anything else is an explicit with a colon in it (Fortress Covenant, Pure Talent, etc) unless it's part of the custom name
 				elseif not (self.name:match(specName) and self.name:match(specVal)) then
@@ -809,7 +810,7 @@ function ItemClass:ParseRaw(raw, rarity, highQuality)
 			local specificItemType = self.base.type:lower()
 			for runeName, runeMods in pairs(data.itemMods.Runes) do
 				local addModToGroupedRunes = function (modLine)
-					local runeValue
+					local runeValue = 1
 					local runeStrippedModLine = modLine:gsub("(%d%.?%d*)", function(val)
 						runeValue = val
 						return "#"
@@ -835,7 +836,7 @@ function ItemClass:ParseRaw(raw, rarity, highQuality)
 
 			local remainingRunes = self.itemSocketCount
 			for i, modLine in ipairs(self.runeModLines) do
-				local value
+				local value = 1
 				local strippedModLine = modLine.line:gsub("(%d%.?%d*)", function(val)
 					value = val
 					return "#"

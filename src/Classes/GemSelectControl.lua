@@ -548,7 +548,7 @@ function GemSelectClass:AddGemTooltip(gemInstance)
 	-- Will need rework if a gem can have 2+ additional supports
 	self:AddGrantedEffectInfo(gemInstance, grantedEffect, true)
 	for _, statSet in ipairs(grantedEffect.statSets) do
-		self:AddStatSetInfo(gemInstance, grantedEffect, statSet)
+		self:AddStatSetInfo(gemInstance, grantedEffect, statSet, nil , _)
 	end
 
 	for _, additional in ipairs(additionalEffects or {}) do
@@ -560,12 +560,18 @@ function GemSelectClass:AddGemTooltip(gemInstance)
 			self.tooltip:AddSeparator(10)
 			self:AddGrantedEffectInfo(gemInstance, additional)
 			for _, statSet in ipairs(additional.statSets) do
-				self:AddStatSetInfo(gemInstance, grantedEffect, statSet)
+				self:AddStatSetInfo(gemInstance, additional, statSet, nil, _)
 			end
 		else
 			for _, statSet in ipairs(additional.statSets) do
-				self:AddStatSetInfo(gemInstance, grantedEffect, statSet, true)
+				self:AddStatSetInfo(gemInstance, additional, statSet, true, _)
 			end
+		end
+	end
+	if grantedEffect.flavourText and main.showFlavourText then
+		self.tooltip:AddSeparator(10)
+		for _, line in ipairs(grantedEffect.flavourText) do
+			self.tooltip:AddLine(16, colorCodes.UNIQUE .. line)
 		end
 	end
 end
@@ -573,7 +579,7 @@ end
 function GemSelectClass:AddGrantedEffectInfo(gemInstance, grantedEffect, addReq)
 	local displayInstance = gemInstance.displayEffect or gemInstance
 	local grantedEffectLevel = grantedEffect.levels[displayInstance.level] or { }
-	if gemInstance.gemData.Tier and not grantedEffect.isLineage then
+	if gemInstance.gemData.Tier and not grantedEffect.isLineage and not grantedEffect.hidden then
 			self.tooltip:AddLine(16, string.format("^x7F7F7FTier: ^7%d", gemInstance.gemData.Tier))
 		end
 	if addReq and not grantedEffect.support then
@@ -651,7 +657,7 @@ function GemSelectClass:AddGrantedEffectInfo(gemInstance, grantedEffect, addReq)
 			if grantedEffectLevel.baseMultiplier then
 				self.tooltip:AddLine(16, string.format("^x7F7F7FAttack Damage: ^7%g%% of base", grantedEffectLevel.baseMultiplier * 100))
 			end
-		else
+		elseif not grantedEffect.hidden then
 			if grantedEffect.castTime > 0 then
 				self.tooltip:AddLine(16, string.format("^x7F7F7FCast Time: ^7%.2f sec", grantedEffect.castTime))
 			else
@@ -661,7 +667,7 @@ function GemSelectClass:AddGrantedEffectInfo(gemInstance, grantedEffect, addReq)
 		if grantedEffectLevel.critChance then
 			self.tooltip:AddLine(16, string.format("^x7F7F7FCritical Hit Chance: ^7%.2f%%", grantedEffectLevel.critChance))
 		end
-		if gemInstance.gemData.weaponRequirements then
+		if gemInstance.gemData.weaponRequirements and not grantedEffect.hidden then
 			self.tooltip:AddLine(16, "^x7F7F7F Requires: ^7" .. gemInstance.gemData.weaponRequirements)
 		end
 	end
@@ -686,10 +692,10 @@ function GemSelectClass:AddGrantedEffectInfo(gemInstance, grantedEffect, addReq)
 		end
 	end
 end
-function GemSelectClass:AddStatSetInfo(gemInstance, grantedEffect, statSet, noLabel)
+function GemSelectClass:AddStatSetInfo(gemInstance, grantedEffect, statSet, noLabel, index)
 	local displayInstance = gemInstance.displayEffect or gemInstance
 	local statSetLevel = statSet.levels[displayInstance.level] or { }
-	if statSet.label ~= grantedEffect.name and statSet.label ~= "" and not noLabel then
+	if not (index == 1 and statSet.label == grantedEffect.name) and statSet.label ~= "" and not noLabel then
 		self.tooltip:AddSeparator(10)
 		self.tooltip:AddLine(20, colorCodes.GEM .. statSet.label)
 		self.tooltip:AddSeparator(10)

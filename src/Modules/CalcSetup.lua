@@ -91,6 +91,8 @@ function calcs.initModDB(env, modDB)
 	modDB:NewMod("PhysicalDamageReduction", "BASE", -15, "Base", { type = "Condition", var = "Crushed" })
 	modDB:NewMod("CritChanceCap", "BASE", 100, "Base")
 	modDB:NewMod("PresenceRadius", "BASE", data.characterConstants["base_presence_radius"], "Base")
+	modDB:NewMod("SurroundedRadius", "BASE", data.misc.SurroundedRadiusBase, "Base")
+	modDB:NewMod("SurroundedMinimum", "BASE", data.gameConstants["BaseRequiredEnemiesToBeConsideredSurrounded"], "Base")
 	modDB.conditions["Buffed"] = env.mode_buffs
 	modDB.conditions["Combat"] = env.mode_combat
 	modDB.conditions["Effective"] = env.mode_effective
@@ -115,6 +117,7 @@ end
 
 function calcs.buildModListForNode(env, node, incSmallPassiveSkill)
 	local localSmallIncEffect = 0
+	local localNotableIncEffect = 0
 	local modList = new("ModList")
 	if node.type == "Keystone" then
 		modList:AddMod(node.keystoneMod)
@@ -128,7 +131,7 @@ function calcs.buildModListForNode(env, node, incSmallPassiveSkill)
 	-- Run first pass radius jewels // jewel functions caught by jewelOtherFuncs
 	for _, rad in pairs(env.radiusJewelList) do
 		if rad.type == "Other" and rad.nodes[node.id] and rad.nodes[node.id].type ~= "Mastery" then
-			if rad.item.baseName:find("Time%-Lost") == nil then
+			if rad.item.baseName:find("Time%-Lost") == nil and rad.item.baseName:find("Timeless Jewel") == nil then
 				rad.func(node, modList, rad.data)
 			elseif not node.isAttribute and (node.type == "Normal" or node.type == "Notable") then
 				local cache = GlobalCache.cachedData[env.mode].radiusJewelData[rad.nodeId]
@@ -225,11 +228,31 @@ function calcs.buildModListForNode(env, node, incSmallPassiveSkill)
 				localSmallIncEffect = mod.value
 			end
 		end
+		if mod.name == "JewelNotablePassiveSkillEffect" then
+			for _, modCriteria in ipairs(mod) do
+				if modCriteria.type == "Condition" and modCriteria.var and modCriteria.var:match("^WeaponSet") then
+					if (tonumber(modCriteria.var:match("(%d)")) == (env.build.itemsTab.activeItemSet.useSecondWeaponSet and 2 or 1)) then
+						localNotableIncEffect = mod.value
+					end
+					hasWSCondition = true
+				end
+			end
+			if not hasWSCondition then
+				localNotableIncEffect = mod.value
+			end
+		end
 	end
 	
 	-- Apply Inc Node scaling from Hulking Form
 	if (incSmallPassiveSkill + localSmallIncEffect) > 0 and node.type == "Normal" and not node.isAttribute and not node.ascendancyName then
 		local scale = 1 + (incSmallPassiveSkill + localSmallIncEffect) / 100
+		local scaledList = new("ModList")
+		scaledList:ScaleAddList(modList, scale)
+		modList = scaledList
+	end
+	
+	if localNotableIncEffect > 0 and node.type == "Notable" and not node.isAttribute and not node.ascendancyName then
+		local scale = 1 + localNotableIncEffect / 100
 		local scaledList = new("ModList")
 		scaledList:ScaleAddList(modList, scale)
 		modList = scaledList
@@ -578,6 +601,7 @@ function calcs.initEnv(build, mode, override, specEnv)
 		modDB:NewMod("ManaRegen", "BASE", env.data.misc.ManaRegenBase, "Base", { type = "PerStat", stat = "Mana", div = 1 }, { type = "Condition", var = "NoInherentManaRegen", neg = true })
 		modDB:NewMod("Spirit", "BASE", 0, "Base")
 		modDB:NewMod("Devotion", "BASE", 0, "Base")
+		modDB:NewMod("Tribute", "BASE", 0, "Base")
 		modDB:NewMod("Evasion", "BASE", data.characterConstants["evasion_rating_per_level"] / 100, "Base", { type = "Multiplier", var = "Level", base = data.characterConstants["base_evasion_rating"] })
 		modDB:NewMod("Accuracy", "BASE", data.characterConstants["accuracy_rating_per_level"], "Base", { type = "Multiplier", var = "Level", base = -data.characterConstants["accuracy_rating_per_level"] })
 		modDB:NewMod("CritMultiplier", "BASE", data.characterConstants["base_critical_hit_damage_bonus"], "Base")
@@ -595,6 +619,7 @@ function calcs.initEnv(build, mode, override, specEnv)
 		modDB:NewMod("MaximumValour", "BASE", 50, "Base")
 		modDB:NewMod("SoulEaterMax", "BASE", 45, "Base")
 		modDB:NewMod("Multiplier:IntensityLimit", "BASE", 3, "Base")
+		modDB:NewMod("Multiplier:DemonFlameMaximum", "BASE", 10, "Base")
 		modDB:NewMod("Damage", "INC", data.characterConstants["damage_+%_per_10_rampage_stacks"], "Base", { type = "Multiplier", var = "Rampage", limit = data.characterConstants["max_rampage_stacks"] / 20, div = 20 })
 		modDB:NewMod("MovementSpeed", "INC", data.characterConstants["movement_velocity_+%_per_10_rampage_stacks"], "Base", { type = "Multiplier", var = "Rampage", limit = data.characterConstants["max_rampage_stacks"] / 20, div = 20 })
 		modDB:NewMod("Speed", "INC", 5, "Base", ModFlag.Attack, { type = "Multiplier", var = "SoulEater"})
@@ -611,6 +636,8 @@ function calcs.initEnv(build, mode, override, specEnv)
 		modDB:NewMod("AilmentMagnitude", "MORE", data.monsterConstants["bleeding_moving_damage_%_of_base_override"] - 100, "Base", 0, KeywordFlag.Bleed, { type = "ActorCondition", actor = "enemy", varList = { "Moving", "BleedAggravated" } }, { type = "Condition", var = "NoExtraBleedDamageToMovingEnemy", neg = true })
 		modDB:NewMod("Condition:BloodStance", "FLAG", true, "Base", { type = "Condition", var = "SandStance", neg = true })
 		modDB:NewMod("Condition:PrideMinEffect", "FLAG", true, "Base", { type = "Condition", var = "PrideMaxEffect", neg = true })
+		modDB:NewMod("MovementSpeed", "INC", 50, "Base", { type = "Condition", var = "Sprinting" })
+		modDB:NewMod("Condition:CanSprint", "FLAG", true, "Base", { type = "Condition", var = "CannotSprint", neg = true })
 		modDB:NewMod("PerBrutalTripleDamageChance", "BASE", data.characterConstants["chance_to_deal_triple_damage_%_per_brutal_charge"], "Base")
 		modDB:NewMod("PerAfflictionAilmentDamage", "BASE", 8, "Base")
 		modDB:NewMod("PerAfflictionNonDamageEffect", "BASE", 8, "Base")
@@ -1792,6 +1819,8 @@ function calcs.initEnv(build, mode, override, specEnv)
 	-- This needs to be done here at the end as otherwise we will only consider gems in the
 	-- selected active skill group
 	-- Calculate skill gem and support gem counts
+	-- Currently PoB2 doesn't associate weapon skill supports with the actual weapon sets
+	-- so it ends up counting all support gems when it should only take into account the active weapon set
 	local slotSupportGemSocketsCount = { R = 0, G = 0, B = 0 }
 	-- Loop through socket groups to calculate number of socketed gems
 	for _, socketGroup in pairs(env.build.skillsTab.socketGroupList) do
@@ -1821,6 +1850,24 @@ function calcs.initEnv(build, mode, override, specEnv)
 	env.modDB.multipliers.RedSupportGems = (env.modDB.multipliers.RedSupportGems or 0) + slotSupportGemSocketsCount.R
 	env.modDB.multipliers.GreenSupportGems = (env.modDB.multipliers.GreenSupportGems or 0) + slotSupportGemSocketsCount.G
 	env.modDB.multipliers.BlueSupportGems = (env.modDB.multipliers.BlueSupportGems or 0) + slotSupportGemSocketsCount.B
-
+	
+	-- Crystallised Immunity notable support
+	if (slotSupportGemSocketsCount.R > slotSupportGemSocketsCount.G) and (slotSupportGemSocketsCount.R > slotSupportGemSocketsCount.B) then
+		env.modDB.conditions["MajorityRedSocketedSupports"] = true;
+	elseif (slotSupportGemSocketsCount.G > slotSupportGemSocketsCount.R) and (slotSupportGemSocketsCount.G > slotSupportGemSocketsCount.B) then
+		env.modDB.conditions["MajorityGreenSocketedSupports"] = true;
+	elseif (slotSupportGemSocketsCount.B > slotSupportGemSocketsCount.R) and (slotSupportGemSocketsCount.B > slotSupportGemSocketsCount.G) then
+		env.modDB.conditions["MajorityBlueSocketedSupports"] = true;
+	end
+	
+	-- Gem Studded, Gemling notable support
+	if (slotSupportGemSocketsCount.R >= slotSupportGemSocketsCount.G) and (slotSupportGemSocketsCount.R >= slotSupportGemSocketsCount.B) then
+		env.modDB.conditions["MostNumerousRedSocketedSupports"] = true;
+	elseif (slotSupportGemSocketsCount.G >= slotSupportGemSocketsCount.R) and (slotSupportGemSocketsCount.G >= slotSupportGemSocketsCount.B) then
+		env.modDB.conditions["MostNumerousGreenSocketedSupports"] = true;
+	elseif (slotSupportGemSocketsCount.B >= slotSupportGemSocketsCount.R) and (slotSupportGemSocketsCount.B >= slotSupportGemSocketsCount.G) then
+		env.modDB.conditions["MostNumerousBlueSocketedSupports"] = true;
+	end
+	
 	return env, cachedPlayerDB, cachedEnemyDB, cachedMinionDB
 end

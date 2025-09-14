@@ -139,6 +139,7 @@ data.powerStatList = {
 	{ stat="ManaRegen", label="Mana regen" },
 	{ stat="ManaLeechRate", label="Mana leech" },
 	{ stat="Ward", label="Ward" },
+	{ stat="Spirit", label="Spirit" },
 	{ stat="Str", label="Strength" },
 	{ stat="Dex", label="Dexterity" },
 	{ stat="Int", label="Intelligence" },
@@ -163,6 +164,7 @@ data.powerStatList = {
 	{ stat="BlockChance", label="Block Chance" },
 	{ stat="SpellBlockChance", label="Spell Block Chance" },
 	{ stat="SpellSuppressionChance", label="Spell Suppression Chance" },
+	{ stat="EffectiveLootRarityMod", label="Rarity of Items found" },
 }
 
 data.misc = { -- magic numbers
@@ -181,6 +183,7 @@ data.misc = { -- magic numbers
 	BlockChanceCap = 90,
 	SuppressionChanceCap = 100,
 	SuppressionEffect = 50,
+	DeflectEffect = data.gameConstants["BasePercentDamageDeflected"],
 	AvoidChanceCap = 75,
 	AccuracyFalloffStart = 20,
 	AccuracyFalloffEnd = 90,
@@ -205,6 +208,7 @@ data.misc = { -- magic numbers
 	TrapTriggerRadiusBase = 10,
 	MineDetonationRadiusBase = 60,
 	MineAuraRadiusBase = 35,
+	SurroundedRadiusBase = 30,
 	MinionRevivalTimeBase = data.characterConstants["global_resummon_time_ms"] / 1000,
 	BrandAttachmentRangeBase = 30,
 	ProjectileDistanceCap = 150,
@@ -511,6 +515,7 @@ data.weaponTypeInfo = {
 	["Spear"] = { oneHand = true, melee = true, flag = "Spear" },
 	["Flail"] = { oneHand = true, melee = true, flag = "Flail" },
 	["Staff"] = { oneHand = false, melee = true, flag = "Staff", label = "Quarterstaff" },
+	["Warstaff"] = { oneHand = false, melee = true, flag = "Warstaff" },
 	["Wand"] = { oneHand = true, melee = false, flag = "Wand" },
 	["One Handed Axe"] = { oneHand = true, melee = true, flag = "Axe" },
 	["One Handed Mace"] = { oneHand = true, melee = true, flag = "Mace" },

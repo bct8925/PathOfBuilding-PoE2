@@ -28,7 +28,7 @@ Variant: Current
 +(60-80) to maximum Life
 {variant:2}+(20-25)% to Fire Resistance
 25% increased Light Radius
-When you Leech Life from a Hit, Allies in your Presence also Leech the same amount of Life
+Leeching Life from your Hits causes Allies in your Presence to also Leech the same amount of Life
 ]],[[
 Deidbell
 Elite Greathelm
@@ -96,10 +96,13 @@ Lose all Tailwind when Hit
 Constricting Command
 Viper Cap
 League: Dawn of the Hunt
+Variant: Pre 0.3.0
+Variant: Current
 +(80-120) to maximum Life
 +(10-15) to all Attributes
 (8-12) Life Regeneration per second
-Pin Enemies which are Primed for Pinning
+{variant:1}Pin Enemies which are Primed for Pinning
+{variant:2}Require (2-5) fewer enemies to be Surrounded
 ]],[[
 Elevore
 Hunter Hood
@@ -175,7 +178,7 @@ Variant: Current
 {variant:2}Gain (10-15)% of maximum Life as Extra maximum Energy Shield
 ]],[[
 Crown of Eyes
-Coral Circlet
+Vermeil Circlet
 League: Dawn of the Hunt
 (100-140)% increased Energy Shield
 +(150-200) to Accuracy Rating
@@ -459,6 +462,15 @@ Variant: Current
 Allies in your Presence deal 50% increased Damage
 {variant:2}+(10-20) to Dexterity
 25% reduced Damage
+]],[[
+Mask of the Sanguimancer
+Face Mask
++(20-25) to Evasion Rating
++(10-15) to maximum Energy Shield
+(20-40)% increased Critical Hit Chance for Spells
++(10-20) to Strength
++(10-20) to Intelligence
+Blood Magic
 ]],[[
 Mind of the Council
 Death Mask

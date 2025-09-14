@@ -102,6 +102,11 @@ statMap = {
 
 #skill SupportAtaluiBloodlettingPlayer
 #set SupportAtaluiBloodlettingPlayer
+statMap = {
+	["gain_%_of_damage_as_physical_per_10_life_cost"] = {
+		mod("DamageGainAsPhysical", "BASE", nil, 0, 0, { type = "PerStat", stat = "LifeCost", div = 10 }),
+	},
+},
 #mods
 #skillEnd
 
@@ -232,14 +237,6 @@ statMap = {
 
 #skill SupportBrutusBrainPlayer
 #set SupportBrutusBrainPlayer
-statMap = {
-	["support_minion_defensive_stance_minion_damage_taken_+%_final"] = {
-		mod("MinionModifier", "LIST", { mod = mod("Damage", "MORE", nil) }),
-	},
-	["support_meat_shield_minion_damage_+%_final"] = {
-		mod("MinionModifier", "LIST", { mod = mod("DamageTaken", "MORE", nil) }),
-	},
-},
 #mods
 #skillEnd
 
@@ -255,6 +252,11 @@ statMap = {
 
 #skill SupportCannibalismPlayerTwo
 #set SupportCannibalismPlayerTwo
+statMap = {
+	["support_cannibalism_recover_%_maximum_life_on_kill"] = {
+		mod("LifeOnKill", "BASE", nil, 0, 0, { type = "PercentStat", stat = "Life", percent = 1 }, { type = "GlobalEffect", effectType = "Buff", effectName = "Cannibalism" }),
+	},
+},
 #flags
 #mods
 #skillEnd
@@ -434,6 +436,14 @@ statMap = {
 
 #skill SupportDeepCutsPlayerTwo
 #set SupportDeepCutsPlayerTwo
+statMap = {
+	["support_deep_cuts_hit_damage_+%_final"] = {
+		mod("Damage", "MORE", nil, ModFlag.Hit),
+	},
+	["support_deep_cuts_bleeding_effect_+%_final"] = {
+		mod("AilmentMagnitude", "MORE", nil, 0, KeywordFlag.Bleed),
+	},
+},
 #mods
 #skillEnd
 
@@ -626,11 +636,24 @@ statMap = {
 
 #skill SupportExecutePlayerTwo
 #set SupportExecutePlayerTwo
+statMap = {
+	["support_executioner_damage_vs_enemies_on_low_life_+%_final"] = {
+		mod("Damage", "MORE", nil, ModFlag.Hit, 0, { type = "ActorCondition", actor = "enemy", var = "LowLife"})
+	},
+},
 #mods
 #skillEnd
 
 #skill SupportExecutePlayerThree
 #set SupportExecutePlayerThree
+statMap = {
+	["support_executioner_damage_vs_enemies_on_low_life_+%_final"] = {
+		mod("Damage", "MORE", nil, ModFlag.Hit, 0, { type = "ActorCondition", actor = "enemy", var = "LowLife"})
+	},
+	["support_executioner_damage_+%_final_while_on_low_life"] = {
+		mod("Damage", "MORE", nil, ModFlag.Hit, 0, { type = "Condition", var = "LowLife"})
+	},
+},
 #mods
 #skillEnd
 
@@ -898,6 +921,14 @@ statMap = {
 
 #skill SupportIgnitePlayerThree
 #set SupportIgnitePlayerThree
+statMap = {
+	["support_ignition_chance_to_ignite_+%_final"] = {
+		mod("EnemyIgniteChance", "MORE", nil),
+	},
+	["faster_burn_%"] = {
+		mod("IgniteFaster", "INC", nil)
+	},
+},
 #mods
 #skillEnd
 
@@ -986,6 +1017,11 @@ statMap = {
 
 #skill SupportKnockbackPlayer
 #set SupportKnockbackPlayer
+statMap = {
+	["support_arms_length_knockback_distance_+%_final"] = {
+		mod("EnemyKnockbackDistance", "MORE", nil),
+	},
+},
 #mods
 #skillEnd
 
@@ -1307,12 +1343,20 @@ statMap = {
 
 #skill SupportShortFusePlayer
 #set SupportShortFusePlayer
+statMap = {
+	["support_fast_forward_detonation_time_+%_final"] = {
+		mod("DetonationTime", "MORE", nil),
+	},
+},
 #mods
 #skillEnd
 
 #skill SupportShortFusePlayerTwo
 #set SupportShortFusePlayerTwo
 statMap = {
+	["support_fast_forward_detonation_time_+%_final"] = {
+		mod("DetonationTime", "MORE", nil),
+	},
 	["support_short_fuse_damage_+%_final"] = {
 		mod("Damage", "MORE", nil),
 	},

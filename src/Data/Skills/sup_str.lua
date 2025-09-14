@@ -109,6 +109,7 @@ skills["SupportAmanamusTithePlayer"] = {
 	excludeSkillTypes = { },
 	gemFamily = { "AmanamusTithe",},
 	isLineage = true,
+	flavourText = {"Those that serve the Liege of the Lightless are his, utterly.", "Blood, flesh, and soul are fodder to bend to his will.", "Under a Lich Lord, not even death is an escape.", },
 	levels = {
 		[1] = { levelRequirement = 0, },
 	},
@@ -529,6 +530,7 @@ skills["SupportAtaluiBloodlettingPlayer"] = {
 	excludeSkillTypes = { SkillType.Blessing, SkillType.Persistent, },
 	gemFamily = { "Lifetap",},
 	isLineage = true,
+	flavourText = {"Atazek and Atalui rose, battered and dark, bleeding from a hundred", "different wounds. She gave her brother a sinister grin. \"Shall we", "show them what happens to those who challenge the Vaal?\"", },
 	levels = {
 		[1] = { manaMultiplier = 50, levelRequirement = 0, },
 	},
@@ -537,6 +539,11 @@ skills["SupportAtaluiBloodlettingPlayer"] = {
 			label = "Atalui's Bloodletting",
 			incrementalEffectiveness = 0.054999999701977,
 			statDescriptionScope = "gem_stat_descriptions",
+			statMap = {
+				["gain_%_of_damage_as_physical_per_10_life_cost"] = {
+					mod("DamageGainAsPhysical", "BASE", nil, 0, 0, { type = "PerStat", stat = "LifeCost", div = 10 }),
+				},
+			},
 			baseFlags = {
 			},
 			constantStats = {
@@ -1235,6 +1242,7 @@ skills["SupportBrutusBrainPlayer"] = {
 	excludeSkillTypes = { },
 	gemFamily = { "MeatShield",},
 	isLineage = true,
+	flavourText = {"Shavronne gleefully raised her arms to the sky as lightning", "flashed. She'd done it! Her creation was perfect! Invincible.", "Immortal! But she soon realized there was one piece missing...", },
 	levels = {
 		[1] = { levelRequirement = 0, },
 	},
@@ -1243,21 +1251,11 @@ skills["SupportBrutusBrainPlayer"] = {
 			label = "Brutus' Brain",
 			incrementalEffectiveness = 0.054999999701977,
 			statDescriptionScope = "gem_stat_descriptions",
-			statMap = {
-				["support_minion_defensive_stance_minion_damage_taken_+%_final"] = {
-					mod("MinionModifier", "LIST", { mod = mod("Damage", "MORE", nil) }),
-				},
-				["support_meat_shield_minion_damage_+%_final"] = {
-					mod("MinionModifier", "LIST", { mod = mod("DamageTaken", "MORE", nil) }),
-				},
-			},
 			baseFlags = {
 			},
-			constantStats = {
-				{ "support_minion_defensive_stance_minion_damage_taken_+%_final", -100 },
-				{ "support_meat_shield_minion_damage_+%_final", -100 },
-			},
 			stats = {
+				"minions_cannot_be_damaged",
+				"minions_deal_no_damage",
 			},
 			levels = {
 				[1] = { actorLevel = 1, },
@@ -1319,6 +1317,11 @@ skills["SupportCannibalismPlayerTwo"] = {
 			label = "Cannibalism II",
 			incrementalEffectiveness = 0.054999999701977,
 			statDescriptionScope = "gem_stat_descriptions",
+			statMap = {
+				["support_cannibalism_recover_%_maximum_life_on_kill"] = {
+					mod("LifeOnKill", "BASE", nil, 0, 0, { type = "PercentStat", stat = "Life", percent = 1 }, { type = "GlobalEffect", effectType = "Buff", effectName = "Cannibalism" }),
+				},
+			},
 			baseFlags = {
 			},
 			constantStats = {
@@ -1761,6 +1764,7 @@ skills["SupportDaressosPassionPlayer"] = {
 	excludeSkillTypes = { },
 	gemFamily = { "DaressoLineage",},
 	isLineage = true,
+	flavourText = {"\"I raised my eyes to look upon my death. Instead, I saw her.", "Merveil. Fighting had always been about survival. Now the", "fight became about something much greater... love.\"", },
 	levels = {
 		[1] = { levelRequirement = 0, },
 	},
@@ -1910,6 +1914,14 @@ skills["SupportDeepCutsPlayerTwo"] = {
 			label = "Deep Cuts II",
 			incrementalEffectiveness = 0.054999999701977,
 			statDescriptionScope = "gem_stat_descriptions",
+			statMap = {
+				["support_deep_cuts_hit_damage_+%_final"] = {
+					mod("Damage", "MORE", nil, ModFlag.Hit),
+				},
+				["support_deep_cuts_bleeding_effect_+%_final"] = {
+					mod("AilmentMagnitude", "MORE", nil, 0, KeywordFlag.Bleed),
+				},
+			},
 			baseFlags = {
 			},
 			constantStats = {
@@ -1973,7 +1985,7 @@ skills["SupportDefyPlayerTwo"] = {
 			},
 			stats = {
 				"attack_damage_is_lucky_if_surrounded",
-				"melee_attacks_usable_without_mana_cost_while_surrounded",
+				"skills_are_usable_without_mana_cost_while_surrounded",
 			},
 			levels = {
 				[1] = { actorLevel = 1, },
@@ -2002,7 +2014,7 @@ skills["SupportDesperationPlayer"] = {
 			baseFlags = {
 			},
 			stats = {
-				"melee_attacks_usable_without_mana_cost_while_surrounded",
+				"skills_are_usable_without_mana_cost_while_surrounded",
 			},
 			levels = {
 				[1] = { actorLevel = 1, },
@@ -2318,6 +2330,7 @@ skills["SupportEinharsBeastritePlayer"] = {
 	excludeSkillTypes = { },
 	gemFamily = { "Behead",},
 	isLineage = true,
+	flavourText = {"\"You must cut the beast, like this,\" he told the wide-eyed", "and forgetful woman. \"The juiciest parts are in the middle!\"", "She nodded, and began relearning the way of the wilds.", },
 	ignoreMinionTypes = true,
 	levels = {
 		[1] = { levelRequirement = 0, },
@@ -2712,6 +2725,11 @@ skills["SupportExecutePlayerTwo"] = {
 			label = "Execute II",
 			incrementalEffectiveness = 0.054999999701977,
 			statDescriptionScope = "gem_stat_descriptions",
+			statMap = {
+				["support_executioner_damage_vs_enemies_on_low_life_+%_final"] = {
+					mod("Damage", "MORE", nil, ModFlag.Hit, 0, { type = "ActorCondition", actor = "enemy", var = "LowLife"})
+				},
+			},
 			baseFlags = {
 			},
 			constantStats = {
@@ -2742,6 +2760,14 @@ skills["SupportExecutePlayerThree"] = {
 			label = "Execute III",
 			incrementalEffectiveness = 0.054999999701977,
 			statDescriptionScope = "gem_stat_descriptions",
+			statMap = {
+				["support_executioner_damage_vs_enemies_on_low_life_+%_final"] = {
+					mod("Damage", "MORE", nil, ModFlag.Hit, 0, { type = "ActorCondition", actor = "enemy", var = "LowLife"})
+				},
+				["support_executioner_damage_+%_final_while_on_low_life"] = {
+					mod("Damage", "MORE", nil, ModFlag.Hit, 0, { type = "Condition", var = "LowLife"})
+				},
+			},
 			baseFlags = {
 			},
 			constantStats = {
@@ -3814,6 +3840,14 @@ skills["SupportIgnitePlayerThree"] = {
 			label = "Ignite III",
 			incrementalEffectiveness = 0.054999999701977,
 			statDescriptionScope = "gem_stat_descriptions",
+			statMap = {
+				["support_ignition_chance_to_ignite_+%_final"] = {
+					mod("EnemyIgniteChance", "MORE", nil),
+				},
+				["faster_burn_%"] = {
+					mod("IgniteFaster", "INC", nil)
+				},
+			},
 			baseFlags = {
 			},
 			constantStats = {
@@ -4131,6 +4165,7 @@ skills["SupportKaomsMadnessPlayer"] = {
 	excludeSkillTypes = { },
 	gemFamily = { "Fissures",},
 	isLineage = true,
+	flavourText = {"As King Kaom delved further into Wraeclast, so, too, did he", "draw closer to the Beast. One night, in a nightmarish fit, he", "swung his axe at his own men, slaughtering hundreds.", },
 	levels = {
 		[1] = { levelRequirement = 0, },
 	},
@@ -4173,6 +4208,11 @@ skills["SupportKnockbackPlayer"] = {
 			baseEffectiveness = 0,
 			incrementalEffectiveness = 0.092720001935959,
 			statDescriptionScope = "gem_stat_descriptions",
+			statMap = {
+				["support_arms_length_knockback_distance_+%_final"] = {
+					mod("EnemyKnockbackDistance", "MORE", nil),
+				},
+			},
 			baseFlags = {
 			},
 			constantStats = {
@@ -4314,7 +4354,7 @@ skills["SupportLifeLeechPlayerThree"] = {
 }
 skills["SupportBloodMagicPlayer"] = {
 	name = "Lifetap",
-	description = "Supports any Skill, turning a portion of its Mana cost into a Life cost. Does not support Skills which reserve Spirit.",
+	description = "Supports any Skill, turning its Mana cost into a Life cost. Does not support Skills which reserve Spirit.",
 	color = 1,
 	support = true,
 	requireSkillTypes = { },
@@ -4495,6 +4535,7 @@ skills["SupportCorruptingCryPlayerThree"] = {
 	excludeSkillTypes = { },
 	gemFamily = { "CorruptingCry",},
 	isLineage = true,
+	flavourText = {"The water used to cool the Locus of Corruption ran red", "as blood, bright as flame, and bubbled with strange heat.", "\"Drink,\" he offered. \"Suffuse your flesh with power!\"", },
 	ignoreMinionTypes = true,
 	levels = {
 		[1] = { levelRequirement = 0, },
@@ -5728,6 +5769,11 @@ skills["SupportShortFusePlayer"] = {
 			label = "Short Fuse I",
 			incrementalEffectiveness = 0.054999999701977,
 			statDescriptionScope = "gem_stat_descriptions",
+			statMap = {
+				["support_fast_forward_detonation_time_+%_final"] = {
+					mod("DetonationTime", "MORE", nil),
+				},
+			},
 			baseFlags = {
 			},
 			constantStats = {
@@ -5759,6 +5805,9 @@ skills["SupportShortFusePlayerTwo"] = {
 			incrementalEffectiveness = 0.054999999701977,
 			statDescriptionScope = "gem_stat_descriptions",
 			statMap = {
+				["support_fast_forward_detonation_time_+%_final"] = {
+					mod("DetonationTime", "MORE", nil),
+				},
 				["support_short_fuse_damage_+%_final"] = {
 					mod("Damage", "MORE", nil),
 				},
@@ -6305,6 +6354,7 @@ skills["SupportHardyTotemsPlayerThree"] = {
 	excludeSkillTypes = { },
 	gemFamily = { "HardyTotems",},
 	isLineage = true,
+	flavourText = {"A scavenging warrior found Tawhoa meditating in a grove.", "\"There is only so much jade in this world,\" intoned the god.", "\"Take my gift to your tribe. Ironwood will grow for all time.\"", },
 	levels = {
 		[1] = { manaMultiplier = 10, levelRequirement = 0, },
 	},
@@ -6547,6 +6597,7 @@ skills["SupportUhtredAuguryPlayer"] = {
 	excludeSkillTypes = { SkillType.SingleLevelSkill, },
 	gemFamily = { "UhtredLineage",},
 	isLineage = true,
+	flavourText = {"Studying the ill omens of the stars, Uhtred came to suspect", "something was very wrong among the first Kalguurans.", "Olroth, Vorana, Medved... three there were. Three dangers.", },
 	levels = {
 		[1] = { levelRequirement = 0, },
 	},
@@ -6578,6 +6629,7 @@ skills["SupportUhtredExodusPlayer"] = {
 	excludeSkillTypes = { SkillType.SingleLevelSkill, },
 	gemFamily = { "UhtredLineage",},
 	isLineage = true,
+	flavourText = {"By the time Uhtred realised the truth, only Vorana remained", "to defend them. While the rest fled, she implanted her flesh", "with gems and set forth alone to face the endless hordes.", },
 	levels = {
 		[1] = { levelRequirement = 0, },
 	},
@@ -6609,6 +6661,7 @@ skills["SupportUhtredOmenPlayer"] = {
 	excludeSkillTypes = { SkillType.SingleLevelSkill, },
 	gemFamily = { "UhtredLineage",},
 	isLineage = true,
+	flavourText = {"Day and night, his priests followed each of the Kalguuran", "heroes. When Medved disappeared, Uhtred grew even more", "paranoid. Now, only two remained... Olroth and Vorana.", },
 	levels = {
 		[1] = { levelRequirement = 0, },
 	},
@@ -6973,6 +7026,7 @@ skills["SupportUruksSmeltingPlayer"] = {
 	excludeSkillTypes = { },
 	gemFamily = { "ArmourDemolisher",},
 	isLineage = true,
+	flavourText = {"The volcano roared, but there was no thunder, only the boom", "of Uruk's hammer. Wraeclast had forgotten the old alliance,", "but by the Molten One's will, the fires would rage again.", },
 	levels = {
 		[1] = { levelRequirement = 0, },
 	},
@@ -7005,6 +7059,7 @@ skills["SupportUulNetolsEmbracePlayer"] = {
 	excludeSkillTypes = { },
 	gemFamily = { "BreachLineage",},
 	isLineage = true,
+	flavourText = {"\"The Lords could not breathe, so they grew new lungs.", "The Lords could not venture, so they grew new skin.", "The Lords were alone, so they grew us, to serve them.\"", },
 	levels = {
 		[1] = { manaMultiplier = 20, levelRequirement = 0, },
 	},
@@ -7245,6 +7300,7 @@ skills["SupportXophsPyrePlayer"] = {
 	excludeSkillTypes = { },
 	gemFamily = { "BreachLineage",},
 	isLineage = true,
+	flavourText = {"\"They drank until only dust remained. Ate until their gums", "bled rust. Such was their greed, the only thing that remains", "of the Broken Sun... is the Red Pyre, the Torus Eternal.\"", },
 	levels = {
 		[1] = { manaMultiplier = 20, levelRequirement = 0, },
 	},

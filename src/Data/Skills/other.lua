@@ -977,6 +977,8 @@ skills["SupportMetaDeadeyeMarksPlayer"] = {
 	requireSkillTypes = { SkillType.Mark, },
 	addSkillTypes = { },
 	excludeSkillTypes = { },
+	qualityStats = {
+	},
 	levels = {
 		[1] = { levelRequirement = 0, },
 		[2] = { levelRequirement = 0, },
@@ -1201,6 +1203,8 @@ skills["SupportMetaCastOnCharmUsePlayer"] = {
 	addSkillTypes = { SkillType.Triggered, SkillType.Cooldown, },
 	excludeSkillTypes = { SkillType.SupportedByHourglass, },
 	isTrigger = true,
+	qualityStats = {
+	},
 	levels = {
 		[1] = { levelRequirement = 0, },
 		[2] = { levelRequirement = 0, },
@@ -1507,7 +1511,7 @@ skills["UnloadAmmoPlayer"] = {
 				"can_perform_skill_while_moving",
 				"base_deal_no_damage",
 				"crossbow_ammo_skill_does_not_transition",
-				"skill_is_instant_while_sprinting",
+				"can_be_used_instantly_in_any_set",
 			},
 			levels = {
 				[1] = { actorLevel = 1, },
@@ -1612,6 +1616,18 @@ skills["DemonFormPlayer"] = {
 			label = "Demon Form",
 			incrementalEffectiveness = 0.054999999701977,
 			statDescriptionScope = "demon_transformation",
+			statMap = {
+				["demon_form_spell_damage_+%_final_per_stack"] = {
+					mod("Damage", "MORE", nil, 0, KeywordFlag.Spell, { type = "Condition", var = "DemonForm" }, { type = "GlobalEffect", effectType = "Buff", effectName = "Demon Form"}, { type = "Multiplier", var = "DemonFlameStacks", limitVar = "DemonFlameMaximum" } ),
+				},
+				["demon_form_grants_cast_speed_+%"] = {
+					mod("Speed", "INC", nil, ModFlag.Cast, 0, { type = "Condition", var = "DemonForm" }, { type = "GlobalEffect", effectType = "Buff", effectName = "Demon Form" } ),
+				},
+				["demon_form_life_loss_per_minute_per_stack"] = {
+					mod("LifeDegen", "BASE", nil, 0, 0, { type = "Condition", var = "DemonForm" }, { type = "GlobalEffect", effectType = "Buff", effectName = "Demon Form" }, { type = "Multiplier", var = "DemonFlameStacks", limitVar = "DemonFlameMaximum" } ),
+					div = 60,
+				},
+			},
 			baseFlags = {
 			},
 			constantStats = {
@@ -2975,6 +2991,8 @@ skills["SupportMetaCastFireSpellOnHitPlayer"] = {
 	addSkillTypes = { SkillType.Triggered, SkillType.Cooldown, },
 	excludeSkillTypes = { SkillType.SupportedByHourglass, },
 	isTrigger = true,
+	qualityStats = {
+	},
 	levels = {
 		[1] = { levelRequirement = 0, },
 		[2] = { levelRequirement = 0, },
@@ -4191,7 +4209,7 @@ skills["MeditatePlayer"] = {
 	baseTypeName = "Meditate",
 	fromTree = true,
 	color = 4,
-	description = "Channel to Recharge Energy Shield and allow that Recharge to Overflow. Channelling ends when you take damage or your Energy Shield is double its normal maximum. This skill cannot be used if your Energy Shield is already double its normal maximum or you have no maximum Energy Shield.",
+	description = "Channel to Recharge Energy Shield and allow that Recharge to Overflow. Channelling ends when you take damage or your Energy Shield is fully Overflowed.",
 	skillTypes = { [SkillType.Spell] = true, [SkillType.Channel] = true, [SkillType.Cooldown] = true, [SkillType.NoAttackInPlace] = true, },
 	castTime = 1,
 	qualityStats = {
@@ -5617,6 +5635,7 @@ skills["SupportingFirePlayer"] = {
 	baseTypeName = "Supporting Fire",
 	fromTree = true,
 	minionList = {
+		"TacticianMinion",
 	},
 	color = 4,
 	description = "Recruit artillery Minions that takes up positions behind you. They will lay in wait for your Command then fire volleys of arrows at the target location.",
@@ -5805,12 +5824,22 @@ skills["TemperWeaponPlayer"] = {
 		[39] = { storedUses = 1, levelRequirement = 90, cooldown = 5, cost = { ManaPerMinute = 4319, }, },
 		[40] = { storedUses = 1, levelRequirement = 90, cooldown = 5, cost = { ManaPerMinute = 4596, }, },
 	},
+			preDamageFunc = function(activeSkill, output)
+				activeSkill.skillData.channelTimeMultiplier = activeSkill.skillModList:Sum("BASE", activeSkill.skillCfg, "Multiplier:TemperWeaponStage")
+			end,
 	statSets = {
 		[1] = {
 			label = "Temper Weapon",
 			incrementalEffectiveness = 0.054999999701977,
 			statDescriptionScope = "skill_stat_descriptions",
+			statMap = {
+				["imbue_weapon_max_exerts"] = {
+					mod("Multiplier:TemperWeaponMaxStages", "BASE", nil),
+					div = 3,
+				},
+			},
 			baseFlags = {
+				channelRelease = true,
 			},
 			constantStats = {
 				{ "imbue_weapon_max_exerts", 12 },

@@ -531,10 +531,10 @@ return {
 		},
 		[39]={
 			list=false,
-			name="",
+			name="Targeting",
 			refTo="",
 			type="Int",
-			width=100
+			width=70
 		}
 	},
 	activeskilltype={
@@ -2270,33 +2270,26 @@ return {
 		},
 		[27]={
 			list=false,
-			name="TradeMarketCategory",
-			refTo="TradeMarketCategory",
-			type="Key",
-			width=150
-		},
-		[28]={
-			list=false,
 			name="",
 			refTo="",
 			type="Bool",
 			width=50
 		},
-		[29]={
+		[28]={
 			list=true,
 			name="Achievement",
 			refTo="AchievementItems",
 			type="Key",
 			width=280
 		},
-		[30]={
+		[29]={
 			list=false,
 			name="",
 			refTo="",
 			type="Key",
 			width=150
 		},
-		[31]={
+		[30]={
 			list=false,
 			name="",
 			refTo="",
@@ -5701,17 +5694,17 @@ return {
 		},
 		[19]={
 			list=false,
-			name="",
+			name="UniqueMonsterDamageTakenFromMinions",
 			refTo="",
 			type="Int",
-			width=150
+			width=250
 		},
 		[20]={
 			list=false,
-			name="",
+			name="MoreDamageAgainstNonUnique",
 			refTo="",
 			type="Int",
-			width=150
+			width=250
 		}
 	},
 	deliriumstashtablayout={
@@ -7667,14 +7660,14 @@ return {
 		},
 		[35]={
 			list=false,
-			name="",
+			name="CostBaseEffectiveness",
 			refTo="",
 			type="Float",
 			width=150
 		},
 		[36]={
 			list=false,
-			name="",
+			name="CostIncrementalEffectiveness",
 			refTo="",
 			type="Float",
 			width=150
@@ -12324,10 +12317,10 @@ return {
 		},
 		[10]={
 			list=false,
-			name="",
+			name="TargetingBehaviour",
 			refTo="",
 			type="Int",
-			width=70
+			width=100
 		}
 	},
 	monstervarieties={
@@ -17234,6 +17227,13 @@ return {
 			refTo="SkillGemSearchTerms",
 			type="Key",
 			width=220
+		},
+		[31]={
+			list=false,
+			name="SupportTier",
+			refTo="",
+			type="Int",
+			width=80
 		}
 	},
 	skillgemsearchterms={

@@ -258,9 +258,6 @@ statMap = {
 	["support_minion_damage_with_non_command_skills_+%_final"] = {
 		mod("MinionModifier", "LIST", { mod = mod("Damage", "MORE", nil, 0, 0, {type = "Condition", var = "CommandableSkill", neg = true}) }),
 	},
-	["minion_command_skill_cooldown_speed_+%"] = {
-		mod("MinionModifier", "LIST", { mod = mod("CooldownRecovery", "INC", nil, 0, 0, {type = "Condition", var = "CommandableSkill"}) }),
-	},
 },
 #mods
 #skillEnd
@@ -383,7 +380,7 @@ statMap = {
 
 #skill TriggeredCurseZoneHazardExplosionPlayer
 #set TriggeredCurseZoneHazardExplosionPlayer
-#flags hit
+#flags spell
 #mods
 #skillEnd
 
@@ -675,14 +672,6 @@ statMap = {
 
 #skill SupportHulkingMinionsPlayer
 #set SupportHulkingMinionsPlayer
-statMap = {
-	["support_titanblood_minion_damage_+%_final"] = {
-		mod("MinionModifier", "LIST", { mod = mod("Damage", "MORE", nil) }),
-	},
-	["support_titanblood_minion_life_+%_final"] = {
-		mod("MinionModifier", "LIST", { mod = mod("Life", "MORE", nil) }),
-	},
-},
 #mods
 #skillEnd
 
@@ -794,6 +783,14 @@ statMap = {
 #skill TriggeredLivingLightningPlayer
 #set TriggeredLivingLightningPlayer
 #flags minion
+statMap = {
+	["living_lightning_maximum_number_of_attacks"] = {
+	mod("MinionModifier", "LIST", { mod = mod("RepeatCount", "BASE", nil), }),
+	},
+	["living_lightning_beam_attack_time_ms"] = {
+		mod("MinionModifier", "LIST", { mod = mod("Multiplier:LivingLightningAttackTime", "BASE", nil) }),
+	},
+},
 #mods
 #skillEnd
 
@@ -814,6 +811,12 @@ statMap = {
 	["minion_1%_attack_speed_+%_per_X_player_dexterity"] = {
 		mod("MinionModifier", "LIST", { mod = mod("Speed", "INC", nil, ModFlag.Attack, 0, { type = "PerStat", stat = "Dex", actor = "parent", div = 10 }) }),
 		div = 10,
+	},
+	["living_lightning_maximum_number_of_attacks"] = {
+	mod("MinionModifier", "LIST", { mod = mod("RepeatCount", "BASE", nil), }),
+	},
+	["living_lightning_beam_attack_time_ms"] = {
+		mod("MinionModifier", "LIST", { mod = mod("Multiplier:LivingLightningAttackTime", "BASE", nil) }),
 	},
 },
 #mods
