@@ -2,8 +2,8 @@
 
 RELEASE_VERSION="$1"
 
-# Delete until the first line containing "--"
-sed -i '1,/--/d' temp_change.md
+# Delete until and including the first line containing "<!-- Release notes generated"
+sed -i '1,/^<!-- Release notes generated/d' temp_change.md
 # Reverse the order of lines in the file (last line becomes first, etc.)
 sed -i '1h;1d;$!H;$!d;G' temp_change.md
 # Convert "**Full Changelog**: URL" format to markdown link format "[Full Changelog](URL)"
