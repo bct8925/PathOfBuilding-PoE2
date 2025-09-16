@@ -15,6 +15,8 @@ jobs:
                 repository: 'PathOfBuildingCommunity/PathOfBuilding-Installer'
                 ref: 'master'
                 ssh-key: '${{ secrets.POB_INSTALLER_KEY }}'
+            - name: Install NSIS
+              run: choco install nsis --yes
             - name: Create installer
               run: 'python3 make_release.py --game-version 2'
             - name: Upload artifact
