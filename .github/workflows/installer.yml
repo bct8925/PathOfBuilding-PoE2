@@ -3,6 +3,11 @@ on:
   release:
     types: [published]
   workflow_dispatch:
+    inputs:
+      tag_name:
+        description: 'Tag to build'
+        required: true
+        default: 'v0.x.x'
 env:
   GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 jobs:
@@ -23,5 +28,4 @@ jobs:
               run: 'python3 make_release.py --game-version 2'
             - name: Upload artifact
               run: >
-                gh release upload ${{ github.event.release.tag_name }} (Get-ChildItem Dist -File).FullName --clobber -R ${{ github.repository }};
-
+                gh release upload ${{ github.event.release.tag_name || github.event.inputs.tag_name }} (Get-ChildItem Dist -File).FullName --clobber -R ${{ github.repository }};
