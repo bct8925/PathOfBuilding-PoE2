@@ -2928,6 +2928,31 @@ function calcs.offence(env, actor, activeSkill)
 		output.QuantityMultiplier = quantityMultiplier
 	end
 
+	if activeSkill.skillTypes[SkillType.UsableWhileMoving] then
+		local inc = skillModList:Sum("INC", skillCfg, "MovementSpeedPenalty")
+		local more = skillModList:More(skillCfg, "MovementSpeedPenalty")
+		local penaltyMod = m_max(0, skillModList:Override(skillCfg, "MovementSpeedPenalty") or (1 + inc / 100) * more)
+		local base = calcLib.mod(skillModList, skillCfg, "SkillMovementSpeed")
+		local total = (1 - base) * penaltyMod
+		output.MovementSpeedWhileUsingSkill = (1 - total) * output.MovementSpeedMod
+		output.MovementSpeedWhileUsingSkillPercent = (1 - total) * 100
+		if breakdown then
+			breakdown.MovementSpeedWhileUsingSkill = {
+				"Minimum Movement Speed while using this skill",
+				"^8(This is the lowest movement speed you will reach while using this skill,",
+				"^8subject to acceleration and deceleration)",
+				"",
+				s_format("%d%% ^8(movement speed penalty from using skill)", 100 - base * 100),
+				s_format("x %.2f) ^8(increased/reduced penalty)", 1 + inc / 100),
+				s_format("x %.2f) ^8(more/less penalty)", more),
+				s_format("= %.1f%% ^8(movement speed penalty)", 100 - output.MovementSpeedWhileUsingSkillPercent),
+				s_format(""),
+				s_format("100%% - %.1f%% ^8(100 - movement speed penalty)", 100 - output.MovementSpeedWhileUsingSkillPercent),
+				s_format("= %.1f%% ^8(movement speed while casting)", output.MovementSpeedWhileUsingSkillPercent),
+			}
+		end
+	end
+	
 	--Calculate damage (exerts, crits, ruthless, DPS, etc)
 	for _, pass in ipairs(passList) do
 		globalOutput, globalBreakdown = output, breakdown
