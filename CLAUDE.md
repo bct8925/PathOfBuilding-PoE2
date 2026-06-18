@@ -10,14 +10,29 @@ Work happens on the `bri64-mcp` branch; upstream is the community PoB2 repo.
 
 ## Requirements
 
-- Drive PoB2 two ways:
-  1. **Headless** — stateless calc: load a build, compute, return stats.
-  2. **Live GUI** — talk to a *running* PoB2 window so MCP tool calls **update its
-     in-memory state** (not just files on disk) and read results back live.
-- MCP server is **Node/TypeScript**.
-- Live-GUI link is an **in-app socket bridge**: a Lua module loaded into the
-  running app opens a local TCP socket (PoB2 bundles `socket.dll` +
-  `runtime/lua/socket.lua`); the Node server connects to it.
+Full v1 requirements (FR/NFR, tool surface, open questions, phasing) live in
+**`mcp/REQUIREMENTS.md`** — read it before designing features. Highlights:
+
+- **Live GUI is the primary backend.** MCP tool calls **mutate a running PoB2's
+  in-memory state** (tree, items, skills, config) and read results back live.
+  Headless is the secondary backend, used for optimization/search (apply the
+  winner to the live build).
+- Use cases: **analyze/explain, suggest, optimize/search, author** builds.
+- MCP server is **Node/TypeScript**, launched by local Claude Code over stdio.
+- Live-GUI link is an **in-app socket bridge** built into PoB2's source, gated by
+  an Options toggle ("Enable MCP bridge"), off by default, pumped from `OnFrame`.
+  It opens a local TCP socket (PoB2 bundles `socket.dll` + `runtime/lua/socket.lua`).
+- Mutations **apply immediately**; revert via **PoB's native undo stack**.
+- **Ships native-Windows-only, as a natural built-in PoB extension** — no WSL, no
+  Node install, no toolchain expected of users. The server ships as a single
+  self-contained Windows `.exe` (Node SEA/bun/pkg) in PoB's folder, with a bundled
+  Windows `luajit.exe` for headless. **WSL is dev-only and must not leak into the
+  product** (resolve paths/runtime relative to the Windows distribution).
+- Client-agnostic: stdio server + a documented config snippet for the user's MCP
+  client.
+- v1 operates on the **current build** only (+ new/save/save-as); **no external
+  imports** (PoB codes, account import, trade) and no open-by-name.
+- GUI must be **already running**; the MCP does not auto-launch it.
 
 ## Architecture
 
@@ -26,12 +41,15 @@ Work happens on the `bri64-mcp` branch; upstream is the community PoB2 repo.
                                         └─ TCP socket ─> Lua bridge in running PoB2 GUI (live state)
 ```
 
-The MCP server lives in **`mcp/`** (Node/TypeScript). See `mcp/README.md`. It must
-run under **Linux Node** (in WSL) so it can spawn the Linux `luajit` headless
-engine; it reaches the Windows GUI over TCP localhost. Key files:
-`mcp/src/index.ts` (tools), `mcp/src/engine/headless.ts` + `mcp/lua/run_headless.lua`
-(headless backend, working), `mcp/src/bridge/socket.ts` + `mcp/lua/bridge_server.lua`
-(live-GUI socket bridge, scaffold).
+The MCP server lives in **`mcp/`** (Node/TypeScript). See `mcp/README.md`. Key
+files: `mcp/src/index.ts` (tools), `mcp/src/engine/headless.ts` +
+`mcp/lua/run_headless.lua` (headless backend, working), `mcp/src/bridge/socket.ts`
++ `mcp/lua/bridge_server.lua` (live-GUI socket bridge, scaffold).
+
+In the **WSL dev env** the server runs under Linux Node so it can spawn the Linux
+`luajit` headless engine, and reaches the Windows GUI over TCP localhost. The v1
+target is to also run on **native Windows** — see OQ-1 in `mcp/REQUIREMENTS.md` for
+the bundled-runtime headless spike.
 
 - **PoB2 core**: Lua 5.1 / LuaJIT. GUI is a native x64 Windows exe
   (`runtime/Path of Building-PoE2.exe`) using `SimpleGraphic.dll`.
@@ -50,7 +68,9 @@ engine; it reaches the Windows GUI over TCP localhost. Key files:
 ### Environment notes (Debian 13 / Windows WSL2)
 
 - The Windows GUI runs **directly via WSL interop** — no Wine.
-- The Node runtime comes from Windows (`npm` on PATH).
+- Linux Node is installed userland (no sudo) at `~/.local/node/.../bin`; the
+  Windows-side `npm` on PATH is *not* used for the server (it can't exec the Linux
+  luajit binary).
 
 ## Build / test
 
