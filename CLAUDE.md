@@ -43,8 +43,10 @@ Full v1 requirements (FR/NFR, tool surface, open questions, phasing) live in
 
 The MCP server lives in **`mcp/`** (Node/TypeScript). See `mcp/README.md`. Key
 files: `mcp/src/index.ts` (tools), `mcp/src/engine/headless.ts` +
-`mcp/lua/run_headless.lua` (headless backend, working), `mcp/src/bridge/socket.ts`
-+ `mcp/lua/bridge_server.lua` (live-GUI socket bridge, scaffold).
+`mcp/lua/run_headless.lua` (headless backend, working), and `mcp/src/bridge/socket.ts`
+(Node client) ↔ `src/Modules/MCPBridge.lua` (the in-app socket server, built into
+PoB and loaded lazily by `main:PumpMCPBridge` when the "Enable MCP bridge" Option
+is on). Headless smoke for the bridge dispatch logic: `mcp/lua/test_bridge.lua`.
 
 In the **WSL dev env** the server runs under Linux Node so it can spawn the Linux
 `luajit` headless engine, and reaches the Windows GUI over TCP localhost. The v1

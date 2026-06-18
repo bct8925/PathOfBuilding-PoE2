@@ -115,6 +115,7 @@ function main:Init()
 	self.showFlavourText = true
 	self.showAnimations = true
 	self.showAllItemAffixes = true
+	self.enableMCPBridge = false
 	self.errorReadingSettings = false
 	
 	if not SetDPIScaleOverridePercent then SetDPIScaleOverridePercent = function(scale) end end
@@ -486,6 +487,49 @@ function main:OnFrame()
 	for _, onFrameFunc in pairs(self.onFrameFuncs) do
 		onFrameFunc()
 	end
+
+	self:PumpMCPBridge()
+end
+
+-- Drive the in-app MCP socket bridge (see Modules/MCPBridge). The bridge lets an
+-- external MCP server read and mutate the live build over a local socket. It is
+-- gated behind the "Enable MCP bridge" Option (off by default) and is lazily
+-- loaded/started when enabled, stopped when disabled. Everything is wrapped in
+-- pcall so a bridge fault can never block or crash the frame loop (NFR-5).
+function main:PumpMCPBridge()
+	if self.enableMCPBridge then
+		if not self.mcpBridge then
+			local ok, moduleOrErr = pcall(LoadModule, "Modules/MCPBridge")
+			if not ok then
+				ConPrintf("[MCP bridge] failed to load: %s", tostring(moduleOrErr))
+				self.enableMCPBridge = false -- don't retry every frame
+				return
+			end
+			self.mcpBridge = moduleOrErr
+		end
+		if not self.mcpBridge:isRunning() then
+			local build = self.modes[self.mode]
+			-- The bridge operates on the live build; only start it in BUILD mode.
+			if self.mode == "BUILD" and build then
+				local ok, err = pcall(self.mcpBridge.start, self.mcpBridge, build)
+				if not ok then
+					ConPrintf("[MCP bridge] failed to start: %s", tostring(err))
+					self.enableMCPBridge = false
+					return
+				end
+			else
+				return
+			end
+		end
+		-- Keep the bridge bound to whatever build is currently live.
+		self.mcpBridge.build = self.modes[self.mode]
+		local ok, err = pcall(self.mcpBridge.pump, self.mcpBridge)
+		if not ok then
+			ConPrintf("[MCP bridge] pump error: %s", tostring(err))
+		end
+	elseif self.mcpBridge and self.mcpBridge:isRunning() then
+		pcall(self.mcpBridge.stop, self.mcpBridge)
+	end
 end
 
 function main:OnKeyDown(key, doubleClick)
@@ -662,6 +706,9 @@ function main:LoadSettings(ignoreBuild)
 				if node.attrib.showAllItemAffixes then
 					self.showAllItemAffixes = node.attrib.showAllItemAffixes == "true"
 				end
+				if node.attrib.enableMCPBridge then
+					self.enableMCPBridge = node.attrib.enableMCPBridge == "true"
+				end
 				if node.attrib.dpiScaleOverridePercent then
 					self.dpiScaleOverridePercent = tonumber(node.attrib.dpiScaleOverridePercent) or 0
 					SetDPIScaleOverridePercent(self.dpiScaleOverridePercent)
@@ -797,6 +844,7 @@ function main:SaveSettings()
 		showFlavourText = tostring(self.showFlavourText),
 		showAnimations = tostring(self.showAnimations),
 		showAllItemAffixes = tostring(self.showAllItemAffixes),
+		enableMCPBridge = tostring(self.enableMCPBridge),
 		dpiScaleOverridePercent = tostring(self.dpiScaleOverridePercent)
 	} })
 	local res, errMsg = common.xml.SaveXMLFile(setXML, self.userPath.."Settings.xml")
@@ -881,6 +929,7 @@ function main:OpenOptionsPopup(savedState)
 		showFlavourText = self.showFlavourText,
 		showAnimations = self.showAnimations,
 		showAllItemAffixes = self.showAllItemAffixes,
+		enableMCPBridge = self.enableMCPBridge,
 		dpiScaleOverridePercent = self.dpiScaleOverridePercent
 	}
 
@@ -1152,7 +1201,14 @@ function main:OpenOptionsPopup(savedState)
 	end)
 	controls.invertSliderScrollDirection.tooltipText = "Default scroll direction is:\nScroll Up = Move right\nScroll Down = Move left"
 	controls.invertSliderScrollDirection.state = self.invertSliderScrollDirection
-	
+
+	nextRow()
+	controls.enableMCPBridge = new("CheckBoxControl", { "TOPLEFT", controls.sectionAnchor, "TOPLEFT" }, { currentX + defaultLabelPlacementX, currentY, 20 }, "^7Enable MCP bridge:", function(state)
+		self.enableMCPBridge = state
+	end)
+	controls.enableMCPBridge.tooltipText = "Opens a local socket so an external MCP server (AI assistant) can read and modify this build live.\nListens on 127.0.0.1 only. Off by default."
+	controls.enableMCPBridge.state = self.enableMCPBridge
+
 	if launch.devMode then
 		nextRow()
 		controls.disableDevAutoSave = new("CheckBoxControl", { "TOPLEFT", controls.sectionAnchor, "TOPLEFT" }, { currentX + defaultLabelPlacementX, currentY, 20 }, "^7Disable Dev AutoSave:", function(state)
@@ -1230,6 +1286,7 @@ function main:OpenOptionsPopup(savedState)
 		self.showFlavourText = savedState.showFlavourText
 		self.showAnimations = savedState.showAnimations
 		self.showAllItemAffixes = savedState.showAllItemAffixes
+		self.enableMCPBridge = savedState.enableMCPBridge
 		self.dpiScaleOverridePercent = savedState.dpiScaleOverridePercent
 		SetDPIScaleOverridePercent(self.dpiScaleOverridePercent)
 		main:ClosePopup()
