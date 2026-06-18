@@ -252,6 +252,11 @@ function Bridge:start(build, port)
 	self.server:settimeout(0) -- non-blocking; pumped from OnFrame
 	self.build = build
 	self.clients = {}
+	-- Keep PoB running OnFrame even when unfocused/minimized so the bridge is
+	-- serviced off-screen. Provided by a patched SimpleGraphic (see
+	-- scripts/simplegraphic-bridge-fix.md); guarded so it's a harmless no-op on
+	-- an unpatched DLL (where the MCP server's auto-focus workaround handles it).
+	if SetForceFrames then SetForceFrames(true) end
 	ConPrintf("[MCP bridge] listening on 127.0.0.1:%d", self.port)
 end
 
@@ -260,6 +265,7 @@ function Bridge:stop()
 		pcall(function() c.sock:close() end)
 	end
 	self.clients = {}
+	if SetForceFrames then SetForceFrames(false) end
 	if self.server then
 		pcall(function() self.server:close() end)
 		self.server = nil
