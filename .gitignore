@@ -22,6 +22,10 @@ src/luacov.stats.out
 # Release
 manifest-updated.xml
 
+# MCP distribution build artifacts (large; produced by scripts/build-dist.sh)
+/dist/
+mcp/build/
+
 # GGPK Export
 src/Export/ggpk/metadata/
 src/Export/ggpk/data/
