@@ -74,7 +74,40 @@ else
 	log "SKIP_BUSTED=1 — skipping busted"
 fi
 
-# --- 4. verify the headless engine boots --------------------------------------
+# --- 4. Node toolchain + MCP server (userland, no sudo) -----------------------
+# The MCP server is Node/TypeScript and must run under LINUX Node (Windows Node
+# cannot exec the Linux luajit headless binary). Install a userland Node LTS so
+# this needs no root, then install + build the server under mcp/.
+NODE_VER=v20.18.1
+NODE_HOME="$HOME/.local/node/node-${NODE_VER}-linux-x64"
+if [ "${SKIP_NODE:-0}" != "1" ]; then
+	case "$(uname -m)" in
+		x86_64) NA=x64;;
+		aarch64) NA=arm64;;
+		*) die "unsupported arch for userland Node: $(uname -m)";;
+	esac
+	NODE_HOME="$HOME/.local/node/node-${NODE_VER}-linux-${NA}"
+	if [ ! -x "$NODE_HOME/bin/node" ]; then
+		log "Installing userland Node $NODE_VER to $NODE_HOME"
+		mkdir -p "$HOME/.local/node"
+		curl -fsSL --max-time 180 \
+			"https://nodejs.org/dist/${NODE_VER}/node-${NODE_VER}-linux-${NA}.tar.xz" \
+			-o /tmp/node.tar.xz
+		tar -xJf /tmp/node.tar.xz -C "$HOME/.local/node"
+	fi
+	export PATH="$NODE_HOME/bin:$PATH"
+	log "Node $(node --version) / npm $(npm --version)"
+
+	log "Installing + building the MCP server (mcp/)"
+	( cd "$REPO_ROOT/mcp" && npm install && npm run build )
+
+	warn "Add Node to your PATH for future shells:"
+	warn "  export PATH=\"$NODE_HOME/bin:\$PATH\""
+else
+	log "SKIP_NODE=1 — skipping Node / MCP server"
+fi
+
+# --- 5. verify the headless engine boots --------------------------------------
 log "Verifying luautf8 loads under luajit"
 luajit -e "require('lua-utf8'); print('luautf8 OK')" \
 	|| die "luajit cannot load lua-utf8 — check luarocks install tree / package.cpath"

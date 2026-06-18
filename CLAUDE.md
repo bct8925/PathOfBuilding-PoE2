@@ -26,6 +26,13 @@ Work happens on the `bri64-mcp` branch; upstream is the community PoB2 repo.
                                         └─ TCP socket ─> Lua bridge in running PoB2 GUI (live state)
 ```
 
+The MCP server lives in **`mcp/`** (Node/TypeScript). See `mcp/README.md`. It must
+run under **Linux Node** (in WSL) so it can spawn the Linux `luajit` headless
+engine; it reaches the Windows GUI over TCP localhost. Key files:
+`mcp/src/index.ts` (tools), `mcp/src/engine/headless.ts` + `mcp/lua/run_headless.lua`
+(headless backend, working), `mcp/src/bridge/socket.ts` + `mcp/lua/bridge_server.lua`
+(live-GUI socket bridge, scaffold).
+
 - **PoB2 core**: Lua 5.1 / LuaJIT. GUI is a native x64 Windows exe
   (`runtime/Path of Building-PoE2.exe`) using `SimpleGraphic.dll`.
 - **Headless entry**: `src/HeadlessWrapper.lua` stubs the graphics/IO layer so the
@@ -66,6 +73,14 @@ busted --lua=luajit
 ```
 
 (CI also runs the suite in the `ghcr.io/pathofbuildingcommunity/pathofbuilding-tests` Docker image via `docker-compose up`.)
+
+Build / run the MCP server (Linux Node in WSL — userland Node is at
+`~/.local/node/.../bin`, also provisioned by `install-deps.sh`):
+
+```bash
+cd mcp && npm install && npm run build
+npm run smoke      # Node -> luajit -> stats, end-to-end
+```
 
 Launch the Windows GUI (WSL interop):
 
