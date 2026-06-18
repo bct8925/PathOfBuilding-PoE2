@@ -44,17 +44,70 @@ local function readStats(build, keys)
 	return stats
 end
 
+-- Snapshot every scalar entry of an output table. Non-scalars (nested tables,
+-- functions) are skipped: they're rebuilt with a fresh identity each pass and
+-- aren't part of the user-facing stat values, so including them would make the
+-- output look perpetually "unsettled".
+local function scalarSnapshot(out)
+	local snap = {}
+	for k, v in pairs(out) do
+		local t = type(v)
+		if t == "number" or t == "string" or t == "boolean" then
+			snap[k] = v
+		end
+	end
+	return snap
+end
+
+-- True if two scalar snapshots are identical (same keys, same values).
+local function snapshotsMatch(a, b)
+	if not a or not b then return false end
+	for k, v in pairs(a) do if b[k] ~= v then return false end end
+	for k, v in pairs(b) do if a[k] ~= v then return false end end
+	return true
+end
+
 -- Force an immediate recalc and return the refreshed stats. Mutators set
 -- build.buildFlag = true; rather than wait for the next frame, we run the same
--- recalc the frame loop would (Build.lua OnFrame), so the response carries the
--- already-updated numbers.
+-- recalc the frame loop would (Build.lua OnFrame) right here so the response
+-- carries the already-updated numbers.
+--
+-- A *structural* change (notably a passive-tree undo, which re-imports the node
+-- list) can need more than one BuildOutput pass before the output reflects the
+-- new state — the GUI gets this for free across successive rendered frames, but
+-- a single inline pass would read a stale value. So we settle: re-run the recalc
+-- until the *entire* scalar output stops changing between passes (bounded),
+-- mirroring multiple frames. Comparing the whole output (not just a couple of
+-- headline stats) means a stat that lags behind Life/DPS can't slip through.
+local SETTLE_PASSES = 6
+
 local function recalcAndRead(build, keys)
-	if build.buildFlag then
+	if not build.buildFlag then
+		return readStats(build, keys)
+	end
+	build.buildFlag = false
+	local prev
+	local settled = false
+	for pass = 1, SETTLE_PASSES do
+		-- Mirror Build:OnFrame's buildFlag block, RefreshStatList included: that
+		-- post-pass refresh is what lets the *next* BuildOutput observe the new
+		-- state, so a structural change settles in two passes instead of never.
 		wipeGlobalCache()
 		build.outputRevision = (build.outputRevision or 0) + 1
-		build.buildFlag = false
 		build.calcsTab:BuildOutput()
 		build:RefreshStatList()
+		local snap = scalarSnapshot(build.calcsTab.mainOutput or {})
+		if snapshotsMatch(prev, snap) then
+			settled = true
+			break
+		end
+		prev = snap
+	end
+	if not settled then
+		-- Output values are correct (each post-refresh pass is internally
+		-- consistent); we just couldn't confirm stability. Surface it rather than
+		-- silently returning a possibly-mid-settle read.
+		ConPrintf("[MCP bridge] recalc did not stabilise within %d passes", SETTLE_PASSES)
 	end
 	return readStats(build, keys)
 end
