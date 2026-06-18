@@ -24,6 +24,8 @@ local json = require("dkjson")
 
 local t_insert = table.insert
 local t_remove = table.remove
+local m_min = math.min
+local m_max = math.max
 
 local Bridge = { clients = {}, server = nil, port = 8843, lastUndoScope = nil }
 
@@ -185,6 +187,18 @@ local function getSocketGroup(build, groupIndex)
 	return group, idx
 end
 
+-- After mutating a socket group's gemList, refresh the skills editor IF that group
+-- is the one currently open in it. The editor's gem rows (name/level/quality
+-- EditControls) are loaded by SetDisplayGroup and only the trailing empty slot is
+-- re-synced each frame — so a bridge edit to the displayed group would otherwise
+-- leave stale text on screen even though the calc is correct (the level-field bug
+-- class). No-op when a different group (or none) is displayed, or headless.
+local function refreshGemEditor(skillsTab, group)
+	if skillsTab.displayGroup == group and skillsTab.SetDisplayGroup then
+		skillsTab:SetDisplayGroup(group)
+	end
+end
+
 -- A fresh gem-instance table mirroring the GUI's CreateGemSlot defaults. With no
 -- explicit level we flag it `new` so ProcessSocketGroup picks the gem's natural
 -- max level (as the GUI does); an explicit level is clamped by validateGemLevel.
@@ -305,6 +319,13 @@ function methods.setConfig(build, params)
 	end
 	configTab:AddUndoState()
 	configTab:BuildModList()
+	-- Push the new input value into the visible config control (checkbox/edit/
+	-- dropdown). The Config tab does NOT re-sync its controls from `input` every
+	-- frame (only on load / config-set switch / search), so without this the calc
+	-- updates but the on-screen control keeps showing the old value — the same
+	-- stale-display class of bug as the level field. (Config undo/redo already
+	-- refreshes via RestoreUndoState→UpdateControls.)
+	if configTab.UpdateControls then configTab:UpdateControls() end
 	build.buildFlag = true
 	Bridge.lastUndoScope = "config"
 	return {
@@ -406,6 +427,7 @@ function methods.addGem(build, params)
 	gem.gemId = gemData.id
 	t_insert(group.gemList, gem)
 	skillsTab:ProcessSocketGroup(group)
+	refreshGemEditor(skillsTab, group)
 	skillsTab:AddUndoState()
 	build.buildFlag = true
 	Bridge.lastUndoScope = "skills"
@@ -432,6 +454,7 @@ function methods.removeGem(build, params)
 	local removed = group.gemList[i].nameSpec
 	t_remove(group.gemList, i)
 	skillsTab:ProcessSocketGroup(group)
+	refreshGemEditor(skillsTab, group)
 	skillsTab:AddUndoState()
 	build.buildFlag = true
 	Bridge.lastUndoScope = "skills"
@@ -458,6 +481,7 @@ function methods.setGem(build, params)
 	if params.quality ~= nil then gem.quality = tonumber(params.quality) or gem.quality end
 	if params.enabled ~= nil then gem.enabled = params.enabled and true or false end
 	skillsTab:ProcessSocketGroup(group) -- clamps level via validateGemLevel
+	refreshGemEditor(skillsTab, group)
 	skillsTab:AddUndoState()
 	build.buildFlag = true
 	Bridge.lastUndoScope = "skills"
@@ -636,14 +660,151 @@ function methods.redo(build, params)
 	return doUndoRedo(build, params, "Redo")
 end
 
--- FR-16: build lifecycle — save / save-as on the current build. "new build" is
--- intentionally out of scope this phase (it swaps the global build and discards
--- unsaved work). No undo: saving doesn't change build state, and PoB doesn't put
--- lifecycle actions on its undo stacks.
--- params: { action = "save" | "saveAs", name = <string, saveAs only>, subPath = <string?> }
+-- FR-8: change class / ascendancy (and optionally level) on the live build.
+-- Mirrors the GUI's tree-class change: SelectClass resets the ascendancy and
+-- SelectAscendClass rebuilds node paths. Class/ascendancy are resolved by name via
+-- the tree's name maps (a numeric ascendancy id is also accepted). Recalc + new stats.
+-- NOTE class/ascendancy changes ride the tree (spec) undo stack, but `level` is a
+-- Build-level property that PoB keeps off the undo stacks — so a `tree` undo
+-- reverts the class/ascendancy but NOT a level set here (matching the GUI, where
+-- the level field isn't undoable). Re-set the level to change it back.
+-- params: { className?, ascendancy?, level?, stats? }
+function methods.setClass(build, params)
+	local spec = build.spec
+	local tree = spec.tree
+	ensureUndoSeed(spec)
+	if params.className ~= nil then
+		if type(params.className) ~= "string" then error("'className' must be a string") end
+		local classId = tree.classNameMap[params.className]
+		if not classId then error("unknown class '" .. params.className .. "'") end
+		spec:SelectClass(classId) -- resets ascendancy to 0 and rebuilds paths
+	end
+	if params.ascendancy ~= nil then
+		local ascendId
+		if type(params.ascendancy) == "number" then
+			ascendId = params.ascendancy
+		elseif type(params.ascendancy) == "string" and params.ascendancy:match("%S") then
+			local entry = tree.ascendNameMap[params.ascendancy]
+			if not entry or entry.classId ~= spec.curClassId then
+				error("ascendancy '" .. params.ascendancy .. "' is not valid for class '" ..
+					tostring(spec.curClassName) .. "'")
+			end
+			ascendId = entry.ascendClassId
+		else
+			ascendId = 0 -- empty string clears the ascendancy
+		end
+		spec:SelectAscendClass(ascendId)
+	end
+	if params.level ~= nil then
+		local lvl = tonumber(params.level)
+		if not lvl then error("'level' must be numeric") end
+		build.characterLevel = m_min(m_max(lvl, 1), 100)
+		build.characterLevelAutoMode = false
+		-- Keep the GUI's level field + auto/manual button in sync. OnFrame re-syncs
+		-- the class/ascend dropdowns from the spec each frame, but the level field is
+		-- only ever pushed via SetText (on load / auto-level) — set it here too, or
+		-- the field keeps showing the Init default while the calc uses the new value.
+		-- Guarded so headless (controls present but graphics stubbed) stays happy.
+		local controls = build.controls
+		if controls then
+			if controls.characterLevel then controls.characterLevel:SetText(tostring(build.characterLevel)) end
+			if controls.levelScalingButton then controls.levelScalingButton.label = "Manual" end
+		end
+	end
+	spec:BuildAllDependsAndPaths()
+	spec:AddUndoState()
+	build.buildFlag = true
+	Bridge.lastUndoScope = "tree"
+	return {
+		className = spec.curClassName,
+		ascendancyName = spec.curAscendClassName,
+		level = build.characterLevel,
+		stats = recalcAndRead(build, params.stats),
+	}
+end
+
+-- FR-13/FR-14: apply an ordered change-set — a list of { method, params } that
+-- name existing mutator handlers — to the build. Search evaluates a candidate by
+-- replaying its change-set headlessly; applying the winner LIVE replays the very
+-- same list through this method, so trial and live use one identical code path
+-- (resolves OQ-4: the winning change set is a semantic op list, not an XML diff,
+-- and re-applies deterministically onto the current live build). Stats read once
+-- at the end. Each op still pushes its own undo state, matching PoB's granularity.
+function methods.applyChangeSet(build, params)
+	local ops = params.ops
+	if type(ops) ~= "table" then
+		error("applyChangeSet requires an 'ops' array")
+	end
+	for i, op in ipairs(ops) do
+		if type(op) ~= "table" or type(op.method) ~= "string" then
+			error("op " .. i .. ": each op needs a string 'method'")
+		end
+		if op.method == "applyChangeSet" then
+			error("op " .. i .. ": applyChangeSet cannot be nested")
+		end
+		local handler = methods[op.method]
+		if not handler then
+			error("op " .. i .. ": unknown method '" .. op.method .. "'")
+		end
+		handler(build, op.params or {})
+	end
+	build.buildFlag = true
+	return { applied = #ops, stats = recalcAndRead(build, params.stats) }
+end
+
+-- FR-3/FR-13: serialise the live build to XML in-memory (the same text SaveDB
+-- writes to disk, but never touching the filesystem). Used to snapshot the live
+-- build so headless search can evaluate trials off it without churning the GUI.
+function methods.exportXml(build)
+	local xml = build:SaveDB("snapshot")
+	if not xml then
+		error("failed to serialise the build to XML")
+	end
+	return {
+		xml = xml,
+		buildName = build.buildName,
+		className = build.spec and build.spec.curClassName,
+	}
+end
+
+-- FR-16: build lifecycle — new / save / save-as on the current build.
+-- params: { action = "new" | "save" | "saveAs", name?, subPath?, className?,
+--           ascendancy?, level?, stats? }
 function methods.lifecycle(build, params)
 	local action = params.action
-	if action == "save" then
+	if action == "new" then
+		-- FR-15/FR-16: replace the current build with a fresh one. main:SetMode is
+		-- deferred (the swap runs at the START of the next OnFrame, after the bridge
+		-- pump), so we'd return before the new build exists. Instead drive the same
+		-- transition synchronously here: Shutdown then Init re-initialise the stable
+		-- main.modes.BUILD table in place — so `build` (this handler's reference and
+		-- the bridge's cached one) stays valid, no stale reference. We force
+		-- abortSave=true first so Build:Shutdown's dev-mode autosave (which can pop a
+		-- BLOCKING Save dialog) is skipped — same hazard writeBuild avoids.
+		if params.name ~= nil and type(params.name) ~= "string" then
+			error("'name' must be a string")
+		end
+		build.abortSave = true
+		build:Shutdown()
+		build:Init(false, params.name or "Unnamed build")
+		local stats
+		if params.className ~= nil or params.ascendancy ~= nil or params.level ~= nil then
+			-- setClass recalcs and reads stats for us.
+			stats = methods.setClass(build, params).stats
+		else
+			build.buildFlag = true
+			stats = recalcAndRead(build, params.stats)
+		end
+		Bridge.lastUndoScope = "tree"
+		return {
+			action = "new",
+			buildName = build.buildName,
+			className = build.spec and build.spec.curClassName,
+			ascendancyName = build.spec and build.spec.curAscendClassName,
+			level = build.characterLevel,
+			stats = stats,
+		}
+	elseif action == "save" then
 		if not build.dbFileName then
 			error("this build has never been saved; call lifecycle with action='saveAs' and a 'name'")
 		end
@@ -661,10 +822,8 @@ function methods.lifecycle(build, params)
 		build.buildName = sanitized
 		build.dbFileSubPath = subPath
 		writeBuild(build)
-	elseif action == "new" then
-		error("'new' build is not supported yet (this phase ships save/saveAs only)")
 	else
-		error("lifecycle requires action 'save' or 'saveAs' (got " .. tostring(action) .. ")")
+		error("lifecycle requires action 'new', 'save' or 'saveAs' (got " .. tostring(action) .. ")")
 	end
 	return {
 		action = action,
