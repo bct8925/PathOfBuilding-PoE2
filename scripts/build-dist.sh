@@ -95,6 +95,23 @@ cp "$REPO_ROOT/help.txt"      "$STAGE/help.txt" 2>/dev/null || true
 cp "$BUILD/pob2-mcp.exe" "$STAGE/pob2-mcp.exe"
 cp "$REPO_ROOT/scripts/dist-README.txt" "$STAGE/README.txt"
 
+# MCP headless runner: config.ts resolves run_headless.lua at <POB_ROOT>/mcp-lua/
+# in the shipped layout (the SEA exe's dir is the install folder, not a script dir,
+# so the runner is anchored on POB_ROOT — see HEADLESS_RUNNER). Ship just that one
+# script; it only needs the already-staged runtime/lua (dkjson) + src/ at run time.
+mkdir -p "$STAGE/mcp-lua"
+cp "$MCP/lua/run_headless.lua" "$STAGE/mcp-lua/run_headless.lua"
+
+# The Windows headless interpreter (gui_optimize / search backend) rides along in
+# the wholesale runtime/ copy above, paired with the identical runtime/lua51.dll
+# and runtime/lua-utf8.dll (LuaJIT 2.1, same ABI). Assert it actually landed so the
+# dist is honest about whether optimize/headless will work on the target.
+if [[ -f "$STAGE/runtime/luajit.exe" ]]; then
+  say "Headless backend: bundled runtime/luajit.exe ($("$STAGE/runtime/luajit.exe" -v 2>/dev/null | head -1 | tr -d '\r'))"
+else
+  printf '\n\033[33mWARNING: runtime/luajit.exe is missing — gui_optimize/headless search will be INERT in this dist.\n         Drop an ABI-matched LuaJIT 2.1 x64 luajit.exe into runtime/ and rebuild.\033[0m\n'
+fi
+
 # --- 5. zip it ----------------------------------------------------------------
 say "Zipping"
 ( cd "$DIST" && rm -f PathOfBuilding2-MCP.zip && \
