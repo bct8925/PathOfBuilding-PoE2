@@ -978,6 +978,62 @@ function methods.setItemRoll(build, params)
 	}
 end
 
+-- FR-9: replace an item in place from new raw text — the general "edit any mod"
+-- primitive (add/remove/change affixes, fix a base) that setItemRoll's range-only
+-- tweak can't do. Reads the old item's current slot(s), parses the new raw, equips
+-- it wherever the old one sat, and removes the old item. Pairs with getItems (read
+-- the item's `raw`, edit the text, send it here). Recalc + return new stats.
+-- params: { itemId, raw, stats? }
+function methods.replaceItem(build, params)
+	local itemsTab = build.itemsTab
+	local itemId = tonumber(params.itemId)
+	local oldItem = itemId and itemsTab.items[itemId]
+	if not oldItem then
+		error("no item with id " .. tostring(params.itemId) .. " in the build")
+	end
+	if type(params.raw) ~= "string" or not params.raw:match("%S") then
+		error("replaceItem requires the new item text in 'raw'")
+	end
+
+	-- Which slots currently hold the old item? Equipment slots AND tree jewel
+	-- sockets are both ItemSlotControls keyed by selItemId.
+	local heldSlots = {}
+	for slotName, slot in pairs(itemsTab.slots) do
+		if slot.selItemId == itemId then t_insert(heldSlots, slotName) end
+	end
+
+	-- Parse the replacement and validate it for every slot the old item occupied
+	-- BEFORE mutating anything (so a bad swap changes nothing and leaves no stray).
+	local newItem = new("Item", params.raw)
+	if not newItem.base then
+		error("could not parse the new item text (unknown or missing base type)")
+	end
+	for _, slotName in ipairs(heldSlots) do
+		if not itemsTab:IsItemValidForSlot(newItem, slotName) then
+			error("the new item is not valid for slot '" .. slotName ..
+				"' that the old item occupied; keep a compatible base type")
+		end
+	end
+
+	ensureUndoSeed(itemsTab)
+	itemsTab:AddItem(newItem, true) -- assigns newItem.id; no auto-equip, no undo state
+	for _, slotName in ipairs(heldSlots) do
+		itemsTab.slots[slotName]:SetSelItemId(newItem.id)
+	end
+	-- DeleteItem clears any leftover refs to the old item, then PopulateSlots +
+	-- AddUndoState — capturing the whole swap as ONE undo step.
+	itemsTab:DeleteItem(oldItem)
+	build.buildFlag = true
+	Bridge.lastUndoScope = "items"
+	return {
+		replaced = itemId,
+		itemId = newItem.id,
+		name = newItem.name,
+		slots = heldSlots,
+		stats = recalcAndRead(build, params.stats),
+	}
+end
+
 -- FR-17: drive PoB's native per-tab undo/redo stack. PoB has no single global
 -- undo stack — each tab (tree/config/items/skills) is its own UndoHandler, and
 -- the GUI's Ctrl+Z dispatches to the active tab. We mirror that: an explicit
