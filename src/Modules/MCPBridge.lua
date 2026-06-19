@@ -37,14 +37,25 @@ local DEFAULT_STATS = {
 	"FireResist", "ColdResist", "LightningResist", "ChaosResist",
 }
 
--- Read selected stats out of the live calc output.
+-- Read selected stats out of the live calc output. Returns (stats, unknown): when
+-- the caller passed an EXPLICIT key list, any requested key the calc doesn't produce
+-- is collected into `unknown` so the caller can tell "stat is invalid" from "stat is
+-- zero" (a present key always has a number/bool, even 0). `unknown` is nil for the
+-- default set (those keys are known-good) or when every requested key resolved.
 local function readStats(build, keys)
 	local out = build.calcsTab.mainOutput or {}
 	local stats = {}
+	local unknown
+	local explicit = keys ~= nil
 	for _, k in ipairs(keys or DEFAULT_STATS) do
-		stats[k] = out[k]
+		local v = out[k]
+		stats[k] = v
+		if explicit and v == nil then
+			unknown = unknown or {}
+			t_insert(unknown, k)
+		end
 	end
-	return stats
+	return stats, unknown
 end
 
 -- The meaningful allocated picks of a tree: its Notables and Keystones (the
@@ -363,7 +374,10 @@ end
 local methods = {}
 
 -- FR-4/FR-5: identity + final computed stats of the live build.
+-- params: { stats?, includeNotables? }. allocatedNotables is opt-in (includeNotables,
+-- default false) — it's a heavy list that was previously re-sent every call (P2).
 function methods.getBuild(build, params)
+	params = params or {}
 	local spec = build.spec
 	local mainSocketGroup = build.skillsTab and build.skillsTab.socketGroupList[build.mainSocketGroup]
 	local mainSkillName
@@ -372,7 +386,8 @@ function methods.getBuild(build, params)
 		mainSkillName = activeSkill and activeSkill.activeEffect and activeSkill.activeEffect.grantedEffect
 			and activeSkill.activeEffect.grantedEffect.name
 	end
-	return {
+	local stats, unknownStats = readStats(build, params.stats)
+	local result = {
 		className = spec and spec.curClassName,
 		ascendancyName = spec and spec.curAscendClassName,
 		level = build.characterLevel,
@@ -381,9 +396,41 @@ function methods.getBuild(build, params)
 		-- Tree readout so the assistant can SEE the current tree instead of guessing
 		-- node ids (use searchPassives to find specific nodes + their distance).
 		allocatedNodeCount = spec and spec:CountAllocNodes() or 0,
-		allocatedNotables = allocatedNotables(spec),
-		stats = readStats(build, params and params.stats),
+		stats = stats,
 	}
+	if params.includeNotables then
+		result.allocatedNotables = allocatedNotables(spec)
+	end
+	-- B4: surface requested-but-nonexistent stat keys instead of silently dropping them
+	-- (use getStatKeys to discover valid keys).
+	if unknownStats then result.unknownStats = unknownStats end
+	return result
+end
+
+-- B4/M5 (stat-key discovery): list the calc output keys the build currently produces,
+-- so the assistant uses real keys instead of guessing (the getConfig equivalent for
+-- mainOutput). Read-only. Ensures a calc has run, then returns scalar keys + values,
+-- optionally filtered by a `query` substring. params: { query?, limit? }
+function methods.getStatKeys(build, params)
+	local out = build.calcsTab.mainOutput
+	if not out or not next(out) then
+		build.calcsTab:BuildOutput()
+		out = build.calcsTab.mainOutput or {}
+	end
+	local query = type(params.query) == "string" and params.query:lower() or nil
+	local keys = {}
+	for k, v in pairs(out) do
+		local t = type(v)
+		if (t == "number" or t == "boolean" or t == "string")
+			and (not query or k:lower():find(query, 1, true)) then
+			t_insert(keys, { key = k, value = v })
+		end
+	end
+	table.sort(keys, function(a, b) return a.key < b.key end)
+	local total = #keys
+	local limit = tonumber(params.limit) or 250
+	while #keys > limit do t_remove(keys) end
+	return { total = total, returned = #keys, keys = keys, defaultStats = DEFAULT_STATS }
 end
 
 -- FR-6/FR-7: per-stat breakdown — how a value was derived, Calcs-tab style.
@@ -968,6 +1015,69 @@ function methods.setMainSkill(build, params)
 	}
 end
 
+-- FR-10 (M2): create a new, empty socket group and return its 1-based index, so the
+-- assistant can build a link without cannibalising an existing group. Optionally label
+-- it, assign an equipment slot, flag it for Full DPS, or make it the main group.
+-- params: { label?, slot?, includeInFullDPS?, setMain?, stats? }
+function methods.createSocketGroup(build, params)
+	local skillsTab = build.skillsTab
+	ensureUndoSeed(skillsTab)
+	local group = {
+		label = (type(params.label) == "string" and params.label) or "",
+		enabled = true,
+		includeInFullDPS = params.includeInFullDPS == true,
+		groupCount = 1,
+		mainActiveSkill = 1,
+		gemList = {},
+		slot = (type(params.slot) == "string" and params.slot ~= "" and params.slot) or nil,
+	}
+	t_insert(skillsTab.socketGroupList, group)
+	local groupIdx = #skillsTab.socketGroupList
+	if params.setMain == true then build.mainSocketGroup = groupIdx end
+	skillsTab:AddUndoState()
+	build.buildFlag = true
+	Bridge.lastUndoScope = "skills"
+	return {
+		group = groupIdx,
+		label = (group.label ~= "" and group.label) or nil,
+		slot = group.slot,
+		includeInFullDPS = group.includeInFullDPS,
+		isMain = (groupIdx == build.mainSocketGroup),
+		count = #skillsTab.socketGroupList,
+		gems = gemListSummary(group),
+	}
+end
+
+-- FR-10 (B3/M2): set a socket group's properties — `includeInFullDPS` (the toggle
+-- that makes a group contribute to FullDPS; groups load with it OFF, which is why
+-- FullDPS reads 0 until set), `enabled`, `label`, `slot`. Recalc + new stats.
+-- params: { group?, includeInFullDPS?, enabled?, label?, slot?, stats? }
+function methods.setSocketGroup(build, params)
+	local skillsTab = build.skillsTab
+	local group, groupIdx = getSocketGroup(build, params.group)
+	if group.source ~= nil then
+		error("group " .. groupIdx .. " is item/node-derived (its skill is granted by gear or a " ..
+			"passive node); it can't be edited here and will vanish if you remove its source")
+	end
+	ensureUndoSeed(skillsTab)
+	if params.includeInFullDPS ~= nil then group.includeInFullDPS = params.includeInFullDPS and true or false end
+	if params.enabled ~= nil then group.enabled = params.enabled and true or false end
+	if params.label ~= nil then group.label = tostring(params.label) end
+	if params.slot ~= nil then group.slot = (params.slot ~= "" and tostring(params.slot)) or nil end
+	skillsTab:AddUndoState()
+	build.buildFlag = true
+	Bridge.lastUndoScope = "skills"
+	return {
+		group = groupIdx,
+		label = (group.label and group.label ~= "") and group.label or nil,
+		enabled = group.enabled,
+		includeInFullDPS = group.includeInFullDPS,
+		slot = group.slot,
+		gems = gemListSummary(group),
+		stats = recalcAndRead(build, params.stats),
+	}
+end
+
 -- FR-10: add a gem (active skill or support) to a socket group, resolved by name
 -- via PoB's fuzzy matcher. With no target group (and none on the build) a new
 -- group is created and made the main group, so authoring from scratch works.
@@ -983,7 +1093,13 @@ function methods.addGem(build, params)
 	end
 	ensureUndoSeed(skillsTab)
 	local group, groupIdx
-	if params.group ~= nil then
+	if params.newGroup == true then
+		-- M2: explicitly start a fresh socket group (so you needn't cannibalise one).
+		group = { label = "", enabled = true, includeInFullDPS = true,
+			groupCount = 1, mainActiveSkill = 1, gemList = {} }
+		t_insert(skillsTab.socketGroupList, group)
+		groupIdx = #skillsTab.socketGroupList
+	elseif params.group ~= nil then
 		group, groupIdx = getSocketGroup(build, params.group)
 	elseif skillsTab.socketGroupList[build.mainSocketGroup] then
 		group, groupIdx = getSocketGroup(build)
@@ -1059,14 +1175,27 @@ function methods.setGem(build, params)
 	if not gem then
 		error("setGem requires a valid 1-based 'index' into the group's gemList")
 	end
-	if params.level ~= nil then gem.level = tonumber(params.level) or gem.level end
-	if params.quality ~= nil then gem.quality = tonumber(params.quality) or gem.quality end
+	-- Remember what was requested so we can report if the engine clamps it (B2: a
+	-- silently-ignored level/quality change must not be reported as success).
+	local reqLevel = params.level ~= nil and tonumber(params.level) or nil
+	local reqQuality = params.quality ~= nil and tonumber(params.quality) or nil
+	if reqLevel then gem.level = reqLevel end
+	if reqQuality then gem.quality = reqQuality end
 	if params.enabled ~= nil then gem.enabled = params.enabled and true or false end
-	skillsTab:ProcessSocketGroup(group) -- clamps level via validateGemLevel
+	skillsTab:ProcessSocketGroup(group) -- clamps level/quality (e.g. tiered supports cap at 1)
 	refreshGemEditor(skillsTab, group)
 	skillsTab:AddUndoState()
 	build.buildFlag = true
 	Bridge.lastUndoScope = "skills"
+	local notes = {}
+	if reqLevel and gem.level ~= reqLevel then
+		local maxLvl = gem.gemData and gem.gemData.naturalMaxLevel
+		t_insert(notes, ("level set to %d, not the requested %d%s"):format(
+			gem.level, reqLevel, maxLvl and (" (this gem's max level is " .. maxLvl .. ")") or ""))
+	end
+	if reqQuality and gem.quality ~= reqQuality then
+		t_insert(notes, ("quality set to %d, not the requested %d"):format(gem.quality, reqQuality))
+	end
 	return {
 		group = groupIdx,
 		gemIndex = i,
@@ -1074,6 +1203,8 @@ function methods.setGem(build, params)
 		level = gem.level,
 		quality = gem.quality,
 		enabled = gem.enabled,
+		levelClamped = (reqLevel ~= nil and gem.level ~= reqLevel) or false,
+		note = #notes > 0 and table.concat(notes, "; ") or nil,
 		derived = group.source ~= nil,
 		gems = gemListSummary(group),
 		stats = recalcAndRead(build, params.stats),
@@ -1122,7 +1253,24 @@ function methods.getItems(build, params)
 		end
 	end
 
-	return { items = items, equippedCount = #items, inventory = inventory }
+	-- P3: expose the build's equipment slot names (so they aren't discovered by erroring),
+	-- and — opt-in — which equipment slots are currently EMPTY (an absent slot was previously
+	-- the only signal). Tree jewel sockets (slot.nodeId) are excluded; use getJewelSockets.
+	local validSlots, emptySlots = {}, {}
+	for _, slot in ipairs(itemsTab.orderedSlots) do
+		if not slot.nodeId then
+			t_insert(validSlots, slot.slotName)
+			if (slot.selItemId or 0) == 0 then t_insert(emptySlots, slot.slotName) end
+		end
+	end
+
+	return {
+		items = items,
+		equippedCount = #items,
+		inventory = inventory,
+		validSlots = validSlots,
+		emptySlots = params.includeEmpty and emptySlots or nil,
+	}
 end
 
 -- FR-9 (item browser / discovery): search PoB's UNIQUE item database so the
@@ -1195,6 +1343,17 @@ function methods.addItem(build, params)
 	local item = new("Item", raw)
 	if not item.base then
 		error("could not parse item text (unknown or missing base type)")
+	end
+	-- B5: a UNIQUE given as bare `raw` (title + base, no mod lines) parses to a BLANK
+	-- item — silently wrong. If the title matches a real unique in PoB's DB, refuse and
+	-- point at the `name` path (which fills in the true mods) rather than add a blank.
+	if not fromDatabase and item.rarity == "UNIQUE" and #(item.explicitModLines or {}) == 0 then
+		local dbItem = resolveDBUnique(item.title or item.name or "")
+		if dbItem then
+			error("'" .. tostring(item.title or item.name) .. "' is a known unique but the supplied " ..
+				"text has no modifiers — adding it would create a BLANK item. Pass name=\"" .. dbItem.name ..
+				"\" to add it with its real mods, or include the full item text (with mod lines) in 'raw'.")
+		end
 	end
 	-- Optional variant pick for multi-variant uniques (mirrors the GUI's variant
 	-- dropdown: set .variant then BuildAndParseRaw to rebuild the active mods).
