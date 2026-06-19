@@ -41,17 +41,26 @@ Full v1 requirements (FR/NFR, tool surface, open questions, phasing) live in
                                         └─ TCP socket ─> Lua bridge in running PoB2 GUI (live state)
 ```
 
-The MCP server lives in **`mcp/`** (Node/TypeScript). See `mcp/README.md`. Key
-files: `mcp/src/index.ts` (tools), `mcp/src/engine/headless.ts` +
-`mcp/lua/run_headless.lua` (headless backend, working), and `mcp/src/bridge/socket.ts`
-(Node client) ↔ `src/Modules/MCPBridge.lua` (the in-app socket server, built into
-PoB and loaded lazily by `main:PumpMCPBridge` when the "Enable MCP bridge" Option
-is on). Headless smoke for the bridge dispatch logic: `mcp/lua/test_bridge.lua`.
+The MCP server lives in **`mcp/`** (Node/TypeScript). See `mcp/README.md` for the full
+tool surface (34 tools) and dev/packaging commands. Key files: `mcp/src/index.ts` (registers
+all tools — source of truth), `mcp/src/engine/headless.ts` + `mcp/lua/run_headless.lua`
+(headless backend) and `mcp/src/engine/optimize.ts` (search scoring), and
+`mcp/src/bridge/socket.ts` (Node client) ↔ `src/Modules/MCPBridge.lua` (the in-app socket
+server, built into PoB and loaded lazily by `main:PumpMCPBridge` when the "Enable MCP bridge"
+Option is on). Tests: `mcp/lua/test_bridge.lua` (200+ headless checks) + `mcp/src/smoke_bridge.ts`
+(live GUI, run from Windows Node). Packaging: `scripts/build-dist.sh` (single Windows `.exe`)
+and `scripts/dev-update-local.sh` (update a local install in place).
 
-In the **WSL dev env** the server runs under Linux Node so it can spawn the Linux
-`luajit` headless engine, and reaches the Windows GUI over TCP localhost. The v1
-target is to also run on **native Windows** — see OQ-1 in `mcp/REQUIREMENTS.md` for
-the bundled-runtime headless spike.
+Three **project skills** under `.claude/skills/` build on these tools: `poe2-build` (the
+build-authoring workflow that drives the `gui_*` tools), `poe2-mechanics` (PoE2 concepts +
+real PoB stat/config vocabulary — the knowledge base), and `poe2-sync` (`/poe2-sync` —
+refresh that knowledge from the latest patch notes).
+
+In the **WSL dev env** the server runs under Linux Node so it can spawn the Linux `luajit`
+headless engine, and reaches the Windows GUI over TCP localhost. The product ships
+**native-Windows-only** as a self-contained `.exe` + bundled `luajit.exe` — OQ-1/OQ-6 are
+resolved (see `mcp/REQUIREMENTS.md`); the remaining step is the native-Windows SEA-exe +
+live-GUI acceptance run.
 
 - **PoB2 core**: Lua 5.1 / LuaJIT. GUI is a native x64 Windows exe
   (`runtime/Path of Building-PoE2.exe`) using `SimpleGraphic.dll`.
