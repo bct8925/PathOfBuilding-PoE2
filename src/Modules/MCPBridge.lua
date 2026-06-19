@@ -236,6 +236,50 @@ local function newGemInstance(params)
 	return gem
 end
 
+-- FR-9 (discovery) helpers. Mirror setItemRoll's ranged-line test so getItems
+-- reports exactly which explicit mods are roll-addressable, and parse the
+-- "(min-max)" bounds so the caller can reason about a roll without guessing.
+local function rangedBounds(line)
+	local lo, hi = line:match("%((%-?%d+%.?%d*)%-(%-?%d+%.?%d*)%)")
+	if not lo then return nil end
+	return tonumber(lo), tonumber(hi)
+end
+
+-- Serialise one item for getItems: identity + explicit mod lines with their roll
+-- metadata (modIndex is the setItemRoll target), implicits/enchants as plain
+-- context, and the canonical raw text for full inspection / round-trip.
+local function describeItem(item, slotName, includeRaw)
+	local explicitMods = {}
+	for i, modLine in ipairs(item.explicitModLines or {}) do
+		local lo, hi = rangedBounds(modLine.line)
+		local entry = { modIndex = i, line = stripColor(modLine.line), ranged = lo ~= nil }
+		if lo then
+			entry.range = modLine.range -- current 0..1 (nil = unset)
+			entry.min, entry.max = lo, hi
+			if modLine.range then entry.value = lo + (hi - lo) * modLine.range end
+		end
+		t_insert(explicitMods, entry)
+	end
+	local function plainLines(modLines)
+		local out = {}
+		for _, ml in ipairs(modLines or {}) do t_insert(out, stripColor(ml.line)) end
+		return out
+	end
+	local out = {
+		slot = slotName,
+		itemId = item.id,
+		name = item.name,
+		rarity = item.rarity,
+		baseName = item.baseName,
+		itemType = item.type,
+		explicitMods = explicitMods,
+		implicits = plainLines(item.implicitModLines),
+		enchants = plainLines(item.enchantModLines),
+	}
+	if includeRaw and item.BuildRaw then out.raw = item:BuildRaw() end
+	return out
+end
+
 -- method handlers: each receives (build, params) and returns a result table.
 local methods = {}
 
@@ -621,6 +665,51 @@ function methods.setGem(build, params)
 		enabled = gem.enabled,
 		stats = recalcAndRead(build, params.stats),
 	}
+end
+
+-- FR-9 (discovery): read the build's items so the assistant can find an item's id
+-- and mod lines BEFORE editing, instead of only knowing items it added itself.
+-- Read-only. Defaults to EQUIPPED items in display order; pass `slot` to read one,
+-- or includeInventory=true to also list unequipped items in the build's item set.
+-- params: { slot?, includeInventory?, includeRaw? }
+function methods.getItems(build, params)
+	local itemsTab = build.itemsTab
+	local includeRaw = params.includeRaw ~= false -- default true
+	local items = {}
+	local equippedIds = {}
+
+	local function addSlot(slot)
+		local id = slot.selItemId
+		if id and id ~= 0 then
+			local item = itemsTab.items[id]
+			if item then
+				equippedIds[id] = true
+				t_insert(items, describeItem(item, slot.slotName, includeRaw))
+			end
+		end
+	end
+
+	if params.slot then
+		local slot = itemsTab.slots[params.slot]
+		if not slot then
+			error("no such equipment slot '" .. tostring(params.slot) .. "'")
+		end
+		addSlot(slot)
+	else
+		for _, slot in ipairs(itemsTab.orderedSlots) do addSlot(slot) end
+	end
+
+	local inventory
+	if params.includeInventory then
+		inventory = {}
+		for id, item in pairs(itemsTab.items) do
+			if not equippedIds[id] then
+				t_insert(inventory, describeItem(item, nil, includeRaw))
+			end
+		end
+	end
+
+	return { items = items, equippedCount = #items, inventory = inventory }
 end
 
 -- FR-9: add an item to the live build from raw item text (the same format PoB's

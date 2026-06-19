@@ -113,10 +113,18 @@ else
 fi
 
 # --- 5. zip it ----------------------------------------------------------------
-say "Zipping"
-( cd "$DIST" && rm -f PathOfBuilding2-MCP.zip && \
-  zip -rq PathOfBuilding2-MCP.zip PathOfBuilding2-MCP )
+# Set SKIP_ZIP=1 to leave just the staged folder (used by dev-update-local.sh,
+# which syncs from the stage and doesn't need the multi-hundred-MB archive).
+if [[ "${SKIP_ZIP:-0}" == "1" ]]; then
+  say "Done (SKIP_ZIP — staged folder only)"
+  du -sh "$STAGE"
+  echo "Staged distribution: $STAGE"
+else
+  say "Zipping"
+  ( cd "$DIST" && rm -f PathOfBuilding2-MCP.zip && \
+    zip -rq PathOfBuilding2-MCP.zip PathOfBuilding2-MCP )
 
-say "Done"
-du -sh "$STAGE" "$DIST/PathOfBuilding2-MCP.zip"
-echo "Distribution: $DIST/PathOfBuilding2-MCP.zip"
+  say "Done"
+  du -sh "$STAGE" "$DIST/PathOfBuilding2-MCP.zip"
+  echo "Distribution: $DIST/PathOfBuilding2-MCP.zip"
+fi
