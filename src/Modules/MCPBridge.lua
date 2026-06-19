@@ -244,6 +244,46 @@ local function getSocketGroup(build, groupIndex)
 	return group, idx
 end
 
+-- FR-10 helper: resolve a gem within a group by 1-based `index` OR by `name` (so the caller
+-- needn't track indices that renumber after add/remove — ISSUES #7). `index` wins if given;
+-- otherwise match nameSpec exactly (case-insensitive), then fall back to a unique substring.
+-- Errors clearly (ambiguous / not found) so a wrong target never silently hits another gem.
+local function resolveGemIndex(group, params)
+	local list = group.gemList or {}
+	if params.index ~= nil then
+		local i = tonumber(params.index)
+		if not i or not list[i] then
+			error("no gem at index " .. tostring(params.index) .. " in the group (it has " ..
+				#list .. " gem(s); use getSkills)")
+		end
+		return i
+	end
+	if type(params.name) == "string" and params.name:match("%S") then
+		local want = params.name:lower()
+		local exact, exactN
+		local sub, subN
+		for i, gem in ipairs(list) do
+			local ns = type(gem.nameSpec) == "string" and gem.nameSpec:lower() or nil
+			if ns then
+				if ns == want then exact = exact or i; exactN = (exactN or 0) + 1 end
+				if ns:find(want, 1, true) then sub = sub or i; subN = (subN or 0) + 1 end
+			end
+		end
+		if exactN == 1 then return exact end
+		if exactN and exactN > 1 then
+			error("gem name '" .. params.name .. "' is ambiguous in this group (" .. exactN ..
+				" copies) — use 'index'")
+		end
+		if subN == 1 then return sub end
+		if subN and subN > 1 then
+			error("gem name '" .. params.name .. "' matches multiple gems in this group — " ..
+				"use 'index' or the exact name")
+		end
+		error("no gem named '" .. params.name .. "' in the group (use getSkills to list its gems)")
+	end
+	error("requires a 1-based 'index' or a gem 'name' to identify the gem (use getSkills)")
+end
+
 -- After mutating a socket group's gemList, refresh the skills editor IF that group
 -- is the one currently open in it. The editor's gem rows (name/level/quality
 -- EditControls) are loaded by SetDisplayGroup and only the trailing empty slot is
@@ -1454,10 +1494,7 @@ function methods.removeGem(build, params)
 	local skillsTab = build.skillsTab
 	ensureUndoSeed(skillsTab)
 	local group, groupIdx = getSocketGroup(build, params.group)
-	local i = tonumber(params.index)
-	if not i or not group.gemList[i] then
-		error("removeGem requires a valid 1-based 'index' into the group's gemList")
-	end
+	local i = resolveGemIndex(group, params)
 	local removed = group.gemList[i].nameSpec
 	t_remove(group.gemList, i)
 	skillsTab:ProcessSocketGroup(group)
@@ -1481,11 +1518,8 @@ function methods.setGem(build, params)
 	local skillsTab = build.skillsTab
 	ensureUndoSeed(skillsTab)
 	local group, groupIdx = getSocketGroup(build, params.group)
-	local i = tonumber(params.index)
-	local gem = i and group.gemList[i]
-	if not gem then
-		error("setGem requires a valid 1-based 'index' into the group's gemList")
-	end
+	local i = resolveGemIndex(group, params)
+	local gem = group.gemList[i]
 	-- Remember what was requested so we can report if the engine clamps it (B2: a
 	-- silently-ignored level/quality change must not be reported as success).
 	local reqLevel = params.level ~= nil and tonumber(params.level) or nil
