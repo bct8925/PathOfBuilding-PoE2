@@ -42,7 +42,7 @@ Full v1 requirements (FR/NFR, tool surface, open questions, phasing) live in
 ```
 
 The MCP server lives in **`mcp/`** (Node/TypeScript). See `mcp/README.md` for the full
-tool surface (34 tools) and dev/packaging commands. Key files: `mcp/src/index.ts` (registers
+tool surface (35 tools) and dev/packaging commands. Key files: `mcp/src/index.ts` (registers
 all tools — source of truth), `mcp/src/engine/headless.ts` + `mcp/lua/run_headless.lua`
 (headless backend) and `mcp/src/engine/optimize.ts` (search scoring), and
 `mcp/src/bridge/socket.ts` (Node client) ↔ `src/Modules/MCPBridge.lua` (the in-app socket

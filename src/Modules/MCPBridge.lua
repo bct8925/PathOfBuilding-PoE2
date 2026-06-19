@@ -538,6 +538,120 @@ function methods.explainStat(build, params)
 	return result
 end
 
+-- FR-6 (M1): per-skill damage & ailment breakdown — the NUMERICAL view a build's thesis
+-- needs (hit components per damage type, crit/speed, hit + DoT/ailment DPS, and ailment
+-- chances/buildup) so claims like "phys hits build Freeze -> shatter" can be VERIFIED, not
+-- inferred. Defaults to the build's main skill; pass a 1-based `group` to read another
+-- socket group's skill. Read-only: a non-main group is computed on a throwaway calc pass
+-- (calcs.buildOutput returns a fresh env without overwriting the live mainEnv), with
+-- build.mainSocketGroup restored immediately — the live build is left exactly as found.
+-- params: { group? }
+local AILMENT_PAT = { "freeze", "chill", "shock", "ignite", "bleed", "poison", "scorch", "brittle", "sap" }
+function methods.explainSkill(build, params)
+	local calcsTab = build.calcsTab
+	if not calcsTab.mainEnv then calcsTab:BuildOutput() end
+	local skillsTab = build.skillsTab
+	local targetIdx = tonumber(params.group) or build.mainSocketGroup
+	local group = skillsTab.socketGroupList[targetIdx]
+	if not group then
+		error("no socket group at index " .. tostring(targetIdx) ..
+			" (build has " .. #skillsTab.socketGroupList .. " group(s); use getSkills)")
+	end
+
+	local env
+	if targetIdx == build.mainSocketGroup then
+		env = calcsTab.mainEnv
+	else
+		-- Temporarily make the requested group main, compute a fresh env, restore. This
+		-- does NOT touch calcsTab.mainEnv (buildOutput returns a new env), so live reads
+		-- are unaffected; we restore mainSocketGroup before returning regardless.
+		local prevMain = build.mainSocketGroup
+		build.mainSocketGroup = targetIdx
+		local ok, built = pcall(calcsTab.calcs.buildOutput, build, "MAIN")
+		build.mainSocketGroup = prevMain
+		if not ok then
+			error("could not compute the skill for group " .. targetIdx .. ": " .. tostring(built))
+		end
+		env = built
+	end
+
+	local player = env.player
+	local output = player.output or {}
+	local mainSkill = player.mainSkill
+	if not mainSkill then
+		error("group " .. targetIdx .. " has no active skill to explain (add an active gem with addGem)")
+	end
+
+	-- defensive setter: only include keys the calc actually produced (numbers/bools).
+	local function put(t, k, v)
+		if type(v) == "number" or type(v) == "boolean" then t[k] = v end
+	end
+
+	-- Identity + the skill's tags (which scaling/supports apply). PoE2 leaves skillFlags
+	-- empty post-calc, so read the human tag string from the source gem.
+	local grantedEffect = mainSkill.activeEffect and mainSkill.activeEffect.grantedEffect
+	local tags
+	local srcInstance = mainSkill.activeEffect and mainSkill.activeEffect.srcInstance
+	local srcGemId = srcInstance and srcInstance.gemId
+	if srcGemId and data.gems and data.gems[srcGemId] then tags = data.gems[srcGemId].tagString end
+
+	-- Hit damage per type (the RESULT of any conversion) + overall. PoB exposes the final
+	-- per-type average as `<type>HitAverage` and the pre-crit base range as
+	-- `<type>MinBase`/`<type>MaxBase`; there's no post-everything per-type min/max key.
+	local byType = {}
+	for _, dt in ipairs({ "Physical", "Lightning", "Cold", "Fire", "Chaos" }) do
+		local avg = output[dt .. "HitAverage"]
+		local mnB, mxB = output[dt .. "MinBase"], output[dt .. "MaxBase"]
+		if (avg and avg > 0) or (mnB and mnB > 0) or (mxB and mxB > 0) then
+			local e = {}
+			put(e, "average", avg); put(e, "minBase", mnB); put(e, "maxBase", mxB)
+			byType[dt] = e
+		end
+	end
+	local hit = { byType = byType }
+	put(hit, "min", output.TotalMin); put(hit, "max", output.TotalMax)
+	put(hit, "average", output.AverageHit); put(hit, "chanceToHit", output.HitChance)
+
+	local crit = {}
+	put(crit, "chance", output.CritChance); put(crit, "multiplier", output.CritMultiplier)
+	put(crit, "preEffectiveChance", output.PreEffectiveCritChance)
+
+	local dps = {}
+	for k, key in pairs({ total = "TotalDPS", combined = "CombinedDPS",
+		withBleed = "WithBleedDPS", withPoison = "WithPoisonDPS", withIgnite = "WithIgniteDPS",
+		dotTotal = "TotalDotDPS", ignite = "IgniteDPS", bleed = "BleedDPS", poison = "PoisonDPS",
+		impale = "ImpaleDPS", decay = "DecayDPS", culling = "CullingDPS" }) do
+		put(dps, k, output[key])
+	end
+
+	-- Ailment chances / effect / duration / buildup — swept by name so it captures whatever
+	-- the calc exposes (FreezeChanceOnHit, ChillEffectMod, ShockEffect, etc.) without guessing
+	-- exact key names. This is the "verify freeze/shock/ignite numerically" surface.
+	local ailments = {}
+	for k, v in pairs(output) do
+		if (type(v) == "number" or type(v) == "boolean") and type(k) == "string"
+			and not k:find("DPS$") then
+			local lk = k:lower()
+			for _, pat in ipairs(AILMENT_PAT) do
+				if lk:find(pat, 1, true) then ailments[k] = v; break end
+			end
+		end
+	end
+
+	return {
+		group = targetIdx,
+		isMain = (targetIdx == build.mainSocketGroup),
+		name = grantedEffect and grantedEffect.name,
+		skillPart = mainSkill.skillPartName,
+		tags = tags,
+		speed = output.Speed,
+		hit = hit,
+		crit = crit,
+		dps = dps,
+		ailments = ailments,
+	}
+end
+
 -- FR-7: query the raw modifier database — "why is my X what it is". With a
 -- `query` substring it lists matching internal mod names (discovery, since names
 -- are internal like "Life"/"FireResistance"/"Damage"); with an exact `mod` it
