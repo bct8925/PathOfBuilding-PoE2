@@ -8,12 +8,16 @@
 .DESCRIPTION
   Run scripts\install-simplegraphic-buildtools.ps1 first (Git + VS 2022 C++ + CMake).
 
+  Builds from the FORK branch that already carries the SetForceFrames patch
+  (default bct8925/PathOfBuilding-SimpleGraphic @ feature/force-frames), so there
+  is no manual patching step. See FORK.md in that repo for the patch + how to
+  rebase it onto new upstream releases.
+
   Steps performed:
-    1. git clone --recursive  (vcpkg + imgui + glm + luautf8 + Lua-cURLv3 submodules)
-    2. (you apply the bridge patch - see scripts\simplegraphic-bridge-fix.md)
-    3. cmake configure  (Visual Studio 17 2022, x64, vcpkg submodule toolchain)
-    4. cmake --build --target INSTALL --config Release
-    5. the built DLL + deps land in -InstallPrefix
+    1. git clone --recursive the fork branch (or sync an existing clone to it)
+    2. cmake configure  (Visual Studio 17 2022, x64, vcpkg submodule toolchain)
+    3. cmake --build --target INSTALL --config Release
+    4. the built DLL + deps land in -InstallPrefix
 
   NOTE: the FIRST build is long (vcpkg compiles ANGLE, curl, abseil, ... - often
   30-90 minutes) and downloads a lot. Subsequent builds are fast. Use a path
@@ -33,11 +37,15 @@
 param(
   [string]$WorkDir       = 'C:\dev\PoB-SimpleGraphic-build',
   [string]$InstallPrefix = 'C:\dev\PoB-SimpleGraphic-build\install',
+  # The fork + branch that carries the SetForceFrames patch. Override to build a
+  # different fork/branch (e.g. upstream master to compare).
+  [string]$Repo          = 'https://github.com/bct8925/PathOfBuilding-SimpleGraphic',
+  [string]$Branch        = 'feature/force-frames',
   [switch]$Configure
 )
 
 $ErrorActionPreference = 'Stop'
-$repo  = 'https://github.com/PathOfBuildingCommunity/PathOfBuilding-SimpleGraphic'
+$repo  = $Repo
 $src   = Join-Path $WorkDir 'PoB-SimpleGraphic'
 $build = Join-Path $WorkDir 'build-SimpleGraphic'
 
@@ -71,18 +79,26 @@ Ensure-Tool 'cmake' @("$env:ProgramFiles\CMake\bin\cmake.exe", $vsCMake) | Out-N
 
 New-Item -ItemType Directory -Force -Path $WorkDir | Out-Null
 
-# 1. clone (recursive) or update submodules
+# 1. clone the fork branch, or sync an existing clone to it (picks up rebases /
+#    force-pushes; re-points origin if an older clone tracked a different remote)
 if (-not (Test-Path $src)) {
-  Write-Host "=== Cloning SimpleGraphic (recursive) ===" -ForegroundColor Cyan
-  git clone --recursive $repo $src
+  Write-Host "=== Cloning $repo ($Branch, recursive) ===" -ForegroundColor Cyan
+  git clone --recursive --branch $Branch $repo $src
 } else {
-  Write-Host "=== Repo present; syncing submodules ===" -ForegroundColor Cyan
+  Write-Host "=== Repo present; syncing to $Branch ===" -ForegroundColor Cyan
+  git -C $src remote set-url origin $repo
+  git -C $src fetch origin
+  git -C $src checkout $Branch
+  git -C $src reset --hard "origin/$Branch"   # discards local edits; the patch is committed on the branch
   git -C $src submodule update --init --recursive
 }
 
-Write-Host "`n*** Apply the bridge keep-awake patch now if you haven't:" -ForegroundColor Yellow
-Write-Host "    see scripts\simplegraphic-bridge-fix.md  (edits ui_main.h, ui_main.cpp, ui_api.cpp)" -ForegroundColor Yellow
-Write-Host "    Without it, the rebuilt DLL still stalls the bridge when PoB is unfocused.`n" -ForegroundColor Yellow
+# Sanity: confirm the SetForceFrames patch is actually in the source we're about
+# to build (guards against accidentally pointing at an unpatched repo/branch).
+if (-not (Select-String -Path (Join-Path $src 'ui_api.cpp') -SimpleMatch 'SetForceFrames' -Quiet)) {
+  throw "Source at $src does not contain the SetForceFrames patch - wrong -Repo/-Branch? (expected $Repo @ $Branch)"
+}
+Write-Host "SetForceFrames patch present in source." -ForegroundColor DarkGray
 
 # 2. configure
 $toolchain = Join-Path $src 'vcpkg\scripts\buildsystems\vcpkg.cmake'

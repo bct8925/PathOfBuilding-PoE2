@@ -1,5 +1,11 @@
 # SimpleGraphic "keep-awake" patch — the long-term MCP bridge fix
 
+> The patch now lives in a fork: **bct8925/PathOfBuilding-SimpleGraphic @ `feature/force-frames`**
+> (upstream PR #103 was declined as out-of-scope). `scripts/build-simplegraphic.ps1`
+> builds from that fork directly. For how to rebase the patch onto new upstream
+> releases and rebuild/redeploy, see **`FORK.md`** in that fork. The sections below
+> document the change itself.
+
 ## The problem (root cause)
 
 The MCP bridge is pumped from PoB's Lua `OnFrame`. But SimpleGraphic's frame loop
