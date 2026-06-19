@@ -800,6 +800,91 @@ function methods.socketJewel(build, params)
 	return result
 end
 
+-- FR-10 (gem browser) helper. Serialise one DATABASE gem (an entry of data.gems,
+-- NOT a gem in the build) for searchGems: identity + requirements + the human
+-- effect text. gem.grantedEffect (resolved at load to data.skills[grantedEffectId])
+-- carries the `description` and the `support` flag.
+local function describeGem(gem, includeDescription)
+	local ge = gem.grantedEffect or {}
+	local out = {
+		name = gem.name,
+		gemType = gem.gemType,
+		support = (ge.support and true) or false,
+		tier = gem.Tier,
+		tags = gem.tagString,
+		reqStr = gem.reqStr,
+		reqDex = gem.reqDex,
+		reqInt = gem.reqInt,
+		naturalMaxLevel = gem.naturalMaxLevel,
+	}
+	if gem.gemFamily then out.gemFamily = gem.gemFamily end
+	if gem.weaponRequirements then out.weaponRequirements = gem.weaponRequirements end
+	if includeDescription and ge.description then out.description = ge.description end
+	return out
+end
+
+-- FR-10 (discovery): browse PoB's GEM database so the assistant can find which
+-- active skills and support gems exist and what they DO, before adding them by name
+-- (addGem) — instead of guessing names/tiers. Read-only. Searches build.data.gems
+-- (the same set addGem/FindSkillGem resolve against). Matches `query` (plain,
+-- case-insensitive) against the gem name, gemFamily, tag string, and effect
+-- description; optional `type` filters by tag/gemType substring (e.g. "Attack",
+-- "Spell", "Cold", "Projectile", "Minion"); optional `support` (bool) restricts to
+-- support gems (true) or active skills (false). PoE2 gems are TIERED — a family like
+-- "Fire Penetration" returns its tiers ("Fire Penetration I", "II") so the caller
+-- picks the exact name addGem needs. params: { query?, type?, support?, limit?, includeDescription? }
+function methods.searchGems(build, params)
+	local gems = (build.data and build.data.gems) or data.gems
+	if not gems then
+		error("the gem database isn't available")
+	end
+	local query = type(params.query) == "string" and params.query:lower() or nil
+	local typeQ = type(params.type) == "string" and params.type:lower() or nil
+	local limit = tonumber(params.limit) or 30
+	local includeDescription = params.includeDescription ~= false
+	local wantSupport = params.support -- true | false | nil(both)
+
+	local function matchesSupport(ge)
+		if wantSupport == nil then return true end
+		local isSupport = (ge.support and true) or false
+		return isSupport == (wantSupport and true or false)
+	end
+	local function matchesType(gem)
+		if not typeQ then return true end
+		local hay = ((gem.tagString or "") .. " " .. (gem.gemType or "")):lower()
+		return hay:find(typeQ, 1, true) ~= nil
+	end
+	local function matchesQuery(gem, ge)
+		if not query then return true end
+		if gem.name and gem.name:lower():find(query, 1, true) then return true end
+		if gem.gemFamily and gem.gemFamily:lower():find(query, 1, true) then return true end
+		if gem.tagString and gem.tagString:lower():find(query, 1, true) then return true end
+		if includeDescription and ge.description and ge.description:lower():find(query, 1, true) then return true end
+		return false
+	end
+
+	-- Dedupe by display name (data.gems can hold variant entries that share a name;
+	-- addGem resolves by name, so the name is the meaningful unit to browse).
+	local seen = {}
+	local results = {}
+	for _, gem in pairs(gems) do
+		local ge = gem.grantedEffect or {}
+		if gem.name and not seen[gem.name] and matchesSupport(ge) and matchesType(gem)
+			and matchesQuery(gem, ge) then
+			seen[gem.name] = true
+			t_insert(results, describeGem(gem, includeDescription))
+		end
+	end
+	-- Active skills first, then by name (stable, browsable).
+	table.sort(results, function(a, b)
+		if a.support ~= b.support then return not a.support end
+		return (a.name or "") < (b.name or "")
+	end)
+	local total = #results
+	while #results > limit do t_remove(results) end
+	return { query = params.query, total = total, returned = #results, gems = results }
+end
+
 -- FR-10 (discovery): read the build's socket groups and their gems so the
 -- assistant can target set_main_skill / add_gem / set_gem / remove_gem by REAL
 -- group/gem indices instead of guessing. Read-only. No params.
