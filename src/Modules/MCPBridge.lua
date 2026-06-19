@@ -72,6 +72,38 @@ local function allocatedNotables(spec)
 	return out
 end
 
+-- The passive POINT BUDGET (so the assistant knows if a tree is over/under budget without
+-- asking the user). CountAllocNodes returns (normalUsed, ascUsed, secondaryAscUsed, ...).
+-- Available NORMAL points at the current level mirrors PoB's own progress relationship
+-- (Build:EstimatePlayerProgress, the inverse of its level<-points estimate): (level-1) +
+-- cumulative campaign quest points for the act bracketing the level + any ExtraPoints from
+-- mods. Ascendancy is a flat 8. In auto-level builds total≈used by construction.
+local function passivePointBudget(build)
+	local spec = build.spec
+	if not spec then return nil end
+	local used, ascUsed = spec:CountAllocNodes()
+	local budget = {
+		pointsUsed = used,
+		ascendancyUsed = ascUsed or 0,
+		ascendancyTotal = 8,
+		ascendancyRemaining = 8 - (ascUsed or 0),
+	}
+	if build.acts then
+		local extra = (build.calcsTab.mainOutput and build.calcsTab.mainOutput.ExtraPoints) or 0
+		local level = build.characterLevel or 1
+		local questPoints = 0
+		for a = 1, (build.maxActs or #build.acts) do
+			local act = build.acts[a]
+			if act and level >= (act.level or 1) then questPoints = act.questPoints or questPoints end
+		end
+		local total = (level - 1) + questPoints + extra
+		budget.level = level
+		budget.pointsTotal = total
+		budget.pointsRemaining = total - used
+	end
+	return budget
+end
+
 -- Snapshot every scalar entry of an output table. Non-scalars (nested tables,
 -- functions) are skipped: they're rebuilt with a fresh identity each pass and
 -- aren't part of the user-facing stat values, so including them would make the
@@ -253,6 +285,16 @@ end
 local function gemListSummary(group)
 	local out = {}
 	for j, gem in ipairs(group.gemList or {}) do
+		-- Mark active-vs-support and surface tags so the caller knows a gem's role and which
+		-- supports are tag-compatible WITHOUT external game knowledge (ISSUES #5). Resolve
+		-- from the gem DB by gemId (always present) rather than relying on gem.gemData,
+		-- which the calc only populates after a full BuildOutput.
+		local gd = gem.gemData or (gem.gemId and data.gems and data.gems[gem.gemId])
+		local ge = gd and gd.grantedEffect
+		-- Compute support explicitly: `ge and (.. or false) or nil` would collapse a
+		-- legitimate `false` to nil (false or nil == nil), making active skills look unknown.
+		local support
+		if ge then support = ge.support and true or false end
 		t_insert(out, {
 			index = j,
 			name = (gem.nameSpec and gem.nameSpec ~= "" and gem.nameSpec) or nil,
@@ -260,6 +302,8 @@ local function gemListSummary(group)
 			quality = gem.quality,
 			enabled = gem.enabled,
 			gemId = gem.gemId,
+			support = support,
+			tags = gd and gd.tagString or nil,
 		})
 	end
 	return out
@@ -396,6 +440,9 @@ function methods.getBuild(build, params)
 		-- Tree readout so the assistant can SEE the current tree instead of guessing
 		-- node ids (use searchPassives to find specific nodes + their distance).
 		allocatedNodeCount = spec and spec:CountAllocNodes() or 0,
+		-- Passive point budget (used / total / remaining + ascendancy) so the assistant
+		-- never has to ask the user how many points are spare.
+		points = passivePointBudget(build),
 		stats = stats,
 	}
 	if params.includeNotables then
@@ -557,18 +604,28 @@ end
 -- FR-11 (discovery): list Configuration-tab options with their current values and
 -- (for dropdowns) valid choices, so the assistant uses real var names + values
 -- instead of guessing. Read-only. params: { query? } (filter by var or label text)
+-- params: { query?, modifiedOnly?, limit?, offset? }. The full catalog is ~hundreds of
+-- options (a bare call used to overflow the response), so results are PAGINATED with a
+-- default limit, and `modifiedOnly` returns just the options whose value differs from the
+-- default — the fast path for "what did the user actually change / why is this DPS weird".
+-- Each entry carries `isDefault` so user-set toggles are distinguishable from defaults.
 function methods.getConfig(build, params)
 	local varList = LoadModule("Modules/ConfigOptions")
 	local configTab = build.configTab
 	local input = configTab.configSets[configTab.activeConfigSetId].input
 	local query = type(params.query) == "string" and params.query:lower() or nil
-	local options = {}
+	local modifiedOnly = params.modifiedOnly == true
+	local limit = tonumber(params.limit) or 60
+	local offset = tonumber(params.offset) or 0
+
+	local matched = {}
 	for _, varData in ipairs(varList) do
 		local var = varData.var
 		if type(var) == "string" then
 			local label = stripColor(varData.label or "")
 			if not query or var:lower():find(query, 1, true) or label:lower():find(query, 1, true) then
-				local entry = { var = var, label = label, type = varData.type, value = input[var] }
+				local value = input[var]
+				local entry = { var = var, label = label, type = varData.type, value = value }
 				if varData.type == "list" and varData.list then
 					local choices = {}
 					for _, opt in ipairs(varData.list) do
@@ -581,11 +638,41 @@ function methods.getConfig(build, params)
 				elseif varData.defaultState ~= nil then
 					entry.default = varData.defaultState
 				end
-				t_insert(options, entry)
+				-- Distinguish user-set from default: unset (nil) is the default; a set value
+				-- counts as modified unless it equals the known default.
+				if value == nil then
+					entry.isDefault = true
+				elseif entry.default ~= nil then
+					entry.isDefault = (value == entry.default)
+				else
+					entry.isDefault = false
+				end
+				if not modifiedOnly or not entry.isDefault then
+					t_insert(matched, entry)
+				end
 			end
 		end
 	end
-	return { options = options, count = #options, activeConfigSet = configTab.activeConfigSetId }
+
+	-- Page the matches so a broad call can't overflow the response.
+	local total = #matched
+	local options = {}
+	for i = offset + 1, m_min(offset + limit, total) do
+		t_insert(options, matched[i])
+	end
+	local result = {
+		options = options,
+		count = #options,
+		total = total,
+		offset = offset,
+		activeConfigSet = configTab.activeConfigSetId,
+	}
+	if offset + #options < total then
+		result.hasMore = true
+		result.note = ("showing %d-%d of %d; pass a 'query', 'modifiedOnly', or a higher 'offset' to see more"):
+			format(offset + 1, offset + #options, total)
+	end
+	return result
 end
 
 -- FR-11: toggle / set a Configuration-tab option, recalc, return new stats.
@@ -640,27 +727,72 @@ function methods.setPassive(build, params)
 		error("no passive node with id " .. tostring(nodeId) .. " on the current tree")
 	end
 	local alloc = params.alloc ~= false -- default true
+	local dryRun = params.dryRun == true
 
 	-- Snapshot the allocated set so we can diff out the actual change set below.
 	local before = {}
 	for id in pairs(spec.allocNodes) do before[id] = true end
 
+	-- Refresh paths/dependencies so node.path (alloc preview) and node.depends (dealloc
+	-- cascade) are current — needed for the guards, the dry-run, and validation.
+	spec:BuildAllDependsAndPaths()
+
 	if alloc then
-		-- pathDist is "points from the current tree" (1000 == unreachable). Make sure
-		-- it's current, then validate connectivity and the optional path-length cap
-		-- BEFORE mutating, so a bad request changes nothing.
-		spec:BuildAllDependsAndPaths()
+		-- pathDist is "points from the current tree" (1000 == unreachable). Validate
+		-- connectivity and the optional path-length cap BEFORE mutating.
 		local dist = node.pathDist
-		if not dist or dist >= 1000 then
+		if node.alloc then
+			-- already allocated; nothing to add
+		elseif not dist or dist >= 1000 then
 			error("node " .. nodeId .. " (" .. (node.dn or node.name or "?") ..
 				") is not connectable to the current tree")
 		end
 		local maxPath = tonumber(params.maxPath)
-		if maxPath and dist > maxPath then
+		if maxPath and dist and dist > maxPath then
 			error(("allocating node %d (%s) would path through %d point(s) (maxPath %d); "
 				.. "raise 'maxPath' or pick a closer node (use searchPassives)")
 				:format(nodeId, node.dn or node.name or "?", dist, maxPath))
 		end
+	else
+		-- DeallocNode removes node.depends (every node that relies on this one for its
+		-- path — see PassiveSpec:DeallocNode). Guard against an unintended cascade.
+		local maxRemoved = tonumber(params.maxRemoved)
+		local cascade = #(node.depends or { node })
+		if node.alloc and maxRemoved and cascade > maxRemoved then
+			error(("deallocating node %d (%s) would remove %d node(s) (maxRemoved %d); "
+				.. "it's a connector, not a leaf — raise 'maxRemoved', pick a leaf "
+				.. "(searchPassives reports isLeaf/dependentCount), or dryRun first")
+				:format(nodeId, node.dn or node.name or "?", cascade, maxRemoved))
+		end
+	end
+
+	-- Dry run: report exactly what WOULD change, applying nothing. Alloc preview = the
+	-- nodes on node.path not yet allocated; dealloc preview = node.depends.
+	if dryRun then
+		local preview = {}
+		if alloc then
+			for _, n in ipairs(node.path or {}) do
+				if not spec.allocNodes[n.id] then
+					t_insert(preview, { id = n.id, name = n.dn or n.name, type = n.type })
+				end
+			end
+		elseif node.alloc then
+			for _, n in ipairs(node.depends or {}) do
+				t_insert(preview, { id = n.id, name = n.dn or n.name, type = n.type })
+			end
+		end
+		return {
+			nodeId = nodeId,
+			nodeName = node.dn or node.name,
+			alloc = alloc,
+			dryRun = true,
+			changedNodes = preview,
+			changedCount = #preview,
+			allocatedNodeCount = spec:CountAllocNodes(),
+		}
+	end
+
+	if alloc then
 		spec:AllocNode(node)
 	else
 		spec:DeallocNode(node)
@@ -740,14 +872,24 @@ function methods.searchPassives(build, params)
 			local distOk = (reachable and (not maxDist or dist <= maxDist))
 				or (not reachable and includeUnreachable and not maxDist)
 			if distOk then
-				t_insert(results, {
+				local entry = {
 					id = node.id,
 					name = node.dn,
 					type = node.type,
 					alloc = node.alloc or false,
 					pathDist = reachable and dist or nil,
+					neighborCount = node.linked and #node.linked or nil,
 					stats = node.sd,
-				})
+				}
+				-- For ALLOCATED nodes, expose how safe a refund is: dependentCount is how
+				-- many OTHER allocated nodes cascade-remove with it (node.depends includes
+				-- the node itself); isLeaf flags a safe single-point refund.
+				if node.alloc and node.depends then
+					local cascade = #node.depends
+					entry.dependentCount = cascade - 1
+					entry.isLeaf = (cascade <= 1)
+				end
+				t_insert(results, entry)
 			end
 		end
 	end
@@ -1673,6 +1815,8 @@ function methods.getTreeSpecs(build, params)
 		specs = specs,
 		availableVersions = availableVersions,
 		latestTreeVersion = latestTreeVersion,
+		-- Point budget for the ACTIVE spec (used / total / remaining + ascendancy).
+		points = passivePointBudget(build),
 	}
 end
 
