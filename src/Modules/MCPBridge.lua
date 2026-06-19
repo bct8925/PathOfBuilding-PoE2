@@ -365,6 +365,103 @@ function methods.explainStat(build, params)
 	return result
 end
 
+-- FR-7: query the raw modifier database — "why is my X what it is". With a
+-- `query` substring it lists matching internal mod names (discovery, since names
+-- are internal like "Life"/"FireResistance"/"Damage"); with an exact `mod` it
+-- returns every contributing modifier (type/value/source/tags) plus the summed
+-- BASE/INC and the MORE multiplier. Read-only. params: { mod?, query?, limit? }
+function methods.queryMods(build, params)
+	local env = build.calcsTab.mainEnv
+	if not env or not env.player or not env.player.modDB then
+		error("no calc env yet — the build hasn't been calculated")
+	end
+	local modDB = env.player.modDB
+	local query = type(params.query) == "string" and params.query:lower() or nil
+	local limit = tonumber(params.limit) or 50
+
+	-- Discovery: no exact mod given -> list mod names matching the query.
+	if not params.mod then
+		local names = {}
+		for name, list in pairs(modDB.mods) do
+			if not query or name:lower():find(query, 1, true) then
+				t_insert(names, { name = name, entries = #list })
+			end
+		end
+		table.sort(names, function(a, b) return a.name < b.name end)
+		local total = #names
+		while #names > limit do t_remove(names) end
+		return {
+			matchedNames = names, total = total, returned = #names,
+			note = "pass one of these as 'mod' to see its contributing modifiers",
+		}
+	end
+
+	-- Detail: every modifier registered under this name, with its source + tags.
+	local list = modDB.mods[params.mod]
+	if not list then
+		error("no modifiers named '" .. tostring(params.mod) ..
+			"' (call queryMods with a 'query' substring to find the right name)")
+	end
+	local modifiers = {}
+	for _, mod in ipairs(list) do
+		local tags = {}
+		for _, tag in ipairs(mod) do
+			if type(tag) == "table" and tag.type then t_insert(tags, tag.type) end
+		end
+		local vt = type(mod.value)
+		t_insert(modifiers, {
+			type = mod.type,
+			value = (vt == "number" or vt == "boolean") and mod.value or nil,
+			valueKind = (vt ~= "number" and vt ~= "boolean") and vt or nil,
+			source = mod.source,
+			flags = (mod.flags and mod.flags ~= 0) and mod.flags or nil,
+			tags = #tags > 0 and tags or nil,
+		})
+	end
+	return {
+		mod = params.mod,
+		count = #modifiers,
+		sumBase = modDB:Sum("BASE", nil, params.mod),
+		sumInc = modDB:Sum("INC", nil, params.mod),
+		moreMultiplier = modDB:More(nil, params.mod),
+		modifiers = modifiers,
+	}
+end
+
+-- FR-11 (discovery): list Configuration-tab options with their current values and
+-- (for dropdowns) valid choices, so the assistant uses real var names + values
+-- instead of guessing. Read-only. params: { query? } (filter by var or label text)
+function methods.getConfig(build, params)
+	local varList = LoadModule("Modules/ConfigOptions")
+	local configTab = build.configTab
+	local input = configTab.configSets[configTab.activeConfigSetId].input
+	local query = type(params.query) == "string" and params.query:lower() or nil
+	local options = {}
+	for _, varData in ipairs(varList) do
+		local var = varData.var
+		if type(var) == "string" then
+			local label = stripColor(varData.label or "")
+			if not query or var:lower():find(query, 1, true) or label:lower():find(query, 1, true) then
+				local entry = { var = var, label = label, type = varData.type, value = input[var] }
+				if varData.type == "list" and varData.list then
+					local choices = {}
+					for _, opt in ipairs(varData.list) do
+						t_insert(choices, { val = opt.val, label = stripColor(opt.label or tostring(opt.val)) })
+					end
+					entry.choices = choices
+					if varData.defaultIndex and varData.list[varData.defaultIndex] then
+						entry.default = varData.list[varData.defaultIndex].val
+					end
+				elseif varData.defaultState ~= nil then
+					entry.default = varData.defaultState
+				end
+				t_insert(options, entry)
+			end
+		end
+	end
+	return { options = options, count = #options, activeConfigSet = configTab.activeConfigSetId }
+end
+
 -- FR-11: toggle / set a Configuration-tab option, recalc, return new stats.
 -- params: { var = "<configVarName>", value = <bool|number|string> }
 function methods.setConfig(build, params)
@@ -535,6 +632,45 @@ function methods.searchPassives(build, params)
 	local total = #results
 	while #results > limit do t_remove(results) end
 	return { query = params.query, total = total, returned = #results, nodes = results }
+end
+
+-- FR-10 (discovery): read the build's socket groups and their gems so the
+-- assistant can target set_main_skill / add_gem / set_gem / remove_gem by REAL
+-- group/gem indices instead of guessing. Read-only. No params.
+function methods.getSkills(build, params)
+	local skillsTab = build.skillsTab
+	local groups = {}
+	for i, group in ipairs(skillsTab.socketGroupList) do
+		local gems = {}
+		for j, gem in ipairs(group.gemList or {}) do
+			t_insert(gems, {
+				index = j,
+				name = gem.nameSpec,
+				level = gem.level,
+				quality = gem.quality,
+				enabled = gem.enabled,
+				gemId = gem.gemId,
+			})
+		end
+		local mainSkillName
+		local active = group.displaySkillList and group.mainActiveSkill
+			and group.displaySkillList[group.mainActiveSkill]
+		if active and active.activeEffect and active.activeEffect.grantedEffect then
+			mainSkillName = active.activeEffect.grantedEffect.name
+		end
+		t_insert(groups, {
+			index = i,
+			label = (group.label and group.label ~= "") and group.label or nil,
+			slot = group.slot,
+			enabled = group.enabled,
+			isMain = (i == build.mainSocketGroup),
+			mainActiveSkill = group.mainActiveSkill,
+			mainSkillName = mainSkillName,
+			includeInFullDPS = group.includeInFullDPS,
+			gems = gems,
+		})
+	end
+	return { mainSocketGroup = build.mainSocketGroup, count = #groups, groups = groups }
 end
 
 -- FR-10: choose the main socket group, and optionally the active skill within it.
