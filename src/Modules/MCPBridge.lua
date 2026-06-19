@@ -1236,6 +1236,158 @@ function methods.setClass(build, params)
 	}
 end
 
+-- FR-8 (discovery): list the build's passive-tree SPECS and the tree VERSIONS the
+-- active tree can be converted to, so the assistant switches/converts by real
+-- identifiers instead of guessing. Read-only. A build can hold several trees
+-- (treeTab.specList) — each a class + allocation set on a specific tree version;
+-- `specs` enumerates them (the active one flagged, switch with selectSpec) and
+-- `availableVersions` is the ordered version list (convert with setTreeVersion).
+function methods.getTreeSpecs(build, params)
+	local treeTab = build.treeTab
+	local specs = {}
+	for i, spec in ipairs(treeTab.specList) do
+		local v = spec.treeVersion
+		t_insert(specs, {
+			index = i,
+			title = (spec.title and spec.title ~= "") and spec.title or nil,
+			treeVersion = v,
+			versionDisplay = (treeVersions[v] and treeVersions[v].display) or v,
+			isActive = (i == treeTab.activeSpec),
+			className = spec.curClassName,
+			ascendancyName = spec.curAscendClassName,
+			allocatedNodeCount = spec:CountAllocNodes(),
+		})
+	end
+	local availableVersions = {}
+	for _, v in ipairs(treeVersionList) do
+		t_insert(availableVersions, {
+			version = v,
+			display = (treeVersions[v] and treeVersions[v].display) or v,
+			isLatest = (v == latestTreeVersion),
+		})
+	end
+	return {
+		activeSpec = treeTab.activeSpec,
+		specCount = #specs,
+		specs = specs,
+		availableVersions = availableVersions,
+		latestTreeVersion = latestTreeVersion,
+	}
+end
+
+-- FR-8: convert the ACTIVE passive tree to a different tree version, recalc, and
+-- report which allocated nodes the conversion DROPPED — a version change can
+-- silently de-allocate passives that no longer exist on the target tree. Mirrors
+-- the GUI's version-dropdown convert (TreeTab:ConvertToVersion): it builds a new
+-- spec on the target version, replays the current allocations (re-mapping node
+-- hashes and de-allocating what's gone), and makes it active.
+--
+-- UNDO/REVERT: a conversion is a STRUCTURAL specList op (it adds/removes whole
+-- specs and moves activeSpec), NOT a per-tab spec edit — so gui_undo {scope=tree}
+-- does NOT revert it (that undoes allocation edits WITHIN a spec). Instead, with
+-- keepOld=true (default) the previous tree is retained as a selectable alternate
+-- spec: revert by switching back with selectSpec to the reported `previousSpec`
+-- index (this is the GUI's own "Copy + Convert, switch back via the tree selector"
+-- story). keepOld=false replaces the tree in place — NOT revertible this way
+-- (the old tree is discarded). We therefore clear lastUndoScope here so a bare
+-- gui_undo can't silently operate on the new spec's edits.
+-- params: { version, keepOld? (default true), stats? }
+function methods.setTreeVersion(build, params)
+	local treeTab = build.treeTab
+	local version = params.version
+	if type(version) ~= "string" or not treeVersions[version] then
+		error("setTreeVersion requires a known 'version' (one of: " ..
+			table.concat(treeVersionList, ", ") .. "); use getTreeSpecs to list them")
+	end
+	local prevSpec = build.spec
+	local prevVersion = prevSpec.treeVersion
+	if version == prevVersion then
+		error("the active tree is already on version " .. version ..
+			" (use getTreeSpecs to see versions and other specs)")
+	end
+	local prevSpecIndex = treeTab.activeSpec
+	-- Snapshot the active tree's allocations (id -> name) BEFORE converting so we
+	-- can report exactly which nodes the conversion drops (names resolved here
+	-- because a dropped node may not exist on the target tree).
+	local before = {}
+	local beforeCount = prevSpec:CountAllocNodes()
+	for id, node in pairs(prevSpec.allocNodes) do
+		before[id] = node.dn or node.name or tostring(id)
+	end
+
+	local keepOld = params.keepOld ~= false -- default true
+	-- success=false: never pop the blocking "Tree Converted" message dialog (it
+	-- would freeze the frame loop the bridge is pumped from). ignoreRuthlessCheck
+	-- =true mirrors the GUI version-dropdown path (PoE2 has no ruthless trees).
+	-- ConvertToVersion -> SetActiveSpec handles all display sync (versionSelect,
+	-- specSelect, showConvert, PopulateSlots, class dropdowns, jewel re-socketing).
+	treeTab:ConvertToVersion(version, not keepOld, false, true)
+
+	-- build.spec is now the converted (active) spec; diff out the dropped nodes.
+	local newSpec = build.spec
+	local deallocatedNodes = {}
+	for id, name in pairs(before) do
+		if not newSpec.allocNodes[id] then
+			t_insert(deallocatedNodes, { id = id, name = name })
+		end
+	end
+
+	Bridge.lastUndoScope = nil -- conversion isn't on a per-tab undo stack
+	build.buildFlag = true
+
+	local result = {
+		version = version,
+		versionDisplay = treeVersions[version].display,
+		previousVersion = prevVersion,
+		keptOld = keepOld,
+		activeSpec = treeTab.activeSpec,
+		allocatedNodeCountBefore = beforeCount,
+		allocatedNodeCount = newSpec:CountAllocNodes(),
+		deallocatedNodes = deallocatedNodes,
+		deallocatedCount = #deallocatedNodes,
+		stats = recalcAndRead(build, params.stats),
+	}
+	if keepOld then
+		result.previousSpec = prevSpecIndex
+		result.revert = "the previous (" .. prevVersion .. ") tree is kept as spec " ..
+			prevSpecIndex .. " — call selectSpec with that index to switch back"
+	else
+		result.previousSpec = false
+		result.revert = "keepOld was false: the previous tree was replaced in place " ..
+			"and cannot be restored by switching specs"
+	end
+	return result
+end
+
+-- FR-8: switch the ACTIVE passive tree among the build's existing specs (list them
+-- with getTreeSpecs). Also the REVERT path for a setTreeVersion conversion that
+-- kept the old tree (switch back to the previous spec). Recalc + new stats.
+-- SetActiveSpec sets build.spec/buildFlag and syncs the display (version + spec
+-- dropdowns, showConvert, jewel sockets). params: { spec = <1-based index>, stats? }
+function methods.selectSpec(build, params)
+	local treeTab = build.treeTab
+	local idx = tonumber(params.spec)
+	if not idx or not treeTab.specList[idx] then
+		error("selectSpec requires a valid 1-based 'spec' index (build has " ..
+			#treeTab.specList .. " spec(s); use getTreeSpecs)")
+	end
+	treeTab:SetActiveSpec(idx)
+	Bridge.lastUndoScope = nil -- a spec switch isn't a per-tab undo op
+	build.buildFlag = true
+	local spec = build.spec
+	local v = spec.treeVersion
+	return {
+		activeSpec = treeTab.activeSpec,
+		treeVersion = v,
+		versionDisplay = (treeVersions[v] and treeVersions[v].display) or v,
+		title = (spec.title and spec.title ~= "") and spec.title or nil,
+		className = spec.curClassName,
+		ascendancyName = spec.curAscendClassName,
+		allocatedNodeCount = spec:CountAllocNodes(),
+		stats = recalcAndRead(build, params.stats),
+	}
+end
+
 -- FR-13/FR-14: apply an ordered change-set — a list of { method, params } that
 -- name existing mutator handlers — to the build. Search evaluates a candidate by
 -- replaying its change-set headlessly; applying the winner LIVE replays the very
