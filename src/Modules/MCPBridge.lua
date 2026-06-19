@@ -280,6 +280,67 @@ local function describeItem(item, slotName, includeRaw)
 	return out
 end
 
+-- FR-9 (item browser) helpers. Serialise a PoB DATABASE item (a parsed template
+-- from main.uniqueDB.list, NOT an item in the build) for searchItems: identity,
+-- its variants, and its mod lines verbatim (the data's "(min-max)" ranges and
+-- {variant} membership are what the caller wants to read). `item.title` is the
+-- unique's display name; `item.name` is the DB key "Title, Base" (the add handle).
+local function describeDBItem(item, includeMods)
+	local out = {
+		name = item.name,
+		title = item.title,
+		baseName = item.baseName,
+		itemType = item.type,
+		rarity = item.rarity,
+		levelReq = item.requirements and item.requirements.level,
+	}
+	if item.variantList and #item.variantList > 0 then
+		out.variants = item.variantList -- ordered variant names
+		out.defaultVariant = item.variant -- 1-based index defaulting to the current variant
+	end
+	if includeMods then
+		local function lines(modLines)
+			local o = {}
+			for _, ml in ipairs(modLines or {}) do
+				if type(ml.line) == "string" then t_insert(o, stripColor(ml.line)) end
+			end
+			return o
+		end
+		out.implicits = lines(item.implicitModLines)
+		out.explicitMods = lines(item.explicitModLines)
+	end
+	return out
+end
+
+-- FR-9 (item browser): resolve a unique by NAME against PoB's database, returning
+-- the parsed template Item (whose .raw / :BuildRaw() seeds a real build item). The
+-- DB is keyed by "Title, Base"; we accept that exact key, or a bare title — erroring
+-- with the candidate keys when a title spans multiple bases so the caller can pick.
+local function resolveDBUnique(name)
+	local db = main.uniqueDB
+	if not db or not db.list then
+		return nil, "the unique item database isn't available"
+	end
+	if db.list[name] then return db.list[name] end
+	local lname = name:lower()
+	local matches = {}
+	for key, item in pairs(db.list) do
+		if (item.title and item.title:lower() == lname) or key:lower() == lname then
+			t_insert(matches, item)
+		end
+	end
+	if #matches == 1 then return matches[1] end
+	if #matches > 1 then
+		local keys = {}
+		for _, it in ipairs(matches) do t_insert(keys, it.name) end
+		table.sort(keys)
+		return nil, "several uniques match '" .. name .. "' — pass the full name (one of: " ..
+			table.concat(keys, " | ") .. ")"
+	end
+	return nil, "no unique named '" .. name .. "' in PoB's database " ..
+		"(use searchItems to find it, or pass raw item text in 'raw')"
+end
+
 -- method handlers: each receives (build, params) and returns a result table.
 local methods = {}
 
@@ -953,19 +1014,87 @@ function methods.getItems(build, params)
 	return { items = items, equippedCount = #items, inventory = inventory }
 end
 
--- FR-9: add an item to the live build from raw item text (the same format PoB's
--- "Create custom" / import uses). Optionally equip it: to an explicit `slot`, or
--- to the item's natural slot when `equip` is true. Recalc + return new stats.
--- params: { raw, equip?, slot?, stats? }
-function methods.addItem(build, params)
-	if type(params.raw) ~= "string" or not params.raw:match("%S") then
-		error("addItem requires raw item text in 'raw'")
+-- FR-9 (item browser / discovery): search PoB's UNIQUE item database so the
+-- assistant can find a unique and read its abilities WITHOUT the user pasting item
+-- text — then add it by name (addItem with `name`). Read-only. Matches `query`
+-- (plain, case-insensitive) against each unique's title, base, and mod lines, with
+-- an optional `type` filter (substring of item type, e.g. "Amulet", "Ring",
+-- "Mace", "Body Armour"). Returns identity + variants + mod lines per match.
+-- params: { query?, type?, limit?, includeMods? (default true) }
+function methods.searchItems(build, params)
+	local db = main.uniqueDB
+	if not db or not db.list then
+		error("the unique item database isn't available")
 	end
+	if db.loading then
+		error("the unique item database is still loading; try again in a moment")
+	end
+	local query = type(params.query) == "string" and params.query:lower() or nil
+	local typeQ = type(params.type) == "string" and params.type:lower() or nil
+	local limit = tonumber(params.limit) or 25
+	local includeMods = params.includeMods ~= false
+
+	local function matchesType(item)
+		return not typeQ or (item.type and item.type:lower():find(typeQ, 1, true) ~= nil)
+	end
+	local function matchesQuery(item)
+		if not query then return true end
+		if item.title and item.title:lower():find(query, 1, true) then return true end
+		if item.baseName and item.baseName:lower():find(query, 1, true) then return true end
+		for _, ml in ipairs(item.explicitModLines or {}) do
+			if type(ml.line) == "string" and ml.line:lower():find(query, 1, true) then return true end
+		end
+		return false
+	end
+
+	local results = {}
+	for _, item in pairs(db.list) do
+		if item.base and matchesType(item) and matchesQuery(item) then
+			t_insert(results, describeDBItem(item, includeMods))
+		end
+	end
+	table.sort(results, function(a, b) return (a.name or "") < (b.name or "") end)
+	local total = #results
+	while #results > limit do t_remove(results) end
+	return { query = params.query, total = total, returned = #results, items = results }
+end
+
+-- FR-9: add an item to the live build. Provide EITHER raw item text in `raw` (the
+-- format PoB's "Create custom" / import uses) OR a unique `name` to look up in
+-- PoB's database (so a real unique lands with its true mods — no pasting). For a
+-- multi-variant unique, `variant` (1-based, see searchItems) selects which; it
+-- defaults to the current variant. Optionally equip it: to an explicit `slot`, or
+-- to the item's natural slot when `equip` is true. Recalc + return new stats.
+-- params: { raw?, name?, variant?, equip?, slot?, stats? }
+function methods.addItem(build, params)
 	local itemsTab = build.itemsTab
+	local raw = params.raw
+	local fromDatabase
+	if (type(raw) ~= "string" or not raw:match("%S"))
+		and type(params.name) == "string" and params.name:match("%S") then
+		local dbItem, err = resolveDBUnique(params.name)
+		if not dbItem then error(err) end
+		raw = dbItem.raw or dbItem:BuildRaw()
+		fromDatabase = dbItem.name
+	end
+	if type(raw) ~= "string" or not raw:match("%S") then
+		error("addItem requires raw item text in 'raw', or a unique 'name' to look up in PoB's database")
+	end
 	ensureUndoSeed(itemsTab)
-	local item = new("Item", params.raw)
+	local item = new("Item", raw)
 	if not item.base then
 		error("could not parse item text (unknown or missing base type)")
+	end
+	-- Optional variant pick for multi-variant uniques (mirrors the GUI's variant
+	-- dropdown: set .variant then BuildAndParseRaw to rebuild the active mods).
+	if params.variant ~= nil and item.variantList and #item.variantList > 0 then
+		local v = tonumber(params.variant)
+		if not v or v < 1 or v > #item.variantList then
+			error("variant must be 1.." .. #item.variantList .. " for '" .. tostring(item.title) ..
+				"' (variants: " .. table.concat(item.variantList, ", ") .. ")")
+		end
+		item.variant = v
+		item:BuildAndParseRaw()
 	end
 	itemsTab:AddItem(item, true) -- assigns item.id; we handle equipping explicitly
 	local equippedSlot
@@ -988,6 +1117,8 @@ function methods.addItem(build, params)
 	return {
 		itemId = item.id,
 		name = item.name,
+		fromDatabase = fromDatabase or false,
+		variant = item.variant,
 		equippedSlot = equippedSlot or false,
 		stats = recalcAndRead(build, params.stats),
 	}

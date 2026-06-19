@@ -15,9 +15,10 @@
 # shipped product; the product is the dist/ folder.
 #
 # Prereqs (all already present in this dev env):
-#   - Linux Node on PATH (userland: ~/.local/node/.../bin)
+#   - a userland Linux Node (~/.local/node/.../bin) — auto-discovered + prepended
+#     to PATH if you didn't export it (so the Windows node.exe shim isn't used)
 #   - a Windows node.exe reachable (for SEA blob generation)
-#   - npx esbuild + postject (installed as mcp/ devDependencies)
+#   - esbuild + postject installed as mcp/ devDependencies (run `npm install`)
 set -euo pipefail
 
 REPO_ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
@@ -28,6 +29,44 @@ BUILD="$MCP/build"
 SEA_FUSE_PREFIX="NODE_SEA_FUSE_"
 
 say() { printf '\n\033[36m==> %s\033[0m\n' "$*"; }
+
+# --- ensure a LINUX Node toolchain is on PATH (not the Windows node.exe shim) --
+# The bundle/inject steps run esbuild + postject under Node. If only the Windows
+# Node is on PATH, `node`/`npx` resolve to CMD.EXE shims that fail on the WSL UNC
+# path ("UNC paths are not supported … 'esbuild' is not recognized"). Find the
+# userland Linux Node and prepend it so the Linux binaries win — so the script
+# works whether or not you exported the Node bin first.
+ensure_linux_node() {
+  local n=""
+  command -v node >/dev/null 2>&1 && n="$(command -v node)"
+  # A node already on PATH that isn't under /mnt (Windows) is the Linux one.
+  if [[ -n "$n" && "$n" != /mnt/* ]]; then
+    return 0
+  fi
+  local cand
+  cand="$(ls -d "$HOME"/.local/node/*/bin 2>/dev/null | sort -V | tail -1)"
+  if [[ -n "$cand" && -x "$cand/node" ]]; then
+    export PATH="$cand:$PATH"
+    return 0
+  fi
+  echo "ERROR: no Linux Node found (only the Windows node.exe is on PATH)." >&2
+  echo "       Install it with scripts/install-deps.sh, or export your userland" >&2
+  echo "       Node bin (e.g. ~/.local/node/<ver>/bin) onto PATH first." >&2
+  return 1
+}
+ensure_linux_node
+say "Linux node: $(command -v node) ($(node -v))"
+
+# Run a project-local devDependency binary (esbuild/postject) directly, rather
+# than via `npx` — `npx` on a Windows-Node PATH resolves to the Windows shim.
+run_local_bin() {
+  local bin="$MCP/node_modules/.bin/$1"; shift
+  if [[ ! -x "$bin" ]]; then
+    echo "ERROR: $bin not found — run 'npm install' in mcp/ first." >&2
+    exit 1
+  fi
+  ( cd "$MCP" && "$bin" "$@" )
+}
 
 # --- locate the Windows node.exe (needed for the version-matched SEA blob) ----
 WIN_NODE="${WIN_NODE:-}"
@@ -46,11 +85,11 @@ say "Windows node.exe: $WIN_NODE ($("$WIN_NODE" -v 2>/dev/null | tr -d '\r'))"
 # --- 1. bundle the TypeScript server into a single CJS file -------------------
 say "Bundling server (esbuild -> CJS)"
 mkdir -p "$BUILD"
-( cd "$MCP" && npx esbuild src/index.ts --bundle --platform=node --format=cjs \
+run_local_bin esbuild src/index.ts --bundle --platform=node --format=cjs \
     --target=node20 \
     --banner:js="const _importMetaUrl=require('url').pathToFileURL(__filename).href;" \
     --define:import.meta.url=_importMetaUrl \
-    --outfile=build/bundle.cjs )
+    --outfile=build/bundle.cjs
 
 # --- 2. generate the SEA blob with the Windows node (format is version-bound) -
 # Run in a Windows-accessible dir so the Windows node process can read/write it.
@@ -77,8 +116,8 @@ echo "    fuse: $FUSE"
 # WSL can't chmod files on /mnt/c).
 cat "$WIN_NODE" > "$BUILD/pob2-mcp.exe"
 chmod 755 "$BUILD/pob2-mcp.exe"
-( cd "$MCP" && npx postject build/pob2-mcp.exe NODE_SEA_BLOB build/sea-prep.blob \
-    --sentinel-fuse "$FUSE" )
+run_local_bin postject build/pob2-mcp.exe NODE_SEA_BLOB build/sea-prep.blob \
+    --sentinel-fuse "$FUSE"
 # Note: patching the PE invalidates node.exe's Authenticode signature (postject
 # warns). That's expected; the exe runs (SmartScreen may prompt on first launch).
 
