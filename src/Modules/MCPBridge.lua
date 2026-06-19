@@ -236,6 +236,24 @@ local function newGemInstance(params)
 	return gem
 end
 
+-- FR-10 helper: a compact, ground-truth view of a socket group's gems (1-based
+-- indices + resolved names) to return from the gem mutators, so the caller can
+-- verify the result directly instead of trusting a bare index that may have shifted.
+local function gemListSummary(group)
+	local out = {}
+	for j, gem in ipairs(group.gemList or {}) do
+		t_insert(out, {
+			index = j,
+			name = (gem.nameSpec and gem.nameSpec ~= "" and gem.nameSpec) or nil,
+			level = gem.level,
+			quality = gem.quality,
+			enabled = gem.enabled,
+			gemId = gem.gemId,
+		})
+	end
+	return out
+end
+
 -- FR-9 (discovery) helpers. Mirror setItemRoll's ranged-line test so getItems
 -- reports exactly which explicit mods are roll-addressable, and parse the
 -- "(min-max)" bounds so the caller can reason about a roll without guessing.
@@ -892,17 +910,7 @@ function methods.getSkills(build, params)
 	local skillsTab = build.skillsTab
 	local groups = {}
 	for i, group in ipairs(skillsTab.socketGroupList) do
-		local gems = {}
-		for j, gem in ipairs(group.gemList or {}) do
-			t_insert(gems, {
-				index = j,
-				name = gem.nameSpec,
-				level = gem.level,
-				quality = gem.quality,
-				enabled = gem.enabled,
-				gemId = gem.gemId,
-			})
-		end
+		local gems = gemListSummary(group)
 		local mainSkillName
 		local active = group.displaySkillList and group.mainActiveSkill
 			and group.displaySkillList[group.mainActiveSkill]
@@ -918,6 +926,11 @@ function methods.getSkills(build, params)
 			mainActiveSkill = group.mainActiveSkill,
 			mainSkillName = mainSkillName,
 			includeInFullDPS = group.includeInFullDPS,
+			-- A "derived" group's skill is granted by an item or passive node (group.source),
+			-- not socketed by hand: the gem tools can't meaningfully edit it, and it VANISHES
+			-- (shifting later indices) if you unequip the item / deallocate the node. Flag it
+			-- so the caller doesn't try to mutate it or get surprised when it disappears.
+			derived = group.source ~= nil,
 			gems = gems,
 		})
 	end
@@ -983,6 +996,13 @@ function methods.addGem(build, params)
 	end
 	local gem = newGemInstance(params)
 	gem.gemId = gemData.id
+	-- CRITICAL: set nameSpec to the resolved gem name. The GUI's gem editor seeds its
+	-- row buffer from nameSpec (SetDisplayGroup) and DELETES any gem whose buffer
+	-- doesn't match a real gem on focus-loss (CreateGemSlot -> deleteGem when
+	-- `not bufMatchesGem`). A blank nameSpec therefore gets silently pruned whenever
+	-- the group is the one open in the editor — so a bridge add must carry the name,
+	-- exactly as PoB's own loader does (gemInstance.nameSpec = gemData.name).
+	gem.nameSpec = gemData.name
 	t_insert(group.gemList, gem)
 	skillsTab:ProcessSocketGroup(group)
 	refreshGemEditor(skillsTab, group)
@@ -995,6 +1015,8 @@ function methods.addGem(build, params)
 		name = gem.nameSpec,
 		level = gem.level,
 		quality = gem.quality,
+		derived = group.source ~= nil,
+		gems = gemListSummary(group),
 		stats = recalcAndRead(build, params.stats),
 	}
 end
@@ -1020,6 +1042,8 @@ function methods.removeGem(build, params)
 		group = groupIdx,
 		removed = removed,
 		remaining = #group.gemList,
+		derived = group.source ~= nil,
+		gems = gemListSummary(group),
 		stats = recalcAndRead(build, params.stats),
 	}
 end
@@ -1050,6 +1074,8 @@ function methods.setGem(build, params)
 		level = gem.level,
 		quality = gem.quality,
 		enabled = gem.enabled,
+		derived = group.source ~= nil,
+		gems = gemListSummary(group),
 		stats = recalcAndRead(build, params.stats),
 	}
 end
