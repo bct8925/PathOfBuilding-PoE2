@@ -5,7 +5,7 @@
 --
 -- This module is loaded into a *running* PoB2 instance (lazily, only when the
 -- "Enable MCP bridge" Option is on) and opens a local TCP server. The Node MCP
--- server (mcp/src/bridge/socket.ts) connects to it so that MCP tool calls can
+-- server (pob2-mcp plugin: server/src/bridge/socket.ts) connects to it so that MCP tool calls can
 -- read and MUTATE the GUI's in-memory build state live, then read refreshed
 -- stats back.
 --

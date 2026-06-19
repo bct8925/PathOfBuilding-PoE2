@@ -24,7 +24,7 @@ manifest-updated.xml
 
 # MCP distribution build artifacts (large; produced by scripts/build-dist.sh)
 /dist/
-mcp/build/
+# (the MCP server now lives in the pob2-mcp submodule, which has its own .gitignore)
 
 # GGPK Export
 src/Export/ggpk/metadata/

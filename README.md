@@ -2,8 +2,10 @@
 ## Welcome to Path of Building 2, an offline build planner for Path of Exile 2!
 
 > **This fork (`bri64-mcp`) adds an MCP server** that lets an AI assistant analyze, edit, and
-> optimize a live PoB2 build over a built-in socket bridge. See [`mcp/README.md`](mcp/README.md)
-> (and `mcp/REQUIREMENTS.md`); companion build/knowledge skills live in `.claude/skills/`.
+> optimize a live PoB2 build over a built-in socket bridge (`src/Modules/MCPBridge.lua`). The
+> server + Claude build/knowledge skills are packaged as a Claude plugin in the **`pob2-mcp`
+> submodule** (`pob2-mcp/`, repo: github.com/bct8925/pob2-mcp). See
+> [`pob2-mcp/plugins/pob2-mcp/README.md`](pob2-mcp/plugins/pob2-mcp/README.md).
 
 <p float="middle">
   <img alt="Tree tab" src="https://github.com/user-attachments/assets/225bf25f-1ac4-4639-b280-565a24d2a2fc" width="48%" />

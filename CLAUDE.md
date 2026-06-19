@@ -11,7 +11,8 @@ Work happens on the `bri64-mcp` branch; upstream is the community PoB2 repo.
 ## Requirements
 
 Full v1 requirements (FR/NFR, tool surface, open questions, phasing) live in
-**`mcp/REQUIREMENTS.md`** — read it before designing features. Highlights:
+**`pob2-mcp/plugins/pob2-mcp/server/REQUIREMENTS.md`** — read it before designing features.
+Highlights:
 
 - **Live GUI is the primary backend.** MCP tool calls **mutate a running PoB2's
   in-memory state** (tree, items, skills, config) and read results back live.
@@ -41,25 +42,31 @@ Full v1 requirements (FR/NFR, tool surface, open questions, phasing) live in
                                         └─ TCP socket ─> Lua bridge in running PoB2 GUI (live state)
 ```
 
-The MCP server lives in **`mcp/`** (Node/TypeScript). See `mcp/README.md` for the full
-tool surface (35 tools) and dev/packaging commands. Key files: `mcp/src/index.ts` (registers
-all tools — source of truth), `mcp/src/engine/headless.ts` + `mcp/lua/run_headless.lua`
-(headless backend) and `mcp/src/engine/optimize.ts` (search scoring), and
-`mcp/src/bridge/socket.ts` (Node client) ↔ `src/Modules/MCPBridge.lua` (the in-app socket
-server, built into PoB and loaded lazily by `main:PumpMCPBridge` when the "Enable MCP bridge"
-Option is on). Tests: `mcp/lua/test_bridge.lua` (200+ headless checks) + `mcp/src/smoke_bridge.ts`
-(live GUI, run from Windows Node). Packaging: `scripts/build-dist.sh` (single Windows `.exe`)
-and `scripts/dev-update-local.sh` (update a local install in place).
+The MCP server + Claude skills are packaged as a **Claude plugin in a git submodule** at
+**`pob2-mcp/`** (repo: github.com/bct8925/pob2-mcp — a marketplace whose one plugin,
+`plugins/pob2-mcp/`, holds the `server/` and `skills/`). Run `git submodule update --init`
+after cloning. The in-app socket bridge **stays in this repo** (`src/Modules/MCPBridge.lua`)
+because it ships as part of PoB2 itself. Let `PLG = pob2-mcp/plugins/pob2-mcp`. Key files:
+`$PLG/server/src/index.ts` (registers all 35 tools — source of truth; see
+`$PLG/server/README.md`), `$PLG/server/src/engine/headless.ts` + `$PLG/server/lua/run_headless.lua`
+(headless backend), `$PLG/server/src/engine/optimize.ts` (search scoring), and
+`$PLG/server/src/bridge/socket.ts` (Node client) ↔ `src/Modules/MCPBridge.lua` (the in-app
+socket server, loaded lazily by `main:PumpMCPBridge` when the "Enable MCP bridge" Option is
+on). Tests: `$PLG/server/lua/test_bridge.lua` (200+ headless checks) +
+`$PLG/server/src/smoke_bridge.ts` (live GUI, from Windows Node). Plugin wiring:
+`$PLG/.mcp.json` (launches `server/bundle.cjs` with `POB_ROOT`), `$PLG/.claude-plugin/plugin.json`.
+Packaging: `scripts/build-dist.sh` (single Windows `.exe`) + `scripts/dev-update-local.sh`.
 
-Three **project skills** under `.claude/skills/` build on these tools: `poe2-build` (the
-build-authoring workflow that drives the `gui_*` tools), `poe2-mechanics` (PoE2 concepts +
-real PoB stat/config vocabulary — the knowledge base), and `poe2-sync` (`/poe2-sync` —
-refresh that knowledge from the latest patch notes).
+Three **skills** under `$PLG/skills/` build on these tools: `poe2-build` (the build-authoring
+workflow that drives the `gui_*` tools), `poe2-mechanics` (PoE2 concepts + real PoB stat/config
+vocabulary — the knowledge base), and `poe2-sync` (`/poe2-sync` — refresh that knowledge from
+the latest patch notes). They're canonical in the submodule now (no longer in `.claude/skills/`);
+install the marketplace to use them as a plugin.
 
 In the **WSL dev env** the server runs under Linux Node so it can spawn the Linux `luajit`
 headless engine, and reaches the Windows GUI over TCP localhost. The product ships
 **native-Windows-only** as a self-contained `.exe` + bundled `luajit.exe` — OQ-1/OQ-6 are
-resolved (see `mcp/REQUIREMENTS.md`); the remaining step is the native-Windows SEA-exe +
+resolved (see `$PLG/server/REQUIREMENTS.md`); the remaining step is the native-Windows SEA-exe +
 live-GUI acceptance run.
 
 - **PoB2 core**: Lua 5.1 / LuaJIT. GUI is a native x64 Windows exe
@@ -106,12 +113,17 @@ busted --lua=luajit
 (CI also runs the suite in the `ghcr.io/pathofbuildingcommunity/pathofbuilding-tests` Docker image via `docker-compose up`.)
 
 Build / run the MCP server (Linux Node in WSL — userland Node is at
-`~/.local/node/.../bin`, also provisioned by `install-deps.sh`):
+`~/.local/node/.../bin`, also provisioned by `install-deps.sh`). The server lives in the
+`pob2-mcp` submodule (run `git submodule update --init` first):
 
 ```bash
-cd mcp && npm install && npm run build
+cd pob2-mcp/plugins/pob2-mcp/server && npm install && npm run build
 npm run smoke      # Node -> luajit -> stats, end-to-end
+npm run bundle     # esbuild -> bundle.cjs (the artifact .mcp.json launches; commit it)
 ```
+
+Headless bridge tests now run from `src/` against the submodule path:
+`LUA_PATH="../runtime/lua/?.lua;../runtime/lua/?/init.lua;;" CI=true luajit ../pob2-mcp/plugins/pob2-mcp/server/lua/test_bridge.lua`
 
 Launch the Windows GUI (WSL interop):
 

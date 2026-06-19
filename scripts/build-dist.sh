@@ -18,11 +18,12 @@
 #   - a userland Linux Node (~/.local/node/.../bin) — auto-discovered + prepended
 #     to PATH if you didn't export it (so the Windows node.exe shim isn't used)
 #   - a Windows node.exe reachable (for SEA blob generation)
-#   - esbuild + postject installed as mcp/ devDependencies (run `npm install`)
+#   - esbuild + postject installed in the server (run `npm install` in
+#     pob2-mcp/plugins/pob2-mcp/server — the submodule must be checked out)
 set -euo pipefail
 
 REPO_ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
-MCP="$REPO_ROOT/mcp"
+MCP="$REPO_ROOT/pob2-mcp/plugins/pob2-mcp/server"   # server now lives in the pob2-mcp plugin submodule
 DIST="$REPO_ROOT/dist"
 STAGE="$DIST/PathOfBuilding2-MCP"
 BUILD="$MCP/build"
@@ -62,7 +63,7 @@ say "Linux node: $(command -v node) ($(node -v))"
 run_local_bin() {
   local bin="$MCP/node_modules/.bin/$1"; shift
   if [[ ! -x "$bin" ]]; then
-    echo "ERROR: $bin not found — run 'npm install' in mcp/ first." >&2
+    echo "ERROR: $bin not found — run 'npm install' in $MCP first." >&2
     exit 1
   fi
   ( cd "$MCP" && "$bin" "$@" )

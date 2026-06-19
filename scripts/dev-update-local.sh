@@ -62,7 +62,7 @@ say "Updating src/ (PoB + MCPBridge Lua) — changed files only"
 cp -ru "$REPO_ROOT/src/." "$DEST/src/"
 
 say "Updating mcp-lua/ + README"
-cp -f "$REPO_ROOT/mcp/lua/run_headless.lua" "$DEST/mcp-lua/run_headless.lua"
+cp -f "$REPO_ROOT/pob2-mcp/plugins/pob2-mcp/server/lua/run_headless.lua" "$DEST/mcp-lua/run_headless.lua"
 cp -f "$REPO_ROOT/scripts/dist-README.txt" "$DEST/README.txt" 2>/dev/null || true
 
 # 4. The big runtime/ binaries rarely change — sync only with --full, but always

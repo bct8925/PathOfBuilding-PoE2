@@ -1,0 +1,3 @@
+[submodule "pob2-mcp"]
+	path = pob2-mcp
+	url = https://github.com/bct8925/pob2-mcp.git

@@ -94,7 +94,7 @@ ship the rebuilt one.
 3. Back up your PoB `SimpleGraphic.dll`, copy the freshly built one over it.
 
 With this in place, the bridge responds with PoB unfocused **or** minimized, and
-the server's auto-focus workaround (`mcp/src/bridge/focus.ts`) becomes unnecessary
+the server's auto-focus workaround (`pob2-mcp/plugins/pob2-mcp/server/src/bridge/focus.ts`) becomes unnecessary
 — you can leave it or drop it.
 
 ## Tradeoff

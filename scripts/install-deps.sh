@@ -77,7 +77,7 @@ fi
 # --- 4. Node toolchain + MCP server (userland, no sudo) -----------------------
 # The MCP server is Node/TypeScript and must run under LINUX Node (Windows Node
 # cannot exec the Linux luajit headless binary). Install a userland Node LTS so
-# this needs no root, then install + build the server under mcp/.
+# this needs no root, then install + build the server (in the pob2-mcp plugin submodule).
 NODE_VER=v20.18.1
 NODE_HOME="$HOME/.local/node/node-${NODE_VER}-linux-x64"
 if [ "${SKIP_NODE:-0}" != "1" ]; then
@@ -98,8 +98,13 @@ if [ "${SKIP_NODE:-0}" != "1" ]; then
 	export PATH="$NODE_HOME/bin:$PATH"
 	log "Node $(node --version) / npm $(npm --version)"
 
-	log "Installing + building the MCP server (mcp/)"
-	( cd "$REPO_ROOT/mcp" && npm install && npm run build )
+	SERVER_DIR="$REPO_ROOT/pob2-mcp/plugins/pob2-mcp/server"
+	if [ -d "$SERVER_DIR" ]; then
+		log "Installing + building the MCP server ($SERVER_DIR)"
+		( cd "$SERVER_DIR" && npm install && npm run build )
+	else
+		log "Skipping MCP server build: $SERVER_DIR not found (run 'git submodule update --init' first)"
+	fi
 
 	warn "Add Node to your PATH for future shells:"
 	warn "  export PATH=\"$NODE_HOME/bin:\$PATH\""
