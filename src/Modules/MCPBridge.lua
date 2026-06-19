@@ -309,6 +309,20 @@ local function gemListSummary(group)
 	return out
 end
 
+-- FR-10 helper: append a resolved gem (gemData from FindSkillGem) to a group with the GUI's
+-- defaults. Sets nameSpec to the real name (else the GUI editor prunes a blank-name gem from
+-- the displayed group) and processes the group. Shared by addGem + createSocketGroup so the
+-- gem-instance shape stays in one place. Caller handles undo/recalc.
+local function appendGem(skillsTab, group, gemData, spec)
+	local gem = newGemInstance(spec)
+	gem.gemId = gemData.id
+	gem.nameSpec = gemData.name
+	t_insert(group.gemList, gem)
+	skillsTab:ProcessSocketGroup(group)
+	refreshGemEditor(skillsTab, group)
+	return gem
+end
+
 -- FR-9 (discovery) helpers. Mirror setItemRoll's ranged-line test so getItems
 -- reports exactly which explicit mods are roll-addressable, and parse the
 -- "(min-max)" bounds so the caller can reason about a roll without guessing.
@@ -1165,10 +1179,37 @@ function methods.searchGems(build, params)
 	local includeDescription = params.includeDescription ~= false
 	local wantSupport = params.support -- true | false | nil(both)
 
+	-- ISSUES #4/#3: compatibleWithGroup restricts results to SUPPORT gems that PoB would
+	-- actually let support the active skill in that socket group (so you don't add a support
+	-- the calc silently ignores). Uses PoB's own check on the group's live active skill.
+	local compatActiveSkill
+	if params.compatibleWithGroup ~= nil then
+		local idx = tonumber(params.compatibleWithGroup)
+		local group = build.skillsTab.socketGroupList[idx]
+		if not group then
+			error("no socket group at index " .. tostring(idx) .. " (use getSkills)")
+		end
+		if not build.calcsTab.mainEnv then build.calcsTab:BuildOutput() end
+		for _, as in ipairs(build.calcsTab.mainEnv.player.activeSkillList or {}) do
+			if as.socketGroup == group then compatActiveSkill = as; break end
+		end
+		if not compatActiveSkill then
+			error("group " .. idx .. " has no active skill to match supports against " ..
+				"(add an active gem first, then search for compatible supports)")
+		end
+	end
+
 	local function matchesSupport(ge)
 		if wantSupport == nil then return true end
 		local isSupport = (ge.support and true) or false
 		return isSupport == (wantSupport and true or false)
+	end
+	-- When compatibleWithGroup is set, keep only supports PoB confirms can support the skill.
+	local function matchesCompat(ge)
+		if not compatActiveSkill then return true end
+		if not (ge and ge.support) then return false end
+		local ok, res = pcall(calcLib.canGrantedEffectSupportActiveSkill, ge, compatActiveSkill)
+		return (ok and res) and true or false
 	end
 	local function matchesType(gem)
 		if not typeQ then return true end
@@ -1190,8 +1231,8 @@ function methods.searchGems(build, params)
 	local results = {}
 	for _, gem in pairs(gems) do
 		local ge = gem.grantedEffect or {}
-		if gem.name and not seen[gem.name] and matchesSupport(ge) and matchesType(gem)
-			and matchesQuery(gem, ge) then
+		if gem.name and not seen[gem.name] and matchesSupport(ge) and matchesCompat(ge)
+			and matchesType(gem) and matchesQuery(gem, ge) then
 			seen[gem.name] = true
 			t_insert(results, describeGem(gem, includeDescription))
 		end
@@ -1290,6 +1331,26 @@ function methods.createSocketGroup(build, params)
 	t_insert(skillsTab.socketGroupList, group)
 	local groupIdx = #skillsTab.socketGroupList
 	if params.setMain == true then build.mainSocketGroup = groupIdx end
+
+	-- M2 (atomic build): populate the whole link in one call — `gems` is an ordered list
+	-- (active skill first, then supports), each a name string or { name, level?, quality?,
+	-- enabled? }. Bad names abort AFTER the empty group is created; the group stays (use
+	-- removeGem/undo) — resolve names with searchGems first.
+	local addedGems = false
+	if params.gems ~= nil then
+		if type(params.gems) ~= "table" then error("createSocketGroup 'gems' must be an array") end
+		for i, g in ipairs(params.gems) do
+			local spec = type(g) == "string" and { name = g } or g
+			if type(spec) ~= "table" or type(spec.name) ~= "string" or not spec.name:match("%S") then
+				error("createSocketGroup 'gems' entry " .. i .. " needs a gem name (string or {name=...})")
+			end
+			local errMsg, gemData = skillsTab:FindSkillGem(spec.name)
+			if not gemData then error("gems entry " .. i .. ": " .. (errMsg or "unrecognised gem '" .. spec.name .. "'")) end
+			appendGem(skillsTab, group, gemData, spec)
+			addedGems = true
+		end
+	end
+
 	skillsTab:AddUndoState()
 	build.buildFlag = true
 	Bridge.lastUndoScope = "skills"
@@ -1301,6 +1362,8 @@ function methods.createSocketGroup(build, params)
 		isMain = (groupIdx == build.mainSocketGroup),
 		count = #skillsTab.socketGroupList,
 		gems = gemListSummary(group),
+		-- recalc only if we added gems (an empty group doesn't change stats)
+		stats = addedGems and recalcAndRead(build, params.stats) or nil,
 	}
 end
 
@@ -1366,18 +1429,10 @@ function methods.addGem(build, params)
 		groupIdx = #skillsTab.socketGroupList
 		build.mainSocketGroup = groupIdx
 	end
-	local gem = newGemInstance(params)
-	gem.gemId = gemData.id
-	-- CRITICAL: set nameSpec to the resolved gem name. The GUI's gem editor seeds its
-	-- row buffer from nameSpec (SetDisplayGroup) and DELETES any gem whose buffer
-	-- doesn't match a real gem on focus-loss (CreateGemSlot -> deleteGem when
-	-- `not bufMatchesGem`). A blank nameSpec therefore gets silently pruned whenever
-	-- the group is the one open in the editor — so a bridge add must carry the name,
-	-- exactly as PoB's own loader does (gemInstance.nameSpec = gemData.name).
-	gem.nameSpec = gemData.name
-	t_insert(group.gemList, gem)
-	skillsTab:ProcessSocketGroup(group)
-	refreshGemEditor(skillsTab, group)
+	-- appendGem sets nameSpec to the resolved name — CRITICAL: the GUI editor seeds its row
+	-- buffer from nameSpec and DELETES a blank-name gem from the displayed group on focus-loss
+	-- (CreateGemSlot -> deleteGem when not bufMatchesGem), so a bridge add must carry the name.
+	local gem = appendGem(skillsTab, group, gemData, params)
 	skillsTab:AddUndoState()
 	build.buildFlag = true
 	Bridge.lastUndoScope = "skills"
