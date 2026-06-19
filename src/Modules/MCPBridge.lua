@@ -47,6 +47,20 @@ local function readStats(build, keys)
 	return stats
 end
 
+-- The meaningful allocated picks of a tree: its Notables and Keystones (the
+-- generic +attribute / small passives are noise for a caller deciding what to do).
+-- Lets getBuild hand back what the build has taken WITHOUT the assistant guessing.
+local function allocatedNotables(spec)
+	local out = {}
+	if not spec then return out end
+	for _, node in pairs(spec.allocNodes or {}) do
+		if node.type == "Notable" or node.type == "Keystone" then
+			t_insert(out, { id = node.id, name = node.dn or node.name, type = node.type })
+		end
+	end
+	return out
+end
+
 -- Snapshot every scalar entry of an output table. Non-scalars (nested tables,
 -- functions) are skipped: they're rebuilt with a fresh identity each pass and
 -- aren't part of the user-facing stat values, so including them would make the
@@ -241,6 +255,10 @@ function methods.getBuild(build, params)
 		level = build.characterLevel,
 		mainSkill = mainSkillName,
 		mainSocketGroup = build.mainSocketGroup,
+		-- Tree readout so the assistant can SEE the current tree instead of guessing
+		-- node ids (use searchPassives to find specific nodes + their distance).
+		allocatedNodeCount = spec and spec:CountAllocNodes() or 0,
+		allocatedNotables = allocatedNotables(spec),
 		stats = readStats(build, params and params.stats),
 	}
 end
@@ -336,7 +354,13 @@ function methods.setConfig(build, params)
 end
 
 -- FR-8: allocate or deallocate a passive node on the live tree, recalc.
--- params: { nodeId = <number>, alloc = <bool> }  (alloc defaults to true)
+-- params: { nodeId = <number>, alloc = <bool>, maxPath = <number>? }
+-- (alloc defaults to true). IMPORTANT: PoB's AllocNode auto-allocates the SHORTEST
+-- PATH from the current tree to the target, so a distant node pulls in every
+-- connecting node (and generic attribute nodes on that path default to Strength).
+-- We therefore (a) reject an unconnectable node, (b) optionally cap the path length
+-- via maxPath, and (c) report exactly which nodes the call added/removed so the
+-- caller never mistakes a 10-node path for a single pick.
 function methods.setPassive(build, params)
 	local nodeId = tonumber(params.nodeId)
 	if not nodeId then
@@ -349,7 +373,27 @@ function methods.setPassive(build, params)
 		error("no passive node with id " .. tostring(nodeId) .. " on the current tree")
 	end
 	local alloc = params.alloc ~= false -- default true
+
+	-- Snapshot the allocated set so we can diff out the actual change set below.
+	local before = {}
+	for id in pairs(spec.allocNodes) do before[id] = true end
+
 	if alloc then
+		-- pathDist is "points from the current tree" (1000 == unreachable). Make sure
+		-- it's current, then validate connectivity and the optional path-length cap
+		-- BEFORE mutating, so a bad request changes nothing.
+		spec:BuildAllDependsAndPaths()
+		local dist = node.pathDist
+		if not dist or dist >= 1000 then
+			error("node " .. nodeId .. " (" .. (node.dn or node.name or "?") ..
+				") is not connectable to the current tree")
+		end
+		local maxPath = tonumber(params.maxPath)
+		if maxPath and dist > maxPath then
+			error(("allocating node %d (%s) would path through %d point(s) (maxPath %d); "
+				.. "raise 'maxPath' or pick a closer node (use searchPassives)")
+				:format(nodeId, node.dn or node.name or "?", dist, maxPath))
+		end
 		spec:AllocNode(node)
 	else
 		spec:DeallocNode(node)
@@ -357,13 +401,96 @@ function methods.setPassive(build, params)
 	spec:AddUndoState()
 	build.buildFlag = true
 	Bridge.lastUndoScope = "tree"
+
+	-- Diff before/after so the response lists every node this call actually changed
+	-- (AllocNode pulls in the path; DeallocNode can cascade to dependents).
+	local changedNodes = {}
+	if alloc then
+		for id, n in pairs(spec.allocNodes) do
+			if not before[id] then
+				t_insert(changedNodes, { id = id, name = n.dn or n.name, type = n.type })
+			end
+		end
+	else
+		for id in pairs(before) do
+			if not spec.allocNodes[id] then
+				local n = spec.nodes[id]
+				t_insert(changedNodes, { id = id, name = n and (n.dn or n.name), type = n and n.type })
+			end
+		end
+	end
+
 	return {
 		nodeId = nodeId,
 		nodeName = node.dn or node.name,
 		alloc = node.alloc or false,
+		changedNodes = changedNodes,
+		changedCount = #changedNodes,
 		allocatedNodeCount = spec:CountAllocNodes(),
 		stats = recalcAndRead(build, params.stats),
 	}
+end
+
+-- FR-8 (discovery): search the passive tree so the assistant can find a node's id
+-- and its distance from the current tree BEFORE allocating, instead of guessing.
+-- Read-only. Matches `query` (plain, case-insensitive) against each node's display
+-- name and stat lines, and reports node.pathDist (points-from-current-tree) so the
+-- caller can pick a node that's actually on/near the frontier.
+-- params: { query?, maxDist?, limit?, includeAllocated?, includeUnreachable? }
+function methods.searchPassives(build, params)
+	local spec = build.spec
+	if not spec then error("no passive tree on the current build") end
+	-- pathDist is maintained by AllocNode/Load; refresh it so a build that hasn't
+	-- pathed this session still reports correct distances.
+	spec:BuildAllDependsAndPaths()
+
+	local query = type(params.query) == "string" and params.query:lower() or nil
+	local maxDist = tonumber(params.maxDist)
+	local limit = tonumber(params.limit) or 30
+	local includeAllocated = params.includeAllocated == true
+	local includeUnreachable = params.includeUnreachable == true
+
+	local function matches(node)
+		if not query then return true end
+		if node.dn and node.dn:lower():find(query, 1, true) then return true end
+		for _, line in ipairs(node.sd or {}) do
+			if type(line) == "string" and line:lower():find(query, 1, true) then return true end
+		end
+		return false
+	end
+
+	local results = {}
+	for _, node in pairs(spec.nodes) do
+		-- Only real, allocatable passives: drop class/ascend starts, sockets, image-
+		-- only proxies, and anything without a name/id.
+		local t = node.type
+		local allocatable = node.id and node.dn and t ~= "ClassStart"
+			and t ~= "AscendClassStart" and t ~= "OnlyImage" and t ~= "Socket"
+			and not node.isProxy
+		if allocatable and (includeAllocated or not node.alloc) and matches(node) then
+			local dist = node.pathDist
+			local reachable = dist ~= nil and dist < 1000
+			local distOk = (reachable and (not maxDist or dist <= maxDist))
+				or (not reachable and includeUnreachable and not maxDist)
+			if distOk then
+				t_insert(results, {
+					id = node.id,
+					name = node.dn,
+					type = node.type,
+					alloc = node.alloc or false,
+					pathDist = reachable and dist or nil,
+					stats = node.sd,
+				})
+			end
+		end
+	end
+	-- Nearest first; unreachable (no pathDist) sink to the end. Then cap.
+	table.sort(results, function(a, b)
+		return (a.pathDist or math.huge) < (b.pathDist or math.huge)
+	end)
+	local total = #results
+	while #results > limit do t_remove(results) end
+	return { query = params.query, total = total, returned = #results, nodes = results }
 end
 
 -- FR-10: choose the main socket group, and optionally the active skill within it.
