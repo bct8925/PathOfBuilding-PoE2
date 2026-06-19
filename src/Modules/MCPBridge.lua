@@ -634,6 +634,111 @@ function methods.searchPassives(build, params)
 	return { query = params.query, total = total, returned = #results, nodes = results }
 end
 
+-- FR-8 (discovery): list the passive tree's JEWEL SOCKETS so the assistant can see
+-- which sockets exist, which are ALLOCATED (a jewel only takes effect at an
+-- allocated socket node), and what jewel — if any — currently sits in each, BEFORE
+-- socketing. Read-only. Tree jewel sockets are real ItemSlotControls keyed by their
+-- socket node id (itemsTab.sockets[nodeId], slotName "Jewel <id>"); the occupant
+-- lives in spec.jewels[nodeId]. An empty socket reports its pathDist so the caller
+-- can allocate it (set_passive) before socketing.
+-- params: { includeEmpty? (default true), onlyAllocated? }
+function methods.getJewelSockets(build, params)
+	local itemsTab = build.itemsTab
+	local spec = build.spec
+	if not spec then error("no passive tree on the current build") end
+	-- Refresh pathDist so an empty socket reports how far it is to allocate.
+	spec:BuildAllDependsAndPaths()
+	local includeEmpty = params.includeEmpty ~= false
+	local onlyAllocated = params.onlyAllocated == true
+	local sockets = {}
+	for nodeId, slot in pairs(itemsTab.sockets) do
+		local node = spec.nodes[nodeId]
+		local allocated = (node and node.alloc) or false
+		local jewelId = spec.jewels[nodeId]
+		local occupant
+		if jewelId and jewelId > 0 then
+			local item = itemsTab.items[jewelId]
+			if item then occupant = { itemId = jewelId, name = item.name, rarity = item.rarity } end
+		end
+		if (occupant or includeEmpty) and (not onlyAllocated or allocated) then
+			local dist = node and node.pathDist
+			t_insert(sockets, {
+				nodeId = nodeId,
+				socketName = slot.slotName,
+				location = node and node.dn,
+				allocated = allocated,
+				pathDist = (dist and dist < 1000) and dist or nil,
+				occupant = occupant or false,
+			})
+		end
+	end
+	-- Allocated (usable) sockets first, then nearest-to-allocate, then stable by id.
+	table.sort(sockets, function(a, b)
+		if a.allocated ~= b.allocated then return a.allocated end
+		local pa, pb = a.pathDist or math.huge, b.pathDist or math.huge
+		if pa ~= pb then return pa < pb end
+		return a.nodeId < b.nodeId
+	end)
+	return { count = #sockets, sockets = sockets }
+end
+
+-- FR-8: socket or unsocket a jewel in a passive-tree jewel socket, recalc, return
+-- new stats. `nodeId` is the socket node (from getJewelSockets); `itemId` is a jewel
+-- already in the build (from getItems / addItem) to place, or omit / 0 to clear the
+-- socket. The mutation mirrors the GUI's own socket drag: SetSelItemId writes
+-- spec.jewels[nodeId], and the change rides PoB's ITEMS undo stack (ItemsTab's undo
+-- state snapshots every slot's selItemId, jewel sockets included).
+-- IMPORTANT: a jewel only takes effect when its socket NODE is allocated. If the
+-- node isn't allocated we still place the jewel (matching the GUI, where you can
+-- drop a jewel into an inactive socket) but flag it inert in the response so the
+-- caller knows to allocate the node (set_passive). params: { nodeId, itemId?, stats? }
+function methods.socketJewel(build, params)
+	local itemsTab = build.itemsTab
+	local spec = build.spec
+	local nodeId = tonumber(params.nodeId)
+	if not nodeId then
+		error("socketJewel requires a numeric 'nodeId' (a jewel socket; use getJewelSockets)")
+	end
+	local slot = itemsTab.sockets[nodeId]
+	if not slot then
+		error("no jewel socket at node " .. nodeId .. " (use getJewelSockets to list the tree's sockets)")
+	end
+	local itemId = tonumber(params.itemId) or 0
+	if itemId ~= 0 then
+		local item = itemsTab.items[itemId]
+		if not item then
+			error("no item with id " .. tostring(params.itemId) ..
+				" in the build (add the jewel first, then socket it)")
+		end
+		if not itemsTab:IsItemValidForSlot(item, slot.slotName) then
+			error("item " .. itemId .. " ('" .. tostring(item.name) ..
+				"') is not a jewel valid for this socket")
+		end
+	end
+	ensureUndoSeed(itemsTab)
+	slot:SetSelItemId(itemId) -- 0 clears it; writes spec.jewels[nodeId]
+	itemsTab:PopulateSlots()
+	itemsTab:AddUndoState()
+	build.buildFlag = true
+	Bridge.lastUndoScope = "items"
+	local node = spec.nodes[nodeId]
+	local allocated = (node and node.alloc) or false
+	local socketedItem = itemId ~= 0 and itemsTab.items[itemId] or nil
+	local result = {
+		nodeId = nodeId,
+		socketName = slot.slotName,
+		socketed = itemId ~= 0 and itemId or false,
+		itemName = socketedItem and socketedItem.name or nil,
+		allocated = allocated,
+		stats = recalcAndRead(build, params.stats),
+	}
+	if itemId ~= 0 and not allocated then
+		result.note = "socket node " .. nodeId .. " is not allocated, so the jewel is INERT " ..
+			"until you allocate it — call setPassive with nodeId " .. nodeId
+	end
+	return result
+end
+
 -- FR-10 (discovery): read the build's socket groups and their gems so the
 -- assistant can target set_main_skill / add_gem / set_gem / remove_gem by REAL
 -- group/gem indices instead of guessing. Read-only. No params.
