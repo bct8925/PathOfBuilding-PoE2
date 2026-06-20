@@ -88,9 +88,11 @@ return function(ctx)
 		method = "searchTrade",
 		async = true,
 		description = "Search the PoE2 trade site by explicit criteria and return the top listings (price, the seller "
-			.. "whisper, item text). For mod filters, pass `stats` as {id,min?,max?} using IDs from "
-			.. "gui_search_trade_stats. Budget-capped via budget+currency. Prices gain a `divEquivalent` once "
-			.. "gui_currency_rates has been called for the league. Read-only — never trades.",
+			.. "whisper, item text) plus `tradeUrl` — the canonical trade-site link for this exact search, which "
+			.. "you should give the user so they can open it in-browser to view and purchase the items. For mod "
+			.. "filters, pass `stats` as {id,min?,max?} using IDs from gui_search_trade_stats. Budget-capped via "
+			.. "budget+currency. Prices gain a `divEquivalent` once gui_currency_rates has been called for the "
+			.. "league. Read-only — never trades.",
 		schema = S.obj({
 			league = S.str("League name (from gui_list_leagues)."),
 			category = S.str("Trade category option, e.g. 'accessory.ring', 'armour.chest', 'weapon.wand'. Omit for any."),

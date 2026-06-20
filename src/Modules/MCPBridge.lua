@@ -855,15 +855,20 @@ function methods.searchTrade(build, params)
 	local tq = build.itemsTab and build.itemsTab.tradeQuery
 	local limit = params.limit or 10
 	return startJob(function(resolve, reject)
-		getTradeRequests():SearchWithQuery(POE2_REALM, league, queryJson, function(items, errMsg)
+		local tr = getTradeRequests()
+		-- Capture the server-stored query id so we can hand back the canonical trade-site
+		-- URL (…/trade2/search/poe2/<league>/<id>) the user can open to view/buy the listings.
+		local queryId
+		tr:SearchWithQuery(POE2_REALM, league, queryJson, function(items, errMsg)
 			if errMsg then reject(errMsg) return end
 			local out = {}
 			for i, it in ipairs(items or {}) do
 				if i > limit then break end
 				t_insert(out, shapeListing(tq, league, it))
 			end
-			resolve({ league = league, count = #out, listings = out })
-		end)
+			local tradeUrl = queryId and tr:buildUrl(tr.hostName .. "trade2/search", POE2_REALM, league, queryId) or nil
+			resolve({ league = league, count = #out, tradeUrl = tradeUrl, listings = out })
+		end, { callbackQueryId = function(id) queryId = id end })
 	end)
 end
 
