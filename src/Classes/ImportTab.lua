@@ -424,6 +424,36 @@ function ImportTabClass:Draw(viewPort, inputEvents)
 	self:DrawControls(viewPort)
 end
 
+-- UI-free fetch + parse of the account's character list. Shared by the GUI
+-- (DownloadCharacterList) and the MCP bridge so neither reimplements the API call.
+-- callback(charList, errMsg, errBody): on success charList is the normalised array
+-- of characters; on failure errMsg is set (errBody carries the raw payload, e.g. the
+-- numeric retry time for a 429 so callers can render a live countdown).
+function ImportTabClass:FetchCharacterListData(realmCode, callback)
+	main.api:DownloadCharacterList(realmCode, function(body, errMsg, updateSettings)
+		if updateSettings then
+			self:SaveApiSettings()
+		end
+		if errMsg then
+			callback(nil, errMsg, body)
+			return
+		end
+		local charList, _pos, errDecode = dkjson.decode(body)
+		if errDecode then
+			callback(nil, "Error processing character list")
+			return
+		end
+		charList = charList.characters
+		for _, char in ipairs(charList or {}) do
+			-- validate if the class have internal class
+			if self.build.latestTree.internalAscendNameMap[char.class] ~= nil then
+				char.class = self.build.latestTree.internalAscendNameMap[char.class].ascendClass.name
+			end
+		end
+		callback(charList, nil)
+	end)
+end
+
 function ImportTabClass:DownloadCharacterList()
 	function FindMatchingStandardLeague(league)
 		-- Find a Standard league name for a given league name
@@ -445,10 +475,7 @@ function ImportTabClass:DownloadCharacterList()
 	self.charImportMode = "DOWNLOADCHARLIST"
 	self.charImportStatus = "Retrieving character list..."
 	local realm = realmList[self.controls.accountRealm.selIndex]
-	main.api:DownloadCharacterList(realm.realmCode, function(body, errMsg, updateSettings)
-		if updateSettings then
-			self:SaveApiSettings()
-		end
+	self:FetchCharacterListData(realm.realmCode, function(charList, errMsg, errBody)
 		if errMsg == main.api.ERROR_NO_AUTH then
 			self.charImportMode = "AUTHENTICATION"
 			self.charImportStatus = colorCodes.WARNING.."Not authenticated"
@@ -466,7 +493,7 @@ function ImportTabClass:DownloadCharacterList()
 			self.charImportMode = "GETACCOUNTNAME"
 			return
 		elseif errMsg == "Response code: 429" then
-			self.charImportStatus = function() return colorCodes.NEGATIVE.."Requests are being sent too fast, try again in " .. tostring(m_max(0, body - os.time())) .. " seconds." end
+			self.charImportStatus = function() return colorCodes.NEGATIVE.."Requests are being sent too fast, try again in " .. tostring(m_max(0, errBody - os.time())) .. " seconds." end
 			self.charImportMode = "GETACCOUNTNAME"
 			return
 		elseif errMsg then
@@ -474,13 +501,6 @@ function ImportTabClass:DownloadCharacterList()
 			self.charImportMode = "GETACCOUNTNAME"
 			return
 		end
-		local charList, _pos, errDecode = dkjson.decode(body)
-		if errDecode then
-			self.charImportStatus = colorCodes.NEGATIVE.."Error processing character list, try again later"
-			self.charImportMode = "GETACCOUNTNAME"
-			return
-		end
-		charList = charList.characters
 		--ConPrintTable(charList)
 		if #charList == 0 then
 			self.charImportStatus = colorCodes.NEGATIVE.."The account has no characters to import."
@@ -494,10 +514,6 @@ function ImportTabClass:DownloadCharacterList()
 		main.lastRealm = realm.id
 		local leagueList = { }
 		for i, char in ipairs(charList) do
-			-- validate if the class have internal class
-			if self.build.latestTree.internalAscendNameMap[char.class] ~= nil then
-				char.class = self.build.latestTree.internalAscendNameMap[char.class].ascendClass.name
-			end
 			if not isValueInArray(leagueList, char.league) then
 				t_insert(leagueList, char.league)
 			end
@@ -584,51 +600,54 @@ function ImportTabClass:BuildCharacterList(league)
 	end
 end
 
+-- UI-free fetch + parse of a single character. Shared by the GUI (DownloadCharacter)
+-- and the MCP bridge. callback(charData, errMsg, errBody): charData is the parsed
+-- character on success; errBody carries the raw payload (e.g. numeric 429 retry time).
+function ImportTabClass:FetchCharacterData(realmCode, name, callback)
+	main.api:DownloadCharacter(realmCode, name, function(body, errMsg, updateSettings)
+		if updateSettings then
+			self:SaveApiSettings()
+		end
+		if errMsg then
+			callback(nil, errMsg, body)
+			return
+		elseif body == "false" then
+			callback(nil, "Failed to retrieve character data")
+			return
+		end
+		local fullCharData, _pos, errParsing = dkjson.decode(body)
+		if errParsing then
+			callback(nil, "Error processing character data")
+			return
+		end
+		callback(fullCharData.character, nil)
+	end)
+end
+
 function ImportTabClass:DownloadCharacter(callback)
 	self.charImportMode = "IMPORTING"
 	self.charImportStatus = "Retrieving character data..."
 	local realm = realmList[self.controls.accountRealm.selIndex]
 	local charSelect = self.controls.charSelect
 	local charData = charSelect.list[charSelect.selIndex].char
-	main.api:DownloadCharacter(realm.realmCode, charData.name, function(body, errMsg, updateSettings)
+	self:FetchCharacterData(realm.realmCode, charData.name, function(fullCharData, errMsg, errBody)
 		self.charImportMode = "SELECTCHAR"
-		if updateSettings then
-			self:SaveApiSettings()
-		end
 		if errMsg then
 			if errMsg == main.api.ERROR_NO_AUTH then
 				self.charImportMode = "AUTHENTICATION"
 				self.charImportStatus = colorCodes.WARNING.."Not authenticated"
-				return
 			elseif errMsg == "Response code: 429" then
-				self.charImportStatus = function() return colorCodes.NEGATIVE.."Requests are being sent too fast, try again in " .. tostring(m_max(0, body - os.time())) .. " seconds." end
+				self.charImportStatus = function() return colorCodes.NEGATIVE.."Requests are being sent too fast, try again in " .. tostring(m_max(0, errBody - os.time())) .. " seconds." end
 				self.charImportMode = "GETACCOUNTNAME"
-				return
 			else
 				self.charImportStatus = colorCodes.NEGATIVE.."Error importing character data, try again ("..errMsg:gsub("\n"," ")..")"
-				return
 			end
-		elseif body == "false" then
-			self.charImportStatus = colorCodes.NEGATIVE.."Failed to retrieve character data, try again."
 			return
 		end
 		self.lastCharacterHash = common.sha1(charData.name)
 		if not self.lastLeague then
 			self.lastLeague = charSelectLeague:GetSelValueByKey("league")
 		end
-		--local out = io.open("get-passive-skills.json", "w")
-		--out:write(json)
-		--out:close()
-		local fullCharData, _pos, errParsing = dkjson.decode(body)
-		--local out = io.open("get-passive-skills.json", "w")
-		--writeLuaTable(out, charPassiveData, 1)
-		--out:close()
-
-		if errParsing then
-			self.charImportStatus = colorCodes.NEGATIVE.."Error processing character data, try again later."
-			return
-		end
-		fullCharData = fullCharData.character
 		charSelect.list[charSelect.selIndex].char = fullCharData
 		callback(fullCharData)
 	end)
@@ -643,6 +662,43 @@ end
 function ImportTabClass:DownloadItems()
 	self:DownloadCharacter(function(charData)
 		self:ImportItemsAndSkills(charData)
+	end)
+end
+
+-- UI-free orchestrator used by the MCP bridge: fetch a named character and apply it
+-- onto the current build without the Import tab being the active view. opts mirrors
+-- the tab checkboxes ({ clearItems, clearSkills, clearJewels, ignoreWeaponSwap }) and
+-- adds importItems/importTree toggles (both default on). callback(ok, errMsg).
+function ImportTabClass:ImportCharacterHeadless(realmCode, name, opts, callback)
+	opts = opts or {}
+	self:FetchCharacterData(realmCode, name, function(charData, errMsg, errBody)
+		if errMsg then
+			if errMsg == "Response code: 429" and type(errBody) == "number" then
+				errMsg = "Rate limited; retry in " .. tostring(m_max(0, errBody - os.time())) .. "s"
+			end
+			callback(false, errMsg)
+			return
+		end
+		-- Mirror the import-code path order (items+skills, then tree+jewels).
+		local applyOk, applyErr = pcall(function()
+			if opts.importItems ~= false then
+				self:ImportItemsAndSkills(charData, {
+					clearItems = opts.clearItems ~= false,
+					clearSkills = opts.clearSkills ~= false,
+					ignoreWeaponSwap = opts.ignoreWeaponSwap == true,
+				})
+			end
+			if opts.importTree ~= false then
+				self:ImportPassiveTreeAndJewels(charData, {
+					clearJewels = opts.clearJewels ~= false,
+				})
+			end
+		end)
+		if not applyOk then
+			callback(false, "Failed to apply character: " .. tostring(applyErr))
+			return
+		end
+		callback(true, nil)
 	end)
 end
 
@@ -744,12 +800,19 @@ function ImportTabClass:ImportQuestRewardConfig(questStats)
 	end
 end
 
-function ImportTabClass:ImportPassiveTreeAndJewels(charData)
+-- opts (optional): { clearJewels }. When omitted (GUI path) the values are read
+-- from the tab's checkboxes; the MCP bridge passes an explicit opts table so the
+-- apply path is callable without the Import tab being the active view.
+function ImportTabClass:ImportPassiveTreeAndJewels(charData, opts)
+	opts = opts or {
+		clearJewels = self.controls.charImportTreeClearJewels.state,
+	}
+	self.importIgnoreWeaponSwap = false
 	local charPassiveData = charData.passives
 	self.charImportStatus = colorCodes.POSITIVE.."Passive tree and jewels successfully imported."
 	self.build.spec.jewel_data = copyTable(charPassiveData.jewel_data)
 	--ConPrintTable(charPassiveData)
-	if self.controls.charImportTreeClearJewels.state then
+	if opts.clearJewels then
 		for _, slot in pairs(self.build.itemsTab.slots) do
 			if slot.selItemId ~= 0 and slot.nodeId then
 				self.build.itemsTab.build.spec.ignoreAllocatingSubgraph = true -- ignore allocated cluster nodes on Import when Delete Jewel is true, clean slate
@@ -776,7 +839,9 @@ function ImportTabClass:ImportPassiveTreeAndJewels(charData)
 	self.build.spec:ImportFromNodeList(charData.class, nil, nil, charPassiveData.alternate_ascendancy or 0, hashes, weaponSets, {}, charPassiveData.mastery_effects or {}, latestTreeVersion)
 
 	-- workaround to update the ui to last option
-	self.build.treeTab.controls.versionSelect.selIndex = #self.build.treeTab.treeVersions
+	if self.build.treeTab.controls.versionSelect then
+		self.build.treeTab.controls.versionSelect.selIndex = #self.build.treeTab.treeVersions
+	end
 	-- attributes nodes
 	for skillId, nodeInfo in pairs(charPassiveData.skill_overrides) do
 		local changeAttributeId = 0
@@ -807,7 +872,9 @@ function ImportTabClass:ImportPassiveTreeAndJewels(charData)
 	self.build.characterLevel = charData.level
 	self.build.characterLevelAutoMode = false
 	self.build.configTab:UpdateLevel()
-	self.build.controls.characterLevel:SetText(charData.level)
+	if self.build.controls.characterLevel then
+		self.build.controls.characterLevel:SetText(charData.level)
+	end
 	self.build:EstimatePlayerProgress()
 	local resistancePenaltyIndex = 7
 	if self.build.Act then -- Estimate resistance penalty setting based on act progression estimate
@@ -818,9 +885,13 @@ function ImportTabClass:ImportPassiveTreeAndJewels(charData)
 			else resistancePenaltyIndex = self.build.Act end
 		end
 	end
-	self.build.configTab.varControls["resistancePenalty"]:SetSel(resistancePenaltyIndex)
+	if self.build.configTab.varControls["resistancePenalty"] then
+		self.build.configTab.varControls["resistancePenalty"]:SetSel(resistancePenaltyIndex)
+	end
 	self.build.buildFlag = true
-	main:SetWindowTitleSubtext(string.format("%s (%s, %s, %s)", self.build.buildName, charData.name, charData.class, charData.league))
+	if main.SetWindowTitleSubtext then
+		main:SetWindowTitleSubtext(string.format("%s (%s, %s, %s)", self.build.buildName, charData.name, charData.class, charData.league))
+	end
 end
 
 local SOCKET_GROUP_REIMPORT_KEY_SEPARATOR = "\31"
@@ -914,9 +985,18 @@ local function applySocketGroupReimportState(socketGroup, state)
 	end
 end
 
-function ImportTabClass:ImportItemsAndSkills(charData)
+-- opts (optional): { clearItems, clearSkills, ignoreWeaponSwap }. When omitted (GUI
+-- path) the values are read from the tab's checkboxes; the MCP bridge passes an
+-- explicit opts table so the apply path is callable without the tab being active.
+function ImportTabClass:ImportItemsAndSkills(charData, opts)
+	opts = opts or {
+		clearItems = self.controls.charImportItemsClearItems.state,
+		clearSkills = self.controls.charImportItemsClearSkills.state,
+		ignoreWeaponSwap = self.controls.charImportItemsIgnoreWeaponSwap.state,
+	}
+	self.importIgnoreWeaponSwap = opts.ignoreWeaponSwap
 	local charItemData = charData.equipment
-	if self.controls.charImportItemsClearItems.state then
+	if opts.clearItems then
 		for _, slot in pairs(self.build.itemsTab.slots) do
 			if slot.selItemId ~= 0 and not slot.nodeId then
 				self.build.itemsTab:DeleteItem(self.build.itemsTab.items[slot.selItemId])
@@ -927,7 +1007,7 @@ function ImportTabClass:ImportItemsAndSkills(charData)
 	local mainSkillEmpty = #self.build.skillsTab.socketGroupList == 0
 	local skillOrder
 	local preservedSocketGroupStateByKey
-	if self.controls.charImportItemsClearSkills.state then
+	if opts.clearSkills then
 		skillOrder = { }
 		preservedSocketGroupStateByKey = { }
 		for _, socketGroup in ipairs(self.build.skillsTab.socketGroupList) do
@@ -1140,7 +1220,9 @@ function ImportTabClass:ImportItemsAndSkills(charData)
 	self.build.skillsTab:AddUndoState()
 	self.build.characterLevel = charData.level
 	self.build.configTab:UpdateLevel()
-	self.build.controls.characterLevel:SetText(charData.level)
+	if self.build.controls.characterLevel then
+		self.build.controls.characterLevel:SetText(charData.level)
+	end
 	self.build.buildFlag = true
 	return charData -- For the wrapper
 end
@@ -1158,7 +1240,7 @@ function ImportTabClass:ImportItem(itemData, slotName)
 			else
 				slotName = "Flask "..(itemData.x + 1)
 			end
-		elseif not (self.controls.charImportItemsIgnoreWeaponSwap.state and (itemData.inventoryId == "Weapon2" or itemData.inventoryId == "Offhand2")) then
+		elseif not (self.importIgnoreWeaponSwap and (itemData.inventoryId == "Weapon2" or itemData.inventoryId == "Offhand2")) then
 			slotName = slotMap[itemData.inventoryId]
 		end
 	end

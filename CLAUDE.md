@@ -47,7 +47,7 @@ The MCP server + Claude skills are packaged as a **Claude plugin in a git submod
 `plugins/pob2-mcp/`, holds the `server/` and `skills/`). Run `git submodule update --init`
 after cloning. The in-app socket bridge **stays in this repo** (`src/Modules/MCPBridge.lua`)
 because it ships as part of PoB2 itself. Let `PLG = pob2-mcp/plugins/pob2-mcp`. Key files:
-`$PLG/server/src/index.ts` (registers all 37 tools — source of truth; see
+`$PLG/server/src/index.ts` (registers all tools — source of truth; see
 `$PLG/server/README.md`), `$PLG/server/src/engine/headless.ts` + `$PLG/server/lua/run_headless.lua`
 (headless backend), `$PLG/server/src/engine/optimize.ts` (search scoring), and
 `$PLG/server/src/bridge/socket.ts` (Node client) ↔ `src/Modules/MCPBridge.lua` (the in-app

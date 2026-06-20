@@ -200,6 +200,49 @@ local function recalcAndRead(build, keys)
 	return readStats(build, keys)
 end
 
+-- Async-job primitive ------------------------------------------------------
+--
+-- Most of the bridge is synchronous: a handler mutates the build and returns
+-- refreshed stats in the same frame. But PoB's networking (account/character
+-- import, trade) is callback-driven via launch:DownloadPage — the result lands on
+-- a *later* frame, and a handler must never block waiting for it. So async work
+-- runs as a job: the start handler kicks off the download and returns
+-- { jobId, status = "pending" } immediately; the download's onComplete fills the
+-- job on a later frame (PoB keeps running OnFrame off-screen via Bridge's
+-- keep-alive coroutine); the Node client polls `jobPoll` until done/error.
+--
+-- Jobs live on Bridge (not inside a single request) so they survive across the
+-- frames between start and poll.
+Bridge.jobs = {}
+Bridge.nextJobId = 1
+
+-- Start an async job. `fn(resolve, reject)` kicks off the async work; its later-frame
+-- callback calls resolve(result) or reject(err). Returns the pending job descriptor
+-- synchronously. A synchronous throw inside fn becomes an immediate error job.
+local function startJob(fn)
+	local jobId = Bridge.nextJobId
+	Bridge.nextJobId = jobId + 1
+	local job = { status = "pending" }
+	Bridge.jobs[jobId] = job
+	local resolve = function(result)
+		if job.status == "pending" then
+			job.status = "done"
+			job.result = result
+		end
+	end
+	local reject = function(err)
+		if job.status == "pending" then
+			job.status = "error"
+			job.error = tostring(err)
+		end
+	end
+	local ok, err = pcall(fn, resolve, reject)
+	if not ok then
+		reject(err)
+	end
+	return { jobId = jobId, status = job.status }
+end
+
 -- Strip PoB's inline colour codes from a display string: `^x` + 6 hex digits
 -- (e.g. ^xFF0000) or `^` + a single palette digit (e.g. ^8). The breakdown lines
 -- PoB builds for the GUI are peppered with these; the MCP wants plain text.
@@ -498,6 +541,121 @@ end
 
 -- method handlers: each receives (build, params) and returns a result table.
 local methods = {}
+
+-- Poll a job by id. Returns { status = "pending" | "done" | "error", result?, error? }.
+-- A finished job is dropped on read (one-shot), so the client polls until non-pending.
+function methods.jobPoll(build, params)
+	local jobId = params.jobId
+	local job = jobId and Bridge.jobs[jobId]
+	if not job then
+		error("unknown jobId: " .. tostring(jobId))
+	end
+	local snapshot = { status = job.status, result = job.result, error = job.error }
+	if job.status ~= "pending" then
+		Bridge.jobs[jobId] = nil
+	end
+	return snapshot
+end
+
+-- Live-account tools (Phase A). These reuse PoB's existing networking
+-- (main.api = PoEAPI) and the refactored ImportTab fetch/apply path. Because the
+-- network is async and callback-driven, listCharacters/importCharacter return a
+-- pending job (see startJob); accountStatus is a synchronous, network-free read of
+-- the persisted OAuth token so the client can tell the user whether to authorise.
+local POE2_REALM = "poe2"
+
+-- Synchronous: report auth state from the persisted token without any network call.
+-- Never returns the token itself. The user authorises once in PoB's Import tab
+-- (interactive OAuth); MCP reuses/refreshes that token thereafter.
+function methods.accountStatus(build, params)
+	local hasToken = main.lastToken ~= nil and main.lastToken ~= ""
+	local hasRefresh = main.lastRefreshToken ~= nil and main.lastRefreshToken ~= ""
+	local expiry = tonumber(main.tokenExpiry) or 0
+	local now = os.time()
+	local expired = expiry > 0 and expiry <= now
+	-- An expired access token is still usable if a refresh token can renew it silently.
+	local signedIn = hasToken and (not expired or hasRefresh)
+	return {
+		signedIn = signedIn,
+		expired = expired,
+		canRefresh = hasRefresh,
+		expiresInSeconds = expiry > 0 and m_max(0, expiry - now) or nil,
+		needsAuth = not signedIn,
+		message = signedIn
+			and "Authenticated with the Path of Exile API."
+			or "Not signed in. Authorise once in PoB's Import tab (Path of Exile API login), then retry.",
+	}
+end
+
+-- Async: list the account's characters. Resolves with a trimmed array.
+function methods.listCharacters(build, params)
+	local importTab = build.importTab
+	if not importTab then error("import tab unavailable") end
+	return startJob(function(resolve, reject)
+		importTab:FetchCharacterListData(POE2_REALM, function(charList, errMsg, errBody)
+			if errMsg then
+				if errMsg == main.api.ERROR_NO_AUTH then
+					reject("Not signed in. Authorise once in PoB's Import tab, then retry.")
+				elseif errMsg == "Response code: 429" and type(errBody) == "number" then
+					reject("Rate limited; retry in " .. tostring(m_max(0, errBody - os.time())) .. "s")
+				else
+					reject(errMsg)
+				end
+				return
+			end
+			local out = {}
+			for _, char in ipairs(charList or {}) do
+				t_insert(out, {
+					name = char.name,
+					class = char.class,
+					ascendancy = char.ascendancyClass or char.ascendancy,
+					level = char.level,
+					league = char.league,
+				})
+			end
+			resolve({ characters = out })
+		end)
+	end)
+end
+
+-- Async: import a named character onto the live build and return refreshed stats.
+-- params: { name (required), clearItems?, clearSkills?, clearJewels?,
+--           ignoreWeaponSwap?, importItems?, importTree?, stats? }.
+function methods.importCharacter(build, params)
+	local name = params.name
+	if type(name) ~= "string" or name == "" then
+		error("'name' is required")
+	end
+	local importTab = build.importTab
+	if not importTab then error("import tab unavailable") end
+	local opts = {
+		clearItems = params.clearItems,
+		clearSkills = params.clearSkills,
+		clearJewels = params.clearJewels,
+		ignoreWeaponSwap = params.ignoreWeaponSwap,
+		importItems = params.importItems,
+		importTree = params.importTree,
+	}
+	return startJob(function(resolve, reject)
+		importTab:ImportCharacterHeadless(POE2_REALM, name, opts, function(ok, errMsg)
+			if not ok then
+				reject(errMsg or "import failed")
+				return
+			end
+			-- Import writes undo states to several tabs (spec/items/skills), each on its
+			-- own per-tab stack; clear lastUndoScope so a bare gui_undo doesn't silently
+			-- revert only one of them. Fully reverting needs an undo per affected scope.
+			Bridge.lastUndoScope = nil
+			local stats, unknown = recalcAndRead(build, params.stats)
+			resolve({
+				imported = name,
+				stats = stats,
+				unknownStats = unknown,
+				undoNote = "Import spans multiple tabs; to revert, gui_undo each affected scope ('tree', 'items', 'skills').",
+			})
+		end)
+	end)
+end
 
 -- FR-4/FR-5: identity + final computed stats of the live build.
 -- params: { stats?, includeNotables? }. allocatedNotables is opt-in (includeNotables,
