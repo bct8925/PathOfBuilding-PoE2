@@ -407,13 +407,21 @@ function TradeQueryRequestsClass:FetchResultBlock(url, callback)
 					t_insert(rawLines, escapeGGGString(modLine))
 				end
 				for _, modLine in ipairs(item.explicitMods) do
-					local s = ""
-					for flagName, flag in pairs(modLine.flags or {}) do
-						if flag then
-							s = s .. string.format("{%s}", flagName)
+					-- PoE2 trade returns explicit mods as plain strings (like the enchant/
+					-- rune/implicit arrays above); tolerate the older {flags,description}
+					-- object shape too. Reading .description off a string yields nil, which
+					-- is why these came back blank (and used to crash escapeGGGString).
+					if type(modLine) == "string" then
+						t_insert(rawLines, escapeGGGString(modLine))
+					else
+						local s = ""
+						for flagName, flag in pairs(modLine.flags or {}) do
+							if flag then
+								s = s .. string.format("{%s}", flagName)
+							end
 						end
+						t_insert(rawLines, s .. escapeGGGString(modLine.description))
 					end
-					t_insert(rawLines, s .. escapeGGGString(modLine.description))
 				end
 				if item.mirrored then
 					t_insert(rawLines, "Mirrored")
