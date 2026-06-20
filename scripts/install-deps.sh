@@ -9,10 +9,12 @@
 #
 # What it installs:
 #   apt:      build-essential luajit lua5.1 liblua5.1-dev luarocks git curl unzip
-#   luarocks: luautf8 (the only compiled module PoB requires) and busted (tests)
+#   luarocks: luautf8 (the compiled module PoB's calc engine requires),
+#             luasocket (the MCP server's bridge client needs the LuaSocket C core;
+#             Windows ships runtime/socket.dll, Linux dev needs this), busted (tests)
 #
-# Everything else PoB needs (xml, sha1, socket, dkjson, base64) is bundled as
-# pure Lua under runtime/lua/.
+# The rest PoB needs (xml, sha1, dkjson, base64, the socket Lua wrapper) is bundled
+# as pure Lua under runtime/lua/. The MCP server itself is plain Lua (no Node).
 #
 # Usage:
 #   scripts/install-deps.sh            # install everything (apt + luarocks)
@@ -66,50 +68,19 @@ fi
 log "Installing luautf8 via luarocks (Lua $LUA_VERSION)"
 $SUDO "${ROCKS[@]}" install luautf8
 
-# --- 3. busted test runner (optional) -----------------------------------------
+# --- 3. luasocket (MCP server bridge client) ----------------------------------
+# The Lua MCP server connects to the running PoB2 GUI over TCP via LuaSocket. The
+# bundled runtime/lua/socket.lua is a pure-Lua wrapper over a compiled core; on
+# Windows that's runtime/socket.dll, but Linux dev needs the C core installed.
+log "Installing luasocket via luarocks"
+$SUDO "${ROCKS[@]}" install luasocket
+
+# --- 4. busted test runner (optional) -----------------------------------------
 if [ "${SKIP_BUSTED:-0}" != "1" ]; then
 	log "Installing busted test runner via luarocks"
 	$SUDO "${ROCKS[@]}" install busted
 else
 	log "SKIP_BUSTED=1 — skipping busted"
-fi
-
-# --- 4. Node toolchain + MCP server (userland, no sudo) -----------------------
-# The MCP server is Node/TypeScript and must run under LINUX Node (Windows Node
-# cannot exec the Linux luajit headless binary). Install a userland Node LTS so
-# this needs no root, then install + build the server (in the pob2-mcp plugin submodule).
-NODE_VER=v20.18.1
-NODE_HOME="$HOME/.local/node/node-${NODE_VER}-linux-x64"
-if [ "${SKIP_NODE:-0}" != "1" ]; then
-	case "$(uname -m)" in
-		x86_64) NA=x64;;
-		aarch64) NA=arm64;;
-		*) die "unsupported arch for userland Node: $(uname -m)";;
-	esac
-	NODE_HOME="$HOME/.local/node/node-${NODE_VER}-linux-${NA}"
-	if [ ! -x "$NODE_HOME/bin/node" ]; then
-		log "Installing userland Node $NODE_VER to $NODE_HOME"
-		mkdir -p "$HOME/.local/node"
-		curl -fsSL --max-time 180 \
-			"https://nodejs.org/dist/${NODE_VER}/node-${NODE_VER}-linux-${NA}.tar.xz" \
-			-o /tmp/node.tar.xz
-		tar -xJf /tmp/node.tar.xz -C "$HOME/.local/node"
-	fi
-	export PATH="$NODE_HOME/bin:$PATH"
-	log "Node $(node --version) / npm $(npm --version)"
-
-	SERVER_DIR="$REPO_ROOT/pob2-mcp/plugins/pob2-mcp/server"
-	if [ -d "$SERVER_DIR" ]; then
-		log "Installing + building the MCP server ($SERVER_DIR)"
-		( cd "$SERVER_DIR" && npm install && npm run build )
-	else
-		log "Skipping MCP server build: $SERVER_DIR not found (run 'git submodule update --init' first)"
-	fi
-
-	warn "Add Node to your PATH for future shells:"
-	warn "  export PATH=\"$NODE_HOME/bin:\$PATH\""
-else
-	log "SKIP_NODE=1 — skipping Node / MCP server"
 fi
 
 # --- 5. verify the headless engine boots --------------------------------------
@@ -136,6 +107,8 @@ Next steps:
       cd src && LUA_PATH="../runtime/lua/?.lua;../runtime/lua/?/init.lua;;" luajit HeadlessWrapper.lua
   • Run the test suite (from the repo root, where .busted lives):
       busted --lua=luajit
+  • Run the MCP server tests (wiring + headless e2e + MCPBridge regression):
+      mcp-server/run_tests.sh
   • Launch the Windows GUI (via WSL interop):
       "runtime/Path{space}of{space}Building-PoE2.exe"
 EOF
