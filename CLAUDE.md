@@ -19,18 +19,21 @@ Highlights:
   Headless is the secondary backend, used for optimization/search (apply the
   winner to the live build).
 - Use cases: **analyze/explain, suggest, optimize/search, author** builds.
-- MCP server is **plain Lua** (in `mcp-server/`, on the `mcp-lua` library), launched by local Claude Code over stdio as `luajit mcp_server.lua`.
-- Live-GUI link is an **in-app socket bridge** built into PoB2's source, gated by
-  an Options toggle ("Enable MCP bridge"), off by default, pumped from `OnFrame`.
-  It opens a local TCP socket (PoB2 bundles `socket.dll` + `runtime/lua/socket.lua`).
+- MCP server is **plain Lua hosted inside PoB** (the `mcp-lua` library + the
+  `mcp-server/` tool registry), served over **HTTP** — not a spawned process.
+- The server is built into PoB2's source, gated by an Options toggle ("Enable MCP
+  server"), off by default, pumped from `OnFrame`. It listens on `127.0.0.1:<port>`
+  (default 8843; PoB bundles `socket.dll` + `runtime/lua/socket.lua`) and speaks the
+  MCP Streamable HTTP transport at `/mcp`. Live tools call `MCPBridge.lua` `methods.*`
+  directly; async tools (trade/account, optimize) defer their HTTP response.
 - Mutations **apply immediately**; revert via **PoB's native undo stack**.
 - **Ships native-Windows-only, as a natural built-in PoB extension** — no WSL, no
   Node install, no toolchain expected of users. The server is plain Lua shipped in
-  PoB's folder (`mcp-server/`), run by the bundled Windows `luajit.exe` (the same
-  interpreter serves the headless backend). **WSL is dev-only and must not leak into
-  the product** (resolve paths/runtime relative to the Windows distribution).
-- Client-agnostic: stdio server + a documented config snippet for the user's MCP
-  client.
+  PoB's folder (`mcp-server/`, loaded by PoB); the bundled Windows `luajit.exe` runs
+  only the headless backend. **WSL is dev-only and must not leak into the product**
+  (resolve paths/runtime relative to the Windows distribution).
+- Client-agnostic: the client connects to the local HTTP URL via a documented
+  `.mcp.json` snippet (`{type:"http", url:"http://127.0.0.1:8843/mcp"}`).
 - v1 operates on the **current build** only (+ new/save/save-as); **no external
   imports** (PoB codes, account import, trade) and no open-by-name.
 - GUI must be **already running**; the MCP does not auto-launch it.
@@ -38,38 +41,42 @@ Highlights:
 ## Architecture
 
 ```
-  AI client ── MCP ──> luajit mcp-server/mcp_server.lua ──┬─ spawn luajit run_headless.lua   (headless calc)
-                       (mcp-lua: MCP over stdio)          └─ TCP socket ─> Lua bridge in running PoB2 GUI (live)
+  AI client ──HTTP POST /mcp──> PoB hosts the MCP server in-process (pumped from OnFrame)
+  (.mcp.json {type:http,        ├─ sync tool  → methods.*(build,params) directly (same Lua state)
+   url:127.0.0.1:8843/mcp})     └─ async tool → job + deferred HTTP response; optimize/headless
+                                     run off-frame via LaunchSubScript → luajit run_headless.lua
 ```
 
-**The MCP server is plain Lua and lives in THIS repo at `mcp-server/`** — it ships as part of
-PoB2, exactly like the in-app bridge. There is no Node/TypeScript and no build step; the bundled
-`runtime/luajit.exe` runs both the server and the headless calc. Key files:
-`mcp-server/mcp_server.lua` (entry: bootstrap + register tools + serve stdio),
+**PoB hosts the MCP server itself** over Streamable HTTP, gated by the Options toggle ("Enable MCP
+server", off by default) on a fixed port (default 8843, editable). The plugin's `.mcp.json` just
+points at `http://127.0.0.1:8843/mcp` — no spawned process, no file paths. The server is plain Lua
+and ships in THIS repo; live tool handlers call `MCPBridge.lua` `methods.*` **directly** (same Lua
+state, no socket). Key files:
+`src/Modules/MCPBridge.lua` (the in-app HTTP MCP server: `Bridge:buildMcpServer`/`pump`/`serviceClient`
++ all `methods.*` + `startJob`/`jobPoll`, loaded lazily by `main:PumpMCPBridge`),
 `mcp-server/lua/tools/` (the tool registry — source of truth, split by domain),
-`mcp-server/lua/bridge.lua` (TCP client to the GUI) ↔ `src/Modules/MCPBridge.lua` (the in-app
-socket server, loaded lazily by `main:PumpMCPBridge` when the "Enable MCP bridge" Option is on),
-`mcp-server/lua/engine.lua` + `mcp-server/lua/run_headless.lua` (headless backend),
-`mcp-server/lua/optimize.lua` (search scoring), `mcp-server/lua/config.lua` (path/runtime
-resolution). MCP protocol is the **`mcp-lua`** library, vendored at `mcp-server/vendor/mcp-lua/`
-(developed at `~/Dev/mcp-lua`; re-vendor with `mcp-server/scripts/sync-mcp-lua.sh`).
-Tests: `mcp-server/test/test_server.lua` (wiring), `mcp-server/test/integration_headless.lua`
-(MCP-over-stdio e2e), `mcp-server/test/test_bridge.lua` (200+ MCPBridge checks) — run all via
+`mcp-server/lua/inproc.lua` (in-process adapter: tools → `methods.*`, with `deferJob` for async),
+`mcp-server/lua/engine.lua` + `mcp-server/lua/run_headless.lua` (headless via `LaunchSubScript`),
+`mcp-server/lua/optimize.lua` (search scoring). MCP protocol is the **`mcp-lua`** library, vendored
+at `mcp-server/vendor/mcp-lua/` (developed at `~/Dev/mcp-lua`; its `Server:dispatch` handles the
+async/pending path; re-vendor with `mcp-server/scripts/sync-mcp-lua.sh`).
+Tests: `mcp-server/test/test_server.lua` (wiring), `mcp-server/test/test_http.lua` (in-PoB HTTP
+transport e2e), `mcp-server/test/test_bridge.lua` (200+ MCPBridge checks) — run all via
 `mcp-server/run_tests.sh`. Packaging: `scripts/build-dist.sh` (stages `mcp-server/` + `runtime/`
 + `src/`; no exe) + `scripts/dev-update-local.sh`.
 
 The **`pob2-mcp/` submodule** (repo: github.com/bct8925/pob2-mcp — a marketplace whose one plugin
-`plugins/pob2-mcp/`) now holds **only the plugin definition + skills**: `.claude-plugin/plugin.json`,
-`.mcp.json` (launches `luajit ${POB_ROOT}/mcp-server/mcp_server.lua`), and `skills/`. Run
+`plugins/pob2-mcp/`) holds **only the plugin definition + skills**: `.claude-plugin/plugin.json`,
+`.mcp.json` (`{type:"http", url:"http://127.0.0.1:8843/mcp"}`), and `skills/`. Run
 `git submodule update --init` after cloning. Three **skills** under `plugins/pob2-mcp/skills/`:
 `poe2-build` (the build-authoring workflow that drives the `gui_*` tools), `poe2-mechanics` (PoE2
 concepts + real PoB stat/config vocabulary), and `poe2-sync` (`/poe2-sync` — refresh that
 knowledge from the latest patch notes). Install the marketplace to use them as a plugin.
 
-In the **WSL dev env** the server runs under Linux `luajit` (spawning the Linux `luajit` headless
-engine) and reaches the GUI over TCP localhost. The product ships **native-Windows-only**: the
-`mcp-server/` Lua tree + bundled `runtime/luajit.exe`, no Node and no toolchain. The remaining
-step is the native-Windows live-GUI acceptance run.
+In the **WSL dev env** PoB runs on Windows and hosts the server; the headless backend spawns
+`luajit`. The product ships **native-Windows-only**: the `mcp-server/` Lua tree + bundled
+`runtime/luajit.exe` (headless only), no Node and no toolchain. The remaining step is the
+native-Windows live-GUI acceptance run.
 
 - **PoB2 core**: Lua 5.1 / LuaJIT. GUI is a native x64 Windows exe
   (`runtime/Path of Building-PoE2.exe`) using `SimpleGraphic.dll`.
@@ -113,11 +120,11 @@ busted --lua=luajit
 
 (CI also runs the suite in the `ghcr.io/pathofbuildingcommunity/pathofbuilding-tests` Docker image via `docker-compose up`.)
 
-Run / test the MCP server (plain Lua — no build step). The server is `mcp-server/mcp_server.lua`;
-the MCP client launches it as `luajit mcp-server/mcp_server.lua` with `POB_ROOT` in the env:
+Run / test the MCP server (plain Lua — no build step). PoB hosts it over HTTP when Options >
+"Enable MCP server" is on; the client points at `http://127.0.0.1:8843/mcp`.
 
 ```bash
-mcp-server/run_tests.sh    # wiring (test_server) + MCP-over-stdio e2e (integration_headless) + MCPBridge regression (test_bridge)
+mcp-server/run_tests.sh    # wiring (test_server) + in-PoB HTTP transport e2e (test_http) + MCPBridge regression (test_bridge)
 LUA_BIN=lua5.1 mcp-server/run_tests.sh    # also verify under Lua 5.1
 ```
 

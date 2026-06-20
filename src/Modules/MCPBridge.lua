@@ -263,6 +263,11 @@ local function startJob(fn)
 	return { jobId = jobId, status = job.status }
 end
 
+-- Expose the job starter so the in-process MCP adapter (mcp-server/lua/inproc.lua,
+-- engine.lua) can create jobs that resolve on a later frame (e.g. a LaunchSubScript
+-- headless search). Uses the same Bridge.jobs table the bridge already pumps.
+Bridge.startJob = startJob
+
 -- Shared TradeQueryRequests instance for the trade tools. Its request queue
 -- (search/fetch) is normally drained from the PriceItem popup's OnFrame; that popup
 -- isn't open here, so Bridge:pump drains it each frame instead. Created lazily.
@@ -3019,17 +3024,48 @@ function methods.ping()
 	return { pong = true }
 end
 
+-- Build the in-process MCP server (the vendored mcp-lua library + the tool registry)
+-- and wire its tools to call THIS bridge's handlers directly (no socket). cwd is src/,
+-- so the sibling mcp-server/ tree is one level up. Built once per start.
+function Bridge:buildMcpServer()
+	-- Anchor on THIS file's location (…/src/Modules/MCPBridge.lua), not the cwd, so it
+	-- resolves whether PoB runs from src/ (dev) or the install root (shipped).
+	local thisFile = debug.getinfo(1, "S").source:gsub("^@", "")
+	local moduleDir = thisFile:gsub("[/\\][^/\\]*$", "") -- …/src/Modules
+	local base = moduleDir .. "/../../mcp-server" -- …/mcp-server
+	package.path = base .. "/lua/?.lua;"
+		.. base .. "/vendor/mcp-lua/?.lua;"
+		.. base .. "/vendor/mcp-lua/?/init.lua;"
+		.. package.path
+	local mcp = require("mcp")
+	local inproc = require("inproc")
+	local engine = require("engine")
+	local optimize = require("optimize")
+	local registerTools = require("tools.init")
+	local server = mcp.Server.new({ name = "pob2-mcp", version = "0.3.0" })
+	registerTools(server, {
+		bridge = inproc.new(self),
+		engine = engine.new(self),
+		optimize = optimize,
+		json = require("dkjson"),
+	})
+	return server
+end
+
 function Bridge:start(build, port)
 	local socket = require("socket")
 	self.port = port or self.port
 	local server, err = socket.bind("127.0.0.1", self.port)
 	if not server then
-		error("could not bind MCP bridge to 127.0.0.1:" .. tostring(self.port) .. ": " .. tostring(err))
+		error("could not bind MCP server to 127.0.0.1:" .. tostring(self.port) .. ": " .. tostring(err))
 	end
 	self.server = server
 	self.server:settimeout(0) -- non-blocking; pumped from OnFrame
 	self.build = build
 	self.clients = {}
+	-- Host the MCP protocol (Streamable HTTP) in-process. Tool calls run against the
+	-- live build via methods.* directly; async tools defer their HTTP response.
+	self.mcpServer = self:buildMcpServer()
 	-- Keep PoB running OnFrame even when unfocused/minimized so the bridge is
 	-- serviced off-screen. SimpleGraphic's idle gate already skips its sleep while
 	-- any coroutine is alive (the `!hasActiveCoroutine` term, from coroutine._list
@@ -3044,7 +3080,7 @@ function Bridge:start(build, port)
 		end
 	end)
 	coroutine.resume(self.keepAlive)
-	ConPrintf("[MCP bridge] listening on 127.0.0.1:%d", self.port)
+	ConPrintf("[MCP server] listening on http://127.0.0.1:%d/mcp", self.port)
 end
 
 function Bridge:stop()
@@ -3087,6 +3123,105 @@ function Bridge:handleLine(line)
 	return { id = req.id, ok = false, error = tostring(result) }
 end
 
+-- Invoke a method handler directly (in-process). Returns (ok, result|err) — the
+-- primitive the in-process MCP adapter (inproc.lua) calls instead of a socket round-trip.
+function Bridge:invoke(method, params)
+	local handler = methods[method]
+	if not handler then
+		return false, "unknown method: " .. tostring(method)
+	end
+	return pcall(handler, self.build, params or {})
+end
+
+-- --- Minimal HTTP/1.1 for the Streamable HTTP MCP transport ------------------
+-- We only parse a POST request and write one response (no SSE, no keep-alive). The
+-- socket is non-blocking for reads (pumped from OnFrame); we flip to a short blocking
+-- timeout for the final send (localhost, tiny payloads) then close.
+local MAX_REQUEST = 8 * 1024 * 1024
+
+local function httpResponse(status, body, contentType)
+	body = body or ""
+	return ("HTTP/1.1 %s\r\nContent-Type: %s\r\nContent-Length: %d\r\nConnection: close\r\n\r\n%s")
+		:format(status, contentType or "application/json", #body, body)
+end
+
+local function sendAndClose(c, raw)
+	pcall(function()
+		c.sock:settimeout(5)
+		c.sock:send(raw)
+		c.sock:close()
+	end)
+	c.closed = true
+end
+
+-- Service one client connection for one frame. Returns true when the client is done
+-- (should be removed). Never throws (caller wraps in pcall too).
+function Bridge:serviceClient(c)
+	-- A parked (async) request: poll its job; answer when ready.
+	if c.poll then
+		local resp = c.poll()
+		if resp ~= nil then
+			sendAndClose(c, httpResponse("200 OK", json.encode(resp)))
+			return true
+		end
+		return false
+	end
+
+	-- Read whatever is available (non-blocking) and accumulate.
+	local chunk, rerr, partial = c.sock:receive(4096)
+	local got = chunk or partial
+	if got and #got > 0 then
+		c.buf = c.buf .. got
+	end
+	if rerr == "closed" and (not got or #got == 0) then
+		pcall(function() c.sock:close() end)
+		return true
+	end
+	if #c.buf > MAX_REQUEST then
+		sendAndClose(c, httpResponse("413 Payload Too Large", "", "text/plain"))
+		return true
+	end
+
+	-- Wait until headers + full body have arrived.
+	local headerEnd = c.buf:find("\r\n\r\n", 1, true)
+	if not headerEnd then
+		return false
+	end
+	local head = c.buf:sub(1, headerEnd - 1)
+	local body = c.buf:sub(headerEnd + 4)
+	local clen = tonumber(head:lower():match("content%-length:%s*(%d+)")) or 0
+	if #body < clen then
+		return false
+	end
+	body = body:sub(1, clen)
+
+	local rmethod = head:match("^(%u+)")
+	if rmethod ~= "POST" then
+		-- We don't serve the optional GET/SSE channel; that's spec-compliant.
+		sendAndClose(c, httpResponse("405 Method Not Allowed", "", "text/plain"))
+		return true
+	end
+
+	local msg, _, derr = json.decode(body)
+	if derr or type(msg) ~= "table" then
+		local resp = { jsonrpc = "2.0", error = { code = -32700, message = "parse error: " .. tostring(derr) } }
+		sendAndClose(c, httpResponse("200 OK", json.encode(resp)))
+		return true
+	end
+
+	local d = self.mcpServer:dispatch(msg)
+	if d.pending then
+		c.poll = d.poll -- park; answered on a later frame
+		return false
+	elseif d.response == nil then
+		sendAndClose(c, httpResponse("202 Accepted", "", "text/plain")) -- notification
+		return true
+	else
+		sendAndClose(c, httpResponse("200 OK", json.encode(d.response)))
+		return true
+	end
+end
+
 -- Call this once per frame from main:OnFrame. Never throws.
 function Bridge:pump()
 	if not self.server then return end
@@ -3104,18 +3239,18 @@ function Bridge:pump()
 		t_insert(self.clients, { sock = client, buf = "" })
 	end
 
-	-- Service each client: read complete lines, dispatch, reply.
+	-- Service each client (HTTP). Remove finished/closed ones.
 	for i = #self.clients, 1, -1 do
 		local c = self.clients[i]
-		local data, err = c.sock:receive("*l")
-		if data then
-			local resp = self:handleLine(data)
-			c.sock:send(json.encode(resp) .. "\n")
-		elseif err == "closed" then
+		local ok, done = pcall(self.serviceClient, self, c)
+		if not ok then
+			ConPrintf("[MCP server] client error: %s", tostring(done))
 			pcall(function() c.sock:close() end)
+			done = true
+		end
+		if done then
 			table.remove(self.clients, i)
 		end
-		-- err == "timeout" -> no full line yet this frame; try again next frame.
 	end
 end
 

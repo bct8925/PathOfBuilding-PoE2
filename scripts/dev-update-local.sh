@@ -51,7 +51,6 @@ cp -ru "$REPO_ROOT/src/." "$DEST/src/"
 
 say "Updating mcp-server/ (Lua MCP server + vendored mcp-lua) — changed files only"
 mkdir -p "$DEST/mcp-server"
-cp -f  "$REPO_ROOT/mcp-server/mcp_server.lua" "$DEST/mcp-server/mcp_server.lua"
 cp -ru "$REPO_ROOT/mcp-server/lua/."    "$DEST/mcp-server/lua/"
 cp -ru "$REPO_ROOT/mcp-server/vendor/." "$DEST/mcp-server/vendor/"
 

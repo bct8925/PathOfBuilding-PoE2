@@ -47,46 +47,50 @@ return function(ctx)
 		return keys
 	end
 
-	local function run(args)
+	-- SYNC prep (runs in the request frame): snapshot the live build, label the
+	-- candidates, and START the headless search as a background job (FR-3 — no GUI churn).
+	-- Returns the prep context incl. the search job's start ({jobId}).
+	local function prepare(args)
 		local obj = args.objective or {}
 		local statKeys = buildStatKeys(obj, args.reportStats)
 		if #statKeys == 0 then
 			error("objective is empty: set maximize, minimize, or weights", 0)
 		end
-
-		-- 1. Snapshot the live build (FR-3) and remember its identity for drift.
 		local snap = bridge.raw("exportXml")
-		local snapshotXml = snap.xml
-		local snapshotHash = sha1(snapshotXml)
-
-		-- Guarantee every candidate has a stable label so we can map winner -> ops.
 		local labelled, opsByLabel = {}, {}
 		for i, c in ipairs(args.candidates or {}) do
 			local label = c.label or ("cand-" .. i)
 			labelled[i] = { label = label, ops = c.ops or {} }
 			opsByLabel[label] = c.ops or {}
 		end
+		return {
+			obj = obj,
+			statKeys = statKeys,
+			labelled = labelled,
+			opsByLabel = opsByLabel,
+			snapshotHash = sha1(snap.xml),
+			searchStart = engine.startSearch({ buildXml = snap.xml, candidates = labelled, stats = statKeys }),
+		}
+	end
 
-		-- 2. Evaluate all candidates headlessly off the snapshot.
-		local search = engine.search({ buildXml = snapshotXml, candidates = labelled, stats = statKeys })
+	-- RESOLUTION (runs when the search job completes, back on the main thread): score the
+	-- trials, pick the winner, replay it live, and build the FR-14 report.
+	local function finish(prep, args, search)
 		if not search.ok or not search.results then
 			error("headless search failed: " .. tostring(search.error or "no results"), 0)
 		end
-
-		-- 3. Score + pick the winner.
-		local scored = opt.scoreTrials(search.results, obj)
+		local scored = opt.scoreTrials(search.results, prep.obj)
 		local winner, feasibleFound = opt.pickWinner(scored)
 		if not winner then
 			error("no candidate evaluated successfully", 0)
 		end
 
-		-- 4. Replay the winner live (unless suppressed or infeasible-and-not-forced).
 		local shouldApply = args.apply ~= false and (winner.feasible or args.applyInfeasible == true)
 		local applied, driftDetected = false, false
 		if shouldApply then
 			local live = bridge.raw("exportXml")
-			driftDetected = sha1(live.xml) ~= snapshotHash
-			bridge.raw("applyChangeSet", { ops = opsByLabel[winner.label] or {} })
+			driftDetected = sha1(live.xml) ~= prep.snapshotHash
+			bridge.raw("applyChangeSet", { ops = prep.opsByLabel[winner.label] or {} })
 			applied = true
 		end
 
@@ -105,8 +109,8 @@ return function(ctx)
 		end
 
 		return {
-			objective = obj,
-			searchSpace = { candidateCount = #labelled, scoredStats = statKeys },
+			objective = prep.obj,
+			searchSpace = { candidateCount = #prep.labelled, scoredStats = prep.statKeys },
 			winner = { label = winner.label, score = winner.score, feasible = winner.feasible, violations = winner.violations },
 			applied = applied,
 			appliedNote = appliedNote,
@@ -145,21 +149,15 @@ return function(ctx)
 			reportStats = S.arr(S.str(), "Extra stat keys to include in the report/deltas beyond the objective's keys."),
 		}, { "objective", "candidates" }),
 		handler = function(args)
-			local ok, result = pcall(run, args)
-			if ok then
-				return { content = { { type = "text", text = json.encode(result, { indent = true }) } }, isError = false }
+			-- Sync prep can fail fast (empty objective, exportXml error) → error result now.
+			local ok, prep = pcall(prepare, args)
+			if not ok then
+				return bridge.errorContent("optimize failed: " .. tostring(prep))
 			end
-			return {
-				content = {
-					{
-						type = "text",
-						text = "optimize failed: "
-							.. tostring(result)
-							.. '\nIs PoB2 running with the "Enable MCP bridge" Option on, and is the headless luajit available?',
-					},
-				},
-				isError = true,
-			}
+			-- Park the request on the search job; finish() scores + applies + reports when done.
+			return bridge.deferJob(prep.searchStart, function(search)
+				return finish(prep, args, search)
+			end)
 		end,
 	})
 end

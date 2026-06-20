@@ -39,7 +39,7 @@ mcp/
 ```
 
 The in-app socket server is built into PoB at `../src/Modules/MCPBridge.lua`; it is loaded
-lazily by `main:PumpMCPBridge` (`Modules/Main.lua`) when the **"Enable MCP bridge"** Option
+lazily by `main:PumpMCPBridge` (`Modules/Main.lua`) when the **"Enable MCP server"** Option
 is on, and pumped from the GUI frame loop. It binds `127.0.0.1:8843`.
 
 ## Tools

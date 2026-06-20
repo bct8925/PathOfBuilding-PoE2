@@ -196,6 +196,64 @@ function Server:_handleMessage(msg)
 	return jsonrpc.result(msg.id, result)
 end
 
+-- Async-aware routing for transports that can DEFER a response (e.g. an HTTP server
+-- pumped from a frame loop). A tool handler may return a pending sentinel
+-- `{ __pending = function() -> CallToolResult | nil end }` — the poll returns nil
+-- until the result is ready. `dispatch` surfaces that so the transport can park the
+-- connection and answer later, without the synchronous `_handleMessage` having to block.
+--
+-- Returns one of:
+--   { done = true,  response = <table|nil> }   -- ready now (nil = notification, no reply)
+--   { pending = true, poll = function() -> <response table>|nil end }
+function Server:dispatch(msg)
+	if type(msg) ~= "table" then
+		return { done = true, response = jsonrpc.error(nil, jsonrpc.errors.INVALID_REQUEST, "invalid request (not an object)") }
+	end
+
+	-- Notification (no id): dispatch if known, never respond.
+	if jsonrpc.isNotification(msg) then
+		local fn = notifications[msg.method]
+		if fn then
+			pcall(fn, self, msg.params or {})
+		end
+		return { done = true, response = nil }
+	end
+
+	if msg.method == nil then
+		return { done = true, response = jsonrpc.error(msg.id, jsonrpc.errors.INVALID_REQUEST, "invalid request (no method)") }
+	end
+
+	local handler = methods[msg.method]
+	if not handler then
+		return { done = true, response = jsonrpc.error(msg.id, jsonrpc.errors.METHOD_NOT_FOUND, "method not found: " .. tostring(msg.method)) }
+	end
+
+	local ok, result, errCode, errMsg = pcall(handler, self, msg.params or {})
+	if not ok then
+		return { done = true, response = jsonrpc.error(msg.id, jsonrpc.errors.INTERNAL_ERROR, tostring(result)) }
+	end
+	if result == nil and errCode ~= nil then
+		return { done = true, response = jsonrpc.error(msg.id, errCode, errMsg) }
+	end
+
+	-- Pending sentinel from an async tool handler (e.g. a long job).
+	if type(result) == "table" and type(result.__pending) == "function" then
+		local pollFn, id = result.__pending, msg.id
+		return {
+			pending = true,
+			poll = function()
+				local r = pollFn() -- nil while running; a CallToolResult when done
+				if r == nil then
+					return nil
+				end
+				return jsonrpc.result(id, r)
+			end,
+		}
+	end
+
+	return { done = true, response = jsonrpc.result(msg.id, result) }
+end
+
 -- Connect a transport and serve until it ends. The transport calls back with each
 -- decoded message; we route it and send any response. Blocks (mirrors the JS
 -- `await server.connect(transport)` lifetime for a stdio server).

@@ -13,12 +13,11 @@ return function(ctx)
 			name = S.str("Display name for the loaded build."),
 			stats = S.arr(S.str(), "Specific mainOutput keys to return; omit for a curated default set."),
 		}),
+		-- Headless calc runs off-frame via a background job (LaunchSubScript → luajit);
+		-- deferJob parks the MCP request until the job resolves, so the GUI never blocks.
 		handler = function(args)
-			local result = ctx.engine.compute({ buildXml = args.buildXml, name = args.name, stats = args.stats })
-			return {
-				content = { { type = "text", text = ctx.json.encode(result, { indent = true }) } },
-				isError = not result.ok,
-			}
+			local start = ctx.engine.startCompute({ buildXml = args.buildXml, name = args.name, stats = args.stats })
+			return ctx.bridge.deferJob(start)
 		end,
 	})
 

@@ -26,14 +26,13 @@ GUI** so changes appear on screen immediately.
   built-in extension to PoB** — no WSL, no Node install, and no separate toolchain
   expected of the end user. WSL is **purely our dev environment** and must not leak
   into the shipped product or its assumptions.
-- The MCP server is **plain Lua** (in the PoB2 repo at `mcp-server/`, built on the
-  `mcp-lua` library) run by the bundled **Windows `luajit.exe`** — no Node, no build
-  step, no extra runtime on the user's machine. (Historically it was Node/TypeScript
-  packaged as a Node-SEA `.exe`; it was migrated to Lua so one interpreter serves both
-  the server and the headless backend.)
-- **Client-agnostic:** the server speaks MCP over stdio; we provide a documented
-  config snippet so the user can wire it into whatever MCP client they use (Claude
-  Desktop, Claude Code, etc.). Dev is driven from local Claude Code.
+- The MCP server is **plain Lua hosted inside PoB** (in the repo at `mcp-server/`, on
+  the `mcp-lua` library), served over HTTP — no Node, no build step, no extra runtime,
+  and nothing the client spawns. (Historically Node/TS → standalone Lua stdio → in-PoB
+  HTTP.) The bundled `luajit.exe` is used only for the headless backend.
+- **Client-agnostic:** the server speaks MCP over **HTTP** on localhost; we provide a
+  documented `.mcp.json` snippet (`{type:"http", url:"http://127.0.0.1:8843/mcp"}`) for
+  whatever MCP client the user runs (Claude Desktop, Claude Code, etc.).
 - **Headless runtime on Windows:** ship a **Windows `luajit.exe`** with the
   distribution for the headless/search backend (reusing PoB's bundled `lua51.dll`
   is deferred — see OQ-1).
@@ -113,7 +112,7 @@ GUI** so changes appear on screen immediately.
 
 ### 4.7 Bridge enablement
 - **FR-19.** The socket bridge is **built into PoB2's source**, gated behind an
-  **Options toggle** (e.g. "Enable MCP bridge"). When enabled, PoB listens on a
+  **Options toggle** (e.g. "Enable MCP server"). When enabled, PoB listens on a
   local port and pumps the bridge from its frame loop. Off by default.
 
 ## 5. Proposed MCP tool surface (derived from FRs)
@@ -148,14 +147,18 @@ GUI** so changes appear on screen immediately.
 - **NFR-6 (Non-invasive default).** Bridge off unless the user enables it.
 
 ## 7. Architecture decisions (recap)
-- Lua MCP server (`mcp-server/`, on the vendored `mcp-lua` library); stdio transport;
-  launched by local Claude Code as `luajit mcp_server.lua`. (Migrated from the original
-  Node/TS server; the gui_* tools forward to the same `MCPBridge.lua` handlers.)
-- Live GUI bridge: in-app Lua socket server, newline-delimited JSON
-  (`{id,method,params}` → `{id,ok,result|error}`), pumped from `OnFrame`. The server's
-  `mcp-server/lua/bridge.lua` is the LuaSocket client.
-- Headless/search backend: `mcp-server/lua/engine.lua` spawns `luajit` on
-  `mcp-server/lua/run_headless.lua`.
+- MCP server is **hosted inside PoB** over HTTP (the vendored `mcp-lua` library + the
+  `mcp-server/lua/tools/` registry), gated by Options > "Enable MCP server", pumped from
+  `OnFrame`. The client connects to `http://127.0.0.1:8843/mcp` — no spawned process.
+  (Evolved from Node/TS → standalone-Lua-stdio → in-PoB HTTP; the gui_* tools still
+  forward to the same `MCPBridge.lua` handlers.)
+- Transport: MCP Streamable HTTP, single `POST /mcp` endpoint returning `application/json`
+  (no SSE; `GET` → 405). Implemented in `src/Modules/MCPBridge.lua` (`Bridge:pump`/
+  `serviceClient`). Live tools call `methods.*` directly (same Lua state); async tools
+  (trade/account, optimize) use `startJob`/`jobPoll` + a deferred HTTP response.
+- Headless/search backend: `mcp-server/lua/engine.lua` runs `mcp-server/lua/run_headless.lua`
+  via PoB's `LaunchSubScript` (off-frame, so the GUI stays responsive), under the bundled
+  `luajit`.
 
 ## 8. Open questions / risks
 - **OQ-1 (Reuse bundled Lua — deferred).** ✅ RESOLVED for v1: ships an ABI-matched Windows

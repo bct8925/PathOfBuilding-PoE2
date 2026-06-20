@@ -116,6 +116,7 @@ function main:Init()
 	self.showAnimations = true
 	self.showAllItemAffixes = true
 	self.enableMCPBridge = false
+	self.mcpPort = 8843
 	self.errorReadingSettings = false
 	
 	if not SetDPIScaleOverridePercent then SetDPIScaleOverridePercent = function(scale) end end
@@ -501,7 +502,7 @@ function main:PumpMCPBridge()
 		if not self.mcpBridge then
 			local ok, moduleOrErr = pcall(LoadModule, "Modules/MCPBridge")
 			if not ok then
-				ConPrintf("[MCP bridge] failed to load: %s", tostring(moduleOrErr))
+				ConPrintf("[MCP server] failed to load: %s", tostring(moduleOrErr))
 				self.enableMCPBridge = false -- don't retry every frame
 				return
 			end
@@ -509,11 +510,11 @@ function main:PumpMCPBridge()
 		end
 		if not self.mcpBridge:isRunning() then
 			local build = self.modes[self.mode]
-			-- The bridge operates on the live build; only start it in BUILD mode.
+			-- The server operates on the live build; only start it in BUILD mode.
 			if self.mode == "BUILD" and build then
-				local ok, err = pcall(self.mcpBridge.start, self.mcpBridge, build)
+				local ok, err = pcall(self.mcpBridge.start, self.mcpBridge, build, self.mcpPort)
 				if not ok then
-					ConPrintf("[MCP bridge] failed to start: %s", tostring(err))
+					ConPrintf("[MCP server] failed to start: %s", tostring(err))
 					self.enableMCPBridge = false
 					return
 				end
@@ -521,11 +522,11 @@ function main:PumpMCPBridge()
 				return
 			end
 		end
-		-- Keep the bridge bound to whatever build is currently live.
+		-- Keep the server bound to whatever build is currently live.
 		self.mcpBridge.build = self.modes[self.mode]
 		local ok, err = pcall(self.mcpBridge.pump, self.mcpBridge)
 		if not ok then
-			ConPrintf("[MCP bridge] pump error: %s", tostring(err))
+			ConPrintf("[MCP server] pump error: %s", tostring(err))
 		end
 	elseif self.mcpBridge and self.mcpBridge:isRunning() then
 		pcall(self.mcpBridge.stop, self.mcpBridge)
@@ -709,6 +710,9 @@ function main:LoadSettings(ignoreBuild)
 				if node.attrib.enableMCPBridge then
 					self.enableMCPBridge = node.attrib.enableMCPBridge == "true"
 				end
+				if node.attrib.mcpPort then
+					self.mcpPort = tonumber(node.attrib.mcpPort) or self.mcpPort
+				end
 				if node.attrib.dpiScaleOverridePercent then
 					self.dpiScaleOverridePercent = tonumber(node.attrib.dpiScaleOverridePercent) or 0
 					SetDPIScaleOverridePercent(self.dpiScaleOverridePercent)
@@ -845,6 +849,7 @@ function main:SaveSettings()
 		showAnimations = tostring(self.showAnimations),
 		showAllItemAffixes = tostring(self.showAllItemAffixes),
 		enableMCPBridge = tostring(self.enableMCPBridge),
+		mcpPort = tostring(self.mcpPort),
 		dpiScaleOverridePercent = tostring(self.dpiScaleOverridePercent)
 	} })
 	local res, errMsg = common.xml.SaveXMLFile(setXML, self.userPath.."Settings.xml")
@@ -930,6 +935,7 @@ function main:OpenOptionsPopup(savedState)
 		showAnimations = self.showAnimations,
 		showAllItemAffixes = self.showAllItemAffixes,
 		enableMCPBridge = self.enableMCPBridge,
+		mcpPort = self.mcpPort,
 		dpiScaleOverridePercent = self.dpiScaleOverridePercent
 	}
 
@@ -1203,11 +1209,21 @@ function main:OpenOptionsPopup(savedState)
 	controls.invertSliderScrollDirection.state = self.invertSliderScrollDirection
 
 	nextRow()
-	controls.enableMCPBridge = new("CheckBoxControl", { "TOPLEFT", controls.sectionAnchor, "TOPLEFT" }, { currentX + defaultLabelPlacementX, currentY, 20 }, "^7Enable MCP bridge:", function(state)
+	controls.enableMCPBridge = new("CheckBoxControl", { "TOPLEFT", controls.sectionAnchor, "TOPLEFT" }, { currentX + defaultLabelPlacementX, currentY, 20 }, "^7Enable MCP server:", function(state)
 		self.enableMCPBridge = state
 	end)
-	controls.enableMCPBridge.tooltipText = "Opens a local socket so an external MCP server (AI assistant) can read and modify this build live.\nListens on 127.0.0.1 only. Off by default."
+	controls.enableMCPBridge.tooltipText = "Hosts an MCP server over HTTP so an AI assistant (e.g. Claude) can read and modify this build live.\nListens on 127.0.0.1 only. Off by default. Point your MCP client at the URL below."
 	controls.enableMCPBridge.state = self.enableMCPBridge
+
+	nextRow()
+	controls.mcpPort = new("EditControl", { "TOPLEFT", controls.sectionAnchor, "TOPLEFT" }, { currentX + defaultLabelPlacementX, currentY, 100, 18 }, tostring(self.mcpPort), nil, nil, 5, function(buf)
+		local p = tonumber(buf)
+		if p and p >= 1 and p <= 65535 then
+			self.mcpPort = p
+		end
+	end)
+	controls.mcpPortLabel = new("LabelControl", { "RIGHT", controls.mcpPort, "LEFT" }, { defaultLabelSpacingPx, 0, 0, 16 }, "^7MCP server URL: ^7http://127.0.0.1:")
+	controls.mcpPort.tooltipText = "Local TCP port for the MCP server (default 8843). Your MCP client connects to http://127.0.0.1:<port>/mcp.\nChanging it takes effect next time the server starts — update your client config to match."
 
 	if launch.devMode then
 		nextRow()
@@ -1287,6 +1303,7 @@ function main:OpenOptionsPopup(savedState)
 		self.showAnimations = savedState.showAnimations
 		self.showAllItemAffixes = savedState.showAllItemAffixes
 		self.enableMCPBridge = savedState.enableMCPBridge
+		self.mcpPort = savedState.mcpPort
 		self.dpiScaleOverridePercent = savedState.dpiScaleOverridePercent
 		SetDPIScaleOverridePercent(self.dpiScaleOverridePercent)
 		main:ClosePopup()
