@@ -87,6 +87,11 @@ local function passivePointBudget(build)
 		ascendancyUsed = ascUsed or 0,
 		ascendancyTotal = 8,
 		ascendancyRemaining = 8 - (ascUsed or 0),
+		-- ascendancyTotal/Remaining are the 8-point CAP for any ascendancy — NOT what's
+		-- unlocked. Some points require completing Trials, and PoB doesn't track Trial
+		-- progress, so 'remaining' may not actually be spendable. Don't recommend spending
+		-- them without asking the user whether their Trials are done. (P0-2)
+		ascendancyNote = "ascendancyTotal/Remaining are the 8-point cap, not unlocked points; some require Trials (PoB can't tell). Confirm Trial progress before recommending spending 'remaining' points.",
 	}
 	if build.acts then
 		local extra = (build.calcsTab.mainOutput and build.calcsTab.mainOutput.ExtraPoints) or 0
@@ -601,6 +606,57 @@ end
 -- build.mainSocketGroup restored immediately — the live build is left exactly as found.
 -- params: { group? }
 local AILMENT_PAT = { "freeze", "chill", "shock", "ignite", "bleed", "poison", "scorch", "brittle", "sap" }
+
+-- A multi-part skill exposes its parts one of two ways in PoB2: classic skillParts
+-- (grantedEffect.parts — a PoE1-style list, e.g. some Duration/Trigger skills) or multiple
+-- STAT SETS (grantedEffect.statSets, e.g. a slam's "Slam" vs "Explosion"). Resolve whichever
+-- a skill uses into one view: { kind, count, list = {{index,name}…}, geId }. nil = single-part.
+local function skillPartInfo(grantedEffect)
+	if not grantedEffect then return nil end
+	local statSets = grantedEffect.statSets
+	if type(statSets) == "table" and #statSets > 1 then
+		local list = {}
+		for i, s in ipairs(statSets) do list[i] = { index = i, name = s.label } end
+		return { kind = "statSet", count = #statSets, list = list, geId = grantedEffect.id }
+	end
+	local parts = grantedEffect.parts
+	if type(parts) == "table" and #parts > 1 then
+		local list = {}
+		for i, p in ipairs(parts) do list[i] = { index = i, name = p.name } end
+		return { kind = "part", count = #parts, list = list }
+	end
+	return nil
+end
+
+-- The currently-selected part index in a BUILT env, reading the field the active calc mode
+-- actually used (statSet vs statSetCalcs / skillPart).
+local function activePartIndex(mainSkill, env, info)
+	if not info then return nil end
+	if info.kind == "statSet" then
+		local w = (env.mode == "CALCS") and mainSkill.activeEffect.statSetCalcs or mainSkill.activeEffect.statSet
+		return w and w.index
+	end
+	return mainSkill.skillPart
+end
+
+-- Select the part index on a gem source instance (both the MAIN and Calcs-tab selections so
+-- every readout agrees), mirroring the GUI's part/statSet dropdowns (Build.lua). Returns a
+-- function that restores the prior selection (for one-off non-mutating reads).
+local function setPartIndex(srcInstance, info, index)
+	if info.kind == "statSet" then
+		local geId = info.geId
+		srcInstance.statSet = srcInstance.statSet or {}
+		srcInstance.statSetCalcs = srcInstance.statSetCalcs or {}
+		local prevA, prevC = srcInstance.statSet[geId], srcInstance.statSetCalcs[geId]
+		srcInstance.statSet[geId] = index
+		srcInstance.statSetCalcs[geId] = index
+		return function() srcInstance.statSet[geId] = prevA; srcInstance.statSetCalcs[geId] = prevC end
+	end
+	local prevP, prevC = srcInstance.skillPart, srcInstance.skillPartCalcs
+	srcInstance.skillPart, srcInstance.skillPartCalcs = index, index
+	return function() srcInstance.skillPart, srcInstance.skillPartCalcs = prevP, prevC end
+end
+
 function methods.explainSkill(build, params)
 	local calcsTab = build.calcsTab
 	if not calcsTab.mainEnv then calcsTab:BuildOutput() end
@@ -612,8 +668,23 @@ function methods.explainSkill(build, params)
 			" (build has " .. #skillsTab.socketGroupList .. " group(s); use getSkills)")
 	end
 
+	-- Optional one-off part override: read a SPECIFIC part of a multi-part skill (e.g. the
+	-- shatter vs the slam) WITHOUT mutating the live selection. We select the part on the
+	-- source instance, build a throwaway env, then restore it — buildOutput returns a fresh
+	-- env, so calcsTab.mainEnv (the live read) is untouched. (P0-1)
+	local wantPart = tonumber(params.part)
+	local restorePart
+	if wantPart then
+		local ds = group.displaySkillList and group.displaySkillList[group.mainActiveSkill]
+		local ae = ds and ds.activeEffect
+		local info = ae and skillPartInfo(ae.grantedEffect)
+		if info and ae.srcInstance then
+			restorePart = setPartIndex(ae.srcInstance, info, wantPart)
+		end
+	end
+
 	local env
-	if targetIdx == build.mainSocketGroup then
+	if targetIdx == build.mainSocketGroup and not restorePart then
 		env = calcsTab.mainEnv
 	else
 		-- Temporarily make the requested group main, compute a fresh env, restore. This
@@ -623,6 +694,7 @@ function methods.explainSkill(build, params)
 		build.mainSocketGroup = targetIdx
 		local ok, built = pcall(calcsTab.calcs.buildOutput, build, "MAIN")
 		build.mainSocketGroup = prevMain
+		if restorePart then restorePart() end
 		if not ok then
 			error("could not compute the skill for group " .. targetIdx .. ": " .. tostring(built))
 		end
@@ -644,6 +716,20 @@ function methods.explainSkill(build, params)
 	-- Identity + the skill's tags (which scaling/supports apply). PoE2 leaves skillFlags
 	-- empty post-calc, so read the human tag string from the source gem.
 	local grantedEffect = mainSkill.activeEffect and mainSkill.activeEffect.grantedEffect
+
+	-- Multi-part skills (slams, multi-stage skills) compute ONE part at a time, so the DPS
+	-- below is part-specific. Expose the full part list + which part this reading reflects so
+	-- the consumer knows other parts exist (read one with gui_explain_skill { part }, switch
+	-- the live selection with gui_set_main_skill { part }). (P0-1)
+	local partInfo = skillPartInfo(grantedEffect)
+	local skillParts = partInfo and partInfo.list or nil
+	local skillPartCount = partInfo and partInfo.count or nil
+	local skillPartIndex = activePartIndex(mainSkill, env, partInfo)
+	local skillPartName = mainSkill.skillPartName
+	if partInfo and skillPartIndex and partInfo.list[skillPartIndex] then
+		skillPartName = partInfo.list[skillPartIndex].name
+	end
+
 	local tags
 	local srcInstance = mainSkill.activeEffect and mainSkill.activeEffect.srcInstance
 	local srcGemId = srcInstance and srcInstance.gemId
@@ -696,7 +782,11 @@ function methods.explainSkill(build, params)
 		group = targetIdx,
 		isMain = (targetIdx == build.mainSocketGroup),
 		name = grantedEffect and grantedEffect.name,
-		skillPart = mainSkill.skillPartName,
+		skillPart = skillPartName,
+		skillPartIndex = skillPartIndex,
+		skillPartCount = skillPartCount,
+		skillPartKind = partInfo and partInfo.kind or nil,
+		skillParts = skillParts,
 		tags = tags,
 		speed = output.Speed,
 		hit = hit,
@@ -743,11 +833,65 @@ function methods.queryMods(build, params)
 		error("no modifiers named '" .. tostring(params.mod) ..
 			"' (call queryMods with a 'query' substring to find the right name)")
 	end
+
+	-- Resolve an opaque tag (e.g. type="Condition") into a human-readable GATE: the
+	-- condition / multiplier / skill it keys on, plus — for conditions — its CURRENT truth
+	-- value in this calc context, so a damage chunk maps straight to the toggle that turns it
+	-- on. (P1-2) Condition truth is read per-actor (player/enemy/minion) via GetCondition.
+	local actorDB = {
+		player = env.player and env.player.modDB,
+		enemy = env.enemy and env.enemy.modDB,
+		minion = env.minion and env.minion.modDB,
+	}
+	local mainCfg = env.player and env.player.mainSkill and env.player.mainSkill.skillCfg
+	local function condTruth(name, actor)
+		local db = actorDB[actor or "player"] or actorDB.player
+		if not db then return nil end
+		local cfg = (not actor or actor == "player") and mainCfg or nil
+		local ok, v = pcall(db.GetCondition, db, name, cfg)
+		if ok then return v and true or false end
+		return nil
+	end
+	local function resolveTag(tag)
+		local g = { type = tag.type }
+		if tag.neg then g.neg = true end
+		if tag.actor then g.actor = tag.actor end
+		if tag.type == "Condition" or tag.type == "ActorCondition" then
+			local names = {}
+			if tag.varList then
+				for _, n in pairs(tag.varList) do t_insert(names, n) end
+			elseif tag.var then
+				t_insert(names, tag.var)
+			end
+			if #names > 0 then
+				g.conditions = names
+				local active, any = {}, false
+				for _, n in ipairs(names) do
+					local v = condTruth(n, tag.actor)
+					if v ~= nil then active[n] = v; any = true end
+				end
+				if any then g.active = active end
+			end
+		elseif tag.type == "Multiplier" or tag.type == "PerStat" then
+			g.var = tag.var or tag.stat
+			if tag.varList or tag.statList then g.varList = tag.varList or tag.statList end
+		elseif tag.type == "SkillName" then
+			g.skillName = tag.skillName
+			if tag.skillNameList then g.skillNameList = tag.skillNameList end
+		elseif tag.type == "SkillType" then
+			g.skillType = tag.skillType
+		end
+		return g
+	end
+
 	local modifiers = {}
 	for _, mod in ipairs(list) do
-		local tags = {}
+		local tags, gates = {}, {}
 		for _, tag in ipairs(mod) do
-			if type(tag) == "table" and tag.type then t_insert(tags, tag.type) end
+			if type(tag) == "table" and tag.type then
+				t_insert(tags, tag.type)
+				t_insert(gates, resolveTag(tag))
+			end
 		end
 		local vt = type(mod.value)
 		t_insert(modifiers, {
@@ -757,14 +901,24 @@ function methods.queryMods(build, params)
 			source = mod.source,
 			flags = (mod.flags and mod.flags ~= 0) and mod.flags or nil,
 			tags = #tags > 0 and tags or nil,
+			gates = #gates > 0 and gates or nil,
 		})
 	end
 	return {
 		mod = params.mod,
 		count = #modifiers,
+		-- UNCONDITIONAL totals: condition/flag/skill-tagged mods are EXCLUDED (sumInc can read
+		-- 0 even when the per-mod list is full of real-but-gated increases).
 		sumBase = modDB:Sum("BASE", nil, params.mod),
 		sumInc = modDB:Sum("INC", nil, params.mod),
 		moreMultiplier = modDB:More(nil, params.mod),
+		-- AS APPLIED TO THE MAIN SKILL: the same sums in the active skill's calc context, so
+		-- gated mods that actually fire for it are counted. Differs from the unconditional
+		-- totals exactly when gated mods are in play. (P1-1)
+		sumBaseActive = mainCfg and modDB:Sum("BASE", mainCfg, params.mod) or nil,
+		sumIncActive = mainCfg and modDB:Sum("INC", mainCfg, params.mod) or nil,
+		moreMultiplierActive = mainCfg and modDB:More(mainCfg, params.mod) or nil,
+		summaryNote = "sum* = unconditional totals (gated mods excluded); sum*Active = summed in the main skill's context (gated mods included). Each mod's 'gates' resolves its conditions + current truth.",
 		modifiers = modifiers,
 	}
 end
@@ -1340,6 +1494,35 @@ function methods.setMainSkill(build, params)
 		local skillIdx = tonumber(params.activeSkill)
 		if not skillIdx then error("'activeSkill' must be numeric") end
 		group.mainActiveSkill = skillIdx
+	end
+	-- Optionally select which PART of a multi-part skill is active (slam vs explosion, etc.),
+	-- mirroring the GUI's part/statSet dropdown (Build.lua): select the part on the source
+	-- instance, then let the final recalc reflect it. (P0-1)
+	if params.part ~= nil then
+		local partIdx = tonumber(params.part)
+		if not partIdx then error("'part' must be numeric") end
+		local function displaySkill()
+			return group.displaySkillList and group.displaySkillList[group.mainActiveSkill]
+		end
+		local ds = displaySkill()
+		if not (ds and ds.activeEffect) then
+			-- displaySkillList for this group-as-main may not be built yet; force one build.
+			build.buildFlag = true
+			recalcAndRead(build, nil)
+			ds = displaySkill()
+		end
+		local ae = ds and ds.activeEffect
+		if not (ae and ae.srcInstance) then
+			error("group " .. idx .. " has no active skill to set a part on")
+		end
+		local info = skillPartInfo(ae.grantedEffect)
+		if not info then
+			error("the skill in group " .. idx .. " has no selectable parts")
+		end
+		if partIdx < 1 or partIdx > info.count then
+			error("part " .. partIdx .. " out of range (skill has " .. info.count .. " part(s))")
+		end
+		setPartIndex(ae.srcInstance, info, partIdx)
 	end
 	skillsTab:AddUndoState()
 	build.buildFlag = true

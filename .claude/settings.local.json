@@ -1,18 +1,11 @@
 {
+  "env": {
+    "POB_ROOT": "/home/bri64/Dev/PathOfBuilding-PoE2"
+  },
   "permissions": {
     "allow": [
-      "mcp__pob2__gui_get_build",
-      "mcp__pob2__gui_get_skills",
-      "mcp__pob2__gui_get_tree_specs",
-      "mcp__pob2__gui_get_items",
-      "mcp__pob2__gui_get_config",
-      "mcp__pob2__gui_search_passives",
-      "mcp__pob2__gui_set_passive",
-      "mcp__pob2__gui_undo",
-      "mcp__pob2__gui_set_gem",
-      "mcp__pob2__gui_remove_gem",
-      "mcp__pob2__gui_add_gem",
-      "mcp__pob2__gui_set_main_skill"
+      "mcp__pob2__*",
+      "mcp__plugin_pob2-mcp_pob2__*"
     ]
   }
 }
