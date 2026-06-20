@@ -72,27 +72,40 @@ local function allocatedNotables(spec)
 	return out
 end
 
--- The passive POINT BUDGET (so the assistant knows if a tree is over/under budget without
--- asking the user). CountAllocNodes returns (normalUsed, ascUsed, secondaryAscUsed, ...).
--- Available NORMAL points at the current level mirrors PoB's own progress relationship
--- (Build:EstimatePlayerProgress, the inverse of its level<-points estimate): (level-1) +
--- cumulative campaign quest points for the act bracketing the level + any ExtraPoints from
--- mods. Ascendancy is a flat 8. In auto-level builds total≈used by construction.
-local function passivePointBudget(build)
+-- ascendancyTotal/Remaining are the 8-point CAP for any ascendancy — NOT what's
+-- unlocked. Some points require completing Trials, and PoB doesn't track Trial
+-- progress, so 'remaining' may not actually be spendable. Don't recommend spending
+-- them without asking the user whether their Trials are done. (P0-2)
+local ASCENDANCY_NOTE = "ascendancyTotal/Remaining are the 8-point cap, not unlocked points; some require Trials (PoB can't tell). Confirm Trial progress before recommending spending 'remaining' points."
+
+-- The ASCENDANCY point budget: a flat 8-point cap (some points gated behind Trials).
+-- Scoped to the ascendancy sub-tree only — its points are SEPARATE from the regular
+-- tree's level/quest budget, so the ascendancy tools report this alone.
+-- CountAllocNodes returns (normalUsed, ascUsed, secondaryAscUsed, ...).
+local function ascendancyPointBudget(build)
 	local spec = build.spec
 	if not spec then return nil end
-	local used, ascUsed = spec:CountAllocNodes()
-	local budget = {
-		pointsUsed = used,
-		ascendancyUsed = ascUsed or 0,
+	local _, ascUsed = spec:CountAllocNodes()
+	ascUsed = ascUsed or 0
+	return {
+		ascendancyUsed = ascUsed,
 		ascendancyTotal = 8,
-		ascendancyRemaining = 8 - (ascUsed or 0),
-		-- ascendancyTotal/Remaining are the 8-point CAP for any ascendancy — NOT what's
-		-- unlocked. Some points require completing Trials, and PoB doesn't track Trial
-		-- progress, so 'remaining' may not actually be spendable. Don't recommend spending
-		-- them without asking the user whether their Trials are done. (P0-2)
-		ascendancyNote = "ascendancyTotal/Remaining are the 8-point cap, not unlocked points; some require Trials (PoB can't tell). Confirm Trial progress before recommending spending 'remaining' points.",
+		ascendancyRemaining = 8 - ascUsed,
+		ascendancyNote = ASCENDANCY_NOTE,
 	}
+end
+
+-- The regular passive-TREE point budget (so the assistant knows if a tree is over/under
+-- budget without asking the user). Available NORMAL points at the current level mirrors
+-- PoB's own progress relationship (Build:EstimatePlayerProgress, the inverse of its
+-- level<-points estimate): (level-1) + cumulative campaign quest points for the act
+-- bracketing the level + any ExtraPoints from mods. In auto-level builds total≈used.
+-- Scoped to regular nodes only — ascendancy points live in ascendancyPointBudget.
+local function treePointBudget(build)
+	local spec = build.spec
+	if not spec then return nil end
+	local used = spec:CountAllocNodes()
+	local budget = { pointsUsed = used }
 	if build.acts then
 		local extra = (build.calcsTab.mainOutput and build.calcsTab.mainOutput.ExtraPoints) or 0
 		local level = build.characterLevel or 1
@@ -106,6 +119,16 @@ local function passivePointBudget(build)
 		budget.pointsTotal = total
 		budget.pointsRemaining = total - used
 	end
+	return budget
+end
+
+-- The COMBINED passive point budget (tree + ascendancy) for getBuild/getTreeSpecs,
+-- where a single readout of the whole build is wanted. The per-tool set/search
+-- handlers use the scoped helpers above instead.
+local function passivePointBudget(build)
+	local budget = treePointBudget(build)
+	if not budget then return nil end
+	for k, v in pairs(ascendancyPointBudget(build)) do budget[k] = v end
 	return budget
 end
 
@@ -1029,18 +1052,40 @@ function methods.setConfig(build, params)
 	}
 end
 
--- FR-8: allocate or deallocate a passive node on the live tree, recalc.
--- params: { nodeId = <number>, alloc = <bool>, maxPath = <number>? }
--- (alloc defaults to true). IMPORTANT: PoB's AllocNode auto-allocates the SHORTEST
--- PATH from the current tree to the target, so a distant node pulls in every
--- connecting node (and generic attribute nodes on that path default to Strength).
--- We therefore (a) reject an unconnectable node, (b) optionally cap the path length
--- via maxPath, and (c) report exactly which nodes the call added/removed so the
--- caller never mistakes a 10-node path for a single pick.
-function methods.setPassive(build, params)
+-- True if `node` is an ascendancy node belonging to the build's CURRENTLY selected
+-- ascendancy (primary or secondary). node.ascendancyName is the ascendancy id string;
+-- the selected ascendancy is spec.curAscendClass (its `replace` or .id ==
+-- curAscendClassBaseName), with an optional secondary in spec.curSecondaryAscendClass.
+-- The ascendancy tools scope to these so a caller only ever sees nodes it can allocate.
+local function isSelectedAscendancyNode(spec, node)
+	if not node.ascendancyName then return false end
+	local base = (spec.curAscendClass and spec.curAscendClass.replace) or spec.curAscendClassBaseName
+	if base and node.ascendancyName == base then return true end
+	if spec.curSecondaryAscendClass and node.ascendancyName == spec.curSecondaryAscendClass.id then
+		return true
+	end
+	return false
+end
+
+-- FR-8: shared allocate/deallocate core behind setPassive (regular tree) and
+-- setAscendancy (ascendancy sub-tree). `kind` is "tree" or "ascendancy"; the two
+-- node populations are kept strictly separate — they have distinct point budgets
+-- (level/quest vs the flat 8-point ascendancy cap) and distinct pathing (regular
+-- pathing never crosses into ascendancy and vice versa), so each tool rejects the
+-- other kind's nodes with a redirect. The mechanics are otherwise identical:
+-- AllocNode auto-allocates the SHORTEST PATH to the target (a distant node pulls in
+-- every connecting node, generic attribute nodes defaulting to Strength) and
+-- DeallocNode cascades to dependents, so we (a) reject an unconnectable node,
+-- (b) optionally cap the path length via maxPath, (c) report exactly which nodes the
+-- call added/removed, and (d) return the scoped point budget.
+-- params: { nodeId = <number>, alloc = <bool>, dryRun?, maxPath?, maxRemoved?, stats? }
+local function allocNode(build, params, kind)
+	local isAsc = kind == "ascendancy"
+	local setTool = isAsc and "setAscendancy" or "setPassive"
+	local searchTool = isAsc and "searchAscendancy" or "searchPassives"
 	local nodeId = tonumber(params.nodeId)
 	if not nodeId then
-		error("setPassive requires a numeric 'nodeId'")
+		error(setTool .. " requires a numeric 'nodeId'")
 	end
 	local spec = build.spec
 	ensureUndoSeed(spec)
@@ -1048,6 +1093,23 @@ function methods.setPassive(build, params)
 	if not node then
 		error("no passive node with id " .. tostring(nodeId) .. " on the current tree")
 	end
+
+	-- Keep the two node populations separate: redirect a mis-routed id to its own tool.
+	if isAsc then
+		if not node.ascendancyName then
+			error(("node %d (%s) is a regular passive-tree node, not an ascendancy node — "
+				.. "use setPassive"):format(nodeId, node.dn or node.name or "?"))
+		elseif not isSelectedAscendancyNode(spec, node) then
+			error(("node %d (%s) belongs to ascendancy '%s', not the build's selected "
+				.. "ascendancy — change ascendancy with setClass first")
+				:format(nodeId, node.dn or node.name or "?", tostring(node.ascendancyName)))
+		end
+	elseif node.ascendancyName then
+		error(("node %d (%s) is an ASCENDANCY node, not a regular tree node — use "
+			.. "setAscendancy (ascendancy has its own 8-point budget)")
+			:format(nodeId, node.dn or node.name or "?"))
+	end
+
 	local alloc = params.alloc ~= false -- default true
 	local dryRun = params.dryRun == true
 
@@ -1072,8 +1134,8 @@ function methods.setPassive(build, params)
 		local maxPath = tonumber(params.maxPath)
 		if maxPath and dist and dist > maxPath then
 			error(("allocating node %d (%s) would path through %d point(s) (maxPath %d); "
-				.. "raise 'maxPath' or pick a closer node (use searchPassives)")
-				:format(nodeId, node.dn or node.name or "?", dist, maxPath))
+				.. "raise 'maxPath' or pick a closer node (use %s)")
+				:format(nodeId, node.dn or node.name or "?", dist, maxPath, searchTool))
 		end
 	else
 		-- DeallocNode removes node.depends (every node that relies on this one for its
@@ -1083,9 +1145,14 @@ function methods.setPassive(build, params)
 		if node.alloc and maxRemoved and cascade > maxRemoved then
 			error(("deallocating node %d (%s) would remove %d node(s) (maxRemoved %d); "
 				.. "it's a connector, not a leaf — raise 'maxRemoved', pick a leaf "
-				.. "(searchPassives reports isLeaf/dependentCount), or dryRun first")
-				:format(nodeId, node.dn or node.name or "?", cascade, maxRemoved))
+				.. "(%s reports isLeaf/dependentCount), or dryRun first")
+				:format(nodeId, node.dn or node.name or "?", cascade, maxRemoved, searchTool))
 		end
+	end
+
+	-- The point budget scoped to THIS tool's node kind (tree vs ascendancy).
+	local function scopedBudget()
+		return isAsc and ascendancyPointBudget(build) or treePointBudget(build)
 	end
 
 	-- Dry run: report exactly what WOULD change, applying nothing. Alloc preview = the
@@ -1111,6 +1178,7 @@ function methods.setPassive(build, params)
 			changedNodes = preview,
 			changedCount = #preview,
 			allocatedNodeCount = spec:CountAllocNodes(),
+			budget = scopedBudget(),
 		}
 	end
 
@@ -1148,17 +1216,36 @@ function methods.setPassive(build, params)
 		changedNodes = changedNodes,
 		changedCount = #changedNodes,
 		allocatedNodeCount = spec:CountAllocNodes(),
+		budget = scopedBudget(),
 		stats = recalcAndRead(build, params.stats),
 	}
 end
 
+-- FR-8: allocate or deallocate a REGULAR passive-tree node on the live build, recalc.
+-- Ascendancy nodes are rejected (use setAscendancy). Returns the regular tree's point
+-- budget (level/quest-derived). See allocNode for the shared mechanics.
+function methods.setPassive(build, params)
+	return allocNode(build, params, "tree")
+end
+
+-- FR-8: allocate or deallocate an ASCENDANCY node on the live build, recalc. Regular
+-- tree nodes (and other ascendancies' nodes) are rejected (use setPassive). Returns
+-- the ascendancy point budget (the flat 8-point cap — some points need Trials, which
+-- PoB can't track; see budget.ascendancyNote). See allocNode for the shared mechanics.
+function methods.setAscendancy(build, params)
+	return allocNode(build, params, "ascendancy")
+end
+
 -- FR-8 (discovery): search the passive tree so the assistant can find a node's id
 -- and its distance from the current tree BEFORE allocating, instead of guessing.
--- Read-only. Matches `query` (plain, case-insensitive) against each node's display
--- name and stat lines, and reports node.pathDist (points-from-current-tree) so the
--- caller can pick a node that's actually on/near the frontier.
+-- Shared core behind searchPassives (regular tree) and searchAscendancy (ascendancy
+-- sub-tree); `kind` selects which node population to return. Read-only. Matches
+-- `query` (plain, case-insensitive) against each node's display name and stat lines,
+-- and reports node.pathDist (points-from-current-tree) so the caller can pick a node
+-- that's actually on/near the frontier.
 -- params: { query?, maxDist?, limit?, includeAllocated?, includeUnreachable? }
-function methods.searchPassives(build, params)
+local function searchNodes(build, params, kind)
+	local isAsc = kind == "ascendancy"
 	local spec = build.spec
 	if not spec then error("no passive tree on the current build") end
 	-- pathDist is maintained by AllocNode/Load; refresh it so a build that hasn't
@@ -1183,11 +1270,13 @@ function methods.searchPassives(build, params)
 	local results = {}
 	for _, node in pairs(spec.nodes) do
 		-- Only real, allocatable passives: drop class/ascend starts, sockets, image-
-		-- only proxies, and anything without a name/id.
+		-- only proxies, and anything without a name/id. Then keep only THIS tool's kind:
+		-- searchAscendancy → the selected ascendancy's nodes; searchPassives → regular.
 		local t = node.type
+		local kindOk = isAsc and isSelectedAscendancyNode(spec, node) or (not isAsc and not node.ascendancyName)
 		local allocatable = node.id and node.dn and t ~= "ClassStart"
 			and t ~= "AscendClassStart" and t ~= "OnlyImage" and t ~= "Socket"
-			and not node.isProxy
+			and not node.isProxy and kindOk
 		if allocatable and (includeAllocated or not node.alloc) and matches(node) then
 			local dist = node.pathDist
 			local reachable = dist ~= nil and dist < 1000
@@ -1221,7 +1310,35 @@ function methods.searchPassives(build, params)
 	end)
 	local total = #results
 	while #results > limit do t_remove(results) end
-	return { query = params.query, total = total, returned = #results, nodes = results }
+	local out = { query = params.query, total = total, returned = #results, nodes = results }
+	if isAsc then out.budget = ascendancyPointBudget(build) end
+	return out
+end
+
+-- FR-8 (discovery): search the REGULAR passive tree (ascendancy nodes excluded — use
+-- searchAscendancy). Read-only. See searchNodes for the shared logic.
+function methods.searchPassives(build, params)
+	return searchNodes(build, params, "tree")
+end
+
+-- FR-8 (discovery): search the build's selected ASCENDANCY sub-tree (regular tree
+-- nodes excluded — use searchPassives). Returns the ascendancy point budget alongside
+-- the matches. If no ascendancy is selected, returns an empty list with a note.
+function methods.searchAscendancy(build, params)
+	local spec = build.spec
+	if not spec then error("no passive tree on the current build") end
+	if not spec.curAscendClassId or spec.curAscendClassId == 0 then
+		return {
+			query = params.query,
+			total = 0,
+			returned = 0,
+			nodes = {},
+			budget = ascendancyPointBudget(build),
+			note = "no ascendancy is selected for this build — choose one with setClass " ..
+				"(ascendancy = '<name>') before searching ascendancy nodes",
+		}
+	end
+	return searchNodes(build, params, "ascendancy")
 end
 
 -- FR-8 (discovery): list the passive tree's JEWEL SOCKETS so the assistant can see
