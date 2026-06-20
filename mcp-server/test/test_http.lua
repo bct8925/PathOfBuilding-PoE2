@@ -46,6 +46,8 @@ local function post(bodyTbl)
 end
 
 -- Drive a raw request to completion; return (status, decodedBody|nil, rawBody).
+-- Handles both a single application/json body and an SSE stream (async tools), in which
+-- case the JSON-RPC response is the last `data:` event.
 local function roundtrip(rawRequest)
 	local c = { sock = fakeSock(rawRequest), buf = "" }
 	local done, guard = false, 0
@@ -56,7 +58,13 @@ local function roundtrip(rawRequest)
 	local raw = table.concat(c.sock._sent)
 	local status = raw:match("^HTTP/1.1 ([^\r]+)")
 	local body = raw:match("\r\n\r\n(.*)$") or ""
-	local decoded = #body > 0 and json.decode(body) or nil
+	local decoded
+	if raw:lower():find("content%-type:%s*text/event%-stream") then
+		local data = body:match("data: (.-)\n\n") -- the response event
+		decoded = data and json.decode(data) or nil
+	elseif #body > 0 then
+		decoded = json.decode(body)
+	end
 	return status, decoded, body
 end
 

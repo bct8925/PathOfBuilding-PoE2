@@ -3145,24 +3145,46 @@ local function httpResponse(status, body, contentType)
 		:format(status, contentType or "application/json", #body, body)
 end
 
-local function sendAndClose(c, raw)
-	pcall(function()
+-- Write bytes without closing (for SSE streaming). Returns true on success.
+local function trySend(c, raw)
+	return pcall(function()
 		c.sock:settimeout(5)
 		c.sock:send(raw)
-		c.sock:close()
-	end)
+	end) and true or false
+end
+
+local function sendAndClose(c, raw)
+	trySend(c, raw)
+	pcall(function() c.sock:close() end)
 	c.closed = true
 end
+
+-- Long-running (async) tool calls answer over an SSE stream instead of a single JSON
+-- body: we send the SSE headers immediately so the client receives bytes right away
+-- (no read-timeout), keep the stream warm with periodic comments while the job runs,
+-- then deliver the JSON-RPC response as one `data:` event and close. This is the MCP
+-- Streamable HTTP "the server MAY respond with text/event-stream" path.
+local SSE_HEADERS = "HTTP/1.1 200 OK\r\nContent-Type: text/event-stream\r\nCache-Control: no-cache\r\nConnection: close\r\n\r\n"
+local SSE_PING_SECONDS = 10
 
 -- Service one client connection for one frame. Returns true when the client is done
 -- (should be removed). Never throws (caller wraps in pcall too).
 function Bridge:serviceClient(c)
-	-- A parked (async) request: poll its job; answer when ready.
+	-- A parked (async) request streaming SSE: poll its job; keep-alive until ready.
 	if c.poll then
 		local resp = c.poll()
 		if resp ~= nil then
-			sendAndClose(c, httpResponse("200 OK", json.encode(resp)))
+			trySend(c, "data: " .. json.encode(resp) .. "\n\n")
+			pcall(function() c.sock:close() end)
+			c.closed = true
 			return true
+		end
+		if os.time() - (c.lastPing or 0) >= SSE_PING_SECONDS then
+			if not trySend(c, ": keep-alive\n\n") then
+				pcall(function() c.sock:close() end)
+				return true
+			end
+			c.lastPing = os.time()
 		end
 		return false
 	end
@@ -3211,7 +3233,13 @@ function Bridge:serviceClient(c)
 
 	local d = self.mcpServer:dispatch(msg)
 	if d.pending then
-		c.poll = d.poll -- park; answered on a later frame
+		-- Open an SSE stream now so the client gets bytes immediately and won't time
+		-- out; the response is delivered as a `data:` event when the job resolves.
+		if not trySend(c, SSE_HEADERS) then
+			return true
+		end
+		c.poll = d.poll
+		c.lastPing = os.time()
 		return false
 	elseif d.response == nil then
 		sendAndClose(c, httpResponse("202 Accepted", "", "text/plain")) -- notification
