@@ -108,6 +108,49 @@ function TradeQueryClass:ConvertCurrencyToDivs(currencyId, amount)
 	end
 end
 
+-- UI-free fetch + parse + cache of poe.ninja currency→divine rates for a league.
+-- Shared by the GUI (PullPoENinjaCurrencyConversion) and the MCP bridge so neither
+-- reimplements the call. callback(conversionMap, errMsg): conversionMap[currencyId]
+-- = value in divines (poe.ninja's base unit).
+--- @param league string
+--- @param callback fun(map: table?, errMsg: string?)
+function TradeQueryClass:FetchPoENinjaCurrencyConversion(league, callback)
+	self.pbCurrencyConversion[league] = { }
+	self.lastCurrencyConversionRequest = get_time()
+	launch:DownloadPage(
+		"https://poe.ninja/poe2/api/economy/exchange/current/overview?type=Currency&league=" .. urlEncode(league),
+		function(response, errMsg)
+			if errMsg then
+				return callback(nil, "Error: " .. tostring(errMsg))
+			end
+			local json_data = dkjson.decode(response.body)
+			if not json_data or not json_data.lines then
+				return callback(nil, "Failed to Get PoE Ninja response")
+			end
+			for _, currencyDetails in ipairs(json_data.lines) do
+				-- ids match the trade site's short names ("transmute", "aug", …);
+				-- primaryValue is the figure in divines.
+				if currencyDetails.id and currencyDetails.primaryValue then
+					self.pbCurrencyConversion[league][currencyDetails.id] = currencyDetails.primaryValue
+				end
+			end
+			if next(self.pbCurrencyConversion[league]) == nil then
+				return callback(nil, "No currencies received from PoE Ninja")
+			end
+			-- cache to disk (mirrors the GUI path; SetCurrencyConversionButton reads it)
+			local print_str = ""
+			for key, value in pairs(self.pbCurrencyConversion[league]) do
+				print_str = print_str .. '"'..key..'": '..tostring(value)..','
+			end
+			local foo = io.open("../"..league.."_currency_values.json", "w")
+			if foo then
+				foo:write("{" .. print_str .. '"updateTime": ' .. tostring(get_time()) .. "}")
+				foo:close()
+			end
+			callback(self.pbCurrencyConversion[league], nil)
+		end)
+end
+
 -- Method to pull down and interpret the PoE.Ninja JSON endpoint data
 --- @param league string
 function TradeQueryClass:PullPoENinjaCurrencyConversion(league)
@@ -117,35 +160,13 @@ function TradeQueryClass:PullPoENinjaCurrencyConversion(league)
 		self:SetNotice(self.controls.pbNotice, "PoE Ninja Rate Limit Exceeded: " .. tostring(3600 - (now - self.lastCurrencyConversionRequest)))
 		return
 	end
-
-	self.pbCurrencyConversion[league] = { }
-	self.lastCurrencyConversionRequest = now
-	launch:DownloadPage(
-		"https://poe.ninja/poe2/api/economy/exchange/current/overview?type=Currency&league=" .. urlEncode(league),
-		function(response, errMsg)
-			if errMsg then
-				self:SetNotice(self.controls.pbNotice, "Error: " .. tostring(errMsg))
-				return
-			end
-			local json_data = dkjson.decode(response.body)
-			if not json_data or not json_data.lines then
-				self:SetNotice(self.controls.pbNotice, "Failed to Get PoE Ninja response")
-				return
-			end
-			if not self:PriceBuilderProcessPoENinjaResponse(json_data.lines) then
-				-- don't edit json on failure
-				return
-			end
-			local print_str = ""
-			for key, value in pairs(self.pbCurrencyConversion[self.pbLeague]) do
-				print_str = print_str .. '"'..key..'": '..tostring(value)..','
-			end
-			local foo = io.open("../"..self.pbLeague.."_currency_values.json", "w")
-			foo:write("{" .. print_str .. '"updateTime": ' .. tostring(get_time()) .. "}")
-			foo:close()
-			self:SetCurrencyConversionButton()
-		end)
-
+	self:FetchPoENinjaCurrencyConversion(league, function(map, errMsg)
+		if errMsg then
+			self:SetNotice(self.controls.pbNotice, errMsg)
+			return
+		end
+		self:SetCurrencyConversionButton()
+	end)
 end
 
 -- Method to process the PoE.Ninja response

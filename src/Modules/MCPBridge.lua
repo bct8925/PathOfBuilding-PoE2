@@ -262,6 +262,23 @@ local function startJob(fn)
 	return { jobId = jobId, status = job.status }
 end
 
+-- Shared TradeQueryRequests instance for the trade tools. Its request queue
+-- (search/fetch) is normally drained from the PriceItem popup's OnFrame; that popup
+-- isn't open here, so Bridge:pump drains it each frame instead. Created lazily.
+local function getTradeRequests()
+	if not Bridge.tradeRequests then
+		Bridge.tradeRequests = new("TradeQueryRequests")
+	end
+	return Bridge.tradeRequests
+end
+
+-- Stateless trade mod lookup helpers (mod text ↔ trade stat-id, stat catalogue).
+local _tradeHelpers
+local function getTradeHelpers()
+	_tradeHelpers = _tradeHelpers or LoadModule("Classes/TradeHelpers")
+	return _tradeHelpers
+end
+
 -- Strip PoB's inline colour codes from a display string: `^x` + 6 hex digits
 -- (e.g. ^xFF0000) or `^` + a single palette digit (e.g. ^8). The breakdown lines
 -- PoB builds for the GUI are peppered with these; the MCP wants plain text.
@@ -673,6 +690,267 @@ function methods.importCharacter(build, params)
 				undoNote = "Import spans multiple tabs; to revert, gui_undo each affected scope ('tree', 'items', 'skills').",
 			})
 		end)
+	end)
+end
+
+-- Live trade tools (Phase B). These wrap PoB's existing trade machinery
+-- (TradeQueryRequests + TradeQuery) through the async-job primitive; the request
+-- queue is pumped from Bridge:pump. Read/search only — never auto-trades; results
+-- carry the seller `whisper` for the human to act on. Reuse the rate limiter; never
+-- bypass it. League must be supplied (use listLeagues) — economies are per-league.
+
+-- Async: available trade leagues for the realm. FetchLeagues returns a fallback
+-- {Standard,Hardcore} + errMsg on failure, so resolve with whatever came back.
+function methods.listLeagues(build, params)
+	return startJob(function(resolve, reject)
+		getTradeRequests():FetchLeagues(POE2_REALM, function(leagues, errMsg)
+			if not leagues or #leagues == 0 then
+				reject(errMsg or "no leagues returned")
+				return
+			end
+			resolve({ leagues = leagues, note = errMsg })
+		end)
+	end)
+end
+
+-- Currency→divine rates for a league (poe.ninja). Served from the in-memory cache
+-- when present (poe.ninja allows ~1 request/hour); pass refresh=true to force a
+-- fetch. Returns a job only when it actually hits the network.
+function methods.currencyRates(build, params)
+	local league = params.league
+	if type(league) ~= "string" or league == "" then
+		error("'league' is required (use listLeagues to find one)")
+	end
+	local tq = build.itemsTab and build.itemsTab.tradeQuery
+	if not tq then error("trade query unavailable") end
+	local cached = tq.pbCurrencyConversion[league]
+	if cached and next(cached) ~= nil and not params.refresh then
+		return { league = league, rates = cached, cached = true }
+	end
+	return startJob(function(resolve, reject)
+		tq:FetchPoENinjaCurrencyConversion(league, function(map, errMsg)
+			if errMsg then reject(errMsg) return end
+			resolve({ league = league, rates = map, cached = false })
+		end)
+	end)
+end
+
+-- Read-only: search the trade site's stat-filter catalogue (8000+ entries) for the
+-- ids searchTrade's `stats` need. Filter by text substring + optional category
+-- (explicit/implicit/pseudo/rune/enchant/crafted/…). Always capped.
+function methods.searchTradeStats(build, params)
+	local query = (params.query or ""):lower()
+	local typeFilter = params.type and params.type:lower() or nil
+	local limit = params.limit or 40
+	local stats = getTradeHelpers().getTradeStats()
+	if not stats then error("trade stat data unavailable") end
+	local out, total = {}, 0
+	for _, cat in ipairs(stats) do
+		if not typeFilter or tostring(cat.id):lower() == typeFilter then
+			for _, entry in ipairs(cat.entries) do
+				if query == "" or entry.text:lower():find(query, 1, true) then
+					total = total + 1
+					if #out < limit then
+						t_insert(out, { id = entry.id, text = entry.text, type = entry.type or cat.id })
+					end
+				end
+			end
+		end
+	end
+	return { stats = out, total = total, truncated = total > #out }
+end
+
+-- Build a trade2 search query JSON from explicit criteria. Shared by searchTrade
+-- and priceItem. `statFilters` is an array of { id, value = {min?,max?} } (type "and").
+local TRADE_MAX_STAT_FILTERS = 35
+local function buildTradeQuery(params, statFilters)
+	local query = {
+		query = {
+			status = { option = (params.online == false) and "any" or "online" },
+			filters = {},
+		},
+		sort = { price = "asc" },
+		engine = "new",
+	}
+	local f = query.query.filters
+	if params.category or params.rarity then
+		f.type_filters = { filters = {} }
+		if params.category then f.type_filters.filters.category = { option = params.category } end
+		if params.rarity then f.type_filters.filters.rarity = { option = params.rarity } end
+	end
+	if params.budget and params.budget > 0 then
+		f.trade_filters = { filters = { price = { option = params.currency or "divine", max = params.budget } } }
+	end
+	if params.minLevel or params.maxLevel then
+		f.req_filters = { filters = { lvl = {} } }
+		if params.minLevel then f.req_filters.filters.lvl.min = params.minLevel end
+		if params.maxLevel then f.req_filters.filters.lvl.max = params.maxLevel end
+	end
+	if params.minItemLevel or params.maxItemLevel or params.corrupted ~= nil then
+		f.misc_filters = { filters = {} }
+		if params.minItemLevel or params.maxItemLevel then
+			f.misc_filters.filters.ilvl = {}
+			if params.minItemLevel then f.misc_filters.filters.ilvl.min = params.minItemLevel end
+			if params.maxItemLevel then f.misc_filters.filters.ilvl.max = params.maxItemLevel end
+		end
+		if params.corrupted ~= nil then
+			f.misc_filters.filters.corrupted = { option = params.corrupted and "true" or "false" }
+		end
+	end
+	if params.sockets and params.sockets > 0 then
+		f.equipment_filters = { filters = { rune_sockets = { min = params.sockets } } }
+	end
+	if statFilters and #statFilters > 0 then
+		local capped = {}
+		for i, sf in ipairs(statFilters) do
+			if i > TRADE_MAX_STAT_FILTERS then break end
+			t_insert(capped, sf)
+		end
+		query.query.stats = { { type = "and", filters = capped } }
+	end
+	return query
+end
+
+-- Shape a fetched listing into a lean result row, adding a divine equivalent when
+-- the league's currency rates are loaded (call currencyRates first to populate them).
+local function shapeListing(tq, league, it)
+	local entry = {
+		price = { amount = it.amount, currency = it.currency, type = it.priceType },
+		whisper = it.whisper,
+		seller = it.trader,
+		item = it.item_string,
+	}
+	if tq and tq.pbCurrencyConversion[league] then
+		local divs = tq:ConvertCurrencyToDivs(it.currency, it.amount)
+		if divs then entry.price.divEquivalent = divs end
+	end
+	return entry
+end
+
+-- Async: explicit-criteria trade search. params: { league (req), category?, rarity?,
+-- online?, budget?+currency?, minLevel?/maxLevel?, minItemLevel?/maxItemLevel?,
+-- corrupted?, sockets?, stats?=[{id,min?,max?}], limit? }. Returns top listings with
+-- price (+ divEquivalent when rates are loaded) and the seller whisper. Never trades.
+function methods.searchTrade(build, params)
+	local league = params.league
+	if type(league) ~= "string" or league == "" then
+		error("'league' is required (use listLeagues)")
+	end
+	local statFilters = {}
+	for _, s in ipairs(params.stats or {}) do
+		if s.id then
+			local value = {}
+			if s.min then value.min = s.min end
+			if s.max then value.max = s.max end
+			t_insert(statFilters, { id = s.id, value = value })
+		end
+	end
+	local queryJson = json.encode(buildTradeQuery(params, statFilters))
+	local tq = build.itemsTab and build.itemsTab.tradeQuery
+	local limit = params.limit or 10
+	return startJob(function(resolve, reject)
+		getTradeRequests():SearchWithQuery(POE2_REALM, league, queryJson, function(items, errMsg)
+			if errMsg then reject(errMsg) return end
+			local out = {}
+			for i, it in ipairs(items or {}) do
+				if i > limit then break end
+				t_insert(out, shapeListing(tq, league, it))
+			end
+			resolve({ league = league, count = #out, listings = out })
+		end)
+	end)
+end
+
+local RARITY_TO_TRADE = { NORMAL = "normal", MAGIC = "magic", RARE = "rare", UNIQUE = "unique", RELIC = "unique" }
+
+-- Async: estimate a market price for an EQUIPPED item by searching comparable
+-- listings. params: { league (req), slot (req), valueFraction?=0.9, rarity?, budget?,
+-- currency?, online?, limit? }. Maps the item's explicit mods → trade stat ids (each
+-- as a min filter at valueFraction × current roll) + base category, searches, and
+-- returns a divine min/median/max over the results (auto-loads currency rates).
+-- A well-rolled rare may match few/no listings — see modsMatched/sampleSize.
+function methods.priceItem(build, params)
+	local league = params.league
+	if type(league) ~= "string" or league == "" then
+		error("'league' is required (use listLeagues)")
+	end
+	local slotName = params.slot
+	if type(slotName) ~= "string" or slotName == "" then error("'slot' is required") end
+	local itemsTab = build.itemsTab
+	local slot = itemsTab and itemsTab.slots[slotName]
+	if not slot then error("no such slot: " .. tostring(slotName)) end
+	local itemId = slot.selItemId
+	local item = itemId and itemId ~= 0 and itemsTab.items[itemId]
+	if not item then error("slot '" .. slotName .. "' is empty") end
+
+	local th = getTradeHelpers()
+	local category = th.getTradeCategory(slotName, item)
+	local fraction = params.valueFraction or 0.9
+	local statFilters, mapped, unmapped = {}, 0, 0
+	for _, modLine in ipairs(item.explicitModLines or {}) do
+		local text = modLine.line
+		local hash = text and th.findTradeHash(item, text, "explicit", false)
+		if hash then
+			local val = th.modLineValue(text)
+			local value = {}
+			if val then value.min = m_floor(val * fraction) end
+			t_insert(statFilters, { id = hash, value = value })
+			mapped = mapped + 1
+		else
+			unmapped = unmapped + 1
+		end
+	end
+
+	local searchParams = {
+		online = params.online,
+		category = category,
+		rarity = params.rarity or RARITY_TO_TRADE[item.rarity],
+		budget = params.budget,
+		currency = params.currency,
+	}
+	local queryJson = json.encode(buildTradeQuery(searchParams, statFilters))
+	local tq = itemsTab.tradeQuery
+	local limit = params.limit or 10
+
+	return startJob(function(resolve, reject)
+		local function doSearch()
+			getTradeRequests():SearchWithQuery(POE2_REALM, league, queryJson, function(items, errMsg)
+				if errMsg then reject(errMsg) return end
+				local listings, prices = {}, {}
+				for i, it in ipairs(items or {}) do
+					if i > limit then break end
+					local row = shapeListing(tq, league, it)
+					t_insert(listings, row)
+					if row.price.divEquivalent then t_insert(prices, row.price.divEquivalent) end
+				end
+				table.sort(prices)
+				local estimate
+				if #prices > 0 then
+					estimate = {
+						min = prices[1],
+						median = prices[math.ceil(#prices / 2)],
+						max = prices[#prices],
+						unit = "divine",
+						sampleSize = #prices,
+					}
+				end
+				resolve({
+					league = league,
+					slot = slotName,
+					modsMatched = mapped,
+					modsUnmapped = unmapped,
+					estimate = estimate,
+					listings = listings,
+				})
+			end)
+		end
+		-- Load currency rates first (for the divine estimate) unless already cached
+		-- or explicitly disabled; currency errors are non-fatal — search anyway.
+		if tq and not tq.pbCurrencyConversion[league] and params.convert ~= false then
+			tq:FetchPoENinjaCurrencyConversion(league, function() doSearch() end)
+		else
+			doSearch()
+		end
 	end)
 end
 
@@ -2799,6 +3077,12 @@ end
 -- Call this once per frame from main:OnFrame. Never throws.
 function Bridge:pump()
 	if not self.server then return end
+
+	-- Drain queued trade-API requests (search/fetch). The GUI pumps this from the
+	-- PriceItem popup's OnFrame, which isn't open under the bridge. No-op when idle.
+	if Bridge.tradeRequests then
+		pcall(function() Bridge.tradeRequests:ProcessQueue() end)
+	end
 
 	-- Accept any newly-connecting clients (non-blocking).
 	local client = self.server:accept()
