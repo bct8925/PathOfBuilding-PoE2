@@ -101,11 +101,30 @@ end
 -- level<-points estimate): (level-1) + cumulative campaign quest points for the act
 -- bracketing the level + any ExtraPoints from mods. In auto-level builds total≈used.
 -- Scoped to regular nodes only — ascendancy points live in ascendancyPointBudget.
+--
+-- CountAllocNodes's first return lumps weapon-set passives (allocMode 1/2, the PoE2
+-- dual-spec nodes) in with normal nodes, but those are paid from a SEPARATE weapon-set
+-- pool, not the level/quest budget. So mirror EstimatePlayerProgress and net them out
+-- (normalPassives = used - min(ws1, ws2)) before comparing to the budget — otherwise a
+-- legal tree with weapon-set points reads as phantom-overspent. Weapon-set usage is
+-- reported on its own `weaponSet` field against the weapon-set cap.
 local function treePointBudget(build)
 	local spec = build.spec
 	if not spec then return nil end
-	local used = spec:CountAllocNodes()
-	local budget = { pointsUsed = used }
+	local used, _, _, _, weaponSet1Used, weaponSet2Used = spec:CountAllocNodes()
+	weaponSet1Used = weaponSet1Used or 0
+	weaponSet2Used = weaponSet2Used or 0
+	local normalPassives = used - m_min(weaponSet1Used, weaponSet2Used)
+	local extraWeaponSets = (build.calcsTab.mainOutput and build.calcsTab.mainOutput.PassivePointsToWeaponSetPoints) or 0
+	local weaponSetMax = (build.maxWeaponSets or 0) + extraWeaponSets
+	local budget = {
+		pointsUsed = normalPassives,
+		weaponSet = {
+			set1 = weaponSet1Used,
+			set2 = weaponSet2Used,
+			max = weaponSetMax,
+		},
+	}
 	if build.acts then
 		local extra = (build.calcsTab.mainOutput and build.calcsTab.mainOutput.ExtraPoints) or 0
 		local level = build.characterLevel or 1
@@ -117,7 +136,7 @@ local function treePointBudget(build)
 		local total = (level - 1) + questPoints + extra
 		budget.level = level
 		budget.pointsTotal = total
-		budget.pointsRemaining = total - used
+		budget.pointsRemaining = total - normalPassives
 	end
 	return budget
 end
