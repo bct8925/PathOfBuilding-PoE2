@@ -936,8 +936,11 @@ function methods.priceItem(build, params)
 	local limit = params.limit or 10
 
 	return startJob(function(resolve, reject)
+		local tr = getTradeRequests()
 		local function doSearch()
-			getTradeRequests():SearchWithQuery(POE2_REALM, league, queryJson, function(items, errMsg)
+			-- Capture the query id for the canonical browse link to the comparable listings.
+			local queryId
+			tr:SearchWithQuery(POE2_REALM, league, queryJson, function(items, errMsg)
 				if errMsg then reject(errMsg) return end
 				local listings, prices = {}, {}
 				for i, it in ipairs(items or {}) do
@@ -963,9 +966,10 @@ function methods.priceItem(build, params)
 					modsMatched = mapped,
 					modsUnmapped = unmapped,
 					estimate = estimate,
+					tradeUrl = queryId and tr:buildUrl(tr.hostName .. "trade2/search", POE2_REALM, league, queryId) or nil,
 					listings = listings,
 				})
-			end)
+			end, { callbackQueryId = function(id) queryId = id end })
 		end
 		-- Load currency rates first (for the divine estimate) unless already cached
 		-- or explicitly disabled; currency errors are non-fatal — search anyway.

@@ -122,7 +122,8 @@ return function(ctx)
 		description = "Estimate the market price of an EQUIPPED item by searching comparable listings. Maps the item's "
 			.. "explicit mods to trade stat filters (each at valueFraction × its current roll) plus its base "
 			.. "category, searches, and returns a divine min/median/max over the results (auto-loads currency "
-			.. "rates). A well-rolled rare may match few/no listings — check modsMatched/sampleSize. Read-only.",
+			.. "rates), plus `tradeUrl` — the trade-site link for the comparable-listings search (give it to the "
+			.. "user to browse them). A well-rolled rare may match few/no listings — check modsMatched/sampleSize. Read-only.",
 		schema = S.obj({
 			league = S.str("League name (from gui_list_leagues)."),
 			slot = S.str("Equipment slot to price, e.g. 'Ring 1', 'Body Armour', 'Amulet', 'Weapon 1'."),
