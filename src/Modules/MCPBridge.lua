@@ -26,6 +26,7 @@ local t_insert = table.insert
 local t_remove = table.remove
 local m_min = math.min
 local m_max = math.max
+local m_floor = math.floor
 
 local Bridge = { clients = {}, server = nil, port = 8843, lastUndoScope = nil }
 
@@ -874,16 +875,28 @@ function methods.priceItem(build, params)
 	if type(league) ~= "string" or league == "" then
 		error("'league' is required (use listLeagues)")
 	end
-	local slotName = params.slot
-	if type(slotName) ~= "string" or slotName == "" then error("'slot' is required") end
 	local itemsTab = build.itemsTab
-	local slot = itemsTab and itemsTab.slots[slotName]
-	if not slot then error("no such slot: " .. tostring(slotName)) end
-	local itemId = slot.selItemId
-	local item = itemId and itemId ~= 0 and itemsTab.items[itemId]
-	if not item then error("slot '" .. slotName .. "' is empty") end
-
 	local th = getTradeHelpers()
+	local item, slotName
+	if type(params.rawText) == "string" and params.rawText ~= "" then
+		-- Price a PASTED item without touching the build. Parse it into an Item the
+		-- same way gui_add_item does; derive a slot for the category from its natural
+		-- slot (caller may override with `slot` for ambiguous bases, e.g. rings).
+		item = new("Item", params.rawText)
+		if not item.base then
+			error("couldn't parse the pasted item text (include the 'Rarity:' / name / base-type lines)")
+		end
+		slotName = params.slot or item:GetPrimarySlot()
+	else
+		slotName = params.slot
+		if type(slotName) ~= "string" or slotName == "" then error("'slot' or 'rawText' is required") end
+		local slot = itemsTab and itemsTab.slots[slotName]
+		if not slot then error("no such slot: " .. tostring(slotName)) end
+		local itemId = slot.selItemId
+		item = itemId and itemId ~= 0 and itemsTab.items[itemId]
+		if not item then error("slot '" .. slotName .. "' is empty") end
+	end
+
 	local category = th.getTradeCategory(slotName, item)
 	local fraction = params.valueFraction or 0.9
 	local statFilters, mapped, unmapped = {}, 0, 0
