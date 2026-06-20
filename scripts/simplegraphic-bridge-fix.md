@@ -1,5 +1,13 @@
 # SimpleGraphic "keep-awake" patch — the long-term MCP bridge fix
 
+> **SUPERSEDED (kept for reference).** The bridge no longer needs this patch. The
+> idle gate below already skips its sleep while `!hasActiveCoroutine` is false —
+> i.e. any live coroutine keeps `OnFrame` running while unfocused, on the **stock**
+> DLL. So `src/Modules/MCPBridge.lua` now holds a dummy coroutine that yields forever
+> (created in `Bridge:start`, finished in `Bridge:stop`) instead of calling
+> `SetForceFrames`. No SimpleGraphic fork/rebuild is required. The fork + the
+> sections below remain only as documentation of the original approach.
+
 > The patch now lives in a fork: **bct8925/PathOfBuilding-SimpleGraphic @ `feature/force-frames`**
 > (upstream PR #103 was declined as out-of-scope). `scripts/build-simplegraphic.ps1`
 > builds from that fork directly. For how to rebase the patch onto new upstream

@@ -2563,10 +2563,19 @@ function Bridge:start(build, port)
 	self.build = build
 	self.clients = {}
 	-- Keep PoB running OnFrame even when unfocused/minimized so the bridge is
-	-- serviced off-screen. Provided by a patched SimpleGraphic (see
-	-- scripts/simplegraphic-bridge-fix.md); guarded so it's a harmless no-op on
-	-- an unpatched DLL (where the MCP server's auto-focus workaround handles it).
-	if SetForceFrames then SetForceFrames(true) end
+	-- serviced off-screen. SimpleGraphic's idle gate already skips its sleep while
+	-- any coroutine is alive (the `!hasActiveCoroutine` term, from coroutine._list
+	-- in Modules/Common), so we hold a dummy coroutine that yields forever — this
+	-- works on the *stock* DLL, no SimpleGraphic patch required. The active-coroutine
+	-- registry is weak-keyed, so the strong reference on self is what keeps it alive;
+	-- stop() lets it finish so PoB can return to its idle framerate.
+	self.keepAliveDone = false
+	self.keepAlive = coroutine.create(function()
+		while not self.keepAliveDone do
+			coroutine.yield()
+		end
+	end)
+	coroutine.resume(self.keepAlive)
 	ConPrintf("[MCP bridge] listening on 127.0.0.1:%d", self.port)
 end
 
@@ -2575,7 +2584,13 @@ function Bridge:stop()
 		pcall(function() c.sock:close() end)
 	end
 	self.clients = {}
-	if SetForceFrames then SetForceFrames(false) end
+	-- Let the keep-alive coroutine finish so it drops out of the active-coroutine
+	-- registry and PoB can idle (sleep) again when unfocused.
+	if self.keepAlive then
+		self.keepAliveDone = true
+		pcall(coroutine.resume, self.keepAlive)
+		self.keepAlive = nil
+	end
 	if self.server then
 		pcall(function() self.server:close() end)
 		self.server = nil
